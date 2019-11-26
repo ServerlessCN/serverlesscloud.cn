@@ -35,11 +35,7 @@ const AboutPage = ({
   return (
     <Layout>
       <>
-        <Helmet
-          title="Serverless 中文技术网"
-          description="Serverless 中文技术网，专注 Serverless 架构最佳实践"
-          location={location}
-        />
+        <Helmet title="Serverless - 关于我们" location={location} />
         <Banner />
 
         <CustomContainer maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}>

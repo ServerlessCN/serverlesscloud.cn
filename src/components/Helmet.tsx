@@ -10,7 +10,14 @@ export default function(props: any) {
     title: string
   }>[] = []
 
-  const { location = {}, description, thumbnail, rss, prefetches } = props
+  const {
+    location = {},
+    description,
+    thumbnail,
+    rss,
+    prefetches,
+    keywords,
+  } = props
   // const uri = `https://serverless.com${location.pathname}`
   const metaTitle = props.metaTitle || props.title
 
@@ -28,6 +35,8 @@ export default function(props: any) {
     // { name: 'twitter:creator', content: `@${process.env.GATSBY_TWITTER}` },
     { name: 'twitter:description', content: description },
     { name: 'description', content: description },
+
+    { name: 'keywords', content: keywords },
   ]
 
   if (thumbnail) {

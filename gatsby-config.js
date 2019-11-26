@@ -2,8 +2,8 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: `ServerlessCloud.cn`,
-    description: `Serverless 中文技术网，专注 Serverless 架构最佳实践`,
+    title: `Serverless - Serverless 服务框架中文社区`,
+    description: `Serverless Framework 是业界非常受欢迎的无服务器应用框架，开发者无需关心底层资源即可部署完整可用的 serverless 应用架构。`,
     author: '',
   },
   plugins: [

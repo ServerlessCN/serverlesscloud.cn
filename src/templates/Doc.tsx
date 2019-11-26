@@ -41,8 +41,9 @@ const DocPage = ({
     <Layout>
       <>
         <Helmet
-          title="Serverless 中文技术网——文档"
-          description="Serverless 中文技术网，专注 Serverless 架构最佳实践"
+          title="Serverless Framework 文档 - Serverless"
+          keywords={'Serverless,Serverless Framework,FaaS,函数计算,无服务器'}
+          description="Serverless Framework 无服务器应用框架文档，使用方法和应用场景介绍。"
           location={location}
         />
         <Banner />
