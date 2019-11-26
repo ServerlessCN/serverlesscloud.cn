@@ -1,0 +1,68 @@
+{
+  "name": "serverlesscloud.cn",
+  "description": "Serverless framework is a very popular serverless application framework in the industry. Developers can deploy a fully available serverless application architecture without worrying about excessive resources.",
+  "version": "0.1.0",
+  "author": "Juli<zynleifung@gmail.com>",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "csstype": "^2.6.7",
+    "gatsby": "^2.17.11",
+    "gatsby-image": "^2.2.31",
+    "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-google-analytics": "^2.1.28",
+    "gatsby-plugin-manifest": "^2.2.27",
+    "gatsby-plugin-offline": "^3.0.19",
+    "gatsby-plugin-react-helmet": "^3.1.14",
+    "gatsby-plugin-sharp": "^2.2.37",
+    "gatsby-plugin-styled-components": "^3.1.13",
+    "gatsby-plugin-typescript": "^2.1.18",
+    "gatsby-remark-autolink-headers": "^2.1.18",
+    "gatsby-remark-code-buttons": "^2.0.1",
+    "gatsby-remark-prismjs": "^3.3.23",
+    "gatsby-source-filesystem": "^2.1.38",
+    "gatsby-transformer-remark": "^2.6.37",
+    "gatsby-transformer-sharp": "^2.3.3",
+    "github-markdown-css": "^3.0.1",
+    "intersection-observer": "^0.7.0",
+    "prismjs": "^1.17.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-helmet": "^5.2.1",
+    "react-js-pagination": "^3.0.2",
+    "react-lazy-images": "^1.1.0",
+    "react-metismenu": "^1.4.0",
+    "styled-components": "^4.4.1",
+    "styled-system": "^5.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.9",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-js-pagination": "^3.0.3",
+    "@types/react-paginate": "^6.2.1",
+    "@types/styled-components": "^4.4.0",
+    "@types/styled-system": "^5.1.4",
+    "babel-plugin-styled-components": "^1.10.6",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}

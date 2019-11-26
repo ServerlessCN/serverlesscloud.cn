@@ -1,0 +1,147 @@
+.user-tweets-component {
+  height: auto;
+  min-height: 300px;
+  user-select: none;
+  padding: 0 10px;
+  background: #f7f7f7;
+  color: #000000;
+}
+
+.user-tweets-component .user-tweets-inner {
+  flex-direction: column;
+}
+
+.user-tweets-component .user-tweets-tweets {
+  flex-direction: row;
+}
+
+.user-tweets-component .user-tweets-tweet:first-child {
+  margin-left: 0;
+}
+
+.user-tweets-component .user-tweets-tweet:last-child {
+  margin-right: 0;
+}
+
+.user-tweets-component .user-tweets-tweet {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 410px;
+  width: 20%;
+  background: #ffffff;
+  margin: 20px 8px;
+  padding: 22px 22px 42px 22px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.user-tweets-component .user-tweets-tweet:hover {
+  transform: scale(1.03) translate3d(0, 0, 0) perspective(1px);
+}
+
+.user-tweets-component .user-tweets-tweet-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 0 12px;
+  font-family: 'SoleilBk';
+  font-size: 18px;
+}
+
+.user-tweets-component .user-tweets-tweet-name img {
+  height: auto;
+  width: 30px;
+  margin-right: 12px;
+}
+
+.user-tweets-component .user-tweets-tweet-text {
+  padding: 0 12px;
+  font-size: 16px;
+  font-family: 'SoleilLt';
+  line-height: 26px;
+}
+
+.user-tweets-component .user-tweets-tweet-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  opacity: 0.3;
+}
+
+.user-tweets-component .user-tweets-actions {
+  flex-direction: row;
+  justify-content: center;
+  height: auto;
+  user-select: none;
+  margin-top: 50px;
+  color: #000000;
+  font-family: 'Soleil';
+  font-size: 18px;
+}
+
+.user-tweets-component .user-tweets-actions a span {
+  color: #fd5750;
+  margin-left: 3px;
+  font-family: 'SoleilBk';
+}
+
+.user-tweets-component .user-tweets-actions a span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/**
+ * User Tweets - Mobile
+ */
+
+@media screen and (max-width: 992px) {
+  .user-tweets-component {
+    padding: 0;
+  }
+
+  .user-tweets-component .user-tweets-actions {
+    width: 80%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .user-tweets-component .user-tweets-tweets {
+    flex-direction: column;
+  }
+
+  .user-tweets-component .user-tweets-actions span:nth-child(2) {
+    display: none;
+  }
+
+  .user-tweets-component .user-tweets-actions a {
+    margin-top: 20px;
+  }
+
+  .user-tweets-component .user-tweets-tweets {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .user-tweets-component .user-tweets-tweets::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .user-tweets-component .user-tweets-tweet {
+    min-width: 300px;
+    min-height: 370px;
+    margin: 10px 0px;
+  }
+
+  .user-tweets-inner .header {
+    text-align: center;
+  }
+}
