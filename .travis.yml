@@ -1,0 +1,24 @@
+language: node_js
+
+node_js:
+  - 10
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install -g serverless
+  - npm install
+before_script:
+  - touch .env
+  - echo TENCENT_SECRET_ID=${TENCENT_SECRET_ID} >> .env
+  - echo TENCENT_SECRET_KEY=${TENCENT_SECRET_KEY} >> .env
+script:
+  - npm run build
+after_script:
+  - sls --debug
+
+branches:
+  only:
+    - master
