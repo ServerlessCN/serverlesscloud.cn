@@ -20,3 +20,4 @@ Serverless 中文社区是一群 Serverless Framework 的开发者们共同发�
 - 问题讨论：
   - [点此快速提问](https://segmentfault.com/t/serverlessframework)
   - 加上「Serverless」和「ServerlessFramework」标签
+  - 测试
