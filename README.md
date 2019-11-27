@@ -1,3 +1,3 @@
 # serverlesscloud.cn
 
-![avatar](https://github.com/ServerlessCN/serverlesscloud.cn/workflows/Release%20ServerlessCN%20CI/badge.svg)
+![avatar](https://travis-ci.com/ServerlessCN/serverlesscloud.cn.svg?branch=master)
