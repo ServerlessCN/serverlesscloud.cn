@@ -37,6 +37,14 @@ const navList: { title: string; link: string }[] = [
     link: '/',
   },
   {
+    title: '最佳实践',
+    link: '/category/最佳实践',
+  },
+  {
+    title: '组件',
+    link: '/component',
+  },
+  {
     title: '文档',
     link: '/doc',
   },

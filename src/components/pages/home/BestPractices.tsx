@@ -3,20 +3,23 @@ import {
   Flex,
   Button,
   Box,
+  Text,
   Background,
   Container,
   Center,
+  Image,
 } from '@src/components/atoms'
 import theme from '@src/constants/theme'
 import { MainTitle } from '@src/components/Title'
+import styled from 'styled-components'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { Blog, GraphqlBlogResult } from '@src/types'
 import BlogCard from './BlogCard'
 
-type LatestBlog = Blog
+type BestPractice = Blog
 
 interface Props {
-  blogs: LatestBlog[]
+  blogs: BestPractice[]
 }
 
 function Blogs({ blogs }: Props) {
@@ -54,7 +57,7 @@ export default function() {
             limit: 3
             filter: {
               fileAbsolutePath: { regex: "/blog/" }
-              frontmatter: { category: { nin: "最佳实践" } }
+              frontmatter: { category: { in: "最佳实践" } }
             }
           ) {
             edges {
@@ -77,18 +80,13 @@ export default function() {
       `}
       render={({ blogs }: { blogs: GraphqlBlogResult }) => {
         return (
-          <Background
-            background={theme.colors.gray[0]}
-            pt={'40px'}
-            pb={'40px'}
-            width={1}
-          >
+          <Background pt={'40px'} pb={'40px'} width={1}>
             <Center flexDirection="column">
-              <MainTitle>最新博客</MainTitle>
+              <MainTitle>最佳实践</MainTitle>
 
               <Blogs blogs={blogs.edges} />
 
-              <Link to="/blog">
+              <Link to="/category/最佳实践">
                 <Button mt="30px" mb="30px" theme={theme}>
                   More Posts
                 </Button>
