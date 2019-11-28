@@ -34,18 +34,16 @@ const AboutPage = ({
 }: Props) => {
   return (
     <Layout>
-      <>
-        <Helmet title="Serverless - 关于我们" location={location} />
-        <Banner />
+      <Helmet title="Serverless - 关于我们" location={location} />
+      <Banner />
 
-        <CustomContainer maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}>
-          <Flex justifyContent="center">
-            <Box pt={'30px'} pb={'30px'} width={[0.95, 0.95, 0.95, 0.76]}>
-              <Markdown html={edges[0].node.html}></Markdown>
-            </Box>
-          </Flex>
-        </CustomContainer>
-      </>
+      <CustomContainer maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}>
+        <Flex justifyContent="center">
+          <Box pt={'30px'} pb={'30px'} width={[0.95, 0.95, 0.95, 0.76]}>
+            <Markdown html={edges[0].node.html}></Markdown>
+          </Box>
+        </Flex>
+      </CustomContainer>
     </Layout>
   )
 }

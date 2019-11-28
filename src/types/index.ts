@@ -49,3 +49,11 @@ export interface Doc {
   id: string
   html: string
 }
+
+export interface Component {
+  name: string
+  thumbnail: string
+  slogan: string
+  description: string
+  link: string
+}
