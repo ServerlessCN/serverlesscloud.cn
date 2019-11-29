@@ -1,9 +1,9 @@
 ---
-title: "如何使用 WebStorm 简化无服务器工作流程"
-description: "在本文中，我将和您分享如何使用 WebStorm 进行无服务器特定的 IDE 设置以及如何利用它来极大地加快无服务器工作流程。"
+title: '如何使用 WebStorm 简化无服务器工作流程'
+description: '在本文中，我将和您分享如何使用 WebStorm 进行无服务器特定的 IDE 设置以及如何利用它来极大地加快无服务器工作流程。'
 date: 2018-08-15
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/webstorm-ide/streamline-webstorm-serverless2.jpg'
-category:
+categories:
   - guides-and-tutorials
   - engineering-culture
 heroImage: ''
@@ -20,6 +20,7 @@ authors:
 所以，我将在本文中和您分享如何使用它来进行无服务器特定的 IDE 设置以及如何使用它来极大地加快无服务器工作流程。
 
 本文内容：
+
 - 创建一个全新的无服务器项目
 - linter
 - 实时模板（用于集成无服务器框架的键盘快捷方式）

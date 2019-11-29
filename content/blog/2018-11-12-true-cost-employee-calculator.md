@@ -1,11 +1,11 @@
 ---
-title: "新雇员的真正成本：初创公司的薪酬计算器"
-description: "雇员薪酬可能是您最大的支出，但雇员的总成本不只是工资。使用此总薪酬计算器可以准确计算预算！"
+title: '新雇员的真正成本：初创公司的薪酬计算器'
+description: '雇员薪酬可能是您最大的支出，但雇员的总成本不只是工资。使用此总薪酬计算器可以准确计算预算！'
 date: 2018-11-14
-thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-employee-cost.jpg"
-category:
+thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-employee-cost.jpg'
+categories:
   - engineering-culture
-heroImage: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/startup-employee-cost-calculator.jpg"
+heroImage: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/startup-employee-cost-calculator.jpg'
 authors:
   - CaseyShultz
 ---
@@ -28,10 +28,12 @@ authors:
 
 [雇员成本计算器](https://docs.google.com/spreadsheets/d/1lzvqppwrMzTHnF83-RdsnflR9AZPR58HRYSMJcQTyRQ/edit#gid=0)
 
-*免责声明 - 此计算器的目的是共享一个我们在 Serverless 内部使用的工具，以估算雇员的总成本。它并不适用于商业用途，我们也不是税务专业人员，因此建议您在基于该计算器做出决定之前，先咨询一下金融专业人士。*
+_免责声明 - 此计算器的目的是共享一个我们在 Serverless 内部使用的工具，以估算雇员的总成本。它并不适用于商业用途，我们也不是税务专业人员，因此建议您在基于该计算器做出决定之前，先咨询一下金融专业人士。_
 
-*所有数据均基于 2018 年的税率。*
+_所有数据均基于 2018 年的税率。_
+
 #### 计算器输入内容
+
 **工资**
 
 此计算器会假定一个年薪，并且不考虑任何佣金或奖金。
@@ -69,13 +71,13 @@ CA ETT - 按我们当前的工资计算，假设年最高税额为 7 美元
 
 **计算器中未包含的内容：**
 
-* 招聘成本 - 这在我们的预算中单独进行核算。
-* 面试和新雇员入职的成本（我会在之后的博客中讨论这个问题）。
-* 设备/安装成本 - 这通常是一次性成本，在我们的预算中单独进行核算。
-* 期权/权益 - 如果您要计算雇员的总薪酬，请查看精巧的权益计算器*，它是我为了简化期权协议编写而创建的。
-* 办公空间成本 - 我们目前将办公室成本视为固定成本，并在预算中单独进行核算。
-* 团建活动 - 我们每年举办两次团队集体活动。我们之前的团建活动地点包括奥地利、北加利福尼亚州和摩洛哥。团建活动的预算取决于团队成员的出发地点和团建活动地点，所以我们对此有单独的预算。
-* 我可能遗漏的内容 - 是否有任何漏掉的内容？请在 Twitter 上告诉我 (@alaskacasey)！
+- 招聘成本 - 这在我们的预算中单独进行核算。
+- 面试和新雇员入职的成本（我会在之后的博客中讨论这个问题）。
+- 设备/安装成本 - 这通常是一次性成本，在我们的预算中单独进行核算。
+- 期权/权益 - 如果您要计算雇员的总薪酬，请查看精巧的权益计算器\*，它是我为了简化期权协议编写而创建的。
+- 办公空间成本 - 我们目前将办公室成本视为固定成本，并在预算中单独进行核算。
+- 团建活动 - 我们每年举办两次团队集体活动。我们之前的团建活动地点包括奥地利、北加利福尼亚州和摩洛哥。团建活动的预算取决于团队成员的出发地点和团建活动地点，所以我们对此有单独的预算。
+- 我可能遗漏的内容 - 是否有任何漏掉的内容？请在 Twitter 上告诉我 (@alaskacasey)！
 
 #### 如何使用此计算器
 

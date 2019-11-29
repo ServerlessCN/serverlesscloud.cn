@@ -14,8 +14,10 @@ import styled from 'styled-components'
 import { Blog } from '@src/types'
 import { LazyImage } from 'react-lazy-images'
 import placeholderImg from '@src/assets/images/placeholder.png'
-import { width, maxHeight, height } from 'styled-system'
+import { width } from 'styled-system'
 import BlogDetailLink from '@src/components/Link/BlogDetailLink'
+import { generateCategoryText } from '@src/components/Link/CategoryLink'
+
 import { formateDate } from '@src/utils'
 
 const InlineText = styled(Text)`
@@ -87,9 +89,11 @@ export default function({ data }: { data: Blog }) {
                   </InlineText>
                   <InlineText fontSize="14px">
                     归档于
-                    {frontmatter.category.map(o => (
-                      <span>{o}&nbsp;</span>
-                    ))}
+                    {(frontmatter.categories || [])
+                      .map(o => generateCategoryText(o))
+                      .map(o => (
+                        <span>{o}&nbsp;</span>
+                      ))}
                   </InlineText>
                 </Box>
                 <Row justifyContent="flex-end">

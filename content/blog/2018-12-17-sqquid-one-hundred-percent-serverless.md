@@ -1,12 +1,12 @@
 ---
-title: "SQQUID：100% 无服务器初创公司"
-description: "SQQUID 将 AWS Lambda 和无服务器框架用于其核心产品和营销网站。我们来看看一个完全无服务器的初创公司是怎样的。"
+title: 'SQQUID：100% 无服务器初创公司'
+description: 'SQQUID 将 AWS Lambda 和无服务器框架用于其核心产品和营销网站。我们来看看一个完全无服务器的初创公司是怎样的。'
 date: 2018-12-17
-thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/sqquid/sqquid-serverless-thumb.jpg"
-heroImage: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/sqquid/sqquid-serverless-header.jpeg"
-category:
+thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/sqquid/sqquid-serverless-thumb.jpg'
+heroImage: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/sqquid/sqquid-serverless-header.jpeg'
+categories:
   - user-stories
-authors: 
+authors:
   - RonPeled
 ---
 

@@ -1,9 +1,9 @@
 ---
-title: "2018 年首批无服务器社区冠军介绍"
+title: '2018 年首批无服务器社区冠军介绍'
 description: 无服务器社区冠军是无服务器社区的领导者。快来认识一下我们 2018 年度的社区英雄吧！
 date: 2018-04-10
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/champions/champions_banner.jpg'
-category:
+categories:
   - news
   - engineering-culture
 authors:

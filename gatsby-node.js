@@ -1,9 +1,6 @@
 const pageGenerator = require('./generator/page')
 const { createFilePath } = require('gatsby-source-filesystem')
 
-// const nodeGenerator = require('./generator/node')
-const path = require('path')
-
 exports.createPages = ({
   graphql,
   boundActionCreators: { createPage, createRedirect },

@@ -60,6 +60,9 @@ interface Props {
 }
 
 export default function({ blogs, ...rest }: Props) {
+  if (!blogs.length) {
+    return <noscript />
+  }
   return (
     <Box mt="40px" width={[0.9, 0.9, 0.9, 0.22]} {...rest}>
       <Text fontSize="18px" mb="30px" fontWeight="bold">

@@ -1,9 +1,9 @@
 ---
-title: "Serverless 设计理念：从头创建品牌标识"
-description: "我将展示自己的设计过程，供想要创建可靠品牌标识（无论是从头创建品牌标识，还是希望改进现有标识）的人参考。"
+title: 'Serverless 设计理念：从头创建品牌标识'
+description: '我将展示自己的设计过程，供想要创建可靠品牌标识（无论是从头创建品牌标识，还是希望改进现有标识）的人参考。'
 date: 2018-09-03
 thumbnail: https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-design/serverless-design-andre-thumb.jpg
-category:
+categories:
   - engineering-culture
 heroImage: https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/featured-posts/01_How-Droplr-Scales.jpg
 authors:
@@ -25,6 +25,7 @@ authors:
 关于设计，首先要谨记的是——设计是为了达到某种目的。它的作用是建立一个社区，讲述一个故事，提高产品的认知度和使用率。因此，它总是在变化。设计师必须善于迅速适应公司外部的大环境和公司内部的需求。
 
 我的设计过程从 Ryan Gum 的增长过程中汲取灵感，遵循一些大家非常熟悉的原则：
+
 - 构思
 - 确定优先级
 - 测试
@@ -38,7 +39,7 @@ authors:
 
 **1. 品牌发展的下一步是什么？**
 
-设计必须不断发展，而您必须想出如何做到这一点而不丧失其本质和辨别度。发展并不意味着要抹杀过去，而是意味着以过去为基础。在这个过程中，不要害怕尝试。没有真正_糟糕_的尝试，一切都可以变得更好。
+设计必须不断发展，而您必须想出如何做到这一点而不丧失其本质和辨别度。发展并不意味着要抹杀过去，而是意味着以过去为基础。在这个过程中，不要害怕尝试。没有真正*糟糕*的尝试，一切都可以变得更好。
 
 <img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-design/serverless_company+goals.png">
 
@@ -80,7 +81,7 @@ authors:
 
 <img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-design/serverless_ilustrations1-8.png">
 
-例如：我曾为[无服务器平台公告](https://serverless.com/blog/serverless-platform-beta-helps-teams-operationalize-development/)设计了一份定制的时事通讯。我花了_很多_时间制作定制插图来彰显它的特点。老实说，我对这些插图真的很满意。但团队成员也提出了一些有用的观点。他们认为应该使用仪表板的产品实拍图，让人们对其有更切实的印象。
+例如：我曾为[无服务器平台公告](https://serverless.com/blog/serverless-platform-beta-helps-teams-operationalize-development/)设计了一份定制的时事通讯。我花了*很多*时间制作定制插图来彰显它的特点。老实说，我对这些插图真的很满意。但团队成员也提出了一些有用的观点。他们认为应该使用仪表板的产品实拍图，让人们对其有更切实的印象。
 
 <img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-design/serverless_ilustrations2-8.png">
 
@@ -91,7 +92,7 @@ authors:
 当然，反馈并不总是很容易接受，但这很重要。每个人都需要做好这点：
 
 > 无论您的工作有多出色，总有很多东西要学习，也有很多东西会忘记。这就是为什么顶级运动员和音乐家即使是在他们的巅峰时期也需要教练的原因。
-*摘自 Farheen Gani 撰写的一篇精彩文章“[让反馈为您服务](https://medium.com/inside-design/making-feedback-work-for-you-b49288b5059c)”*
+> _摘自 Farheen Gani 撰写的一篇精彩文章“[让反馈为您服务](https://medium.com/inside-design/making-feedback-work-for-you-b49288b5059c)”_
 
 与接受反馈同样重要的是知道如何请求反馈。确保您的设计可让人们了解关注点。告知他们您目前所处的设计阶段：是刚刚开始还是在做最后的调整？这有助于您以最小的开销获得所需的帮助。
 

@@ -8,10 +8,12 @@ import {
   Fixed,
   Button,
   BackgroundProps,
+  Text,
+  InlineBlock,
 } from '@src/components/atoms'
 import { Blog, GraphqlBlogResult } from '@src/types'
 import Breadcrumbs from '@src/components/Breadcrumbs'
-import styled, { ThemeContext } from 'styled-components'
+import styled from 'styled-components'
 import Markdown from '@src/components/Markdown'
 import BlogCatalogs from '@src/components/Markdown/Catalogs'
 import Category from '@src/components/pages/blogList/CategoryList'
@@ -20,7 +22,29 @@ import theme from '@src/constants/theme'
 import { debounce } from '@src/utils'
 import BlogDetailLink from '@src/components/Link/BlogDetailLink'
 import Helmet from '@src/components/Helmet'
-import { background } from 'styled-system'
+import {
+  background,
+  display,
+  DisplayProps,
+  space,
+  SpaceProps,
+} from 'styled-system'
+import { formateDate } from '@src/utils'
+import ExternalLink from '@src/components/Link/ExternalLink'
+import CategoryLink from '@src/components/Link/CategoryLink'
+
+const ExternalLinkWrapper = styled(InlineBlock)`
+  margin-left: 5px;
+
+  a {
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    a {
+      color: ${theme.colors.serverlessRed};
+    }
+  }
+`
 
 interface Props {
   data: {
@@ -32,7 +56,9 @@ interface Props {
   location: any
 }
 
-const LinkWrapper = styled.div`
+const LinkWrapper = styled.div<DisplayProps & SpaceProps>`
+  ${display}
+  ${space}
   a {
     margin: 20px 0;
 
@@ -49,7 +75,7 @@ const LinkWrapper = styled.div`
 const BoxWithBackground = styled(Box)<BackgroundProps>`
   ${background}
   display: flex;
-  align-items: center;
+  flex-direction: column;
   border-radius: 5px;
 `
 
@@ -78,6 +104,8 @@ const BlogDetail = ({
     }
   }, [])
 
+  console.log(currentBlog)
+
   return (
     <Layout>
       <Helmet {...currentBlog.frontmatter} location={location} />
@@ -100,7 +128,56 @@ const BlogDetail = ({
               background={theme.colors.gray[1]}
               width={1}
             >
-              作者: {currentBlog.frontmatter.authors.join(' ')}
+              <Text my="5px">
+                发布于: {formateDate(currentBlog.frontmatter.date)}
+              </Text>
+              <Text my="5px">
+                作者:
+                {currentBlog.frontmatter.authors.map((author, index) => (
+                  <ExternalLinkWrapper>
+                    {currentBlog.frontmatter.authorslink &&
+                    currentBlog.frontmatter.authorslink[index] ? (
+                      <ExternalLink
+                        to={currentBlog.frontmatter.authorslink[index]}
+                      >
+                        {author}
+                      </ExternalLink>
+                    ) : (
+                      author
+                    )}
+                  </ExternalLinkWrapper>
+                ))}
+              </Text>
+              {currentBlog.frontmatter.translators &&
+              currentBlog.frontmatter.translators.length ? (
+                <Text my="5px">
+                  译者:
+                  {currentBlog.frontmatter.translators.map(
+                    (translator, index) => (
+                      <ExternalLinkWrapper>
+                        {currentBlog.frontmatter.translatorslink &&
+                        currentBlog.frontmatter.translatorslink[index] ? (
+                          <ExternalLink
+                            to={currentBlog.frontmatter.translatorslink[index]}
+                          >
+                            {translator}
+                          </ExternalLink>
+                        ) : (
+                          translator
+                        )}
+                      </ExternalLinkWrapper>
+                    )
+                  )}
+                </Text>
+              ) : null}
+              <Text my="5px">
+                归档于:
+                {currentBlog.frontmatter.categories.map(o => (
+                  <LinkWrapper key={o} display="inline-block" ml="5px">
+                    <CategoryLink category={o} />
+                  </LinkWrapper>
+                ))}
+              </Text>
             </BoxWithBackground>
 
             <Markdown html={currentBlog.html as string}></Markdown>
@@ -168,11 +245,13 @@ export const query = graphql`
     frontmatter {
       thumbnail
       authors
-      category
+      categories
       date
       title
-      heroImage
       description
+      authorslink
+      translators
+      translatorslink
     }
     wordCount {
       words
@@ -189,7 +268,7 @@ export const query = graphql`
     $blogId: String!
     $previousBlogId: String
     $nextBlogId: String
-    $category: [String!]
+    $categories: [String!]
   ) {
     currentBlog: markdownRemark(id: { eq: $blogId }) {
       ...blogFields
@@ -208,7 +287,7 @@ export const query = graphql`
     recommendBlogs: allMarkdownRemark(
       filter: {
         id: { ne: $blogId }
-        frontmatter: { date: { ne: null }, category: { in: $category } }
+        frontmatter: { date: { ne: null }, categories: { in: $categories } }
         fileAbsolutePath: { regex: "/blog/" }
       }
       limit: 8

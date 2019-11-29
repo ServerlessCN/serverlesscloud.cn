@@ -1,12 +1,18 @@
 ---
-title: 远程团队沟通策略
-description: Serverless 团队分散在全球各地。本文介绍我们如何管理沟通策略和远程协作。
-date: 2018-02-09
+title: '远程团队沟通策略'
+description: 'Serverless 团队分散在全球各地。本文介绍我们如何管理沟通策略和远程协作。'
+date: 2018-01-24
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/remote-communication/Team+communication+photo+cropped.jpg'
-category:
+categories:
   - engineering-culture
 authors:
   - FelixDesroches
+authorslink:
+  - https://github.com/Aceyclee
+translators:
+  - Aceyclee_01
+translatorslink:
+  - https://github.com/Aceyclee
 ---
 
 首先向不了解我们的人说明一下，Serverless 团队为“分散”一词赋予了新的含义。我们总共跨越了 18 个时区，不同团队成员之间重合的工作时间非常少。

@@ -1,9 +1,9 @@
 ---
-title: "融入所处环境：科技领域的包容性和多元化"
-description: "我是 Charmmie Hendon，非常热衷于促进科技领域的包容性和多元化。以下是我的一些个人经历以及您如何带来改变。"
+title: '融入所处环境：科技领域的包容性和多元化'
+description: '我是 Charmmie Hendon，非常热衷于促进科技领域的包容性和多元化。以下是我的一些个人经历以及您如何带来改变。'
 date: 2018-01-24
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/inclusion/serverless-tech-inclusion1.jpg'
-category:
+categories:
   - engineering-culture
 heroImage: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/inclusion/serverless-tech-inclusion1.jpg'
 authors:
@@ -59,6 +59,7 @@ authors:
 这些数据表明了一个严峻而深刻的事实，而且，他们在采访过程中为如何克服隐性偏见提供了一些有效建议。[每个人都值得看一下这个培训](https://managingbias.fb.com/)。它对公众免费开放，能改变您看待他人以及发现他人潜力的方式。
 
 让数据讲述实事：
+
 1. 科技领域的非洲裔美国人和西班牙裔美国人数量是其他私营经济行业的一半
 2. 83% 的技术主管是白人
 3. Apple 和 Google 超过 50% 的员工也是白人
@@ -93,4 +94,4 @@ authors:
 
 如果您对多元化有任何想法，[请与我联系吧](https://www.linkedin.com/in/charmmie-hendon-5693b95/)！
 
-*所有图片均来自出色的 [WOCintech](https://www.flickr.com/photos/wocintechchat/) 项目*
+_所有图片均来自出色的 [WOCintech](https://www.flickr.com/photos/wocintechchat/) 项目_

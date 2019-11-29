@@ -1,9 +1,9 @@
 ---
-title: "浅谈无服务器、数据锁定和供应商选择"
-description: "供应商选择是如今 IT 领导者需要考虑的最重要事项，而这一点可利用数据可移植性来实现。"
+title: '浅谈无服务器、数据锁定和供应商选择'
+description: '供应商选择是如今 IT 领导者需要考虑的最重要事项，而这一点可利用数据可移植性来实现。'
 date: 2018-06-20
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/vendor+choice/serverless-data-portability.jpg'
-category:
+categories:
   - engineering-culture
   - guides-and-tutorials
 heroImage: ''
@@ -81,4 +81,4 @@ authors:
 
 这些仅仅是几个示例工作流，虽然可能具有很高价值，但靠如今可用的工具几乎不可能实现。无服务器运动及其为开发人员带来极致效率的愿景仍然处于早期阶段。除非我们能够找到避免数据锁定和推动供应商选择的方式，否则无服务器运动无法发挥其全部潜力。
 
-（*图片版权归 [Joshua Sortino](https://unsplash.com/@sortino) 和 [Alexandre Godreau](https://unsplash.com/@alexandre_godreau) 所有*）
+（_图片版权归 [Joshua Sortino](https://unsplash.com/@sortino) 和 [Alexandre Godreau](https://unsplash.com/@alexandre_godreau) 所有_）

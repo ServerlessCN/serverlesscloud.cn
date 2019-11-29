@@ -1,9 +1,9 @@
 ---
-title: "通过举办 TeenTech 编码讲习班回馈社区"
-description: "我们一直在探索回馈当地社区的方法。最近，我们举办了一次面向高中生的 TeenTech 编码讲习班。"
+title: '通过举办 TeenTech 编码讲习班回馈社区'
+description: '我们一直在探索回馈当地社区的方法。最近，我们举办了一次面向高中生的 TeenTech 编码讲习班。'
 date: 2018-06-12
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-teentech/serverless-teentech-header.png'
-category:
+categories:
   - engineering-culture
 heroImage: ''
 authors:

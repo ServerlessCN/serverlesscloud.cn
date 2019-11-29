@@ -54,7 +54,7 @@ export default function() {
             limit: 3
             filter: {
               fileAbsolutePath: { regex: "/blog/" }
-              frontmatter: { category: { nin: "最佳实践" } }
+              frontmatter: { categories: { nin: "best-practice" } }
             }
           ) {
             edges {

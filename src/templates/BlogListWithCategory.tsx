@@ -9,6 +9,10 @@ import Breadcrumbs from '@src/components/Breadcrumbs'
 import Helmet from '@src/components/Helmet'
 import styled from 'styled-components'
 import { width } from 'styled-system'
+import {
+  baseCategoryUrl,
+  generateCategoryText,
+} from '@src/components/Link/CategoryLink'
 
 const CustomContainer = styled(Container)`
   flex: 1;
@@ -40,7 +44,7 @@ const BlogList = ({
         description="Serverless 中文技术网，专注 Serverless 架构最佳实践"
         location={location}
       />
-      <Breadcrumbs>{category}</Breadcrumbs>
+      <Breadcrumbs>{generateCategoryText(category)}</Breadcrumbs>
       <CustomContainer
         width={[0.95, 0.95, 0.95, 0.95, 1216]}
         maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}
@@ -53,7 +57,9 @@ const BlogList = ({
         >
           <List
             generateDataUrl={pageNum =>
-              `/category/${category}${pageNum === 1 ? '' : `/page/${pageNum}`}`
+              `${baseCategoryUrl}/${category}${
+                pageNum === 1 ? '' : `/page/${pageNum}`
+              }`
             }
             blogs={edges}
             offset={offset}
@@ -70,11 +76,11 @@ const BlogList = ({
 export default BlogList
 
 export const query = graphql`
-  query CategoryBlogs($offset: Int!, $limit: Int!, $category: [String!]) {
+  query CategoryBlogs($offset: Int!, $limit: Int!, $categories: [String!]) {
     blogs: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        frontmatter: { date: { ne: null }, category: { in: $category } }
+        frontmatter: { date: { ne: null }, categories: { in: $categories } }
         fileAbsolutePath: { regex: "/blog/" }
       }
       skip: $offset
@@ -86,11 +92,13 @@ export const query = graphql`
           frontmatter {
             thumbnail
             authors
-            category
+            categories
             date
             title
-            heroImage
             description
+            authorslink
+            translators
+            translatorslink
           }
           wordCount {
             words

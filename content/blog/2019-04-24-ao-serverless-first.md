@@ -1,10 +1,10 @@
 ---
-title: "AO.com：逐渐转向无服务器优先"
-description: "AO.com 的 SCV 团队率先尝试无服务器服务。折服于无服务器框架的快速周转时间和低维护成本，整个团队逐渐转向无服务器优先。"
+title: 'AO.com：逐渐转向无服务器优先'
+description: 'AO.com 的 SCV 团队率先尝试无服务器服务。折服于无服务器框架的快速周转时间和低维护成本，整个团队逐渐转向无服务器优先。'
 date: 2019-04-24
-thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/ao-com-story/ao-serverless-thumbnail.png"
-heroImage: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/ao-com-story/ao-serverless-header.png"
-category:
+thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/ao-com-story/ao-serverless-thumbnail.png'
+heroImage: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/ao-com-story/ao-serverless-header.png'
+categories:
   - user-stories
 authors:
   - NickGottlieb

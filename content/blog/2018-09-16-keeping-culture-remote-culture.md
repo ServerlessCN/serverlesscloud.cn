@@ -1,9 +1,9 @@
 ---
-title: "在远程文化中保持企业文化"
-description: "当您的团队分散各地或远程办公时，建立企业文化需要付出不同寻常的努力。下面就来看看我们如何在 Serverless 保持强大的文化。"
+title: '在远程文化中保持企业文化'
+description: '当您的团队分散各地或远程办公时，建立企业文化需要付出不同寻常的努力。下面就来看看我们如何在 Serverless 保持强大的文化。'
 date: 2018-09-17
 thumbnail: https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/Thom's+Posts/remotework.jpg
-category:
+categories:
   - engineering-culture
 authors:
   - ThomCrowe
@@ -36,7 +36,7 @@ authors:
 这些特定的频道为远程员工提供了一个场所，让他们可以基于共同兴趣相互交流，而不仅仅是因为他们在同一个团队中。这种方法可以很好地打破自然出现的隔阂。
 
 在 Serverless，我们交流的另一个关键部分是图片。我们几乎会在任何可能的地方（例如演示文稿、Slack、电子邮件中）分享图片。比起打字回复，它们更能反映出使用人的性格。
-	
+
 ##### 必须愿意去尝试，去失败
 
 当出现问题时，团队必须准备好进行艰难的对话、一同商议并转移重点。如果不愿意冒险，也不愿意失败，就无法做到这一点。也许一个想法在交流时听起来很棒，但当它被实现时，它可能会如预期一样出色，也可能达不到要求。但您得试过才会知道。
@@ -68,4 +68,3 @@ authors:
 远程优先的文化很难定义，很难建立，需要持续的培养来维护。但最终，您有机会与来自世界各地、有着不同背景和观点的人一起工作，齐心协力，让您正在建设的目标变得更好。
 
 ![Teamwork!](https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/Thom's+Posts/giphy.gif)
-

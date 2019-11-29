@@ -1,11 +1,5 @@
 import * as React from 'react'
-import {
-  Box,
-  List,
-  ListItem,
-  Text,
-  ListItemWithNoStyleType,
-} from '@src/components/atoms'
+import { Box, List, Text, ListItemWithNoStyleType } from '@src/components/atoms'
 import styled from 'styled-components'
 import { display, color, textAlign, TextAlignProps } from 'styled-system'
 import { Link } from 'gatsby'
@@ -38,7 +32,7 @@ const navList: { title: string; link: string }[] = [
   },
   {
     title: '最佳实践',
-    link: '/category/最佳实践',
+    link: '/category/best-practice',
   },
   {
     title: '组件',

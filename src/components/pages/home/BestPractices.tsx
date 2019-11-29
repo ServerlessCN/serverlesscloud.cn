@@ -11,10 +11,10 @@ import {
 } from '@src/components/atoms'
 import theme from '@src/constants/theme'
 import { MainTitle } from '@src/components/Title'
-import styled from 'styled-components'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { Blog, GraphqlBlogResult } from '@src/types'
 import BlogCard from './BlogCard'
+import CategoryLink from '@src/components/Link/CategoryLink'
 
 type BestPractice = Blog
 
@@ -57,7 +57,7 @@ export default function() {
             limit: 3
             filter: {
               fileAbsolutePath: { regex: "/blog/" }
-              frontmatter: { category: { in: "最佳实践" } }
+              frontmatter: { categories: { in: "best-practice" } }
             }
           ) {
             edges {
@@ -86,11 +86,11 @@ export default function() {
 
               <Blogs blogs={blogs.edges} />
 
-              <Link to="/category/最佳实践">
+              <CategoryLink custom category="best-practice">
                 <Button mt="30px" mb="30px" theme={theme}>
                   More Posts
                 </Button>
-              </Link>
+              </CategoryLink>
             </Center>
           </Background>
         )

@@ -1,9 +1,9 @@
 ---
-title: "无服务器数据解读：2018 报告"
-description: "无服务器框架使用统计数据：事件源、服务结构、运行时等等。"
+title: '无服务器数据解读：2018 报告'
+description: '无服务器框架使用统计数据：事件源、服务结构、运行时等等。'
 date: 2018-03-09
-thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/observability-tools/graph-thumb.png"
-category:
+thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/observability-tools/graph-thumb.png'
+categories:
   - news
   - engineering-culture
 authors:
@@ -34,13 +34,13 @@ authors:
 
 <img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/services-single-event-type1.jpg">
 
-*含一种事件类型的所有服务（按事件类型）*
+_含一种事件类型的所有服务（按事件类型）_
 
 大多数包含*两种*事件类型的服务（所有服务的 16%）中都包含 http，例如 http + cron 和 http + sns。“其他”部分占据较大比例，主要原因在于其中有很多种排列方式，因此我们将其作为一种最受欢迎的类型：
 
 <img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/services-2-types1.jpg">
 
-*含两种事件类型的所有服务（按事件类型）*
+_含两种事件类型的所有服务（按事件类型）_
 
 包含三种及更多事件类型的服务如要划分所有排列不太现实，但此类服务在所有部署的服务中仅占 4% 多一点。
 
@@ -50,7 +50,7 @@ authors:
 
 <img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/functions-per-service1.jpg">
 
-*服务（按函数个数）*
+_服务（按函数个数）_
 
 ## 热门语言
 
@@ -62,7 +62,7 @@ Node.js 使用比例明显遥遥领先，其次是 Python。
 
 <img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/services-deployed-pie1.jpg">
 
-*所部署服务的百分比（按语言）*
+_所部署服务的百分比（按语言）_
 
 ### 增长最迅速
 
@@ -70,7 +70,7 @@ Node.js 使用比例明显遥遥领先，其次是 Python。
 
 <img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/services-by-language-line1.jpg">
 
-*AWS 上使用的语言（排除 Node 6.10；以服务百分比表示）*
+_AWS 上使用的语言（排除 Node 6.10；以服务百分比表示）_
 
 Python 3.6 是过去八个月内使用率整体增长最稳定的语言，今年的增长尤为突出。
 
@@ -86,7 +86,7 @@ Python 3.6 是过去八个月内使用率整体增长最稳定的语言，今年
 
 <img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/services-by-language-full1.jpg">
 
-*AWS 上使用的语言（以服务百分比表示）*
+_AWS 上使用的语言（以服务百分比表示）_
 
 在短短的六周内，Go 的使用率已经达到 Java 的一半左右。同样值得注意的是，从 8 月到 2 月，Node.js 的使用率下降了三个百分点。
 
@@ -94,7 +94,7 @@ Python 3.6 是过去八个月内使用率整体增长最稳定的语言，今年
 
 <img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/go-deployments1.jpg">
 
-*Golang 在 AWS 上的使用率（以占所有部署的百分比表示）*
+_Golang 在 AWS 上的使用率（以占所有部署的百分比表示）_
 
 如图所示，Golang 使用率稳定增长，已经增长了两倍。
 

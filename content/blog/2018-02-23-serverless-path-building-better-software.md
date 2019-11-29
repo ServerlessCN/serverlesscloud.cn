@@ -1,12 +1,18 @@
 ---
-title: 通过无服务器方式构建更优软件
+title: '通过无服务器方式构建更优软件'
 description: Nick Gottlieb 分享了他在 ServerlessConf Tokyo 上关于无服务器、软件状态以及提高生产效率方法的讲话。
 date: 2018-02-23
 thumbnail: https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/better+software/devs-thumb.jpeg
-category:
+categories:
   - engineering-culture
 authors:
   - NickGottlieb
+authorslink:
+  - https://github.com/Aceyclee
+translators:
+  - Aceyclee_01
+translatorslink:
+  - https://github.com/Aceyclee
 ---
 
 我们软件工具行业为开发人员提供的支持还很不到位，无法帮助他们构建更优软件。
@@ -48,6 +54,7 @@ authors:
 也就是，使创建高度自定义式工具的能力民主化、通过代码复用消除工作冗余、使数据访问更加容易。
 
 ### 简化工具定制
+
 就软件开发工具而言，我们和任何潜在的 SaaS 客户都面临着相同的问题：自行构建还是购买？
 
 投资构建完全满足我们需求的工具，然后再花大量精力进行维护？或者采用第三方产品/服务，但不可避免地会包含一些并非我们期望的附带观点和工作流？这两种办法都不理想；两种方案都会导致脆弱、昂贵且易出错的工具堆栈，并且不能帮助我们高效地开发高质量软件。
@@ -63,6 +70,7 @@ authors:
 虽然距离这一目标还很遥远，但 [Auth0 Extend](https://auth0.com/extend/) 和 [CNCF CloudEvents](https://openevents.io/) 等项目正在朝着这个目标努力。
 
 ### 简化代码复用
+
 作为开发人员，最令人沮丧的事莫过于日复一日地编写重复代码。
 
 <img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/better+software/reuse-code.jpeg">
@@ -75,11 +83,12 @@ authors:
 
 这最终将使我们步入一个新的时代：那时，公开和在组织内部私下共享、部署和复用微服务将变得十分容易。
 
-这会大大降低我们重复工作的时间，使我们能够更专注于独特的功能和业务价值。 
+这会大大降低我们重复工作的时间，使我们能够更专注于独特的功能和业务价值。
 
 当前已有一些项目向这方面努力，例如 [Standard Lib](https://stdlib.com/)。未来这方面的发展值得期待！
 
 ### 简化数据访问
+
 如今，所有数字业务都会产生和收集海量的数据。这些数据是非常宝贵的资源。尤其值得注意的是，我们可以使用这些数据来为用户构建更强大的功能。
 
 <img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/better+software/data2.jpeg">
@@ -93,6 +102,7 @@ authors:
 最终，我们的开发效率将显著提高。
 
 ## 总结
+
 对于开发人员来说，当下是一个激动人心的时代。我们很有可能会见证到我们目前可用的工具实现前所未有的根本改进。
 
 我们每个人都有责任继续追求并推动这一改变。

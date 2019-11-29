@@ -1,12 +1,13 @@
 ---
-title: Serverless 风格——从时装界转行到科技领域的历程
-description: 我们的新进团队成员 Charmmie 是从高级时装行业转行到技术领域。下面是她的故事。
+title: 'Serverless 风格——从时装界转行到科技领域的历程'
+description: '我们的新进团队成员 Charmmie 是从高级时装行业转行到技术领域。下面是她的故事。'
 date: 2018-02-01
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-fashion/charmmie-square.jpg'
-category:
+categories:
+  - guides-and-tutorials
   - engineering-culture
 authors:
-  - CharmmieHendon
+  - AndreaPasswater
 ---
 
 我是一名艺术家、一名时尚达人。说老实话，我从没有想过自己有一天会像现在这样，坐在旧金山一家科技初创公司的办公桌前撰写这篇博文。

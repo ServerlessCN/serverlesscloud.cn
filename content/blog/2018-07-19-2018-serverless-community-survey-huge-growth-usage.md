@@ -1,9 +1,9 @@
 ---
-title: "2018 年无服务器社区调查：无服务器使用率大幅增长"
-description: "我们曾在开发社区进行问卷调查，询问无服务器的使用情况。其使用率的增长连我们自己都惊讶不已，下面来看看数据。"
+title: '2018 年无服务器社区调查：无服务器使用率大幅增长'
+description: '我们曾在开发社区进行问卷调查，询问无服务器的使用情况。其使用率的增长连我们自己都惊讶不已，下面来看看数据。'
 date: 2018-07-19
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/serverless-survey-header.jpg'
-category:
+categories:
   - news
   - engineering-culture
 heroImage: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/serverless-survey-header.jpg'
@@ -101,19 +101,19 @@ authors:
 
 “ETL 工具，从照片中提取 exif 数据并将其转换为热图”
 
-“使用面部识别的会员管理系统”（*以及类似系统*）“无服务器前门控制器，允许通过 Slack 斜杠命令进入建筑”
+“使用面部识别的会员管理系统”（_以及类似系统_）“无服务器前门控制器，允许通过 Slack 斜杠命令进入建筑”
 
 “客户身份验证和购买系统，Dynamics CRM 集成”
 
 “使用 Raspberry Pi 监视发酵温度”
 
-“内容发布管道。我目前也在使用 IoT 平台，以利用机器学习实现停车自动化。”（*为您的涉猎之广鼓掌！*）
+“内容发布管道。我目前也在使用 IoT 平台，以利用机器学习实现停车自动化。”（_为您的涉猎之广鼓掌！_）
 
 “我们的 ETL 平台所用第三方组件的开发人员门户”
 
 “与自动转录、翻译和字幕服务集成的媒体转码服务”
 
-“待办事项应用，让我能够更好地拖延任务”（*感谢这位实事求是的匿名调查对象。*）
+“待办事项应用，让我能够更好地拖延任务”（_感谢这位实事求是的匿名调查对象。_）
 
 ## 基于数据得出的关键要点
 

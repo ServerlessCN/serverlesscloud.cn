@@ -3,11 +3,15 @@ title: '快速部署一个全栈应用(vue.js+express.js)'
 description: '了解部署无服务器应用时的一些最佳实践。'
 date: 2019-10-14
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2019-10-deployment-best-practices/safeguard-header.png'
-heroImage: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2019-10-deployment-best-practices/safeguard-hero.png'
-category:
-  - 最佳实践
+categories:
+  - best-practice
 authors:
   - FernandoMedinaCorey
+authorslink:
+  - https://github.com/Aceyclee
+translators:
+  - Aceyclee_01
+translatorslink:
 ---
 
 ## 操作场景

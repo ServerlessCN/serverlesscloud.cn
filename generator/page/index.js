@@ -34,7 +34,7 @@ function createBlog(blogs, createPage) {
       {
         node: {
           id: blogId,
-          frontmatter: { category },
+          frontmatter: { categories },
           fileAbsolutePath,
         },
       },
@@ -54,19 +54,22 @@ function createBlog(blogs, createPage) {
           previousBlogId: index === 0 ? null : blogs[index - 1].node.id,
           nextBlogId:
             index === blogs.length - 1 ? null : blogs[index + 1].node.id,
-          category,
+          categories,
         },
       })
     }
   )
 }
 
-function createBlogListWithCategory(categorys, createPage) {
-  categorys.forEach(({ category, totalCount }) => {
+function createBlogListWithCategory(categories, createPage) {
+  console.log(categories)
+  categories.forEach(({ categories, totalCount }) => {
     const pages = Math.ceil(totalCount / BLOG_PAGESIZE)
     new Array(pages).fill(0).forEach((o, page) => {
       createPage({
-        path: `category/${category}${page === 0 ? '' : '/page/' + (page + 1)}`,
+        path: `category/${categories}${
+          page === 0 ? '' : '/page/' + (page + 1)
+        }`,
         component: path.resolve(
           __dirname,
           '../../src/templates/BlogListWithCategory.tsx'
@@ -74,7 +77,7 @@ function createBlogListWithCategory(categorys, createPage) {
         context: {
           limit: BLOG_PAGESIZE,
           offset: page * BLOG_PAGESIZE,
-          category,
+          categories,
         },
       })
     })
@@ -95,11 +98,13 @@ function createBlogTask(graphql, createPage) {
             frontmatter {
               thumbnail
               authors
-              category
-              date(formatString: "YYYY-MM-DD HH:mm:ss")
+              categories
+              date
               title
-              heroImage
               description
+              authorslink
+              translators
+              translatorslink
             }
             wordCount {
               words
@@ -126,9 +131,9 @@ function createBlogWithCategoryTask(graphql, createPage) {
   return graphql(`
     query {
       allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/blog/" } }) {
-        group(field: frontmatter___category) {
+        group(field: frontmatter___categories) {
           totalCount
-          category: fieldValue
+          categories: fieldValue
         }
       }
     }

@@ -1,15 +1,15 @@
 ---
-title: "无服务器框架 v1.46.0 - 扩展 ALB 可配置性、支持外部 Websocket API 以及通过相对路径引用本地插件等等"
-description: "查看无服务器框架 v1.46.0 中包含的功能。"
+title: '无服务器框架 v1.46.0 - 扩展 ALB 可配置性、支持外部 Websocket API 以及通过相对路径引用本地插件等等'
+description: '查看无服务器框架 v1.46.0 中包含的功能。'
 date: 2019-07-01
-thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/framework-updates/framework-v146-thumb.png"
-heroImage: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/framework-updates/framework-v146-header.png"
-category:
+thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/framework-updates/framework-v146-thumb.png'
+heroImage: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/framework-updates/framework-v146-header.png'
+categories:
   - news
 authors:
   - MariuszNowak
 ---
- 
+
 无服务器框架 v1.46.0 增加了配置 ALB 事件条件的新方法、外部托管 Websocket API 的支持以及可通过相对文件路径引用的本地插件。我们还处理了一些增强功能和错误修复。总共修复了 5 个错误，融合了 5 个增强功能。这些都通过我们的 v1.46.0 版推出。
 
 使用无服务器框架时，请确保您使用的是最新的 Node 版本。
@@ -91,18 +91,23 @@ plugins:
 ```
 
 #### 错误修复
+
 - [#4427](https://github.com/serverless/serverless/pull/4427) 从 IAM 角色中分离 IAM 策略并改善流的 DependsOn<a href="https://github.com/serverless/serverless/pull/4427/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+120</span>/<span style="color:#cb2431">-51</span></a> <a href="https://github.com/alexcasalboni"> <img src='https://avatars1.githubusercontent.com/u/2457588?v=4' style="vertical-align: middle" alt='' height="20px"> alexcasalboni</a>
 - [#6244](https://github.com/serverless/serverless/pull/6244) 修复重复包装问题<a href="https://github.com/serverless/serverless/pull/6244/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+52</span>/<span style="color:#cb2431">-17</span></a> <a href="https://github.com/alexdebrie"> <img src='https://avatars3.githubusercontent.com/u/6509926?v=4' style="vertical-align: middle" alt='' height="20px"> alexdebrie</a>
 - [#6255](https://github.com/serverless/serverless/pull/6255) 修复 Lambda 集成超时响应模板<a href="https://github.com/serverless/serverless/pull/6255/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+27</span>/<span style="color:#cb2431">-2</span></a> <a href="https://github.com/medikoo"> <img src='https://avatars3.githubusercontent.com/u/122434?v=4' style="vertical-align: middle" alt='' height="20px"> medikoo</a>
 - [#6268](https://github.com/serverless/serverless/pull/6268) 修复 #6267<a href="https://github.com/serverless/serverless/pull/6268/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+1</span>/<span style="color:#cb2431">-1</span></a> <a href="https://github.com/JonathanWilbur"> <img src='https://avatars0.githubusercontent.com/u/20342114?v=4' style="vertical-align: middle" alt='' height="20px"> JonathanWilbur</a>
 - [#6281](https://github.com/serverless/serverless/pull/6281) 如果没有 tty 可用，请勿对 stdin 设置 tty<a href="https://github.com/serverless/serverless/pull/6281/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+2</span>/<span style="color:#cb2431">-2</span></a> <a href="https://github.com/jpetitcolas"> <img src='https://avatars0.githubusercontent.com/u/688373?v=4' style="vertical-align: middle" alt='' height="20px"> jpetitcolas</a>
+
 #### 增强功能
+
 - [#6200](https://github.com/serverless/serverless/pull/6200) 删除提供者对象中的默认阶段值<a href="https://github.com/serverless/serverless/pull/6200/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+109</span>/<span style="color:#cb2431">-111</span></a> <a href="https://github.com/mydiemho"> <img src='https://avatars2.githubusercontent.com/u/1634185?v=4' style="vertical-align: middle" alt='' height="20px"> mydiemho</a>
 - [#6258](https://github.com/serverless/serverless/pull/6258) 修复：更新 Azure 模板<a href="https://github.com/serverless/serverless/pull/6258/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+6</span>/<span style="color:#cb2431">-138</span></a> <a href="https://github.com/tbarlow12"> <img src='https://avatars0.githubusercontent.com/u/10962815?v=4' style="vertical-align: middle" alt='' height="20px"> tbarlow12</a>
 - [#6280](https://github.com/serverless/serverless/pull/6280) 删除 package-lock.json 和 shrinkwrap 脚本<a href="https://github.com/serverless/serverless/pull/6280/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+3</span>/<span style="color:#cb2431">-9384</span></a> <a href="https://github.com/medikoo"> <img src='https://avatars3.githubusercontent.com/u/122434?v=4' style="vertical-align: middle" alt='' height="20px"> medikoo</a>
 - [#6285](https://github.com/serverless/serverless/pull/6285) 使用命名获取 stackName<a href="https://github.com/serverless/serverless/pull/6285/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+2</span>/<span style="color:#cb2431">-2</span></a> <a href="https://github.com/joetravis"> <img src='https://avatars1.githubusercontent.com/u/3687269?v=4' style="vertical-align: middle" alt='' height="20px"> joetravis</a>
 - [#6293](https://github.com/serverless/serverless/pull/6293) 将 IP、方法、标头和查询条件添加到 ALB 事件<a href="https://github.com/serverless/serverless/pull/6293/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+270</span>/<span style="color:#cb2431">-11</span></a> <a href="https://github.com/cbm-egoubely"> <img src='https://avatars2.githubusercontent.com/u/39260821?v=4' style="vertical-align: middle" alt='' height="20px"> cbm-egoubely</a>
+
 #### 文档
+
 - [#6225](https://github.com/serverless/serverless/pull/6225) 更新文档 | 请勿将 provider.tags 与共享的 API Gateway 一起使用<a href="https://github.com/serverless/serverless/pull/6225/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+2</span>/<span style="color:#cb2431">-0</span></a> <a href="https://github.com/OskarKaminski"> <img src='https://avatars3.githubusercontent.com/u/7963279?v=4' style="vertical-align: middle" alt='' height="20px"> OskarKaminski</a>
 - [#6228](https://github.com/serverless/serverless/pull/6228) 修复 Markdown 链接的格式问题<a href="https://github.com/serverless/serverless/pull/6228/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+2</span>/<span style="color:#cb2431">-2</span></a> <a href="https://github.com/awayken"> <img src='https://avatars1.githubusercontent.com/u/156215?v=4' style="vertical-align: middle" alt='' height="20px"> awayken</a>
 - [#6275](https://github.com/serverless/serverless/pull/6275) 修正一个拼写错误 🖊<a href="https://github.com/serverless/serverless/pull/6275/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+1</span>/<span style="color:#cb2431">-1</span></a> <a href="https://github.com/floydnoel"> <img src='https://avatars3.githubusercontent.com/u/4154431?v=4' style="vertical-align: middle" alt='' height="20px"> floydnoel</a>
@@ -110,7 +115,9 @@ plugins:
 - [#6286](https://github.com/serverless/serverless/pull/6286) 基于社区反馈增加了修正<a href="https://github.com/serverless/serverless/pull/6286/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+1</span>/<span style="color:#cb2431">-1</span></a> <a href="https://github.com/garethmcc"> <img src='https://avatars1.githubusercontent.com/u/4112280?v=4' style="vertical-align: middle" alt='' height="20px"> garethmcc</a>
 - [#6288](https://github.com/serverless/serverless/pull/6288) 删除 README 冗余链路<a href="https://github.com/serverless/serverless/pull/6288/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+0</span>/<span style="color:#cb2431">-1</span></a> <a href="https://github.com/Hazlank"> <img src='https://avatars0.githubusercontent.com/u/15724316?v=4' style="vertical-align: middle" alt='' height="20px"> Hazlank</a>
 - [#6292](https://github.com/serverless/serverless/pull/6292) 修复 ALB 文档链接中的拼写错误<a href="https://github.com/serverless/serverless/pull/6292/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+1</span>/<span style="color:#cb2431">-1</span></a> <a href="https://github.com/schellack"> <img src='https://avatars0.githubusercontent.com/u/70819?v=4' style="vertical-align: middle" alt='' height="20px"> schellack</a>
+
 #### 功能
+
 - [#6261](https://github.com/serverless/serverless/pull/6261) #6017 允许从路径加载插件<a href="https://github.com/serverless/serverless/pull/6261/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+18</span>/<span style="color:#cb2431">-7</span></a> <a href="https://github.com/mnapoli"> <img src='https://avatars3.githubusercontent.com/u/720328?v=4' style="vertical-align: middle" alt='' height="20px"> mnapoli</a>
 - [#6272](https://github.com/serverless/serverless/pull/6272) 功能/支持外部 WebSocket API<a href="https://github.com/serverless/serverless/pull/6272/files?utf8=✓&diff=split" style="text-decoration:none;"> <span style="color:#28a647">+193</span>/<span style="color:#cb2431">-103</span></a> <a href="https://github.com/christophgysin"> <img src='https://avatars0.githubusercontent.com/u/527924?v=4' style="vertical-align: middle" alt='' height="20px"> christophgysin</a>
 

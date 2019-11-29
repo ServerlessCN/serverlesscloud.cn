@@ -1,13 +1,13 @@
 ---
-title: "无服务器 Twitter 机器人帮助为坎普山火受灾者安置住房"
-description: "加利福尼亚州坎普山火致使数千人流离失所，为此，我构建了一个简单的无服务器 Twitter 机器人来帮助将受灾者安置在临时住房！"
+title: '无服务器 Twitter 机器人帮助为坎普山火受灾者安置住房'
+description: '加利福尼亚州坎普山火致使数千人流离失所，为此，我构建了一个简单的无服务器 Twitter 机器人来帮助将受灾者安置在临时住房！'
 date: 2018-12-05
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/camp-fire/camp-fire-housing-thumb.jpg'
 heroImage: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/camp-fire/camp-fire-housing.jpg'
-category:
+categories:
   - guides-and-tutorials
   - user-stories
-authors: 
+authors:
   - EricWyne
 ---
 

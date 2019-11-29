@@ -3,13 +3,15 @@ export interface Blog {
     id: string
     html?: string
     frontmatter: {
-      thumbnail: string
-      date: string
       title: string
       description: string
-      category: string[]
+      date: string
+      thumbnail: string
+      categories: string[]
       authors: string[]
-      heroImage: string
+      authorslink: string[]
+      translators: string[]
+      translatorslink: string[]
     }
     timeToRead: number
     wordCount: {
@@ -32,7 +34,7 @@ export interface GraphqlBlogResult {
 
 interface Category {
   totalCount: number
-  category: string
+  categories: string
 }
 
 export interface GraphqlCategoryResult {

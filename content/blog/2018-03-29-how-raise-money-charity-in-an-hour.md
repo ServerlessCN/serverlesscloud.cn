@@ -1,9 +1,9 @@
 ---
-title: "如何在 1 小时内筹集到 400 多美元善款"
-description: "想做些事情来回馈社区？阅读本文了解 Serverless 团队如何在 1 小时内筹集到 400 多美元善款。"
+title: '如何在 1 小时内筹集到 400 多美元善款'
+description: '想做些事情来回馈社区？阅读本文了解 Serverless 团队如何在 1 小时内筹集到 400 多美元善款。'
 date: 2018-03-29
-thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/donation-cart/molly-felix.png"
-category:
+thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/donation-cart/molly-felix.png'
+categories:
   - engineering-culture
 authors:
   - MollyMoore

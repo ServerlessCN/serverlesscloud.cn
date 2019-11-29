@@ -87,11 +87,13 @@ export const query = graphql`
           frontmatter {
             thumbnail
             authors
-            category
+            categories
             date
             title
-            heroImage
             description
+            authorslink
+            translators
+            translatorslink
           }
           wordCount {
             words

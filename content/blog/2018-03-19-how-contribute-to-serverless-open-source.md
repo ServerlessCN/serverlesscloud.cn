@@ -1,16 +1,16 @@
 ---
-title: "如何为无服务器开放源代码项目做贡献"
-description: "想要为无服务器开放源代码项目做贡献？您可以遵循下面的指南。"
+title: '如何为无服务器开放源代码项目做贡献'
+description: '想要为无服务器开放源代码项目做贡献？您可以遵循下面的指南。'
 date: 2018-03-19
-thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/Serverless_logo.png"
-category:
+thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/Serverless_logo.png'
+categories:
   - guides-and-tutorials
   - engineering-culture
 authors:
   - AndreaPasswater
 ---
 
-想要为无服务器项目做贡献？*太棒了！*
+想要为无服务器项目做贡献？_太棒了！_
 
 查看本指南，了解所有需知信息。
 
@@ -18,11 +18,11 @@ authors:
 
 虽然不只是针对无服务器，但如果您以前从未对开放源代码做过贡献，则可能需要查看 [GitHub 开放源代码指南](https://opensource.guide/how-to-contribute/)来了解常规入门知识。
 
-本指南中最重要的一点是，*做贡献并非只有编写代码一种方式*：
+本指南中最重要的一点是，_做贡献并非只有编写代码一种方式_：
 
 <image src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-contribute/contribute-opensource.png">
 
-*（引用自 GitHub 开放源代码指南）*
+_（引用自 GitHub 开放源代码指南）_
 
 无服务器也同样如此。我们会介绍您能提供帮助的所有方式（无论有无代码）。
 
@@ -77,5 +77,6 @@ v1.27 在所有问题得到解决并且拉取请求被审核和合并后发布�
 - [回答论坛问题](https://forum.serverless.com/)
 
 **其他有用的资源：**
+
 - [如何为无服务器框架编写首个插件](https://serverless.com/blog/writing-serverless-plugins/)
 - [最热门的框架插件](https://serverless.com/blog/most-popular-framework-plugins/)

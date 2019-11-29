@@ -1,10 +1,10 @@
 ---
-title: "不适合选择无服务器的情境及原因"
-description: "无服务器既有优点也有缺点。那么，哪些情境下不适合选择无服务器？原因又是什么呢？"
+title: '不适合选择无服务器的情境及原因'
+description: '无服务器既有优点也有缺点。那么，哪些情境下不适合选择无服务器？原因又是什么呢？'
 date: 2018-03-21
 layout: Post
-thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/why-not/why-not-header.png"
-category:
+thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/why-not/why-not-header.png'
+categories:
   - guides-and-tutorials
   - operations-and-observability
   - engineering-culture
@@ -39,6 +39,7 @@ authors:
 但这对于较小的函数最为有效。当函数较大或工作流程相对较复杂时，[复杂性会加大不少](https://theburningmonk.com/2018/02/aws-lambda-monolithic-functions-wont-help-you-with-cold-starts/)。
 
 为最大程度降低冷启动时间，应注意以下几点：
+
 - 应用架构：使用小而集中的无服务器函数。冷启动时间会随内存和代码大小而线性增加
 - 语言的选择：Python 和 Go 语言可显著降低冷启动时间，而 C# 和 Java 具有众所周知的最长冷启动时间
 - VPC：配置网络资源的额外运行会导致冷启动时间增加。
@@ -47,7 +48,7 @@ authors:
 
 采用无服务器，您无需管理服务器。但这也意味着您无法控制服务器软件、运行时和运行时更新（撰写本文时，Node.js 8 已推出，但 AWS 仍在使用 Node.js 6）。提供商还会实施并发和资源限制。
 
-应用架构的细节可能突然交由您使用的提供商决定。例如，如果您使用 AWS Lambda 的无服务器框架，您可以使用的无服务器式数据库只有 DynamoDB 或 Serverless Aurora。（但您也可以将 Lambda 附加到 VPC，然后访问其中的其他数据库，例如 RDS、ElastiCache 和 ElasticSearch 实例。*）
+应用架构的细节可能突然交由您使用的提供商决定。例如，如果您使用 AWS Lambda 的无服务器框架，您可以使用的无服务器式数据库只有 DynamoDB 或 Serverless Aurora。（但您也可以将 Lambda 附加到 VPC，然后访问其中的其他数据库，例如 RDS、ElastiCache 和 ElasticSearch 实例。\*）
 
 所以，这就存在供应商锁定的问题。关于全部使用一个提供商的长期影响有很多讨论，但意见分歧很大：
 
@@ -71,6 +72,7 @@ CNCF 也在[积极提倡跨平台标准化](https://openevents.io/)，以便使�
 总体而言，它可以显著提高应用开发和工作流程的效率。
 
 转向无服务器的原因主要有四点：
+
 - 可以按需自动扩展
 - 由于无需为空闲资源付费，可显著降低服务器成本 (70-90%)
 - 无需服务器维护
@@ -99,4 +101,4 @@ CNCF 也在[积极提倡跨平台标准化](https://openevents.io/)，以便使�
 - [为什么从 Docker 换用无服务器框架](https://serverless.com/blog/why-we-switched-from-docker-to-serverless/)
 - [无服务器 (FaaS) 和容器，如何选择？](https://serverless.com/blog/serverless-faas-vs-containers/)
 
-**感谢 [@hotzgaspacho](https://twitter.com/hotgazpacho) 在本文中添加此部分内容。*
+\*_感谢 [@hotzgaspacho](https://twitter.com/hotgazpacho) 在本文中添加此部分内容。_
