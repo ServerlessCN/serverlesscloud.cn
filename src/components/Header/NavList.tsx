@@ -65,7 +65,7 @@ export default function({ isActive, isDesktopView }: Props) {
     ? 'block'
     : 'none'
 
-  const navListBoxWidth = isDesktopView ? 1 / 3 : 1
+  const navListBoxWidth = isDesktopView ? 1 / 2 : 1
   return (
     <BoxWithTextAlign
       width={navListBoxWidth}

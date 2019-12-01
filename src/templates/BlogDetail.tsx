@@ -104,8 +104,6 @@ const BlogDetail = ({
     }
   }, [])
 
-  console.log(currentBlog)
-
   return (
     <Layout>
       <Helmet {...currentBlog.frontmatter} location={location} />
@@ -134,7 +132,7 @@ const BlogDetail = ({
               <Text my="5px">
                 作者:
                 {currentBlog.frontmatter.authors.map((author, index) => (
-                  <ExternalLinkWrapper>
+                  <ExternalLinkWrapper key={author}>
                     {currentBlog.frontmatter.authorslink &&
                     currentBlog.frontmatter.authorslink[index] ? (
                       <ExternalLink
@@ -154,7 +152,7 @@ const BlogDetail = ({
                   译者:
                   {currentBlog.frontmatter.translators.map(
                     (translator, index) => (
-                      <ExternalLinkWrapper>
+                      <ExternalLinkWrapper key={translator}>
                         {currentBlog.frontmatter.translatorslink &&
                         currentBlog.frontmatter.translatorslink[index] ? (
                           <ExternalLink

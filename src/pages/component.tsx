@@ -14,8 +14,6 @@ import Helmet from '@src/components/Helmet'
 import styled from 'styled-components'
 import componentConfig from '@src/constants/componentConfig'
 import Card from '@src/components/Card'
-import { LazyImage } from 'react-lazy-images'
-import placeholderImg from '@src/assets/images/placeholder.png'
 import { Link } from 'gatsby'
 import theme from '@src/constants/theme'
 
@@ -45,31 +43,13 @@ const ComponentPage = ({ location }: Props) => {
           {componentConfig.map(component => (
             <Link to={component.link} key={component.name}>
               <Card height="386px" width={[0.9, 0.9, 340, 360]}>
-                <LazyImage
-                  src={component.thumbnail}
-                  alt={component.slogan}
-                  actual={({ imageProps }) => {
-                    return (
-                      <Background
-                        width={[1]}
-                        height={[200]}
-                        background={`url(${JSON.stringify(
-                          component.thumbnail
-                        )})`}
-                        backgroundSize="cover"
-                        backgroundPosition="center"
-                        backgroundRepeat="no-repeat"
-                      />
-                    )
-                  }}
-                  placeholder={({ imageProps, ref }) => (
-                    <Image
-                      {...imageProps}
-                      ref={ref}
-                      src={placeholderImg}
-                      width={1}
-                    />
-                  )}
+                <Background
+                  width={[1]}
+                  height={[200]}
+                  background={`url(${JSON.stringify(component.thumbnail)})`}
+                  backgroundSize="cover"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
                 />
                 <Box py="30px" px="20px">
                   <Text fontSize="18px" fontWeight="bold" mb="8px">

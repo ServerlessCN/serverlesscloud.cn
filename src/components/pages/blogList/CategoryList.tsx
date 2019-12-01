@@ -14,6 +14,7 @@ import theme from '@src/constants/theme'
 import CategoryLink from '@src/components/Link/CategoryLink'
 import categoryIconRed from '@src/assets/images/icon-category-red.png'
 import categoryIcon from '@src/assets/images/icon-category.png'
+import { FaList } from 'react-icons/fa'
 
 const LinkWrapper = styled(ListItemWithNoStyleType)<
   HeightProps & LineHeightProps & MinHeightProps
@@ -69,7 +70,7 @@ export default function(props) {
 
             <List>
               {categorys.group.map(category => (
-                <LinkWrapper>
+                <LinkWrapper key={category.categories}>
                   <CategoryLink
                     preAddon={
                       <>
@@ -77,12 +78,14 @@ export default function(props) {
                           className="icon-category-red"
                           width="24px"
                           height="24px"
+                          alt="categoryIconRed"
                           src={categoryIconRed}
                         />
                         <Image
                           className="icon-category"
                           width="24px"
                           height="24px"
+                          alt="categoryIcon"
                           src={categoryIcon}
                         />
                       </>

@@ -12,8 +12,6 @@ import {
 import theme from '@src/constants/theme'
 import styled from 'styled-components'
 import { Blog } from '@src/types'
-import { LazyImage } from 'react-lazy-images'
-import placeholderImg from '@src/assets/images/placeholder.png'
 import { width } from 'styled-system'
 import BlogDetailLink from '@src/components/Link/BlogDetailLink'
 import { generateCategoryText } from '@src/components/Link/CategoryLink'
@@ -47,29 +45,13 @@ export default function({ data }: { data: Blog }) {
           justifyContent={['center', 'center', 'center', 'flex-start']}
           flexDirection={['column', 'column', 'column', 'row']}
         >
-          <LazyImage
-            src={frontmatter.thumbnail}
-            alt={frontmatter.title}
-            actual={({ imageProps }) => {
-              return (
-                <Background
-                  width={[0.9, 0.9, 0.9, 0.35]}
-                  height={[200]}
-                  background={`url(${JSON.stringify(frontmatter.thumbnail)})`}
-                  backgroundSize="cover"
-                  backgroundPosition="center"
-                  backgroundRepeat="no-repeat"
-                />
-              )
-            }}
-            placeholder={({ imageProps, ref }) => (
-              <Image
-                {...imageProps}
-                ref={ref}
-                src={placeholderImg}
-                width={[0.9, 0.9, 0.9, 0.35]}
-              />
-            )}
+          <Background
+            width={[0.9, 0.9, 0.9, 0.35]}
+            height={[200]}
+            background={`url(${JSON.stringify(frontmatter.thumbnail)})`}
+            backgroundSize="cover"
+            backgroundPosition="center"
+            backgroundRepeat="no-repeat"
           />
           <BoxWithFlex width={[0.9, 0.9, 0.9, 0.65]} ml={[0, 0, 0, '30px']}>
             <ColumnWithHeight
@@ -92,7 +74,7 @@ export default function({ data }: { data: Blog }) {
                     {(frontmatter.categories || [])
                       .map(o => generateCategoryText(o))
                       .map(o => (
-                        <span>{o}&nbsp;</span>
+                        <span key={o}>{o}&nbsp;</span>
                       ))}
                   </InlineText>
                 </Box>

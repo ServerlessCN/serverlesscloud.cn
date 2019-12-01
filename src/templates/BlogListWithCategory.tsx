@@ -26,7 +26,7 @@ interface Props {
   data: {
     blogs: GraphqlBlogResult
   }
-  pathContext: { offset: number; limit: number; category: string }
+  pathContext: { offset: number; limit: number; categories: string }
   location: any
 }
 
@@ -34,7 +34,7 @@ const BlogList = ({
   data: {
     blogs: { edges, totalCount },
   },
-  pathContext: { offset, limit, category },
+  pathContext: { offset, limit, categories },
   location,
 }: Props) => {
   return (
@@ -44,7 +44,7 @@ const BlogList = ({
         description="Serverless 中文技术网，专注 Serverless 架构最佳实践"
         location={location}
       />
-      <Breadcrumbs>{generateCategoryText(category)}</Breadcrumbs>
+      <Breadcrumbs>{generateCategoryText(categories)}</Breadcrumbs>
       <CustomContainer
         width={[0.95, 0.95, 0.95, 0.95, 1216]}
         maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}
@@ -57,7 +57,7 @@ const BlogList = ({
         >
           <List
             generateDataUrl={pageNum =>
-              `${baseCategoryUrl}/${category}${
+              `${baseCategoryUrl}/${categories}${
                 pageNum === 1 ? '' : `/page/${pageNum}`
               }`
             }

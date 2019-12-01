@@ -7,6 +7,7 @@ import {
   Text,
   Background,
   Image,
+  Row,
 } from '@src/components/atoms'
 import theme from '@src/constants/theme'
 import styled from 'styled-components'
@@ -121,10 +122,14 @@ export default function() {
       <Background width={[1]} background={theme.colors.black}>
         <Container maxWidth={['100%', '100%', '100%', '1260px', '1260px']}>
           <Box pt={'40px'} pb={'30px'} pl={'10px'} pr={'10px'}>
-            <Flex flexDirection={['column', 'column', 'column', 'row', 'row']}>
+            <Row flexWrap={['wrap', 'wrap', 'wrap', 'nowrap']}>
               <Box width={[1, 1, 1, 1 / 4]}>
-                <Column>
-                  <Image width={'180px'} src={logo} alt="Serverless" />
+                <Column alignItems="center">
+                  <Image
+                    width={'180px'}
+                    src={logo}
+                    alt="Serverless Framework"
+                  />
                   <WhiteText>极速部署 Serverless 应用的开发平台</WhiteText>
                 </Column>
               </Box>
@@ -132,7 +137,7 @@ export default function() {
               {links.map(({ category, contents }) => (
                 <Box
                   key={category}
-                  width={[1, 1, 1, 1 / 6]}
+                  width={[0.3, 0.3, 0.3, 1 / 7]}
                   ml={'10px'}
                   mr={'10px'}
                   mt={'40px'}
@@ -158,7 +163,7 @@ export default function() {
               {contacts.map(({ title, qrcode, description }) => (
                 <Box
                   key={title}
-                  width={[1, 1, 1, 1 / 6]}
+                  width={[0.3, 0.3, 0.3, 1 / 6]}
                   ml={'10px'}
                   mr={'10px'}
                   mt={'40px'}
@@ -181,7 +186,7 @@ export default function() {
                   </Column>
                 </Box>
               ))}
-            </Flex>
+            </Row>
           </Box>
         </Container>
       </Background>

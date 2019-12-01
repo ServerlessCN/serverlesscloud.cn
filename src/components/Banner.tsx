@@ -6,10 +6,6 @@ import theme from '@src/constants/theme'
 import { CheckIfDesktopContext, CheckIfHeaderFixed } from '@src/contexts'
 import { width, WidthProps } from 'styled-system'
 
-const MainTitle = styled(Text)`
-  margin-bottom: 30px;
-`
-
 const CustomText = styled(Text)<WidthProps>`
   ${width}
 `
@@ -48,7 +44,8 @@ export default function({
                     justifyContent="center"
                     height={['200px', '200px', '200px', '300px']}
                   >
-                    <MainTitle
+                    <Text
+                      mb="30px"
                       fontSize={[
                         theme.fontSizes[0],
                         theme.fontSizes[0],
@@ -59,7 +56,7 @@ export default function({
                       color={theme.colors.white}
                     >
                       {title}
-                    </MainTitle>
+                    </Text>
                     <CustomText
                       fontSize={[
                         '0.8rem',

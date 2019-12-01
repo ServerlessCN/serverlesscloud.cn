@@ -84,12 +84,14 @@ export default function({ blogs, ...rest }: Props) {
                   className="icon-blog-red"
                   width="24px"
                   height="24px"
+                  alt="blogIconRed"
                   src={blogIconRed}
                 />
                 <Image
                   className="icon-blog"
                   width="24px"
                   height="24px"
+                  alt="blogIcon"
                   src={blogIcon}
                 />
                 {title}

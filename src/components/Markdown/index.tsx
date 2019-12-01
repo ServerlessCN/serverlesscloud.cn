@@ -3,9 +3,12 @@ import styled from 'styled-components'
 import theme from '@src/constants/theme'
 
 const Wrapper = styled.div`
-  .markdown-body ol,
   ul {
     list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
   }
 `
 

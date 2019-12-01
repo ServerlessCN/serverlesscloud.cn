@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Flex, Text, Container, Box, Background } from '@src/components/atoms'
 import theme from '@src/constants/theme'
-import { MainTitle, SubMainTitle } from '@src/components/Title'
+import { MainTitle, SubMainTitle } from '@src/components/pages/home/Title'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 

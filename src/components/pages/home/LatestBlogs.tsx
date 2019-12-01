@@ -2,13 +2,12 @@ import * as React from 'react'
 import {
   Flex,
   Button,
-  Box,
   Background,
   Container,
   Center,
 } from '@src/components/atoms'
 import theme from '@src/constants/theme'
-import { MainTitle } from '@src/components/Title'
+import { MainTitle } from '@src/components/pages/home/Title'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { Blog, GraphqlBlogResult } from '@src/types'
 import BlogCard from './BlogCard'
@@ -21,7 +20,10 @@ interface Props {
 
 function Blogs({ blogs }: Props) {
   return (
-    <Container maxWidth={['100%', '100%', '100%', '85%']}>
+    <Container
+      width={['100%', '100%', '100%', 'auto']}
+      maxWidth={['100%', '100%', '100%', '85%']}
+    >
       <Flex
         flexDirection={['column', 'column', 'row', 'row', 'row']}
         flexWrap={['initial', 'initial', 'wrap', 'wrap', 'initial']}
