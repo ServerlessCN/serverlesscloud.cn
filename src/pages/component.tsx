@@ -29,8 +29,9 @@ const ComponentPage = ({ location }: Props) => {
   return (
     <Layout>
       <Helmet
-        title="Serverless - Serverless Component"
-        descirption="Serverless Framework 提供贴合应用场景的框架和组件，开发者根据实际需求选择对应框架后，即可在数秒内快速构建和部署 Serverless 应用"
+        title="组件 - Serverless"
+        keywords="Serverless components,Serverless组件,Serverless案例"
+        descirption="Serverless components 组件实战，快速上手Serverless框架组件能力，帮助上手Serverless最佳操作场景实战。"
         location={location}
       />
       <Banner

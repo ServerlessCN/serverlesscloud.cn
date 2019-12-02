@@ -34,7 +34,12 @@ const AboutPage = ({
 }: Props) => {
   return (
     <Layout>
-      <Helmet title="Serverless - 关于我们" location={location} />
+      <Helmet
+        description="Serverless Framework 简介，快速了解Serverless基本概念与详情介绍。"
+        keywords="Serverless简介,Serverless概述,Serverless指引"
+        title="关于Serverless - Serverless"
+        location={location}
+      />
       <Banner />
 
       <CustomContainer maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}>

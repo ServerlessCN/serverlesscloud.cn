@@ -37,14 +37,25 @@ const BlogList = ({
   pathContext: { offset, limit, categories },
   location,
 }: Props) => {
+  const isBestPractice = categories === 'best-practice'
+  const categoriesText = generateCategoryText(categories)
   return (
     <Layout>
       <Helmet
-        title="Serverless 中文技术网——博客"
-        description="Serverless 中文技术网，专注 Serverless 架构最佳实践"
+        title={`${categoriesText} - Serverless`}
+        keywords={
+          isBestPractice
+            ? 'Serverless教程,Serverless入门,Serverless实践,ServerlessSSR'
+            : 'Serverless团队博客,Serverless发布,Serverless动态,Serverless新闻'
+        }
+        description={
+          isBestPractice
+            ? 'Serverless Framework 最佳实践教程指引，帮助开发者快速掌握Serverless工程化框架与Serverless实战内容。'
+            : 'Serverless Framework 团队博客最新动态，最新功能，最新版本发布'
+        }
         location={location}
       />
-      <Breadcrumbs>{generateCategoryText(categories)}</Breadcrumbs>
+      <Breadcrumbs>{categoriesText}</Breadcrumbs>
       <CustomContainer
         width={[0.95, 0.95, 0.95, 0.95, 1216]}
         maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}

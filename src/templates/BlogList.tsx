@@ -36,8 +36,9 @@ const BlogList = ({
   return (
     <Layout>
       <Helmet
-        title="Serverless 中文技术网——博客"
-        description="Serverless 中文技术网，专注 Serverless 架构最佳实践"
+        title="博客 - Serverless"
+        keywords="Serverless团队博客,Serverless发布,Serverless动态,Serverless新闻"
+        description="Serverless Framework 团队博客最新动态，最新功能，最新版本发布"
         location={location}
       />
       <Banner />

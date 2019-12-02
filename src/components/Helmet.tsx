@@ -30,8 +30,6 @@ export default function(props: any) {
       property: 'og:image',
       content: `${hostname}/static/logo-serverless-framework-center-vertical-dark-9f937d4f4d10220c3e46afe2a9a2ed3a.png`,
     },
-    { name: 'twitter:title', content: metaTitle },
-    { name: 'twitter:description', content: description },
     { name: 'description', content: description },
     { name: 'keywords', content: keywords },
   ]
