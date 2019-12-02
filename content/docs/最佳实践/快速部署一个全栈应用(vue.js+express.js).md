@@ -1,3 +1,7 @@
+---
+link: /best-practice/full-stack
+---
+
 ## 操作场景
 
 全栈组件（Vue.js+Express.js）用于通过多个 Serverless Components 部署 Serverless 全栈应用程序。可以帮助开发者更方便快捷的部署 Serverless 应用，例如利用后端 API 与前端 Vue.js 结合等场景。

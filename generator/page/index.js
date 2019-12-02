@@ -151,11 +151,11 @@ function createDoc(graphql, createPage) {
     query {
       allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/docs/" } }) {
         nodes {
+          frontmatter {
+            link
+          }
           fileAbsolutePath
           id
-          fields {
-            slug
-          }
         }
       }
     }
@@ -167,7 +167,13 @@ function createDoc(graphql, createPage) {
     const docs = result.data.allMarkdownRemark.nodes
     docs.forEach(doc => {
       // filePath like /xxx/xxx
-      const routePath = (doc.fields && doc.fields.slug) || `doc/${doc.id}`
+      const [, filePath] = doc.fileAbsolutePath.split('/docs')
+      const filePathWithoutExt = filePath.replace('.md', '')
+
+      const isIndex = filePathWithoutExt === '/index'
+      const routePath = isIndex
+        ? '/doc'
+        : `/doc${(doc.frontmatter && doc.frontmatter.link) || doc.id}`
       createPage({
         path: routePath,
         component: path.resolve(__dirname, '../../src/templates/Doc.tsx'),
