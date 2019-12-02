@@ -10,7 +10,7 @@ import Markdown from '@src/components/Markdown'
 import { Doc } from '@src/types'
 import Helmet from '@src/components/Helmet'
 
-import docMenuConfig from '@src/constants/docMenuConfig'
+import { config } from '@src/constants/docMenuConfig'
 
 const CustomFlex = styled(Flex)`
   ${width}
@@ -58,7 +58,7 @@ const DocPage = ({
             flexDirection={['column', 'column', 'column', 'row']}
           >
             <Box width={[0.95, 0.95, 0.95, 0.22]}>
-              <SideMenu menus={docMenuConfig} activeLinkTo={currentPath} />
+              <SideMenu menus={config} activeLinkTo={currentPath} />
             </Box>
             <Box pt={'30px'} pb={'30px'} width={[0.95, 0.95, 0.95, 0.76]}>
               <Markdown html={doc.html} />

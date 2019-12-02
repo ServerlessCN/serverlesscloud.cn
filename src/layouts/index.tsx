@@ -13,7 +13,7 @@ const FlexWithBox = styled(Column)`
 import { debounce } from '@src/utils'
 
 const Layout = ({ children }: React.Props<any>) => {
-  const [isDesktopView, setIsDesktopView] = React.useState(false)
+  const [isDesktopView, setIsDesktopView] = React.useState(true)
 
   React.useEffect(() => {
     const onResize = debounce(() => {

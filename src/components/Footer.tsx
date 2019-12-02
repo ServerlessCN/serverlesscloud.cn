@@ -76,7 +76,7 @@ const links: {
       },
       {
         title: '常见问题',
-        link: '/doc/常见问题',
+        link: '/doc/5',
         isInternal: true,
       },
       {

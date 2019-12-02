@@ -62,7 +62,6 @@ function createBlog(blogs, createPage) {
 }
 
 function createBlogListWithCategory(categories, createPage) {
-  console.log(categories)
   categories.forEach(({ categories, totalCount }) => {
     const pages = Math.ceil(totalCount / BLOG_PAGESIZE)
     new Array(pages).fill(0).forEach((o, page) => {
@@ -154,6 +153,9 @@ function createDoc(graphql, createPage) {
         nodes {
           fileAbsolutePath
           id
+          fields {
+            slug
+          }
         }
       }
     }
@@ -163,27 +165,15 @@ function createDoc(graphql, createPage) {
     }
 
     const docs = result.data.allMarkdownRemark.nodes
-
     docs.forEach(doc => {
       // filePath like /xxx/xxx
-      const [, filePath] = doc.fileAbsolutePath.split('/docs')
-
-      if (!filePath) {
-        return
-      }
-
-      const filePathWithoutExt = filePath.replace('.md', '')
-
-      const routePath = `doc${
-        filePathWithoutExt === '/index' ? '' : filePathWithoutExt
-      }`
-
+      const routePath = (doc.fields && doc.fields.slug) || `doc/${doc.id}`
       createPage({
         path: routePath,
         component: path.resolve(__dirname, '../../src/templates/Doc.tsx'),
         context: {
           docId: doc.id,
-          currentPath: `/${routePath}`,
+          currentPath: routePath,
         },
       })
     })

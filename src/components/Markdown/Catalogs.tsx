@@ -87,20 +87,25 @@ export default function(props: { html: string }) {
 
   const eleRef: any = React.useRef()
   React.useEffect(() => {
+    const formatCatalogsHtml = function() {
+      try {
+        const ele = document.createElement('div')
+        ele.innerHTML = props.html
+
+        const catalogsData = generateCatalogsData(ele.children[0])
+        const catalogsHtml = generateCatalogsHtml(catalogsData)
+        setCatalogHtml(catalogsHtml)
+      } catch (err) {
+        setCatalogHtml(props.html)
+      }
+    }
+
     if (typeof eleScrollTop === 'undefined') {
       setEleScrollTop(eleRef.current.offsetTop)
 
-      const ele = document.createElement('div')
-      ele.innerHTML = props.html
-
-      const catalogsData = generateCatalogsData(ele.children[0])
-      console.log(catalogsData)
-      const catalogsHtml = generateCatalogsHtml(catalogsData)
-      setCatalogHtml(catalogsHtml)
-      console.log(catalogsHtml)
-
-      // console.log(generateCatalogsData(ele.children[0]))
+      formatCatalogsHtml()
     }
+
     const onScroll = function() {
       const windowScrollTop =
         document.body.scrollTop || document.documentElement.scrollTop
