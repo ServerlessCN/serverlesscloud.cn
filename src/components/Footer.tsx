@@ -95,7 +95,7 @@ const links: {
 const contacts = [
   {
     title: '交流QQ群',
-    description: '玩转Serverless',
+    description: '群号：871445853',
     type: 'qq',
     qrcode: QQQRcode,
   },
