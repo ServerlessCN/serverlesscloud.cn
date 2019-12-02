@@ -20,7 +20,7 @@ import { formateDate } from '@src/utils'
 
 const InlineText = styled(Text)`
   display: inline-block;
-  padding: 0 3px;
+  padding: 0 4px;
 `
 
 const ColumnWithHeight = styled(Column)`
@@ -63,13 +63,16 @@ export default function({ data }: { data: Blog }) {
                   {frontmatter.title}
                 </Text>
                 <Box>
-                  <InlineText fontSize="14px">
+                  <InlineText color={theme.colors.gray[2]} fontSize="14px">
                     作者: {frontmatter.authors.join(',')}
                   </InlineText>
-                  <InlineText fontSize="14px">
+                  <InlineText color={theme.colors.gray[2]} fontSize="14px">
+                    发布于{formateDate(frontmatter.date)}
+                  </InlineText>
+                  <InlineText color={theme.colors.gray[2]} fontSize="14px">
                     阅读大概需要{timeToRead}分钟
                   </InlineText>
-                  <InlineText fontSize="14px">
+                  <InlineText color={theme.colors.gray[2]} fontSize="14px">
                     归档于
                     {(frontmatter.categories || [])
                       .map(o => generateCategoryText(o))
@@ -78,14 +81,10 @@ export default function({ data }: { data: Blog }) {
                       ))}
                   </InlineText>
                 </Box>
-                <Row justifyContent="flex-end">
-                  <Text
-                    color={theme.colors.gray[2]}
-                    fontSize="14px"
-                    mt="20px"
-                    mb="20px"
-                  >
-                    {formateDate(frontmatter.date)}
+
+                <Row mt="10px">
+                  <Text lineHeight="20px" fontSize="16px" mt="20px" mb="20px">
+                    {frontmatter.description}
                   </Text>
                 </Row>
               </Box>

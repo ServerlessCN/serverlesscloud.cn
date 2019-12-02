@@ -6,12 +6,11 @@
 export function formateDate(dateString) {
   try {
     const date = new Date(dateString)
+    const year = date.getFullYear()
+    const month = date.getMonth() + 1
+    const day = date.getDate()
 
-    return date
-      .toDateString()
-      .split(' ')
-      .slice(1)
-      .join(' ')
+    return `${year}年${month}月${day}日`
   } catch (err) {
     return dateString
   }
