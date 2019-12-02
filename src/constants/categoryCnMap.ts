@@ -3,4 +3,9 @@
  */
 export const categoryCnMap = {
   'best-practice': '最佳实践',
+  'engineering-culture': '工程师文化',
+  'guides-and-tutorials': '指南和教程',
+  news: '新闻',
+  'operation-and-observatity': '运维与监控',
+  'user-stories': '用户故事',
 }
