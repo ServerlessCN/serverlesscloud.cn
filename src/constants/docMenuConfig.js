@@ -3,19 +3,6 @@ const baseFilePath = '/docs'
 
 let config = [
   {
-    label: '产品简介',
-    content: [
-      {
-        label: '产品概述',
-        filePath: `${baseFilePath}/产品简介/产品概述`,
-      },
-      {
-        label: '产品优势',
-        filePath: `${baseFilePath}/产品简介/产品优势`,
-      },
-    ],
-  },
-  {
     label: '快速入门',
     filePath: `${baseFilePath}/快速入门/Serverless Framework快速入门`,
   },
@@ -123,15 +110,19 @@ let config = [
         filePath: `${baseFilePath}/最佳实践/快速部署静态网站`,
       },
       {
+        label: '快速部署 Serverless Hexo博客',
+        filePath: `${baseFilePath}/最佳实践/快速部署 Serverless Hexo博客`,
+      },
+      {
         label: '快速部署一个全栈应用(vue.js+express.js)',
         filePath: `${baseFilePath}/最佳实践/快速部署一个全栈应用(vue.js+express.js)`,
       },
+      {
+        label: '快速构建 REST API',
+        filePath: `${baseFilePath}/最佳实践/快速构建 REST API`,
+      },
     ],
-  },
-  {
-    label: '常见问题',
-    filePath: `${baseFilePath}/常见问题`,
-  },
+  }
 ]
 
 function generateDocLinkPath(menu, prefix) {
