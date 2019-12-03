@@ -64,6 +64,6 @@ translatorslink:
 像每个初创公司一样，我们在此过程中犯了一些错误，而且可能仍然会犯错，但是选择云函数 和 Serverless Framework 是正确之举，原因有以下几点：
 
 * **CloudForecast 借助云函数可以轻松扩展：** 随着不断招揽客户，我们将自动运行更多函数，成本将随着收入线性增长。
-* **Serverless Framework 一直在改善，并且与云函数 保持同步。** 最近的[Full Lifecycle](https://serverless.com/blog/serverless-now-full-lifecycle/)功能公告可以完美地体现 Serverless Framework 在不断发展。
+* **Serverless Framework 一直在改善，并且与云函数 保持同步。** 最近的 [Full Lifecycle](https://serverless.com/blog/serverless-now-full-lifecycle/) 功能公告可以完美地体现 Serverless Framework 在不断发展。
 
 随着时间的推移，我们的产品和函数都在不断发展，但是 Serverless Framework 和云函数始终能够胜任。
