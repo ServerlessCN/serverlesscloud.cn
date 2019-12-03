@@ -12,15 +12,15 @@ import {
 import theme from '@src/constants/theme'
 import styled from 'styled-components'
 import { Blog } from '@src/types'
-import { LazyImage } from 'react-lazy-images'
-import placeholderImg from '@src/assets/images/placeholder.png'
-import { width, maxHeight, height } from 'styled-system'
+import { width } from 'styled-system'
 import BlogDetailLink from '@src/components/Link/BlogDetailLink'
+import { generateCategoryText } from '@src/components/Link/CategoryLink'
+
 import { formateDate } from '@src/utils'
 
 const InlineText = styled(Text)`
   display: inline-block;
-  padding: 0 3px;
+  padding: 0 4px;
 `
 
 const ColumnWithHeight = styled(Column)`
@@ -37,6 +37,8 @@ export default function({ data }: { data: Blog }) {
     node: { id, frontmatter, timeToRead },
   } = data
 
+  frontmatter.categories = frontmatter.categories || []
+
   return (
     <BlogDetailLink blog={data}>
       <Box mt="40px" mb="40px">
@@ -45,29 +47,13 @@ export default function({ data }: { data: Blog }) {
           justifyContent={['center', 'center', 'center', 'flex-start']}
           flexDirection={['column', 'column', 'column', 'row']}
         >
-          <LazyImage
-            src={frontmatter.thumbnail}
-            alt={frontmatter.title}
-            actual={({ imageProps }) => {
-              return (
-                <Background
-                  width={[0.9, 0.9, 0.9, 0.35]}
-                  height={[200]}
-                  background={`url(${JSON.stringify(frontmatter.thumbnail)})`}
-                  backgroundSize="cover"
-                  backgroundPosition="center"
-                  backgroundRepeat="no-repeat"
-                />
-              )
-            }}
-            placeholder={({ imageProps, ref }) => (
-              <Image
-                {...imageProps}
-                ref={ref}
-                src={placeholderImg}
-                width={[0.9, 0.9, 0.9, 0.35]}
-              />
-            )}
+          <Background
+            width={[0.9, 0.9, 0.9, 0.35]}
+            height={[200]}
+            background={`url(${JSON.stringify(frontmatter.thumbnail)})`}
+            backgroundSize="cover"
+            backgroundPosition="center"
+            backgroundRepeat="no-repeat"
           />
           <BoxWithFlex width={[0.9, 0.9, 0.9, 0.65]} ml={[0, 0, 0, '30px']}>
             <ColumnWithHeight
@@ -79,27 +65,30 @@ export default function({ data }: { data: Blog }) {
                   {frontmatter.title}
                 </Text>
                 <Box>
-                  <InlineText fontSize="14px">
+                  <InlineText color={theme.colors.gray[2]} fontSize="14px">
                     作者: {frontmatter.authors.join(',')}
                   </InlineText>
-                  <InlineText fontSize="14px">
+                  <InlineText color={theme.colors.gray[2]} fontSize="14px">
+                    发布于{formateDate(frontmatter.date)}
+                  </InlineText>
+                  <InlineText color={theme.colors.gray[2]} fontSize="14px">
                     阅读大概需要{timeToRead}分钟
                   </InlineText>
-                  <InlineText fontSize="14px">
-                    归档于
-                    {frontmatter.category.map(o => (
-                      <span>{o}&nbsp;</span>
-                    ))}
-                  </InlineText>
+                  {frontmatter.categories && frontmatter.categories.length ? (
+                    <InlineText color={theme.colors.gray[2]} fontSize="14px">
+                      归档于
+                      {frontmatter.categories
+                        .map(o => generateCategoryText(o))
+                        .map(o => (
+                          <span key={o}>{o}&nbsp;</span>
+                        ))}
+                    </InlineText>
+                  ) : null}
                 </Box>
-                <Row justifyContent="flex-end">
-                  <Text
-                    color={theme.colors.gray[2]}
-                    fontSize="14px"
-                    mt="20px"
-                    mb="20px"
-                  >
-                    {formateDate(frontmatter.date)}
+
+                <Row mt="10px">
+                  <Text lineHeight={1.75} fontSize="16px" mt="20px" mb="20px">
+                    {frontmatter.description}
                   </Text>
                 </Row>
               </Box>

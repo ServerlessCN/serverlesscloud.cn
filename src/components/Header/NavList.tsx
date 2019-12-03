@@ -1,11 +1,5 @@
 import * as React from 'react'
-import {
-  Box,
-  List,
-  ListItem,
-  Text,
-  ListItemWithNoStyleType,
-} from '@src/components/atoms'
+import { Box, List, Text, ListItemWithNoStyleType } from '@src/components/atoms'
 import styled from 'styled-components'
 import { display, color, textAlign, TextAlignProps } from 'styled-system'
 import { Link } from 'gatsby'
@@ -37,6 +31,14 @@ const navList: { title: string; link: string }[] = [
     link: '/',
   },
   {
+    title: '最佳实践',
+    link: '/best-practice',
+  },
+  {
+    title: '组件',
+    link: '/component',
+  },
+  {
     title: '文档',
     link: '/doc',
   },
@@ -63,7 +65,7 @@ export default function({ isActive, isDesktopView }: Props) {
     ? 'block'
     : 'none'
 
-  const navListBoxWidth = isDesktopView ? 1 / 3 : 1
+  const navListBoxWidth = isDesktopView ? 1 / 2 : 1
   return (
     <BoxWithTextAlign
       width={navListBoxWidth}

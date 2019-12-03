@@ -3,7 +3,7 @@ import logo from '@src/assets/images/research_bg.jpg'
 import { Background, Flex, Text, TertiaryButton } from '@src/components/atoms'
 import theme from '@src/constants/theme'
 import styled from 'styled-components'
-import { MainTitle } from '@src/components/Title'
+import { MainTitle } from '@src/components/pages/home/Title'
 
 const Button = styled.button`
   color: ${theme.colors.serverlessRed};

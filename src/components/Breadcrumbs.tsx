@@ -1,8 +1,13 @@
 import * as React from 'react'
 import _logo from '@src/assets/images/research_bg.jpg'
-import { Background, Flex, Text, Container } from '@src/components/atoms'
+import {
+  Background,
+  Flex,
+  Text,
+  Container,
+  Heading1,
+} from '@src/components/atoms'
 import theme from '@src/constants/theme'
-import { MainTitle } from './Title'
 import { CheckIfDesktopContext, CheckIfHeaderFixed } from '@src/contexts'
 
 export default function({
@@ -45,12 +50,21 @@ export default function({
                       ]}
                       height={boxHeight}
                     >
-                      <MainTitle
+                      <Heading1
+                        my="20px"
+                        align={['center', 'center', 'center', 'left']}
+                        fontSize={[
+                          theme.fontSizes[0],
+                          theme.fontSizes[0],
+                          theme.fontSizes[1],
+                          theme.fontSizes[2],
+                          theme.fontSizes[3],
+                        ]}
                         px={[0, 0, 0, '10px', 0, 0]}
                         color={theme.colors.white}
                       >
                         {children}
-                      </MainTitle>
+                      </Heading1>
                     </Flex>
                   </Container>
                 </Background>

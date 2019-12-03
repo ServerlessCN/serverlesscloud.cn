@@ -1,8 +1,7 @@
 import * as React from 'react'
 import { Flex, Text, Container, Box, Background } from '@src/components/atoms'
 import theme from '@src/constants/theme'
-import { MainTitle, SubMainTitle } from '@src/components/Title'
-import { space } from 'styled-system'
+import { MainTitle, SubMainTitle } from '@src/components/pages/home/Title'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
@@ -36,7 +35,7 @@ export default function() {
   return (
     <Background pt={'40px'} pb={'40px'} width={1} backgroundColor="white">
       <Flex alignItems="center" justifyContent="center">
-        <Link to="/doc/常见问题">
+        <Link to="/doc/5">
           <MainTitle>常见问题</MainTitle>
         </Link>
       </Flex>

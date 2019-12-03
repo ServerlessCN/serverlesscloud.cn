@@ -5,5 +5,5 @@ ServerlessCN:
       src: ./public
       index: index.html
       error: index.html
-    region: ap-guangzhou
-    bucketName: serverlesscloud
+    region: ap-hongkong
+    bucketName: serverlesscn

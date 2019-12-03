@@ -1,11 +1,21 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import theme from '@src/constants/theme'
 
 const Wrapper = styled.div`
-  .markdown-body ol,
   ul {
     list-style: disc;
+
+    li {
+      line-height: 1.75;
+    }
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  p {
+    line-height: 1.75;
   }
 `
 

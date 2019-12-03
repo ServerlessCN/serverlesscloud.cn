@@ -27,19 +27,31 @@ const Link = ({
   toggleSubMenu,
   activateMe,
   children,
-}: Props) => (
-  <GatsbyLink
-    className={classnames(
-      className,
-      active && classNameActive,
-      hasActiveChild && classNameHasActiveChild
-    )}
-    to={to}
-    onClick={hasSubMenu ? toggleSubMenu : activateMe}
-    target={externalLink ? '_blank' : undefined}
-  >
-    {children}
-  </GatsbyLink>
-)
+}: Props) => {
+  to = to || '#'
+
+  const _toggleSubMenu = e => {
+    if (to === '#') {
+      e.preventDefault()
+    }
+
+    toggleSubMenu()
+  }
+
+  return (
+    <GatsbyLink
+      className={classnames(
+        className,
+        active && classNameActive,
+        hasActiveChild && classNameHasActiveChild
+      )}
+      to={to}
+      onClick={hasSubMenu ? _toggleSubMenu : activateMe}
+      target={externalLink ? '_blank' : undefined}
+    >
+      {children}
+    </GatsbyLink>
+  )
+}
 
 export default Link

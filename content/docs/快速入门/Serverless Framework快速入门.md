@@ -1,3 +1,7 @@
+---
+link: /quick/serverless-framework
+---
+
 ## 操作场景
 
 您可以通过如下几步，使用 Serverless Framework 开源 CLI 在腾讯云上部署一个服务，完成配置、创建、测试、部署等步骤。

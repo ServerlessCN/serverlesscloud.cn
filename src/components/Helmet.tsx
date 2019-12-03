@@ -18,24 +18,19 @@ export default function(props: any) {
     prefetches,
     keywords,
   } = props
-  // const uri = `https://serverless.com${location.pathname}`
+  const hostname = 'https://serverlesscloud.cn'
+  const uri = `${hostname}${location.pathname}`
   const metaTitle = props.metaTitle || props.title
 
   meta = [
-    { property: 'og:type', content: 'article' },
     { property: 'og:title', content: metaTitle },
-    // { property: 'og:url', content: uri },
+    { property: 'og:url', content: uri },
     { property: 'og:description', content: description },
-    // {
-    //   property: 'og:image',
-    //   content: `${process.env.GATSBY_S3_BUCKET}logos/Serverless_mark_black_400x400_v3%402x.jpg`,
-    // },
-    { name: 'twitter:card', content: 'summary' },
-    { name: 'twitter:title', content: metaTitle },
-    // { name: 'twitter:creator', content: `@${process.env.GATSBY_TWITTER}` },
-    { name: 'twitter:description', content: description },
+    {
+      property: 'og:image',
+      content: `${hostname}/static/logo-serverless-framework-center-vertical-dark-9f937d4f4d10220c3e46afe2a9a2ed3a.png`,
+    },
     { name: 'description', content: description },
-
     { name: 'keywords', content: keywords },
   ]
 

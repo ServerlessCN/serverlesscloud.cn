@@ -19,7 +19,11 @@ interface Props {
 export default function({ logoHeight }: Props) {
   return (
     <LinkWithMargin to="/">
-      <LogoWithMargin src={logo} alt="Serverless" height={logoHeight} />
+      <LogoWithMargin
+        src={logo}
+        alt="Serverless Framework"
+        height={logoHeight}
+      />
     </LinkWithMargin>
   )
 }

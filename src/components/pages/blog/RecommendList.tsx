@@ -60,6 +60,9 @@ interface Props {
 }
 
 export default function({ blogs, ...rest }: Props) {
+  if (!blogs.length) {
+    return <noscript />
+  }
   return (
     <Box mt="40px" width={[0.9, 0.9, 0.9, 0.22]} {...rest}>
       <Text fontSize="18px" mb="30px" fontWeight="bold">
@@ -81,12 +84,14 @@ export default function({ blogs, ...rest }: Props) {
                   className="icon-blog-red"
                   width="24px"
                   height="24px"
+                  alt="blogIconRed"
                   src={blogIconRed}
                 />
                 <Image
                   className="icon-blog"
                   width="24px"
                   height="24px"
+                  alt="blogIcon"
                   src={blogIcon}
                 />
                 {title}

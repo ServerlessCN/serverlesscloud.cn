@@ -7,50 +7,44 @@ import {
   ListItemWithNoStyleType,
 } from '@src/components/atoms'
 import { GraphqlCategoryResult } from '@src/types'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import {
-  height,
-  lineHeight,
-  HeightProps,
-  LineHeightProps,
-  MinHeightProps,
-  minHeight,
-} from 'styled-system'
+import { HeightProps, LineHeightProps, MinHeightProps } from 'styled-system'
 import theme from '@src/constants/theme'
+import CategoryLink from '@src/components/Link/CategoryLink'
 import categoryIconRed from '@src/assets/images/icon-category-red.png'
 import categoryIcon from '@src/assets/images/icon-category.png'
+import { FaList } from 'react-icons/fa'
 
-const ListItemWithHeight = styled(ListItemWithNoStyleType)<
+const LinkWrapper = styled(ListItemWithNoStyleType)<
   HeightProps & LineHeightProps & MinHeightProps
 >`
-  ${height}
-  ${lineHeight}
-  ${minHeight}
-  cursor: pointer;
-  transition: all 0.3s ease;
-
   img {
-    transition: all 0.3s ease;
     margin-right: 5px;
+  }
+  a {
+    min-height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    world-break: break-all;
+    word-wrap: break-word;
+
+    &:hover {
+      color: ${theme.colors.serverlessRed};
+
+      .icon-category-red {
+        display: inline-block;
+      }
+
+      .icon-category {
+        display: none;
+      }
+    }
   }
 
   .icon-category-red {
     display: none;
-  }
-
-  world-break: break-all;
-  word-wrap: break-word;
-  &:hover {
-    color: ${theme.colors.serverlessRed};
-
-    .icon-category-red {
-      display: inline-block;
-    }
-
-    .icon-category {
-      display: none;
-    }
   }
 `
 
@@ -60,9 +54,9 @@ export default function(props) {
       query={graphql`
         query CategoryQuery {
           categorys: allMarkdownRemark {
-            group(field: frontmatter___category) {
+            group(field: frontmatter___categories) {
               totalCount
-              category: fieldValue
+              categories: fieldValue
             }
           }
         }
@@ -76,26 +70,31 @@ export default function(props) {
 
             <List>
               {categorys.group.map(category => (
-                <Link
-                  key={category.category}
-                  to={`/category/${category.category}`}
-                >
-                  <ListItemWithHeight minHeight="40px" lineHeight="40px">
-                    <Image
-                      className="icon-category-red"
-                      width="24px"
-                      height="24px"
-                      src={categoryIconRed}
-                    />
-                    <Image
-                      className="icon-category"
-                      width="24px"
-                      height="24px"
-                      src={categoryIcon}
-                    />
-                    {category.category}({category.totalCount})
-                  </ListItemWithHeight>
-                </Link>
+                <LinkWrapper key={category.categories}>
+                  <CategoryLink
+                    preAddon={
+                      <>
+                        <Image
+                          className="icon-category-red"
+                          width="24px"
+                          height="24px"
+                          alt="categoryIconRed"
+                          src={categoryIconRed}
+                        />
+                        <Image
+                          className="icon-category"
+                          width="24px"
+                          height="24px"
+                          alt="categoryIcon"
+                          src={categoryIcon}
+                        />
+                      </>
+                    }
+                    postAddon={`(${category.totalCount})`}
+                    key={category.categories}
+                    category={category.categories}
+                  />
+                </LinkWrapper>
               ))}
             </List>
           </Box>

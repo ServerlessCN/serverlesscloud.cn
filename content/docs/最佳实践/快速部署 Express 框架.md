@@ -1,4 +1,9 @@
+---
+link: /best-practice/express
+---
+
 ## 操作场景
+
 Express 组件通过使用 serverless-tencent 的基础组件（如 API 网关组件、SCF 组件等），快速且方便地在腾讯云创建、配置和管理一个 Express 框架。
 
 [Serverless Framework + 腾讯云 >>](http://serverless.com)
@@ -10,11 +15,12 @@ Express 组件通过使用 serverless-tencent 的基础组件（如 API 网关�
 #### 安装
 
 通过 npm 安装 Serverless：
+
 ```console
 $ npm install -g serverless
 ```
 
-####  创建
+#### 创建
 
 本地创建 `serverless.yml` 和 `.env` 两个文件：
 
@@ -24,22 +30,27 @@ $ touch .env # 腾讯云的配置信息
 ```
 
 在 `.env` 文件中配置腾讯云的 APPID、SecretId 和 SecretKey 信息并保存。
+
 ```
 # .env
 TENCENT_SECRET_ID=123
 TENCENT_SECRET_KEY=123
 ```
->?
->- 如果没有腾讯云账号，请先 [注册新账号](https://cloud.tencent.com/register)。
->- 如果已有腾讯云账号，可以在 [API 密钥管理](https://console.cloud.tencent.com/cam/capi) 中获取APPID、SecretId、SecretKey。
+
+> ?
+>
+> - 如果没有腾讯云账号，请先 [注册新账号](https://cloud.tencent.com/register)。
+> - 如果已有腾讯云账号，可以在 [API 密钥管理](https://console.cloud.tencent.com/cam/capi) 中获取 APPID、SecretId、SecretKey。
 
 初始化一个新的 npm 包，并安装 Express：
+
 ```
 npm init              # 创建后持续回车
 npm i --save express  # 安装express
 ```
 
 创建一个 `app.js`文件，并在其中创建您的 Express App：
+
 ```js
 const express = require('express')
 const app = express()
@@ -55,6 +66,7 @@ module.exports = app
 #### 配置
 
 在 serverless.yml 中进行如下配置：
+
 ```yml
 # serverless.yml
 
@@ -62,14 +74,14 @@ express:
   component: '@serverless/tencent-express'
   inputs:
     region: ap-shanghai
-
 ```
-[查看详细配置文档>>](https://github.com/serverless-tencent/tencent-express/blob/master/docs/configure.md)
 
+[查看详细配置文档>>](https://github.com/serverless-tencent/tencent-express/blob/master/docs/configure.md)
 
 #### 部署
 
 通过如下命令进行部署，并查看部署过程中的信息：
+
 ```
 $ sls --debug
 
@@ -95,7 +107,7 @@ $ sls --debug
   DEBUG ─ Deploying service with id service-n0vs2ohb.
   DEBUG ─ Deployment successful for the api named express.TencentApiGateway in the ap-shanghai region.
 
-  express: 
+  express:
     region:              ap-shanghai
     functionName:        ExpressComponent_7xRrrd
     apiGatewayServiceId: service-n0vs2ohb
@@ -104,11 +116,13 @@ $ sls --debug
   36s › express › done
 
 ```
+
 部署完毕后，可以在浏览器中访问返回的链接中看到对应的 Express 返回值。
 
-####  移除
+#### 移除
 
 通过以下命令移除已部署的存储桶：
+
 ```
 $ sls remove --debug
 

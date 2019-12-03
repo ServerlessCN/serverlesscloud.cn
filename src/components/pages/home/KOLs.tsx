@@ -1,6 +1,5 @@
 import * as React from 'react'
 import {
-  Flex,
   Button,
   Box,
   Container,
@@ -8,7 +7,7 @@ import {
   Background,
 } from '@src/components/atoms'
 import theme from '@src/constants/theme'
-import { MainTitle } from '@src/components/Title'
+import { MainTitle } from '@src/components/pages/home/Title'
 import { Link } from 'gatsby'
 
 import imgTwitter from '@src/assets/images/twitter-icon.svg'
@@ -63,10 +62,10 @@ function Kol({ kol }: { kol: KOL }) {
   return (
     <div className="user-tweets-tweet">
       <div className="user-tweets-tweet-icon">
-        <img src={imgTwitter} />
+        <img alt={`${kol.name}_twitter`} src={imgTwitter} />
       </div>
       <div className="user-tweets-tweet-name">
-        <img src={kol.avatar} />@{kol.name}
+        <img alt={kol.name} src={kol.avatar} />@{kol.name}
       </div>
       <div className="user-tweets-tweet-text">{kol.speak}</div>
     </div>

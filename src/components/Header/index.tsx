@@ -40,21 +40,12 @@ const Header = (props: Props) => {
                   zIndex={9999}
                   boxShadow={theme.shadows[0]}
                 >
-                  {/* <Hemlet>
-                    <script
-                      type="text/javascript"
-                      src={withPrefix('js/baidu.js')}
-                    ></script>
-                    <script
-                      type="text/javascript"
-                      src="https://tajs.qq.com/stats?sId=66492692"
-                      charSet="UTF-8"
-                    ></script>
+                  <Hemlet>
                     <script
                       type="text/javascript"
                       src={withPrefix('js/mta.js')}
                     ></script>
-                  </Hemlet> */}
+                  </Hemlet>
 
                   <CommunityEntrance />
 
