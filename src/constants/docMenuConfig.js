@@ -99,6 +99,7 @@ let config = [
   // },
   {
     label: '最佳实践',
+    to: `${baseUrl}/best-practice/express`,
     content: [
       {
         label: '快速部署 Express 框架',

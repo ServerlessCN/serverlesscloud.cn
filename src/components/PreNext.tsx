@@ -30,7 +30,7 @@ interface Props {
 export default function(props: Props) {
   const { previous, next } = props
   return (
-    <Box mt="25px">
+    <Box mt="50px" mb="40px">
       <Flex
         alignItems="flex-start"
         justifyContent={['center', 'center', 'center', 'space-between']}

@@ -1,8 +1,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import MetisMenu from 'react-metismenu'
+import MetisMenu from './Metismenu'
 import { DocMenu } from '@src/types'
 import Link from './Link'
+import ArrowIcon from '@src/assets/images/arrow-icon.svg'
 
 const Wrapper = styled.div`
   .metismenu {
@@ -21,6 +22,7 @@ const Wrapper = styled.div`
     .metismenu-state-icon {
     line-height: 2.5em;
   }
+
   .metismenu::after {
     content: ' ';
     pointer-events: none;
@@ -83,6 +85,29 @@ const Wrapper = styled.div`
   .metismenu-link.has-active-child {
     color: #fd5750;
   }
+
+  .sls-dropdown-icon {
+    line-height: 2.5em;
+    transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
+    float: right;
+    text-align: center;
+    width: 2em;
+  }
+  .sls-dropdown-icon:after {
+    content: '';
+    background: url(${ArrowIcon});
+    background-size: cover;
+    position: absolute;
+    width: 10px;
+    height: 8px;
+    margin-top: 15px;
+  }
+
+  .metismenu-state-icon.rotate-minus-180:after {
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+  }
 `
 
 export { DocMenu }
@@ -99,6 +124,9 @@ export default function({ menus, activeLinkTo }: Props) {
         LinkComponent={Link}
         content={menus}
         activeLinkTo={activeLinkTo}
+        iconNameStateVisible="dropdown-icon rotate-minus-180"
+        iconNameStateHidden="dropdown-icon"
+        iconNamePrefix="sls-"
       />
     </Wrapper>
   )
