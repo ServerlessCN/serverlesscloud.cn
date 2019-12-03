@@ -13,7 +13,7 @@ authorslink:
 translators: 
   - Aceyclee
 translatorslink: 
-  - zhihu.com/people/Aceyclee
+  - https://www.zhihu.com/people/Aceyclee
 ---
 
 2018 年，在决定创立 [CloudForecast](https://www.cloudforecast.io/?utm_source=serverless.com&utm_medium=blog&utm_campaign=serverless) 时，我们面临着每个初创企业都存在的问题 —— 如何正确地利用我们的资源来构建产品，而又不为未来造成技术负担？
@@ -33,15 +33,15 @@ translatorslink:
 
 我们讨论了管理自己的实例、使用容器和其他 6 种想法，但是我们需要一些简单的方法，因此我们决定使用 Serverless 解决方案（即 FaaS）。尽管存在一些弊端（例如冷启动等），但我们认为 Serverless 更适合我们的用例（几乎免运维，按需付费，无闲置成本且具备自动扩缩容能力）。冷启动是 云函数 众所周知的一个缺点，但是由于我们主要是通过脱机方式转换和从 S3 加载数据，因此我们认为冷启动问题不大。
 
-对于开发设置和部署过程，出于以下原因，我们决定将 Serverless Framework 与 云函数 结合使用：
+对于开发设置和部署过程，出于以下原因，我们决定将 Serverless Framework 与云函数结合使用：
 
 * 我们可以专注于编写产品，让 Serverless 管理其余内容（权限、事件管理）
 * 易于配置和部署
-* Serverless 支持多种平台（GCP、AWS 等），这可以防止将来出现麻烦。我们之所以选择云函数，是因为我们的客户数据将存储在 S3 中。为了降低网络成本，这是一个合理的决定
+* Serverless 支持多种平台，这可以防止将来出现麻烦。我们之所以选择云函数，是因为我们的客户将数据存储在其对象存储中。为了降低网络成本，这是一个合理的决定
 * Serverless Framework 提供了丰富的插件（请参阅 [https://serverless.com/plugins/](https://serverless.com/plugins/)）
 * 最后同样重要的是：非常有用的文档和社区（[Github](https://github.com/serverless/serverless)、[Gitter](https://gitter.im/serverless/serverless)、[Slack](https://serverless.com/slack) 和[论坛](https://forum.serverless.com)）
 
-我们最初的要求非常简单：我们需要 4 个云函数，每个云函数都负责自己的计划任务，并且每个云函数需要与各种相关 产品（RDS、DynamoDb、SQS 等）进行通信。另外，还要通过简单的方法来管理多个环境（开发与生产）以及采用简单/有效的方法来管理资源权限。
+我们最初的要求非常简单：我们需要 4 个云函数，每个云函数都负责自己的计划任务，并且每个云函数需要与各种相关产品进行通信。另外，还要通过简单的方法来管理多个环境（开发与生产）以及采用简单/有效的方法来管理资源权限。
 
 下面介绍我们如何实现这一点：
 
@@ -66,4 +66,4 @@ translatorslink:
 * **CloudForecast 借助云函数可以轻松扩展：** 随着不断招揽客户，我们将自动运行更多函数，成本将随着收入线性增长。
 * **Serverless Framework 一直在改善，并且与云函数 保持同步。** 最近的[Full Lifecycle](https://serverless.com/blog/serverless-now-full-lifecycle/)功能公告可以完美地体现 Serverless Framework 在不断发展。
 
-随着时间的推移，我们的产品和函数都在不断发展，但是 Serverless Framework 和云函数 始终能够胜任。
+随着时间的推移，我们的产品和函数都在不断发展，但是 Serverless Framework 和云函数始终能够胜任。
