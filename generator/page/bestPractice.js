@@ -65,7 +65,7 @@ function createBestPracticeTask(graphql, createPage) {
     query {
       allMarkdownRemark(
         sort: { fields: frontmatter___date, order: DESC }
-        filter: { fileAbsolutePath: { regex: "/bestPractice/" } }
+        filter: { fileAbsolutePath: { regex: "/best-practice/" } }
       ) {
         totalCount
         edges {
