@@ -1,11 +1,10 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import Banner from '@src/components/Banner'
 import Layout from '@src/layouts'
 import List from '@src/components/pages/blogList/List'
-import Category from '@src/components/pages/blogList/CategoryList'
 import { GraphqlBlogResult } from '@src/types'
 import Helmet from '@src/components/Helmet'
+import Breadcrumbs from '@src/components/Breadcrumbs'
 import Content from '@src/components/Content'
 
 interface Props {
@@ -26,24 +25,24 @@ const BlogList = ({
   return (
     <Layout>
       <Helmet
-        title="博客 - Serverless"
-        keywords="Serverless团队博客,Serverless发布,Serverless动态,Serverless新闻"
-        description="Serverless Framework 团队博客最新动态，最新功能，最新版本发布"
+        title="Serverless教程,Serverless入门,Serverless实践,ServerlessSSR"
+        keywords="Serverless教程,Serverless入门,Serverless实践,ServerlessSSR"
+        description="Serverless Framework 最佳实践教程指引，帮助开发者快速掌握Serverless工程化框架与Serverless实战内容。"
         location={location}
       />
-      <Banner />
+
+      <Breadcrumbs>最佳实践</Breadcrumbs>
 
       <Content>
         <List
           generateDataUrl={pageNum =>
-            `/blog${pageNum === 1 ? '' : `/page/${pageNum}`}`
+            `/best-practice${pageNum === 1 ? '' : `/page/${pageNum}`}`
           }
           blogs={edges}
           offset={offset}
           limit={limit}
           totalCount={totalCount}
         />
-        <Category />
       </Content>
     </Layout>
   )
@@ -52,12 +51,12 @@ const BlogList = ({
 export default BlogList
 
 export const query = graphql`
-  query Blogs($offset: Int!, $limit: Int!) {
+  query BestPractice($offset: Int!, $limit: Int!) {
     blogs: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
         frontmatter: { date: { ne: null } }
-        fileAbsolutePath: { regex: "/blog/" }
+        fileAbsolutePath: { regex: "/best-practice/" }
       }
       skip: $offset
       limit: $limit
@@ -68,13 +67,10 @@ export const query = graphql`
           frontmatter {
             thumbnail
             authors
-            categories
             date
             title
             description
             authorslink
-            translators
-            translatorslink
           }
           wordCount {
             words

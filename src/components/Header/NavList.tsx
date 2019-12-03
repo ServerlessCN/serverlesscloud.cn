@@ -32,7 +32,7 @@ const navList: { title: string; link: string }[] = [
   },
   {
     title: '最佳实践',
-    link: '/category/best-practice',
+    link: '/best-practice',
   },
   {
     title: '组件',

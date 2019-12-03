@@ -9,17 +9,9 @@ import { minWidth, height, width, minHeight } from 'styled-system'
 import Markdown from '@src/components/Markdown'
 import { Doc } from '@src/types'
 import Helmet from '@src/components/Helmet'
+import Content from '@src/components/Content'
 
 import { config } from '@src/constants/docMenuConfig'
-
-const CustomFlex = styled(Flex)`
-  ${width}
-`
-
-const CustomContainer = styled(Container)`
-  flex: 1;
-  ${width}
-`
 
 interface Props {
   data: {
@@ -39,33 +31,21 @@ const DocPage = ({
 }: Props) => {
   return (
     <Layout>
-      <>
-        <Helmet
-          title="Serverless Framework 文档 - Serverless"
-          keywords={'Serverless,Serverless Framework,FaaS,函数计算,无服务器'}
-          description="Serverless Framework 无服务器应用框架文档，使用方法和应用场景介绍。"
-          location={location}
-        />
-        <Banner />
-        <CustomContainer
-          width={[0.95, 0.95, 0.95, 0.95, 1216]}
-          maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}
-        >
-          <CustomFlex
-            width={1}
-            alignItems={['center', 'center', 'center', 'flex-start']}
-            justifyContent={['center', 'center', 'center', 'space-between']}
-            flexDirection={['column', 'column', 'column', 'row']}
-          >
-            <Box width={[0.95, 0.95, 0.95, 0.22]}>
-              <SideMenu menus={config} activeLinkTo={currentPath} />
-            </Box>
-            <Box pt={'30px'} pb={'30px'} width={[0.95, 0.95, 0.95, 0.76]}>
-              <Markdown html={doc.html} />
-            </Box>
-          </CustomFlex>
-        </CustomContainer>
-      </>
+      <Helmet
+        title="Serverless Framework 文档 - Serverless"
+        keywords={'Serverless,Serverless Framework,FaaS,函数计算,无服务器'}
+        description="Serverless Framework 无服务器应用框架文档，使用方法和应用场景介绍。"
+        location={location}
+      />
+      <Banner />
+      <Content>
+        <Box width={[0.95, 0.95, 0.95, 0.22]}>
+          <SideMenu menus={config} activeLinkTo={currentPath} />
+        </Box>
+        <Box pt={'30px'} pb={'30px'} width={[0.95, 0.95, 0.95, 0.76]}>
+          <Markdown html={doc.html} />
+        </Box>
+      </Content>
     </Layout>
   )
 }

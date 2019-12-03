@@ -5,8 +5,6 @@ import {
   Flex,
   Container,
   Box,
-  Fixed,
-  Button,
   BackgroundProps,
   Text,
   InlineBlock,
@@ -16,21 +14,11 @@ import Breadcrumbs from '@src/components/Breadcrumbs'
 import styled from 'styled-components'
 import Markdown from '@src/components/Markdown'
 import BlogCatalogs from '@src/components/Markdown/Catalogs'
-import Category from '@src/components/pages/blogList/CategoryList'
-import Recommend from '@src/components/pages/blog/RecommendList'
 import theme from '@src/constants/theme'
-import BlogDetailLink from '@src/components/Link/BlogDetailLink'
 import Helmet from '@src/components/Helmet'
-import {
-  background,
-  display,
-  DisplayProps,
-  space,
-  SpaceProps,
-} from 'styled-system'
+import { background } from 'styled-system'
 import { formateDate } from '@src/utils'
 import ExternalLink from '@src/components/Link/ExternalLink'
-import CategoryLink from '@src/components/Link/CategoryLink'
 import BackToTop from '@src/components/BackToTop'
 import PreNext from '@src/components/PreNext'
 
@@ -57,22 +45,6 @@ interface Props {
   location: any
 }
 
-const LinkWrapper = styled.div<DisplayProps & SpaceProps>`
-  ${display}
-  ${space}
-  a {
-    margin: 20px 0;
-
-    transition: all 0.3s ease;
-
-    line-height: 22px;
-
-    &:hover {
-      color: ${theme.colors.serverlessRed};
-    }
-  }
-`
-
 const BoxWithBackground = styled(Box)<BackgroundProps>`
   ${background}
   display: flex;
@@ -80,10 +52,12 @@ const BoxWithBackground = styled(Box)<BackgroundProps>`
   border-radius: 5px;
 `
 
-const BlogDetail = ({
+const BestPracticeDetail = ({
   data: { currentBlog, previousBlog, nextBlog, recommendBlogs },
   location,
 }: Props) => {
+  currentBlog.frontmatter.categories = currentBlog.frontmatter.categories || []
+
   return (
     <Layout>
       <Helmet {...currentBlog.frontmatter} location={location} />
@@ -126,39 +100,6 @@ const BlogDetail = ({
                   </ExternalLinkWrapper>
                 ))}
               </Text>
-              {currentBlog.frontmatter.translators &&
-              currentBlog.frontmatter.translators.length ? (
-                <Text my="5px">
-                  译者:
-                  {currentBlog.frontmatter.translators.map(
-                    (translator, index) => (
-                      <ExternalLinkWrapper key={translator}>
-                        {currentBlog.frontmatter.translatorslink &&
-                        currentBlog.frontmatter.translatorslink[index] ? (
-                          <ExternalLink
-                            to={currentBlog.frontmatter.translatorslink[index]}
-                          >
-                            {translator}
-                          </ExternalLink>
-                        ) : (
-                          translator
-                        )}
-                      </ExternalLinkWrapper>
-                    )
-                  )}
-                </Text>
-              ) : null}
-              {currentBlog.frontmatter.categories &&
-              currentBlog.frontmatter.categories.length ? (
-                <Text my="5px">
-                  归档于:
-                  {currentBlog.frontmatter.categories.map(o => (
-                    <LinkWrapper key={o} display="inline-block" ml="5px">
-                      <CategoryLink category={o} />
-                    </LinkWrapper>
-                  ))}
-                </Text>
-              ) : null}
             </BoxWithBackground>
 
             <Markdown html={currentBlog.html as string}></Markdown>
@@ -167,8 +108,6 @@ const BlogDetail = ({
           </Box>
 
           <Box width={[0.9, 0.9, 0.9, 0.25]}>
-            <Recommend width={[1]} blogs={recommendBlogs.edges} />
-            <Category width={[1]} />
             <BlogCatalogs html={currentBlog.tableOfContents} />
           </Box>
         </Flex>
@@ -179,7 +118,7 @@ const BlogDetail = ({
   )
 }
 
-export default BlogDetail
+export default BestPracticeDetail
 
 export const query = graphql`
   fragment blogFields on MarkdownRemark {
@@ -206,11 +145,10 @@ export const query = graphql`
     }
   }
 
-  query BlogDetails(
+  query BestPracticeDetail(
     $blogId: String!
     $previousBlogId: String
     $nextBlogId: String
-    $categories: [String!]
   ) {
     currentBlog: markdownRemark(id: { eq: $blogId }) {
       ...blogFields
@@ -224,22 +162,6 @@ export const query = graphql`
 
     nextBlog: markdownRemark(id: { eq: $nextBlogId }) {
       ...blogFields
-    }
-
-    recommendBlogs: allMarkdownRemark(
-      filter: {
-        id: { ne: $blogId }
-        frontmatter: { date: { ne: null }, categories: { in: $categories } }
-        fileAbsolutePath: { regex: "/blog/" }
-      }
-      limit: 8
-    ) {
-      edges {
-        node {
-          ...blogFields
-        }
-      }
-      totalCount
     }
   }
 `

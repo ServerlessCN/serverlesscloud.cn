@@ -37,6 +37,8 @@ export default function({ data }: { data: Blog }) {
     node: { id, frontmatter, timeToRead },
   } = data
 
+  frontmatter.categories = frontmatter.categories || []
+
   return (
     <BlogDetailLink blog={data}>
       <Box mt="40px" mb="40px">
@@ -72,18 +74,20 @@ export default function({ data }: { data: Blog }) {
                   <InlineText color={theme.colors.gray[2]} fontSize="14px">
                     阅读大概需要{timeToRead}分钟
                   </InlineText>
-                  <InlineText color={theme.colors.gray[2]} fontSize="14px">
-                    归档于
-                    {(frontmatter.categories || [])
-                      .map(o => generateCategoryText(o))
-                      .map(o => (
-                        <span key={o}>{o}&nbsp;</span>
-                      ))}
-                  </InlineText>
+                  {frontmatter.categories && frontmatter.categories.length ? (
+                    <InlineText color={theme.colors.gray[2]} fontSize="14px">
+                      归档于
+                      {frontmatter.categories
+                        .map(o => generateCategoryText(o))
+                        .map(o => (
+                          <span key={o}>{o}&nbsp;</span>
+                        ))}
+                    </InlineText>
+                  ) : null}
                 </Box>
 
                 <Row mt="10px">
-                  <Text lineHeight="20px" fontSize="16px" mt="20px" mb="20px">
+                  <Text lineHeight={1.75} fontSize="16px" mt="20px" mb="20px">
                     {frontmatter.description}
                   </Text>
                 </Row>

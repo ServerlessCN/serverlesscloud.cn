@@ -44,7 +44,7 @@ export default function BlogCard({ blog }: Props) {
               align={['left']}
               my={'12px'}
               fontSize="14px"
-              lineHeight={'18px'}
+              lineHeight={1.75}
               color={theme.colors.gray[2]}
             >
               {blog.node.frontmatter.description}

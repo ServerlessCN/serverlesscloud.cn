@@ -7,11 +7,11 @@ export interface Blog {
       description: string
       date: string
       thumbnail: string
-      categories: string[]
+      categories?: string[]
       authors: string[]
-      authorslink: string[]
-      translators: string[]
-      translatorslink: string[]
+      authorslink?: string[]
+      translators?: string[]
+      translatorslink?: string[]
     }
     timeToRead: number
     wordCount: {
