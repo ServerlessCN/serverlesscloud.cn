@@ -1,6 +1,15 @@
-# Serverless Framework 发布微信扫码一键登录能力，业务上云只需3min
+---
+title: Serverless Framework 发布微信扫码一键登录能力，业务上云只需3min
+description: 为了简化账号配置环节，实现本地一键开发部署，Serverless Framework发布微信扫码一键登录能力，支持用户在Serverless Framework环境扫码注册登陆，用户无需登录控制台，可全程在本地完成应用的部署。
+date: 2018-01-09
+thumbnail: https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/clem-onojeghuo-175180.jpg
+categories:
+  - user-stories
+authors:
+  - liujiang
+---
 
-为了简化账号配置环节，实现本地一键开发部署，Serverless Framework发布微信扫码一键登录能力，支持用户在Serverless Framework环境扫码注册登陆，用户无需登录控制台，可全程在本地完成应用的部署。
+为了简化账号配置环节，实现本地一键开发部署，Serverless Framework发布了微信扫码一键登录能力，支持用户在Serverless Framework环境扫码注册登陆，用户无需登录控制台，可全程在本地完成应用的部署。
 
 # 快速入门：简单四步，部署你的 Hello Word
 
