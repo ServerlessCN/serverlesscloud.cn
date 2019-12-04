@@ -128,7 +128,7 @@ frontend:
       root: frontend
       hook: npm run build
     env:
-    	# 下面的 API服务部署后，获取对应的 api 请求路径
+    # 下面的 API服务部署后，获取对应的 api 请求路径
       apiUrl: ${api.url}
 
 api:
