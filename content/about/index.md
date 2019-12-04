@@ -1,6 +1,5 @@
 ---
 title: 'About Us'
-date: '2017-10-24'
 ---
 
 # 关于 Serverless 中文社区

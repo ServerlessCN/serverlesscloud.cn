@@ -31,7 +31,8 @@
     "react-js-pagination": "^3.0.2",
     "react-metismenu": "^1.4.0",
     "styled-components": "^4.4.1",
-    "styled-system": "^5.1.2"
+    "styled-system": "^5.1.2",
+    "swiper": "^5.2.1"
   },
   "devDependencies": {
     "@types/node": "^12.12.9",
@@ -41,6 +42,7 @@
     "@types/react-paginate": "^6.2.1",
     "@types/styled-components": "^4.4.0",
     "@types/styled-system": "^5.1.4",
+    "@types/swiper": "^5.2.0",
     "babel-plugin-styled-components": "^1.10.6",
     "prettier": "^1.19.1",
     "typescript": "^3.7.2"

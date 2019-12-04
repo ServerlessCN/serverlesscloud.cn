@@ -6,7 +6,7 @@ const Wrapper = styled.div`
     list-style: disc;
 
     li {
-      line-height: 1.75;
+      line-height: 2;
     }
   }
 
