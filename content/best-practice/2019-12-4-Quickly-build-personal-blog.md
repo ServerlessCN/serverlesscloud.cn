@@ -1,4 +1,4 @@
-﻿---
+---
 title: Hexo + Serverless Framework，简单三步搭建你的个人博客
 description: 简单三步，即可通过 Serverless Website 组件快速构建一个 Serverless Hexo 站点。
 date: 2019-12-05
@@ -20,6 +20,8 @@ authorslink:
 
 # 快速开始
  [Serverless Framework](https://github.com/serverless/serverless) 提供了丰富的 [Component](https://github.com/serverless/components) 供用户搭建各种形态的 Serverless 应用。本文将演示通过 [Serverless Website Component](https://github.com/serverless-components/tencent-website) 快速构建一个 Serverless Hexo 站点。
+ 
+  <iframe width="670px" height="442px"  src="//player.bilibili.com/player.html?aid=78057816&cid=133519858&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 [English Version Docs ](https://github.com/tinafangkunding/serverless-hexo/blob/master/README_EN.md)>>: Build a serverless hexo website with serverless website component
 
