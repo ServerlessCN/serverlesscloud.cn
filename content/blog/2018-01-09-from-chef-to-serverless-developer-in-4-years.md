@@ -13,7 +13,7 @@ authorslink:
 translators: 
   - Aceyclee
 translatorslink: 
-  - zhihu.com/people/Aceyclee
+  - https://www.zhihu.com/people/Aceyclee
 ---
 我的软件开发入行经历非常有趣 —— 我一开始其实是厨师。
 

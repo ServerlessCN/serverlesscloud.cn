@@ -14,7 +14,7 @@ authorslink:
 translators: 
   - Aceyclee
 translatorslink: 
-  - zhihu.com/people/Aceyclee
+  - https://www.zhihu.com/people/Aceyclee
 ---
 
 我们在 Serverless 社区 进行了一项面向所有开发者的 Serverless 使用情况调查。我们期望能获得一些有意思的数据，然后与大家分享。

@@ -12,7 +12,7 @@ authorslink:
 translators: 
   - Aceyclee
 translatorslink: 
-  - zhihu.com/people/Aceyclee
+  - https://www.zhihu.com/people/Aceyclee
 ---
 
 首先向不了解我们的人说明一下，Serverless 团队成员总共跨越了 18 个时区，不同成员之间重合的工作时间非常少。

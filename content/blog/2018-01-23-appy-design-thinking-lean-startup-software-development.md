@@ -12,7 +12,7 @@ authorslink:
 translators: 
   - Aceyclee
 translatorslink: 
-  - zhihu.com/people/Aceyclee
+  - https://www.zhihu.com/people/Aceyclee
 ---
 
 我们所说的设计思维，是指由 IDEO 公司的 Tim Brown 提出，并且正在改变全世界组织的设计思维，简称 DT。
