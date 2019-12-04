@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Layout from '@src/layouts'
+import Layout from '@src/layouts/HeaderNotFixedLayout'
 import Banner from '@src/components/Banner'
 import Markdown from '@src/components/Markdown'
 import { Box, Flex, Container } from '@src/components/atoms'
@@ -40,7 +40,6 @@ const AboutPage = ({
         title="关于Serverless - Serverless"
         location={location}
       />
-      <Banner />
 
       <CustomContainer maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}>
         <Flex justifyContent="center">

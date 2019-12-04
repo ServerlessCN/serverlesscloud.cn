@@ -75,8 +75,8 @@ const BestPracticeDetail = ({
           >
             <BoxWithBackground
               mb="10px"
-              py="20px"
-              px="10px"
+              py="10px"
+              px="20px"
               background={theme.colors.gray[1]}
               width={1}
             >

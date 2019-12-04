@@ -45,7 +45,7 @@ export default function() {
         height={boxHeight}
       >
         <MainTitle color={theme.colors.white}>
-          Serverless.com 中国落地情况调研
+          Serverless Framework 用户使用情况调查
         </MainTitle>
 
         <TertiaryButton>立即参与</TertiaryButton>

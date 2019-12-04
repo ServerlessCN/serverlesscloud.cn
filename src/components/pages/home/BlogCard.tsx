@@ -66,7 +66,7 @@ export default function BlogCard({ blog }: Props) {
                 fontSize="14px"
                 color={theme.colors.serverlessRed}
               >
-                继续阅读
+                阅读全文
               </Text>
             </Flex>
           </Box>

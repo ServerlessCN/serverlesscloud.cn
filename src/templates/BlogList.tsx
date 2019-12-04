@@ -7,6 +7,7 @@ import Category from '@src/components/pages/blogList/CategoryList'
 import { GraphqlBlogResult } from '@src/types'
 import Helmet from '@src/components/Helmet'
 import Content from '@src/components/Content'
+import Breadcrumbs from '@src/components/Breadcrumbs'
 
 interface Props {
   data: {
@@ -31,7 +32,9 @@ const BlogList = ({
         description="Serverless Framework 团队博客最新动态，最新功能，最新版本发布"
         location={location}
       />
-      <Banner />
+      {/* <Banner /> */}
+
+      <Breadcrumbs>博客</Breadcrumbs>
 
       <Content>
         <List

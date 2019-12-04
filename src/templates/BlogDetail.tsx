@@ -5,8 +5,6 @@ import {
   Flex,
   Container,
   Box,
-  Fixed,
-  Button,
   BackgroundProps,
   Text,
   InlineBlock,
@@ -19,7 +17,6 @@ import BlogCatalogs from '@src/components/Markdown/Catalogs'
 import Category from '@src/components/pages/blogList/CategoryList'
 import Recommend from '@src/components/pages/blog/RecommendList'
 import theme from '@src/constants/theme'
-import BlogDetailLink from '@src/components/Link/BlogDetailLink'
 import Helmet from '@src/components/Helmet'
 import {
   background,
@@ -101,8 +98,8 @@ const BlogDetail = ({
           >
             <BoxWithBackground
               mb="10px"
-              py="20px"
-              px="10px"
+              py="10px"
+              px="20px"
               background={theme.colors.gray[1]}
               width={1}
             >

@@ -15,7 +15,12 @@ const Wrapper = styled.div`
   }
 
   p {
-    line-height: 1.75;
+    line-height: 2;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
   }
 `
 

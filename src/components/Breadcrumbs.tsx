@@ -16,7 +16,7 @@ export default function({
 }: React.Props<any> & {
   logo?: any
 }) {
-  const boxHeight = 200
+  const boxHeight = 120
 
   return (
     <CheckIfDesktopContext.Consumer>

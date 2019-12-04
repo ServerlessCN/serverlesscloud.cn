@@ -13,6 +13,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+          {
             resolve: 'gatsby-remark-code-buttons',
             options: {
               toasterText: '代码复制成功',

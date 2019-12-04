@@ -10,6 +10,7 @@ import Markdown from '@src/components/Markdown'
 import { Doc } from '@src/types'
 import Helmet from '@src/components/Helmet'
 import Content from '@src/components/Content'
+import Breadcrumbs from '@src/components/Breadcrumbs'
 
 import { config } from '@src/constants/docMenuConfig'
 
@@ -37,7 +38,8 @@ const DocPage = ({
         description="Serverless Framework 无服务器应用框架文档，使用方法和应用场景介绍。"
         location={location}
       />
-      <Banner />
+      {/* <Banner /> */}
+      <Breadcrumbs>文档</Breadcrumbs>
       <Content>
         <Box width={[0.95, 0.95, 0.95, 0.22]}>
           <SideMenu menus={config} activeLinkTo={currentPath} />
