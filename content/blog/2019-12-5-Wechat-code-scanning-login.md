@@ -2,7 +2,7 @@
 title: 极简配置，业务上云只需3min
 description: 为了简化账号配置环节，实现本地一键开发部署，Serverless Framework 发布微信扫码一键登录能力，支持用户在 Serverless Framework 环境扫码注册登陆，用户无需登录控制台，可全程在本地完成应用的部署。
 date: 2019-12-04
-thumbnail: ![](https://main.qcloudimg.com/raw/7092b9d6acbd11220bd1fd433ef87f7d.png)
+thumbnail: https://main.qcloudimg.com/raw/7092b9d6acbd11220bd1fd433ef87f7d.png
 categories:
   - news
 authors:
@@ -96,4 +96,4 @@ functions:   hello_world: my-service-dev-hello_world
     ANY - https://service-c6pxs4ku-1256386184.gz.apigw.tencentcs.com/release/my-service-dev-hello_world
 ```
 
-欢迎大家访问[Serverless](https://github.com/serverless/components) ，部署更多好玩、实用的服务与应用。
+欢迎大家访问 [Serverless](https://github.com/serverless/components) ，部署更多好玩、实用的服务与应用。
