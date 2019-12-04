@@ -1,4 +1,4 @@
-﻿---
+---
 title: 基于Serverless Component 的全栈解决方案
 description: 接下来将介绍如何借助 Serverless Component 快速开发全栈Web应用。
 date: 2019-12-05
@@ -53,9 +53,9 @@ module.exports = app
 
 接下来将介绍如何借助 Serverless Component 快速开发全栈Web应用。
 
-<iframe width="670px" height="442px"  src="//player.bilibili.com/player.html?aid=78090894&cid=133609102&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
 > 在开始所有步骤前，需执行 `npm install -g serverless` 命令，全局安装 `serverless cli`。
+
+<iframe width="670px" height="442px"  src="//player.bilibili.com/player.html?aid=78090894&cid=133609102&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 ## 准备
 
