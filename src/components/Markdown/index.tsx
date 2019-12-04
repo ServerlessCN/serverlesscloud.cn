@@ -22,6 +22,11 @@ const Wrapper = styled.div`
     display: block;
     margin: 20px auto;
   }
+
+  video {
+    display: block;
+    margin: 0 auto;
+  }
 `
 
 export default function(props: { html: string }) {
