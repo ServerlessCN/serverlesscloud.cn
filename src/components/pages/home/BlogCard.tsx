@@ -26,6 +26,7 @@ export default function BlogCard({ blog }: Props) {
         <Background
           width={[1]}
           height={[200]}
+          minHeight={[200]}
           background={`url(${JSON.stringify(blog.node.frontmatter.thumbnail)})`}
           backgroundSize="cover"
           backgroundPosition="center"
@@ -44,7 +45,7 @@ export default function BlogCard({ blog }: Props) {
               align={['left']}
               my={'12px'}
               fontSize="14px"
-              lineHeight={'18px'}
+              lineHeight={1.75}
               color={theme.colors.gray[2]}
             >
               {blog.node.frontmatter.description}
@@ -66,7 +67,7 @@ export default function BlogCard({ blog }: Props) {
                 fontSize="14px"
                 color={theme.colors.serverlessRed}
               >
-                继续阅读
+                阅读全文
               </Text>
             </Flex>
           </Box>

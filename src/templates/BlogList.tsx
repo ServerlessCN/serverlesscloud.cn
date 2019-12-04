@@ -2,13 +2,12 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import Banner from '@src/components/Banner'
 import Layout from '@src/layouts'
-import { Box, Flex, Container } from '@src/components/atoms'
 import List from '@src/components/pages/blogList/List'
 import Category from '@src/components/pages/blogList/CategoryList'
 import { GraphqlBlogResult } from '@src/types'
 import Helmet from '@src/components/Helmet'
-import styled from 'styled-components'
-import { width } from 'styled-system'
+import Content from '@src/components/Content'
+import Breadcrumbs from '@src/components/Breadcrumbs'
 
 interface Props {
   data: {
@@ -17,14 +16,6 @@ interface Props {
   pathContext: { offset: number; limit: number }
   location: any
 }
-
-const CustomFlex = styled(Flex)`
-  ${width}
-`
-
-const CustomContainer = styled(Container)`
-  flex: 1;
-`
 
 const BlogList = ({
   data: {
@@ -41,30 +32,22 @@ const BlogList = ({
         description="Serverless Framework 团队博客最新动态，最新功能，最新版本发布"
         location={location}
       />
-      <Banner />
+      {/* <Banner /> */}
 
-      <CustomContainer
-        width={[0.95, 0.95, 0.95, 0.95, 1216]}
-        maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}
-      >
-        <CustomFlex
-          width={1}
-          alignItems={['center', 'center', 'center', 'flex-start']}
-          justifyContent={['center', 'center', 'center', 'space-between']}
-          flexDirection={['column', 'column', 'column', 'row']}
-        >
-          <List
-            generateDataUrl={pageNum =>
-              `/blog${pageNum === 1 ? '' : `/page/${pageNum}`}`
-            }
-            blogs={edges}
-            offset={offset}
-            limit={limit}
-            totalCount={totalCount}
-          />
-          <Category />
-        </CustomFlex>
-      </CustomContainer>
+      <Breadcrumbs>博客</Breadcrumbs>
+
+      <Content>
+        <List
+          generateDataUrl={pageNum =>
+            `/blog${pageNum === 1 ? '' : `/page/${pageNum}`}`
+          }
+          blogs={edges}
+          offset={offset}
+          limit={limit}
+          totalCount={totalCount}
+        />
+        <Category />
+      </Content>
     </Layout>
   )
 }

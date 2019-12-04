@@ -3,8 +3,9 @@ import {
   Button,
   Box,
   Container,
-  Center,
+  Row,
   Background,
+  Center,
 } from '@src/components/atoms'
 import theme from '@src/constants/theme'
 import { MainTitle } from '@src/components/pages/home/Title'
@@ -78,11 +79,11 @@ function KOLs() {
       <div className="container user-tweets-component">
         <div className="container-inner user-tweets-inner">
           <div className="container user-tweets-tweets">
-            <Center flexWrap="wrap">
+            <Row justifyContent="space-around" flexWrap="wrap">
               {kols.map(kol => (
                 <Kol key={kol.name} kol={kol} />
               ))}
-            </Center>
+            </Row>
           </div>
         </div>
       </div>

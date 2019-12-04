@@ -13,9 +13,16 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+          {
             resolve: 'gatsby-remark-code-buttons',
             options: {
               toasterText: '代码复制成功',
+              buttonText: '复制代码',
             },
           },
           `gatsby-remark-autolink-headers`,
@@ -65,7 +72,7 @@ module.exports = {
         background_color: `#fd5750`,
         theme_color: `#fd5750`,
         display: `minimal-ui`,
-        icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/icon-serverless-framework.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

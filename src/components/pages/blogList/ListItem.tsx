@@ -21,6 +21,7 @@ import { formateDate } from '@src/utils'
 const InlineText = styled(Text)`
   display: inline-block;
   padding: 0 4px;
+  line-height: 1.5;
 `
 
 const ColumnWithHeight = styled(Column)`
@@ -36,6 +37,8 @@ export default function({ data }: { data: Blog }) {
   const {
     node: { id, frontmatter, timeToRead },
   } = data
+
+  frontmatter.categories = frontmatter.categories || []
 
   return (
     <BlogDetailLink blog={data}>
@@ -72,25 +75,27 @@ export default function({ data }: { data: Blog }) {
                   <InlineText color={theme.colors.gray[2]} fontSize="14px">
                     阅读大概需要{timeToRead}分钟
                   </InlineText>
-                  <InlineText color={theme.colors.gray[2]} fontSize="14px">
-                    归档于
-                    {(frontmatter.categories || [])
-                      .map(o => generateCategoryText(o))
-                      .map(o => (
-                        <span key={o}>{o}&nbsp;</span>
-                      ))}
-                  </InlineText>
+                  {frontmatter.categories && frontmatter.categories.length ? (
+                    <InlineText color={theme.colors.gray[2]} fontSize="14px">
+                      归档于
+                      {frontmatter.categories
+                        .map(o => generateCategoryText(o))
+                        .map(o => (
+                          <span key={o}>{o}&nbsp;</span>
+                        ))}
+                    </InlineText>
+                  ) : null}
                 </Box>
 
                 <Row mt="10px">
-                  <Text lineHeight="20px" fontSize="16px" mt="20px" mb="20px">
+                  <Text lineHeight={1.75} fontSize="16px" mt="20px" mb="20px">
                     {frontmatter.description}
                   </Text>
                 </Row>
               </Box>
 
               <Button width="160px" p="0.4rem" fontSize="18px" theme={theme}>
-                继续阅读
+                阅读全文
               </Button>
             </ColumnWithHeight>
           </BoxWithFlex>

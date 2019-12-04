@@ -5,8 +5,6 @@ import {
   Flex,
   Container,
   Box,
-  Fixed,
-  Button,
   BackgroundProps,
   Text,
   InlineBlock,
@@ -19,8 +17,6 @@ import BlogCatalogs from '@src/components/Markdown/Catalogs'
 import Category from '@src/components/pages/blogList/CategoryList'
 import Recommend from '@src/components/pages/blog/RecommendList'
 import theme from '@src/constants/theme'
-import { debounce } from '@src/utils'
-import BlogDetailLink from '@src/components/Link/BlogDetailLink'
 import Helmet from '@src/components/Helmet'
 import {
   background,
@@ -32,6 +28,8 @@ import {
 import { formateDate } from '@src/utils'
 import ExternalLink from '@src/components/Link/ExternalLink'
 import CategoryLink from '@src/components/Link/CategoryLink'
+import BackToTop from '@src/components/BackToTop'
+import PreNext from '@src/components/PreNext'
 
 const ExternalLinkWrapper = styled(InlineBlock)`
   margin-left: 5px;
@@ -83,27 +81,6 @@ const BlogDetail = ({
   data: { currentBlog, previousBlog, nextBlog, recommendBlogs },
   location,
 }: Props) => {
-  const [isBackTopButtonShow, setIsBackTopButtonShow] = React.useState(false)
-
-  React.useEffect(() => {
-    const onScroll = debounce(() => {
-      const scrollTop = document.documentElement.scrollTop
-
-      const clientHeight = document.documentElement.clientHeight
-
-      if (scrollTop > clientHeight) {
-      }
-
-      setIsBackTopButtonShow(!!(scrollTop > clientHeight))
-    }, 50)
-
-    document.addEventListener('scroll', onScroll)
-
-    return () => {
-      document.removeEventListener('scroll', onScroll)
-    }
-  }, [])
-
   return (
     <Layout>
       <Helmet {...currentBlog.frontmatter} location={location} />
@@ -121,8 +98,8 @@ const BlogDetail = ({
           >
             <BoxWithBackground
               mb="10px"
-              py="20px"
-              px="10px"
+              py="10px"
+              px="20px"
               background={theme.colors.gray[1]}
               width={1}
             >
@@ -168,69 +145,33 @@ const BlogDetail = ({
                   )}
                 </Text>
               ) : null}
-              <Text my="5px">
-                归档于:
-                {currentBlog.frontmatter.categories.map(o => (
-                  <LinkWrapper key={o} display="inline-block" ml="5px">
-                    <CategoryLink category={o} />
-                  </LinkWrapper>
-                ))}
-              </Text>
+              {currentBlog.frontmatter.categories &&
+              currentBlog.frontmatter.categories.length ? (
+                <Text my="5px">
+                  归档于:
+                  {currentBlog.frontmatter.categories.map(o => (
+                    <LinkWrapper key={o} display="inline-block" ml="5px">
+                      <CategoryLink category={o} />
+                    </LinkWrapper>
+                  ))}
+                </Text>
+              ) : null}
             </BoxWithBackground>
 
             <Markdown html={currentBlog.html as string}></Markdown>
 
-            <Box mt="25px">
-              <Flex
-                alignItems="flex-start"
-                justifyContent={['center', 'center', 'center', 'space-between']}
-                flexDirection={['column', 'column', 'column', 'row']}
-              >
-                {previousBlog ? (
-                  <LinkWrapper>
-                    <BlogDetailLink blog={{ node: previousBlog }}>
-                      上一篇：{previousBlog.frontmatter.title}
-                    </BlogDetailLink>
-                  </LinkWrapper>
-                ) : null}
-
-                {nextBlog ? (
-                  <LinkWrapper>
-                    <BlogDetailLink blog={{ node: nextBlog }}>
-                      下一篇：{nextBlog.frontmatter.title}
-                    </BlogDetailLink>
-                  </LinkWrapper>
-                ) : (
-                  '已经是最后一篇了'
-                )}
-              </Flex>
-            </Box>
+            <PreNext next={nextBlog} previous={previousBlog} />
           </Box>
 
           <Box width={[0.9, 0.9, 0.9, 0.25]}>
             <Recommend width={[1]} blogs={recommendBlogs.edges} />
             <Category width={[1]} />
-
             <BlogCatalogs html={currentBlog.tableOfContents} />
           </Box>
         </Flex>
       </Container>
 
-      <Fixed right="30px" bottom="100px">
-        {isBackTopButtonShow ? (
-          <Button
-            onClick={() => {
-              document.documentElement.scrollTop = 0
-            }}
-            width="120px"
-            fontSize="16px"
-            p={'10px'}
-            theme={theme}
-          >
-            回到顶部
-          </Button>
-        ) : null}
-      </Fixed>
+      <BackToTop />
     </Layout>
   )
 }

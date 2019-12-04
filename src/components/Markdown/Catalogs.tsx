@@ -22,6 +22,10 @@ const Wrapper = styled(Box)<
   ul {
     list-style: disc;
 
+    li {
+      line-height: 2;
+    }
+
     padding-left: 2em;
     a {
       color: ${theme.colors.black};

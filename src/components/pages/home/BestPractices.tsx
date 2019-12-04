@@ -28,13 +28,7 @@ function Blogs({ blogs }: Props) {
       <Flex
         flexDirection={['column', 'column', 'row', 'row', 'row']}
         flexWrap={['initial', 'initial', 'wrap', 'wrap', 'initial']}
-        justifyContent={[
-          'initial',
-          'initial',
-          'space-between',
-          'space-between',
-          'center',
-        ]}
+        justifyContent={['initial', 'initial', 'center']}
         width={[1]}
         mb={[32, 32, 0]}
         mt={[0, 0, 32]}
@@ -55,10 +49,7 @@ export default function() {
           blogs: allMarkdownRemark(
             sort: { fields: frontmatter___date, order: DESC }
             limit: 3
-            filter: {
-              fileAbsolutePath: { regex: "/blog/" }
-              frontmatter: { categories: { in: "best-practice" } }
-            }
+            filter: { fileAbsolutePath: { regex: "/best-practice/" } }
           ) {
             edges {
               node {
@@ -80,7 +71,12 @@ export default function() {
       `}
       render={({ blogs }: { blogs: GraphqlBlogResult }) => {
         return (
-          <Background pt={'40px'} pb={'40px'} width={1}>
+          <Background
+            background={theme.colors.gray[0]}
+            pt={'40px'}
+            pb={'40px'}
+            width={1}
+          >
             <Center flexDirection="column">
               <MainTitle>最佳实践</MainTitle>
 
@@ -88,7 +84,7 @@ export default function() {
 
               <CategoryLink custom category="best-practice">
                 <Button mt="30px" mb="30px" theme={theme}>
-                  More Posts
+                  更多实践
                 </Button>
               </CategoryLink>
             </Center>

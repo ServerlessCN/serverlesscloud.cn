@@ -29,6 +29,7 @@ const Header = (props: Props) => {
               const headerHeight = isDesktopView
                 ? theme.headerHeights.desktop
                 : theme.headerHeights.mobile
+
               return (
                 <WrapperWithBorderShadow
                   position={isHeaderFixed ? 'fixed' : 'relative'}

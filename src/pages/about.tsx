@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Layout from '@src/layouts'
+import Layout from '@src/layouts/HeaderNotFixedLayout'
 import Banner from '@src/components/Banner'
 import Markdown from '@src/components/Markdown'
 import { Box, Flex, Container } from '@src/components/atoms'
@@ -9,6 +9,11 @@ import { graphql } from 'gatsby'
 
 const CustomContainer = styled(Container)`
   flex: 1;
+
+  .markdown-body img {
+    width: 200px;
+    height: 200px;
+  }
 `
 
 interface Props {
@@ -40,7 +45,6 @@ const AboutPage = ({
         title="关于Serverless - Serverless"
         location={location}
       />
-      <Banner />
 
       <CustomContainer maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}>
         <Flex justifyContent="center">

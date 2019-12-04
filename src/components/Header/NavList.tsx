@@ -32,7 +32,7 @@ const navList: { title: string; link: string }[] = [
   },
   {
     title: '最佳实践',
-    link: '/category/best-practice',
+    link: '/best-practice',
   },
   {
     title: '组件',
@@ -45,6 +45,10 @@ const navList: { title: string; link: string }[] = [
   {
     title: '博客',
     link: '/blog',
+  },
+  {
+    title: '论坛',
+    link: '/forum',
   },
   {
     title: '关于',
@@ -65,7 +69,7 @@ export default function({ isActive, isDesktopView }: Props) {
     ? 'block'
     : 'none'
 
-  const navListBoxWidth = isDesktopView ? 1 / 2 : 1
+  const navListBoxWidth = isDesktopView ? 0.6 : 1
   return (
     <BoxWithTextAlign
       width={navListBoxWidth}

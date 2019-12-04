@@ -15,7 +15,8 @@ import { Link as InternalLink } from 'gatsby'
 import ExternalLink from './Link/ExternalLink'
 import QQQRcode from '@src/assets/images/qq_qrcode.jpg'
 import WechatQRcode from '@src/assets/images/wechat_qrcode.jpg'
-import logo from '@src/assets/images/logo-serverless-framework-center-vertical-dark.png'
+// import logo from '@src/assets/images/logo-serverless-framework-center-vertical-dark.png'
+import logo from '@src/assets/images/icon-serverless-framework.png'
 
 const links: {
   category: string
@@ -94,8 +95,8 @@ const links: {
 
 const contacts = [
   {
-    title: '交流QQ群',
-    description: '玩转Serverless',
+    title: '交流 QQ群',
+    description: '群号：871445853',
     type: 'qq',
     qrcode: QQQRcode,
   },
@@ -121,16 +122,12 @@ export default function() {
     <Column>
       <Background width={[1]} background={theme.colors.black}>
         <Container maxWidth={['100%', '100%', '100%', '1260px', '1260px']}>
-          <Box pt={'40px'} pb={'30px'} pl={'10px'} pr={'10px'}>
+          <Box pt="40px" pb="30px" pl="10px" pr="10px">
             <Row flexWrap={['wrap', 'wrap', 'wrap', 'nowrap']}>
-              <Box width={[1, 1, 1, 1 / 4]}>
+              <Box mt={'28px'} width={[1, 1, 1, 1 / 4]}>
                 <Column alignItems="center">
-                  <Image
-                    width={'180px'}
-                    src={logo}
-                    alt="Serverless Framework"
-                  />
-                  <WhiteText>极速部署 Serverless 应用的开发平台</WhiteText>
+                  <Image width="140px" src={logo} alt="Serverless Framework" />
+                  <WhiteText>Serverless 中文技术社区</WhiteText>
                 </Column>
               </Box>
 
