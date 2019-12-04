@@ -26,7 +26,7 @@ module.exports = {
             },
           },
           `gatsby-remark-autolink-headers`,
-          // `gatsby-remark-prismjs`,
+          `gatsby-remark-prismjs`,
         ],
       },
     },
@@ -72,7 +72,7 @@ module.exports = {
         background_color: `#fd5750`,
         theme_color: `#fd5750`,
         display: `minimal-ui`,
-        icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/icon-serverless-framework.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

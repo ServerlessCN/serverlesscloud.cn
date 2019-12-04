@@ -27,7 +27,8 @@ export default function Card({ children, ref, ...rest }: Props) {
       flexDirection={['column']}
       alignItems={['center']}
       width={[0.9, 0.9, 340, 360, 390]}
-      height="416px"
+      height="auto"
+      min-height="416px"
       my={[32]}
       mx={['auto', 20]}
       {...rest}

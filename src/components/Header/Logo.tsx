@@ -1,5 +1,6 @@
 import * as React from 'react'
-import logo from '@src/assets/images/logo-serverless-framework-side-light.png'
+import logo from '@src/assets/images/icon-serverless-framework.png'
+
 import { Logo, Text, Row } from '@src/components/atoms'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
@@ -19,14 +20,14 @@ interface Props {
 export default function({ logoHeight }: Props) {
   return (
     <LinkWithMargin to="/">
-      <Row alignItems="center">
+      <Row alignItems="center" height={logoHeight}>
         <LogoWithMargin
+          height={`${parseInt(logoHeight) * 0.8}px`}
           src={logo}
           alt="Serverless Framework"
-          height={logoHeight}
         />
 
-        <Text ml="5px" fontSize="20px" fontWeight="bold">
+        <Text ml="5px" fontSize={['14px', '14px', '16px', '20px']}>
           Serverless中文技术社区
         </Text>
       </Row>

@@ -71,7 +71,12 @@ export default function() {
       `}
       render={({ blogs }: { blogs: GraphqlBlogResult }) => {
         return (
-          <Background pt={'40px'} pb={'40px'} width={1}>
+          <Background
+            background={theme.colors.gray[0]}
+            pt={'40px'}
+            pb={'40px'}
+            width={1}
+          >
             <Center flexDirection="column">
               <MainTitle>最佳实践</MainTitle>
 
@@ -79,7 +84,7 @@ export default function() {
 
               <CategoryLink custom category="best-practice">
                 <Button mt="30px" mb="30px" theme={theme}>
-                  More Posts
+                  更多实践
                 </Button>
               </CategoryLink>
             </Center>

@@ -26,6 +26,7 @@ export default function BlogCard({ blog }: Props) {
         <Background
           width={[1]}
           height={[200]}
+          minHeight={[200]}
           background={`url(${JSON.stringify(blog.node.frontmatter.thumbnail)})`}
           backgroundSize="cover"
           backgroundPosition="center"

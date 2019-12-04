@@ -25,7 +25,7 @@ const IndexPage = (props: Props) => {
       <Swiper />
       <BestParctices />
       <LatestBlogs />
-      <Research />
+      {/* <Research /> */}
       <KOLs />
       <CommonQuestion />
     </Layout>

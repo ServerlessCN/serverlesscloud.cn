@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 
   img {
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
   }
 `
 

@@ -39,6 +39,11 @@ serverless create --template-url https://github.com/tinafangkunding/tencent-node
 
 查看 code/index.py 代码，可以看到接口的传参和返回逻辑：
 
+```javascript
+var a = 1
+let a = 1
+```
+
 ```python
 # -*- coding: utf8 -*-
 

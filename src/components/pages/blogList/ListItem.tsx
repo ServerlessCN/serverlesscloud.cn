@@ -21,6 +21,7 @@ import { formateDate } from '@src/utils'
 const InlineText = styled(Text)`
   display: inline-block;
   padding: 0 4px;
+  line-height: 1.5;
 `
 
 const ColumnWithHeight = styled(Column)`

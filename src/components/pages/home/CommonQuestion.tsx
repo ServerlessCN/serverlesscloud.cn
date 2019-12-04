@@ -1,5 +1,12 @@
 import * as React from 'react'
-import { Flex, Text, Container, Box, Background } from '@src/components/atoms'
+import {
+  Flex,
+  Text,
+  Container,
+  Box,
+  Background,
+  Button,
+} from '@src/components/atoms'
 import theme from '@src/constants/theme'
 import { MainTitle, SubMainTitle } from '@src/components/pages/home/Title'
 import styled from 'styled-components'
@@ -77,12 +84,11 @@ export default function() {
 
       <Flex alignItems="center" justifyContent="center">
         <Text fontSize={'14px'}>
-          <Link to="/about">联系我们</Link>
-          {/* <Link to="/about">
-            <TextWithCursor color={theme.colors.serverlessRed}>
-              请联系我们
-            </TextWithCursor>
-          </Link> */}
+          <Link to="/about">
+            <Button mt="30px" mb="30px" theme={theme}>
+              联系我们
+            </Button>
+          </Link>
         </Text>
       </Flex>
     </Background>

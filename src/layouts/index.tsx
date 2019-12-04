@@ -21,7 +21,7 @@ const Layout = ({ children }: React.Props<any>) => {
     }, 50)
 
     window.addEventListener('resize', onResize)
-    onResize()
+    setIsDesktopView(!!(window.innerWidth >= 992))
 
     return () => {
       window.removeEventListener('resize', onResize)

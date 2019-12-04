@@ -47,6 +47,10 @@ const navList: { title: string; link: string }[] = [
     link: '/blog',
   },
   {
+    title: '论坛',
+    link: '/forum',
+  },
+  {
     title: '关于',
     link: '/about',
   },
@@ -65,7 +69,7 @@ export default function({ isActive, isDesktopView }: Props) {
     ? 'block'
     : 'none'
 
-  const navListBoxWidth = isDesktopView ? 1 / 2 : 1
+  const navListBoxWidth = isDesktopView ? 0.6 : 1
   return (
     <BoxWithTextAlign
       width={navListBoxWidth}

@@ -73,12 +73,7 @@ export default function() {
       `}
       render={({ blogs }: { blogs: GraphqlBlogResult }) => {
         return (
-          <Background
-            background={theme.colors.gray[0]}
-            pt={'40px'}
-            pb={'40px'}
-            width={1}
-          >
+          <Background pt={'40px'} pb={'40px'} width={1}>
             <Center flexDirection="column">
               <MainTitle>最新博客</MainTitle>
 
@@ -86,7 +81,7 @@ export default function() {
 
               <Link to="/blog">
                 <Button mt="30px" mb="30px" theme={theme}>
-                  More Posts
+                  更多博客
                 </Button>
               </Link>
             </Center>

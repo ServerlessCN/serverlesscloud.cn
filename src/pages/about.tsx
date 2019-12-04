@@ -9,6 +9,11 @@ import { graphql } from 'gatsby'
 
 const CustomContainer = styled(Container)`
   flex: 1;
+
+  .markdown-body img {
+    width: 200px;
+    height: 200px;
+  }
 `
 
 interface Props {
