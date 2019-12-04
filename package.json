@@ -30,7 +30,8 @@
     "react-js-pagination": "^3.0.2",
     "react-metismenu": "^1.4.0",
     "styled-components": "^4.4.1",
-    "styled-system": "^5.1.2"
+    "styled-system": "^5.1.2",
+    "swiper": "^5.2.1"
   },
   "devDependencies": {
     "@types/node": "^12.12.9",

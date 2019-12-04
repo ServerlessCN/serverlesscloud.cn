@@ -16,10 +16,11 @@ module.exports = {
             resolve: 'gatsby-remark-code-buttons',
             options: {
               toasterText: '代码复制成功',
+              buttonText: '复制代码',
             },
           },
           `gatsby-remark-autolink-headers`,
-          `gatsby-remark-prismjs`,
+          // `gatsby-remark-prismjs`,
         ],
       },
     },

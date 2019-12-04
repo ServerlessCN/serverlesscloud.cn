@@ -70,10 +70,7 @@ module.exports = app
 ```yml
 # serverless.yml
 
-express:
-  component: '@serverless/tencent-express'
-  inputs:
-    region: ap-shanghai
+xxxx
 ```
 
 [查看详细配置文档>>](https://github.com/serverless-tencent/tencent-express/blob/master/docs/configure.md)
