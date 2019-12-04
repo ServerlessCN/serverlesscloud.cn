@@ -39,7 +39,7 @@ export default function({
                       : 0
                   }
                 >
-                  <Container>
+                  <Container maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}>
                     <Flex
                       alignItems="center"
                       justifyContent={[
