@@ -1,0 +1,26 @@
+.gatsby-code-button-container {
+  top: 22px;
+}
+.gatsby-code-button {
+  font-size: 12px;
+  margin-right: 5px;
+  color: hsla(0, 0%, 54.9%, 0.8);
+}
+
+.gatsby-code-button:hover {
+  color: #8c8c8c;
+}
+.gatsby-code-button-icon {
+  display: none;
+}
+.gatsby-code-button-toaster {
+}
+.gatsby-code-button-toaster-text {
+  width: 200px;
+}
+
+@media screen and (max-width: 992px) {
+  .gatsby-code-button-container {
+    display: none;
+  }
+}
