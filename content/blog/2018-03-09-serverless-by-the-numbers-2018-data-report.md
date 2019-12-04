@@ -13,7 +13,7 @@ authorslink:
 translators: 
   - Aceyclee
 translatorslink: 
-  - zhihu.com/people/Aceyclee
+  - https://www.zhihu.com/people/Aceyclee
 ---
 
 说起如何使用 Serverless Framework，大家都有很多想分享的。
