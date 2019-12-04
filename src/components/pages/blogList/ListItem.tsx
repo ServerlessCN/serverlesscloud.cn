@@ -94,7 +94,7 @@ export default function({ data }: { data: Blog }) {
               </Box>
 
               <Button width="160px" p="0.4rem" fontSize="18px" theme={theme}>
-                继续阅读
+                阅读全文
               </Button>
             </ColumnWithHeight>
           </BoxWithFlex>

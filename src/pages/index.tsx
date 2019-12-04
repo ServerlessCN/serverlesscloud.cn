@@ -5,9 +5,9 @@ import LatestBlogs from '@src/components/pages/home/LatestBlogs'
 import BestParctices from '@src/components/pages/home/BestPractices'
 import CommonQuestion from '@src/components/pages/home/CommonQuestion'
 import Research from '@src/components/pages/home/Research'
-import Banner from '@src/components/Banner'
 import KOLs from '@src/components/pages/home/KOLs'
 import Helmet from '@src/components/Helmet'
+import Swiper from '@src/components/pages/home/Swiper'
 
 interface Props {
   location: any
@@ -22,7 +22,7 @@ const IndexPage = (props: Props) => {
         keywords="Serverless,Serverless Framework,FaaS,函数计算,无服务器"
         location={props.location}
       />
-      <Banner />
+      <Swiper />
       <BestParctices />
       <LatestBlogs />
       <Research />

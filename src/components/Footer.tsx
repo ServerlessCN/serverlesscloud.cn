@@ -130,7 +130,7 @@ export default function() {
                     src={logo}
                     alt="Serverless Framework"
                   />
-                  <WhiteText>极速部署 Serverless 应用的开发平台</WhiteText>
+                  <WhiteText>Serverless 中文技术社区</WhiteText>
                 </Column>
               </Box>
 

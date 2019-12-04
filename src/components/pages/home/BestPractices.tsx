@@ -28,13 +28,7 @@ function Blogs({ blogs }: Props) {
       <Flex
         flexDirection={['column', 'column', 'row', 'row', 'row']}
         flexWrap={['initial', 'initial', 'wrap', 'wrap', 'initial']}
-        justifyContent={[
-          'initial',
-          'initial',
-          'space-between',
-          'space-between',
-          'center',
-        ]}
+        justifyContent={['initial', 'initial', 'center']}
         width={[1]}
         mb={[32, 32, 0]}
         mt={[0, 0, 32]}

@@ -29,7 +29,7 @@ export default function Card({ children, ref, ...rest }: Props) {
       width={[0.9, 0.9, 340, 360, 390]}
       height="416px"
       my={[32]}
-      mx={[20]}
+      mx={['auto', 20]}
       {...rest}
     >
       {children}
