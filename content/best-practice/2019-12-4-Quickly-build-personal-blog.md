@@ -158,4 +158,4 @@ Login successful for TencentCloud
 
 # 写在最后
 
-本文只是简单展示了如何利用 Serverless Framework 创建一个个人博客，Hexo 拥有丰富的插件系统，大家可以基于 Serverless Framework 和 Hexo 开发更多个性化功能如 自定义Themes、博文置定、添加小标图等。这两个工具结合使用，开发方便部署快捷，非常适合初入门或者想要快速搭建静态网站的同学。
+本文只是简单展示了如何利用 Serverless Framework 创建一个个人博客，Hexo 拥有丰富的插件系统，大家可以基于 Serverless Framework 和 Hexo 开发更多个性化功能如 自定义 Themes、博文置定、添加小标图等。这两个工具结合使用，开发方便部署快捷，非常适合初入门或者想要快速搭建静态网站的同学。
