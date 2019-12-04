@@ -137,7 +137,7 @@ Login successful for TencentCloud
 
 访问命令行输出的 website url，即可查看属于自己的 Serverless Hexo 站点。
 
-![image](https://uploader.shimo.im/f/P9h0rlMANRw2R5OA.png)
+![image](https://uploader.shimo.im/f/P9h0rlMANRw2R5OA.png!thumbnail)
 
 > 注：如果希望更新hexo站点中的文章，需要在本地重新运行 hexo g 进行生成静态页面，再运行 serverless 就可以直接更新到页面啦~
 
