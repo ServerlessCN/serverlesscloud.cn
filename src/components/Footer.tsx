@@ -95,7 +95,7 @@ const links: {
 
 const contacts = [
   {
-    title: '交流QQ群',
+    title: '交流 QQ群',
     description: '群号：871445853',
     type: 'qq',
     qrcode: QQQRcode,
@@ -124,7 +124,7 @@ export default function() {
         <Container maxWidth={['100%', '100%', '100%', '1260px', '1260px']}>
           <Box pt="40px" pb="30px" pl="10px" pr="10px">
             <Row flexWrap={['wrap', 'wrap', 'wrap', 'nowrap']}>
-              <Box width={[1, 1, 1, 1 / 4]}>
+              <Box mt={'28px'} width={[1, 1, 1, 1 / 4]}>
                 <Column alignItems="center">
                   <Image width="140px" src={logo} alt="Serverless Framework" />
                   <WhiteText>Serverless 中文技术社区</WhiteText>

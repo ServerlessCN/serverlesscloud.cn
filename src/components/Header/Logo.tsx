@@ -28,7 +28,7 @@ export default function({ logoHeight }: Props) {
         />
 
         <Text ml="5px" fontSize={['14px', '14px', '16px', '20px']}>
-          Serverless中文技术社区
+          Serverless 中文技术社区
         </Text>
       </Row>
     </LinkWithMargin>
