@@ -6,6 +6,7 @@ import Swiper from '@src/components/Swiper'
 import banner1 from '@src/assets/images/swiper-banner1.png'
 import banner2 from '@src/assets/images/swiper-banner2.png'
 import banner3 from '@src/assets/images/swiper-banner3.png'
+
 import styled from 'styled-components'
 
 const ImageWrapper = styled(Center)`
@@ -26,7 +27,7 @@ const bannerConfigs: { img: any; backgroundColor: string; alt: string }[] = [
   },
   {
     img: banner3,
-    backgroundColor: '#f66',
+    backgroundColor: '#fff',
     alt: 'Serverless Component',
   },
 ]

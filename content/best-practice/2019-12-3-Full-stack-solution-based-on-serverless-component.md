@@ -1,5 +1,5 @@
 ---
-title: 基于 Serverless Component 的全栈解决方案
+title: 基于 Serverless Component 全栈解决方案
 description: 本文将介绍如何借助 Serverless Component 快速开发全栈Web应用。
 date: 2019-12-05
 thumbnail: https://main.qcloudimg.com/raw/d7c66434ce0734583bf115b2d9d969be.png
@@ -43,7 +43,8 @@ app.get('/', function(req, res) {
 // 不要忘了导出，因为该组件会对它进行包装，输出成云函数
 module.exports = app
 ```
-这背后所有的流程逻辑都是组件内部实现的，包括：云函数的部署，API网关的生成等。
+
+这背后所有的流程逻辑都是组件内部实现的，包括：云函数的部署，API 网关的生成等。
 
 下面是一张简单的组件依赖图：
 
@@ -53,7 +54,7 @@ module.exports = app
 
 # 全栈应用实战
 
-接下来将介绍如何借助 Serverless Component 快速开发全栈Web应用。
+接下来将介绍如何借助 Serverless Component 快速开发全栈 Web 应用。
 
 > 在开始所有步骤前，需执行 `npm install -g serverless` 命令，全局安装 `serverless cli`。
 
@@ -78,15 +79,15 @@ module.exports = app
 进入目录 `api`，新增 `app.js` 文件，编写 `express` 服务代码，这里先新增一个路由 `/`，并返回当前服务器时间：
 
 ```js
-const express = require('express');
-const cors = require('cors');
-const app = express();
+const express = require('express')
+const cors = require('cors')
+const app = express()
 
-app.use(cors());
+app.use(cors())
 app.get('/', (req, res) => {
-  res.send(JSON.stringfy({ message: `Server time: ${new Date().toString()}` }));
-});
-module.exports = app;
+  res.send(JSON.stringfy({ message: `Server time: ${new Date().toString()}` }))
+})
+module.exports = app
 ```
 
 ## 前端页面开发
@@ -95,9 +96,9 @@ module.exports = app;
 
 ```js
 // 这里初始是没有 env.js 模块的，第一次部署后会自动生成
-require('../env');
+require('../env')
 
-const Vue = require('vue');
+const Vue = require('vue')
 
 module.exports = new Vue({
   el: '#root',
@@ -107,12 +108,12 @@ module.exports = new Vue({
   },
   methods: {
     async queryServer() {
-      const response = await fetch(window.env.apiUrl);
-      const result = await response.json();
-      this.message = result.message;
+      const response = await fetch(window.env.apiUrl)
+      const result = await response.json()
+      this.message = result.message
     },
   },
-});
+})
 ```
 
 ## 配置
@@ -132,7 +133,7 @@ frontend:
       root: frontend
       hook: npm run build
     env:
-    # 下面的 API服务部署后，获取对应的 api 请求路径
+      # 下面的 API服务部署后，获取对应的 api 请求路径
       apiUrl: ${api.url}
 
 api:
@@ -166,7 +167,7 @@ $ serverless --debug
 
 ![Deploy Success Result](https://static.yugasun.com/serverless/deploy-success.png)
 
-这样一个基于 Serverless Component  的全栈应用就开发好了。赶紧点击你部署好的链接体验一下吧~
+这样一个基于 Serverless Component 的全栈应用就开发好了。赶紧点击你部署好的链接体验一下吧~
 
 [在线 Demo](https://br1ovx-efmogqe-1251556596.cos-website.ap-guangzhou.myqcloud.com/)
 
@@ -176,7 +177,7 @@ $ serverless --debug
 
 ## 准备
 
-想要操作数据库，必须先拥有一台数据库实例，[腾讯云Mysql云数据库](https://console.cloud.tencent.com/cdb) 现在也很便宜，可以购买一个最基本按量计费 `1核1G内存` 的 1小时收费不到 `4 毛钱`，是不是非常划算。购买好之后初始化配置，然后新增一个 `serverless` 数据库，同时新增一张 `users` 表：
+想要操作数据库，必须先拥有一台数据库实例，[腾讯云 Mysql 云数据库](https://console.cloud.tencent.com/cdb) 现在也很便宜，可以购买一个最基本按量计费 `1核1G内存` 的 1 小时收费不到 `4 毛钱`，是不是非常划算。购买好之后初始化配置，然后新增一个 `serverless` 数据库，同时新增一张 `users` 表：
 
 ```sql
 CREATE TABLE if not exists `test` ( `name` varchar (32) NOT NULL ,`email` varchar (64) NOT NULL ,`site` varchar (128) NOT NULL ) ENGINE = innodb DEFAULT CHARACTER SET = "utf8mb4" COLLATE = "utf8mb4_general_ci"
@@ -187,10 +188,10 @@ CREATE TABLE if not exists `test` ( `name` varchar (32) NOT NULL ,`email` varcha
 首先修改前端入口文件 `frontend/src/index.js` 新增相关函数操作：
 
 ```js
-require('../env');
+require('../env')
 
-const Vue = require('vue');
-const axios = require('axios');
+const Vue = require('vue')
+const axios = require('axios')
 module.exports = new Vue({
   el: '#root',
   data: {
@@ -206,24 +207,24 @@ module.exports = new Vue({
     // ...
     // 获取用户列表
     async getUsers() {
-      const res = await axios.get(window.env.apiUrl + 'users');
-      this.userList = res.data && res.data.data || [];
+      const res = await axios.get(window.env.apiUrl + 'users')
+      this.userList = (res.data && res.data.data) || []
     },
     // 新增一个用户
     async addUser() {
-      const data = this.form;
-      const res = await axios.post(window.env.apiUrl + 'users', data);
-      console.log(res);
+      const data = this.form
+      const res = await axios.post(window.env.apiUrl + 'users', data)
+      console.log(res)
       if (res.data) {
-        this.getUsers();
+        this.getUsers()
       }
     },
   },
   mounted() {
     // 视图挂在后，获取用户列表
-    this.getUsers();
-  }
-});
+    this.getUsers()
+  },
+})
 ```
 
 当然你还需要修改视图模板文件 `frontend/index.html`，在页面模板中新增用户列表和用户表单：
@@ -273,19 +274,19 @@ module.exports = new Vue({
 
 这里使用 `.env` 来进行数据库连接参数配置，在 `api` 目录下新增 `.env` 文件，将之前的数据库配置填入文件中，参考 `api/.env.example` 文件。然后添加并安装 `dotenv` 依赖，同时添加 `mysql2` 模块进行数据库操作，`body-parser` 模块进行 `POST` 请求时的 `body` 解析。
 
-之后新增后端api，进行数据库读写，修改后的 `api/app.js` 代码如下：
+之后新增后端 api，进行数据库读写，修改后的 `api/app.js` 代码如下：
 
 ```js
-'use strict';
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
-const mysql = require('mysql2');
-const bodyParser = require('body-parser');
+'use strict'
+require('dotenv').config()
+const express = require('express')
+const cors = require('cors')
+const mysql = require('mysql2')
+const bodyParser = require('body-parser')
 
 // init mysql connection
 function initMysqlPool() {
-  const { DB_HOST, DB_PORT, DB_DATABASE, DB_USER, DB_PASSWORD } = process.env;
+  const { DB_HOST, DB_PORT, DB_DATABASE, DB_USER, DB_PASSWORD } = process.env
 
   const promisePool = mysql
     .createPool({
@@ -296,58 +297,58 @@ function initMysqlPool() {
       database: DB_DATABASE,
       connectionLimit: 1,
     })
-    .promise();
+    .promise()
 
-  return promisePool;
+  return promisePool
 }
 
-const app = express();
-app.use(bodyParser.json());
-app.use(cors());
+const app = express()
+app.use(bodyParser.json())
+app.use(cors())
 
 if (!app.promisePool) {
-  app.promisePool = initMysqlPool();
+  app.promisePool = initMysqlPool()
 }
 
 app.get('/', (req, res) => {
-  res.send(JSON.stringify({ message: `Server time: ${new Date().toString()}` }));
-});
+  res.send(JSON.stringify({ message: `Server time: ${new Date().toString()}` }))
+})
 
 // get user list
 app.get('/users', async (req, res) => {
-  const [data] = await app.promisePool.query('select * from users');
+  const [data] = await app.promisePool.query('select * from users')
   res.send(
     JSON.stringify({
       data: data,
-    }),
-  );
-});
+    })
+  )
+})
 
 // add new user
 app.post('/users', async (req, res) => {
-  let result = '';
+  let result = ''
   try {
-    const { name, email, site } = req.body;
+    const { name, email, site } = req.body
     const [res] = await app.promisePool.query('INSERT into users SET ?', {
       name: name,
       email: email,
       site: site,
-    });
+    })
     result = {
       data: res && res.insertId,
       message: 'Insert Success',
-    };
+    }
   } catch (e) {
     result = {
       data: e,
       message: 'Insert Fail',
-    };
+    }
   }
 
-  res.send(JSON.stringify(result));
-});
+  res.send(JSON.stringify(result))
+})
 
-module.exports = app;
+module.exports = app
 ```
 
 ## 配置修改
@@ -367,8 +368,8 @@ api:
     functionConf:
       # 这个是用来访问新创建数据库的私有网络，可以在你的数据库实例管理页面查看
       vpcConfig:
-          vpcId: vpc-6n5x55kb
-          subnetId: subnet-4cvr91js
+        vpcId: vpc-6n5x55kb
+        subnetId: subnet-4cvr91js
     apigatewayConf:
       protocol: https
 ```
@@ -377,7 +378,7 @@ api:
 
 [完整的模板仓库](https://github.com/yugasun/tencent-serverless-demo/tree/master/fullstack-application-vue)
 
-[在线Demo](https://br1ovx-efmogqe-1251556596.cos-website.ap-guangzhou.myqcloud.com)
+[在线 Demo](https://br1ovx-efmogqe-1251556596.cos-website.ap-guangzhou.myqcloud.com)
 
 # 总结
 
