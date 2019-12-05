@@ -80,7 +80,7 @@ export default function() {
       <Flex alignItems="center" justifyContent="center">
         <Text fontSize={'14px'}>
           <Link to="/about">
-            <Button mt="30px" mb="30px" theme={theme}>
+            <Button mt={[0, 0, '30px']} mb="30px" theme={theme}>
               联系我们
             </Button>
           </Link>

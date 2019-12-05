@@ -14,8 +14,7 @@ Serverless 中文社区是一群 Serverless Framework 的开发者们共同发�
   - [点此快速提问](https://segmentfault.com/t/serverlessframework)
   - 加上「Serverless」和「ServerlessFramework」标签
 
-
-|  交流 QQ 群   | 微信社区群  |
-|  ----  | ----  |
-| 群号：871445853，欢迎扫码进群  | 添加小助手微信 (serverlesscloud)，加入社区微信群 |
-|![](https://main.qcloudimg.com/raw/47e4a71d8d057e6486625c17d57599a3.jpg) | ![](https://serverlesscn-1253970226.cos-website.ap-hongkong.myqcloud.com/static/wechat_qrcode-6c112b3032c65503a4b95e7cf9904de8.jpg) |
+| 交流 QQ 群                                                               | 微信社区群                                                                                                                          |
+| ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| 群号：871445853                                                          | WeChat ID: serverlesscloud                                                                                                          |
+| ![](https://main.qcloudimg.com/raw/47e4a71d8d057e6486625c17d57599a3.jpg) | ![](https://serverlesscn-1253970226.cos-website.ap-hongkong.myqcloud.com/static/wechat_qrcode-6c112b3032c65503a4b95e7cf9904de8.jpg) |

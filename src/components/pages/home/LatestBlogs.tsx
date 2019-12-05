@@ -80,7 +80,7 @@ export default function() {
               <Blogs blogs={blogs.edges} />
 
               <Link to="/blog">
-                <Button mt="30px" mb="30px" theme={theme}>
+                <Button mt={[0, 0, '30px']} mb="30px" theme={theme}>
                   更多博客
                 </Button>
               </Link>

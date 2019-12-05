@@ -13,6 +13,13 @@ const CustomContainer = styled(Container)`
     width: 200px;
     height: 200px;
   }
+
+  @media screen and (max-width: 768px) {
+    .markdown-body img {
+      width: 120px;
+      height: 120px;
+    }
+  }
 `
 
 interface Props {

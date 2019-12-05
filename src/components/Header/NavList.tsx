@@ -62,7 +62,6 @@ interface Props {
 }
 
 export default function({ isActive, isDesktopView }: Props) {
-  const navListItemDisplay = isDesktopView ? 'inline-block' : 'block'
   const isMobileNavListDisplay = () => (isActive ? 'block' : 'none')
 
   const navListBoxWidth = isDesktopView ? 0.6 : 1
@@ -78,9 +77,12 @@ export default function({ isActive, isDesktopView }: Props) {
       ]}
       textAlign={isDesktopView ? 'right' : 'left'}
     >
-      <List p={0} ml={[4, 3, 4, 3, 0]} mr={0} mb={0}>
+      <List p={0} mr={0} mb={0}>
         {navList.map(({ title, link }, index) => (
-          <NavListItem key={index} display={navListItemDisplay}>
+          <NavListItem
+            key={index}
+            display={['block', 'block', 'block', 'inline-block']}
+          >
             <Link to={link}>
               <Text color={theme.colors.black}>{title}</Text>
             </Link>
