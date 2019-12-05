@@ -7,7 +7,7 @@ import theme from '@src/constants/theme'
 
 const Wrapper = styled(Box)`
   .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: ${theme.colors.white};
+    background-color: ${theme.colors.serverlessRed};
   }
 `
 
@@ -22,6 +22,7 @@ export default function(props: Props) {
     const _swiperProps = Object.assign(
       {
         loop: true,
+        speed: 3000,
         autoplay: {
           disableOnInteraction: false,
         },
