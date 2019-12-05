@@ -2,9 +2,9 @@
 link: /providers/tencent/events/timer
 ---
 
-# Timer
+## 定时触发事件定义
 
-The following config will attach a timer trigger and causes the function `hello_world` to be called every 5 seconds. The configuration allows you to attach multiple timer triggers to the same function. You can use the `cron` syntax. Take a look at the [Timer documentation](https://intl.cloud.tencent.com/document/product/583/9708) for more details.
+如下配置将为 `hello_world` 函数创建一个每 5 秒执行一次的定时触发器。当前一个函数可以创建多个定时触发器。此外，您可以使用标准的 Cron 表达式的形式自定义何时触发。详情可以参考 [定时触发器概述](https://cloud.tencent.com/document/product/583/9708)。
 
 ```yaml
 functions:
@@ -20,11 +20,9 @@ functions:
             enable: true
 ```
 
-## Enabling / Disabling
+## 开启/关闭定时触发器
 
-**Note:** timer triggers are enabled by default.
-
-This will create and attach a timer for the `function_two` function which is disabled. If enabled it will call the `function_two` function every 1 minutes.
+如下例子将会为 `function_two` 函数创建一个默认关闭的定时触发器，如果 `enable` 参数设置为 `true`，则该函数会每 1 分钟触发一次。
 
 ```yaml
 functions:
@@ -40,9 +38,11 @@ functions:
             enable: false
 ```
 
-## Specify Name of Timer
+> 注：定时触发器默认开启。
 
-Name can be specified for a timer.
+## 定时触发器名称
+
+名称可以唯一确定一个函数的定时触发器，如下配置所示：
 
 ```yaml
 events:
@@ -50,9 +50,9 @@ events:
       name: your-timer-name
 ```
 
-## Input Parameters of Timer
+## 定时触发器入参说明
 
-When a timer trigger triggers a function, the following data structures are encapsulated in "event" and passed to the function. In addition, you can specify to pass the "message" for a timer trigger, which is null by default.
+定时触发器在触发函数时，会把如下的数据结构封装在 event 里传给云函数。同时，定时触发器支持自定义传入 Message，缺省为空。
 
 ```json
 {

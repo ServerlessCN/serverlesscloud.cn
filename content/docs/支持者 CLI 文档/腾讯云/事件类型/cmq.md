@@ -2,11 +2,9 @@
 link: /providers/tencent/events/cmq
 ---
 
-# CMQ (Cloud Message Queue)
+## 关联已有的 CMQ Topic
 
-## Using a pre-existing topic
-
-In the following example we choose a pre-existing CMQ topic with name `cmq_trigger`. The function will be called every time a message is sent to the `test-topic` topic.
+该例子中，我们通过 `serverless.yml` 创建了一个名为 `cmq_trigger` 的 CMQ 触发器，并且关联了一个名为 `test-topic` 的 CMQ Topic，每次这个 Topic 收到消息后，函数都会被调用。详情可以参考 [CMQ 触发器概述](https://cloud.tencent.com/document/product/583/11517)。
 
 ```yml
 functions:
@@ -21,11 +19,11 @@ functions:
             enable: true
 ```
 
-**Note:** CMQ triggers are enabled by default.
+> 注： CMQ 触发器默认开启。
 
-## Event Structure for CMQ Topic Trigger
+## CMQ Topic 触发器的事件消息结构
 
-When receiving a message, the specified CMQ Topic sends the following event data in JSON format to the bound SCF.
+在指定的 CMQ Topic 主题队列接受到消息时，会将类似以下的 JSON 格式事件数据发送给绑定的 SCF 函数。
 
 ```json
 {

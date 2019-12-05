@@ -77,25 +77,25 @@ let config = [
           label: '事件类型',
           content: [
             {
-              label: 'apigateway',
+              label: 'API 网关',
               to: `${baseUrl}/providers/tencent/events/apigateway`,
             },
             {
-              label: 'cos',
+              label: 'COS 对象存储',
               to: `${baseUrl}/providers/tencent/events/cos`,
             },
             {
-              label: 'cloud kafka',
+              label: 'Timer 定时触发器',
+              to: `${baseUrl}/providers/tencent/events/timer`,
+            }, 
+            {
+              label: 'CKakfa 消息队列',
               to: `${baseUrl}/providers/tencent/events/cloud-kafka`,
             },
             {
-              label: 'cmq',
+              label: 'CMQ 消息队列',
               to: `${baseUrl}/providers/tencent/events/cmq`,
-            },
-            {
-              label: 'timer',
-              to: `${baseUrl}/providers/tencent/events/timer`,
-            },            
+            },           
           ],
         },
       ],  

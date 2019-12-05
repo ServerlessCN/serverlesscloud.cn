@@ -2,18 +2,11 @@
 link: /providers/tencent/events/apigateway
 ---
 
+您可以借助 Serverless Framework 编写 SCF 云函数来实现 Web 后端服务，并通过 API 网关对外提供服务。API 网关会将请求内容以参数形式传递给函数，并将函数返回作为响应返回给请求方。详情可以参考 [API 网关触发器概述](https://cloud.tencent.com/document/product/583/12513)。
 
-# API Gateway
+## 创建 HTTP 访问的接入点
 
-Tencent Serverless Cloud Functions can create function based API endpoints through API Gateway.
-
-It might be helpful to read the Tencent Serverless Cloud Functions [API Gateway Trigger](https://intl.cloud.tencent.com/document/product/583/12513) to learn the full functionality.
-
-## HTTP Endpoint
-
-This setup specifies that the function should be run when someone accesses the API gateway via a `POST` request.
-
-Here's an example:
+通过如下配置，可以创建一个 SCF 函数，并且创建对应的 API 网关触发器，支持 `POST` 请求，对应的 `serverless.yml` 配置如下：
 
 ```yml
 functions:
@@ -30,6 +23,7 @@ functions:
             httpMethod: POST
             integratedResponse: true # enable integrated response
 ```
+以 Node.js 为例，对应的函数代码如下：
 
 ```javascript
 //index.js
@@ -44,9 +38,9 @@ exports.main_handler = async (event, context, callback) => {
 };
 ```
 
-## Event message structures of integration request for API Gateway trigger
+## API 网关触发器的集成请求事件消息结构
 
-When an API Gateway trigger receives a request, it sends the event data to the bound function in JSON format as shown below.
+在 API 网关触发器接收到请求时，会将类似以下 JSON 格式的事件数据发送给绑定的云函数。
 
 ```json
 {
