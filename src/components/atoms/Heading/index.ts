@@ -2,9 +2,6 @@ import { Text } from '../Text'
 import theme from '@src/constants/theme'
 
 export const Heading = Text.withComponent('h3')
-Heading.defaultProps = {
-  fontFamily: theme.font.header,
-}
 
 Heading.displayName = 'Heading'
 

@@ -17,7 +17,11 @@ interface Props {
 export default function({ logoHeight }: Props) {
   return (
     <Link to="/">
-      <Row alignItems="center" height={logoHeight}>
+      <Row
+        minWidth={['auto', 'auto', '320px']}
+        alignItems="center"
+        height={logoHeight}
+      >
         <LogoWithMargin
           ml={['-10px']}
           height={`${parseInt(logoHeight) * 0.8}px`}
@@ -25,7 +29,7 @@ export default function({ logoHeight }: Props) {
           alt="Serverless Framework"
         />
 
-        <Text ml="5px" fontSize={['14px', '14px', '16px', '20px']}>
+        <Text ml="5px" fontSize={['16px', '18px', '18px', '20px']}>
           Serverless 中文技术社区
         </Text>
       </Row>

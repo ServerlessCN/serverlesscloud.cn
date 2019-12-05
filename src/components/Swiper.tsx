@@ -27,6 +27,7 @@ export default function(props: Props) {
         },
         pagination: {
           el: '.swiper-pagination',
+          clickable: true,
         },
       },
       swiperProps || {}

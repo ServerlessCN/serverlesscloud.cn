@@ -59,9 +59,9 @@ export default function({
                         my="20px"
                         align={['center', 'center', 'center', 'left']}
                         fontSize={[
-                          theme.fontSizes[0],
-                          theme.fontSizes[0],
-                          theme.fontSizes[1],
+                          theme.fontSizes[2],
+                          theme.fontSizes[2],
+                          theme.fontSizes[2],
                           theme.fontSizes[2],
                           theme.fontSizes[3],
                         ]}

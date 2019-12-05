@@ -28,7 +28,9 @@ export default function() {
                       backgroundSize="100% 100%"
                       backgroundRepeat="no-repeat"
                       backgroundImage={`url(${logo})`}
-                    />
+                    >
+                      <Text>12312312</Text>
+                    </Background>
                     <Background
                       className="swiper-slide"
                       width={1}
