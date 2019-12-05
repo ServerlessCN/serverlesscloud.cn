@@ -41,10 +41,10 @@ const DocPage = ({
       {/* <Banner /> */}
       <Breadcrumbs>文档</Breadcrumbs>
       <Content>
-        <Box width={[0.95, 0.95, 0.95, 0.22]}>
+        <Box width={[0.95, 0.95, 0.95, 0.3]}>
           <SideMenu menus={config} activeLinkTo={currentPath} />
         </Box>
-        <Box pt={'30px'} pb={'30px'} width={[0.95, 0.95, 0.95, 0.76]}>
+        <Box pt={'30px'} pb={'30px'} width={[0.95, 0.95, 0.95, 0.66]}>
           <Markdown html={doc.html} />
         </Box>
       </Content>

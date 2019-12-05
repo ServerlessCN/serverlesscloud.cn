@@ -63,18 +63,19 @@ interface Props {
 
 export default function({ isActive, isDesktopView }: Props) {
   const navListItemDisplay = isDesktopView ? 'inline-block' : 'block'
-  const navListBoxDisplay = isDesktopView
-    ? 'block'
-    : isActive
-    ? 'block'
-    : 'none'
+  const isMobileNavListDisplay = () => (isActive ? 'block' : 'none')
 
   const navListBoxWidth = isDesktopView ? 0.6 : 1
   return (
     <BoxWithTextAlign
       width={navListBoxWidth}
       bg={theme.colors.white}
-      display={navListBoxDisplay}
+      display={[
+        isMobileNavListDisplay(),
+        isMobileNavListDisplay(),
+        isMobileNavListDisplay(),
+        'block',
+      ]}
       textAlign={isDesktopView ? 'right' : 'left'}
     >
       <List p={0} ml={[4, 3, 4, 3, 0]} mr={0} mb={0}>
