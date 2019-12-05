@@ -49,7 +49,7 @@ export default function() {
           blogs: allMarkdownRemark(
             sort: { fields: frontmatter___date, order: DESC }
             limit: 3
-            filter: { fileAbsolutePath: { regex: "/best-practice/" } }
+            filter: { fileAbsolutePath: { regex: "//best-practice//" } }
           ) {
             edges {
               node {

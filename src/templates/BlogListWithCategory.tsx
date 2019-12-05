@@ -68,7 +68,7 @@ export const query = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
         frontmatter: { date: { ne: null }, categories: { in: $categories } }
-        fileAbsolutePath: { regex: "/blog/" }
+        fileAbsolutePath: { regex: "//blog//" }
       }
       skip: $offset
       limit: $limit

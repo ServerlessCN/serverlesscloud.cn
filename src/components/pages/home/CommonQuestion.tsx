@@ -12,11 +12,6 @@ import { MainTitle, SubMainTitle } from '@src/components/pages/home/Title'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-const TextWithCursor = styled(Text)`
-  cursor: pointer;
-  display: inline-block;
-`
-
 const questions: { question: string; answer: string | JSX.Element }[] = [
   {
     question: '什么是 Serverless Framework？',

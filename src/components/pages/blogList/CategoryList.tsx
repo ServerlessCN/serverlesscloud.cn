@@ -52,7 +52,9 @@ export default function(props) {
     <StaticQuery
       query={graphql`
         query CategoryQuery {
-          categorys: allMarkdownRemark {
+          categorys: allMarkdownRemark(
+            filter: { fileAbsolutePath: { regex: "//blog//" } }
+          ) {
             group(field: frontmatter___categories) {
               totalCount
               categories: fieldValue

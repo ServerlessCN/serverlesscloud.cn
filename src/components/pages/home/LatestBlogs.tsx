@@ -49,7 +49,7 @@ export default function() {
             sort: { fields: frontmatter___date, order: DESC }
             limit: 3
             filter: {
-              fileAbsolutePath: { regex: "/blog/" }
+              fileAbsolutePath: { regex: "//blog//" }
               frontmatter: { categories: { nin: "best-practice" } }
             }
           ) {
