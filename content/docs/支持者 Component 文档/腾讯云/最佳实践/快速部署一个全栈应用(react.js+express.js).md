@@ -1,22 +1,24 @@
 ---
-link: /providers/tencent/templates/vue-full-stack
+link: /providers/tencent/templates/react-full-stack
 ---
 
-![Serverless Vue Tencent Cloud](https://main.qcloudimg.com/raw/2f3d4de6be4bc19436843a0b75b8f367.png)
+![Serverless React Tencent Cloud](https://main.qcloudimg.com/raw/2ae205fa9829e43b0ec3800df7bd7998.png)
 
-&nbsp;
-
-通过多个 Serverless Components 部署 Serverless 全栈应用程序。可以帮助开发者更方便快捷的部署 Serverless 应用，比如利用后端 API 与前端 Vue.js 结合等场景。
+通过多个 Serverless Components 部署 Serverless 全栈应用程序。可以帮助开发者更方便快捷的部署 Serverless 应用，比如利用后端 API 与前端 React.js 结合等场景。
 
 此项目的完全基于腾讯云 Serverless 服务器，可大大缩减使用成本。 如果正在寻找一个低开销的便捷轻量的 Serverless 服务管理框架，这里将是最好的选择。
 
 该示例包括:
 
 - **serverless REST API** - 由腾讯云 Servelress Cloud Function（无服务云函数 SCF） 和腾讯云 API Gateway 提供相关能力，帮助开发者架构自己的项目和路由。
-- **serverless Vue.js 站点** - 由腾讯云 Cloud Object Storage（对象存储 COS）提供相关存储能力. 通过后端 API 传递到前端，并使用 Vue.js 做相关渲染。
+- **serverless React.js 站点** - 由腾讯云 Cloud Object Storage（对象存储 COS）提供相关存储能力. 通过后端 API 传递到前端，并使用 React.js 做相关渲染。
 
 该全栈 Web 应用架构图如下:
-![架构图](https://main.qcloudimg.com/raw/21ae7465b6927c14d9bc4ae6dc33fc17.png)
+![架构图](https://main.qcloudimg.com/raw/d309699762b7df15a3fa19971452394a.png)
+
+&nbsp;
+
+- [Check out the English version tutorial here.](./README_EN.md)
 
 &nbsp;
 
@@ -38,10 +40,10 @@ $ npm i -g serverless
 之后可以新建一个空的文件夹，使用 `create --template-url`，安装相关 template。
 
 ```
-$ serverless create --template-url https://github.com/serverless/components/tree/master/templates/tencent-fullstack-vue-application
+$ serverless create --template-url https://github.com/serverless/components/tree/master/templates/tencent-fullstack-react-application
 ```
 
-使用`cd`命令，进入`templates\tencent-fullstack-vue-application` 文件夹，可以查看到如下目录结构：
+使用`cd`命令，进入`templates\tencent-fullstack-react-application` 文件夹，可以查看到如下目录结构：
 
 ```
 |- api
@@ -63,7 +65,7 @@ $ npm i
 
 ### 2. 部署
 
-回到`tencent-fullstack-vue-application`目录下，直接通过 `serverless` 命令来部署应用:
+回到`tencent-fullstack-react-application`目录下，直接通过 `serverless` 命令来部署应用:
 
 ```
 $ serverless
@@ -107,7 +109,7 @@ $ npm set registry https://registry.npmjs.org/
 ```
 
 3. 腾讯云 Component 已支持二维码一键登录，如您希望使用配置秘钥的方式登录，也可以参考如下步骤：
-   在`tencent-fullstack-vue-application` 文件夹根目录创建 `.env` 文件
+   在`tencent-fullstack-react-application` 文件夹根目录创建 `.env` 文件
 
 ```
 $ touch .env # 腾讯云的配置信息
@@ -116,9 +118,9 @@ $ touch .env # 腾讯云的配置信息
 在 `.env` 文件中配置腾讯云的 SecretId 和 SecretKey 信息并保存
 如果没有腾讯云账号，可以在此[注册新账号](https://cloud.tencent.com/register)。
 
-如果已有腾讯云账号，可以在[API密钥管理](https://console.cloud.tencent.com/cam/capi)中获取 `SecretId` 和`SecretKey`
+如果已有腾讯云账号，可以在[API 密钥管理](https://console.cloud.tencent.com/cam/capi)中获取 `SecretId` 和`SecretKey`
 
-```
+```env
 # .env
 TENCENT_SECRET_ID=123
 TENCENT_SECRET_KEY=123
