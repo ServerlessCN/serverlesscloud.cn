@@ -1,18 +1,19 @@
 ---
-link: /best-practice/hexo
+link: /providers/tencent/templates/hexo
 ---
-
-# 部署 Serverless Hexo 站点
 
 ## 快速开始
 
-通过 Serverless Website 组件快速构建一个 Serverless Hexo 站点 <p/>
-build a serverless hexo website with serverless website component
+&nbsp;
+
+通过 Serverless Website 组件快速构建一个 Serverless Hexo 站点 
 
 1. [安装](#1-安装)
 2. [配置](#2-配置)
 3. [部署](#3-部署)
 4. [移除](#4-移除)
+
+&nbsp;
 
 ### 1. 安装
 
@@ -59,20 +60,20 @@ $ npm install
 安装完成后，可以通过`hexo g`命令生成静态页面
 
 ```
-hexo g   # generate
+$ hexo g   # generate
 ```
 
 > 注：如果希望在本地查看效果，也可以运行下列命令，通过浏览器访问 `localhost:4000` 查看页面效果。
 
 ```
-hexo s   # server
+$ hexo s   # server
 ```
 
 ### 2. 配置
 
 在`hexo`目录下，创建`serverless.yml`文件，在其中进行如下配置
 
-```console
+```
 $ touch serverless.yml
 ```
 
@@ -111,7 +112,7 @@ myWebsite:
 如您的账号未[登陆](https://cloud.tencent.com/login)或[注册](https://cloud.tencent.com/register)腾讯云，您可以直接通过`微信`扫描命令行中的二维码进行授权登陆和注册。
 
 ```
-PS serverless --debug
+$ serverless --debug
 
   DEBUG ─ Resolving the template's static variables.
   DEBUG ─ Collecting components from the template.
@@ -165,4 +166,24 @@ PS sls remove --debug
 
   6s » myWebsite » done
 
+```
+
+### 账号配置（可选）
+
+当前默认支持 CLI 扫描二维码登录，如您希望配置持久的环境变量/秘钥信息，也可以本地创建 `.env` 文件
+
+```
+$ touch .env # 腾讯云的配置信息
+```
+
+在 `.env` 文件中配置腾讯云的 SecretId 和 SecretKey 信息并保存
+
+如果没有腾讯云账号，可以在此[注册新账号](https://cloud.tencent.com/register)。
+
+如果已有腾讯云账号，可以在[API 密钥管理](https://cloud.tencent.com/cam/capi)中获取 `SecretId` 和`SecretKey`.
+
+```env
+# .env
+TENCENT_SECRET_ID=123
+TENCENT_SECRET_KEY=123
 ```
