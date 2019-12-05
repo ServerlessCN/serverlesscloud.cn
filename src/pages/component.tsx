@@ -31,7 +31,7 @@ const ComponentPage = ({ location }: Props) => {
         py="60px"
         maxWidth={[1216, 1216, 1216, '85%', '90%', 1216]}
       >
-        <Flex flexWrap="wrap">
+        <Flex justifyContent="space-around" flexWrap="wrap">
           {componentConfig.map(component => (
             <Link to={component.link} key={component.name}>
               <Card height="386px" width={[0.9, 0.9, 340, 360]}>

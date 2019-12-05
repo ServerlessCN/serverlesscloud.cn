@@ -4,6 +4,7 @@ import BlogListItem from './ListItem'
 import Pagination from './Pagination'
 import { Blog } from '@src/types'
 import { navigate } from 'gatsby'
+import { WidthProps } from 'styled-system'
 
 export default function({
   blogs,
@@ -11,15 +12,16 @@ export default function({
   limit,
   totalCount,
   generateDataUrl,
+  ...rest
 }: {
   blogs: Blog[]
   offset: number
   limit: number
   totalCount: number
   generateDataUrl: (pageNum: number) => string
-}) {
+} & WidthProps) {
   return (
-    <Box width={[0.9, 0.9, 0.9, 0.76]}>
+    <Box width={[0.9, 0.9, 0.9, 0.76]} {...rest}>
       <Box mx="auto">
         {blogs.map(blog => (
           <BlogListItem key={blog.node.id} data={blog} />

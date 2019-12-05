@@ -3,7 +3,7 @@ import Layout from '@src/layouts/HeaderNotFixedLayout'
 import { Container, Text, Column, Image } from '@src/components/atoms'
 import Helmet from '@src/components/Helmet'
 import styled from 'styled-components'
-import WechatQRcode from '@src/assets/images/wechat_qrcode.jpg'
+import WechatQRcode from '@src/assets/images/wechat_qrcode.png'
 
 const CustomContainer = styled(Container)`
   flex: 1;

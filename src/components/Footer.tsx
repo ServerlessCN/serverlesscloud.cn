@@ -13,9 +13,8 @@ import theme from '@src/constants/theme'
 import styled from 'styled-components'
 import { Link as InternalLink } from 'gatsby'
 import ExternalLink from './Link/ExternalLink'
-import QQQRcode from '@src/assets/images/qq_qrcode.jpg'
-import WechatQRcode from '@src/assets/images/wechat_qrcode.jpg'
-// import logo from '@src/assets/images/logo-serverless-framework-center-vertical-dark.png'
+import QQQRcode from '@src/assets/images/qq_qrcode.png'
+import WechatQRcode from '@src/assets/images/wechat_qrcode.png'
 import logo from '@src/assets/images/icon-serverless-framework.png'
 
 const links: {
@@ -189,7 +188,7 @@ export default function() {
       </Background>
 
       <Background width={[1]} background={theme.colors.serverlessRed}>
-        <Container maxWidth={['100%', '100%', '100%', '76%', '85%']}>
+        <Container maxWidth={[1, 1, 1, 0.76, 0.85]}>
           <Box pt={'15px'} pb={'15px'} pl={'10px'} pr={'10px'}>
             <Flex
               flexDirection={['column', 'column', 'column', 'row', 'row']}

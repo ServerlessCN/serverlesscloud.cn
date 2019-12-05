@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Box } from '@src/components/atoms'
 import 'swiper/css/swiper.min.css'
 import theme from '@src/constants/theme'
+import { HeightProps } from 'styled-system'
 
 const Wrapper = styled(Box)`
   .swiper-pagination .swiper-pagination-bullet-active {
@@ -11,12 +12,12 @@ const Wrapper = styled(Box)`
   }
 `
 
-export interface Props extends React.Props<any> {
+export interface Props extends React.Props<any>, HeightProps {
   swiperProps?: SwiperOptions
 }
 
 export default function(props: Props) {
-  const { swiperProps, children } = props
+  const { swiperProps, children, height } = props
 
   React.useEffect(() => {
     const _swiperProps = Object.assign(
@@ -32,19 +33,15 @@ export default function(props: Props) {
           el: '.swiper-pagination',
           clickable: true,
         },
-      },
+      } as SwiperOptions,
       swiperProps || {}
-    ) as SwiperOptions
+    )
     ;(_swiperProps.pagination as any).el = '.swiper-pagination'
     new Swiper('.swiper-container', _swiperProps)
   }, [swiperProps])
 
   return (
-    <Wrapper
-      width={1}
-      height={['200px', '200px', '200px', '300px']}
-      className="swiper-container"
-    >
+    <Wrapper width={1} height={height} className="swiper-container">
       <div className="swiper-wrapper">{children}</div>
       <div className="swiper-pagination"></div>
     </Wrapper>

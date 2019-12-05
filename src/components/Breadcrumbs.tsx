@@ -1,6 +1,5 @@
 import * as React from 'react'
-// import _logo from '@src/assets/images/research_bg.jpg'
-import _logo from '@src/assets/images/breadcrumbs_bg.jpg'
+import _logo from '@src/assets/images/breadcrumbs_bg.png'
 
 import {
   Background,

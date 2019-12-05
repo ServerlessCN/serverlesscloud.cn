@@ -2,7 +2,7 @@
 title: 极简配置，业务上云只需 3min
 description: Serverless Framework 最新发布微信扫码一键登录能力，支持用户在本地环境扫码注册登陆。
 date: 2019-12-04
-thumbnail: https://main.qcloudimg.com/raw/dfdb7df84cfebc77da343db7f5f1a029.png
+thumbnail: https://main.qcloudimg.com/raw/78b97f99889774773552691057aced97.png
 categories:
   - news
 authors:
@@ -16,9 +16,10 @@ authors:
 ## Step1：安装环境
 
 安装前提：
+
 - Node.js（Node.js 版本需不低于 8.6，，建议使用 Node.js 10.0 及以上版本），具体可参考 [Node.js 安装指南](https://nodejs.org/zh-cn/download/)
 - Serverless Framework CLI（1.57.0 或以上的版本），
-在命令行中运行如下命令即可安装 Serverless Framework CLI
+  在命令行中运行如下命令即可安装 Serverless Framework CLI
 
 ```
 $ npm install -g serverless
@@ -50,28 +51,27 @@ service: my-service # service name
 provider: # provider information
   name: tencent
   runtime: Nodejs8.9
-  credentials: ~/credentials  # 如不使用二维码一键登录，密钥字段需要和 credentials 文件路径一致
+  credentials: ~/credentials # 如不使用二维码一键登录，密钥字段需要和 credentials 文件路径一致
 
 plugins:
   - serverless-tencent-scf
 
 functions:
-  hello_world:   # 函数名称
+  hello_world: # 函数名称
     handler: index.main_handler
     runtime: Nodejs8.9
     events:
-        - apigw:
-           name: hello_world_apigw
-           parameters:
-             stageName: release
-             serviceId:
-             httpMethod: ANY
+      - apigw:
+          name: hello_world_apigw
+          parameters:
+            stageName: release
+            serviceId:
+            httpMethod: ANY
 ```
 
 ## Step4：部署服务
 
 通过该命令部署或更新您创建的函数和触发器，资源配置会和 serverless.yml 中保持一致。
-
 
 ```bash
 serverless deploy
@@ -96,4 +96,4 @@ functions:   hello_world: my-service-dev-hello_world
     ANY - https://service-c6pxs4ku-1256386184.gz.apigw.tencentcs.com/release/my-service-dev-hello_world
 ```
 
-欢迎大家访问 [Serverless Github](https://github.com/serverless/components)  网站，部署更多好玩、实用的服务与应用。
+欢迎大家访问 [Serverless Github](https://github.com/serverless/components) 网站，部署更多好玩、实用的服务与应用。

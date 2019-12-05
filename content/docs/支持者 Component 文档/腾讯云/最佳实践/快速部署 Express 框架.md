@@ -2,20 +2,20 @@
 link: /providers/tencent/components/express
 ---
 
-[![Serverless Express Tencent Cloud](https://s3.amazonaws.com/assets.general.serverless.com/component_express_tencent/readme-express-tencent-serverless.png)](http://serverless.com)
+[![Serverless Express Tencent Cloud](https://main.qcloudimg.com/raw/706ecab42919643ad6099a7b585efc16.png)](http://serverless.com)
 
 &nbsp;
 
 ## 简介
 
-Express 组件通过使用 serverless-tencent 的基础组件如API网关组件，SCF组件等，快速，方便的在腾讯云创建，配置和管理一个Express框架。
+Express 组件通过使用 serverless-tencent 的基础组件如 API 网关组件，SCF 组件等，快速，方便的在腾讯云创建，配置和管理一个 Express 框架。
 <img align="right" width="400" src="https://scf-dev-tools-1253665819.cos.ap-guangzhou.myqcloud.com/express_demo_light_sm_resize.gif" />
 
 ## 快速开始
 
 &nbsp;
 
-通过 Express 组件，对一个 Express应用进行完整的创建，配置，部署和删除等操作。支持命令如下：
+通过 Express 组件，对一个 Express 应用进行完整的创建，配置，部署和删除等操作。支持命令如下：
 
 1. [安装](#1-安装)
 2. [创建](#2-创建)
@@ -27,7 +27,7 @@ Express 组件通过使用 serverless-tencent 的基础组件如API网关组件�
 
 ### 1. 安装
 
-通过 npm 安装 serverless 
+通过 npm 安装 serverless
 
 ```
 $ npm install -g serverless
@@ -42,12 +42,14 @@ $ touch serverless.yml
 ```
 
 初始化一个新的 npm 包，并安装 Express：
+
 ```
 $ npm init              # 创建后持续回车
 $ npm i --save express  # 安装express
 ```
 
 创建一个 `app.js`文件，并在其中创建您的 Express App：
+
 ```js
 const express = require('express')
 const app = express()
@@ -71,10 +73,9 @@ express:
   component: '@serverless/tencent-express'
   inputs:
     region: ap-shanghai
-
 ```
-* [点击此处查看配置文档](https://github.com/serverless-tencent/tencent-express/blob/master/docs/configure.md)
 
+- [点击此处查看配置文档](https://github.com/serverless-tencent/tencent-express/blob/master/docs/configure.md)
 
 ### 4. 部署
 
@@ -107,7 +108,7 @@ $ sls --debug
   DEBUG ─ Deploying service with id service-n0vs2ohb.
   DEBUG ─ Deployment successful for the api named express.TencentApiGateway in the ap-shanghai region.
 
-  express: 
+  express:
     region:              ap-shanghai
     functionName:        ExpressComponent_7xRrrd
     apiGatewayServiceId: service-n0vs2ohb
@@ -116,7 +117,8 @@ $ sls --debug
   36s › express › done
 
 ```
-部署完毕后，可以在浏览器中访问返回的链接，看到对应的express返回值。
+
+部署完毕后，可以在浏览器中访问返回的链接，看到对应的 express 返回值。
 
 ### 5. 移除
 
@@ -135,17 +137,17 @@ $ sls remove --debug
 
 ### 账号配置（可选）
 
-当前默认支持CLI扫描二维码登录，如您希望配置持久的环境变量/秘钥信息，也可以本地创建 `.env` 文件
+当前默认支持 CLI 扫描二维码登录，如您希望配置持久的环境变量/秘钥信息，也可以本地创建 `.env` 文件
 
 ```
 $ touch .env # 腾讯云的配置信息
 ```
 
-在 `.env` 文件中配置腾讯云的SecretId和SecretKey信息并保存
+在 `.env` 文件中配置腾讯云的 SecretId 和 SecretKey 信息并保存
 
 如果没有腾讯云账号，可以在此[注册新账号](https://cloud.tencent.com/register)。
 
-如果已有腾讯云账号，可以在[API密钥管理](https://console.cloud.tencent.com/cam/capi)中获取 `SecretId` 和`SecretKey`.
+如果已有腾讯云账号，可以在[API 密钥管理](https://console.cloud.tencent.com/cam/capi)中获取 `SecretId` 和`SecretKey`.
 
 ```env
 # .env

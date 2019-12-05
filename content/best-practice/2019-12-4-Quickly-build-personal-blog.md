@@ -2,7 +2,7 @@
 title: Hexo + Serverless Framework，简单三步搭建你的个人博客
 description: 简单三步，即可通过 Serverless Website 组件快速构建一个 Serverless Hexo 站点。
 date: 2019-12-05
-thumbnail: https://main.qcloudimg.com/raw/725de011824cbb11764b7f7a5f63034c.png
+thumbnail: https://main.qcloudimg.com/raw/38c79c64784c926f05e4de86093874ff.png
 categories:
   - best-practice
 authors:
@@ -16,13 +16,15 @@ authorslink:
 > PS：不会写代码？没有备案的域名？没有服务器？在这里，这些都不是事儿！
 
 # 工具介绍
+
 **[Serverless Framework](https://github.com/serverless/serverless)**：Serverless Framework 是业界非常受欢迎的无服务器应用框架，开发者无需关心底层资源即可部署完整可用的 Serverless 应用架构。
 
 **[Hexo](https://hexo.io/zh-cn/)**：Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
 
 # 快速开始
- [Serverless Framework](https://github.com/serverless/serverless) 提供了丰富的 [Component](https://github.com/serverless/components) 供用户搭建各种形态的 Serverless 应用。本文将演示通过 [Serverless Website Component](https://github.com/serverless-components/tencent-website) 快速构建一个 Serverless Hexo 站点。
- 
+
+[Serverless Framework](https://github.com/serverless/serverless) 提供了丰富的 [Component](https://github.com/serverless/components) 供用户搭建各种形态的 Serverless 应用。本文将演示通过 [Serverless Website Component](https://github.com/serverless-components/tencent-website) 快速构建一个 Serverless Hexo 站点。
+
 <video id="video" controls="" preload="none" poster="https://main.qcloudimg.com/raw/224b4cd7be63b7f7843b8cba8fda8052.png">
       <source id="mp4" src="https://video-1251001047.cos.ap-chengdu.myqcloud.com/serverless-hexo.mp4" type="video/mp4">
       </video>
@@ -34,7 +36,9 @@ authorslink:
 3. 部署
 
 ## 安装
+
 安装前提：
+
 - [Node.js](https://nodejs.org/en/)（Node.js 版本需不低于 8.6，建议使用 Node.js 10.0 及以上版本）
 - [Git](https://git-scm.com/)
 
@@ -114,6 +118,7 @@ $ touch serverless.yml
 ```
 
 ## 部署
+
 通过 `sls` 命令进行部署，并可以添加 `--debug` 参数查看部署过程中的信息。
 
 如您的账号未登陆或注册腾讯云，您可以直接通过微信扫描命令行中的二维码进行授权登陆和注册。

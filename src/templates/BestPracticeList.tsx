@@ -35,6 +35,7 @@ const BlogList = ({
 
       <Content>
         <List
+          width={[0.9, 0.9, 0.9, 0.85]}
           generateDataUrl={pageNum =>
             `/best-practice${pageNum === 1 ? '' : `/page/${pageNum}`}`
           }

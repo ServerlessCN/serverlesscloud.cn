@@ -15,7 +15,7 @@ const config: Component[] = [
   {
     name: 'express component',
     thumbnail:
-      'https://img.qcloud.com/qcloud/iaas_web/build/sfo_express_2x_v2.png',
+      'https://main.qcloudimg.com/raw/706ecab42919643ad6099a7b585efc16.png',
     slogan: '只需3秒，部署您的 Express.js 应用程序',
     description:
       '通过腾讯云 Express 组件，只需短短几秒，便能在腾讯云Serverless 架构上部署按需计费的 Express.js 应用程序。',
@@ -24,7 +24,7 @@ const config: Component[] = [
   {
     name: 'website component',
     thumbnail:
-      'https://img.qcloud.com/qcloud/iaas_web/build/sfo_website_2x_v2.png',
+      'https://main.qcloudimg.com/raw/38c79c64784c926f05e4de86093874ff.png',
     slogan: '一行命令，部署您的静态网站',
     description:
       '腾讯云 Website 组件现已支持最新的 Web 框架和技术（Vue.js、React 等），您可以在几秒钟内将静态网站部署到对象存储中。',
