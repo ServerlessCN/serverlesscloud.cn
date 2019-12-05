@@ -6,10 +6,10 @@ thumbnail: https://main.qcloudimg.com/raw/15052bcfdb9cd73bb65b2037a63fa412.png
 authors:
   - liujiang
 authorslink:
-  - https://github.com/tinafangkunding/serverless-hexo
+  - https://github.com/tinafangkunding
 ---
 
-很多人都想拥有自己的个人博客，还得看起来漂亮、酷酷的。尤其对开发者来说，不仅可以分享技术（装）心得（逼），面试的时候还能成为加分。这里介绍两款好用的神器，不用忙前（前端）忙后（后端），简单3min即可搞定，本文免费分享给大家。
+很多人都想拥有自己的个人博客，还得看起来漂亮、酷酷的。尤其对开发者来说，不仅可以分享技术（装）心得（逼），面试的时候还能成为加分。这里介绍两款好用的神器，不用忙前（前端）忙后（后端），简单 3min 即可搞定，本文免费分享给大家。
 
 > PS：不会写代码？没有备案的域名？没有服务器？在这里，这些都不是事儿！
 
@@ -31,7 +31,7 @@ authorslink:
 
 ## 安装
 安装前提：
-- [Node.js](https://nodejs.org/en/)(Node.js 版本需不低于 8.6，建议使用 Node.js 10.0 及以上版本)
+- [Node.js](https://nodejs.org/en/)（Node.js 版本需不低于 8.6，建议使用 Node.js 10.0 及以上版本）
 - [Git](https://git-scm.com/)
 
 如未安装上述应用程序，可以参考[安装说明](https://hexo.io/zh-cn/docs/)。
@@ -158,4 +158,4 @@ Login successful for TencentCloud
 
 # 写在最后
 
-本文只是简单展示了如何利用 Serverless Framework 创建一个个人博客，Hexo 拥有丰富的插件系统，大家可以基于 Serverless Framework 和 Hexo 开发更多个性化功能如 自定义 Themes、博文置定、添加小标图等。这两个工具结合使用，开发方便部署快捷，非常适合初入门或者想要快速搭建静态网站的同学。
+本文只是简单展示了如何利用 Serverless Framework 创建一个个人博客，Hexo 拥有丰富的插件系统，大家可以基于 Serverless Framework 和 Hexo 开发更多个性化功能如自定义 Themes、博文置顶、添加小图标等。这两个工具结合使用，开发方便部署快捷，非常适合初入门或者想要快速搭建静态网站的同学。
