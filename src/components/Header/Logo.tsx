@@ -4,13 +4,10 @@ import logo from '@src/assets/images/icon-serverless-framework.png'
 import { Logo, Text, Row } from '@src/components/atoms'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { space, SpaceProps } from 'styled-system'
 
-const LogoWithMargin = styled(Logo)`
-  margin: 0 0 0 10px;
-`
-
-const LinkWithMargin = styled(Link)`
-  margin: 0 0 0 10px;
+const LogoWithMargin = styled(Logo)<SpaceProps>`
+  ${space}
 `
 
 interface Props {
@@ -19,9 +16,10 @@ interface Props {
 
 export default function({ logoHeight }: Props) {
   return (
-    <LinkWithMargin to="/">
+    <Link to="/">
       <Row alignItems="center" height={logoHeight}>
         <LogoWithMargin
+          ml={['-10px']}
           height={`${parseInt(logoHeight) * 0.8}px`}
           src={logo}
           alt="Serverless Framework"
@@ -31,6 +29,6 @@ export default function({ logoHeight }: Props) {
           Serverless 中文技术社区
         </Text>
       </Row>
-    </LinkWithMargin>
+    </Link>
   )
 }

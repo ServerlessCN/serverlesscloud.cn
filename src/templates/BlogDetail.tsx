@@ -30,6 +30,7 @@ import ExternalLink from '@src/components/Link/ExternalLink'
 import CategoryLink from '@src/components/Link/CategoryLink'
 import BackToTop from '@src/components/BackToTop'
 import PreNext from '@src/components/PreNext'
+import Content from '@src/components/Content'
 
 const ExternalLinkWrapper = styled(InlineBlock)`
   margin-left: 5px;
@@ -85,91 +86,85 @@ const BlogDetail = ({
     <Layout>
       <Helmet {...currentBlog.frontmatter} location={location} />
       <Breadcrumbs>{currentBlog.frontmatter.title}</Breadcrumbs>
-      <Container>
-        <Flex
-          alignItems={['center', 'center', 'center', 'flex-start']}
-          justifyContent={['center', 'center', 'center', 'space-between']}
-          flexDirection={['column', 'column', 'column', 'row']}
+      <Content>
+        <Box
+          width={[0.9, 0.9, 0.9, 0.72]}
+          py={'40px'}
+          px={[0, 0, 0, '10px', 0, 0]}
         >
-          <Box
-            width={[0.9, 0.9, 0.9, 0.72]}
-            py={'40px'}
-            px={[0, 0, 0, '10px', 0, 0]}
+          <BoxWithBackground
+            mb="10px"
+            py="10px"
+            px="20px"
+            background={theme.colors.gray[1]}
+            width={1}
           >
-            <BoxWithBackground
-              mb="10px"
-              py="10px"
-              px="20px"
-              background={theme.colors.gray[1]}
-              width={1}
-            >
+            <Text my="5px">
+              发布于: {formateDate(currentBlog.frontmatter.date)}
+            </Text>
+            <Text my="5px">
+              作者:
+              {currentBlog.frontmatter.authors.map((author, index) => (
+                <ExternalLinkWrapper key={author}>
+                  {currentBlog.frontmatter.authorslink &&
+                  currentBlog.frontmatter.authorslink[index] ? (
+                    <ExternalLink
+                      to={currentBlog.frontmatter.authorslink[index]}
+                    >
+                      {author}
+                    </ExternalLink>
+                  ) : (
+                    author
+                  )}
+                </ExternalLinkWrapper>
+              ))}
+            </Text>
+            {currentBlog.frontmatter.translators &&
+            currentBlog.frontmatter.translators.length ? (
               <Text my="5px">
-                发布于: {formateDate(currentBlog.frontmatter.date)}
+                译者:
+                {currentBlog.frontmatter.translators.map(
+                  (translator, index) => (
+                    <ExternalLinkWrapper key={translator}>
+                      {currentBlog.frontmatter.translatorslink &&
+                      currentBlog.frontmatter.translatorslink[index] ? (
+                        <ExternalLink
+                          to={currentBlog.frontmatter.translatorslink[index]}
+                        >
+                          {translator}
+                        </ExternalLink>
+                      ) : (
+                        translator
+                      )}
+                    </ExternalLinkWrapper>
+                  )
+                )}
               </Text>
+            ) : null}
+            {currentBlog.frontmatter.categories &&
+            currentBlog.frontmatter.categories.length ? (
               <Text my="5px">
-                作者:
-                {currentBlog.frontmatter.authors.map((author, index) => (
-                  <ExternalLinkWrapper key={author}>
-                    {currentBlog.frontmatter.authorslink &&
-                    currentBlog.frontmatter.authorslink[index] ? (
-                      <ExternalLink
-                        to={currentBlog.frontmatter.authorslink[index]}
-                      >
-                        {author}
-                      </ExternalLink>
-                    ) : (
-                      author
-                    )}
-                  </ExternalLinkWrapper>
+                归档于:
+                {currentBlog.frontmatter.categories.map(o => (
+                  <LinkWrapper key={o} display="inline-block" ml="5px">
+                    <CategoryLink category={o} />
+                  </LinkWrapper>
                 ))}
               </Text>
-              {currentBlog.frontmatter.translators &&
-              currentBlog.frontmatter.translators.length ? (
-                <Text my="5px">
-                  译者:
-                  {currentBlog.frontmatter.translators.map(
-                    (translator, index) => (
-                      <ExternalLinkWrapper key={translator}>
-                        {currentBlog.frontmatter.translatorslink &&
-                        currentBlog.frontmatter.translatorslink[index] ? (
-                          <ExternalLink
-                            to={currentBlog.frontmatter.translatorslink[index]}
-                          >
-                            {translator}
-                          </ExternalLink>
-                        ) : (
-                          translator
-                        )}
-                      </ExternalLinkWrapper>
-                    )
-                  )}
-                </Text>
-              ) : null}
-              {currentBlog.frontmatter.categories &&
-              currentBlog.frontmatter.categories.length ? (
-                <Text my="5px">
-                  归档于:
-                  {currentBlog.frontmatter.categories.map(o => (
-                    <LinkWrapper key={o} display="inline-block" ml="5px">
-                      <CategoryLink category={o} />
-                    </LinkWrapper>
-                  ))}
-                </Text>
-              ) : null}
-            </BoxWithBackground>
+            ) : null}
+          </BoxWithBackground>
 
-            <Markdown html={currentBlog.html as string}></Markdown>
+          <Markdown html={currentBlog.html as string}></Markdown>
 
-            <PreNext next={nextBlog} previous={previousBlog} />
-          </Box>
+          <PreNext next={nextBlog} previous={previousBlog} />
+        </Box>
 
-          <Box width={[0.9, 0.9, 0.9, 0.25]}>
-            <Recommend width={[1]} blogs={recommendBlogs.edges} />
-            <Category width={[1]} />
-            <BlogCatalogs html={currentBlog.tableOfContents} />
-          </Box>
-        </Flex>
-      </Container>
+        <Box width={[0.9, 0.9, 0.9, 0.25]}>
+          <Recommend width={[1]} blogs={recommendBlogs.edges} />
+          <Category width={[1]} />
+          <BlogCatalogs html={currentBlog.tableOfContents} />
+        </Box>
+      </Content>
 
       <BackToTop />
     </Layout>
