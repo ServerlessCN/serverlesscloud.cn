@@ -1,6 +1,6 @@
 ---
 title: 基于 Serverless Component 全栈解决方案
-description: 本文将介绍如何借助 Serverless Component 快速开发全栈Web应用。
+description: 本文将介绍如何借助 Serverless Component 快速开发全栈 Web 应用。
 date: 2019-12-05
 thumbnail: https://main.qcloudimg.com/raw/2f3d4de6be4bc19436843a0b75b8f367.png
 categories:
@@ -66,7 +66,7 @@ module.exports = app
 
 新建项目目录 `fullstack-application-vue`，在该项目目录下新增 `api` 和 `dashboard` 目录。然后新增 `serverless.yml` 和 `.env` 配置文件，项目目录结构如下：
 
-```text
+```
 ├── README.md 		// 项目说明文档
 ├── api					  // Restful api 后端服务
 ├── dashboard			// 前端页面
@@ -157,7 +157,7 @@ api:
 
 部署时，只需要运行 `serverless` 命令就行，当然如果你需要查看部署中的 `DEBUG` 信息，还需要加上 `--debug` 参数，如下：
 
-```bash
+```
 $ serverless
 # or
 $ serverless --debug
