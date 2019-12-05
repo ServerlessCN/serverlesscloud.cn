@@ -164,6 +164,10 @@ let config = [
       },
     ],
   },
+  {
+    label: '常见问题',
+    to: `${baseUrl}/questions`,
+  }, 
 ]
 
 module.exports = {

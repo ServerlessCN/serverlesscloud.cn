@@ -1,6 +1,8 @@
 ---
 link: /providers/tencent/templates/rest-api
 ---
+## 简介
+REST API 模板使用 Tencent SCF 组件及其触发器能力，方便的在腾讯云创建，配置和管理一个REST API 应用。
 
 ## 快速开始
 
