@@ -45,12 +45,12 @@ const kols: KOL[] = [
     speak: `I’m still a huge fan of @Docker but man this @goserverless
     stuff is purely amazing, I'm fully onboard with managing
     infrastructure from code... Just moved an existing API and
-    supporting app to Lambda functions in one day...`,
+    supporting app to Cloud functions in one day...`,
     avatar: imgTweeterThree,
   },
   {
     name: 'TylerZey',
-    speak: `Built two #Lambda functions today via @goserverless. One runs
+    speak: `Built two Cloud functions today via @goserverless. One runs
     daily to update all of our coupons in DynamoDB. And the other
     is the query function to search DynamoDB for the coupon. Super
     duper easy with Serverless framework. Got it live and almost
