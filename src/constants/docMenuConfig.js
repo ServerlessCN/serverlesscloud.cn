@@ -4,102 +4,101 @@ let config = [
   {
     label: '概述',
     to: `${baseUrl}/overview`,
-  }, 
+  },
   {
     label: '快速开始',
     to: `${baseUrl}/quick-start`,
-  }, 
+  },
   {
     label: '支持者 CLI 文档',
     content: [
-    {
-      label: '腾讯',
-        content: 
-      [
-        {
-          label: 'CLI 文档',
-          content: [
-            {
-              label: '快速开始',
-              to: `${baseUrl}/providers/tencent/cli-reference/quick-start`,
-            },
-            {
-              label: '配置账号',
-              to: `${baseUrl}/providers/tencent/cli-reference/configure`,
-            },
-            {
-              label: '创建服务',
-              to: `${baseUrl}/providers/tencent/cli-reference/create`,
-            },
-            {
-              label: '打包服务',
-              to: `${baseUrl}/providers/tencent/cli-reference/package`,
-            },
-            {
-              label: '部署服务',
-              to: `${baseUrl}/providers/tencent/cli-reference/deploy`,
-            },
-            {
-              label: '部署函数',
-              to: `${baseUrl}/providers/tencent/cli-reference/deploy-function`,
-            },
-            {
-              label: '部署列表',
-              to: `${baseUrl}/providers/tencent/cli-reference/deploy-list`,
-            },
-            {
-              label: '云端调用',
-              to: `${baseUrl}/providers/tencent/cli-reference/invoke`,
-            },
-            {
-              label: '日志查看',
-              to: `${baseUrl}/providers/tencent/cli-reference/logs`,
-            },
-            {
-              label: '回滚服务',
-              to: `${baseUrl}/providers/tencent/cli-reference/rollback`,
-            },
-            {
-              label: '删除服务',
-              to: `${baseUrl}/providers/tencent/cli-reference/delete`,
-            },
-            {
-              label: '获取详情',
-              to: `${baseUrl}/providers/tencent/cli-reference/info`,
-            },
-            {
-              label: '运行数据统计',
-              to: `${baseUrl}/providers/tencent/cli-reference/metrics`,
-            },
-          ],
-        },
-        {
-          label: '事件类型',
-          content: [
-            {
-              label: 'API 网关',
-              to: `${baseUrl}/providers/tencent/events/apigateway`,
-            },
-            {
-              label: 'COS 对象存储',
-              to: `${baseUrl}/providers/tencent/events/cos`,
-            },
-            {
-              label: 'Timer 定时触发器',
-              to: `${baseUrl}/providers/tencent/events/timer`,
-            }, 
-            {
-              label: 'CKakfa 消息队列',
-              to: `${baseUrl}/providers/tencent/events/cloud-kafka`,
-            },
-            {
-              label: 'CMQ 消息队列',
-              to: `${baseUrl}/providers/tencent/events/cmq`,
-            },           
-          ],
-        },
-      ],  
-    },
+      {
+        label: '腾讯',
+        content: [
+          {
+            label: 'CLI 文档',
+            content: [
+              {
+                label: '快速开始',
+                to: `${baseUrl}/providers/tencent/cli-reference/quick-start`,
+              },
+              {
+                label: '配置账号',
+                to: `${baseUrl}/providers/tencent/cli-reference/configure`,
+              },
+              {
+                label: '创建服务',
+                to: `${baseUrl}/providers/tencent/cli-reference/create`,
+              },
+              {
+                label: '打包服务',
+                to: `${baseUrl}/providers/tencent/cli-reference/package`,
+              },
+              {
+                label: '部署服务',
+                to: `${baseUrl}/providers/tencent/cli-reference/deploy`,
+              },
+              {
+                label: '部署函数',
+                to: `${baseUrl}/providers/tencent/cli-reference/deploy-function`,
+              },
+              {
+                label: '部署列表',
+                to: `${baseUrl}/providers/tencent/cli-reference/deploy-list`,
+              },
+              {
+                label: '云端调用',
+                to: `${baseUrl}/providers/tencent/cli-reference/invoke`,
+              },
+              {
+                label: '日志查看',
+                to: `${baseUrl}/providers/tencent/cli-reference/logs`,
+              },
+              {
+                label: '回滚服务',
+                to: `${baseUrl}/providers/tencent/cli-reference/rollback`,
+              },
+              {
+                label: '删除服务',
+                to: `${baseUrl}/providers/tencent/cli-reference/delete`,
+              },
+              {
+                label: '获取详情',
+                to: `${baseUrl}/providers/tencent/cli-reference/info`,
+              },
+              {
+                label: '运行数据统计',
+                to: `${baseUrl}/providers/tencent/cli-reference/metrics`,
+              },
+            ],
+          },
+          {
+            label: '事件类型',
+            content: [
+              {
+                label: 'API 网关',
+                to: `${baseUrl}/providers/tencent/events/apigateway`,
+              },
+              {
+                label: 'COS 对象存储',
+                to: `${baseUrl}/providers/tencent/events/cos`,
+              },
+              {
+                label: 'Timer 定时触发器',
+                to: `${baseUrl}/providers/tencent/events/timer`,
+              },
+              {
+                label: 'CKakfa 消息队列',
+                to: `${baseUrl}/providers/tencent/events/cloud-kafka`,
+              },
+              {
+                label: 'CMQ 消息队列',
+                to: `${baseUrl}/providers/tencent/events/cmq`,
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
@@ -107,12 +106,10 @@ let config = [
     content: [
       {
         label: '腾讯',
-        content: 
-        [
+        content: [
           {
             label: '基础 Component',
-            content: 
-            [
+            content: [
               {
                 label: '云函数 SCF 组件',
                 to: `${baseUrl}/providers/tencent/components/scf`,
@@ -167,7 +164,7 @@ let config = [
   {
     label: '常见问题',
     to: `${baseUrl}/questions`,
-  }, 
+  },
 ]
 
 module.exports = {

@@ -77,7 +77,7 @@ const links: {
       },
       {
         title: '常见问题',
-        link: '/doc/5',
+        link: '/doc/questions',
         isInternal: true,
       },
       {

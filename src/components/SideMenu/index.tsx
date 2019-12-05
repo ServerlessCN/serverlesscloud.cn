@@ -4,16 +4,25 @@ import MetisMenu from './Metismenu'
 import { DocMenu } from '@src/types'
 import Link from './Link'
 import ArrowIcon from '@src/assets/images/arrow-icon.svg'
+import theme from '@src/constants/theme'
 
 const Wrapper = styled.div`
+  padding-top: 30px;
   .metismenu {
+    background: ${theme.colors.white};
     font-size: 16px;
     overflow: hidden;
     position: relative;
-    padding: 10px;
+    padding-left: 44px;
   }
   .metismenu > .metismenu-container > .metismenu-item > .metismenu-link {
     line-height: 2.5em;
+  }
+
+  .metismenu-link {
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.58px;
   }
   .metismenu
     > .metismenu-container
@@ -41,8 +50,8 @@ const Wrapper = styled.div`
     list-style: none;
   }
   .metismenu-container .metismenu-container {
-    transition: padding 300ms;
-    -webkit-transition: padding 300ms;
+    transition: padding 0.3s;
+    -webkit-transition: padding 0.3s;
     background: rgba(255, 255, 255, 0.05);
   }
   .metismenu-container .metismenu-container .metismenu-item > .metismenu-link {
@@ -52,49 +61,50 @@ const Wrapper = styled.div`
   .metismenu-container .metismenu-container .metismenu-link {
     padding-left: 1em;
   }
+
+  .metismenu-container .metismenu-container .metismenu-link:hover {
+    padding-left: 1em;
+  }
+
   .metismenu-container
     .metismenu-container
     .metismenu-container
     .metismenu-link {
-    padding-left: 2em;
+    padding-left: 1em;
   }
   .metismenu-container.visible {
     padding: 0.5em 0;
+    padding-left: 1em;
+  }
+  .sls-root-menu + ul.visible {
+    padding: 0 !important;
+    padding-left: 1em !important;
   }
   .metismenu-container.visible > .metismenu-item > .metismenu-link {
     height: 2.5em;
   }
   .metismenu-link {
-    color: #333;
-    transition: height 300ms, color 300ms, background-color 300ms;
-    -webkit-transition: height 300ms, color 300ms, background-color 300ms;
+    color: ${theme.colors.black};
+    transition: height 0.3s, color 0.3s, background-color 0.3s;
+    -webkit-transition: height 0.3s, color 0.3s, background-color 0.3s;
     display: block;
     line-height: 2.5em;
     text-decoration: none;
   }
   .metismenu-link:hover {
     background: rgba(255, 255, 255, 0.05);
-    color: #fd5750;
-  }
-  .metismenu-link.active {
-    color: #fd5750;
-  }
-  .metismenu-link:focus {
-    outline: none;
-  }
-  .metismenu-link.has-active-child {
-    color: #fd5750;
+    color: ${theme.colors.serverlessRed};
   }
 
-  .sls-dropdown-icon {
-    line-height: 2.5em;
-    transition: transform 0.3s;
-    -webkit-transition: transform 0.3s;
-    float: right;
-    text-align: center;
-    width: 2em;
-  }
-  .sls-dropdown-icon:after {
+  .metismenu
+    > .metismenu-container
+    > .metismenu-item
+    > .metismenu-link
+    > .sls-dropdown-icon:after,
+  .metismenu-container.visible
+    > .metismenu-item
+    > .metismenu-link
+    > .sls-dropdown-icon:after {
     content: '';
     background: url(${ArrowIcon});
     background-size: cover;
@@ -102,6 +112,36 @@ const Wrapper = styled.div`
     width: 10px;
     height: 8px;
     margin-top: 15px;
+  }
+
+  .metismenu-link.active {
+    color: ${theme.colors.serverlessRed};
+  }
+
+  .metismenu-link.active:not(.sls-root-menu) {
+    outline: none;
+  }
+
+  .metismenu-link:focus {
+    outline: none;
+  }
+
+  .sls-root-menu .visible {
+    border-left: 1px solid ${theme.colors.serverlessRed};
+    padding-left: 1em;
+  }
+
+  i.metismenu-icon {
+    text-align: center;
+    width: 3em;
+  }
+  i.metismenu-state-icon {
+    transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
+    float: right;
+    line-height: 2.5em;
+    text-align: center;
+    width: 2em;
   }
 `
 

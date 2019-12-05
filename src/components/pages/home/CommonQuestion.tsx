@@ -52,7 +52,7 @@ export default function() {
   return (
     <Background pt={'40px'} pb={'40px'} width={1} backgroundColor="white">
       <Flex alignItems="center" justifyContent="center">
-        <Link to="/doc/5">
+        <Link to="/doc/questions">
           <MainTitle>常见问题</MainTitle>
         </Link>
       </Flex>
