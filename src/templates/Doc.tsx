@@ -37,7 +37,7 @@ const DocPage = ({
       />
       <Breadcrumbs>文档</Breadcrumbs>
       <Content>
-        <Box width={[0.95, 0.95, 0.95, 0.3]}>
+        <Box mb={'40px'} width={[0.95, 0.95, 0.95, 0.3]}>
           <SideMenu menus={config} activeLinkTo={currentPath} />
         </Box>
         <Box pt={'30px'} pb={'30px'} width={[0.95, 0.95, 0.95, 0.66]}>

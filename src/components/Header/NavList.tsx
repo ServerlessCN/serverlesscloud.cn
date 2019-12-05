@@ -80,6 +80,11 @@ export default function({ isActive, isDesktopView }: Props) {
       <List p={0} mr={0} mb={0}>
         {navList.map(({ title, link }, index) => (
           <NavListItem
+            onClick={() => {
+              if (link === '/') {
+                ;(window as any).MtaH5.clickStat('homelink')
+              }
+            }}
             key={index}
             display={['block', 'block', 'block', 'inline-block']}
           >
