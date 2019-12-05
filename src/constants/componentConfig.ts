@@ -16,7 +16,7 @@ const config: Component[] = [
     name: 'express component',
     thumbnail:
       'https://main.qcloudimg.com/raw/706ecab42919643ad6099a7b585efc16.png',
-    slogan: '只需3秒，部署您的 Express.js 应用程序',
+    slogan: '只需3秒，部署 Express.js 应用程序',
     description:
       '通过腾讯云 Express 组件，只需短短几秒，便能在腾讯云Serverless 架构上部署按需计费的 Express.js 应用程序。',
     link: `${baseUrl}/providers/tencent/components/express`,

@@ -1,7 +1,7 @@
 ---
 title: Hexo + Serverless Framework，简单三步搭建你的个人博客
 description: 简单三步，即可通过 Serverless Website 组件快速构建一个 Serverless Hexo 站点。
-date: 2019-12-05
+date: 2019-12-04
 thumbnail: https://main.qcloudimg.com/raw/38c79c64784c926f05e4de86093874ff.png
 categories:
   - best-practice
