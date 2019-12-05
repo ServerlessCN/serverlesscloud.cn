@@ -1,11 +1,8 @@
 import React from 'react'
 import Layout from '@src/layouts'
 import { graphql } from 'gatsby'
-import Banner from '@src/components/Banner'
-import SideMenu, { DocMenu } from '@src/components/SideMenu'
-import { Box, Flex, Container } from '@src/components/atoms'
-import styled from 'styled-components'
-import { minWidth, height, width, minHeight } from 'styled-system'
+import SideMenu from '@src/components/SideMenu'
+import { Box } from '@src/components/atoms'
 import Markdown from '@src/components/Markdown'
 import { Doc } from '@src/types'
 import Helmet from '@src/components/Helmet'
@@ -38,7 +35,6 @@ const DocPage = ({
         description="Serverless Framework 无服务器应用框架文档，使用方法和应用场景介绍。"
         location={location}
       />
-      {/* <Banner /> */}
       <Breadcrumbs>文档</Breadcrumbs>
       <Content>
         <Box width={[0.95, 0.95, 0.95, 0.3]}>

@@ -1,14 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
-import {
-  Flex,
-  Container,
-  Box,
-  BackgroundProps,
-  Text,
-  InlineBlock,
-} from '@src/components/atoms'
+import { Box, BackgroundProps, Text, InlineBlock } from '@src/components/atoms'
 import { Blog, GraphqlBlogResult } from '@src/types'
 import Breadcrumbs from '@src/components/Breadcrumbs'
 import styled from 'styled-components'

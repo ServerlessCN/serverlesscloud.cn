@@ -1,15 +1,6 @@
 import * as React from 'react'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
-import Banner from '@src/components/Banner'
-import Markdown from '@src/components/Markdown'
-import {
-  Box,
-  Flex,
-  Container,
-  Text,
-  Column,
-  Image,
-} from '@src/components/atoms'
+import { Container, Text, Column, Image } from '@src/components/atoms'
 import Helmet from '@src/components/Helmet'
 import styled from 'styled-components'
 import WechatQRcode from '@src/assets/images/wechat_qrcode.jpg'

@@ -14,7 +14,6 @@ import theme from '@src/constants/theme'
 import CategoryLink from '@src/components/Link/CategoryLink'
 import categoryIconRed from '@src/assets/images/icon-category-red.png'
 import categoryIcon from '@src/assets/images/icon-category.png'
-import { FaList } from 'react-icons/fa'
 
 const LinkWrapper = styled(ListItemWithNoStyleType)<
   HeightProps & LineHeightProps & MinHeightProps
@@ -63,7 +62,7 @@ export default function(props) {
       `}
       render={({ categorys }: { categorys: GraphqlCategoryResult }) => {
         return (
-          <Box mt="40px" width={[0.9, 0.9, 0.9, 0.22]} {...props}>
+          <Box mt="40px" mb="20px" width={[0.9, 0.9, 0.9, 0.22]} {...props}>
             <Text fontSize="18px" mb="30px" fontWeight="bold">
               分类
             </Text>

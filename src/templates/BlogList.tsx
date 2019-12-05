@@ -32,7 +32,6 @@ const BlogList = ({
         description="Serverless Framework 团队博客最新动态，最新功能，最新版本发布"
         location={location}
       />
-      {/* <Banner /> */}
 
       <Breadcrumbs>博客</Breadcrumbs>
 

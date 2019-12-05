@@ -4,7 +4,6 @@ import Layout from '@src/layouts'
 import LatestBlogs from '@src/components/pages/home/LatestBlogs'
 import BestParctices from '@src/components/pages/home/BestPractices'
 import CommonQuestion from '@src/components/pages/home/CommonQuestion'
-import Research from '@src/components/pages/home/Research'
 import KOLs from '@src/components/pages/home/KOLs'
 import Helmet from '@src/components/Helmet'
 import Swiper from '@src/components/pages/home/Swiper'
@@ -25,7 +24,6 @@ const IndexPage = (props: Props) => {
       <Swiper />
       <BestParctices />
       <LatestBlogs />
-      {/* <Research /> */}
       <KOLs />
       <CommonQuestion />
     </Layout>

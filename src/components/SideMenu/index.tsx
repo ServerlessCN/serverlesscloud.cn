@@ -103,11 +103,6 @@ const Wrapper = styled.div`
     height: 8px;
     margin-top: 15px;
   }
-
-  .metismenu-state-icon.rotate-minus-180:after {
-    transform: rotate(-180deg);
-    -webkit-transform: rotate(-180deg);
-  }
 `
 
 export { DocMenu }
@@ -124,7 +119,7 @@ export default function({ menus, activeLinkTo }: Props) {
         LinkComponent={Link}
         content={menus}
         activeLinkTo={activeLinkTo}
-        iconNameStateVisible="dropdown-icon rotate-minus-180"
+        iconNameStateVisible="dropdown-icon"
         iconNameStateHidden="dropdown-icon"
         iconNamePrefix="sls-"
       />
