@@ -188,7 +188,7 @@ export default function() {
       </Background>
 
       <Background width={[1]} background={theme.colors.serverlessRed}>
-        <Container maxWidth={[1, 1, 1, 0.76, 0.85]}>
+        <Container maxWidth={['100%', '100%', '100%', '76%', '85%']}>
           <Box pt={'15px'} pb={'15px'} pl={'10px'} pr={'10px'}>
             <Flex
               flexDirection={['column', 'column', 'column', 'row', 'row']}
