@@ -22,8 +22,10 @@ export default function(props: Props) {
     const _swiperProps = Object.assign(
       {
         loop: true,
-        speed: 3000,
+        speed: 500,
+        effect: 'fade',
         autoplay: {
+          delay: 5000,
           disableOnInteraction: false,
         },
         pagination: {
