@@ -376,10 +376,9 @@ api:
 
 最后重新部署一下就行了。
 
-[完整的模板仓库](https://github.com/yugasun/tencent-serverless-demo/tree/master/fullstack-application-vue)
-
-[在线 Demo](https://br1ovx-efmogqe-1251556596.cos-website.ap-guangzhou.myqcloud.com)
+- [完整的模板仓库](https://github.com/yugasun/tencent-serverless-demo/tree/master/fullstack-application-vue)
+- [在线 Demo](https://br1ovx-efmogqe-1251556596.cos-website.ap-guangzhou.myqcloud.com)
 
 # 总结
 
-当然全栈方案，并没有这么简单，这里只是简单介绍，如何使用 Serverless Component，快速实现一个全栈应用。如果要应用到实际的业务场景，我们还需考虑更多的问题。而且目前社区组件还不够完善，很多功能还需要我们自己去探索发现。也希望更多牛人加入到 Serverless 社区，贡献更多的优秀组件。
+当然全栈方案，并没有这么简单，这里只是简单介绍，如何使用 Serverless Component，快速实现一个全栈应用。如果要应用到实际的业务场景，我们还需考虑更多的问题。而且目前社区组件还不够完善，很多功能还需要我们自己去探索发现。也希望更多牛人加入到 [Serverless 中文技术社区](serverlesscloud.cn)，贡献更多的优秀组件。
