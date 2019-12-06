@@ -66,7 +66,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Serverless中文社区`,
+        name: `Serverless 中文技术社区`,
         short_name: `ServerlessCN`,
         start_url: `/`,
         background_color: `#fd5750`,
