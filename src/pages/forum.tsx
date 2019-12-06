@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
-import { Container, Text, Column, Image } from '@src/components/atoms'
+import { Container, Text, Column, Image, TextP } from '@src/components/atoms'
 import Helmet from '@src/components/Helmet'
 import styled from 'styled-components'
 import WechatQRcode from '@src/assets/images/wechat_qrcode.png'
@@ -29,8 +29,7 @@ const ForumPage = ({ location }: Props) => {
         <Column justifyContent="center" alignItems="center">
           <Text align="center" mb="20px" fontSize="24px" lineHeight={1.5}>
             论坛正在建设中，将于近期发布。
-            <br />
-            您可以扫描下方二维码，加入Serverless技术群进行交流。{' '}
+            <TextP>您可以扫描下方二维码，加入Serverless技术群进行交流。 </TextP>
           </Text>
 
           <Image

@@ -14,11 +14,14 @@ const CustomContainer = styled(Container)`
     height: 200px;
   }
 
-  @media screen and (max-width: 768px) {
-    .markdown-body img {
-      width: 120px;
-      height: 120px;
-    }
+  #qrcode table {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  #qrcode {
+    display: flex;
+    flex-wrap: wrap;
   }
 `
 
