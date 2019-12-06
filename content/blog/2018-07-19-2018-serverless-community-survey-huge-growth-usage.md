@@ -2,11 +2,11 @@
 title: "2018 年社区调查：Serverless 使用率大幅增长"
 description: "我们曾在开发社区进行问卷调查，询问 Serverless 的使用情况。它的使用率增长连我们自己都惊讶不已，下面来看看数据。"
 date: 2018-07-19
-thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/serverless-survey-header.jpg'
+thumbnail: 'https://main.qcloudimg.com/raw/8a0db1c9fd8b51c15d0b006291d52bf5.jpg'
 categories:
   - news
   - engineering-culture
-heroImage: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/serverless-survey-header.jpg'
+heroImage: 'https://main.qcloudimg.com/raw/8a0db1c9fd8b51c15d0b006291d52bf5.jpg'
 authors:
   - AndreaPasswater
 authorslink:
@@ -17,7 +17,7 @@ translatorslink:
   - https://www.zhihu.com/people/Aceyclee
 ---
 
-我们在 Serverless 社区 进行了一项面向所有开发者的 Serverless 使用情况调查。我们期望能获得一些有意思的数据，然后与大家分享。
+我们在 Serverless 社区进行了一项面向所有开发者的 Serverless 使用情况调查。我们期望能获得一些有意思的数据，然后与大家分享。
 
 这个领域自 2017 年第一次调查以来的发展令我们相当惊喜。关键要点：在任务关键型 Serverless 工作负载激增的情况下，多种云环境的使用率正在上升，最大的挑战是......这里先卖个关子。;) 完整的报告如下。快来一探究竟！
 
@@ -35,21 +35,21 @@ translatorslink:
 
 2018 年，82% 的调查对象（几乎翻倍）回答说，他们会在工作中使用它。超过一半的调查对象表示， Serverless Framework 对他们的工作**至关重要**：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/level-serverless-usage.jpg">
+<img src="https://main.qcloudimg.com/raw/9209d3b3324e8f75c79c9ec02074effa.jpg">
 
 我们常常听说，在开始使用 Serverless 之前，很多公司其实从未使用过云服务。事实上，近 1/4 的调查对象表示，在使用 Serverless 之前，他们使用公有云的经验很有限，甚至没有：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/public-cloud-experience.jpg">
+<img src="https://main.qcloudimg.com/raw/2c5427fa5833825ab219c4100ba02b25.jpg">
 
 更重要的是，在使用 Serverless 之前没有太多云服务使用经验的调查对象中，65% 现在表示 Serverless 对于他们所做的工作「至关重要」或「很重要」。这个比例很大，表明了 Serverless 正在迅速改变现在的软件开发方式：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/serverless-public-cloud.jpg">
+<img src="https://main.qcloudimg.com/raw/610325e76faa93a17e8ead79be26a2e7.jpg">
 
 ## 多种云环境的使用正在增长
 
 我们在问卷中列出了一个开放式问题，询问调查对象使用的是哪个云厂商，并尽可能多地列出。这让我们发现多种云环境场景正在增长：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/number-serverless-providers.jpg">
+<img src="https://main.qcloudimg.com/raw/3e3fd5533b3d0b0172bb8d5ee83faea3.jpg">
 
 大约 26% 的调查对象使用 2 个或更多的云厂商，这几乎是去年的两倍。
 
@@ -57,43 +57,43 @@ translatorslink:
 
 问卷中设有一个问题，询问调查对象在考虑使用 Serverless 架构时遇到的最大障碍是什么。排在前四的答案中有三个与 Serverless 架构运维有关 —— 管理和实施最佳实践、缺少工具和缺乏对团队的了解：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/concerns-serverless3.jpg">
+<img src="https://main.qcloudimg.com/raw/343a788e1306150623bae7e6ff0eb07d.jpg">
 
 当问到他们在使用 Serverless 框架时所面临的最大挑战（与上一个问题稍微有些不同）时，答案与上面的障碍是一致的。
 
 值得注意的是，最大的三个难点是调试、监控和测试。所有这些难点都清楚地指向了缺少工具的问题：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/challenges-serverless1.jpg">
+<img src="https://main.qcloudimg.com/raw/2fd589a0a3ea0a11df610b17e9907044.jpg">
 
 ## 无服务器企业正在增长
 
 今年，略多于 20% 的调查对象表示他们所在公司的规模超过 1000 人。这一数字在**一年内**增长了 34%，而且此行业的公司通常不太能接受快速变化：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/serverless-company-size.jpg">
+<img src="https://main.qcloudimg.com/raw/5e35273df745f6287fa55200005838ae.jpg">
 
 此外，67% 的企业调查对象表示， Serverless 框架对于他们的工作「至关重要」或「很重要」，而不仅仅是用于少量工作或边缘项目。
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/enterprise-serverless-critical-job.jpg">
+<img src="https://main.qcloudimg.com/raw/1b34d8663aec1a5ffa5c9e248bf2ccf2.jpg">
 
 ## 关于 Serverless 的一些数据
 
 在使用量方面，Go 已经正式超越了 Java：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/serverless-languages-go.jpg">
+<img src="https://main.qcloudimg.com/raw/02010b049c90551270aba5dcd2fe53a5.jpg">
 
 然而，一个有趣的事实是：虽然 Node.js 总体上是最受欢迎的 runtime，但它在企业中的影响力却不大。在拥有 1000 多名员工的公司中，15% 的调查对象（总数的 3 倍）使用 Java：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/serverless-enterprise-java.jpg">
+<img src="https://main.qcloudimg.com/raw/ef4b02656e112e075daf32467ac2c407.jpg">
 
 使用 Serverless 框架所执行的操作：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/serverless-use-case.jpg">
+<img src="https://main.qcloudimg.com/raw/2a578de2a4c587ad4bed561d1b72b259.jpg">
 
 ## 使用 Serverless 技术构建的产品
 
 对此，我们收到了许多不错的反馈，因此我们制作了一个精致的小词云：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/serverless-use-case-wordcloud.jpg">
+<img src="https://main.qcloudimg.com/raw/3cb7b20955d78ced738e0279bb3f6f41.jpg">
 
 如图，其中「company」示例，表示有些调查对象告知我们：他们的公司是在 Serverless 架构上建立的。「fly」则表示「即时」；比如，他们开发了一个 app，允许他们即时处理图像。再比如，生成或操作 PDF 的人数多得惊人？
 

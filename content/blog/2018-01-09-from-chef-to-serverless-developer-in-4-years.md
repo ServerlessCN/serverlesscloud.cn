@@ -2,7 +2,7 @@
 title: 我是如何在四年时间里，从厨师转行为 Serverless 应用开发者
 description: 我是厨师出身，现在成为了一名 Serverless 应用开发者。
 date: 2018-01-09
-thumbnail: https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/clem-onojeghuo-175180.jpg
+thumbnail: 'https://main.qcloudimg.com/raw/14f1c8eed372e76c1b139703b2f6d0fa.jpg'
 categories:
   - user-stories
   - engineering-culture
@@ -76,7 +76,7 @@ translatorslink:
 
 最后，我构建出了下面这个简单的小型架构：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/hotdesk.png">
+![](https://main.qcloudimg.com/raw/b747d94e2d926e3c082e86a2036d79df.png)
 
 使用 Serverless Framework，我为用户创建了一个完整的流程来申请桌台并实时查看变更：办公室内/外的工作人员和可用的桌台。实现所有这些功能的同时还能完全控制我们的数据，拥有一个几乎可以免运维的可扩展模型，并且**无需**操心底层结构，只需专注于为人们提供出色的功能。
 

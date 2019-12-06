@@ -2,7 +2,7 @@
 title: 通过 Serverless 架构构建更好的软件
 description: Nick Gottlieb 分享了他在 ServerlessConf Tokyo 上关于 Serverless、软件状态以及提高生产效率方法的演讲。
 date: 2018-02-23
-thumbnail: https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/better+software/devs-thumb.jpeg
+thumbnail: https://main.qcloudimg.com/raw/c2598ce0fad913a7d1fe2bfcdd3324e3.jpeg
 categories:
   - engineering-culture
 authors:
@@ -21,7 +21,7 @@ translatorslink:
 
 但这些发展对开发者的生产效率实际上有什么作用呢？使构建软件变得更容易了吗？更便宜了吗？更迅速了吗？
 
-在过去 6 年的职业生涯中，我一直在尝试构建能提高开发者生产效率的工具（先是在自己的初创公司，后来在 CircleCI，如今在 Serverless）。在寻找这些问题答案的过程中，我发现答案基本上是**否定**的。
+在过去 6 年的职业生涯中，我一直在尝试构建能提高开发者生产效率的工具（先是在自己的初创公司，后来在 CircleCI，如今在 Serverless）。在寻找这些问题答案的过程中，我发现答案基本上是 **否定** 的。
 
 虽然既有的一些工具确实有助于我们开发更强大的软件，但它们只是在渐进式地提高生产效率。作为一个行业，我们仍然面临着同样的基本问题：软件开发极其困难，成本高昂。
 
@@ -31,7 +31,7 @@ translatorslink:
 
 这是一个非常好的想法。正是由于该价值主张，过去十年间涌现了大量的云服务，而 Amazon 的市值也已达到 6500 亿美元（截至我撰写此文时）。
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/better+software/amazon-market-cap2.png">
+![](https://main.qcloudimg.com/raw/5bb9b5f433dd45014b1c3968ca5a6db3.png)
 
 然而，尽管云服务将软件开发人员从处理物理服务器的工作中解放了出来，却没有消除处理服务器中令人头疼的许多根本因素，例如预配、缩放、维护和调试等。
 
@@ -43,7 +43,7 @@ translatorslink:
 
 ## 构建更优软件的途径
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/better+software/path.jpeg">
+![](https://main.qcloudimg.com/raw/fcedf553adb44e70462607aeab91bb27.jpeg)
 
 答案很简单，即 Serverless（无服务器）；或者更确切地说，在 Serverless 技术的稳健性方面继续投入。
 
@@ -73,7 +73,7 @@ Serverless 是在应用开发过程中尽可能将底层结构抽象出来，当
 
 作为开发人员，最令人沮丧的事莫过于日复一日地编写重复代码。
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/better+software/reuse-code.jpeg">
+![](https://main.qcloudimg.com/raw/56b768f4dbe3286d98c1034c16a38ac8.jpeg)
 
 要是我们能够重复利用一条条代码来构建不同的应用，然后将编码的时间集中到可以带来独特价值的业务逻辑上，那该有多好啊！
 
@@ -91,7 +91,7 @@ Serverless 是在应用开发过程中尽可能将底层结构抽象出来，当
 
 如今，所有数字业务都会产生和收集海量的数据。这些数据是非常宝贵的资源。尤其值得注意的是，我们可以使用这些数据来为用户构建更强大的功能。
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/better+software/data2.jpeg">
+![](https://main.qcloudimg.com/raw/6f8e3cd1289f1e061a30db380aea9353.jpeg)
 
 这种海量数据伴随着一个问题：这些数据以各种不同的格式存放在各种不同的地方，难以得到利用。
 

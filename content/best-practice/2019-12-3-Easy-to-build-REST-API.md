@@ -1,6 +1,6 @@
 ---
 title: 通过 SCF Component 轻松构建 REST API，再也不用熬夜加班了
-description: 本教程将分享如何通过Serverless SCF Component 、云函数 SCF 及 API 网关组件，快速构建一个 REST API 并实现 GET/PUT 操作。
+description: 本教程将分享如何通过 Serverless SCF Component 、云函数 SCF 及 API 网关组件，快速构建一个 REST API 并实现 GET/PUT 操作。
 date: 2019-12-05
 thumbnail: https://main.qcloudimg.com/raw/bd045821dfa072b894864a12c1267469.png
 categories:
@@ -137,7 +137,7 @@ $ serverless --debug
 ### 4. 测试
 
 通过如下命令测试 REST API 的返回情况：
-> 注：如 Windows 系统中未安装`curl`，也可以直接通过浏览器打开对应链接查看返回情况
+> 注：如 Windows 系统中未安装 `curl`，也可以直接通过浏览器打开对应链接查看返回情况
 
 ```
 $ curl -XGET http://service-9t28e0tg-1250000000.sg.apigw.tencentcs.com/release/users/teacher/go
@@ -179,7 +179,7 @@ $ touch .env # 腾讯云的配置信息
 
 如果没有腾讯云账号，可以在此[注册新账号](https://cloud.tencent.com/register)。
 
-如果已有腾讯云账号，可以在[API密钥管理](https://console.cloud.tencent.com/cam/capi)中获取 `SecretId` 和`SecretKey`.
+如果已有腾讯云账号，可以在 [API 密钥管理](https://console.cloud.tencent.com/cam/capi)中获取 `SecretId` 和`SecretKey`.
 
 ```
 # .env
