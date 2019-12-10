@@ -1,4 +1,5 @@
 # [serverlesscloud.cn](https://serverlesscloud.cn/)
+![avatar](https://travis-ci.com/ServerlessCN/serverlesscloud.cn.svg?branch=master)
 
 # 简介
 
