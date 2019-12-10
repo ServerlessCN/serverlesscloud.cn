@@ -7,4 +7,3 @@ ServerlessCN:
       error: index.html
     region: ap-hongkong
     bucketName: serverlesscn
-    protocol: http
