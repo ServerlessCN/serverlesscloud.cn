@@ -148,8 +148,12 @@ let config = [
                 to: `${baseUrl}/providers/tencent/templates/hexo`,
               },
               {
-                label: '快速部署一个全栈应用(vue.js+express.js)',
-                to: `${baseUrl}/providers/tencent/templates/full-stack`,
+                label: '快速部署一个 Vue 全栈应用',
+                to: `${baseUrl}/providers/tencent/templates/vue-full-stack`,
+              },
+              {
+                label: '快速部署一个 React 全栈应用',
+                to: `${baseUrl}/providers/tencent/templates/react-full-stack`,
               },
               {
                 label: '快速构建 REST API',

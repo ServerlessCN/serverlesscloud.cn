@@ -154,7 +154,7 @@ Login successful for TencentCloud
 可以通过以下命令移除 hexo 网站
 
 ```console
-PS sls remove --debug
+$ sls remove --debug
 
   DEBUG ─ Flushing template state and removing all components.
   DEBUG ─ Starting Website Removal.
