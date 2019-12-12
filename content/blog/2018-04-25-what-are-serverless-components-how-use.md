@@ -96,7 +96,7 @@ Serverless Components 还提供了完善的，由社区贡献驱动的开发者�
 - [Hexo + Serverless Framework，简单三步搭建你的个人博客](https://serverlesscloud.cn/best-practice/2019-12-4-Quickly-build-personal-blog) 
 
 当前 Serverless Component 也支持多语言开发框架的快速部署，可以移步[组件](https://serverlesscloud.cn/component)页面进一步查看：
-![serverless components](https://img.serverlesscloud.cn/20191212/1576154812544-Screen%20Shot%202019-12-12%20at%208.46.22%20PM.png)
+![serverless components](https://img.serverlesscloud.cn/20191212/1576155804411-component%20gallery%20compress.png)
 
 ### Serverless Components 的下一步规划
 
