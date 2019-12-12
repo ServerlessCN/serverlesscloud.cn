@@ -1,11 +1,3 @@
-const font = {
-  default: 'Serverless',
-  header: 'SoleilBk',
-  p: 'SoleilBk',
-  psmall: 'Soleil',
-  plarge: 'SoleilLt',
-}
-
 const breakpoints = ['320px', '768px', '992px', '1280px', '1600px']
 
 const navbarHeights = {
@@ -111,7 +103,6 @@ const shadows = [`rgba(0, 0, 0, 0.08) 2px 2px 8px 0px`]
 
 const theme = {
   maxContainerWidth: '1260px',
-  font,
   heights,
   breakpoints,
   navbarHeights,

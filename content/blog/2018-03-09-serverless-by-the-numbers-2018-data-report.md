@@ -2,7 +2,7 @@
 title: "Serverless 数据解读：2018 报告"
 description: "Serverless Framework 使用统计数据：事件源、服务结构、运行时长等等。"
 date: 2018-03-09
-thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/observability-tools/graph-thumb.png"
+thumbnail: "https://main.qcloudimg.com/raw/5aa54033cfe5e0aa86ffde6b5ef0070e.png"
 categories:
   - news
   - engineering-culture
@@ -41,13 +41,13 @@ translatorslink:
 为了使这些数据更易于理解，我们将从几个不同的方面来剖析。
 首先，请看下面这张仅显示单事件源服务的数据图（记住，单事件源服务占所有服务的 79%）：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/services-single-event-type1.jpg">
+![](https://main.qcloudimg.com/raw/c04b4d37e2bf00b6fe482975c7afd5ff.jpg)
 
 *含一种事件类型的所有服务（按事件类型）*
 
 大多数包含**两种**事件类型的服务（所有服务的 16%）中都包含 http，例如 http + cron 和 http + sns。「其他」部分占据较大比例，主要原因在于其中有很多种排列方式，因此我们将其作为一种最受欢迎的类型：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/services-2-types1.jpg">
+![](https://main.qcloudimg.com/raw/0d38c16520edf25670502ba4101e17de.jpg)
 
 *含两种事件类型的所有服务（按事件类型）*
 
@@ -57,7 +57,7 @@ translatorslink:
 
 我们来看看开发者在每个服务中部署了多少个函数。请注意，本图仅包含在三个不同日期存在部署活动的服务，以便排除「Hello, World」应用。
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/functions-per-service1.jpg">
+![](https://main.qcloudimg.com/raw/756f70e4103dcb64ae866802b364be0a.jpg)
 
 *服务（按函数个数）*
 
@@ -69,7 +69,7 @@ Serverless 开发者倾向于使用哪些 runtime？
 
 Node.js 使用比例遥遥领先，其次是 Python。
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/services-deployed-pie1.jpg">
+![](https://main.qcloudimg.com/raw/80ac8567d4693cf99e10e687eb07bb1a.jpg)
 
 *所部署服务的百分比（按语言）*
 
@@ -77,7 +77,7 @@ Node.js 使用比例遥遥领先，其次是 Python。
 
 我们来看看各个语言在不同时间段的使用率（不含占据绝对主导地位的 Node 6.10）。
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/services-by-language-line1.jpg">
+![](https://main.qcloudimg.com/raw/50cb0171e66c2dc842eeaeaad77b0e8c.jpg)
 
 *AWS 上使用的语言（排除 Node 6.10；以服务百分比表示）*
 
@@ -93,7 +93,7 @@ Python 3.6 是过去 8 个月内使用率整体增长最稳定的语言，今年
 
 下面这张编程语言（包含各个版本）图表直接比较了 2017 年 8 月和 2018 年 2 月各语言的使用率。
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/services-by-language-full1.jpg">
+![](https://main.qcloudimg.com/raw/655b3cd4fa2f9b80686a5914dc252a1a.jpg)
 
 *AWS 上使用的语言（以服务百分比表示）*
 
@@ -101,7 +101,7 @@ Python 3.6 是过去 8 个月内使用率整体增长最稳定的语言，今年
 
 我们不妨再来看看试验曲线是怎样的。为此，我们以周为时间单位来看看自 1 月 15 日起采用 Go 语言编写的服务的部署次数。（注意，是部署次数而不是服务数量；换而言之，人们使用 Go 的频率有多高。）
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/go-deployments1.jpg">
+![](https://main.qcloudimg.com/raw/0071513d8731edefa37f8737ecef742c.jpg)
 
 *Golang 在 AWS 上的使用率（以占所有部署的百分比表示）*
 
@@ -115,7 +115,7 @@ Python 3.6 是过去 8 个月内使用率整体增长最稳定的语言，今年
 
 事实证明，服务部署的高峰时段是在午餐时间到下班时间之间：
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/data-report-2018/deploy-times1.jpg">
+![](https://main.qcloudimg.com/raw/55ccea7ef73b1d1ae0a95bd84779ffc0.jpg)
 
 ## 总结
 

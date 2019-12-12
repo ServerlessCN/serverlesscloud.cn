@@ -21,12 +21,10 @@ function createDoc(graphql, createPage) {
       return Promise.reject(result.errors)
     }
 
-
     const docs = result.data.allMarkdownRemark.nodes
     docs.forEach(doc => {
       // filePath like /xxx/xxx
-      console.log(doc)
-      if (doc.fileAbsolutePath.indexOf('/docs') === -1) return 
+      if (doc.fileAbsolutePath.indexOf('/docs') === -1) return
       const [, filePath] = doc.fileAbsolutePath.split('/docs')
       const filePathWithoutExt = filePath.replace('.md', '')
 

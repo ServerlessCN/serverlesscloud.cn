@@ -7,7 +7,7 @@ const BLOG_PAGESIZE = 10
 function createCategory(graphql, createPage) {
   return graphql(`
     query {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/blog/" } }) {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "//blog//" } }) {
         group(field: frontmatter___categories) {
           totalCount
           categories: fieldValue

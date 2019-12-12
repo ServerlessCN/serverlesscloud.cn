@@ -2,8 +2,8 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: `Serverless - Serverless 服务框架中文社区`,
-    description: `Serverless Framework 是业界非常受欢迎的无服务器应用框架，开发者无需关心底层资源即可部署完整可用的 serverless 应用架构。`,
+    title: `Serverless 中文技术社区 - serverlesscloud.cn`,
+    description: `Serverless中文技术社区是国内开发者技术交流社区。提供Serverless最新信息、实践案例、技术博客、组件文档、学习资源，帮助开发者快速应用Severless技术和解决开发中的问题。`,
     author: '',
   },
   plugins: [
@@ -66,7 +66,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Serverless中文社区`,
+        name: `Serverless 中文技术社区`,
         short_name: `ServerlessCN`,
         start_url: `/`,
         background_color: `#fd5750`,
@@ -75,8 +75,10 @@ module.exports = {
         icon: `src/assets/images/icon-serverless-framework.png`, // This path is relative to the root of the site.
       },
     },
+    // this plugin is awaful
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
   ],
 }

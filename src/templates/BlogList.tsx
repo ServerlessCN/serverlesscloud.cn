@@ -32,7 +32,6 @@ const BlogList = ({
         description="Serverless Framework 团队博客最新动态，最新功能，最新版本发布"
         location={location}
       />
-      {/* <Banner /> */}
 
       <Breadcrumbs>博客</Breadcrumbs>
 
@@ -60,7 +59,7 @@ export const query = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
         frontmatter: { date: { ne: null } }
-        fileAbsolutePath: { regex: "/blog/" }
+        fileAbsolutePath: { regex: "//blog//" }
       }
       skip: $offset
       limit: $limit

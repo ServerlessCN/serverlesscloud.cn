@@ -25,7 +25,7 @@ const BlogList = ({
   return (
     <Layout>
       <Helmet
-        title="Serverless教程,Serverless入门,Serverless实践,ServerlessSSR"
+        title="最佳实践 - Serverless"
         keywords="Serverless教程,Serverless入门,Serverless实践,ServerlessSSR"
         description="Serverless Framework 最佳实践教程指引，帮助开发者快速掌握Serverless工程化框架与Serverless实战内容。"
         location={location}
@@ -35,6 +35,7 @@ const BlogList = ({
 
       <Content>
         <List
+          width={[0.9, 0.9, 0.9, 0.85]}
           generateDataUrl={pageNum =>
             `/best-practice${pageNum === 1 ? '' : `/page/${pageNum}`}`
           }
@@ -56,7 +57,7 @@ export const query = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
         frontmatter: { date: { ne: null } }
-        fileAbsolutePath: { regex: "/best-practice/" }
+        fileAbsolutePath: { regex: "//best-practice//" }
       }
       skip: $offset
       limit: $limit

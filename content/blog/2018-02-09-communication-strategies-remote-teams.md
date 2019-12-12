@@ -2,7 +2,7 @@
 title: Serverless 公司的远程团队沟通策略
 description: Serverless 团队分散在全球各地，本文介绍我们如何管理沟通策略和远程协作。
 date: 2018-02-09
-thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/remote-communication/Team+communication+photo+cropped.jpg'
+thumbnail: 'https://main.qcloudimg.com/raw/67b0bff4886896e1ee5d4f5917cf6096.jpg'
 categories:
   - engineering-culture
 authors:
@@ -39,13 +39,13 @@ Radical Candor 的核心原则之一是真切实际地去了解他人，而非�
 
 这条线将会议室一分为二。一边代表喜欢异步书面沟通的人员，另一边代表喜欢面对面会议的人员。然后每名团队成员站在这条线上，根据自己喜欢的沟通方式选择站到线的一边。
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/remote-communication/team+communication+photo3.png">
+![](https://main.qcloudimg.com/raw/32261defbcf99c60155042192f0bc9ae.jpg)
 
 每个人都有机会说出自己站位的原因。
 
 结果出乎意料，并且非常个人化。倾听每个人解释他们自己对某种沟通方式的喜好很有启发意义。我们也可以从这些解释中得出团队需要使用的沟通工具数量（初步统计接近 10 种）。
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/remote-communication/Team+communication+styles.jpg">
+![](https://main.qcloudimg.com/raw/ff39d8aa9118deb2c3333448535b434c.jpg)
 
 这次活动给我们的团队带来了一些启发和感悟。
 

@@ -49,7 +49,7 @@ export default function() {
           blogs: allMarkdownRemark(
             sort: { fields: frontmatter___date, order: DESC }
             limit: 3
-            filter: { fileAbsolutePath: { regex: "/best-practice/" } }
+            filter: { fileAbsolutePath: { regex: "//best-practice//" } }
           ) {
             edges {
               node {
@@ -83,7 +83,7 @@ export default function() {
               <Blogs blogs={blogs.edges} />
 
               <CategoryLink custom category="best-practice">
-                <Button mt="30px" mb="30px" theme={theme}>
+                <Button mt={[0, 0, '30px']} mb="30px" theme={theme}>
                   更多实践
                 </Button>
               </CategoryLink>
