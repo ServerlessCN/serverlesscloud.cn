@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
-import Banner from '@src/components/Banner'
 import Markdown from '@src/components/Markdown'
 import { Box, Flex, Container } from '@src/components/atoms'
 import Helmet from '@src/components/Helmet'
@@ -13,6 +12,16 @@ const CustomContainer = styled(Container)`
   .markdown-body img {
     width: 200px;
     height: 200px;
+  }
+
+  #qrcode table {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  #qrcode {
+    display: flex;
+    flex-wrap: wrap;
   }
 `
 

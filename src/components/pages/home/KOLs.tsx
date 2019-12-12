@@ -100,12 +100,12 @@ export default function() {
       background={theme.colors.gray[0]}
     >
       <Center flexDirection="column">
-        <MainTitle>加入Serverless中文社区</MainTitle>
+        <MainTitle>Serverless 中文技术社区</MainTitle>
 
         <Box mt="30px" mb="30px">
           <Link to="/about">
             <Button width="160px" p="0.4rem" fontSize="18px" theme={theme}>
-              查看加入方式
+              立即加入
             </Button>
           </Link>
         </Box>

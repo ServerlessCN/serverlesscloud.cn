@@ -16,7 +16,8 @@
 .gatsby-code-button-toaster {
 }
 .gatsby-code-button-toaster-text {
-  width: 200px;
+  width: 120px;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 992px) {

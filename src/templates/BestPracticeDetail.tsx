@@ -1,14 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
-import {
-  Flex,
-  Container,
-  Box,
-  BackgroundProps,
-  Text,
-  InlineBlock,
-} from '@src/components/atoms'
+import { Box, BackgroundProps, Text, InlineBlock } from '@src/components/atoms'
 import { Blog, GraphqlBlogResult } from '@src/types'
 import Breadcrumbs from '@src/components/Breadcrumbs'
 import styled from 'styled-components'
@@ -21,6 +14,7 @@ import { formateDate } from '@src/utils'
 import ExternalLink from '@src/components/Link/ExternalLink'
 import BackToTop from '@src/components/BackToTop'
 import PreNext from '@src/components/PreNext'
+import Content from '@src/components/Content'
 
 const ExternalLinkWrapper = styled(InlineBlock)`
   margin-left: 5px;
@@ -62,56 +56,50 @@ const BestPracticeDetail = ({
     <Layout>
       <Helmet {...currentBlog.frontmatter} location={location} />
       <Breadcrumbs>{currentBlog.frontmatter.title}</Breadcrumbs>
-      <Container>
-        <Flex
-          alignItems={['center', 'center', 'center', 'flex-start']}
-          justifyContent={['center', 'center', 'center', 'space-between']}
-          flexDirection={['column', 'column', 'column', 'row']}
+      <Content>
+        <Box
+          width={[0.9, 0.9, 0.9, 0.72]}
+          py={'40px'}
+          px={[0, 0, 0, '10px', 0, 0]}
         >
-          <Box
-            width={[0.9, 0.9, 0.9, 0.72]}
-            py={'40px'}
-            px={[0, 0, 0, '10px', 0, 0]}
+          <BoxWithBackground
+            mb="10px"
+            py="10px"
+            px="20px"
+            background={theme.colors.gray[1]}
+            width={1}
           >
-            <BoxWithBackground
-              mb="10px"
-              py="10px"
-              px="20px"
-              background={theme.colors.gray[1]}
-              width={1}
-            >
-              <Text my="5px">
-                发布于: {formateDate(currentBlog.frontmatter.date)}
-              </Text>
-              <Text my="5px">
-                作者:
-                {currentBlog.frontmatter.authors.map((author, index) => (
-                  <ExternalLinkWrapper key={author}>
-                    {currentBlog.frontmatter.authorslink &&
-                    currentBlog.frontmatter.authorslink[index] ? (
-                      <ExternalLink
-                        to={currentBlog.frontmatter.authorslink[index]}
-                      >
-                        {author}
-                      </ExternalLink>
-                    ) : (
-                      author
-                    )}
-                  </ExternalLinkWrapper>
-                ))}
-              </Text>
-            </BoxWithBackground>
+            <Text my="5px">
+              发布于: {formateDate(currentBlog.frontmatter.date)}
+            </Text>
+            <Text my="5px">
+              作者:
+              {currentBlog.frontmatter.authors.map((author, index) => (
+                <ExternalLinkWrapper key={author}>
+                  {currentBlog.frontmatter.authorslink &&
+                  currentBlog.frontmatter.authorslink[index] ? (
+                    <ExternalLink
+                      to={currentBlog.frontmatter.authorslink[index]}
+                    >
+                      {author}
+                    </ExternalLink>
+                  ) : (
+                    author
+                  )}
+                </ExternalLinkWrapper>
+              ))}
+            </Text>
+          </BoxWithBackground>
 
-            <Markdown html={currentBlog.html as string}></Markdown>
+          <Markdown html={currentBlog.html as string}></Markdown>
 
-            <PreNext next={nextBlog} previous={previousBlog} />
-          </Box>
+          <PreNext next={nextBlog} previous={previousBlog} />
+        </Box>
 
-          <Box width={[0.9, 0.9, 0.9, 0.25]}>
-            <BlogCatalogs html={currentBlog.tableOfContents} />
-          </Box>
-        </Flex>
-      </Container>
+        <Box width={[0.9, 0.9, 0.9, 0.25]}>
+          <BlogCatalogs html={currentBlog.tableOfContents} />
+        </Box>
+      </Content>
 
       <BackToTop />
     </Layout>

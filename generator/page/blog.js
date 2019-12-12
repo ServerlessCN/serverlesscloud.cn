@@ -73,7 +73,7 @@ function createBlogTask(graphql, createPage) {
     query {
       allMarkdownRemark(
         sort: { fields: frontmatter___date, order: DESC }
-        filter: { fileAbsolutePath: { regex: "/blog/" } }
+        filter: { fileAbsolutePath: { regex: "//blog//" } }
       ) {
         totalCount
         edges {

@@ -12,11 +12,6 @@ import { MainTitle, SubMainTitle } from '@src/components/pages/home/Title'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-const TextWithCursor = styled(Text)`
-  cursor: pointer;
-  display: inline-block;
-`
-
 const questions: { question: string; answer: string | JSX.Element }[] = [
   {
     question: '什么是 Serverless Framework？',
@@ -52,7 +47,7 @@ export default function() {
   return (
     <Background pt={'40px'} pb={'40px'} width={1} backgroundColor="white">
       <Flex alignItems="center" justifyContent="center">
-        <Link to="/doc/5">
+        <Link to="/doc/questions">
           <MainTitle>常见问题</MainTitle>
         </Link>
       </Flex>
@@ -85,7 +80,7 @@ export default function() {
       <Flex alignItems="center" justifyContent="center">
         <Text fontSize={'14px'}>
           <Link to="/about">
-            <Button mt="30px" mb="30px" theme={theme}>
+            <Button mt={[0, 0, '30px']} mb="30px" theme={theme}>
               联系我们
             </Button>
           </Link>

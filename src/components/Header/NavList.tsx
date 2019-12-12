@@ -62,24 +62,32 @@ interface Props {
 }
 
 export default function({ isActive, isDesktopView }: Props) {
-  const navListItemDisplay = isDesktopView ? 'inline-block' : 'block'
-  const navListBoxDisplay = isDesktopView
-    ? 'block'
-    : isActive
-    ? 'block'
-    : 'none'
+  const isMobileNavListDisplay = () => (isActive ? 'block' : 'none')
 
   const navListBoxWidth = isDesktopView ? 0.6 : 1
   return (
     <BoxWithTextAlign
       width={navListBoxWidth}
       bg={theme.colors.white}
-      display={navListBoxDisplay}
+      display={[
+        isMobileNavListDisplay(),
+        isMobileNavListDisplay(),
+        isMobileNavListDisplay(),
+        'block',
+      ]}
       textAlign={isDesktopView ? 'right' : 'left'}
     >
-      <List p={0} ml={[4, 3, 4, 3, 0]} mr={0} mb={0}>
+      <List p={0} mr={0} mb={0}>
         {navList.map(({ title, link }, index) => (
-          <NavListItem key={index} display={navListItemDisplay}>
+          <NavListItem
+            onClick={() => {
+              if (link === '/') {
+                ;(window as any).MtaH5.clickStat('homelink')
+              }
+            }}
+            key={index}
+            display={['block', 'block', 'block', 'inline-block']}
+          >
             <Link to={link}>
               <Text color={theme.colors.black}>{title}</Text>
             </Link>

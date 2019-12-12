@@ -13,9 +13,8 @@ import theme from '@src/constants/theme'
 import styled from 'styled-components'
 import { Link as InternalLink } from 'gatsby'
 import ExternalLink from './Link/ExternalLink'
-import QQQRcode from '@src/assets/images/qq_qrcode.jpg'
-import WechatQRcode from '@src/assets/images/wechat_qrcode.jpg'
-// import logo from '@src/assets/images/logo-serverless-framework-center-vertical-dark.png'
+import QQQRcode from '@src/assets/images/qq_qrcode.png'
+import WechatQRcode from '@src/assets/images/wechat_qrcode.png'
 import logo from '@src/assets/images/icon-serverless-framework.png'
 
 const links: {
@@ -77,7 +76,7 @@ const links: {
       },
       {
         title: '常见问题',
-        link: '/doc/5',
+        link: '/doc/questions',
         isInternal: true,
       },
       {
@@ -134,9 +133,8 @@ export default function() {
               {links.map(({ category, contents }) => (
                 <Box
                   key={category}
-                  width={[0.3, 0.3, 0.3, 1 / 7]}
-                  ml={'10px'}
-                  mr={'10px'}
+                  width={[0.4, 0.4, 0.4, 1 / 7]}
+                  mx={'10px'}
                   mt={'40px'}
                 >
                   <Column justifyContent="center">
@@ -160,9 +158,8 @@ export default function() {
               {contacts.map(({ title, qrcode, description }) => (
                 <Box
                   key={title}
-                  width={[0.3, 0.3, 0.3, 1 / 6]}
-                  ml={'10px'}
-                  mr={'10px'}
+                  width={[0.4, 0.4, 0.4, 1 / 6]}
+                  mx={'10px'}
                   mt={'40px'}
                 >
                   <Column justifyContent="center">
@@ -196,11 +193,11 @@ export default function() {
               justifyContent="space-between"
             >
               <WhiteText>
-                Copyright &copy; 2019 ServerlessChina. All rights reserved
+                Copyright &copy; 2019 ServerlessCloud. All rights reserved
               </WhiteText>
               <WhiteText mt={['10px', '10px', '10px', 0, 0]}>
-                made by
-                ServerlessChina&nbsp;&nbsp;&nbsp;&nbsp;support@serverlesscn.com
+                Powered by Serverless
+                Framework&nbsp;&nbsp;&nbsp;&nbsp;hello@serverlesscloud.cn
               </WhiteText>
             </Flex>
           </Box>

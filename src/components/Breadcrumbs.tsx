@@ -1,5 +1,6 @@
 import * as React from 'react'
-import _logo from '@src/assets/images/research_bg.jpg'
+import _logo from '@src/assets/images/breadcrumbs_bg.png'
+
 import {
   Background,
   Flex,
@@ -39,7 +40,10 @@ export default function({
                       : 0
                   }
                 >
-                  <Container maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}>
+                  <Container
+                    width={[0.95, 0.95, 0.95, 0.95, 1216]}
+                    maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}
+                  >
                     <Flex
                       alignItems="center"
                       justifyContent={[
@@ -54,14 +58,14 @@ export default function({
                         my="20px"
                         align={['center', 'center', 'center', 'left']}
                         fontSize={[
-                          theme.fontSizes[0],
-                          theme.fontSizes[0],
-                          theme.fontSizes[1],
+                          theme.fontSizes[2],
+                          theme.fontSizes[2],
+                          theme.fontSizes[2],
                           theme.fontSizes[2],
                           theme.fontSizes[3],
                         ]}
-                        px={[0, 0, 0, '10px', 0, 0]}
-                        color={theme.colors.white}
+                        fontWeight="bold"
+                        color={theme.colors.black}
                       >
                         {children}
                       </Heading1>

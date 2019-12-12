@@ -85,7 +85,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  line-height: 1.125;
+  line-height: 1.25;
 }
 
 /* make sure to set some focus styles for accessibility */
@@ -109,7 +109,8 @@ section {
 }
 
 body {
-  line-height: 1;
+  font-family: Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB',
+    'Heiti SC', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif !important;
 }
 
 ol,
