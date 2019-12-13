@@ -7,9 +7,9 @@
 
 **100% serverless** 🎉
 
-- 💪 使用 [react](https://github.com/facebook/react)，[typescript](https://www.typescriptlang.org/)，[gatsby](https://github.com/gatsbyjs/gatsby)，以及[styled-components](https://github.com/styled-components/styled-components)开发。
-- ✨ 使用[netlify](https://www.netlify.com/)进行发布前预览。
-- 🔥 使用[Travis CI](https://travis-ci.com/)以及[tencent-website](https://github.com/serverless-components/tencent-website)进行自动构建和发布到腾讯云 COS。
+- 💪 使用 [react](https://github.com/facebook/react)，[typescript](https://www.typescriptlang.org/)，[gatsby](https://github.com/gatsbyjs/gatsby)，以及 [styled-components](https://github.com/styled-components/styled-components) 开发。
+- ✨ 使用 [netlify](https://www.netlify.com/) 进行发布前预览。
+- 🔥 使用 [Travis CI](https://travis-ci.com/) 以及 [tencent-website](https://github.com/serverless-components/tencent-website) 进行自动构建和发布到腾讯云对象存储 COS。
 
 # 快速开始
 
@@ -38,39 +38,39 @@ npm run start
 ```
 .
 ├── LICENSE
-├── README.md             //  项目readme
+├── README.md             //  项目 readme
 ├── content               // 【目录】存放网站内容
 │   ├── about             // 【目录】存放关于页的内容
 │   ├── best-practice     // 【目录】存放最佳实践
 │   ├── blog              // 【目录】存放博客
 │   └── docs              // 【目录】存放文档
-├── gatsby-browser.js     //  gastby配置文件
-├── gatsby-config.js      //  gastby配置文件
-├── gatsby-node.js        //  gastby配置文件
-├── gatsby-ssr.js         //  gastby配置文件
-├── generator             // 【目录】存放gatsby动态生成页面或者节点的脚本
-│   └── page              // 【目录】存放gatesby动态生成页面的脚本
-├── serverless.yml        //  serverless framework的配置文件
+├── gatsby-browser.js     //  gastby 配置文件
+├── gatsby-config.js      //  gastby 配置文件
+├── gatsby-node.js        //  gastby 配置文件
+├── gatsby-ssr.js         //  gastby 配置文件
+├── generator             // 【目录】存放 gatsby 动态生成页面或者节点的脚本
+│   └── page              // 【目录】存放 gatsby 动态生成页面的脚本
+├── serverless.yml        //  serverless framework 的配置文件
 ├── src                   // 【目录】网站代码
 │   ├── assets            // 【目录】网站资源
 │   ├── components        // 【目录】公共组件
 │   ├── constants         // 【目录】网站主题，文档菜单配置等常量
-│   ├── contexts          // 【目录】公共react的context
-│   ├── declarations.d.ts // 【目录】typescript的声明文件
+│   ├── contexts          // 【目录】公共 react 的 context
+│   ├── declarations.d.ts // 【目录】typescript 的声明文件
 │   ├── layouts           // 【目录】网站页面布局组件
 │   ├── pages             // 【目录】网站静态页面，包括主页，关于页，论坛页等
-│   ├── styles            // 【目录】网站自定义的css样式
+│   ├── styles            // 【目录】网站自定义的 css 样式
 │   ├── templates         // 【目录】网站动态生成的页面，包括博客页，文档页等
-│   ├── types             // 【目录】typescript的公共声明类型
+│   ├── types             // 【目录】typescript 的公共声明类型
 │   └── utils             // 【目录】公共工具代码
 ├── static                // 【目录】静态第三方文件
-└── tsconfig.json         //  typescript配置
+└── tsconfig.json         //  typescript 配置
 
 
 ```
 # 修改网站内容
 
-Fork这个仓库，并提交Pull Request !
+Fork 这个仓库，并提交 Pull Request !
 
 
 根据**快速开始**的步骤，本地运行起项目。
@@ -78,11 +78,11 @@ Fork这个仓库，并提交Pull Request !
 
 ### **最佳实践修改:**
 
-可以修改```content/best-practice```文件夹下的markdown文件。
+可以修改```content/best-practice```文件夹下的 markdown 文件。
 
 ### **博客修改:**
 
-可以修改```content/blog```文件夹下的markdown文件。
+可以修改```content/blog```文件夹下的 markdown 文件。
 
 ### **文档修改:**
 
@@ -106,9 +106,9 @@ npm run build
 **2. 如果打包成功，提交你的更改到远端分支**
 
 
-**3. 在github创建一个Pull Request**
+**3. 在 GitHub 创建一个 Pull Request**
 
-**4. Pull Request创建后，等待预览链接出现，并查看自己的更改**
+**4. Pull Request 创建后，等待预览链接出现，并查看自己的更改**
 
-如果一切都符合预期，那就可以等待仓库管理员合并Pull Request到master。
-合并到master后，会触发 Travis CI 自动构建和发布更改到线上。
+如果一切都符合预期，那就可以等待仓库管理员合并 Pull Request 到 master。
+合并到 master 后，会触发 Travis CI 自动构建和发布更改到线上。
