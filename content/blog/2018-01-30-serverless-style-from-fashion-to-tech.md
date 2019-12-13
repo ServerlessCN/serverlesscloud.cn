@@ -77,7 +77,7 @@ CEO 兼创始人 Austen Collins 是在好莱坞开始职业生涯的，最后创
 
 很多现代技术公司都在努力地为这个行业带来真正的**人文关怀**。他们也开始吸纳像我这样的外行人，科技公司正逐渐变得更加多元化。
 
-[charmmie-hendon](https://img.serverlesscloud.cn/20191212/1576149309428-charmmie-hendon.jpg)
+![charmmie-hendon](https://img.serverlesscloud.cn/20191212/1576149309428-charmmie-hendon.jpg)
 
 Serverless 吸引我的不仅是这里的人，而且还有它作为公司而肩负的使命。它尝试让软件开发大众化，希望技术的使用变得更加容易，任何人都可以学习。
 

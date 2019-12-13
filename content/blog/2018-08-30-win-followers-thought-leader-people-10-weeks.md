@@ -41,7 +41,7 @@ Serverless 团队中，Growth team 的一个主要目标就是减少运营成本
 
 ## 分步指南：如何树立社交媒体形象
 
-[serverless-thought-leader](https://img.serverlesscloud.cn/20191212/1576151232435-serverless-thought-leader1.png)
+![serverless-thought-leader](https://img.serverlesscloud.cn/20191212/1576151232435-serverless-thought-leader1.png)
 
 
 - **Step 1：** 创建一个 Slack 频道 *（类似微信群）*。众所周知，在有伴的情况下更有可能去健身。同样，如果有人作伴，您也更有可能会完成每周的任务。
@@ -159,7 +159,7 @@ Serverless 团队中，Growth team 的一个主要目标就是减少运营成本
 
 ## 该计划的维持阶段
 
-[thought-leader](https://img.serverlesscloud.cn/20191212/1576151762412-serverless-thought-leader2.png)
+![thought-leader](https://img.serverlesscloud.cn/20191212/1576151762412-serverless-thought-leader2.png)
 
 到目前为止，每个人都用了两个半月的时间，来积攒自己的社交媒体人气。但现实是，保持热度是一个持续的过程。
 
@@ -170,11 +170,11 @@ Serverless 团队中，Growth team 的一个主要目标就是减少运营成本
 
 对于一个刚开始接触社交媒体的人来说，这两个月的增长轨迹非常不错：
 
-[serverless-social-media-newbie](https://img.serverlesscloud.cn/20191212/1576151864766-serverless-social-media-newbie.png)
+![serverless-social-media-newbie](https://img.serverlesscloud.cn/20191212/1576151864766-serverless-social-media-newbie.png)
 
 而我们的一些 Twitter 老用户也拥有了更多粉丝，提高了参与度：
 
-[serverless-social-media-established](https://img.serverlesscloud.cn/20191212/1576151865340-serverless-social-media-newbie.png)
+![serverless-social-media-established](https://img.serverlesscloud.cn/20191212/1576151865340-serverless-social-media-newbie.png)
 
 该计划受到了一致好评，比如：
 
