@@ -5,7 +5,6 @@ date: 2018-09-03
 thumbnail: 'https://img.serverlesscloud.cn/20191212/1576153272752-serverless-design-andre-thumb.jpg'
 categories:
   - engineering-culture
-heroImage: https://img.serverlesscloud.cn/20191212/1576153272664-serverless-design-andre-thumb.jpg
 authors:
   - AndrePires
 authorslink:
@@ -15,6 +14,8 @@ translators:
 translatorslink: 
   - https://www.zhihu.com/people/Aceyclee  
 ---
+
+![AndrePires](https://img.serverlesscloud.cn/20191212/1576153272664-serverless-design-andre-thumb.jpg)
 
 我出生在巴西最南端的一座繁华城市 —— 愉港市 ，我从小痴迷于设计。小时候，我就总在探索着周边环境、研究建筑，集中精力去分析每一个空间中传达出来的微妙视觉信息。
 
@@ -39,7 +40,7 @@ translatorslink:
 - Optimize（优化）
 - Rethink（反思）
 
-[serverless_growth-process](https://img.serverlesscloud.cn/20191212/1576153272444-serverless-design-andre-thumb.jpg)
+![serverless_growth-process](https://img.serverlesscloud.cn/20191212/1576153272444-serverless-design-andre-thumb.jpg)
 
 换句话说，标识是一种构造，是一个不断发展和自我重塑的循环。当你经历这个循环时，问自己两个问题：
 
@@ -47,7 +48,7 @@ translatorslink:
 
 设计必须不断发展，而你必须想出如何做到这一点，同时又不丧失其本质和辨别度。发展并不意味着要抹杀过去，而是意味着以过去为基础。在这个过程中，不要害怕尝试。没有真正糟糕的尝试，一切都可以变得更好。
 
-[serverless_company+goals](https://img.serverlesscloud.cn/20191212/1576153272538-serverless-design-andre-thumb.jpg)
+![serverless_company+goals](https://img.serverlesscloud.cn/20191212/1576153272538-serverless-design-andre-thumb.jpg)
 
 > 没有真正糟糕的尝试，一切都可以变得更好。
 
@@ -57,7 +58,7 @@ translatorslink:
 
 这就是一个出色的设计要达到的目的：**它建立起了呈现公司形象的视觉语言。**
 
-[serverless_past](https://img.serverlesscloud.cn/20191212/1576153271691-serverless-design-andre-thumb.jpg)
+![serverless_past](https://img.serverlesscloud.cn/20191212/1576153271691-serverless-design-andre-thumb.jpg)
 
 ## 优秀的品牌具备实用性
 
@@ -73,7 +74,7 @@ translatorslink:
 
 这并非一个糟糕的主意！就像我之前说的，没有真正糟糕的尝试。但我没有考虑到的是，推文中包含图片使链接显示为蓝色文本，而不是扩展为可视卡片。链接与话题标签混在一起，很容易被忽略。最终可能导致参与率和点击量变少。这可不太妙！
 
-[serverless_twitter](https://img.serverlesscloud.cn/20191212/1576153272695-serverless-design-andre-thumb.jpg)
+![serverless_twitter](https://img.serverlesscloud.cn/20191212/1576153272695-serverless-design-andre-thumb.jpg)
 
 显然，我们在社交媒体上仍会使用多种类型的内容，但对于设计师而言，了解每个平台的主要交互模式，并在考虑到其限制的情况下想方设法使我们的信息尽可能具有吸引力，这是很重要的。
 
@@ -85,15 +86,15 @@ translatorslink:
 
 要设计一件能够给人留下深刻印象的作品，不仅需要冒险和尝试，还需坦率地听取反馈意见，了解设计中的可行和不可行之处。在我开始领导增长团队的设计交流后，我要求整个团队对我的设计给予反馈。他们总是能够指出我没有发现的东西，这样一来，对于每一个公开的设计，我们都可以展示出最好的效果。
 
-[serverless_ilustrations1-8](https://img.serverlesscloud.cn/20191212/1576153272414-serverless-design-andre-thumb.jpg)
+![serverless_ilustrations1-8](https://img.serverlesscloud.cn/20191212/1576153272414-serverless-design-andre-thumb.jpg)
 
 举个例子，我曾为 [Serverless 平台公告](https://serverless.com/blog/serverless-platform-beta-helps-teams-operationalize-development/)设计了一份定制的时事通讯，我花了很多时间定制插图来彰显它的特点。老实说，我对这些插图真的很满意。但团队成员也提出了一些有用的观点，他们认为应该使用 dashboard 的产品图，让人们有更深刻的印象。
 
-[serverless_ilustrations2-8](https://img.serverlesscloud.cn/20191212/1576153272236-serverless-design-andre-thumb.jpg)
+![serverless_ilustrations2-8](https://img.serverlesscloud.cn/20191212/1576153272236-serverless-design-andre-thumb.jpg)
 
 我得承认这说到了点子上。
 
-[serverless_newsletter](https://img.serverlesscloud.cn/20191212/1576153272350-serverless-design-andre-thumb.jpg)
+![serverless_newsletter](https://img.serverlesscloud.cn/20191212/1576153272350-serverless-design-andre-thumb.jpg)
 
 当然，反馈并不总是很容易接受，但这很重要。每个人都需要做好这点：
 
@@ -102,7 +103,7 @@ translatorslink:
 
 接受反馈很重要，知道如何请求反馈也重要。确保您的设计可让人们了解关注点。告知大家您目前所处的设计阶段：是刚刚开始还是在做最后的调整？这有助于您以最小的开销获得所需的帮助。
 
-[Serverless-Andre-Post0106](https://img.serverlesscloud.cn/20191212/1576153272343-serverless-design-andre-thumb.jpg)
+![Serverless-Andre-Post0106](https://img.serverlesscloud.cn/20191212/1576153272343-serverless-design-andre-thumb.jpg)
 
 ## 小结
 

@@ -4,7 +4,7 @@ description: "通过 Serverless 组件,基于 ThumbsUp 快速搭建个人静态�
 date: 2019-12-10
 thumbnail: 'https://img.serverlesscloud.cn/20191212/1576141517135-123.png'
 categories:
-  - guides-and-tutorials
+  - best-practice
 authors:
   - alanoluo
 authorslink: 
