@@ -2,7 +2,7 @@
 title: "Serverless Component 是什么，我怎样使用它？"
 description: "Serverless Component 介绍和使用指南"
 date: 2018-04-25
-thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/components/serverless-components.gif"
+thumbnail: "https://img.serverlesscloud.cn/20191213/1576236926383-serverless-components.gif"
 categories:
   - news
   - guides-and-tutorials
@@ -96,7 +96,8 @@ Serverless Components 还提供了完善的，由社区贡献驱动的开发者�
 - [Hexo + Serverless Framework，简单三步搭建你的个人博客](https://serverlesscloud.cn/best-practice/2019-12-4-Quickly-build-personal-blog) 
 
 当前 Serverless Component 也支持多语言开发框架的快速部署，可以移步[组件](https://serverlesscloud.cn/component)页面进一步查看：
-![serverless components](https://img.serverlesscloud.cn/20191212/1576155804411-component%20gallery%20compress.png)
+
+[![serverless components](https://img.serverlesscloud.cn/20191213/1576236739852-Component%20Gallery.png)](https://serverlesscloud.cn/component)
 
 ### Serverless Components 的下一步规划
 
