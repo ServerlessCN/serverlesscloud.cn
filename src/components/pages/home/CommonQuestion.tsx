@@ -37,7 +37,7 @@ const questions: { question: string; answer: string | JSX.Element }[] = [
           fontSize={['14px', '14px', '14px', '14px']}
           lineHeight="22px"
         >
-          点击这里加入【Serverless技术粉丝群】进行交流，本站论坛亦将于近期上线，敬请期待。
+          点击这里加入「Serverless 技术粉丝群」进行交流，本站论坛亦将于近期上线，敬请期待。
         </Text>
       </Link>
     ),
