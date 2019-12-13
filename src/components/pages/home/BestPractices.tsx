@@ -11,7 +11,6 @@ import { MainTitle } from '@src/components/pages/home/Title'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { Blog, GraphqlBlogResult } from '@src/types'
 import BlogCard from './BlogCard'
-import CategoryLink from '@src/components/Link/CategoryLink'
 
 type BestPractice = Blog
 
@@ -82,11 +81,11 @@ export default function() {
 
               <Blogs blogs={blogs.edges} />
 
-              <CategoryLink custom category="best-practice">
+              <Link to="/best-practice">
                 <Button mt={[0, 0, '30px']} mb="30px" theme={theme}>
                   更多实践
                 </Button>
-              </CategoryLink>
+              </Link>
             </Center>
           </Background>
         )
