@@ -1,6 +1,7 @@
 ---
 link: /providers/tencent/components/koa
 ---
+[![Serverless Koa Tencent Cloud](https://img.serverlesscloud.cn/20191226/1577361724216-koajs_width.png)](http://serverless.com)
 
 ## 简介
 

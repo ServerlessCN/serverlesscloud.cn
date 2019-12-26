@@ -2,6 +2,9 @@
 link: /providers/tencent/components/egg
 ---
 
+[![Serverless Egg Tencent Cloud](https://img.serverlesscloud.cn/20191226/1577361751088-egg_width.png)](http://serverless.com)
+
+
 ## 简介
 
 腾讯云 [Egg.js](https://github.com/eggjs/egg) Serverless Component, 支持 Restful API 服务的部署。
