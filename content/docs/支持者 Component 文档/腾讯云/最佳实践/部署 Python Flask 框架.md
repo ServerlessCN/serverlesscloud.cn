@@ -2,6 +2,8 @@
 link: /providers/tencent/components/flask
 ---
 
+[![Serverless Python Flask Tencent Cloud](https://img.serverlesscloud.cn/20191226/1577347052683-flask_%E9%95%BF.png)](http://serverless.com)
+
 ## 简介
 
 腾讯云 [Flask](https://github.com/pallets/flask) Serverless Component, 支持 Restful API 服务的部署，不支持 Flask Command.

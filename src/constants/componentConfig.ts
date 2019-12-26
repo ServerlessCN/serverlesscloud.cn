@@ -4,9 +4,45 @@ const baseUrl = '/doc'
 
 const config: Component[] = [
   {
+    name: 'Python Flask component',
+    thumbnail:
+      'https://img.serverlesscloud.cn/20191226/1577353078702-flask.png',
+    slogan: '快速部署 Python Flask 框架',
+    description:
+      '无需复杂的配置，通过 Serverless Framework 快速部署 Python Flask 框架。',
+    link: `${baseUrl}/providers/tencent/components/flask`,
+  },
+  {
+    name: 'PHP Laravel component',
+    thumbnail:
+      'https://img.serverlesscloud.cn/20191226/1577353083364-laravel.png',
+    slogan: '快速部署 PHP Laravel 框架',
+    description:
+    '无需复杂的配置，通过 Serverless Framework 快速部署 PHP Laravel 框架。',
+    link: `${baseUrl}/providers/tencent/components/laravel`,
+  },
+  {
+    name: 'Vue fullstack component',
+    thumbnail:
+      'https://img.serverlesscloud.cn/20191226/1577353101878-vue.js.png',
+    slogan: '快速部署 Vue.js 全栈 Web 应用',
+    description:
+      '通过多个 Serverless Components 部署 Serverless 全栈应用程序。更方便快捷的部署 Serverless 应用，比如后端 API 与前端 Vue.js 结合等场景。',
+    link: `${baseUrl}/providers/tencent/templates/vue-full-stack`,
+  },
+  {
+    name: 'React fullstack component',
+    thumbnail:
+      'https://img.serverlesscloud.cn/20191226/1577353092870-react.png',
+    slogan: '快速部署 React.js 全栈 Web 应用',
+    description:
+    '通过多个 Serverless Components 部署 Serverless 全栈应用程序。更方便快捷的部署 Serverless 应用，比如后端 API 与前端 React.js 结合等场景。',
+    link: `${baseUrl}/providers/tencent/templates/react-full-stack`,
+  },
+  {
     name: 'framework',
     thumbnail:
-      'https://img.qcloud.com/qcloud/iaas_web/build/sfo_provider_2x_v2.png',
+      'https://img.serverlesscloud.cn/20191226/1577353426037-probider.png',
     slogan: '摒弃复杂配置，轻松实现 REST API',
     description:
       '无需复杂的配置，通过 Serverless Framework CLI便可以结合云函数和 API 网关，轻松实现 REST API 场景。',
@@ -15,7 +51,7 @@ const config: Component[] = [
   {
     name: 'express component',
     thumbnail:
-      'https://main.qcloudimg.com/raw/706ecab42919643ad6099a7b585efc16.png',
+      'https://img.serverlesscloud.cn/20191226/1577353480508-Express.js.png',
     slogan: '只需3秒，部署 Express.js 应用程序',
     description:
       '通过腾讯云 Express 组件，只需短短几秒，便能在腾讯云Serverless 架构上部署按需计费的 Express.js 应用程序。',
@@ -24,7 +60,7 @@ const config: Component[] = [
   {
     name: 'website component',
     thumbnail:
-      'https://main.qcloudimg.com/raw/38c79c64784c926f05e4de86093874ff.png',
+      'https://img.serverlesscloud.cn/20191226/1577353111488-website.png',
     slogan: '一行命令，部署您的静态网站',
     description:
       '腾讯云 Website 组件现已支持最新的 Web 框架和技术（Vue.js、React 等），您可以在几秒钟内将静态网站部署到对象存储中。',
