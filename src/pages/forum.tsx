@@ -29,7 +29,7 @@ const ForumPage = ({ location }: Props) => {
         <Column justifyContent="center" alignItems="center">
           <Text align="center" mb="20px" fontSize="24px" lineHeight={1.5}>
             论坛正在建设中，将于近期发布。
-            <TextP>您可以扫描下方二维码，加入Serverless技术群进行交流。 </TextP>
+            <TextP>您可以扫描下方二维码，加入 Serverless 技术群进行交流。 </TextP>
           </Text>
 
           <Image
