@@ -149,7 +149,7 @@ let config = [
               },
               {
                 label: '快速部署 Egg 框架',
-                to: `${baseUrl}/providers/tencent/components/koa`,
+                to: `${baseUrl}/providers/tencent/components/egg`,
               },
               {
                 label: '快速部署一个 Vue 全栈应用',
