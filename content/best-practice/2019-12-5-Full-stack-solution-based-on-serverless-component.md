@@ -56,11 +56,9 @@ module.exports = app
 
 接下来将介绍如何借助 Serverless Component 快速开发全栈 Web 应用。
 
-> 在开始所有步骤前，需执行 `npm install -g serverless` 命令，全局安装 `serverless cli`。
+![full-stack](https://liujiang-1253970226.cos.ap-chengdu.myqcloud.com/ncby5-dltv8.gif)
 
-<video id="video" controls="" preload="none" poster="https://main.qcloudimg.com/raw/7fb9d2d24290fb89315e4ed63d42c728.png">
-      <source id="mp4" src="https://video-1251001047.cos.ap-chengdu.myqcloud.com/combile.mp4">
-      </video>
+> 在开始所有步骤前，需执行 `npm install -g serverless` 命令，全局安装 `serverless cli`。
 
 ## 准备
 

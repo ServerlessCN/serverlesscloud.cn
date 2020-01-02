@@ -47,8 +47,8 @@ Serverless 字面意思是「无服务器」。根据语境的不同，Serverles
    码并提交到系统；
 4. 收到作业后，系统将构建项目并运行所有的测试用例；
 
-- 如果构建失败，候选人状态标记为 failed，并反馈给招聘团队
-- 如果构建成功，我们将测试代码覆盖率，如果小于某个值，则标记 failed 并通知团队
+  - 如果构建失败，候选人状态标记为 failed，并反馈给招聘团队
+  - 如果构建成功，我们将测试代码覆盖率，如果小于某个值，则标记 failed 并通知团队
 
 5. 如果构建成功并且代码覆盖率达标，那么我们将分析代码并计算代码质量得分，低于某
    个分数则标记 failed。反之则通过代码测试进入终面。
@@ -60,7 +60,7 @@ Serverless 应用。
 
 完成本教程之前，首先确保系统包含以下环境：
 
-1. 一个可用的[腾讯云账户](https://cloud.tencent.com/login)（Serverless Framework 支持[微信扫码一键登录](https://serverlesscloud.cn/blog/2019-12-5-Wechat-code-scanning-login/)）
+1. 一个可用的 [腾讯云账户](https://cloud.tencent.com/login)
 2. [Node.js](https://nodejs.org/en/) (版本号不低于 8.6，建议使用 10.0 及以上)
 3. [Serverless Framework](https://github.com/serverless/serverless)
 
@@ -72,7 +72,7 @@ $ npm install -g serverless
 
 你可以使用命令缩写 `sls` 来代替 `serverless`。
 
-## Step 1: 创建一个 Node.js 无服务器项目
+## Step 1：创建一个 Node.js 无服务器项目
 
 创建目录 `coding-round-evaluator` 并进入该目录：
 
@@ -89,7 +89,7 @@ $ sls create --template tencent-nodejs --path candidate-service --name candidate
 
 文件 `candidate-service` 的目录结构如下：
 
-```bash
+```
 .
 ├── index.js
 ├── package.json
@@ -150,7 +150,7 @@ module.exports.submit = (event, context, callback) => {
 
 在执行部署前，需要安装 `serverless` 插件 `serverless-tencent-scf`：
 
-```shell
+```
 $ npm i serverless-tencent-scf --save-dev
 ```
 
@@ -160,7 +160,7 @@ $ npm i serverless-tencent-scf --save-dev
 $ sls deploy --debug
 ```
 
-```bash
+```
 Serverless: Packaging service...
 Serverless: Excluding development dependencies...
 Serverless: Creating Stack...
@@ -186,7 +186,7 @@ functions:   candidateSubmission: candidate-dev-candidateSubmission
 
 现在，POST 操作可用了，您可以使用 cURL 等工具来发出 POST 请求。
 
-```shell
+```
 $ curl -X POST https://service-nld6x64o-1251556596.gz.apigw.tencentcs.com/release/candidate-dev-candidateSubmission
 ```
 
@@ -232,7 +232,7 @@ functions: # 定义了 candidateSubmission 的功能
 
 安装依赖：
 
-```Shell
+```
 $ npm install --save mysql2
 $ npm install --save uuid
 ```
@@ -327,7 +327,7 @@ module.exports.submit = async (event, context, callback) => {
 
 现在，可以执行部署了：
 
-```shell
+```
 $ serverless deploy -v
 ```
 
@@ -335,13 +335,13 @@ $ serverless deploy -v
 
 要测试 API，可以再次使用 cURL
 
-```bash
+```
 $ curl -H "Content-Type: application/json" -X POST -d '{"fullname":"Shekhar Gulati","email": "shekhargulati84@gmail.com", "experience":12}' https://service-6qkg1mbu-1251556596.gz.apigw.tencentcs.com/release/candidate-dev-candidateSubmission
 ```
 
 您将从 API 收到如下响应：
 
-```json
+```
 {
   "message": "Sucessfully submitted candidate with email shekhargulati84@gmail.com",
   "candidateId": "5343f0c0-f773-11e6-84ed-7bf29f824f23"
@@ -398,7 +398,7 @@ $ sls deploy
 
 部署成功后，您将能够使用 cURL 来测试 API。
 
-```bash
+```
 curl https://service-6qkg1mbu-1251556596.gz.apigw.tencentcs.com/release/candidate-dev-listCandidates
 {"experience":12,"id":"5343f0c0-f773-11e6-84ed-7bf29f824f23","email":"shekhargulati84@gmail.com","fullname":"Shekhar Gulati","submittedAt":1487598537164,"updatedAt":1487598537164}
 ```
@@ -443,18 +443,17 @@ module.exports.get = async (event, context, callback) => {
 
 使用 cURL 测试 API：
 
-```bash
+```
 curl https://05ccffiraa.execute-api.us-east-1.amazonaws.com/dev/candidates/5343f0c0-f773-11e6-84ed-7bf29f824f23
 {"experience":12,"id":"5343f0c0-f773-11e6-84ed-7bf29f824f23","email":"shekhargulati84@gmail.com","fullname":"Shekhar Gulati","submittedAt":1487598537164,"updatedAt":1487598537164}
 ```
 
 ## 小结
 
-至此，本文已经完整地展示了如何通过  [Serverless Framework](https://github.com/serverless/serverless) 来创建 REST API，源码下载：[Serverless With Mysql](https://github.com/yugasun/tencent-serverless-demo/tree/master/serverless-mysql)。您还可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发，
-欢迎访问：[Serverless 中文技术社区](https://serverlesscloud.cn/)！😝
+至此，本文已经完整地展示了如何通过  [Serverless Framework](https://github.com/serverless/serverless) 来创建 REST API，源码下载：[Serverless With Mysql](https://github.com/yugasun/tencent-serverless-demo/tree/master/serverless-mysql)。
 
 > 参考：
-> - [Serverless Framework - 产品官网](https://cloud.tencent.com/product/sf) 
+> - [Serverless Framework - 产品官网](www.serverless.com) 
 > - [Serverless Framework - GitHub](https://github.com/serverless/serverless/blob/master/README_CN.md) 
 
-
+欢迎访问：[Serverless 中文技术社区](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

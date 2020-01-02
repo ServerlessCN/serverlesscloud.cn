@@ -1,6 +1,6 @@
 ---
 title: 荐书 | Serverless 架构：从原理、设计到项目实战
-description: 安利一下 Serverless 中文技术社区成员 [anycodes](https://github.com/anycodes) 的大作
+description: 安利一下 Serverless 中文技术社区成员 Anycodes 的大作
 date: 2019-11-19
 thumbnail: https://img.serverlesscloud.cn/20191227/1577413467740-v2-b65fcb6a94208a494005fc0c40a99eb6_1200x500.jpg
 categories:

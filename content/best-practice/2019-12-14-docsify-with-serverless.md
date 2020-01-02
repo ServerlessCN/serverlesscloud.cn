@@ -24,7 +24,7 @@ authorslink:
 接下来我们分三步进行：**安装与初始化 → 配置 yml 文件 → 部署**
 
 <video id="video" controls="" preload="none" poster="https://img.serverlesscloud.cn/20191217/1576566243002-docsifyvideopic.png">
-<source id="mp4" src="https://img.serverlesscloud.cn/20191217/docsify.mp4">
+<source id="mp4" src="https://img.serverlesscloud.cn/video/docsify%2B%E7%89%87%E5%B0%BE4.mp4">
 </video>
 
 ## ▎安装与初始化
