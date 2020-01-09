@@ -123,6 +123,10 @@ let config = [
                 to: `${baseUrl}/providers/tencent/components/cos`,
               },
               {
+                label: '内容分发网络 CDN 组件',
+                to: `${baseUrl}/providers/tencent/components/cdn`,
+              },
+              {
                 label: '访问管理 CAM 角色组件',
                 to: `${baseUrl}/providers/tencent/components/cam-role`,
               },
@@ -140,12 +144,12 @@ let config = [
                 to: `${baseUrl}/providers/tencent/components/express`,
               },
               {
-                label: '快速部署静态网站',
-                to: `${baseUrl}/providers/tencent/components/website`,
+                label: '快速部署 Koa 框架',
+                to: `${baseUrl}/providers/tencent/components/koa`,
               },
               {
-                label: '快速部署 Hexo 博客',
-                to: `${baseUrl}/providers/tencent/templates/hexo`,
+                label: '快速部署 Egg 框架',
+                to: `${baseUrl}/providers/tencent/components/egg`,
               },
               {
                 label: '快速部署一个 Vue 全栈应用',
@@ -156,8 +160,24 @@ let config = [
                 to: `${baseUrl}/providers/tencent/templates/react-full-stack`,
               },
               {
+                label: '部署 PHP Laravel 框架',
+                to: `${baseUrl}/providers/tencent/components/laravel`,
+              },
+              {
+                label: '快速部署 Python Flask 框架',
+                to: `${baseUrl}/providers/tencent/components/flask`,
+              },
+              {
                 label: '快速构建 REST API',
                 to: `${baseUrl}/providers/tencent/templates/rest-api`,
+              },
+              {
+                label: '快速部署静态网站',
+                to: `${baseUrl}/providers/tencent/components/website`,
+              },
+              {
+                label: '快速部署 Hexo 博客',
+                to: `${baseUrl}/providers/tencent/templates/hexo`,
               },
             ],
           },

@@ -1,21 +1,17 @@
 ---
-link: /providers/tencent/components/express
+link: /providers/tencent/components/koa
 ---
-
-[![Serverless Express Tencent Cloud](https://main.qcloudimg.com/raw/706ecab42919643ad6099a7b585efc16.png)](http://serverless.com)
-
-&nbsp;
+[![Serverless Koa Tencent Cloud](https://img.serverlesscloud.cn/20191226/1577361724216-koajs_width.png)](http://serverless.com)
 
 ## 简介
 
-Express 组件通过使用 serverless-tencent 的基础组件如 API 网关组件，SCF 组件等，快速，方便的在腾讯云创建，配置和管理一个 Express 框架。
-<img align="right" width="400" src="https://scf-dev-tools-1253665819.cos.ap-guangzhou.myqcloud.com/express_demo_light_sm_resize.gif" />
+koa 组件通过使用 serverless-tencent 的基础组件如 API 网关组件，SCF 组件等，快速，方便的在腾讯云创建，配置和管理一个 [koa 框架](https://koajs.com/)。
 
 ## 快速开始
 
-&nbsp;
+通过 koa 组件，对一个 koa 应用进行完整的创建，配置，部署和删除等操作。支持命令如下：
 
-通过 Express 组件，对一个 Express 应用进行完整的创建，配置，部署和删除等操作。支持命令如下：
+&nbsp;
 
 1. [安装](#1-安装)
 2. [创建](#2-创建)
@@ -35,31 +31,36 @@ $ npm install -g serverless
 
 ### 2. 创建
 
-本地创建 `serverless.yml` 文件：
+本地创建 `serverless.yml` 文件和 `app.js`文件：
 
 ```
 $ touch serverless.yml
 ```
 
-初始化一个新的 npm 包，并安装 Express：
+初始化一个新的 npm 包，并安装 koa:
 
 ```
-$ npm init              # 创建后持续回车
-$ npm i --save express  # 安装express
+npm init              # 创建后持续回车
+npm i --save koa  # 安装 koa
 ```
 
-创建一个 `app.js`文件，并在其中创建您的 Express App：
+创建一个 `app.js`文件，并在其中创建您的 koa App：
+
+```
+$ touch app.js
+```
 
 ```js
-const express = require('express')
-const app = express()
+const koa = require('koa');
+const app = new koa();
 
-app.get('/', function(req, res) {
-  res.send('Hello Express')
-})
+app.use(async (ctx, next) => {
+  if (ctx.path !== '/') return next();
+  ctx.body = 'Hello from Koa';
+});
 
 // don't forget to export!
-module.exports = app
+module.exports = app;
 ```
 
 ### 3. 配置
@@ -69,19 +70,19 @@ module.exports = app
 ```yml
 # serverless.yml
 
-express:
-  component: '@serverless/tencent-express'
+koa:
+  component: '@serverless/tencent-koa'
   inputs:
     region: ap-shanghai
 ```
-
-- [点击此处查看配置文档](https://github.com/serverless-tencent/tencent-express/blob/master/docs/configure.md)
 
 ### 4. 部署
 
 如您的账号未[登陆](https://cloud.tencent.com/login)或[注册](https://cloud.tencent.com/register)腾讯云，您可以直接通过`微信`扫描命令行中的二维码进行授权登陆和注册。
 
 通过`sls`命令进行部署，并可以添加`--debug`参数查看部署过程中的信息
+
+> 注：`sls`命令是`serverless`命令的缩写
 
 ```
 $ sls --debug
@@ -93,32 +94,32 @@ $ sls --debug
   DEBUG ─ Creating the template's components graph.
   DEBUG ─ Syncing template state.
   DEBUG ─ Executing the template's components graph.
-  DEBUG ─ Compressing function ExpressComponent_7xRrrd file to /Users/dfounderliu/Desktop/temp/code/.serverless/ExpressComponent_7xRrrd.zip.
-  DEBUG ─ Compressed function ExpressComponent_7xRrrd file successful
-  DEBUG ─ Uploading service package to cos[sls-cloudfunction-ap-shanghai-code]. sls-cloudfunction-default-ExpressComponent_7xRrrd-1572512568.zip
-  DEBUG ─ Uploaded package successful /Users/dfounderliu/Desktop/temp/code/.serverless/ExpressComponent_7xRrrd.zip
-  DEBUG ─ Creating function ExpressComponent_7xRrrd
-  DEBUG ─ Created function ExpressComponent_7xRrrd successful
-  DEBUG ─ Starting API-Gateway deployment with name express.TencentApiGateway in the ap-shanghai region
+  DEBUG ─ Compressing function KoaComponent_7xRrrd file to /Users/dfounderliu/Desktop/temp/code/.serverless/KoaComponent_7xRrrd.zip.
+  DEBUG ─ Compressed function KoaComponent_7xRrrd file successful
+  DEBUG ─ Uploading service package to cos[sls-cloudfunction-ap-shanghai-code]. sls-cloudfunction-default-KoaComponent_7xRrrd-1572512568.zip
+  DEBUG ─ Uploaded package successful /Users/dfounderliu/Desktop/temp/code/.serverless/KoaComponent_7xRrrd.zip
+  DEBUG ─ Creating function KoaComponent_7xRrrd
+  DEBUG ─ Created function KoaComponent_7xRrrd successful
+  DEBUG ─ Starting API-Gateway deployment with name koa.TencentApiGateway in the ap-shanghai region
   DEBUG ─ Using last time deploy service id service-n0vs2ohb
   DEBUG ─ Updating service with serviceId service-n0vs2ohb.
   DEBUG ─ Endpoint ANY / already exists with id api-9z60urs4.
   DEBUG ─ Updating api with api id api-9z60urs4.
   DEBUG ─ Service with id api-9z60urs4 updated.
   DEBUG ─ Deploying service with id service-n0vs2ohb.
-  DEBUG ─ Deployment successful for the api named express.TencentApiGateway in the ap-shanghai region.
+  DEBUG ─ Deployment successful for the api named koa.TencentApiGateway in the ap-shanghai region.
 
-  express:
+  koa:
     region:              ap-shanghai
-    functionName:        ExpressComponent_7xRrrd
+    functionName:        KoaComponent_7xRrrd
     apiGatewayServiceId: service-n0vs2ohb
     url:                 http://service-n0vs2ohb-1300415943.ap-shanghai.apigateway.myqcloud.com/release/
 
-  36s › express › done
+  36s › koa › done
 
 ```
 
-部署完毕后，可以在浏览器中访问返回的链接，看到对应的 express 返回值。
+部署完毕后，可以在浏览器中访问返回的链接，看到对应的 koa 返回值。
 
 ### 5. 移除
 
@@ -128,11 +129,11 @@ $ sls --debug
 $ sls remove --debug
 
   DEBUG ─ Flushing template state and removing all components.
-  DEBUG ─ Removed function ExpressComponent_MHrAzr successful
+  DEBUG ─ Removed function KoaComponent_MHrAzr successful
   DEBUG ─ Removing any previously deployed API. api-kf2hxrhc
-  DEBUG ─ Removing any previously deployed service. service-4ndfl6pz
+  DEBUG ─ Removing any previously deployed service.  service-n0vs2ohb
 
-  13s › express › done
+  13s › koa › done
 ```
 
 ### 账号配置（可选）
@@ -149,12 +150,8 @@ $ touch .env # 腾讯云的配置信息
 
 如果已有腾讯云账号，可以在 [API 密钥管理](https://console.cloud.tencent.com/cam/capi)中获取 `SecretId` 和`SecretKey`.
 
-```env
+```text
 # .env
 TENCENT_SECRET_ID=123
 TENCENT_SECRET_KEY=123
 ```
-
-### 还支持哪些组件？
-
-可以在 [Serverless Components](https://github.com/serverless/components) 中查询更多组件的信息。

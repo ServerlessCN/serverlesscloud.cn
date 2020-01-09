@@ -5,6 +5,7 @@ module.exports = {
     title: `Serverless 中文技术社区 - serverlesscloud.cn`,
     description: `Serverless中文技术社区是国内开发者技术交流社区。提供Serverless最新信息、实践案例、技术博客、组件文档、学习资源，帮助开发者快速应用Severless技术和解决开发中的问题。`,
     author: '',
+    siteUrl: `https://serverlesscloud.cn`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -75,8 +76,37 @@ module.exports = {
         icon: `src/assets/images/icon-serverless-framework.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        sitemapSize: 5000,
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+        }`,
+        output: `/sitemap.xml`,
+        exclude: [`/404`, `/404.html`],
+        createLinkInHead: true,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map(edge => {
+            return {
+              url: site.siteMetadata.siteUrl + edge.node.path,
+              changefreq: `daily`,
+              priority: 0.7,
+            }
+          }),
+      },
+    },
   ],
 }

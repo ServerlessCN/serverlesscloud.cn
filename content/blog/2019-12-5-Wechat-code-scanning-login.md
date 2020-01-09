@@ -2,7 +2,7 @@
 title: 极简配置，业务上云只需 3min
 description: Serverless Framework 最新发布微信扫码一键登录能力，支持用户在本地环境扫码注册登陆。
 date: 2019-12-04
-thumbnail: https://main.qcloudimg.com/raw/78b97f99889774773552691057aced97.png
+thumbnail: https://hello-world-1253970226.cos.ap-chengdu.myqcloud.com/wechat.png
 categories:
   - news
 authors:
@@ -10,6 +10,8 @@ authors:
 ---
 
 为了简化账号配置环节，实现本地一键开发部署，Serverless Framework 发布了微信扫码一键登录能力，支持用户在 Serverless Framework 环境扫码注册登陆，用户无需登录控制台，可全程在本地完成应用的部署。
+
+![wechat](https://hello-world-1253970226.cos.ap-chengdu.myqcloud.com/dwft1-fesk0.gif)
 
 # 快速入门：简单四步，部署你的 Hello Word
 
@@ -81,7 +83,7 @@ serverless deploy
 
 **如账号未登陆或注册腾讯云，可在运行该命令后，直接通过微信扫描命令行中的二维码，点击「去微信授权」，授权登录和注册。**
 
-![](https://main.qcloudimg.com/raw/03ca252de9cfdee24c8a56bbaa68ff94.png)
+![wechat](https://hello-world-1253970226.cos.ap-chengdu.myqcloud.com/de8j1-pz66k.gif)
 
 部署成功后，可以直接在浏览器访问日志中返回的 url 地址，查看部署的 Hello World 效果：
 

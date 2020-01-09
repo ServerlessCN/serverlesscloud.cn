@@ -25,11 +25,11 @@ const links: {
     category: '资源',
     contents: [
       {
-        title: 'Github',
+        title: 'GitHub',
         link: 'https://github.com/serverless/serverless',
       },
       {
-        title: 'BLOG',
+        title: '博客',
         link: '/blog',
         isInternal: true,
       },
