@@ -24,7 +24,7 @@ authorslink:
 
 好像有点多，咱们一步步往下看。
 
-## 1. 安装 Serverless：
+## 1. 安装 Serverless
 
 ```
 $ npm install -g serverless
@@ -60,7 +60,7 @@ $ php composer.phar
 
 ![安装 composer](https://img.serverlesscloud.cn/2020113/1578915318015-pa2uz2y1n4%5B1%5D.png)
 
-## 3. 创建 coastercms：
+## 3. 创建 coastercms
 
 ```
 $php composer.phar create-project web-feet/coastercms
