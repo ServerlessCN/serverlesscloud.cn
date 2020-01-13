@@ -2,7 +2,7 @@
 title: LARAVEL + SERVERLESS FRAMEWORK 快速创建CMS内容管理系统
 description: 通过 Serverless Laravel 组件快速构建一个 Serverless CMS内容管理系统
 date: 2020-01-13
-thumbnail: https://img.serverlesscloud.cn/20191217/1576565954158-docsify.png
+thumbnail: https://img.serverlesscloud.cn/20191226/1577353083364-laravel.png
 categories:
   - best-practice
 authors:
@@ -15,17 +15,12 @@ authorslink:
 
 首先，我来介绍下主要的本地环境吧：
 
-Git： 不多说，只要会敲代码就应该知道
-
-Nodejs：由于 Serverless Framework主编程语言是nodejs，所以本地也请大家搞一个吧
-
-NPM：NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题，我们的sls也是通过这玩意下载的
-
-PHP：不多说，最好的语言
-
-Composer：PHP 世界的包管理工具 Composer ，类似npm
-
-Laravel：Laravel是一套简洁、优雅的PHP Web开发框架(PHP Web Framework)
+- Git： 不多说，只要会敲代码就应该知道
+- Nodejs：由于 Serverless Framework主编程语言是nodejs，所以本地也请大家搞一个吧
+- NPM：NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题，我们的sls也是通过这玩意下载的
+- PHP：不多说，最好的语言
+- Composer：PHP 世界的包管理工具 Composer ，类似npm
+- Laravel：Laravel是一套简洁、优雅的PHP Web开发框架(PHP Web Framework)
 
 好像有点多，咱们一步步往下看。
 
@@ -39,7 +34,7 @@ $ npm install -g serverless
 
 ![安装 Serverless](https://img.serverlesscloud.cn/2020113/1578915292994-89i51tt2m4%5B1%5D.png)
 
-## 2.配置Composer
+## 2. 配置Composer
 
 有两种方式，我们在这里使用第一种为大家示范
 
@@ -201,8 +196,8 @@ serverless --debug
 
 ![完成效果](https://img.serverlesscloud.cn/2020113/1578915365153-kru2vmr2j2%5B1%5D.png)
 
-> 参考：
-> - [Serverless Framework - 产品官网](https://cloud.tencent.com/product/sf) 
-> - [Serverless Framework - GitHub](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+参考：
+[Serverless Framework - 产品官网](https://cloud.tencent.com/product/sf) 
+[Serverless Framework - GitHub](https://github.com/serverless/serverless/blob/master/README_CN.md) 
 
 欢迎访问：[Serverless 中文技术社区](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
