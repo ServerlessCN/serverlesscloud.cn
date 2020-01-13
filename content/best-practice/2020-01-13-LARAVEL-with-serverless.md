@@ -1,5 +1,5 @@
 ---
-title: LARAVEL + SERVERLESS FRAMEWORK 快速创建CMS内容管理系统
+title: Laravel + Serverless Framework 快速创建CMS内容管理系统
 description: 通过 Serverless Laravel 组件快速构建一个 Serverless CMS内容管理系统
 date: 2020-01-13
 thumbnail: https://img.serverlesscloud.cn/20191226/1577353083364-laravel.png
