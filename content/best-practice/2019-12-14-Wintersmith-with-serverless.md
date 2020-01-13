@@ -36,7 +36,9 @@ $ npm install -g serverless
 $ npm i wintersmith -g
 ```
 
-## 3. 新建wintersmith项目，可指定路径
+## 3. 新建wintersmith项目
+
+可对指定路径进行安装
 
 ```js
 $ wintersmith new <path>
