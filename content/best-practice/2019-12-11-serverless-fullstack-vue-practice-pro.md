@@ -204,6 +204,12 @@ async getUsers() {
 },
 ```
 
-## 总结
+## 小结
 
-到这里，有关 `Serverless Component` 全栈解决方案的全部内容就到此结束了。欢迎访问 [Serverless 中文社区](https://serverlesscloud.cn)，里面有丰富的最佳实践文章和关于 Serverless 优秀的学习博客，同时也有专门用来学习和交流的微信和 QQ 群，拉到页面底端，加入我们吧！
+以上基于腾讯云 [Serverless Framework](https://cloud.tencent.com/product/sf) 来实现。到这里，有关 `Serverless Component` 全栈解决方案的全部内容就到此结束啦！
+
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
