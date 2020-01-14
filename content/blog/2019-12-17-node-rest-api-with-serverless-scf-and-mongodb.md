@@ -452,8 +452,8 @@ curl https://05ccffiraa.execute-api.us-east-1.amazonaws.com/dev/candidates/5343f
 
 至此，本文已经完整地展示了如何通过  [Serverless Framework](https://github.com/serverless/serverless) 来创建 REST API，源码下载：[Serverless With Mysql](https://github.com/yugasun/tencent-serverless-demo/tree/master/serverless-mysql)。
 
-> 参考：
-> - [Serverless Framework - 产品官网](www.serverless.com) 
-> - [Serverless Framework - GitHub](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
 
-欢迎访问：[Serverless 中文技术社区](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

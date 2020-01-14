@@ -115,3 +115,9 @@ Serverless 下的体验就非常不同，因为无服务器架构，所以不需
 首先我预测 Serverless 生态一定会趋于繁荣。一个技术很有优势，相关的社区贡献，以及周边的支持就越强大，用的人就越多；用的人越多，这个技术就越火，类似于经济学里的有效市场理论。最近 Serverless 的发展很快，可能大家看到这篇内容的时候，我们的 Serverless DB 产品已经发布了，就是开发者连数据库的存在都不需要关注了。Serverless 的使用者会越来越多，同时生态里的贡献者也会更多，整个生态也会更加繁荣。
 
 第二个方向是 Serverless 的标准化。当生态繁荣之后，对于标准化的需求就变得非常强烈了。国内外各家云都有了自己的 Serverless 解决方案，对开发者隐藏了底层基础设置。但是各家的接口、实现还是不一样。试想一下，开发者在国内云上用 Serverless 实现的代码，在做国际化的时候，要迁移到另一个云厂商，却发现完全无法平滑迁移是什么感受？公司内两个技术团队如何在 Serverless 的架构下复用功能和代码？如何能够用统一的标准或者框架来构建应用？Serverless 开发需要一些标准，或是某一种框架来适配各个云厂商之间的不同实现和接口，很可能是 Serverless 接下来的发展方向。
+
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

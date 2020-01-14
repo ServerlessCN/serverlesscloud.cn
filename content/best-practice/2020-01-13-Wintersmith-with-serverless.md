@@ -1,5 +1,5 @@
 ---
-title: 使用 Wintersmith+Serverless Framework 快速创建个人站点
+title: 使用 Wintersmith + Serverless Framework 快速创建个人站点
 description: 通过 Serverless Website 组件快速构建一个 Serverless Wintersmith 个人站点。
 date: 2020-01-13
 thumbnail: https://img.serverlesscloud.cn/2020113/1578918119146-WINTERS.png
@@ -10,7 +10,7 @@ authors:
 authorslink:
   - https://canmeng.net
 ---
-首先我们来介绍下，Wintersmith是一个简单而灵活的静态站点生成器。采用 markdown构建，这个是我们的基础条件。
+首先我们来介绍下，Wintersmith 是一个简单而灵活的静态站点生成器。采用 markdown 构建，这个是我们的基础条件。
 
 - [Serverless Framework](https://github.com/serverless/serverless/blob/master/README_CN.md)：在 GitHub 上有三万颗星，业界非常受欢迎的无服务器应用框架，开发者无需关心底层资源即可部署完整可用的 Serverless 应用架构。
 
@@ -36,7 +36,7 @@ $ npm install -g serverless
 $ npm i wintersmith -g
 ```
 
-## 3. 新建wintersmith项目
+## 3. 新建 wintersmith 项目
 
 可对指定路径进行安装
 
@@ -96,13 +96,13 @@ myWebsite:
 
 ## 6. 部署
 
-通过 sls 命令进行部署，这里还可以添加 –debug 参数来查看部署过程中的信息，
+通过 `sls` 命令进行部署，这里还可以添加 `–debug` 参数来查看部署过程中的信息：
 
 ```js
 $ sls --debug
 ```
 
-如果你的账号未 登陆 或 注册 腾讯云，可以直接通过微信扫描命令行中的二维码，从而进行授权登陆和注册。这也是我觉得特别方便的一个地方！
+如您的账号未[登陆](https://cloud.tencent.com/login)或[注册](https://cloud.tencent.com/register)腾讯云，您可以直接通过微信扫描命令行中的二维码进行授权登陆和注册，从而进行授权登陆和注册。这也是我觉得特别方便的一个地方！
 
 部署过程中，terminal 显示信息示意：
 
@@ -110,11 +110,12 @@ $ sls --debug
 
 ## 7. 小结
 
-本文使用了非常流行的无服务器框架 Serverless Framework 来搭建  Wintersmith 博客系统。
+本文使用了腾讯云的无服务器框架 [Serverless Framework](https://cloud.tencent.com/product/sf) 来搭建  Wintersmith 博客系统。
 
-虽然这只是一个非常简单的示例，但是不难看出，Serverless Framework 在快速部署方面的强大能力。比如集成了微信扫描二维码，就直接让我们避开了繁琐的云服务的账号注册、配置的环节。而你需要做的，只是根据Wintersmith自身的能力，进行网站的定制。
+虽然这只是一个非常简单的示例，但是不难看出，Serverless Framework 在快速部署方面的强大能力。比如集成了微信扫描二维码，就直接让我们避开了繁琐的云服务的账号注册、配置的环节。而你需要做的，只是根据 Wintersmith 自身的能力，进行网站的定制。
 
-## 了解更多
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
 
-- 产品官网：www.serverless.com，您还可以在 [Serverless Components](https://github.com/serverless/components) repo 中查询更多组件的信息；
-- 欢迎访问：[Serverless 中文技术社区](https://serverlesscloud.cn/)，您可以在 最佳实践 里尝试部署，体验产品能力。
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

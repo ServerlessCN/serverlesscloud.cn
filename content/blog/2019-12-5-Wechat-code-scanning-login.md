@@ -98,4 +98,8 @@ functions:   hello_world: my-service-dev-hello_world
     ANY - https://service-c6pxs4ku-1256386184.gz.apigw.tencentcs.com/release/my-service-dev-hello_world
 ```
 
-欢迎大家访问 [Serverless Github](https://github.com/serverless/components) 网站，部署更多好玩、实用的服务与应用。
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

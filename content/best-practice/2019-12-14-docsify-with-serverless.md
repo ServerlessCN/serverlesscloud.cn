@@ -120,12 +120,10 @@ $ sls --debug
 
 ## ▎小结
 
-本文使用了非常流行的无服务器框架 [Serverless Framework](https://github.com/serverless/serverless/blob/master/README_CN.md) 来搭建 docsify 博客系统，更多产品信息可以移步 [官网](https://cloud.tencent.com/product/sf) 学习，官方文档能解决 90% 以上的问题。
+以上示例基于腾讯云的无服务器框架 [Serverless Framework](https://cloud.tencent.com/product/sf) ，虽然只是一个非常简单的 demo，但是不难看出，Serverless Framework 在快速部署方面的强大能力。比如集成了微信扫描二维码，就直接让我们避开了繁琐的云服务的账号注册、配置的环节。而你需要做的，只是根据 docsify 自身的能力，进行网站的定制而已。通过这两个工具的结合使用，即使编程小白也能快速搭建起自己的个人博客！✌️
 
-虽然这只是一个非常简单的示例，但是不难看出，Serverless Framework 在快速部署方面的强大能力。比如集成了微信扫描二维码，就直接让我们避开了繁琐的云服务的账号注册、配置的环节。而你需要做的，只是根据 docsify 自身的能力，进行网站的定制而已。通过这两个工具的结合使用，即使编程小白也能快速搭建起自己的个人博客！✌️
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
 
-> 参考：
-> - [Serverless Framework - 产品官网](https://cloud.tencent.com/product/sf) 
-> - [Serverless Framework - GitHub](https://github.com/serverless/serverless/blob/master/README_CN.md) 
-
-欢迎访问：[Serverless 中文技术社区](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！😝
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！😝

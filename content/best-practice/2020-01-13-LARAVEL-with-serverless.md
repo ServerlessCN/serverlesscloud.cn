@@ -1,6 +1,6 @@
 ---
-title: Laravel + Serverless Framework 快速创建CMS内容管理系统
-description: 通过 Serverless Laravel 组件快速构建一个 Serverless CMS内容管理系统
+title: Laravel + Serverless Framework 快速创建 CMS 内容管理系统
+description: 通过 Serverless Laravel 组件快速构建一个 Serverless CMS 内容管理系统
 date: 2020-01-13
 thumbnail: https://img.serverlesscloud.cn/20191226/1577353083364-laravel.png
 categories:
@@ -11,16 +11,16 @@ authorslink:
   - https://canmeng.net
 ---
 
-今天，为大家带来一篇 Laravel  + Serverless Framework 的综合实战，里面信息量有点多，大家仔细看哦～
+今天，为大家带来一篇 Laravel + Serverless Framework 的综合实战，里面信息量有点多，大家仔细看哦～
 
 首先，我来介绍下主要的本地环境吧：
 
-- Git： 不多说，只要会敲代码就应该知道
-- Nodejs：由于 Serverless Framework主编程语言是nodejs，所以本地也请大家搞一个吧
-- NPM：NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题，我们的sls也是通过这玩意下载的
+- Git：不多说，只要会敲代码就应该知道
+- Node.js：由于腾讯云 [Serverless Framework](https://cloud.tencent.com/product/sf) 主编程语言是 Node.js，所以本地也请大家搞一个吧
+- NPM：NPM 是随同 Node.js 一起安装的包管理工具，能解决 Node.js 代码部署上的很多问题，我们的 sls 也是通过这玩意下载的
 - PHP：不多说，最好的语言
-- Composer：PHP 世界的包管理工具 Composer ，类似npm
-- Laravel：Laravel是一套简洁、优雅的PHP Web开发框架(PHP Web Framework)
+- Composer：PHP 世界的包管理工具 Composer ，类似 npm
+- Laravel：Laravel 是一套简洁、优雅的 PHP Web 开发框架 (PHP Web Framework)
 
 好像有点多，咱们一步步往下看。
 
@@ -34,11 +34,11 @@ $ npm install -g serverless
 
 ![安装 Serverless](https://img.serverlesscloud.cn/2020113/1578915292994-89i51tt2m4%5B1%5D.png)
 
-## 2. 配置Composer
+## 2. 配置 Composer
 
 有两种方式，我们在这里使用第一种为大家示范
 
-第一种下载phar文件：
+第一种下载 phar 文件：
 
 ```
 $ wget https://getcomposer.org/download/1.9.1/composer.phar
@@ -66,7 +66,7 @@ $ php composer.phar
 $php composer.phar create-project web-feet/coastercms
 ```
 
-首先我们使用安装好的composer来创建我们的项目，如果直接在环境变量安装 composer 请自行将php composer.phar替换。然后，我们需要修改 Laravel 项目
+首先我们使用安装好的 composer 来创建我们的项目，如果直接在环境变量安装 composer 请自行将 php composer.phar 替换。然后，我们需要修改 Laravel 项目
 
 由于云函数在执行时，只有 /tmp 可读写的，所以我们需要将 laravel 框架运行时的 storage 目录写到该目录下，为此需要修改 bootstrap/app.php 文件，在 $app = new Illuminate\Foundation\Application 后添加：
 
@@ -137,9 +137,9 @@ LOG_CHANNEL=stderr
 APP_STORAGE=/tmp
 ```
 
-## 4. 配置mysql数据库
+## 4. 配置 MySQL 数据库
 
-这里我们建议使用腾讯云的CDB云数据库：
+这里我们建议使用腾讯云的 CDB 云数据库：
 
 ![数据库](https://img.serverlesscloud.cn/2020113/1578915337328-lu3mep4x02%5B1%5D.png)
 
@@ -153,7 +153,7 @@ DB_PASSWORD="secret"
 DB_PREFIX=
 ```
 
-然后将.env.example重命名为.env。至此，我们的Laravel配置即可大功告成。
+然后将 `.env.example` 重命名为 `.env`。至此，我们的 Laravel 配置即可大功告成。
 
 ## 5. 部署 Serverless
 
@@ -196,11 +196,8 @@ serverless --debug
 
 ![完成效果](https://img.serverlesscloud.cn/2020113/1578915365153-kru2vmr2j2%5B1%5D.png)
 
-参考：
-[Serverless Framework - 产品官网](https://cloud.tencent.com/product/sf) 
-[Serverless Framework - GitHub](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
 
-## 了解更多
-
-- 产品官网：www.serverless.com，您还可以在 [Serverless Components](https://github.com/serverless/components) repo 中查询更多组件的信息；
-- 欢迎访问：[Serverless 中文技术社区](https://serverlesscloud.cn/)，您可以在 最佳实践 里尝试部署，体验产品能力。
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

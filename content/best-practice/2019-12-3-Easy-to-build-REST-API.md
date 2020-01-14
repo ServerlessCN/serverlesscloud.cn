@@ -1,7 +1,7 @@
 ---
 title: 通过 SCF Component 轻松构建 REST API，再也不用熬夜加班了
 description: 本教程将分享如何通过 Serverless SCF Component 、云函数 SCF 及 API 网关组件，快速构建一个 REST API 并实现 GET/PUT 操作。
-date: 2019-12-05
+date: 2019-12-03
 thumbnail: https://main.qcloudimg.com/raw/bd045821dfa072b894864a12c1267469.png
 categories:
   - best-practice
@@ -187,6 +187,14 @@ TENCENT_SECRET_ID=123
 TENCENT_SECRET_KEY=123
 ```
 
-[完整仓库模板](https://github.com/serverless/components/blob/master/templates/tencent-python-rest-api/README_CN.md)
+查看：[完整仓库模板](https://github.com/serverless/components/blob/master/templates/tencent-python-rest-api/README_CN.md)
 
-目前 REST API 模板主要展示了 GET/PUT 操作，后续即将支持对 Serverless DB 的连接，可以完整实现 CRUD 操作，并支持资源的弹性扩缩容。您可以通过该模板快速开发业务 REST API，参考文章示例，扩展代码，探索更丰富的场景。
+目前 REST API 模板主要展示了 GET/PUT 操作，后续腾讯云 [Serverless Framework](https://cloud.tencent.com/product/sf) 也将支持对 Serverless DB 的连接，可以完整实现 CRUD 操作，并支持资源的弹性扩缩容。您可以通过该模板快速开发业务 REST API、扩展代码，探索更丰富的场景。
+
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
+
+

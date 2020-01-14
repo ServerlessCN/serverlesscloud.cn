@@ -68,3 +68,9 @@ Serverless 不仅仅是计算，还需要不断完善周边生态。
 后续的专栏文章也将陆续解读更多核心能力，帮助开发者更好地理解和使用 Serverless。
 
 **Serverless is more!**
+
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
