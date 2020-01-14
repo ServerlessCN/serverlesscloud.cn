@@ -200,4 +200,7 @@ serverless --debug
 [Serverless Framework - 产品官网](https://cloud.tencent.com/product/sf) 
 [Serverless Framework - GitHub](https://github.com/serverless/serverless/blob/master/README_CN.md) 
 
-欢迎访问：[Serverless 中文技术社区](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
+## 了解更多
+
+- 产品官网：www.serverless.com，您还可以在 [Serverless Components](https://github.com/serverless/components) repo 中查询更多组件的信息；
+- 欢迎访问：[Serverless 中文技术社区](https://serverlesscloud.cn/)，您可以在 最佳实践 里尝试部署，体验产品能力。
