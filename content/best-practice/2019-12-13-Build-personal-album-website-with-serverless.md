@@ -23,8 +23,8 @@ authorslink:
 
 整个网站的搭建部署只需三步：安装与初始化 → 配置 yml 文件 → 部署。
 
-<video id="video" controls="" preload="none" poster="https://sf-1251001047.cos.ap-chengdu.myqcloud.com/123.png">
-<source id="mp4" src="https://sf-1251001047.cos.ap-chengdu.myqcloud.com/thumbsup.mp4" type="video/mp4">
+<video id="video" controls="" preload="none" poster="https://video-1251001047.cos.ap-chengdu.myqcloud.com/thumbsup.png">
+<source id="mp4" src="https://video-1251001047.cos.ap-chengdu.myqcloud.com/thubmsup.mp4" type="video/mp4">
 </video>
 
 ## 安装与初始化
@@ -50,7 +50,7 @@ $ npm install -g thumbsup
 **3. 初始化项目**
 
 ```
-$ md photos
+$ mkdir photos
 $ thumbsup --input .\photos\ --output website
 ```
 初始化成功后，可以看到项目目录结构：
@@ -66,7 +66,7 @@ $ thumbsup --input .\photos\ --output website
 项目目录下，创建 `serverless.yml` 文件
 
 ```
-cd.> serverless.yml
+touch serverless.yml
 ```
 将以下内容写入上述的 yml 文件里：
 
