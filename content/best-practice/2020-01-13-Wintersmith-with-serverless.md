@@ -113,3 +113,8 @@ $ sls --debug
 本文使用了非常流行的无服务器框架 Serverless Framework 来搭建  Wintersmith 博客系统。
 
 虽然这只是一个非常简单的示例，但是不难看出，Serverless Framework 在快速部署方面的强大能力。比如集成了微信扫描二维码，就直接让我们避开了繁琐的云服务的账号注册、配置的环节。而你需要做的，只是根据Wintersmith自身的能力，进行网站的定制。
+
+## 了解更多
+
+- 产品官网：www.serverless.com，您还可以在 [Serverless Components](https://github.com/serverless/components) repo 中查询更多组件的信息；
+- 欢迎访问：[Serverless 中文技术社区](https://serverlesscloud.cn/)，您可以在 最佳实践 里尝试部署，体验产品能力。
