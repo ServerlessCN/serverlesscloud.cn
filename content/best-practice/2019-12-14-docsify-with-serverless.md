@@ -120,7 +120,7 @@ $ sls --debug
 
 ## ▎小结
 
-以上示例基于腾讯云的无服务器框架 [Serverless Framework](https://cloud.tencent.com/product/sf) 实现，代码详情可参考完整的[模板仓库](https://github.com/Aceyclee/serverless-docsify) 👈
+以上示例基于腾讯云的无服务器框架 [Serverless Framework](https://cloud.tencent.com/product/sf) 实现，代码详情可参考完整的 [模板仓库](https://github.com/Aceyclee/serverless-docsify) 👈
 
 虽然这只是一个非常简单的 demo，但是不难看出，Serverless Framework 在快速部署方面的强大能力。比如集成了微信扫描二维码，就直接让我们避开了繁琐的云服务的账号注册、配置的环节。而你需要做的，只是根据 docsify 自身的能力，进行网站的定制而已。通过这两个工具的结合使用，即使编程小白也能快速搭建起自己的个人博客！✌️
 

@@ -36,7 +36,7 @@ const BlogList = ({
           'Serverless团队博客,Serverless发布,Serverless动态,Serverless新闻'
         }
         description={
-          'Serverless Framework 团队博客最新动态，最新功能，最新版本发布'
+          'Serverless 中文网分享了 Serverless 技术的最新动态、Serverless 团队的工程实践，以及社区开发者撰写投稿的优质技术博文'
         }
         location={location}
       />

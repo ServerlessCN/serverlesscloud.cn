@@ -4,7 +4,7 @@ title:
   REST API
 description: 本文介绍如何创建一个进行自动化面试评估的 Serverless 应用！
 date: 2019-12-17
-thumbnail: https://img.serverlesscloud.cn/20191231/1577769064015-joshua-aragon-FGXqbqbGt5o-unsplash.jpg
+thumbnail: https://img.serverlesscloud.cn/2020115/1579078112543-1577769064015-joshua-aragon-FGXqbqbGt5o-unsplash.jpg
 categories:
   - guides-and-tutorials
   - user-stories
