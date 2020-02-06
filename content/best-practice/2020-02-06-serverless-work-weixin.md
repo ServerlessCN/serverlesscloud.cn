@@ -179,8 +179,11 @@ return "运行成功";
 是不是很简单呢？请求数据，发送数据。
 
 那么我们接下了重点看下如何将我们的业务代码上传到云端呢？
+这里的云端我用的是腾讯云Serverless服务 [SCF云函数](https://cloud.tencent.com/product/scf) 。整个部署，使用过程都是免费的，对于开发者来讲小项目使用的话免费额度是完全够用的。无需担心额外付费。
 
-## 安装 Serverless Framework 框架
+Serverless部署，选用的是比较流行的 Serverless Framework，使用和部署也是完全免费的，那么下面我就来介绍下具体的部署过程吧。
+
+## 安装 Serverless 框架
 
 首先，第一步，我们来安装一个Serverless framework的开发框架：
 
