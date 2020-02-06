@@ -2,4 +2,7 @@
 # These rules will change if you change your site’s custom domains or HTTPS settings
 
 # Redirect default Netlify subdomain to primary domain
+https://friendly-jang-537a43.netlify.com/* https://serverlesscloud.cn/:splat 301!
+http://friendly-jang-537a43.netlify.com/* https://serverlesscloud.cn/:splat 301!
 http://friendly-jang-537a43.netlify.com/* https://www.serverlesscloud.cn/:splat 301!
+https://friendly-jang-537a43.netlify.com/* https://www.serverlesscloud.cn/:splat 301!
