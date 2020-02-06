@@ -196,7 +196,7 @@ export default function () {
         </Container>
       </Background>
       <script src="https://zz.bdstatic.com/linksubmit/push.js"></script>
-      <script src="http://push.zhanzhang.baidu.com/push.js"></script>
+      <script src="https://push.zhanzhang.baidu.com/push.js"></script>
     </Column>
   )
 }

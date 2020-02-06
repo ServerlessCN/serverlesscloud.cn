@@ -277,11 +277,10 @@ const cdnComp = await this.load('@serverless/tencent-cdn', 'cdnComp');
 
 ## 组件开发模板
 
-这里有个腾讯云 Serverless Component 开发模板，可以帮你快速开发一个 Serverless Component：[模板链接](https://github.com/yugasun/serverless-component-template)
+以上基于腾讯云 [Serverless Framework](https://cloud.tencent.com/product/sf) 来实现，这里还有个 Serverless Component 开发模板，可以帮你快速开发一个 Serverless Component：[模板链接](https://github.com/yugasun/serverless-component-template)，英文好的话可以查看这两篇内容[《How to write your first Serverless Component》](https://serverless.com/blog/how-write-first-serverless-component)和[《Building Serverless Components》](https://github.com/serverless/components/#building-components)
 
-## 参考
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
 
-* [How to write your first Serverless Component](https://serverless.com/blog/how-write-first-serverless-component)
-* [Building Serverless Components](https://github.com/serverless/components/#building-components)
-
-欢迎访问：[Serverless 中文技术社区](https://serverlesscloud.cn/)
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

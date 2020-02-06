@@ -98,3 +98,9 @@ authorslink:
 后续开发者工具会更加着重于对函数及函数周边资源的组织方式（网关，DB 等），从项目/应用的维度出发，让开发者可以快速通过工具搭建一个常用的使用场景（如 WEB 网站，文件上传工具等），从而更好地了解 Serverless 项目的组织方式。
 
 此外，在持续集成和持续交付的对接中，开发者工具也将支持更便捷，通用的配置，便于规范开发流程，承载大型项目和核心业务。
+
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

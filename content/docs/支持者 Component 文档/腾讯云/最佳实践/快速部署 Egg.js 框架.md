@@ -22,10 +22,22 @@ link: /providers/tencent/components/egg
 
 #### 初始化 Egg 项目
 
-```
+```bash
 $ mkdir egg-example && cd egg-example
 $ npm init egg --type=simple
 $ npm i
+```
+
+#### 新增初始化文件
+
+在项目根目录下新建文件 `sls.js`，内容如下：
+
+```js
+const { Application } = require('egg')
+
+const app = new Application()
+
+module.exports = app
 ```
 
 #### 修改 Egg 配置
@@ -33,13 +45,27 @@ $ npm i
 由于云函数在执行时，只有 `/tmp` 可读写的，所以我们需要将 `egg.js` 框架运行尝试的日志写到该目录下，为此需要修改 `config/config.default.js` 中的配置如下：
 
 ```js
-const config = exports = {
+const config = (exports = {
   env: 'prod', // 推荐云函数的 egg 运行环境变量修改为 prod
   rundir: '/tmp',
   logger: {
-    dir: '/tmp',
-  },
-};
+    dir: '/tmp'
+  }
+})
+```
+
+#### 注意!!!
+
+由于 `egg` 的 `egg-static` 静态资源插件是默认开启的，所以在启动应用时，会尝试创建 `app/public` 目录，但是云函数执行环境只有 `/tmp` 可读写，所以需要本地创建，并添加 `.gitkeep` 文件（为空就好）。
+
+但是如果你并不想使用静态资源，可以修改 `config/plugin.js` 来禁用它：
+
+```js
+module.exports = {
+  static: {
+    enable: false
+  }
+}
 ```
 
 ### 1. 安装

@@ -2,7 +2,7 @@
 title: 用 Serverless 搭建个人静态相册网站
 description: "通过 Serverless 组件，基于 ThumbsUp 快速搭建个人静态相册网站"
 date: 2019-12-13
-thumbnail: 'https://img.serverlesscloud.cn/20191212/1576141517135-123.png'
+thumbnail: 'https://video-1251001047.cos.ap-chengdu.myqcloud.com/thumbsup.png'
 categories:
   - best-practice
 authors:
@@ -23,8 +23,8 @@ authorslink:
 
 整个网站的搭建部署只需三步：安装与初始化 → 配置 yml 文件 → 部署。
 
-<video id="video" controls="" preload="none" poster="https://sf-1251001047.cos.ap-chengdu.myqcloud.com/123.png">
-<source id="mp4" src="https://sf-1251001047.cos.ap-chengdu.myqcloud.com/thumbsup.mp4" type="video/mp4">
+<video id="video" controls="" preload="none" poster="https://video-1251001047.cos.ap-chengdu.myqcloud.com/thumbsup.png">
+<source id="mp4" src="https://video-1251001047.cos.ap-chengdu.myqcloud.com/thubmsup.mp4" type="video/mp4">
 </video>
 
 ## 安装与初始化
@@ -50,7 +50,7 @@ $ npm install -g thumbsup
 **3. 初始化项目**
 
 ```
-$ md photos
+$ mkdir photos
 $ thumbsup --input .\photos\ --output website
 ```
 初始化成功后，可以看到项目目录结构：
@@ -66,7 +66,7 @@ $ thumbsup --input .\photos\ --output website
 项目目录下，创建 `serverless.yml` 文件
 
 ```
-cd.> serverless.yml
+touch serverless.yml
 ```
 将以下内容写入上述的 yml 文件里：
 
@@ -137,10 +137,10 @@ sls --debug
 
 ## 小结
 
-本文使用了非常流行的无服务器框架 [Serverless Framework](https://github.com/serverless/serverless/blob/master/README_CN.md) 来搭建照片墙网站，更多产品信息可以点击进入 [官网](https://cloud.tencent.com/product/sf) 学习。
+本文使用了非常流行的无服务器框架 [Serverless Framework](https://github.com/serverless/serverless/blob/master/README_CN.md) 来搭建照片墙网站，更多产品信息可以点击进入 [官网](https://serverless.com/) 学习。
 
-> 参考：
-  - [Serverless Framework - 产品官网](https://cloud.tencent.com/product/sf)
-  - [Serverless Framework - GitHub](https://github.com/serverless/serverless/blob/master/README_CN.md)
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
 
-大家也可以访问：[Serverless 中文技术社区](https://serverlesscloud.cn/)，在 [最佳实践](https://serverlesscloud.cn/best-practice) 栏目里查看更多关于 Serverless 应用的开发！
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
