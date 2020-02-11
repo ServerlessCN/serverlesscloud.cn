@@ -1,5 +1,5 @@
 ---
-title: 基于 Serverless +企业微信打造 nCoV 疫情监控小助手
+title: 基于 Serverless + 企业微信打造 nCoV 疫情监控小助手
 description: 使用 Serverless 基本功能，配合企业微信打造 nCoV 疫情监控小助手
 date: 2020-02-06
 thumbnail: https://img.serverlesscloud.cn/202026/1580962859953-probider.png
@@ -11,7 +11,7 @@ authorslink:
   - https://canmeng.net
 ---
 
-最近的一些疫情信息很让人揪心，为了方便大家掌握疫情信息，在空闲之余做了一个关于nCoV的疫情监控小助手。主要的功能是通过企业微信的WebHook来推送疫情信息。这里将使用Serverless的整体代码思路和架构方式分享给大家。
+最近的一些疫情信息很让人揪心，为了方便大家掌握疫情信息，在空闲之余做了一个关于 nCoV 的疫情监控小助手。主要的功能是通过企业微信的 WebHook 来推送疫情信息。这里将使用 Serverless 的整体代码思路和架构方式分享给大家。
 
 ## 实现效果
 
@@ -19,7 +19,7 @@ authorslink:
 
 ![](https://img.serverlesscloud.cn/202026/1580963143544-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A120200206094038.png)
 
-首先，我们需要解决的是数据来源问题，这里我们可以使用python爬虫来做这件事情，但是由于个人比较懒所以直接用的 [2019-nCoV-Crawler](https://github.com/BlankerL/DXY-2019-nCoV-Crawler)  ，这个项目已经集成了现有的API，所以我们直接调用即可。当然有能力的同学也可以自己部署Python，我这边是自己部署的，但是这不是本次的重点，就不在赘述。
+首先，我们需要解决的是数据来源问题，这里我们可以使用python爬虫来做这件事情，但是由于个人比较懒所以直接用的 [2019-nCoV-Crawler](https://github.com/BlankerL/DXY-2019-nCoV-Crawler)  ，这个项目已经集成了现有的API，所以我们直接调用即可。当然有能力的同学也可以自己部署Python，我这边是自己部署的，但是这不是本次的重点，就不再赘述。
 
 现在，我们有了数据，但是数据怎么打到服务器呢？又该如何触发？当然使用CVM也是可以的，但是似乎太笨拙，并且消耗量很大，需要自己搭好所有环境。所以，这里我们选用Serverless方式来部署。
 
@@ -281,7 +281,7 @@ nction.zip
 
 ![](https://img.serverlesscloud.cn/202026/1580963150682-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A120200206114514.png)
 
-这样，我们就完成了一个nCoV的在线触发函数机器人～是不是很简单呢？快来开始动手吧～
+这样，我们就完成了一个 nCoV 的在线触发函数机器人～是不是很简单呢？快来开始动手吧～
 
 
 > **传送门：**
