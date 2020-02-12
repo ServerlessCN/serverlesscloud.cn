@@ -56,11 +56,9 @@ module.exports = app
 
 接下来将介绍如何借助 Serverless Component 快速开发全栈 Web 应用。
 
-> 在开始所有步骤前，需执行 `npm install -g serverless` 命令，全局安装 `serverless cli`。
+![full-stack](https://liujiang-1253970226.cos.ap-chengdu.myqcloud.com/ncby5-dltv8.gif)
 
-<video id="video" controls="" preload="none" poster="https://main.qcloudimg.com/raw/7fb9d2d24290fb89315e4ed63d42c728.png">
-      <source id="mp4" src="https://video-1251001047.cos.ap-chengdu.myqcloud.com/combile.mp4">
-      </video>
+> 在开始所有步骤前，需执行 `npm install -g serverless` 命令，全局安装 `serverless cli`。
 
 ## 准备
 
@@ -177,7 +175,7 @@ $ serverless --debug
 
 ## 准备
 
-想要操作数据库，必须先拥有一台数据库实例，[腾讯云 Mysql 云数据库](https://console.cloud.tencent.com/cdb) 现在也很便宜，可以购买一个最基本按量计费 `1核1G内存` 的 1 小时收费不到 `4 毛钱`，是不是非常划算。购买好之后初始化配置，然后新增一个 `serverless` 数据库，同时新增一张 `users` 表：
+想要操作数据库，必须先拥有一台数据库实例，[腾讯云 MySQL 云数据库](https://console.cloud.tencent.com/cdb) 现在也很便宜，可以购买一个最基本按量计费 `1 核 1G 内存` 的 1 小时收费不到 `4 毛钱`，是不是非常划算。购买好之后初始化配置，然后新增一个 `serverless` 数据库，同时新增一张 `users` 表：
 
 ```sql
 CREATE TABLE if not exists `test` ( `name` varchar (32) NOT NULL ,`email` varchar (64) NOT NULL ,`site` varchar (128) NOT NULL ) ENGINE = innodb DEFAULT CHARACTER SET = "utf8mb4" COLLATE = "utf8mb4_general_ci"
@@ -376,9 +374,17 @@ api:
 
 最后重新部署一下就行了。
 
+以上基于腾讯云 [Serverless Framework](https://cloud.tencent.com/product/sf) 来实现：
+
 - [完整的模板仓库](https://github.com/yugasun/tencent-serverless-demo/tree/master/fullstack-application-vue)
 - [在线 Demo](https://br1ovx-efmogqe-1251556596.cos-website.ap-guangzhou.myqcloud.com)
 
-# 总结
+# 小结
 
-当然全栈方案，并没有这么简单，这里只是简单介绍，如何使用 Serverless Component，快速实现一个全栈应用。如果要应用到实际的业务场景，我们还需考虑更多的问题。而且目前社区组件还不够完善，很多功能还需要我们自己去探索发现。也希望更多牛人加入到 [Serverless 中文技术社区](serverlesscloud.cn)，贡献更多的优秀组件。
+当然全栈方案，并没有这么简单，这里只是简单介绍，如何使用 Serverless Component，快速实现一个全栈应用。如果要应用到实际的业务场景，我们还需考虑更多的问题，期待大家去探索和发现！
+
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

@@ -15,7 +15,7 @@ var _mtac = { senseQuery: 1 };
         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
     }
     else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        bp.src = 'https://push.zhanzhang.baidu.com/push.js';
     }
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);

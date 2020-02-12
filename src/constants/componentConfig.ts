@@ -70,7 +70,7 @@ const config: Component[] = [
     name: 'express component',
     thumbnail:
       'https://img.serverlesscloud.cn/20191226/1577353480508-Express.js.png',
-    slogan: '只需3秒，部署 Express.js 应用程序',
+    slogan: '只需 3 秒，部署 Express.js 应用程序',
     description:
       '通过 Express Component，只需短短几秒，便能在腾讯云 Serverless 架构上部署按需计费的 Express.js 应用程序。',
     link: `${baseUrl}/providers/tencent/components/express`,
