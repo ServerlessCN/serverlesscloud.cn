@@ -8,15 +8,11 @@ var _mtac = { senseQuery: 1 };
   var s = document.getElementsByTagName('script')[0]
   s.parentNode.insertBefore(mta, s)
 })();
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'https://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
+(function() {
+    var mta_other = document.createElement("script");
+    mta_other.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+    mta_other.setAttribute("name", "MTAH5");
+    mta_other.setAttribute("sid", "500710929");
+    var s_other = document.getElementsByTagName("script")[1];
+    s_other.parentNode.insertBefore(mta_other, s_other);
 })();
