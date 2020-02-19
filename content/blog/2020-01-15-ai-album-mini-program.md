@@ -1,0 +1,214 @@
+---
+title: 基于 Serverless 的人工智能相册小程序
+description: App store 上各类人工智能相册程序，其实都可以通过 Serverless 来实现！
+date: 2020-01-15
+thumbnail: https://img.serverlesscloud.cn/202025/1580916042404-1.png
+categories:
+  - user-stories
+  - guides-and-tutorials
+authors:
+  - 刘宇
+authorslink:
+  - https://www.zhihu.com/people/liuyu-43-97
+---
+
+日常生活中，我们常常会想要「搜索照片」。每当寻找很久远的照片时，记忆模糊，检索照片时只能想起大致的时间，然后一张张查看。这样不仅效率低下，还经常会漏掉我们想找的照片。
+
+近几年微信小程序发展迅速，如果有这么一款软件，我们只需要用文字简单描述，就能实现图片的快速检索，岂不是很棒！
+
+本项目将以小程序为例，在 Serverless 架构上进行开发。该小程序在保留相册基础功能（新建相册、删除相册、上传图片、查看图片、删除图片）上，增加人工智能搜索 —— 即用户上传图片之后，基于 Image Caption 技术，自动对图片进行描述，实现 Image to Text 的过程。这样，当用户进行搜索时，通过文本间的相似度，就可以返回最贴近的图片。
+
+## 基础设计
+
+![基础设计](https://img.serverlesscloud.cn/202025/1580916044011-1.png)
+
+该项目设计主要拥有登录、相册、图片上传和预览功能，以及搜索功能。如图所示：
+
+![相册功能](https://img.serverlesscloud.cn/202025/1580916040195-1.png)
+
+- 注册功能的主要作用是：通过获取用户的唯一 id（微信中的 OpenId），来将用户信息存储到数据库中，之后的所有操作，都需要以该 id 作为区分；
+
+- 相册功能主要包括相册的增删查改等功能；
+
+- 图片功能包括图片上传、删除和查看；
+
+- 搜索功能主要是可以查看指定标签对应的图片列表，以及指定搜索内容对应的列表。
+
+当然这四个主要功能和模块是和前端关系紧密的部分，除此之外还有后端异步操作的两个模块，分别是图像压缩和图像描述功能。
+
+### 1. 注册功能：
+
+注册功能是用户点击注册账号之后，执行的动作。
+
+该动作需要注意，注册之前需先判断用户是否已经注册过。如果已注册则默认登陆，否则进行注册并登陆。当用户不想注册时，可以点击体验程序，对程序大部分页面进行预览。但是不能实现有关数据库的增删改查。登录功能页面如图所示：
+
+![登录功能页面](https://img.serverlesscloud.cn/202025/1580916042768-1.png)
+
+### 2. 相册功能：
+
+当用户注册登录之后，可以在相册管理页面进行相册相关的管理，包括编辑、删除和新建。在进行添加和修改的时候，需要注意相册名称是否已经存在；在进行删除、修改相册等操作时要判断用户是否有操作该相册的权限等。相册功能原型如图所示：
+
+![相册功能原型](https://img.serverlesscloud.cn/202025/1580916043155-1.png)
+
+### 3. 图片功能：
+
+图片功能主要包括图片列表以及图片获取、上传和删除。在图片获取与删除的过程中，要对用户是否有该项操作的权限进行判断，上传时也要判断是否有上传到指定相册的权限。图片功能相关原型图如所示。
+
+![图片功能相关原型图](https://img.serverlesscloud.cn/202025/1580916042404-1.png)
+
+图片功能部分除了用户侧可见的功能，还有定时任务。当用户上传图片之后，系统会在后台异步进行图像压缩、图像描述和关键词提取等。整体流程如图所示。
+
+![图片功能系统后台流程](https://img.serverlesscloud.cn/202025/1580916040106-1.png)
+
+### 4. 搜索功能：
+
+搜索功能指的是通过关键词或使用者的描述，得到目标数据的过程。这一功能原型图如图所示。
+
+![搜索原型](https://img.serverlesscloud.cn/202025/1580916038839-1.png)
+
+这一部分的难点在于通过用户的描述，搜索到目标数据的过程。这个过程的基本流程如图所示。
+
+![搜索流程](https://img.serverlesscloud.cn/202025/1580916039487-1.png)
+
+
+## 项目开发
+### 1. 数据库建立
+
+![](https://img.serverlesscloud.cn/202025/1580916042294-1.png)
+
+数据库部分主要对相关的表和表之间的关系进行建立。
+首先需要创建项目所必须的表：
+
+```mysql
+
+CREATE DATABASE `album`;
+CREATE TABLE `album`.`tags` ( `tid` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `remark` TEXT NULL , PRIMARY KEY (`tid`)) ENGINE = InnoDB;
+CREATE TABLE `album`.`category` ( `cid` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `sorted` INT NOT NULL DEFAULT '1' , `user` INT NOT NULL , `remark` TEXT NULL , `publish` DATE NOT NULL , `area` VARCHAR(255) NULL , PRIMARY KEY (`cid`)) ENGINE = InnoDB;
+CREATE TABLE `album`.`users` ( `uid` INT NOT NULL AUTO_INCREMENT , `nickname` TEXT NOT NULL , `wechat` VARCHAR(255) NOT NULL , `remark` TEXT NULL , PRIMARY KEY (`uid`)) ENGINE = InnoDB;
+CREATE TABLE `album`.`photo` ( `pid` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `small` VARCHAR(255) NOT NULL , `large` VARCHAR(255) NOT NULL , `category` INT NOT NULL , `tags` VARCHAR(255) NULL , `remark` TEXT NULL , `creattime` DATE NOT NULL , `creatarea` VARCHAR(255) NOT NULL , `user` INT NOT NULL ,  PRIMARY KEY (`pid`)) ENGINE = InnoDB;
+CREATE TABLE `album`.`photo_tags` ( `ptid` INT NOT NULL AUTO_INCREMENT , `tag` INT NOT NULL , `photo` INT NOT NULL , `remark` INT NULL , PRIMARY KEY (`ptid`)) ENGINE = InnoDB;
+
+```
+创建之后，逐步添加表之间的关系以及部分限制条件：
+```mysql
+
+ALTER TABLE `photo_tags` ADD CONSTRAINT `photo_tags_tags_alter` FOREIGN KEY (`tag`) REFERENCES `tags`(`tid`) ON DELETE CASCADE ON UPDATE RESTRICT; 
+ALTER TABLE `photo_tags` ADD CONSTRAINT `photo_tags_photo_alter` FOREIGN KEY (`photo`) REFERENCES `photo`(`pid`) ON DELETE CASCADE ON UPDATE RESTRICT;
+ALTER TABLE `photo` ADD CONSTRAINT `photo_category_alter` FOREIGN KEY (`category`) REFERENCES `category`(`cid`) ON DELETE CASCADE ON UPDATE RESTRICT;
+ALTER TABLE `photo` ADD CONSTRAINT `photo_user_alter` FOREIGN KEY (`user`) REFERENCES `users`(`uid`) ON DELETE CASCADE ON UPDATE RESTRICT;
+ALTER TABLE `category` ADD CONSTRAINT `category_user_alter` FOREIGN KEY (`user`) REFERENCES `users`(`uid`) ON DELETE CASCADE ON UPDATE RESTRICT;
+ALTER TABLE `tags` ADD unique(`name`);
+
+```
+
+### 2. 让 Code 飞起来
+
+* 在使用之前您需要有一个腾讯云的账号，并且开通了 SCF、COS、APIGW 以及 CDB 等相关产品权限；
+* 将项目 clone 到本地，配置自己的密钥信息、数据库信息。配置文件在 `cloudFunction` 目录下的 `serverless.yaml` 中：
+```yaml
+# 函数们的整体配置信息
+Conf:
+  component: "serverless-global"
+  inputs:
+    region: ap-shanghai
+    runtime: Python3.6
+    handler: index.main_handler
+    include_common: ./common
+    mysql_host: gz-c************************.com
+    mysql_user: root
+    mysql_password: S************************!
+    mysql_port: 6************************0
+    mysql_db: album
+    mini_program_app_id: asdsa************************dddd
+    mini_program_app_secret: fd340c4************************8744ee
+    tencent_secret_id: AKID1y************************l1q0kK
+    tencent_secret_key: cCoJ************************FZj5Oa
+    tencent_appid: 1256773370
+    cos_bucket: 'album-1256773370'
+    domain: album.0duzahn.com
+```
+由于我目前使用的是 Serverless Components，没有全局变量等。所以在此处增加了全局变量组件，在这里设置好全局变量，在之后的 Components 中可以直接引用，例如：
+```yaml
+# 创建存储桶
+CosBucket:
+  component: '@serverless/tencent-website'
+  inputs:
+    code:
+      src: ./cos
+    region:  ${Conf.region}
+    bucketName: ${Conf.cos_bucket}
+```
+* 安装必备工具： Serverless Framework、小程序云开发 IDE。由于本项目后台开发语言是 Python，您也需要一些 Python 的开发工具以及包管理工具（Python 版本不低于 3.6）
+* 在部分文件夹下安装相对应的依赖：
+    * `cloudFunction/album/prdiction` 需要安装 Pillow, opencv, tensorflow, jieba
+    
+    * `cloudFunction/album/getPhotoSearch` 需要安装 gensim, jieba 以及 collections
+    
+  * `cloudFunction/album/compression` 需要安装 Pillow
+  
+    （注意，在安装的时候一定要用 CentOS 操作系统。如果没相对应系统，可以在这里打包对应的依赖：http://serverless.0duzhan.com/app/scf_python_package_download/）
+* 将项目部署到云端，只需要通过指令 `serverless --debug` 即可：
+```text
+DEBUG ─ Resolving the template's static variables.
+  DEBUG ─ Collecting components from the template.
+  DEBUG ─ Downloading any NPM components found in the template.
+  DEBUG ─ Analyzing the template's components dependencies.
+  DEBUG ─ Creating the template's components graph.
+  DEBUG ─ Syncing template state.
+  DEBUG ─ Executing the template's components graph.
+  DEBUG ─ Starting API-Gateway deployment with name APIService in the ap-shanghai region
+ 
+    ... ...
+ 
+  DEBUG ─ Updating configure... 
+  DEBUG ─ Created function Album_Get_Photo_Search successful
+  DEBUG ─ Setting tags for function Album_Get_Photo_Search
+  DEBUG ─ Creating trigger for function Album_Get_Photo_Search
+  DEBUG ─ Deployed function Album_Get_Photo_Search successful
+  DEBUG ─ Uploaded package successful /Users/dfounderliu/Documents/code/AIAlbum/.serverless/Album_Prediction.zip
+  DEBUG ─ Creating function Album_Prediction
+  DEBUG ─ Updating code... 
+  DEBUG ─ Updating configure... 
+  DEBUG ─ Created function Album_Prediction successful
+  DEBUG ─ Setting tags for function Album_Prediction
+  DEBUG ─ Creating trigger for function Album_Prediction
+  DEBUG ─ Trigger timer: timer not changed
+  DEBUG ─ Deployed function Album_Prediction successful
+
+  Conf: 
+    region:                  ap-shanghai
+      
+      ... ...
+      
+      - 
+        path:   /photo/delete
+        method: ANY
+        apiId:  api-g9u6r9wq
+      - 
+        path:   /album/delete
+        method: ANY
+        apiId:  api-b4c4xrq8
+      - 
+        path:   /album/add
+        method: ANY
+        apiId:  api-ml6q5koy
+
+  156s › APIService › done
+
+```
+这个过程，只用了 156s 便部署了所有函数。然后打开小程序的 id 带入 `miniProgram` 目录，并且填写自己的 `appid` 在文件 `project.config.json` 的第 17 行，同时也要配置自己项目的基础目录，就是 API 网关给我们返回的地址，写在 `app.js` 的第 10 行，此时项目就可以运行起来了。
+
+> 自取 👉 [后台的压缩包](https://album-1256773370.cos.ap-shanghai.myqcloud.com/others/AIAlbum.zip)
+
+## 小结
+
+Serverless 架构凭借着按量付费、低成本运维和高效率开发等众多优点于一身，帮助我们的项目快速开发和迭代。而 Serverless Framework 则是一个非常高效的工具，兼容 Tencent Cloud, AWS, Google Cloud 等多家厂商的 Serverless 架构。
+
+本项目以[腾讯云 Serverless Framework](https://cloud.tencent.com/product/sf) 为例，详细信息可以移步 [官方说明](https://cloud.tencent.com/document/product/1154/39005)。
+
+> **传送门：**
+>
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
+
+欢迎访问：[Serverless 中文网](https://china.serverless.com)，您可以在 [最佳实践](https://china.serverless.com/best-practice/) 里体验更多关于 Serverless 应用的开发！
