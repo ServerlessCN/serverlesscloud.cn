@@ -37,7 +37,7 @@ const Header = (props: Props) => {
                   left={0}
                   height={headerHeight}
                   width={[1, 1, 1]}
-                  bg={theme.colors.white}
+                  bg={theme.colors.black}
                   zIndex={9999}
                   boxShadow={theme.shadows[0]}
                 >
@@ -48,7 +48,7 @@ const Header = (props: Props) => {
                     ></script>
                   </Hemlet>
 
-                  <CommunityEntrance />
+                 {/*<CommunityEntrance /> */} 
 
                   <NavBar height={navbarHeight} isDesktopView={isDesktopView} />
                 </WrapperWithBorderShadow>

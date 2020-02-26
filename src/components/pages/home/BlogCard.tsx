@@ -1,19 +1,10 @@
 import * as React from 'react'
-import { Flex, Box, Text, Background, Image } from '@src/components/atoms'
+import { Flex, Box } from '@src/components/atoms'
 import theme from '@src/constants/theme'
-import { formateDate } from '@src/utils'
 import styled from 'styled-components'
 import { Blog } from '@src/types'
 import BlogDetailLink from '@src/components/Link/BlogDetailLink'
-import Card from '@src/components/Card'
-
-const BoxWithFlex = styled(Box)`
-  flex: 1;
-`
-
-const BlogInfo = styled(Flex)`
-  flex: 1;
-`
+import './BlogCard.css'
 
 interface Props {
   blog: Blog
@@ -21,9 +12,28 @@ interface Props {
 
 export default function BlogCard({ blog }: Props) {
   return (
-    <BlogDetailLink key={blog.node.id} blog={blog}>
-      <Card>
-        <Background
+    <div className="scf-grid__item">
+    <BlogDetailLink key={blog.node.id} blog={blog} >
+      <div className="scf-grid__box">
+        <div className="scf-article-item">
+          <div className="scf-article-item__img">
+            <img src={blog.node.frontmatter.thumbnail} alt="" />
+          </div>
+          <div className="scf-article-item__content">
+            <div className="scf-article-item__statistics">
+              <span className="scf-article-item__statistics-item">
+              <i className="scf-icon scf-icon-view"></i> 3.3K
+              </span>
+            </div>
+            <div className="scf-article-item__title">
+              <h4>{blog.node.frontmatter.title}</h4>
+            </div>
+            <div className="scf-article-item__intro">{blog.node.frontmatter.description}</div>
+          </div>
+        </div>
+       </div>
+     
+      {/* <Card><Background
           width={[1]}
           height={[200]}
           minHeight={[200]}
@@ -72,7 +82,10 @@ export default function BlogCard({ blog }: Props) {
             </Flex>
           </Box>
         </BlogInfo>
-      </Card>
+         </Card>
+        */} 
+     
     </BlogDetailLink>
+    </div>
   )
 }

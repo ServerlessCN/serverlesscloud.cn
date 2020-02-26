@@ -1,93 +1,100 @@
 import * as React from 'react'
-import {
-  Flex,
-  Button,
-  Background,
-  Container,
-  Center,
-} from '@src/components/atoms'
-import theme from '@src/constants/theme'
-import { MainTitle } from '@src/components/pages/home/Title'
-import { StaticQuery, graphql, Link } from 'gatsby'
-import { Blog, GraphqlBlogResult } from '@src/types'
-import BlogCard from './BlogCard'
+import {Flex, Row, Background, Container, Center} from '@src/components/atoms'
+import {StaticQuery, graphql, Link} from 'gatsby'
+import {Blog, GraphqlBlogResult} from '@src/types'
+import './LatestBlogs.css'
 
 type LatestBlog = Blog
 
+let BlogSort = "DESC"
+
+function changeSort(){
+  BlogSort="DESC"
+}
+function changeSortAgain(){
+  BlogSort="!DESC"
+}
 interface Props {
-  blogs: LatestBlog[]
+  blogs : LatestBlog[]
 }
 
-function Blogs({ blogs }: Props) {
+function BlogCard({blog} : {
+  blog: Blog
+}) {
   return (
-    <Container
-      width={['100%', '100%', '100%', 'auto']}
-      maxWidth={['100%', '100%', '100%', '85%']}
-    >
-      <Flex
-        flexDirection={['column', 'column', 'row', 'row', 'row']}
-        flexWrap={['initial', 'initial', 'wrap', 'wrap', 'initial']}
-        justifyContent={['initial', 'initial', 'center']}
-        width={[1]}
-        mb={[32, 32, 0]}
-        mt={[0, 0, 32]}
-      >
-        {blogs.map(blog => (
-          <BlogCard key={blog.node.id} blog={blog} />
-        ))}
-      </Flex>
-    </Container>
+    <div className="scf-blog-article-item scf-blog-article-item--block">
+      <div className="scf-blog-article-item__img">
+        <div className="scf-blog-article-item__img-inner">
+          <img src={blog.node.frontmatter.thumbnail} alt=""/>
+        </div>
+      </div>
+      <div className="scf-blog-article-item__content">
+        <div className="scf-blog-article-item__statistics">
+          <span className="scf-blog-article-item__statistics-item">
+            <i className="scf-blog-icon scf-blog-icon-view"></i>
+            13.3K</span>
+          · Alfred Huang · {blog
+            .node
+            .frontmatter
+            .date
+            .slice(2, 10)} 
+          · 阅读大约需要6分钟</div>
+        <div className="scf-blog-article-item__title">
+          <h4>{blog.node.frontmatter.title}</h4>
+        </div>
+        <div className="scf-blog-article-item__intro">{blog.node.frontmatter.description}</div>
+      </div>
+    </div>
   )
 }
 
-export default function() {
+function Blogs() {
+  const query= graphql `query { blogs: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 6 filter: { fileAbsolutePath: { regex: "//blog//" } frontmatter: { categories: { nin: "best-practice" } } } ) { edges { node { id frontmatter { title thumbnail description date } fileAbsolutePath fields { slug } } } } } `
   return (
     <StaticQuery
-      query={graphql`
-        query {
-          blogs: allMarkdownRemark(
-            sort: { fields: frontmatter___date, order: DESC }
-            limit: 3
-            filter: {
-              fileAbsolutePath: { regex: "//blog//" }
-              frontmatter: { categories: { nin: "best-practice" } }
-            }
-          ) {
-            edges {
-              node {
-                id
-                frontmatter {
-                  title
-                  thumbnail
-                  description
-                  date
-                }
-                fileAbsolutePath
-                fields {
-                  slug
-                }
-              }
-            }
-          }
-        }
-      `}
-      render={({ blogs }: { blogs: GraphqlBlogResult }) => {
-        return (
-          <Background pt={'40px'} pb={'40px'} width={1}>
-            <Center flexDirection="column">
-              <MainTitle>最新博客</MainTitle>
+      query={query}
+      render={({blogs} : {
+      blogs: GraphqlBlogResult
+    }) => {
+      return (
+        <div className="scf-blog-box__body">
+          {blogs
+            .edges
+            .map(blog => (<BlogCard key={blog.node.id} blog={blog}/>))}
+        </div>
+      )
+    }}/>
+  )
+}
 
-              <Blogs blogs={blogs.edges} />
-
-              <Link to="/blog">
-                <Button mt={[0, 0, '30px']} mb="30px" theme={theme}>
-                  更多博客
-                </Button>
-              </Link>
-            </Center>
-          </Background>
-        )
-      }}
-    />
+export default function () {
+  return (
+    <Background pt={'20px'} pb={'20px'} width={0.6666}>
+      <Center flexDirection="column">
+        <Row
+          className="scf-box__header"
+          width="100%"
+          height="100%"
+          alignItems="flex-end"
+          justifyContent="space-between">
+          <div className="scf-box__header-title">
+            <h3>博客</h3>
+            <div className="scf-box__header-segment">
+              <a onClick={changeSort}
+                className={`scf-box__header-segment-item  is-active}`}>最新</a>
+            {/*//   <button onClick={changeSortAgain}
+            //     className={`scf-box__header-segment-item ${BlogSort !== 'DESC' || 'is-active'}`}>最热</button>
+            */}
+            </div>
+          </div>
+          <div className="scf-box__header-more">
+            <Link to="/blog">
+              更多博客 &gt;
+            </Link>
+          </div>
+        </Row>
+       <Blogs />
+      </Center>
+    </Background>
   )
 }

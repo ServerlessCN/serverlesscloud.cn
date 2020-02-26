@@ -7,7 +7,30 @@ import theme from '@src/constants/theme'
 import { HeightProps } from 'styled-system'
 
 const Wrapper = styled(Box)`
-  .swiper-pagination .swiper-pagination-bullet-active {
+.swiper-container{
+  position: relative;
+}
+
+.swiper-pagination{
+  width:100%;
+  bottom: 0px !important;
+  left: 0px !important;
+  position: absolute;
+  background-color: #fff !important;
+}
+.swiper-wrapper {
+  height: 316px !important;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  float:left;
+  width: 30px;
+  height: 5px;
+  margin: 0px !important;
+  margin-right: 8px !important;;
+  border-radius:0;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
     background-color: ${theme.colors.serverlessRed};
   }
 `

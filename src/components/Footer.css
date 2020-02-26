@@ -1,0 +1,159 @@
+.scf-footer {
+  font-family: 'Soleil','Roboto',"San Francisco","Helvetica Neue",Helvetica,Arial,'PingFangSC-Light',"Hiragina Sans GB","WenQuanYi Micro Hei","microsoft yahei ui","microsoft yahei",sans-serif;
+  margin: 0px auto;
+  flex: auto;
+  background-color: #f7f7f7;
+  padding: 60px 0 30px;
+}
+
+.scf-footer__inner {
+  width: 76%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.scf-footer__left {
+  width: 40%;
+  flex: auto;
+}
+
+.scf-footer__right {
+  width: 60%;
+  flex: auto;
+  justify-content: flex-end;
+}
+
+.scf-display-flex {
+  display: flex;
+}
+
+.scf-footer__link {
+  margin-right: 80px;
+}
+
+.scf-footer__right .scf-footer__link {
+  width:100px;
+}
+
+.scf-footer__link-title {
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #333;
+}
+
+.scf-footer__link-list {
+  font-size: 14px;
+}
+
+.scf-footer__link-list li {
+  margin-bottom: 8px;
+  color: #8c8c8c;
+}
+
+.scf-footer__link-list img {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+.scf-footer__link-list a {
+  color: #8c8c8c;
+}
+
+.scf-footer__link:last-child {
+  margin-right: 0;
+}
+
+.scf-footer__commit {
+  justify-content: flex-end;
+}
+.scf-footer__commit .scf-footer__link-title {
+  color: #8c8c8c;
+}
+.scf-footer__link-title {
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #333;
+}
+.scf-footer__commit .scf-footer__commit-tips {
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+.scf-logo-zh.is-dark {
+    width: 214px;
+    height: 26px;
+}
+
+.scf-logo-zh {
+    display: inline-block;
+    width: 211px;
+    height: 25px;
+    cursor: pointer;
+}
+.scf-footer__channel {
+  text-align: right;
+}
+.scf-footer__copyright {
+  font-size: 14px;
+  color: #8c8c8c;
+  text-align: right;
+}
+.scf-footer__channel .scf-icon {
+  margin-left: 20px;
+}
+.scf-footer .scf-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.scf-footer__inner:last-child {
+  margin-top: 70px;
+  align-items: flex-end;
+}
+.scf-logo-wrap {
+  display: flex;
+  align-items: center;
+}
+.scf-logo-zh.is-dark {
+  width: 153px;
+  height: 26px;
+  background-image: url(../assets/images/logo-dark.svg);
+}
+.scf-logo-zh {
+  display: inline-block;
+  width: 147px;
+  height: 25px;
+  cursor: pointer;
+}
+.scf-logo-wrap__text {
+  font-size: 18px;
+  color: #8c8c8c;
+  margin-left: 8px;
+}
+.scf-icon-wechat {
+  width: 24px;
+  height: 24px;
+  background-image: url(../assets/images/wechat.svg);
+}
+.scf-icon-qq{
+  width: 24px;
+    height: 24px;
+  background-image: url(../assets/images/qq.svg);
+}
+.scf-icon-zhihu {
+  width: 24px;
+    height: 24px;
+  background-image: url(../assets/images/zhihu.svg);
+}
+.scf-icon-twitter {
+  width: 24px;
+    height: 24px;
+  background-image: url(../assets/images/twitter.svg);
+}
+.scf-icon-github {
+  width: 24px;
+    height: 24px;
+  background-image: url(../assets/images/github.svg);
+  
+}

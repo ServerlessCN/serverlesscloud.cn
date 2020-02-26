@@ -16,6 +16,7 @@ import ExternalLink from './Link/ExternalLink'
 import QQQRcode from '@src/assets/images/qq_qrcode.png'
 import WechatQRcode from '@src/assets/images/wechat_qrcode.png'
 import logo from '@src/assets/images/icon-serverless-framework.png'
+import './Footer.css'
 
 const links : {
   category : string
@@ -30,9 +31,8 @@ const links : {
     contents: [
       {
         title: 'GitHub',
-        link: 'https://github.com/serverless/serverless',
-      },
-      {
+        link: 'https://github.com/serverless/serverless'
+      }, {
         title: '博客',
         link: '/blog',
         isInternal: true
@@ -58,10 +58,6 @@ const links : {
       }, {
         title: 'Serverless Summit',
         link: 'https://share.weiyun.com/5dFE6ND'
-      }, {
-        title: '联系我们',
-        link: '/about',
-        isInternal: true
       }
     ]
   }, {
@@ -81,6 +77,10 @@ const links : {
       }, {
         title: '在线提问',
         link: 'https://segmentfault.com/t/serverlessframework'
+      }, {
+        title: '联系我们',
+        link: '/about',
+        isInternal: true
       }
     ]
   }
@@ -94,7 +94,7 @@ const contacts = [
     qrcode: QQQRcode
   }, {
     title: '小助手微信号',
-    description: '微信扫码加入交流群',
+    description: '扫码加入交流群',
     type: 'wechat',
     qrcode: WechatQRcode
   }
@@ -112,88 +112,79 @@ const WhiteTextWith16pxFontSize = styled(WhiteText)`
 export default function () {
   return (
     <Column>
-      <Background width={[1]} background={theme.colors.black}>
-        <Container maxWidth={['100%', '100%', '100%', '1260px', '1260px']}>
-          <Box pt="40px" pb="30px" pl="10px" pr="10px">
-            <Row flexWrap={['wrap', 'wrap', 'wrap', 'nowrap']}>
-              <Box mt={'28px'} width={[
-                1, 1, 1, 1 / 4
-              ]}>
-                <Column alignItems="center">
-                  <Image width="140px" src={logo} alt="Serverless Framework"/>
-                  <WhiteText>Serverless 中文技术社区</WhiteText>
-                </Column>
-              </Box>
+      <Background width={[1]} background={theme.colors.gray[0]}>
+        <div className="scf-footer">
+          <div className="scf-footer__inner">
+            <div className="scf-footer__left">
+              <div className="scf-display-flex">
+                {links.map(({category, contents}) => (
+                  <dl className="scf-footer__link">
+                    <dt className="scf-footer__link-title">{category}</dt>
+                    <dd className="scf-footer__link-list">
+                      <ul>
+                        {contents.map(({title, link, isInternal}) => {
+                          const Link = isInternal
+                            ? InternalLink
+                            : ExternalLink
+                          return (
+                            <li>
+                              <Link key={title} to={link}>
+                                {title}
+                              </Link>
+                            </li>
+                          )
+                        })}
+                      </ul>
+                    </dd>
+                  </dl>
+                ))}
+              </div>
+            </div>
+            <div className="scf-footer__right">
+              <div className="scf-display-flex scf-footer__commit">
+                {contacts.map(({title, qrcode, description}) => (
+                  <dl className="scf-footer__link ">
+                    <dt className="scf-footer__link-title">{title}</dt>
+                    <dd className="scf-footer__link-list">
+                      <p className="scf-footer__commit-tips">{description}</p>
+                      <img src={qrcode} alt=""/>
+                    </dd>
+                  </dl>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="scf-footer__inner">
+            <div className="scf-footer__left">
+              <div className="scf-logo-wrap">
+                <span className="scf-logo-zh is-dark"></span>
+                <span className="scf-logo-wrap__text">中文网</span>
+              </div>
+            </div>
+            <div className="scf-footer__right">
+              <div className="scf-footer__channel">
+                <a href="##">
+                  <i className="scf-icon scf-icon-wechat"></i>
+                </a>
+                <a href="##">
+                  <i className="scf-icon scf-icon-qq"></i>
+                </a>
+                <a href="##">
+                  <i className="scf-icon scf-icon-zhihu"></i>
+                </a>
+                <a href="##">
+                  <i className="scf-icon scf-icon-twitter"></i>
+                </a>
+                <a href="##">
+                  <i className="scf-icon scf-icon-github"></i>
+                </a>
+              </div>
+              <p className="scf-footer__copyright">hello@serverlesscloud.cn - Copyright © 2020 ServerlessCloud. All rights reserved</p>
+              <p className="scf-footer__copyright">Powered by Serverless Framework</p>
+            </div>
+          </div>
 
-              {links.map(({category, contents}) => (
-                <Box
-                  key={category}
-                  width={[
-                  0.4, 0.4, 0.4, 1 / 7
-                ]}
-                  mx={'10px'}
-                  mt={'40px'}>
-                  <Column justifyContent="center">
-                    <WhiteTextWith16pxFontSize mb={'20px'}>
-                      {category}
-                    </WhiteTextWith16pxFontSize>
-                    {contents.map(({title, link, isInternal}) => {
-                      const Link = isInternal
-                        ? InternalLink
-                        : ExternalLink
-                      return (
-                        <Link key={title} to={link}>
-                          <WhiteText mt={'5px'} mb="5px">
-                            {title}
-                          </WhiteText>
-                        </Link>
-                      )
-                    })}
-                  </Column>
-                </Box>
-              ))}
-
-              {contacts.map(({title, qrcode, description}) => (
-                <Box
-                  key={title}
-                  width={[
-                  0.4, 0.4, 0.4, 1 / 6
-                ]}
-                  mx={'10px'}
-                  mt={'40px'}>
-                  <Column justifyContent="center">
-                    <WhiteTextWith16pxFontSize mb={'20px'}>
-                      {title}
-                    </WhiteTextWith16pxFontSize>
-
-                    <WhiteText mt={'5px'} mb="15px">
-                      {description}
-                    </WhiteText>
-
-                    <Image width={'128px'} height={'128px'} src={qrcode} alt={`${title}_qrcode`}/>
-                  </Column>
-                </Box>
-              ))}
-            </Row>
-          </Box>
-        </Container>
-      </Background>
-
-      <Background width={[1]} background={theme.colors.serverlessRed}>
-        <Container maxWidth={['100%', '100%', '100%', '76%', '85%']}>
-          <Box pt={'15px'} pb={'15px'} pl={'10px'} pr={'10px'}>
-            <Flex
-              flexDirection={['column', 'column', 'column', 'row', 'row']}
-              justifyContent="space-between">
-              <WhiteText>
-                Copyright &copy; 2019 ServerlessCloud. All rights reserved
-              </WhiteText>
-              <WhiteText mt={['10px', '10px', '10px', 0, 0]}>
-                Powered by Serverless Framework&nbsp;&nbsp;&nbsp;&nbsp;hello@serverlesscloud.cn
-              </WhiteText>
-            </Flex>
-          </Box>
-        </Container>
+        </div>
       </Background>
       <script src="https://zz.bdstatic.com/linksubmit/push.js"></script>
       <script src="https://push.zhanzhang.baidu.com/push.js"></script>

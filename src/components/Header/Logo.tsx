@@ -1,37 +1,26 @@
 import * as React from 'react'
 import logo from '@src/assets/images/icon-serverless-framework.png'
 
-import { Logo, Text, Row } from '@src/components/atoms'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
-import { space, SpaceProps } from 'styled-system'
-
-const LogoWithMargin = styled(Logo)<SpaceProps>`
-  ${space}
-`
+import {Link} from 'gatsby'
+import {  Row } from '@src/components/atoms'
+import './Logo.css'
 
 interface Props {
-  logoHeight: string
+  logoHeight : string
 }
 
-export default function({ logoHeight }: Props) {
+export default function ({logoHeight} : Props) {
   return (
     <Link to="/">
-      <Row
+    <Row
         minWidth={['auto', 'auto', '320px']}
         alignItems="center"
         height={logoHeight}
       >
-        <LogoWithMargin
-          ml={['-10px']}
-          height={`${parseInt(logoHeight) * 0.8}px`}
-          src={logo}
-          alt="Serverless Framework"
-        />
-
-        <Text ml="5px" fontSize={['16px', '18px', '18px', '20px']}>
-          Serverless 中文技术社区
-        </Text>
+      <div className="scf-logo-wrap">
+        <span className="scf-logo-zh"></span>
+        <span className="scf-logo-wrap__text">中文网</span>
+      </div>
       </Row>
     </Link>
   )
