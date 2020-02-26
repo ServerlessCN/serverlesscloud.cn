@@ -109,8 +109,7 @@ section {
 }
 
 body {
-  font-family: Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB',
-    'Heiti SC', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif !important;
+  font-family: "Soleil","Roboto","San Francisco","Helvetica Neue",Helvetica,Arial,"PingFangSC-Light","Hiragina Sans GB","WenQuanYi Micro Hei","microsoft yahei ui","microsoft yahei",sans-serif !important;
 }
 
 ol,
@@ -452,6 +451,7 @@ a {
 
 a:hover {
   text-decoration: none;
+  outline: none;
 }
 
 .gatsby-code-button[data-tooltip]:hover:after,

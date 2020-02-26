@@ -1,9 +1,12 @@
 import * as React from 'react'
 import { Flex, Container } from '@src/components/atoms'
 import { debounce } from '@src/utils'
+import { Link } from 'gatsby'
+import ExternalLink from '../Link/ExternalLink'
 import NavButton from './NavButton'
 import NavList from './NavList'
 import Logo from './Logo'
+import theme from '@src/constants/theme'
 
 export default function({
   height,
@@ -41,6 +44,9 @@ export default function({
       px={0}
       maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}
     >
+    <Flex alignItems="center" flexWrap="wrap" justifyContent="space-between" height={20} style={{paddingTop: 5}}>
+      <ExternalLink to="https://serverless.com/cn" ><p style={{display:"inline-block",fontSize:14,color:theme.colors.gray_text}}>← serverless.com</p></ExternalLink>
+    </Flex>
       <Flex alignItems="center" flexWrap="wrap" justifyContent="space-between">
         <Logo logoHeight={height} />
 

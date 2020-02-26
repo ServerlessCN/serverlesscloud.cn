@@ -1,0 +1,113 @@
+.scf-quick-start {
+  box-shadow: 2px 2px 8px 0 rgba(0,0,0,.08);
+  border: 1px solid #eaeaea;
+  padding: 12px 15px 15px;
+  height: 100%;
+  background:"yellow";
+  width:333px;
+  height:316px;
+}
+.scf-quick-start__banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.scf-quick-start__body img {
+  max-width: 100%;
+}
+.scf-quick-start__header {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.scf-italic-title__title {
+  font-weight: 400;
+  padding-left: 15px;
+  position: relative;
+  font-size: 17px;
+}
+.scf-italic-title__title:before {
+  content: "";
+  width: 3px;
+  height: 16px;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  background-color: #fe5751;
+  -webkit-transform: rotate(15deg);
+}
+.scf-btn .scf-btn--primary:hover {
+  background-color: #fe5751;
+}
+.scf-btn--line:hover {
+  background-color: #feeeee;
+  border-color: #b73832;
+}
+.scf-quick-start__banner {
+  font-size: 0;
+  margin-bottom: 15px;
+  height: 0;
+  padding-top: 62.6%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.scf-quick-start__opeate {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -7px;
+}
+.scf-quick-start__opeate .scf-btn {
+  height:50px;
+  flex: 1 1;
+  margin: 0 7px;
+  padding: 0;
+}
+
+.scf-quick-start__opeate .scf-btn--icon {
+  padding-top: 4px;
+}
+.scf-btn--icon .scf-icon {
+  margin-right: 8px;
+  margin-top: -2px;
+}
+.scf-icon-github-primary {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/images/github-primary.svg);
+}
+.scf-btn {
+  background-color: transparent;
+  height: 50px;
+  padding: 0 44px;
+  border-radius: 3px;
+  font-size: 17px;
+  text-align: center;
+  outline: 0;
+}
+.scf-btn--line {
+  border: 3px solid #fe5751;
+  color: #fe5751;
+}
+.scf-btn--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 36px 0;
+}
+.scf-quick-start__opeate .scf-btn {
+  flex: 1 1;
+  margin: 0 7px;
+  padding: 0;
+}
+
+.scf-quick-start__opeate .scf-btn--icon {
+  padding-top: 4px;
+}
+.scf-btn--primary {
+  background-color: #fe5751;
+  color: #fff;
+}
+.scf-btn--primary:hover {
+  background-color: #b73832;
+}

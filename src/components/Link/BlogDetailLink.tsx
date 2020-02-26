@@ -19,5 +19,5 @@ export function getBlogLink(blog: Blog) {
 export default function(props: Props) {
   const to = getBlogLink(props.blog)
 
-  return <Link to={to}>{props.children}</Link>
+  return <Link to={to} style={{display:"inline-block",height:"100%"}}>{props.children}</Link>
 }

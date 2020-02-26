@@ -1,0 +1,16 @@
+.scf-logo-wrap {
+  display: flex;
+  align-items: center;
+}
+.scf-logo-zh {
+  display: inline-block;
+  width: 147px;
+  height: 25px;
+  background-image: url(../../assets/images/logo.svg);
+  cursor: pointer;
+}
+.scf-logo-wrap__text {
+  font-size: 18px;
+  color: #8c8c8c;
+  margin-left: 8px;
+}

@@ -7,13 +7,14 @@ const navbarHeights = {
 
 const headerHeights = {
   mobile: '77px',
-  desktop: '94px',
+  desktop: '80px',
 }
 
 const maxWidths = ['100%', '1260px']
 
 const colors = {
   text: '#024',
+	gray_text:'rgba(255, 255, 255, 0.5)',
   white: '#fff',
   black: '#000',
   serverlessRed: '#fd5750',

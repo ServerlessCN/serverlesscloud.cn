@@ -1,10 +1,13 @@
 import React from 'react'
-
+import {Row} from '@src/components/atoms'
 import Layout from '@src/layouts'
 import LatestBlogs from '@src/components/pages/home/LatestBlogs'
+import Activitys from '@src/components/pages/home/Activitys'
+import Videos from '@src/components/pages/home/Videos'
+import AboutUs from '@src/components/pages/home/AboutUs'
+import LatestComponents from '@src/components/pages/home/LatestComponents'
 import BestParctices from '@src/components/pages/home/BestPractices'
 import CommonQuestion from '@src/components/pages/home/CommonQuestion'
-import KOLs from '@src/components/pages/home/KOLs'
 import Helmet from '@src/components/Helmet'
 import Swiper from '@src/components/pages/home/Swiper'
 
@@ -22,9 +25,19 @@ const IndexPage = (props : Props) => {
         location={props.location}/>
       <Swiper/>
       <BestParctices/>
-      <LatestBlogs/>
-      <KOLs/>
+      <LatestComponents/>
+      <Row
+        width="76%"
+        height="100%"
+        margin="10px auto"
+        alignItems="center"
+        justifyContent="center">
+        <LatestBlogs/>
+        <Activitys/>
+      </Row>
+      <Videos/>
       <CommonQuestion/>
+      <AboutUs />
     </Layout>
   )
 }
