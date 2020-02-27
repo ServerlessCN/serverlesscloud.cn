@@ -1,6 +1,9 @@
 .scf-box__header-title h3+.scf-box__header-segment {
   margin-left: -15px;
 }
+.scf-blog-article-item a{
+  display: contents;
+}
 .scf-box__header+.scf-blog{
   margin-bottom: 15px;
 }

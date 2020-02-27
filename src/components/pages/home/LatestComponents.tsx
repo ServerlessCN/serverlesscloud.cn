@@ -37,7 +37,8 @@ export default function() {
                 width={'76%'}
                 maxWidth={['100%', '100%', '100%', '85%']}
               >
-              <div className="scf-grid">  
+              <div style={{margin: "-21px",
+              width: "100%"}}>  
                 <Flex
                   flexDirection={['column', 'column', 'row', 'row', 'row']}
                   flexWrap={['initial', 'initial', 'wrap', 'wrap', 'initial']}

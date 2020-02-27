@@ -1,6 +1,9 @@
 .scf-activity-box {
   height: 100%;
 }
+.scf-activity-article-item a{
+  display: contents;
+}
 .scf-activity-box a {
   background-color: transparent;
   text-decoration: none;

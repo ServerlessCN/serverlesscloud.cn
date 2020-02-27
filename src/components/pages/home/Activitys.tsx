@@ -36,6 +36,7 @@ function ActivityCard({activity} : {
 }) {
   return (
     <div className="scf-activity-article-item">
+    <Link to={activity.link}>
       <div className="scf-activity-article-item__img">
         <img src={activity.cover} alt=""/>
       </div>
@@ -47,7 +48,9 @@ function ActivityCard({activity} : {
           {activity.decription}
         </div>
       </div>
+      </Link>
     </div>
+
   )
 }
 
