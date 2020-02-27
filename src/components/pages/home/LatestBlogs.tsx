@@ -80,11 +80,7 @@ export default function () {
           <div className="scf-box__header-title">
             <h3>博客</h3>
             <div className="scf-box__header-segment">
-              <a onClick={changeSort}
-                className={`scf-box__header-segment-item  is-active}`}>最新</a>
-            {/*//   <button onClick={changeSortAgain}
-            //     className={`scf-box__header-segment-item ${BlogSort !== 'DESC' || 'is-active'}`}>最热</button>
-            */}
+              <a className={`scf-box__header-segment-item  is-active}`}>最新</a>
             </div>
           </div>
           <div className="scf-box__header-more">
