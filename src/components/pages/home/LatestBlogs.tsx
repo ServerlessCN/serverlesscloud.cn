@@ -23,6 +23,7 @@ function BlogCard({blog} : {
 }) {
   return (
     <div className="scf-blog-article-item scf-blog-article-item--block">
+    <Link to={blog.node.fields.slug}>
       <div className="scf-blog-article-item__img">
         <div className="scf-blog-article-item__img-inner">
           <img src={blog.node.frontmatter.thumbnail} alt=""/>
@@ -44,6 +45,7 @@ function BlogCard({blog} : {
         </div>
         <div className="scf-blog-article-item__intro">{blog.node.frontmatter.description}</div>
       </div>
+      </Link>
     </div>
   )
 }
