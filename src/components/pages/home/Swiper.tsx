@@ -111,10 +111,10 @@ export default function () {
                   </Box>
                   <Box className="scf-quick-start__opeate">
                   <ExternalLink to={'https://serverless.com/cn/framework/docs/getting-started/'}><Button className="scf-btn scf-btn--primary" style={{width: 140}} >快速开始</Button></ExternalLink>
-                  <ExternalLink to={'https://github.com/serverless/serverless/blob/master/README_CN.md'}><Button className="scf-btn scf-btn--icon scf-btn--line" style={{width: 140}}>
+                  <ExternalLink to={'https://github.com/serverless/serverless/blob/master/README_CN.md'}><button className="scf-btn scf-btn--icon scf-btn--line" style={{width: 140}}>
                       <i className="scf-icon scf-icon-github-primary"></i>
                       GitHub
-                    </Button>
+                    </button>
                     </ExternalLink>
                   </Box>
                 </Box>

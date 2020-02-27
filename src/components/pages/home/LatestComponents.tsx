@@ -16,7 +16,7 @@ import componentConfig from '@src/constants/componentConfig'
 
 export default function() {
   return (
-      <Background pt={'20px'} pb={'20px'} width={1}>
+      <Background pt={'40px'} pb={'20px'} width={1}>
          <Box className="scf-components-box">
             <Center flexDirection="column">
             <Row className="scf-box__header" 
@@ -37,6 +37,7 @@ export default function() {
                 width={'76%'}
                 maxWidth={['100%', '100%', '100%', '85%']}
               >
+              <div className="scf-grid">  
                 <Flex
                   flexDirection={['column', 'column', 'row', 'row', 'row']}
                   flexWrap={['initial', 'initial', 'wrap', 'wrap', 'initial']}
@@ -61,6 +62,7 @@ export default function() {
                     <ComponentCard key={blog.name} blog={blog} />
                   ))}
                 </Flex>
+                </div>  
               </Container>
 
             </Center>

@@ -29,6 +29,8 @@ function Blogs({ blogs }: Props) {
       width={'76%'}
       maxWidth={['100%', '100%', '100%', '85%']}
     >
+      <div style={{margin: "-21px",
+        width: "100%"}}>      
       <Flex
         flexDirection={['column', 'column', 'row', 'row', 'row']}
         flexWrap={['initial', 'initial', 'wrap', 'wrap', 'initial']}
@@ -53,6 +55,7 @@ function Blogs({ blogs }: Props) {
           <BlogCard key={blog.node.id} blog={blog} />
         ))}
       </Flex>
+      </div>
     </Container>
   )
 }
@@ -94,6 +97,7 @@ export default function() {
             width={1}
             style={{margin:"0 auto"}}
           >
+          
             <Center flexDirection="column">
               <Row className="scf-box__header" 
                 width="76%"

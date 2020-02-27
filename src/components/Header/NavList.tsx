@@ -104,7 +104,7 @@ export default function({ isActive, isDesktopView }: Props) {
             </Link>
           </NavListItem>
         )})}
-        <NavListItem
+        {/*<NavListItem
         // onClick={() => {
           
         // }}
@@ -112,7 +112,8 @@ export default function({ isActive, isDesktopView }: Props) {
         display={['block', 'block', 'block', 'inline-block']}
       >
           <Text color={theme.colors.gray_text} style={{fontSize:15}}>搜索</Text>
-      </NavListItem>
+          </NavListItem>
+        */}
       </List>
     </BoxWithTextAlign>
   )
