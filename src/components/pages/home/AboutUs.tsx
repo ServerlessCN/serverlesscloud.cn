@@ -8,11 +8,9 @@ import {
   Button,
   Row
 } from '@src/components/atoms'
-import theme from '@src/constants/theme'
-import {Link} from 'gatsby'
 import './AboutUs.css'
 import zhihu from '@src/assets/images/Zhihu_icon.png'
-import segmentfault from '@src/assets/images/Segmentfault_icon.png'
+import segmentfault from '@src/assets/images/SegmentFault_icon.png'
 
 const us : {
   icon : any
