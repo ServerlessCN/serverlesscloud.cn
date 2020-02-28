@@ -3,6 +3,7 @@
 }
 .scf-about-us-box__body .scf-grid {
   display: flex;
+  margin: -21px;
 }
 .scf-about-us-box__body .scf-grid__item-12 {
   width: 50%;

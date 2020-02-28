@@ -1,5 +1,5 @@
 .scf-page-resource {
-  padding: 90px 0;
+  padding: 90px 0 100px;
 }
 
 .scf-page-resource .scf-layout-pattern {
@@ -15,8 +15,6 @@
   bottom: 0;
   width: 316px;
   height: 226px;
-
-  background: pink;
 }
 .scf-page-resource .scf-home-block {
   margin-bottom: 70px;
@@ -34,7 +32,7 @@
   width: 76%;
 }
 .scf-page-resource .scf-home-block__inner {
-  width: 1200px;
+  width: "76%";
   margin: 0 auto;
 }
 .scf-page-resource .scf-page-resource .scf-grid {

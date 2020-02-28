@@ -37,8 +37,7 @@ export default function() {
                 width={'76%'}
                 maxWidth={['100%', '100%', '100%', '85%']}
               >
-              <div style={{margin: "-21px",
-              width: "100%"}}>  
+              <div style={{margin: "-21px"}}>  
                 <Flex
                   flexDirection={['column', 'column', 'row', 'row', 'row']}
                   flexWrap={['initial', 'initial', 'wrap', 'wrap', 'initial']}

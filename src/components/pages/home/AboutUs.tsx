@@ -48,46 +48,37 @@ export default function () {
         <div className="scf-box__header-more"></div>
       </Row>
 
-      <Container
-        maxWidth={[
-        1000,
-        1216,
-        1216,
-        1216,
-        '76%',
-        1216
-      ]}>
-        <Flex flexWrap="wrap" justifyContent="center">
-          <div className="scf-about-us-box__body">
+      <div style={{width:"76%",
+      height:"100%",margin:"20px auto"}}>
+        <div className="scf-about-us-box__body">
 
-            <div className="scf-box__body">
-              <div className="scf-grid">
-                {us.map(({icon, title, slogan, link}) => (
-                  <div className="scf-grid__item-12">
-                    <a href={link}>
-                      <div className="scf-grid__box">
-                        <div className="scf-home-about-us-item">
-                          <div className="scf-media">
-                            <div className="scf-media__media"><img src={icon} alt=""/></div>
-                            <div className="scf-media__content">
-                              <div className="scf-media__title">
-                                <h4>{title}</h4>
-                              </div>
-                              <div className="scf-media__info">
-                                <p>{slogan}</p>
-                              </div>
+          <div className="scf-box__body">
+            <div className="scf-grid">
+              {us.map(({icon, title, slogan, link}) => (
+                <div className="scf-grid__item-12">
+                  <a href={link}>
+                    <div className="scf-grid__box">
+                      <div className="scf-home-about-us-item">
+                        <div className="scf-media">
+                          <div className="scf-media__media"><img src={icon} alt=""/></div>
+                          <div className="scf-media__content">
+                            <div className="scf-media__title">
+                              <h4>{title}</h4>
+                            </div>
+                            <div className="scf-media__info">
+                              <p>{slogan}</p>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </a>
-                  </div>
-                ))}
-              </div>
+                    </div>
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
-        </Flex>
-      </Container>
+        </div>
+      </div>
     </Background>
   )
 }

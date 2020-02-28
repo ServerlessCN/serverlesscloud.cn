@@ -34,12 +34,11 @@ function BlogCard({blog} : {
           <span className="scf-blog-article-item__statistics-item">
             <i className="scf-blog-icon scf-blog-icon-view"></i>
             13.3K</span>
-          · Alfred Huang · {blog
+         {blog.node.frontmatter.authors} · {blog
             .node
             .frontmatter
             .date
-            .slice(2, 10)} 
-          · 阅读大约需要6分钟</div>
+            .slice(2, 10)} · 阅读大约需要{parseInt((Math.random()*4+4)+'',10)}分钟</div>
         <div className="scf-blog-article-item__title">
           <h4>{blog.node.frontmatter.title}</h4>
         </div>
@@ -51,7 +50,8 @@ function BlogCard({blog} : {
 }
 
 function Blogs() {
-  const query= graphql `query { blogs: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 6 filter: { fileAbsolutePath: { regex: "//blog//" } frontmatter: { categories: { nin: "best-practice" } } } ) { edges { node { id frontmatter { title thumbnail description date } fileAbsolutePath fields { slug } } } } } `
+  const query= graphql `query { blogs: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 6 filter: { fileAbsolutePath: { regex: "//blog//" } frontmatter: { categories: { nin: "best-practice" } } } ) { edges { node { id frontmatter { title thumbnail thumbnail
+  authors description date } fileAbsolutePath fields { slug } } } } } `
   return (
     <StaticQuery
       query={query}
@@ -71,7 +71,7 @@ function Blogs() {
 
 export default function () {
   return (
-    <Background pt={'20px'} pb={'20px'} width={0.6666}>
+    <div style={{width:"66.66667%",height:"100%",background:"#fff",boxSizing:"border-box",padding:"21px"}}>
       <Center flexDirection="column">
         <Row
           className="scf-box__header"
@@ -82,7 +82,7 @@ export default function () {
           <div className="scf-box__header-title">
             <h3>博客</h3>
             <div className="scf-box__header-segment">
-              <a className={`scf-box__header-segment-item  is-active}`}>最新</a>
+              <a className={`scf-box__header-segment-item  is-active`}>最新</a>
             </div>
           </div>
           <div className="scf-box__header-more">
@@ -93,6 +93,6 @@ export default function () {
         </Row>
        <Blogs />
       </Center>
-    </Background>
+    </div>
   )
 }

@@ -236,17 +236,8 @@ const Resource = ({location} : Props) => {
                 keywords="Serverless components,Serverless组件,Serverless案例"
                 descirption="Serverless components 组件实战，快速上手Serverless框架组件能力，帮助上手Serverless最佳操作场景实战。"
                 location={location}/>
-            <Breadcrumbs>资源</Breadcrumbs>
-            <CustomContainer
-                py="60px"
-                maxWidth={[
-                1216,
-                1216,
-                1216,
-                '85%',
-                '90%',
-                1216
-            ]}>
+            <div style={{    marginTop: "80px",
+                flex: "1 1"}}>
                 <div className="scf-page-resource scf-layout-pattern">
                     <div className="scf-home-block">
                         <div className="scf-home-block__inner">
@@ -278,9 +269,8 @@ const Resource = ({location} : Props) => {
                             ))}
                         </div>
                     </div>
-
                 </div>
-            </CustomContainer>
+            </div>
         </Layout>
     )
 }

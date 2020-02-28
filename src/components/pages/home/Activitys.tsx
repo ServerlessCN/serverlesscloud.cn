@@ -64,7 +64,7 @@ function ActivityCards() {
 
 export default function () {
   return (
-    <Background width={0.3333} height={"100%"} background={"#fff"}>
+    <div style={{width:"33.333333%",height:"100%",background:"#fff",boxSizing:"border-box",padding:"21px"}}>
     <Box className="scf-activity-box scf-activity-home-active">
         <Row
           className="scf-activity-box__header"
@@ -72,9 +72,7 @@ export default function () {
           height="100%"
           alignItems="flex-end"
           justifyContent="space-between"
-          style={{
-          margin: "15px auto",
-        }}>
+          >
           <div className="scf-activity-box__header-title">
             <h3>活动</h3>
           </div>
@@ -86,6 +84,6 @@ export default function () {
         </Row>
         <ActivityCards/>
       </Box>
-    </Background>
+    </div>
   )
 }
