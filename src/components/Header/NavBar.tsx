@@ -45,7 +45,7 @@ export default function({
       maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}
     >
     <Flex alignItems="center" flexWrap="wrap" justifyContent="space-between" height={20} style={{paddingTop: 5}}>
-      <ExternalLink to="https://serverless.com/cn" ><p style={{display:"inline-block",fontSize:12,color:theme.colors.gray_text}}>← serverless.com</p></ExternalLink>
+      <ExternalLink to="https://serverless.com/cn" ><p style={{display:"inline-block",fontSize:12,color:theme.colors.gray_text,fontFamily: "Serverless"}}>← serverless.com</p></ExternalLink>
     </Flex>
       <Flex alignItems="center" flexWrap="wrap" justifyContent="space-between">
         <Logo logoHeight={height} />

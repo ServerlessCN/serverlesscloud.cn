@@ -64,6 +64,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 32px;
   max-width: 100%;
 }
 .scf-videos-grid .scf-video-item__title {
