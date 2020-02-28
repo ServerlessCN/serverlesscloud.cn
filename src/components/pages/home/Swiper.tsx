@@ -31,27 +31,32 @@ const bannerConfigs : {
   backgroundColor : string
   alt : string
   link : string
+  title: string
 }[] = [
   {
     img: banner1,
     backgroundColor: '#000',
     alt: 'Serverless.com',
-    link: 'https://serverless.com/cn'
+    link: 'https://serverless.com/cn',
+    title: ""
   }, {
     img: banner2,
     backgroundColor: '#dcdcdc',
     alt: 'Serverless 组件',
-    link: 'https://serverless.com/cn/components/'
+    link: 'https://serverless.com/cn/components/',
+    title: "Serverless 组件支持各种主流应用框架，持续发布中"
   }, {
     img: banner3,
     backgroundColor: '#fff',
     alt: '荐书',
-    link: 'https://china.serverless.com/blog/2019-11-19-anycodes-book'
+    link: 'https://china.serverless.com/blog/2019-11-19-anycodes-book',
+    title: "Serverless 社区成员初版新书啦！"
   }, {
     img: banner4,
     backgroundColor: '#fff',
     alt: 'Serverless Component',
-    link: '/about'
+    link: '/about',
+    title: "Serverless 社区成员交流"
   }
 ]
 
@@ -92,6 +97,10 @@ export default function () {
                               height={['auto', 'auto', '316px', '316px', '316px']as any}
                               src={config.img}
                               alt={config.alt}/>
+                            <div className="scf-carousel__info">
+                              <p className="scf-carousel__info-text">
+                                {config.title}</p>
+                            </div>
                           </ImageWrapper>
                         </ExternalLink>
                       </Background>
@@ -110,11 +119,23 @@ export default function () {
                     <Image src={helloworld} alt=""/>
                   </Box>
                   <Box className="scf-quick-start__opeate">
-                  <ExternalLink to={'https://serverless.com/cn/framework/docs/getting-started/'}><Button className="scf-btn scf-btn--primary" style={{width: 140}} >快速开始</Button></ExternalLink>
-                  <ExternalLink to={'https://github.com/serverless/serverless/blob/master/README_CN.md'}><button className="scf-btn scf-btn--icon scf-btn--line" style={{width: 140}}>
-                      <i className="scf-icon scf-icon-github-primary"></i>
-                      GitHub
-                    </button>
+                    <ExternalLink to={'https://serverless.com/cn/framework/docs/getting-started/'}>
+                      <Button
+                        className="scf-btn scf-btn--primary"
+                        style={{
+                        width: 140
+                      }}>快速开始</Button>
+                    </ExternalLink>
+                    <ExternalLink
+                      to={'https://github.com/serverless/serverless/blob/master/README_CN.md'}>
+                      <button
+                        className="scf-btn scf-btn--icon scf-btn--line"
+                        style={{
+                        width: 146.5
+                      }}>
+                        <i className="scf-icon scf-icon-github-primary"></i>
+                        GitHub
+                      </button>
                     </ExternalLink>
                   </Box>
                 </Box>

@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Serverless";
+  src: url("../assets/font/serverless.otf") format("otf"),
+      url("../assets/font/serverless.ttf") format("ttf"),
+      url("../assets/font/serverless.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Soleil";
+  src: url("../assets/font/soleil.otf") format("otf"),
+      url("../assets/font/soleil.ttf") format("ttf"),
+      url("../assets/font/soleil.woff") format("woff");
+}
+
 html,
 body,
 div,
@@ -83,7 +97,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
   line-height: 1.25;
 }

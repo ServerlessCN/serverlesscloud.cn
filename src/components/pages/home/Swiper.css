@@ -19,7 +19,28 @@
   font-size: 17px;
   margin-bottom: 8px;
 }
+.scf-carousel__info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 90px;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(99%,rgba(0,0,0,.6)));
+  background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.6) 99%);
+  padding: 15px 20px;
+  font-size: 20px;
+  line-height: 28px;
+}
 
+.scf-carousel__info-text {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 .scf-italic-title__title {
   font-weight: 400;
   padding-left: 15px;
