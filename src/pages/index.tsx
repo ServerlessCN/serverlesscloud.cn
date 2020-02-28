@@ -29,15 +29,21 @@ const IndexPage = (props : Props) => {
       <Row
         width="76%"
         height="100%"
-        margin="10px auto"
+        margin="20px auto"
         alignItems="center"
         justifyContent="center">
-        <LatestBlogs/>
-        <Activitys/>
+        <div style={{
+          margin: "-21px",
+          display: "flex"
+        }}>
+          <LatestBlogs/>
+          < Activitys/>
+        </div>
       </Row>
+
       <Videos/>
       <CommonQuestion/>
-      <AboutUs />
+      <AboutUs/>
     </Layout>
   )
 }

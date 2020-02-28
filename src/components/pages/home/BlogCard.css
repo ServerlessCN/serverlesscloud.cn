@@ -22,7 +22,7 @@
 }
 .scf-article-item__img img {
   position: absolute;
-  top: 0;
+  top: -25px;
   left: 0;
   max-width: 100%;
 }
@@ -32,9 +32,10 @@ img {
 .scf-article-item__content {
   margin-bottom: top;
 }
+/* Todo */
 .scf-article-item__statistics {
   margin-bottom: 10px;
-  display: flex;
+  display: none; 
   color: #8c8c8c;
   font-size: 14px;
   align-items: flex-start;
@@ -84,6 +85,6 @@ img {
 }
 .scf-icon {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }

@@ -43,105 +43,98 @@ const VideoList : Video[] = [
 export default function () {
 
   return (
-    <Background
-      background={theme.colors.white}
-      pt={'40px'}
-      pb={'20px'}
-      width={1}
-      style={{
-      margin: "0 auto"
-    }}>
-      <Center flexDirection="column">
-        <Row
-          className="scf-box__header"
-          width="76%"
-          height="100%"
-          alignItems="flex-end"
-          justifyContent="space-between"
-          style={{
-          marginTop: "0px"
-        }}>
-          <div className="scf-box__header-title">
-            <h3>视频</h3>
-          </div>
-          <div className="scf-box__header-more">
-            <Link to="/resource">
-              更多视频 &gt;
-            </Link>
-          </div>
-        </Row>
-        <Row
-          className="scf-box__header"
-          width="76%"
-          height="100%"
-          alignItems="flex-end"
-          justifyContent="space-between"
-          style={{
-          marginTop: "10px"
-        }}>
-          <div className="scf-videos-grid">
-            <div className="scf-grid__item-12">
-              <div className="scf-grid__box">
-                <div className="scf-video-item scf-video-item--block"><img src={VideoList[0].img} alt=""/>
-                  <div className="scf-video-item__info">
-                    <a href={VideoList[0].link}>
-                      <i className="scf-icon scf-icon-video"></i>
-                    </a>
-                    <span className="scf-video-item__title">{VideoList[0].title}</span>
-                  </div>
+    <Background background={theme.colors.white} pt={'20px'} pb={'20px'} width={1}>
+
+      <div
+        className="scf-box__header"
+        style={{
+        height: "100%",
+        width: "76%",
+        margin: "10px auto",
+        alignItems: "flex-end",
+        justifyContent: "space-between"
+      }}>
+
+        <div className="scf-box__header-title">
+          <h3>视频</h3>
+        </div>
+        <div className="scf-box__header-more">
+          <Link to="/resource">
+            更多视频 &gt;
+          </Link>
+        </div>
+      </div>
+      <div
+        className="scf-box__body"
+        style={{
+        height: "100%",
+        width: "76%",
+        margin: "10px auto",
+        alignItems: "flex-end",
+        justifyContent: "space-between"
+      }}>
+        <div className="scf-videos-grid">
+          <div className="scf-grid__item-12">
+            <div className="scf-grid__box">
+              <div className="scf-video-item scf-video-item--block"><img src={VideoList[0].img} alt=""/>
+                <div className="scf-video-item__info">
+                  <a href={VideoList[0].link}>
+                    <i className="scf-icon scf-icon-video"></i>
+                  </a>
+                  <span className="scf-video-item__title">{VideoList[0].title}</span>
                 </div>
               </div>
             </div>
-            <div className="scf-grid__item-12">
-              <div className="scf-grid__box">
-                <div className="scf-grid">
-                  <div className="scf-grid__item-12">
-                    <div className="scf-grid__box">
-                      <div className="scf-video-item "><img src={VideoList[1].img} alt=""/>
-                        <a href={VideoList[1].link} className="scf-video-item__playbtn">
-                          <i className="scf-icon scf-icon-video"></i>
-                        </a>
-                        <div className="scf-video-item__info">
-                          <div className="scf-video-item__title">{VideoList[1].title}</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="scf-grid__item-12">
-                    <div className="scf-grid__box">
-                      <div className="scf-video-item "><img src={VideoList[2].img} alt=""/>
-                        <a href={VideoList[2].link} className="scf-video-item__playbtn">
-                          <i className="scf-icon scf-icon-video"></i>
-                        </a>
-                        <div className="scf-video-item__info">
-                          <div className="scf-video-item__title">{VideoList[2].title}</div>
-                        </div>
+          </div>
+          <div className="scf-grid__item-12">
+            <div className="scf-grid__box">
+              <div className="scf-grid">
+                <div className="scf-grid__item-12">
+                  <div className="scf-grid__box">
+                    <div className="scf-video-item "><img src={VideoList[1].img} alt=""/>
+                      <a href={VideoList[1].link} className="scf-video-item__playbtn">
+                        <i className="scf-icon scf-icon-video"></i>
+                      </a>
+                      <div className="scf-video-item__info">
+                        <div className="scf-video-item__title">{VideoList[1].title}</div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="scf-grid">
-                  <div className="scf-grid__item-12">
-                    <div className="scf-grid__box">
-                      <div className="scf-video-item "><img src={VideoList[3].img} alt=""/>
-                        <a href={VideoList[3].link} className="scf-video-item__playbtn">
-                          <i className="scf-icon scf-icon-video"></i>
-                        </a>
-                        <div className="scf-video-item__info">
-                          <div className="scf-video-item__title">{VideoList[3].title}</div>
-                        </div>
+                <div className="scf-grid__item-12">
+                  <div className="scf-grid__box">
+                    <div className="scf-video-item "><img src={VideoList[2].img} alt=""/>
+                      <a href={VideoList[2].link} className="scf-video-item__playbtn">
+                        <i className="scf-icon scf-icon-video"></i>
+                      </a>
+                      <div className="scf-video-item__info">
+                        <div className="scf-video-item__title">{VideoList[2].title}</div>
                       </div>
                     </div>
                   </div>
-                  <div className="scf-grid__item-12">
-                    <div className="scf-grid__box">
-                      <div className="scf-video-item "><img src={VideoList[4].img} alt=""/>
-                        <a href={VideoList[4].link} className="scf-video-item__playbtn">
-                          <i className="scf-icon scf-icon-video"></i>
-                        </a>
-                        <div className="scf-video-item__info">
-                          <div className="scf-video-item__title">{VideoList[4].title}</div>
-                        </div>
+                </div>
+              </div>
+              <div className="scf-grid">
+                <div className="scf-grid__item-12">
+                  <div className="scf-grid__box">
+                    <div className="scf-video-item "><img src={VideoList[3].img} alt=""/>
+                      <a href={VideoList[3].link} className="scf-video-item__playbtn">
+                        <i className="scf-icon scf-icon-video"></i>
+                      </a>
+                      <div className="scf-video-item__info">
+                        <div className="scf-video-item__title">{VideoList[3].title}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="scf-grid__item-12">
+                  <div className="scf-grid__box">
+                    <div className="scf-video-item "><img src={VideoList[4].img} alt=""/>
+                      <a href={VideoList[4].link} className="scf-video-item__playbtn">
+                        <i className="scf-icon scf-icon-video"></i>
+                      </a>
+                      <div className="scf-video-item__info">
+                        <div className="scf-video-item__title">{VideoList[4].title}</div>
                       </div>
                     </div>
                   </div>
@@ -149,8 +142,9 @@ export default function () {
               </div>
             </div>
           </div>
-        </Row>
-      </Center>
+        </div>
+      </div>
+
     </Background>
   )
 }

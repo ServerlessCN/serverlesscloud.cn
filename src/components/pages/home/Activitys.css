@@ -13,7 +13,6 @@
 .scf-activity-home-active {
   margin-bottom: 15px;
   height: 100%;
-  padding: 21px;
 }
 .scf-activity-box__header {
   display: flex;
@@ -27,6 +26,7 @@
 .scf-activity-box__header-title {
   display: flex;
   position: relative;
+  font-weight: 600;
   height: 37px;
   line-height: 44px;
   min-width: 147px;

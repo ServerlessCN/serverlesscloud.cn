@@ -1,6 +1,5 @@
 .scf-common-question-box__body .scf-grid {
   margin: -21px;
-  width:100%;
   display: flex;
 }
 .scf-common-question-box__body .scf-grid__item-12 {
@@ -37,7 +36,7 @@
 }
 .scf-common-question-bg{
   width:100%;
-  padding: 20px;
+  padding: 20px 0px;
   background: url('../../../assets/images/box-bg.png');
 }
 .scf-common-question-bg .scf-box__header-title {

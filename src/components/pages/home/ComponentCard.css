@@ -32,7 +32,7 @@
 }
 .scf-component-article-item__img img {
   position: absolute;
-  top: 0;
+  top: -25px;
   left: 0;
   max-width: 100%;
 }
