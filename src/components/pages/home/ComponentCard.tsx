@@ -14,7 +14,6 @@ export default function ComponentCard({blog} : Component) {
       <Link
         to={blog.link}
         style={{
-        display: "inline-block",
         height: "100%"
       }}>
         <div className="scf-component-grid__box">
