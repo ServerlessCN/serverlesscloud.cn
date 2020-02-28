@@ -38,7 +38,7 @@
 }
 .scf-component-article-item__statistics {
   margin-bottom: 10px;
-  display: flex;
+  display: none;
   color: #8c8c8c;
   font-size: 14px;
   align-items: flex-start;
