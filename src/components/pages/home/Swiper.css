@@ -142,6 +142,7 @@
 .scf-btn--primary {
   background-color: #fe5751;
   color: #fff;
+  border:none;
 }
 .scf-btn--primary:hover {
   background-color: #b73832;
