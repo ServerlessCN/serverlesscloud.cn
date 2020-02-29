@@ -77,9 +77,12 @@ export default function({ isActive, isDesktopView }: Props) {
       width={navListBoxWidth}
       bg={theme.colors.black}
       display={[
-        isMobileNavListDisplay(),
-        isMobileNavListDisplay(),
-        isMobileNavListDisplay(),
+        // isMobileNavListDisplay(),
+        // isMobileNavListDisplay(),
+        // isMobileNavListDisplay(),
+        'block',
+        'block',
+        'block',
         'block',
       ]}
       textAlign={isDesktopView ? 'right' : 'left'}

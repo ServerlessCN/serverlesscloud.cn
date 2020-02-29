@@ -96,9 +96,9 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 14px;
   vertical-align: baseline;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 
 /* make sure to set some focus styles for accessibility */
@@ -122,6 +122,11 @@ section {
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  height: 100%;
   font-family: "Soleil","Roboto","San Francisco","Helvetica Neue",Helvetica,Arial,"PingFangSC-Light","Hiragina Sans GB","WenQuanYi Micro Hei","microsoft yahei ui","microsoft yahei",sans-serif !important;
 }
 

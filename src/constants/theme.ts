@@ -1,3 +1,4 @@
+// const breakpoints = [ '1600px']
 const breakpoints = ['320px', '768px', '992px', '1280px', '1600px']
 
 const navbarHeights = {

@@ -1,11 +1,22 @@
+.scf-grid {
+  margin: -21px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.scf-grid [class*=scf-grid__item] {
+  padding: 21px;
+}
+.scf-grid__item-16 {
+  width: 66.6666667%;
+}
+.scf-grid__item-8 {
+  width: 33.3333333%;
+}
 .scf-quick-start {
   box-shadow: 2px 2px 8px 0 rgba(0,0,0,.08);
   border: 1px solid #eaeaea;
   padding: 12px 15px 15px;
   height: 100%;
-  background:"yellow";
-  width:333px;
-  height:316px;
 }
 .scf-quick-start__banner img {
   position: absolute;
@@ -34,7 +45,12 @@
   font-size: 20px;
   line-height: 28px;
 }
-
+.swiper-container{
+  overflow: visible !important;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bulle{
+  margin: 0px !important;
+}
 .scf-carousel__info-text {
   display: -webkit-box;
   overflow: hidden;
@@ -72,17 +88,15 @@
   position: relative;
   overflow: hidden;
   border-radius: 4px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
 }
 .scf-quick-start__opeate {
   display: flex;
   justify-content: space-between;
   margin: 0 -7px;
 }
-.scf-quick-start__opeate .scf-btn {
-  height:50px;
-  flex: 1 1;
-  margin: 0 7px;
-  padding: 0;
+.scf-quick-start__opeate a {
+  display: contents;
 }
 
 .scf-quick-start__opeate .scf-btn--icon {

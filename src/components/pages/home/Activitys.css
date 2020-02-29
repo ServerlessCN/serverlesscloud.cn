@@ -87,7 +87,7 @@
 .scf-activity-article-item__title {
   color: #000;
   font-size: 17px;
-  line-height: 24px;
+  line-height: 40px;
   margin-bottom: 10px;
   font-weight: 400;
 }
@@ -95,4 +95,28 @@
   color: #666;
   font-size: 14px;
   line-height: 22px;
+}
+.scf-box__header-title.size-s {
+  min-width: 100px;
+}
+.scf-home-active .scf-article-item {
+  padding: 20px;
+  box-shadow: 2px 2px 8px 0 rgba(0,0,0,.08);
+  border: 1px solid #eaeaea;
+  margin-bottom: 30px;
+}
+.scf-home-active .scf-article-item:last-child {
+  margin-bottom: 0;
+}
+.scf-home-active .scf-article-item__img {
+  padding-top: 53.1%;
+  overflow: hidden;
+}
+.scf-article-item__img {
+  font-size: 0;
+  margin-bottom: 15px;
+  height: 0;
+  padding-top: 48.4%;
+  position: relative;
+  overflow: hidden;
 }

@@ -32,53 +32,56 @@ const us : {
 ]
 export default function () {
   return (
-    <Background pt={'20px'} pb={'40px'} width={1} backgroundColor="pink">
-      <Row
-        className="scf-box__header"
-        width="76%"
-        height="100%"
-        alignItems="flex-end"
-        justifyContent="space-between"
-        style={{
-        margin: "0px auto"
-      }}>
-        <div className="scf-box__header-title">
-          <h3>中文社区</h3>
-        </div>
-        <div className="scf-box__header-more"></div>
-      </Row>
+    <Box className="scf-home-about-us">
+      <Container
+        width={[
+        0.95,
+        0.95,
+        0.95,
+        0.95,
+        0.76,
+        1200
+      ]}
+        px={0}>
+        <Box className="scf-box">
+          <Box className="scf-box__header">
+            <Box className="scf-box__header-title">
+              <h3>中文社区</h3>
+            </Box>
+            <Box className="scf-box__header-more"></Box>
+          </Box>
 
-      <div style={{width:"76%",
-      height:"100%",margin:"20px auto"}}>
-        <div className="scf-about-us-box__body">
-
-          <div className="scf-box__body">
-            <div className="scf-grid">
-              {us.map(({icon, title, slogan, link}) => (
-                <div className="scf-grid__item-12">
-                  <a href={link}>
-                    <div className="scf-grid__box">
-                      <div className="scf-home-about-us-item">
-                        <div className="scf-media">
-                          <div className="scf-media__media"><img src={icon} alt=""/></div>
-                          <div className="scf-media__content">
-                            <div className="scf-media__title">
-                              <h4>{title}</h4>
-                            </div>
-                            <div className="scf-media__info">
-                              <p>{slogan}</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </Background>
+          <Box className="scf-box__body">
+            <Box className="scf-about-us-box__body">
+              <Box className="scf-box__body">
+                <Box className="scf-grid">
+                  {us.map(({icon, title, slogan, link}) => (
+                    <Box className="scf-grid__item-12">
+                      <a href={link}>
+                        <Box className="scf-grid__box">
+                          <Box className="scf-home-about-us-item">
+                            <Box className="scf-media">
+                              <Box className="scf-media__media"><img src={icon} alt=""/></Box>
+                              <Box className="scf-media__content">
+                                <Box className="scf-media__title">
+                                  <h4>{title}</h4>
+                                </Box>
+                                <Box className="scf-media__info">
+                                  <p>{slogan}</p>
+                                </Box>
+                              </Box>
+                            </Box>
+                          </Box>
+                        </Box>
+                      </a>
+                    </Box>
+                  ))}
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Container>
+    </Box>
   )
 }

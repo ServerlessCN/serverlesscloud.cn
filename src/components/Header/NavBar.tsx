@@ -40,9 +40,9 @@ export default function({
 
   return (
     <Container
-      width={[0.95, 0.95, 0.95, 0.95, 1216]}
+      width={[0.95, 0.95, 0.95, 0.95, 0.76, 1200]}
       px={0}
-      maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}
+      // maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]
     >
     <Flex alignItems="center" flexWrap="wrap" justifyContent="space-between" height={20} style={{paddingTop: 5}}>
       <ExternalLink to="https://serverless.com/cn" ><p style={{display:"inline-block",fontSize:12,color:theme.colors.gray_text,fontFamily: "Serverless"}}>← serverless.com</p></ExternalLink>
