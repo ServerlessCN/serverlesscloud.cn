@@ -35,55 +35,53 @@ function ActivityCard({activity} : {
   activity: Activity
 }) {
   return (
-    <div className="scf-activity-article-item">
+    <Box className="scf-article-item">
     <Link to={activity.link}>
-      <div className="scf-activity-article-item__img">
+      <Box className="scf-article-item__img">
         <img src={activity.cover} alt=""/>
-      </div>
-      <div className="scf-activity-article-item__content">
-        <div className="scf-activity-article-item__title">
+      </Box>
+      <Box className="scf-article-item__content">
+        <Box className="scf-article-item__title">
           <h4>{activity.title}</h4>
-        </div>
-        <div className="scf-activity-article-item__intro">
+        </Box>
+        <Box className="scf-article-item__intro">
           {activity.decription}
-        </div>
-      </div>
+        </Box>
+      </Box>
       </Link>
-    </div>
+    </Box>
 
   )
 }
 
 function ActivityCards() {
   return (
-    <Container maxWidth={['100%', '100%', '100%', '100%', '100%']}>
+    <Box className="scf-box__body">
         {activityList.map(activity => (<ActivityCard key={activity.title} activity={activity}/>))}
-    </Container>
+    </Box>
   )
 }
 
 export default function () {
   return (
-    <div style={{width:"33.333333%",height:"100%",background:"#fff",boxSizing:"border-box",padding:"21px"}}>
-    <Box className="scf-activity-box scf-activity-home-active">
-        <Row
-          className="scf-activity-box__header"
-          width="100%"
-          height="100%"
-          alignItems="flex-end"
-          justifyContent="space-between"
+    <Box className="scf-grid__item-8">
+    <Box className="scf-grid__box">
+    <Box className="scf-box scf-home-active">
+        <Box
+          className="scf-box__header"
           >
-          <div className="scf-activity-box__header-title">
+          <Box className="scf-box__header-title size-s">
             <h3>活动</h3>
-          </div>
-          <div className="scf-activity-box__header-more">
+          </Box>
+          <Box className="scf-box__header-more">
             <Link to="/category/news">
               更多活动 &gt;
             </Link>
-          </div>
-        </Row>
+          </Box>
+        </Box>
         <ActivityCards/>
       </Box>
-    </div>
+    </Box>
+    </Box>
   )
 }

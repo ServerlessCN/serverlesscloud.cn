@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Background, Center, Row} from '@src/components/atoms'
+import {Container, Box, Row} from '@src/components/atoms'
 import theme from '@src/constants/theme'
 import {Link} from 'gatsby'
 import video1 from '@src/assets/images/video1.png'
@@ -43,108 +43,104 @@ const VideoList : Video[] = [
 export default function () {
 
   return (
-    <Background background={theme.colors.white} pt={'20px'} pb={'20px'} width={1}>
-
-      <div
-        className="scf-box__header"
-        style={{
-        height: "100%",
-        width: "76%",
-        margin: "10px auto",
-        alignItems: "flex-end",
-        justifyContent: "space-between"
-      }}>
-
-        <div className="scf-box__header-title">
-          <h3>视频</h3>
-        </div>
-        <div className="scf-box__header-more">
-          <Link to="/resource">
-            更多视频 &gt;
-          </Link>
-        </div>
-      </div>
-      <div
-        className="scf-box__body"
-        style={{
-        height: "100%",
-        width: "76%",
-        margin: "10px auto",
-        alignItems: "flex-end",
-        justifyContent: "space-between"
-      }}>
-        <div className="scf-videos-grid">
-          <div className="scf-grid__item-12">
-            <div className="scf-grid__box">
-              <div className="scf-video-item scf-video-item--block"><img src={VideoList[0].img} alt=""/>
-                <div className="scf-video-item__info">
-                  <a href={VideoList[0].link}>
-                    <i className="scf-icon scf-icon-video"></i>
-                  </a>
-                  <span className="scf-video-item__title">{VideoList[0].title}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="scf-grid__item-12">
-            <div className="scf-grid__box">
-              <div className="scf-grid">
-                <div className="scf-grid__item-12">
-                  <div className="scf-grid__box">
-                    <div className="scf-video-item "><img src={VideoList[1].img} alt=""/>
-                      <a href={VideoList[1].link} className="scf-video-item__playbtn">
-                        <i className="scf-icon scf-icon-video"></i>
-                      </a>
-                      <div className="scf-video-item__info">
-                        <div className="scf-video-item__title">{VideoList[1].title}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="scf-grid__item-12">
-                  <div className="scf-grid__box">
-                    <div className="scf-video-item "><img src={VideoList[2].img} alt=""/>
-                      <a href={VideoList[2].link} className="scf-video-item__playbtn">
-                        <i className="scf-icon scf-icon-video"></i>
-                      </a>
-                      <div className="scf-video-item__info">
-                        <div className="scf-video-item__title">{VideoList[2].title}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="scf-grid">
-                <div className="scf-grid__item-12">
-                  <div className="scf-grid__box">
-                    <div className="scf-video-item "><img src={VideoList[3].img} alt=""/>
-                      <a href={VideoList[3].link} className="scf-video-item__playbtn">
-                        <i className="scf-icon scf-icon-video"></i>
-                      </a>
-                      <div className="scf-video-item__info">
-                        <div className="scf-video-item__title">{VideoList[3].title}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="scf-grid__item-12">
-                  <div className="scf-grid__box">
-                    <div className="scf-video-item "><img src={VideoList[4].img} alt=""/>
-                      <a href={VideoList[4].link} className="scf-video-item__playbtn">
-                        <i className="scf-icon scf-icon-video"></i>
-                      </a>
-                      <div className="scf-video-item__info">
-                        <div className="scf-video-item__title">{VideoList[4].title}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </Background>
+    <Container
+      width={[
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.76,
+      1200
+    ]}
+      px={0}>
+      <Box className="scf-home-video">
+        <Box
+          className="scf-box__header"
+          >
+          <Box className="scf-box__header-title  size-s">
+            <h3>视频</h3>
+          </Box>
+          <Box className="scf-box__header-more">
+            <Link to="/resource">
+              更多视频 &gt;
+            </Link>
+          </Box>
+        </Box>
+        <Box
+          className="scf-box__body"
+         >
+          <Box className="scf-grid">
+            <Box className="scf-grid__item-12">
+              <Box className="scf-grid__box">
+                <Box className="scf-video-item scf-video-item--block"><img src={VideoList[0].img} alt=""/>
+                  <Box className="scf-video-item__info">
+                    <a href={VideoList[0].link}>
+                      <i className="scf-icon scf-icon-video"></i>
+                    </a>
+                    <span className="scf-video-item__title">{VideoList[0].title}</span>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+            <Box className="scf-grid__item-12">
+              <Box className="scf-grid__box">
+                <Box className="scf-grid">
+                  <Box className="scf-grid__item-12">
+                    <Box className="scf-grid__box">
+                      <Box className="scf-video-item "><img src={VideoList[1].img} alt=""/>
+                        <a href={VideoList[1].link} className="scf-video-item__playbtn">
+                          <i className="scf-icon scf-icon-video"></i>
+                        </a>
+                        <Box className="scf-video-item__info">
+                          <Box className="scf-video-item__title">{VideoList[1].title}</Box>
+                        </Box>
+                      </Box>
+                    </Box>
+                  </Box>
+                  <Box className="scf-grid__item-12">
+                    <Box className="scf-grid__box">
+                      <Box className="scf-video-item "><img src={VideoList[2].img} alt=""/>
+                        <a href={VideoList[2].link} className="scf-video-item__playbtn">
+                          <i className="scf-icon scf-icon-video"></i>
+                        </a>
+                        <Box className="scf-video-item__info">
+                          <Box className="scf-video-item__title">{VideoList[2].title}</Box>
+                        </Box>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
+                <Box className="scf-grid">
+                  <Box className="scf-grid__item-12">
+                    <Box className="scf-grid__box">
+                      <Box className="scf-video-item "><img src={VideoList[3].img} alt=""/>
+                        <a href={VideoList[3].link} className="scf-video-item__playbtn">
+                          <i className="scf-icon scf-icon-video"></i>
+                        </a>
+                        <Box className="scf-video-item__info">
+                          <Box className="scf-video-item__title">{VideoList[3].title}</Box>
+                        </Box>
+                      </Box>
+                    </Box>
+                  </Box>
+                  <Box className="scf-grid__item-12">
+                    <Box className="scf-grid__box">
+                      <Box className="scf-video-item "><img src={VideoList[4].img} alt=""/>
+                        <a href={VideoList[4].link} className="scf-video-item__playbtn">
+                          <i className="scf-icon scf-icon-video"></i>
+                        </a>
+                        <Box className="scf-video-item__info">
+                          <Box className="scf-video-item__title">{VideoList[4].title}</Box>
+                        </Box>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    </Container>
   )
 }

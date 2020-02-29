@@ -3,6 +3,7 @@ import {
   Center,
   Text,
   Background,
+  Container,
   Box,
   Image,
   Row,
@@ -31,7 +32,7 @@ const bannerConfigs : {
   backgroundColor : string
   alt : string
   link : string
-  title: string
+  title : string
 }[] = [
   {
     img: banner1,
@@ -69,78 +70,79 @@ export default function () {
             pt={isDesktopView
             ? theme.headerHeights.desktop
             : theme.headerHeights.mobile}>
-            <Row
-              height="100%"
-              alignItems="center"
-              justifyContent="center"
-              style={{
-              marginTop: "30px"
-            }}>
-              <Box
-                style={{
-                width: 708,
-                height: 316,
-                marginRight: 45
-              }}>
-                <Swiper height={['200px', '200px', '336px', '336px', '336px']}>
-                  {bannerConfigs.map((config, index) => {
-                    return (
-                      <Background
-                        key={index}
-                        className="swiper-slide"
-                        backgroundRepeat="no-repeat"
-                        background={config.backgroundColor}>
-                        <ExternalLink to={config.link}>
-                          <ImageWrapper>
-                            <Image
-                              width={[0.8, 0.8, 0.8, '708px']as any}
-                              height={['auto', 'auto', '316px', '316px', '316px']as any}
-                              src={config.img}
-                              alt={config.alt}/>
-                            <div className="scf-carousel__info">
-                              <p className="scf-carousel__info-text">
-                                {config.title}</p>
-                            </div>
-                          </ImageWrapper>
+            <Container
+              width={[
+              0.95,
+              0.95,
+              0.95,
+              0.95,
+              0.76,
+              1200
+            ]}
+              px={0}
+              pt={30}>
+              <Box className="scf-grid">
+                <Box className="scf-grid__item-16">
+                  <Swiper height={"90%"}>
+                    {bannerConfigs.map((config, index) => {
+                      return (
+                        <Background
+                          key={index}
+                          className="swiper-slide"
+                          backgroundRepeat="no-repeat"
+                          background={config.backgroundColor}>
+                          <ExternalLink to={config.link}>
+                            <ImageWrapper>
+                              <Image
+                                width={"100%"}
+                                height={"100%"}
+                                src={config.img}
+                                alt={config.alt}/>
+                              <div className="scf-carousel__info">
+                                <p className="scf-carousel__info-text">
+                                  {config.title}</p>
+                              </div>
+                            </ImageWrapper>
+                          </ExternalLink>
+                        </Background>
+                      )
+                    })}
+                  </Swiper>
+                </Box>
+                <Box className="scf-grid__item-8">
+                <Box style={{height: "90%"}} >
+                  <Box className="scf-quick-start">
+                    <Box className="scf-quick-start__header">
+                      <Box className="scf-italic-title">
+                        <h3 className="scf-italic-title__title">Hello World</h3>
+                      </Box>
+                    </Box>
+                    <Box className="scf-quick-start__body">
+                      <Box className="scf-quick-start__banner">
+                        <Image src={helloworld} alt=""/>
+                      </Box>
+                      <Box className="scf-quick-start__opeate">
+                        <ExternalLink to={'https://serverless.com/cn/framework/docs/getting-started/'}>
+                          <button
+                            className="scf-btn scf-btn--primary"
+                            >快速开始</button>
                         </ExternalLink>
-                      </Background>
-                    )
-                  })}
-                </Swiper>
-              </Box>
-              <Box className="scf-quick-start">
-                <Box className="scf-quick-start__header">
-                  <Box className="scf-italic-title">
-                    <h3 className="scf-italic-title__title">Hello World</h3>
+                        <ExternalLink
+                          to={'https://github.com/serverless/serverless/blob/master/README_CN.md'}>
+                          <button
+                            className="scf-btn scf-btn--icon scf-btn--line"
+                            >
+                            <i className="scf-icon scf-icon-github-primary"></i>
+                            GitHub
+                          </button>
+                        </ExternalLink>
+                      </Box>
+                    </Box>
                   </Box>
                 </Box>
-                <Box className="scf-quick-start__body">
-                  <Box className="scf-quick-start__banner">
-                    <Image src={helloworld} alt=""/>
-                  </Box>
-                  <Box className="scf-quick-start__opeate">
-                    <ExternalLink to={'https://serverless.com/cn/framework/docs/getting-started/'}>
-                      <Button
-                        className="scf-btn scf-btn--primary"
-                        style={{
-                        width: 140
-                      }}>快速开始</Button>
-                    </ExternalLink>
-                    <ExternalLink
-                      to={'https://github.com/serverless/serverless/blob/master/README_CN.md'}>
-                      <button
-                        className="scf-btn scf-btn--icon scf-btn--line"
-                        style={{
-                        width: 146.5
-                      }}>
-                        <i className="scf-icon scf-icon-github-primary"></i>
-                        GitHub
-                      </button>
-                    </ExternalLink>
-                  </Box>
                 </Box>
               </Box>
-            </Row>
+            </Container>
           </Box>
         )
       }}

@@ -9,26 +9,41 @@ import { HeightProps } from 'styled-system'
 const Wrapper = styled(Box)`
 .swiper-container{
   position: relative;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: visible !important;
 }
 
 .swiper-pagination{
-  width:100%;
-  bottom: 0px !important;
-  left: 0px !important;
+  font-size: 0;
   position: absolute;
-  background-color: #fff !important;
+  left: 0;
+  width: auto !important;
+  bottom: -25px !important;
 }
 .swiper-wrapper {
-  height: 316px !important;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .swiper-pagination .swiper-pagination-bullet {
-  float:left;
+  display: inline-block !important;
   width: 30px;
-  height: 5px;
+  height: 25px;
   margin: 0px !important;
-  margin-right: 8px !important;;
-  border-radius:0;
+  margin-right: 10px !important;
+  background-color: hsla(0,0%,50.2%,.5);
+  border: 10px solid #fff;
+  border-width: 10px 0;
+  cursor: pointer;
+  border-radius: 0;
+  outline: none;
+  box-sizing: border-box !important;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 !important;
 }
 .swiper-pagination .swiper-pagination-bullet-active {
     background-color: ${theme.colors.serverlessRed};

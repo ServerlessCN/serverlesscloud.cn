@@ -1,18 +1,5 @@
-.scf-about-us-box__body{
-  width: 100%;
-}
-.scf-about-us-box__body .scf-grid {
-  display: flex;
-  margin: -21px;
-}
-.scf-about-us-box__body .scf-grid__item-12 {
-  width: 50%;
-  padding: 21px;
-}
-.scf-about-us-box__body .scf-grid__box {
-  height: 100%;
-}
-.scf-about-us-box__body .scf-home-about-us-item {
+
+.scf-home-about-us-item {
     padding: 25px;
     box-shadow: 2px 2px 8px 0 rgba(0,0,0,.08);
     border: 1px solid #eaeaea;
@@ -21,26 +8,30 @@
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
-.scf-about-us-box__body .scf-media {
+.scf-home-about-us {
+  margin-top: 70px;
+  margin-bottom: 139px;
+}
+ .scf-media {
   display: flex;
   align-items: flex-start;
   flex-direction: row;
 }
-.scf-about-us-box__body .scf-home-about-us-item .scf-media__media {
+ .scf-home-about-us-item .scf-media__media {
   width: 50px;
 }
-.scf-about-us-box__body .scf-media__content {
+ .scf-media__content {
   flex: auto;
 }
-.scf-about-us-box__body .scf-media__media img {
+ .scf-media__media img {
   max-width: 100%;
 }
-.scf-about-us-box__body .scf-media__title {
+ .scf-media__title {
   font-size: 17px;
   line-height: 24px;
   margin-bottom: 5px;
 }
-.scf-about-us-box__body .scf-media__info {
+ .scf-media__info {
   font-size: 14px;
   line-height: 20px;
   color: #666;

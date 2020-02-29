@@ -14,7 +14,6 @@ import styled from 'styled-components'
 import {Link} from 'gatsby'
 import './CommonQuestion.css'
 
-
 const questions : {
   question : string;
   answer : string | JSX.Element
@@ -45,71 +44,65 @@ const questions : {
 ]
 export default function () {
   return (
-    <Background pt={'40px'} pb={'40px'} width={1}>
-    <div className="scf-common-question-bg">
-      <Row
-        className="scf-box__header"
-        width="76%"
-        height="100%"
-        alignItems="flex-end"
-        justifyContent="space-between"
-        style={{
-        margin: "10px auto"
-      }}>
-        <div className="scf-box__header-title">
-          <h3>关于 Serverless Framework</h3>
-        </div>
-        <div className="scf-box__header-more">
-          <Link to="/forum">
-            常见问题 &gt;
-          </Link>
-        </div>
-      </Row>
+    <Box className="scf-home-about">
+    <Container
+      width={[
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.76,
+      1200
+    ]}
+      px={0}>
+      <Box className="scf-box">
+        <Box className="scf-box__header">
+          <Box className="scf-box__header-title">
+            <h3>关于 Serverless Framework</h3>
+          </Box>
+          <Box className="scf-box__header-more">
+            <Link to="/forum">
+              常见问题 &gt;
+            </Link>
+          </Box>
+        </Box>
 
-      <Container
-        maxWidth={[
-        1000,
-        1216,
-        1216,
-        1216,
-        '76%',
-        1216
-      ]}>
-        <Flex flexWrap="wrap" justifyContent="center">
-          <div className="scf-common-question-box__body">
-           
-          <div className="scf-grid">
-              {questions.slice(0,2).map(({question, answer}) => (
-                <div className="scf-grid__item-12">
-                  <div className="scf-grid__box">
-                    <div className="scf-home-about-item">
-                      <div className="scf-italic-title">
-                        <h4 className="scf-italic-title__title">{question}</h4>
-                      </div>
-                      <p className="scf-home-about-item__intro">{answer}</p>
-                    </div>
-                  </div>
-                </div>
-                ))}
-                </div>
-                <div className="scf-grid">
-              {questions.slice(2,4).map(({question, answer}) => (
-                <div className="scf-grid__item-12">
-                  <div className="scf-grid__box">
-                    <div className="scf-home-about-item">
-                      <div className="scf-italic-title">
-                        <h4 className="scf-italic-title__title">{question}</h4>
-                      </div>
-                      <p className="scf-home-about-item__intro">{answer}</p>
-                    </div>
-                  </div>
-                </div>
-                ))}
-                </div>
-          </div>
-        </Flex>
-      </Container>
-      </div>
-    </Background>
+        <Box className="scf-box__body">
+              <Box className="scf-grid">
+                {questions
+                  .slice(0, 2)
+                  .map(({question, answer}) => (
+                    <Box className="scf-grid__item-12">
+                      <Box className="scf-grid__box">
+                        <Box className="scf-home-about-item">
+                          <Box className="scf-italic-title">
+                            <h4 className="scf-italic-title__title">{question}</h4>
+                          </Box>
+                          <p className="scf-home-about-item__intro">{answer}</p>
+                        </Box>
+                      </Box>
+                    </Box>
+                  ))}
+              </Box>
+              <Box className="scf-grid">
+                {questions
+                  .slice(2, 4)
+                  .map(({question, answer}) => (
+                    <Box className="scf-grid__item-12">
+                      <Box className="scf-grid__box">
+                        <Box className="scf-home-about-item">
+                          <Box className="scf-italic-title">
+                            <h4 className="scf-italic-title__title">{question}</h4>
+                          </Box>
+                          <p className="scf-home-about-item__intro">{answer}</p>
+                        </Box>
+                      </Box>
+                    </Box>
+                  ))}
+              </Box>
+            </Box>
+      </Box>
+    </Container>
+    </Box>
   )
 }

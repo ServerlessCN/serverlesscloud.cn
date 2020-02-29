@@ -1,5 +1,5 @@
 import React from 'react'
-import {Row} from '@src/components/atoms'
+import {Box, Container} from '@src/components/atoms'
 import Layout from '@src/layouts'
 import LatestBlogs from '@src/components/pages/home/LatestBlogs'
 import Activitys from '@src/components/pages/home/Activitys'
@@ -10,6 +10,7 @@ import BestParctices from '@src/components/pages/home/BestPractices'
 import CommonQuestion from '@src/components/pages/home/CommonQuestion'
 import Helmet from '@src/components/Helmet'
 import Swiper from '@src/components/pages/home/Swiper'
+import * as classnames from 'classnames';
 
 interface Props {
   location : any
@@ -25,22 +26,15 @@ const IndexPage = (props : Props) => {
         location={props.location}/>
       <Swiper/>
       <BestParctices/>
-      <LatestComponents/>
-      <Row
-        width="76%"
-        height="100%"
-        margin="20px auto"
-        alignItems="center"
-        justifyContent="center">
-        <div style={{
-          margin: "-21px",
-          display: "flex"
-        }}>
+      <LatestComponents/> 
+      <Container
+        width={[ 0.95,0.95, 0.95,0.95,0.76,1200]}
+        px={0}>
+        <Box className="scf-grid">
           <LatestBlogs/>
-          < Activitys/>
-        </div>
-      </Row>
-
+          <Activitys/>
+        </Box>
+      </Container>
       <Videos/>
       <CommonQuestion/>
       <AboutUs/>
