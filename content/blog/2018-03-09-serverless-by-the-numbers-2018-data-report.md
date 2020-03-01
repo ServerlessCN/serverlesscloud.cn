@@ -2,7 +2,7 @@
 title: "Serverless 数据解读：2018 报告"
 description: "Serverless Framework 使用统计数据：事件源、服务结构、运行时长等等。"
 date: 2018-03-09
-thumbnail: "https://main.qcloudimg.com/raw/5aa54033cfe5e0aa86ffde6b5ef0070e.png"
+thumbnail: "https://main.qcloudimg.com/raw/3cb7b20955d78ced738e0279bb3f6f41.jpg"
 categories:
   - news
   - engineering-culture

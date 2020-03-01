@@ -88,7 +88,7 @@ const links : {
 
 const contacts = [
   {
-    title: '交流 QQ群',
+    title: '交流 QQ 群',
     description: '群号：871445853',
     type: 'qq',
     qrcode: QQQRcode
