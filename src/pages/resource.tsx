@@ -158,7 +158,7 @@ const resource : {
                 link: "https://serverlesscloud.cn/best-practice/2019-12-12-how-write-first-serverless-component/"
             }, 
             {
-                title: "Serverless从入门到精通：架构介绍及场景分析",
+                title: "Serverless 从入门到精通：架构介绍及场景分析",
                 link: "https://cloud.tencent.com/edu/learning/live-1440"
             }, 
             {
@@ -184,7 +184,7 @@ const resource : {
     }, {
         list: [
             {
-                title: "Adblock（去广告搜索引擎",
+                title: "Adblock（去广告搜索引擎）",
                 link: "https://github.com/TencentCloud/Serverless-demos/tree/master/Adblock"
             }, 
             {
@@ -220,7 +220,7 @@ const resource : {
                 link: "https://github.com/TencentCloud/Serverless-demos"
             }, 
             {
-                title: " 国内 Serverless 实践首著Serverless 架构：从原理、设计到项目实战》",
+                title: " 书籍推荐：《Serverless 架构：从原理、设计到项目实战》",
                 link: "https://item.jd.com/12592747.html"
             }
         ],

@@ -51,7 +51,7 @@ const bannerConfigs : {
     backgroundColor: '#fff',
     alt: '荐书',
     link: 'https://china.serverless.com/blog/2019-11-19-anycodes-book',
-    title: "Serverless 社区成员初版新书啦！"
+    title: "Serverless 社区成员出版新书啦！"
   }, {
     img: banner4,
     backgroundColor: '#fff',
