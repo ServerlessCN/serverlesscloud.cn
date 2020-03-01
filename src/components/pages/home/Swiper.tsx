@@ -16,7 +16,7 @@ import banner1 from '@src/assets/images/banner1.png'
 import banner2 from '@src/assets/images/banner2.png'
 import banner3 from '@src/assets/images/banner3.png'
 import banner4 from '@src/assets/images/banner4.png'
-import helloworld from '@src/assets/images/helloworld.png'
+import helloworld from '@src/assets/images/hello-world.png'
 import ExternalLink from '@src/components/Link/ExternalLink'
 
 import styled from 'styled-components'
@@ -83,7 +83,7 @@ export default function () {
               pt={30}>
               <Box className="scf-grid">
                 <Box className="scf-grid__item-16">
-                  <Swiper height={"90%"}>
+                  <Swiper height={"92%"}>
                     {bannerConfigs.map((config, index) => {
                       return (
                         <Background
@@ -110,7 +110,7 @@ export default function () {
                   </Swiper>
                 </Box>
                 <Box className="scf-grid__item-8">
-                <Box style={{height: "90%"}} >
+                <Box style={{height: "92%"}} >
                   <Box className="scf-quick-start">
                     <Box className="scf-quick-start__header">
                       <Box className="scf-italic-title">

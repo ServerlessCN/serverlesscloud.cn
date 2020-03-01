@@ -28,3 +28,7 @@
   height: 18px;
   background-image: url(../../../assets/images/download.svg);
 }
+
+.scf-component-recommend .scf-article-item:hover {
+  box-shadow: 2px 10px 24px 0 rgba(0,0,0,.08);
+}
