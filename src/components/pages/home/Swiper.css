@@ -55,6 +55,7 @@
   display: -webkit-box;
   overflow: hidden;
   -webkit-line-clamp: 2;
+  font-size: 20px;
   -webkit-box-orient: vertical;
 }
 .scf-italic-title__title {
