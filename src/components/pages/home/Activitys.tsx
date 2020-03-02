@@ -24,7 +24,7 @@ const activityList : Activity[] = [
     decription: "我们曾在开发社区进行问卷调查，询问 Serverless 的使用情况。它的使用率增长连我们自己都惊讶不已，下面来看看数据。",
     link: "/blog/2018-07-19-2018-serverless-community-survey-huge-growth-usage/"
   }, {
-    cover: "https://main.qcloudimg.com/raw/5aa54033cfe5e0aa86ffde6b5ef0070e.png",
+    cover: "https://main.qcloudimg.com/raw/3cb7b20955d78ced738e0279bb3f6f41.jpg",
     title: "Serverless 数据解读：2018 报告",
     decription: "Serverless Framework 使用统计数据：事件源、服务结构、运行时长等等。",
     link: "/blog/2018-03-09-serverless-by-the-numbers-2018-data-report/"
