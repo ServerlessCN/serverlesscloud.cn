@@ -9,6 +9,7 @@ import {
   Row,
   Button
 } from '@src/components/atoms';
+import { debounce } from '@src/utils'
 import theme from '@src/constants/theme'
 import {CheckIfDesktopContext} from '@src/contexts'
 import Swiper from '@src/components/Swiper'
@@ -62,6 +63,25 @@ const bannerConfigs : {
 ]
 
 export default function () {
+  const [isNavButtonActive, setisNavButtonActive] = React.useState(true)
+
+  React.useEffect(() => {
+    const onResize = debounce(() => {
+      if (window.innerWidth >= 992) {
+        setisNavButtonActive(true)
+      } else {
+        setisNavButtonActive(false)
+      }
+    }, 50)
+
+    window.addEventListener('resize', onResize)
+    onResize()
+
+    return () => {
+      window.removeEventListener('resize', onResize)
+    }
+  }, [])
+
   return (
     <CheckIfDesktopContext.Consumer>
       {isDesktopView => {
@@ -82,7 +102,10 @@ export default function () {
               px={0}
               pt={30}>
               <Box className="scf-grid">
-                <Box className="scf-grid__item-16">
+                <Box
+                  className={isNavButtonActive
+                  ? "scf-grid__item-16"
+                  : "scf-grid__item-24"}>
                   <Swiper height={"92%"}>
                     {bannerConfigs.map((config, index) => {
                       return (
@@ -93,11 +116,7 @@ export default function () {
                           background={config.backgroundColor}>
                           <ExternalLink to={config.link}>
                             <ImageWrapper>
-                              <Image
-                                width={"100%"}
-                                height={"100%"}
-                                src={config.img}
-                                alt={config.alt}/>
+                              <Image width={"100%"} height={"100%"} src={config.img} alt={config.alt}/>
                               <div className="scf-carousel__info">
                                 <p className="scf-carousel__info-text">
                                   {config.title}</p>
@@ -109,38 +128,40 @@ export default function () {
                     })}
                   </Swiper>
                 </Box>
-                <Box className="scf-grid__item-8">
-                <Box style={{height: "92%"}} >
-                  <Box className="scf-quick-start">
-                    <Box className="scf-quick-start__header">
-                      <Box className="scf-italic-title">
-                        <h3 className="scf-italic-title__title">Hello World</h3>
+                {isNavButtonActive
+                  ? (
+                    <Box className="scf-grid__item-8">
+                      <Box style={{
+                        height: "92%"
+                      }}>
+                        <Box className="scf-quick-start">
+                          <Box className="scf-quick-start__header">
+                            <Box className="scf-italic-title">
+                              <h3 className="scf-italic-title__title">Hello World</h3>
+                            </Box>
+                          </Box>
+                          <Box className="scf-quick-start__body">
+                            <Box className="scf-quick-start__banner">
+                              <Image src={helloworld} alt=""/>
+                            </Box>
+                            <Box className="scf-quick-start__opeate">
+                              <ExternalLink to={'https://serverless.com/cn/framework/docs/getting-started/'}>
+                                <button className="scf-btn scf-btn--primary">快速开始</button>
+                              </ExternalLink>
+                              <ExternalLink
+                                to={'https://github.com/serverless/serverless/blob/master/README_CN.md'}>
+                                <button className="scf-btn scf-btn--icon scf-btn--line">
+                                  <i className="scf-icon scf-icon-github-primary"></i>
+                                  GitHub
+                                </button>
+                              </ExternalLink>
+                            </Box>
+                          </Box>
+                        </Box>
                       </Box>
                     </Box>
-                    <Box className="scf-quick-start__body">
-                      <Box className="scf-quick-start__banner">
-                        <Image src={helloworld} alt=""/>
-                      </Box>
-                      <Box className="scf-quick-start__opeate">
-                        <ExternalLink to={'https://serverless.com/cn/framework/docs/getting-started/'}>
-                          <button
-                            className="scf-btn scf-btn--primary"
-                            >快速开始</button>
-                        </ExternalLink>
-                        <ExternalLink
-                          to={'https://github.com/serverless/serverless/blob/master/README_CN.md'}>
-                          <button
-                            className="scf-btn scf-btn--icon scf-btn--line"
-                            >
-                            <i className="scf-icon scf-icon-github-primary"></i>
-                            GitHub
-                          </button>
-                        </ExternalLink>
-                      </Box>
-                    </Box>
-                  </Box>
-                </Box>
-                </Box>
+                  )
+                  : null}
               </Box>
             </Container>
           </Box>
