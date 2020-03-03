@@ -1,6 +1,7 @@
 import * as React from 'react'
 import theme from '@src/constants/theme'
 import {Component} from '@src/types'
+import ExternalLink from '@src/components/Link/ExternalLink'
 import {Link} from 'gatsby'
 import './ComponentCard.css'
 import { Box } from '../../atoms/Box/index';
@@ -12,7 +13,7 @@ interface Props {
 export default function ComponentCard({blog} : Component) {
   return (
     <Box className="scf-grid__item-8">
-      <Link
+      <ExternalLink
         to={blog.link}
         style={{
         height: "100%"
@@ -38,7 +39,7 @@ export default function ComponentCard({blog} : Component) {
             </Box>
           </Box>
         </Box>
-      </Link>
+      </ExternalLink>
     </Box>
   )
 }
