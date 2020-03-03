@@ -163,19 +163,19 @@ export default function () {
             </div>
             <div className="scf-footer__right">
               <div className="scf-footer__channel">
-                <a href="##">
+                <a href="/about">
                   <i className="scf-icon scf-icon-wechat"></i>
                 </a>
-                <a href="##">
+                <a href="/about">
                   <i className="scf-icon scf-icon-qq"></i>
                 </a>
-                <a href="##">
+                <a href="https://zhuanlan.zhihu.com/ServerlessGo">
                   <i className="scf-icon scf-icon-zhihu"></i>
                 </a>
-                <a href="##">
+                <a href="https://twitter.com/goserverless">
                   <i className="scf-icon scf-icon-twitter"></i>
                 </a>
-                <a href="##">
+                <a href="https://github.com/ServerlessCN/serverlesscloud.cn">
                   <i className="scf-icon scf-icon-github"></i>
                 </a>
               </div>
