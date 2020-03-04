@@ -20,13 +20,18 @@ const Wrapper = styled(Box)<
   ${right}
   .markdown-body ol,
   ul {
-    list-style: disc;
-
+    // list-style: disc;
+    font-size: 14px;
+    padding: 0 0 0 20px;
+    p {
+      margin: 0;
+    }
     li {
-      line-height: 2;
+      line-height: 20px;
+      list-style-type:square;
     }
 
-    padding-left: 2em;
+    // padding-left: 2em;
     a {
       color: ${theme.colors.black};
 
@@ -131,7 +136,7 @@ export default function(props: { html: string }) {
       mt="40px"
       display={['none', 'none', 'none', 'block', 'block']}
     >
-      <Text fontSize="18px" mb="30px" fontWeight="bold">
+      <Text fontSize="18px" mb="10px" fontWeight="bold">
         目录
       </Text>
       <div
