@@ -20,7 +20,7 @@ const IndexPage = (props : Props) => {
   return (
     <Layout>
       <Helmet
-        title="Serverless 中文技术社区 - serverlesscloud.cn"
+        title="Serverless 中文网 - 最受欢迎的 Serverless 社区"
         description="Serverless中文技术社区是国内开发者技术交流社区。提供Serverless最新信息、实践案例、技术博客、组件文档、学习资源，帮助开发者快速应用Severless技术和解决开发中的问题。"
         keywords="Serverless,Serverless Framework,FaaS,函数计算,无服务器"
         location={props.location}/>
