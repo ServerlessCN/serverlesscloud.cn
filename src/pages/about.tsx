@@ -23,6 +23,54 @@ const CustomContainer = styled(Container)`
     display: flex;
     flex-wrap: wrap;
   }
+  #contact, #question, #qrcode {
+    // display: none;
+    margin-top: 50px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+  }
+
+  #about {
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    padding-top: 60px;
+  }
+  #contact h1, #question h1, #qrcode h1{
+    position: relative;
+    float: left;
+    margin: 10px 0 0 0;
+    padding: 0;
+    font-size: 22px;
+    line-height: 44px;
+    height: 44px;
+    border: none;
+    min-width: 150px;
+    background-image: url(/static/box-title-bg-322b028f8b95fd6b130f15372d21b8de.svg)
+  }
+
+  #contact p, #question p, #qrcode p {
+    position: relative;
+    margin-left: 250px;
+  }
+
+  #about h1{
+    position: relative;
+    float: left;
+    margin: 10px 0 0 0;
+    padding: 0;
+    font-size: 22px;
+    line-height: 44px;
+    height: 44px;
+    border: none;
+    min-width: 150px;
+    background-image: url(/static/box-title-bg-322b028f8b95fd6b130f15372d21b8de.svg)
+  }
+  #about p{
+    position: relative;
+    margin-left: 250px;
+  }
 `
 
 interface Props {
@@ -55,9 +103,9 @@ const AboutPage = ({
         location={location}
       />
 
-      <CustomContainer maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}>
+      <CustomContainer maxWidth={[1216, 1216, 1216, 1216, '100%', 1216]}>
         <Flex justifyContent="center">
-          <Box pt={'30px'} pb={'30px'} width={[0.95, 0.95, 0.95, 0.76]}>
+          <Box pt={'30px'} pb={'30px'} width={'80%'}>
             <Markdown html={edges[0].node.html}></Markdown>
           </Box>
         </Flex>
