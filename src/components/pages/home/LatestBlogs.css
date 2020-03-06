@@ -84,3 +84,8 @@
 #scf-box-hot-blogs {
   display: none;
 }
+
+.scf-article-item--block  .scf-article-item__content .scf-blog-item-pv-icon {
+  display: block;
+  margin-right: 5px;
+}

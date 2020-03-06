@@ -3,6 +3,7 @@ import {Box, Row, Background, Container, Center} from '@src/components/atoms'
 import {StaticQuery, graphql, Link} from 'gatsby'
 import {Blog, GraphqlBlogResult} from '@src/types'
 import './LatestBlogs.css'
+import BlogLists from '@src/constants/blog.json'
 
 type LatestBlog = Blog
 
@@ -23,7 +24,7 @@ function BlogCard({blog} : {
 }) {
   return (
     <Box className="scf-article-item scf-article-item--block">
-      <Link to={blog.node.fields.slug}>
+      <Link to={blog.node.fields.slug} data-id={blog.node.id}>
         <Box className="scf-article-item__img">
           <Box className="scf-article-item__img-inner">
             <img src={blog.node.frontmatter.thumbnail} alt=""/>
@@ -31,9 +32,9 @@ function BlogCard({blog} : {
         </Box>
         <Box className="scf-article-item__content">
           <Box className="scf-article-item__statistics">
-            <span className="scf-article-item__statistics-item">
+            <span className="scf-blog-item-pv-icon">
               <i className="scf-icon scf-icon-view"></i>
-              13.3K</span>
+              </span>
             {blog.node.frontmatter.authors}
             · {blog
               .node
@@ -54,30 +55,7 @@ function BlogCard({blog} : {
 function HotBlogs() {
   return (
     <Box className="scf-box__body" id="scf-box-hot-blogs">
-      <div class="Box-jLJQJw evQvdc scf-article-item scf-article-item--block">
-        <a href="#">
-          <div class="Box-jLJQJw evQvdc scf-article-item__img">
-            <div class="Box-jLJQJw evQvdc scf-article-item__img-inner"><img src="https://img.serverlesscloud.cn/202032/1583158864577-wuhan_wechat6.jpg" alt="" /></div>
-          </div>
-          <div class="Box-jLJQJw evQvdc scf-article-item__content">
-            <div class="Box-jLJQJw evQvdc scf-article-item__statistics"><span class="scf-article-item__statistics-item"><i class="scf-icon scf-icon-view"></i>13.3K</span>Serverless 中文网· 20-03-02· 阅读大约需要6分钟</div>
-            <div class="Box-jLJQJw evQvdc scf-article-item__title"><h4>Hack for Wuhan，每一颗渺小的种子都能创造伟大的力量！</h4></div>
-            <div class="Box-jLJQJw evQvdc scf-article-item__intro">疫情之下，我们都能贡献自己的力量！</div>
-          </div>
-        </a>
-      </div>
-      <div class="Box-jLJQJw evQvdc scf-article-item scf-article-item--block">
-        <a href="#">
-          <div class="Box-jLJQJw evQvdc scf-article-item__img">
-            <div class="Box-jLJQJw evQvdc scf-article-item__img-inner"><img src="https://img.serverlesscloud.cn/202032/1583158864577-wuhan_wechat6.jpg" alt="" /></div>
-          </div>
-          <div class="Box-jLJQJw evQvdc scf-article-item__content">
-            <div class="Box-jLJQJw evQvdc scf-article-item__statistics"><span class="scf-article-item__statistics-item"><i class="scf-icon scf-icon-view"></i>13.3K</span>Serverless 中文网· 20-03-02· 阅读大约需要6分钟</div>
-            <div class="Box-jLJQJw evQvdc scf-article-item__title"><h4>Hack for Wuhan，每一颗渺小的种子都能创造伟大的力量！</h4></div>
-            <div class="Box-jLJQJw evQvdc scf-article-item__intro">疫情之下，我们都能贡献自己的力量！</div>
-          </div>
-        </a>
-      </div>
+      loading...
     </Box>
   )
 }
@@ -107,7 +85,7 @@ function Blogs() {
 export default function () {
 
   React.useEffect(() => {
-
+    // console.log(BlogLists)
     function sortFun() {
       return function(src, tar) {
           var v1 = Object.values(src)[0];
@@ -122,28 +100,111 @@ export default function () {
       };
     }
 
-    const response = {
-        "uuid": "1adc1096-5f5d-11ea-b031-0242cb007107",
-        "error": false,
-        "message": {
-            "/blog/2020-03-02-hack-for-wuhan/": 2244,
-            "/blog/2020-02-20-resource/": 3244,
-            "/blog/2020-02-19-Serverless-base/": 1244,
-        }
+    
+    const blogHash = {};
+    for (var i = 0; i < BlogLists.length; ++i) {
+      const item = BlogLists[i].node;
+      blogHash[item.id] = item;
     }
 
-    const hotBlogList = [];
-    for (let k in response.message) {
-      const item = {};
-      item[k] = response.message[k];
-      hotBlogList.push(item);
+
+    function getBlogPv(fn) {
+      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?env=test';
+      fetch(api)
+          .then((response) => response.json() )
+          .then((response)=>{
+        
+            fn(null, response);
+          })
+          .catch((error)=>{
+            fn(error, null);
+          });
     }
-    hotBlogList.sort(sortFun());
+
+
+    function buildHotBlogBody(hotBlogList, blogHash) {
+      const temp = '<div class="Box-jLJQJw evQvdc scf-article-item scf-article-item--block"> \
+        <a href="{LINK}"> \
+          <div class="Box-jLJQJw evQvdc scf-article-item__img"> \
+            <div class="Box-jLJQJw evQvdc scf-article-item__img-inner"><img src="{IMG}" alt="" /></div> \
+          </div> \
+          <div class="Box-jLJQJw evQvdc scf-article-item__content"> \
+            <div class="Box-jLJQJw evQvdc scf-article-item__statistics"><span class="scf-blog-item-pv-icon"><i class="scf-icon scf-icon-view"></i></span>{PV}K · {AUTHOR} · {DATE} · 阅读大约需要{READTIME}分钟</div>\
+            <div class="Box-jLJQJw evQvdc scf-article-item__title"><h4>{TITLE}</h4></div>\
+            <div class="Box-jLJQJw evQvdc scf-article-item__intro">{DESC}</div>\
+          </div>\
+        </a>\
+      </div>';
+
+      let htmlBody = '';
+      let n = 6;
+      for (var i = 0; i < hotBlogList.length && n > 0; i++) {
+        // console.log(hotBlogList[i]);
+        const id = Object.keys(hotBlogList[i])[0];
+        const pv = Object.values(hotBlogList[i])[0] / 1000;
+        const blogItem = blogHash[id];
+        if (!blogItem) 
+          continue;
+
+        const buildBody = temp.replace('{LINK}', blogItem.fields.slug)
+          .replace('{IMG}', blogItem.frontmatter.thumbnail)
+          .replace('{PV}', pv.toFixed(1))
+          .replace('{AUTHOR}', blogItem.frontmatter.authors.join(','))
+          .replace('{READTIME}', blogItem.timeToRead)
+          .replace('{DATE}', blogItem.frontmatter.date.substr(0, 10))
+          .replace('{TITLE}', blogItem.frontmatter.title)
+          .replace('{DESC}', blogItem.frontmatter.description);
+        htmlBody += buildBody;
+        n--;
+      }
+      return htmlBody;
+    }
+
+
+    function updateLatestBlogPv(blogPvs) {
+      const latestBlogChilds = document.getElementById('scf-box-lateat-blogs').children;
+
+      for (var i = 0; i < latestBlogChilds.length; ++i) {
+        const id = latestBlogChilds[i].children ? latestBlogChilds[i].children[0].getAttribute('data-id') : null;
+        if (!id) continue;
+        let pv = blogPvs[id];
+        if (!pv) {
+          pv = Math.ceil(Math.random() * 1000);
+        }
+
+        if (!latestBlogChilds[i].children[0].children[1] || !latestBlogChilds[i].children[0].children[1].children[0]) continue;
+
+        const titleDom = latestBlogChilds[i].children[0].children[1].children[0];
+        const oldHtml = titleDom.innerHTML;
+        const idx = oldHtml.indexOf('</span>');
+        const text = oldHtml.substr(idx + 7);
+        const html = oldHtml.substr(0, idx + 7);
+
+        if (text && html) {
+          const newHtml = html + (pv/1000).toFixed(1) + 'K · ' + text;
+          titleDom.innerHTML = newHtml;
+        }
+      }
+    }
+
+    getBlogPv(function(error, response) {
+      const hotBlogList = [];
+      for (let k in response.message) {
+        const item = {};
+        item[k] = response.message[k];
+        hotBlogList.push(item);
+      }
+      hotBlogList.sort(sortFun());
+
+      updateLatestBlogPv(response.message);
+
+      let hotBlogs = document.getElementById('scf-box-hot-blogs');
+      hotBlogs.innerHTML = buildHotBlogBody(hotBlogList, blogHash);
+    })
+    
 
     let blogs = document.getElementById('scf-box-page-blog-top').children;
     let blogTabsBtn = document.getElementById('scf-blog-tab').children;
-
-    console.log(blogs)
     const tabOnClick = function(n) {
       for (var i = 0; i < blogTabsBtn.length; ++i) {
         if (i != n) 
