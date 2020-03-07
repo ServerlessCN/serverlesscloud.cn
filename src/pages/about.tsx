@@ -98,7 +98,7 @@ const AboutPage = () => {
         description="Serverless Framework 简介，快速了解Serverless基本概念与详情介绍。"
         keywords="Serverless简介,Serverless概述,Serverless指引"
         title="关于Serverless - Serverless"
-        location={location}/>
+       />
       <Box className="scf-content">
         <Box className="scf-page-about scf-layout-pattern">
           <Box className="scf-home-block">

@@ -35,12 +35,12 @@ export default function (props) {
           ]}
             px={0}>
             <Box className="scf-segment">
-            <Link to={`blog`}><span className={"scf-segment__item "+ (['/blog/','/blog'].includes(location.pathname)?'is-active':'')}>所有（{TotalCount}）</span></Link>
+            <Link to={`blog`}><span className={"scf-segment__item "+ (['/blog/','/blog'].includes(props.location.pathname)?'is-active':'')}>所有（{TotalCount}）</span></Link>
             {categorys
               .group
               .map(category => (
                 <Link to={`${baseCategoryUrl}/${category.categories}`} key={category.categories}>
-                <span key={category.categories} className={"scf-segment__item "+ ([`${baseCategoryUrl}/${category.categories}`,`${baseCategoryUrl}/${category.categories}/`].includes(location.pathname)?'is-active':'')}>{generateCategoryText(category.categories)}（{category.totalCount}）</span>
+                <span key={category.categories} className={"scf-segment__item "+ ([`${baseCategoryUrl}/${category.categories}`,`${baseCategoryUrl}/${category.categories}/`].includes(props.location.pathname)?'is-active':'')}>{generateCategoryText(category.categories)}（{category.totalCount}）</span>
                 </Link>
               ))}
             </Box>
