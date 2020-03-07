@@ -181,7 +181,7 @@ img {
 .scf-icon-view {
   width: 18px;
   height: 18px;
-  background-color: pink;
+  /*background-color: pink;*/
   /* background-image: url(../../static/media/view.bc865927.svg); */
 }
 .scf-blog-list .scf-article-item__title {

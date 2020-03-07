@@ -25,7 +25,7 @@ function BlogCard({blog} : {
           <Box className="scf-article-item__statistics">
             <span className="scf-article-item__statistics-item">
               <i className="scf-icon scf-icon-view"></i>
-              13.3K</span>
+            </span>
             {blog.node.frontmatter.authors} 
             · {blog
               .node

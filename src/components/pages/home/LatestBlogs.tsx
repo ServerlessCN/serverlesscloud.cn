@@ -85,7 +85,6 @@ function Blogs() {
 export default function () {
 
   React.useEffect(() => {
-    // console.log(BlogLists)
     function sortFun() {
       return function(src, tar) {
           var v1 = Object.values(src)[0];
@@ -129,7 +128,7 @@ export default function () {
             <div class="Box-jLJQJw evQvdc scf-article-item__img-inner"><img src="{IMG}" alt="" /></div> \
           </div> \
           <div class="Box-jLJQJw evQvdc scf-article-item__content"> \
-            <div class="Box-jLJQJw evQvdc scf-article-item__statistics"><span class="scf-blog-item-pv-icon"><i class="scf-icon scf-icon-view"></i></span>{PV}K · {AUTHOR} · {DATE} · 阅读大约需要{READTIME}分钟</div>\
+            <div class="Box-jLJQJw evQvdc scf-article-item__statistics"><span class="scf-blog-item-pv-icon"><i class="scf-icon scf-icon-view"></i></span>{PV} · {AUTHOR} · {DATE} · 阅读大约需要{READTIME}分钟</div>\
             <div class="Box-jLJQJw evQvdc scf-article-item__title"><h4>{TITLE}</h4></div>\
             <div class="Box-jLJQJw evQvdc scf-article-item__intro">{DESC}</div>\
           </div>\
@@ -141,14 +140,20 @@ export default function () {
       for (var i = 0; i < hotBlogList.length && n > 0; i++) {
         // console.log(hotBlogList[i]);
         const id = Object.keys(hotBlogList[i])[0];
-        const pv = Object.values(hotBlogList[i])[0] / 1000;
+        let pv;
+        if (Object.values(hotBlogList[i])[0] < 1000) {
+          pv = Object.values(hotBlogList[i])[0];
+        } else {
+          pv = Object.values(hotBlogList[i])[0] / 1000;
+          pv = pv.toFixed(1) + 'K';
+        }
         const blogItem = blogHash[id];
         if (!blogItem) 
           continue;
 
         const buildBody = temp.replace('{LINK}', blogItem.fields.slug)
           .replace('{IMG}', blogItem.frontmatter.thumbnail)
-          .replace('{PV}', pv.toFixed(1))
+          .replace('{PV}', pv)
           .replace('{AUTHOR}', blogItem.frontmatter.authors.join(','))
           .replace('{READTIME}', blogItem.timeToRead)
           .replace('{DATE}', blogItem.frontmatter.date.substr(0, 10))
@@ -181,13 +186,39 @@ export default function () {
         const html = oldHtml.substr(0, idx + 7);
 
         if (text && html) {
-          const newHtml = html + (pv/1000).toFixed(1) + 'K · ' + text;
+          let newHtml;
+          if (pv < 1000) {
+            newHtml = html + pv + ' · ' + text;
+          } else {
+            newHtml = html + (pv/1000).toFixed(1) + 'K · ' + text;
+          }
           titleDom.innerHTML = newHtml;
         }
       }
     }
 
+    function updateHomeBest(blogPvs) {
+      const bestList = document.getElementById('scf-box-home-best-practices');
+      const links = bestList.getElementsByTagName('A');
+
+      for (var i = 0; i < links.length; ++i) {
+        const id = links[i].getAttribute('data-id');
+        if (!id) continue;
+        let pv = blogPvs[id] || Math.ceil(Math.random() * 100);
+        if (pv >= 1000) {
+          pv = (pv/1000).toFixed(1) + 'K';
+        }
+        const icons = links[i].getElementsByClassName('scf-icon');
+        if (!icons) continue;
+        icons[0].innerHTML = pv;
+      }
+    }
+
     getBlogPv(function(error, response) {
+      if (error || response.error) {
+        console.log(error || response.error);
+        return;
+      }
       const hotBlogList = [];
       for (let k in response.message) {
         const item = {};
@@ -197,6 +228,7 @@ export default function () {
       hotBlogList.sort(sortFun());
 
       updateLatestBlogPv(response.message);
+      updateHomeBest(response.message);
 
       let hotBlogs = document.getElementById('scf-box-hot-blogs');
       hotBlogs.innerHTML = buildHotBlogBody(hotBlogList, blogHash);
