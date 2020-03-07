@@ -40,22 +40,31 @@ const BlogList = ({
         }
         location={location}
       />
-      <Breadcrumbs>{categoriesText}</Breadcrumbs>
-
-      <Content>
-        <List
-          generateDataUrl={pageNum =>
-            `${baseCategoryUrl}/${categories}${
-              pageNum === 1 ? '' : `/page/${pageNum}`
-            }`
-          }
-          blogs={edges}
-          offset={offset}
-          limit={limit}
-          totalCount={totalCount}
-        />
-        <Category />
-      </Content>
+      <Category location={location} />
+      <div className="scf-content">
+        <div className="scf-page-blog scf-layout-pattern">
+          <div className="scf-home-block scf-blog-list">
+            <div className="scf-home-block__inner">
+              <div className="scf-box ">
+                <div className="scf-box__body">
+                  <List
+                    generateDataUrl={pageNum => `/blog${pageNum === 1
+                    ? ''
+                    : `/page/${pageNum}`}`}
+                    blogs={edges}
+                    offset={offset}
+                    limit={limit}
+                    totalCount={totalCount}/>
+                </div>
+              </div>
+             {/* <div className="scf-article-list-opeate">
+                <button className="scf-btn scf-btn--line">查看更多</button>
+              </div>
+              */}
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }

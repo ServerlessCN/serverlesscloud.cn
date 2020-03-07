@@ -1,21 +1,13 @@
 import * as React from 'react'
-import {Box, Row, Background, Container, Center} from '@src/components/atoms'
+import {Box} from '@src/components/atoms'
 import {StaticQuery, graphql, Link} from 'gatsby'
 import {Blog, GraphqlBlogResult} from '@src/types'
 import './LatestBlogs.css'
 
-type LatestBlog = Blog
+type BestPractice = Blog
 
-let BlogSort = "DESC"
-
-function changeSort() {
-  BlogSort = "DESC"
-}
-function changeSortAgain() {
-  BlogSort = "!DESC"
-}
 interface Props {
-  blogs : LatestBlog[]
+  blogs : BestPractice[]
 }
 
 function BlogCard({blog} : {
@@ -34,7 +26,7 @@ function BlogCard({blog} : {
             <span className="scf-article-item__statistics-item">
               <i className="scf-icon scf-icon-view"></i>
               13.3K</span>
-            {blog.node.frontmatter.authors}
+            {blog.node.frontmatter.authors} 
             · {blog
               .node
               .frontmatter
@@ -52,8 +44,7 @@ function BlogCard({blog} : {
 }
 
 function Blogs() {
-  const query = graphql `query { blogs: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 6 filter: { fileAbsolutePath: { regex: "//blog//" } frontmatter: { categories: { nin: "best-practice" } } } ) { edges { node { id frontmatter { title thumbnail thumbnail
-  authors description date } timeToRead fileAbsolutePath fields { slug } } } } } `
+  const query = graphql ` query { blogs: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 6 filter: { fileAbsolutePath: { regex: "//best-practice//" } } ) { edges { node { id frontmatter { title thumbnail description date authors } fileAbsolutePath timeToRead fields { slug } } } } } `
   return (
     <StaticQuery
       query={query}
@@ -78,14 +69,11 @@ export default function () {
         <Box className="scf-box scf-home-blog">
           <Box className="scf-box__header">
             <Box className="scf-box__header-title">
-              <h3>博客</h3>
-              <Box className="scf-box__header-segment">
-                <a className={`scf-box__header-segment-item is-active`}>最新</a>
-              </Box>
+              <h3>推荐阅读</h3>
             </Box>
             <Box className="scf-box__header-more">
-              <Link to="/blog">
-                更多博客 &gt;
+              <Link to="/best-practice">
+               更多推荐 &gt;
               </Link>
             </Box>
           </Box>

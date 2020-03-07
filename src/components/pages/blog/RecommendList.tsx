@@ -68,7 +68,6 @@ export default function({ blogs, ...rest }: Props) {
       <Text fontSize="18px" mb="30px" fontWeight="bold">
         推荐阅读
       </Text>
-
       <List>
         {blogs.map(blog => {
           const {

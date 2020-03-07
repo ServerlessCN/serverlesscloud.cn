@@ -21,8 +21,8 @@ export default function({
   generateDataUrl: (pageNum: number) => string
 } & WidthProps) {
   return (
-    <Box width={[0.9, 0.9, 0.9, 0.76]} {...rest}>
-      <Box mx="auto">
+    <Box>
+      <Box>
         {blogs.map(blog => (
           <BlogListItem key={blog.node.id} data={blog} />
         ))}
