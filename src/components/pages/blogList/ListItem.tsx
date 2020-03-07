@@ -41,15 +41,15 @@ export default function({ data }: { data: Blog }) {
   frontmatter.categories = frontmatter.categories || []
 
   return (
-    <BlogDetailLink blog={data}>
-      <Box mt="40px" mb="40px">
+    <BlogDetailLink blog={data} data-id="jack">
+      <Box mt="40px" mb="40px" data-id="1jack">
         <Flex
           alignItems={['center', 'center', 'center', 'flex-start']}
           justifyContent={['center', 'center', 'center', 'flex-start']}
           flexDirection={['column', 'column', 'column', 'row']}
         >
           
-          <BoxWithFlex width={[0.9, 0.9, 0.9, 0.65]} ml={[0, 0, 0, '30px']}>
+          <BoxWithFlex width={[0.9, 0.9, 0.9, 0.65]} ml={[0, 0, 0, '30px']}  data-id="1jack">
             <ColumnWithHeight
               alignItems="flex-end"
               justifyContent="space-between"
@@ -60,6 +60,8 @@ export default function({ data }: { data: Blog }) {
                     color={theme.colors.gray[2]}
                     fontSize={['12px', '14px']}
                   >
+                  <span class="scf-article-item__statistics-item"><i class="scf-icon scf-icon-view"></i></span>
+                    
                     {frontmatter.authors.join(',')}
                     &nbsp;·&nbsp;{formateDate(frontmatter.date)}
                     &nbsp;·&nbsp;阅读大概需要{timeToRead}分钟

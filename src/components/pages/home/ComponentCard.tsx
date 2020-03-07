@@ -24,14 +24,14 @@ export default function ComponentCard({blog} : Component) {
               <img src={blog.thumbnail} alt=""/>
             </Box>
             <Box className="scf-article-item__content">
-              <Box className="scf-article-item__statistics">
-                <span className="scf-article-item__statistics-item">
-                  <i className="scf-icon scf-icon-favout"></i>
-                  3.3K</span>
-                <span className="scf-article-item__statistics-item">
-                  <i className="scf-icon scf-icon-download"></i>
-                  3.3K</span>
-              </Box>
+              {/*<Box className="scf-article-item__statistics">
+                              <span className="scf-article-item__statistics-item">
+                                <i className="scf-icon scf-icon-favout"></i>
+                                3.3K</span>
+                              <span className="scf-article-item__statistics-item">
+                                <i className="scf-icon scf-icon-download"></i>
+                                3.3K</span>
+                            </Box>*/}
               <Box className="scf-article-item__title">
                 <h4>{blog.slogan}</h4>
               </Box>

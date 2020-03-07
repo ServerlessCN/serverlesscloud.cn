@@ -23,7 +23,7 @@ export default function BlogCard({blog} : Props) {
               <div className="scf-article-item__statistics">
                 <span className="scf-article-item__statistics-item">
                   <i className="scf-icon scf-icon-view"></i>
-                  3.3K
+                  
                 </span>
               </div>
               <div className="scf-article-item__title">
