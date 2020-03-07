@@ -52,8 +52,8 @@ function generateCatalogsData(ele : Element) {
 function generateCatalogsHtml(data : any) {
   if (data.length) {
     return `<ul class="scf-toc-list">${data.map(o => o.length
-      ? `<li class="scf-toc-list__item"><span class="scf-toc-list__item-label">${o.map(x => `${generateCatalogsHtml(x)}`).join('')}</span></li>`
-      : `<li class="scf-toc-list__item has-sub-list"><span class="scf-toc-list__item-label">${generateCatalogsHtml(o)}</span></li>`).join('')}</ul>`
+      ? `<li class="scf-toc-list__item" key=${o}><span class="scf-toc-list__item-label">${o.map(x => `${generateCatalogsHtml(x)}`).join('')}</span></li>`
+      : `<li class="scf-toc-list__item has-sub-list" key=${o}><span class="scf-toc-list__item-label">${generateCatalogsHtml(o)}</span></li>`).join('')}</ul>`
   }
 
   if (data.tagName === 'A' || data.tagName === 'P') {
@@ -109,12 +109,12 @@ export default function (props : {
       <Wrapper
         className="scf-grid__box"
         ref={eleRef}
-        position={isFixed
-        ? 'fixed'
-        : 'relative'}
-        top={isFixed
-          ? 20
-          : 0}
+        // position={isFixed
+        // ? 'fixed'
+        // : 'relative'}
+        // top={isFixed
+        //   ? 20
+        //   : 0}
         width={1}
         display={['none', 'none', 'none', 'block', 'block']}>
         <Box

@@ -1,10 +1,13 @@
 import * as React from 'react'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
 import Markdown from '@src/components/Markdown'
-import { Box, Flex, Container } from '@src/components/atoms'
+import {Box, Flex, Container} from '@src/components/atoms'
 import Helmet from '@src/components/Helmet'
 import styled from 'styled-components'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
+import QQQRcode from '@src/assets/images/qq_qrcode.png'
+import WechatQRcode from '@src/assets/images/wechat_qrcode.png'
+import './about.css'
 
 const CustomContainer = styled(Container)`
   flex: 1;
@@ -74,35 +77,138 @@ const CustomContainer = styled(Container)`
 `
 
 interface Props {
-  data: {
+  data : {
     about: {
       edges: {
         node: {
-          id: string
+          id: string,
           html: string
         }
-      }[]
+      }[],
       totalCount: number
     }
   }
-  location: any
+  location : any
 }
 
-const AboutPage = ({
-  data: {
-    about: { edges },
-  },
-  location,
-}: Props) => {
+const AboutPage = () => {
   return (
     <Layout>
       <Helmet
         description="Serverless Framework 简介，快速了解Serverless基本概念与详情介绍。"
         keywords="Serverless简介,Serverless概述,Serverless指引"
         title="关于Serverless - Serverless"
-        location={location}
-      />
-
+        location={location}/>
+      <Box className="scf-content">
+        <Box className="scf-page-about scf-layout-pattern">
+          <Box className="scf-home-block">
+            <Container
+              width={[
+              0.95,
+              0.95,
+              0.95,
+              0.95,
+              0.76,
+              1200
+            ]}
+              className="scf-home-block__inner"
+              px={0}
+              pt={30}>
+              <Box className="scf-grid ">
+                <Box className="scf-grid__item-12">
+                  <Box className="scf-grid__box">
+                    <Box className="scf-box__header">
+                      <Box className="scf-box__header-title"><h3>关于</h3>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
+                <Box className="scf-grid__item-12">
+                  <Box className="scf-grid__box">
+                    <p className="acf-page-about__text">Serverless 中文技术社区是国内开发者技术交流社区。提供 Serverless
+                      最新信息、实践案例、技术博客、组件文档、学习资源，帮助开发者快速应用 Severless 技术和解决开发中的问题。</p>
+                  </Box>
+                </Box>
+              </Box>
+              <Box className="scf-grid ">
+                <Box className="scf-grid__item-12">
+                  <Box className="scf-grid__box">
+                    <Box className="scf-box__header">
+                      <Box className="scf-box__header-title"><h3>联系方式</h3>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
+                <Box className="scf-grid__item-12">
+                  <Box className="scf-grid__box">
+                    <ul className="scf-list scf-list--link">
+                      <li className="scf-list__item">
+                        <a href="" className="scf-list__text">GitHub: https://github.com/serverless/serverless</a>
+                      </li>
+                      <li className="scf-list__item">
+                        <a href="" className="scf-list__text">Twitter: https://twitter.com/goserverless</a>
+                      </li>
+                    </ul>
+                  </Box>
+                </Box>
+              </Box>
+              <Box className="scf-grid ">
+                <Box className="scf-grid__item-12">
+                  <Box className="scf-grid__box">
+                    <Box className="scf-box__header">
+                      <Box className="scf-box__header-title"><h3>问题讨论</h3>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
+                <Box className="scf-grid__item-12">
+                  <Box className="scf-grid__box">
+                    <ul className="scf-list scf-list--link">
+                      <li className="scf-list__item">在 SegmentFault 上快速提问</li>
+                      <li className="scf-list__item">加上「Serverless」和「ServerlessFramework」标签</li>
+                    </ul>
+                  </Box>
+                </Box>
+              </Box>
+              <Box className="scf-grid ">
+                <Box className="scf-grid__item-12">
+                  <Box className="scf-grid__box">
+                    <Box className="scf-box__header">
+                      <Box className="scf-box__header-title"><h3>加入组群</h3>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
+                <Box className="scf-grid__item-12">
+                  <Box className="scf-grid__box">
+                    <Box className="scf-grid ">
+                      <Box className="scf-grid__item-12">
+                        <Box className="scf-grid__box">
+                          <dl className="scf-page-about-link ">
+                            <dt className="scf-page-about-link__title">交流 QQ 群</dt>
+                            <dd className="scf-page-about-link__list">
+                              <p className="scf-page-about-link__commit-tips">群号：871445853</p><img src={QQQRcode} alt=""/></dd>
+                          </dl>
+                        </Box>
+                      </Box>
+                      <Box className="scf-grid__item-12">
+                        <Box className="scf-grid__box">
+                          <dl className="scf-page-about-link ">
+                            <dt className="scf-page-about-link__title">微信社区群</dt>
+                            <dd className="scf-page-about-link__list">
+                              <p className="scf-page-about-link__commit-tips">WeChat ID：serverlesscloud</p><img src={WechatQRcode} alt=""/></dd>
+                          </dl>
+                        </Box>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
+              </Box>
+            </Container>
+          </Box>
+        </Box>
+      </Box>
+      {/*
       <CustomContainer maxWidth={[1216, 1216, 1216, 1216, '100%', 1216]}>
         <Flex justifyContent="center">
           <Box pt={'30px'} pb={'30px'} width={'80%'}>
@@ -110,26 +216,24 @@ const AboutPage = ({
           </Box>
         </Flex>
       </CustomContainer>
+      */}
     </Layout>
   )
 }
 
-export const query = graphql`
+export const query = graphql `
   query {
     about: allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       limit: 3
-      filter: { fileAbsolutePath: { regex: "/about/" } }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          html
-        }
-      }
+      filter: { fileAbsolutePath: { regex: "/about / " } }
+) {
+    totalCount
+    edges {
+      node {id html}
     }
   }
+}
 `
 
 export default AboutPage

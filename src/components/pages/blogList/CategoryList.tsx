@@ -39,7 +39,7 @@ export default function (props) {
             {categorys
               .group
               .map(category => (
-                <Link to={`${baseCategoryUrl}/${category.categories}`}>
+                <Link to={`${baseCategoryUrl}/${category.categories}`} key={category.categories}>
                 <span key={category.categories} className={"scf-segment__item "+ ([`${baseCategoryUrl}/${category.categories}`,`${baseCategoryUrl}/${category.categories}/`].includes(location.pathname)?'is-active':'')}>{generateCategoryText(category.categories)}（{category.totalCount}）</span>
                 </Link>
               ))}

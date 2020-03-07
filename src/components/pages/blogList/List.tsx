@@ -34,9 +34,7 @@ export default function({
         pageSize={limit}
         onChange={(pageNum: number) => {
           const url = (generateDataUrl && generateDataUrl(pageNum)) || ''
-
           if (url === '') return
-
           navigate(url)
         }}
       />

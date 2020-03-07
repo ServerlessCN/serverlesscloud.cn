@@ -2,7 +2,6 @@ import * as React from 'react'
 import {graphql} from 'gatsby'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
 import {Box, InlineBlock} from '@src/components/atoms'
-import {debounce} from '@src/utils'
 import {Blog, GraphqlBlogResult} from '@src/types'
 import styled from 'styled-components'
 import Markdown from '@src/components/Markdown'
@@ -137,95 +136,6 @@ const BlogDetail = ({data: {
           </Box>
         </Box>
       </Box>
-      {/*
-      <Helmet {...currentBlog.frontmatter} location={location}/>
-      <Content>
-        <Box
-          width={[0.9, 0.9, 0.9, 0.72]}
-          py={'40px'}
-          px={[
-          0,
-          0,
-          0,
-          '10px',
-          0,
-          0
-        ]}>
-          <BoxWithBackground
-            mb="10px"
-            py="10px"
-            px="20px"
-            background={theme.colors.gray[1]}
-            width={1}>
-            <Text my="5px">
-              发布于: {formateDate(currentBlog.frontmatter.date)}
-            </Text>
-            <Text my="5px">
-              作者: {currentBlog
-                .frontmatter
-                .authors
-                .map((author, index) => (
-                  <ExternalLinkWrapper key={author}>
-                    {currentBlog.frontmatter.authorslink && currentBlog.frontmatter.authorslink[index]
-                      ? (
-                        <ExternalLink to={currentBlog.frontmatter.authorslink[index]}>
-                          {author}
-                        </ExternalLink>
-                      )
-                      : (author)}
-                  </ExternalLinkWrapper>
-                ))}
-            </Text>
-            {currentBlog.frontmatter.translators && currentBlog.frontmatter.translators.length
-              ? (
-                <Text my="5px">
-                  译者: {currentBlog
-                    .frontmatter
-                    .translators
-                    .map((translator, index) => (
-                      <ExternalLinkWrapper key={translator}>
-                        {currentBlog.frontmatter.translatorslink && currentBlog.frontmatter.translatorslink[index]
-                          ? (
-                            <ExternalLink to={currentBlog.frontmatter.translatorslink[index]}>
-                              {translator}
-                            </ExternalLink>
-                          )
-                          : (translator)}
-                      </ExternalLinkWrapper>
-                    ))}
-                </Text>
-              )
-              : null}
-            {currentBlog.frontmatter.categories && currentBlog.frontmatter.categories.length
-              ? (
-                <Text my="5px">
-                  归档于: {currentBlog
-                    .frontmatter
-                    .categories
-                    .map(o => (
-                      <LinkWrapper key={o} display="inline-block" ml="5px">
-                        <CategoryLink category={o}/>
-                      </LinkWrapper>
-                    ))}
-                </Text>
-              )
-              : null}
-          </BoxWithBackground>
-
-          <Markdown html={currentBlog.html as string}></Markdown>
-
-        </Box>
-           <PreNext next={nextBlog} previous={previousBlog} />
-
-        <Box width={[0.9, 0.9, 0.9, 0.25]}>
-          <Recommend width={[1]} blogs={recommendBlogs.edges} />
-          <Category width={[1]} />
-          <BlogCatalogs html={currentBlog.tableOfContents}/>
-        </Box>
-      </Content>
-
-      <BackToTop/>
-    */}
     </Layout>
   )
 }

@@ -118,7 +118,7 @@ export default function () {
             <div className="scf-footer__left">
               <div className="scf-display-flex">
                 {links.map(({category, contents}) => (
-                  <dl className="scf-footer__link">
+                  <dl className="scf-footer__link" key={category}>
                     <dt className="scf-footer__link-title">{category}</dt>
                     <dd className="scf-footer__link-list">
                       <ul>
@@ -127,7 +127,7 @@ export default function () {
                             ? InternalLink
                             : ExternalLink
                           return (
-                            <li>
+                            <li key={title}>
                               <Link key={title} to={link}>
                                 {title}
                               </Link>
@@ -143,7 +143,7 @@ export default function () {
             <div className="scf-footer__right">
               <div className="scf-display-flex scf-footer__commit">
                 {contacts.map(({title, qrcode, description}) => (
-                  <dl className="scf-footer__link ">
+                  <dl className="scf-footer__link " key={title}>
                     <dt className="scf-footer__link-title">{title}</dt>
                     <dd className="scf-footer__link-list">
                       <p className="scf-footer__commit-tips">{description}</p>

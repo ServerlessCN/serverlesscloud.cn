@@ -28,9 +28,10 @@
   line-height: 26px;
   margin-bottom: 10px;
 }
-.scf-page-resource .scf-footer__inner, .scf-header__inner, .scf-home-block__inner {
+.scf-page-resource .scf-footer__inner, .scf-page-resource .scf-header__inner, .scf-home-block__inner {
   width: 76%;
 }
+
 .scf-page-resource .scf-home-block__inner {
   width: "76%";
   margin: 0 auto;

@@ -1,20 +1,20 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
-import { Box, BackgroundProps, Text, InlineBlock } from '@src/components/atoms'
-import { Blog, GraphqlBlogResult } from '@src/types'
-import Breadcrumbs from '@src/components/Breadcrumbs'
+import {Box, BackgroundProps, Text, InlineBlock} from '@src/components/atoms'
+import {Blog, GraphqlBlogResult} from '@src/types'
 import styled from 'styled-components'
 import Markdown from '@src/components/Markdown'
 import BlogCatalogs from '@src/components/Markdown/Catalogs'
 import theme from '@src/constants/theme'
 import Helmet from '@src/components/Helmet'
-import { background } from 'styled-system'
-import { formateDate } from '@src/utils'
+import {background} from 'styled-system'
+import {formateDate} from '@src/utils'
+import {display, DisplayProps, space, SpaceProps} from 'styled-system'
 import ExternalLink from '@src/components/Link/ExternalLink'
-import BackToTop from '@src/components/BackToTop'
-import PreNext from '@src/components/PreNext'
-import Content from '@src/components/Content'
+import Activitys from '@src/components/pages/home/Activitys'
+import CategoryLink from '@src/components/Link/CategoryLink'
+import RecommandRead from '@src/components/pages/home/RecommandRead'
 
 const ExternalLinkWrapper = styled(InlineBlock)`
   margin-left: 5px;
@@ -28,18 +28,30 @@ const ExternalLinkWrapper = styled(InlineBlock)`
     }
   }
 `
+const LinkWrapper = styled.div < DisplayProps & SpaceProps > `
+  ${display}
+  ${space}
+  a {
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    line-height: 22px;
+    &:hover {
+      color: ${theme.colors.serverlessRed};
+    }
+  }
+`
 
 interface Props {
-  data: {
-    currentBlog: Blog['node']
-    previousBlog: Blog['node']
-    nextBlog: Blog['node']
+  data : {
+    currentBlog: Blog['node'],
+    previousBlog: Blog['node'],
+    nextBlog: Blog['node'],
     recommendBlogs: GraphqlBlogResult
   }
-  location: any
+  location : any
 }
 
-const BoxWithBackground = styled(Box)<BackgroundProps>`
+const BoxWithBackground = styled(Box) < BackgroundProps > `
   ${background}
   display: flex;
   flex-direction: column;
@@ -47,79 +59,81 @@ const BoxWithBackground = styled(Box)<BackgroundProps>`
 `
 
 const BestPracticeDetail = ({
-  data: { currentBlog, previousBlog, nextBlog, recommendBlogs },
-  location,
-}: Props) => {
+  data: {
+    currentBlog,
+    previousBlog,
+    nextBlog,
+    recommendBlogs
+  },
+  location
+} : Props) => {
   currentBlog.frontmatter.categories = currentBlog.frontmatter.categories || []
 
   return (
     <Layout>
-      <Helmet {...currentBlog.frontmatter} location={location} />
-      {/*<Breadcrumbs>{currentBlog.frontmatter.title}</Breadcrumbs>*/}
-      <Content>
-        <Box
-          width={[0.9, 0.9, 0.9, 0.72]}
-          py={'40px'}
-          px={[0, 0, 0, '10px', 0, 0]}
-        >
-          <Box
-            width={1}
-            px={[0, 0, 0, '10px', 0, 0]}
-            >
-              <Text fontSize="32px">
-                {currentBlog.frontmatter.title}
-              </Text>
+      <Helmet {...currentBlog.frontmatter} location={location}/>
+      <Box className="scf-content">
+        <Box className="scf-page-blog-detail scf-layout-pattern">
+          <Box className="scf-home-block">
+            <Box className="scf-home-block__inner">
+              <Box className="scf-detail">
+                <Box className="scf-grid scf-detail__content">
+                  <Box className="scf-grid__item-18">
+                    <Box className="scf-grid__box">
+                      <Box className="scf-detail__docs">
+                        <h1 className="scf-detail-docs__title">{currentBlog.frontmatter.title}</h1>
+                        <Box className="scf-detail-docs__info">
+                          <Box>作者：{currentBlog
+                              .frontmatter
+                              .authors
+                              .map((author, index) => (
+                                <ExternalLinkWrapper key={author}>
+                                  {currentBlog.frontmatter.authorslink && currentBlog.frontmatter.authorslink[index]
+                                    ? (
+                                      <ExternalLink to={currentBlog.frontmatter.authorslink[index]}>
+                                        {author}
+                                      </ExternalLink>
+                                    )
+                                    : (author)}
+                                </ExternalLinkWrapper>
+                              ))}</Box>
+                          <Box>发布于： {formateDate(currentBlog.frontmatter.date)}</Box>
+                          {currentBlog.frontmatter.categories && currentBlog.frontmatter.categories.length
+                            ? <Box>归档于： {currentBlog
+                                  .frontmatter
+                                  .categories
+                                  .map(o => (
+                                    <LinkWrapper key={o} display="inline-block" ml="5px">
+                                      <CategoryLink category={o}/>
+                                    </LinkWrapper>
+                                  ))}</Box>
+                            : null}
+                        </Box>
+                        <Markdown html={currentBlog.html as string}></Markdown>
+                      </Box>
+                    </Box>
+                  </Box>
+                  <BlogCatalogs html={currentBlog.tableOfContents}/>
+                </Box>
+              </Box>
+            </Box>
           </Box>
-          <BoxWithBackground
-            mb="20px"
-            mt="20px"
-            // py="10px"
-            // px="20px"
-            color={'#8c8c8c'}
-            // background={theme.colors.gray[1]}
-            width={1}
-          >
-
-            <Text my="0px">
-              发布于: {formateDate(currentBlog.frontmatter.date)}
-            </Text>
-            <Text mb="10px">
-              作者:
-              {currentBlog.frontmatter.authors.map((author, index) => (
-                <ExternalLinkWrapper key={author}>
-                  {currentBlog.frontmatter.authorslink &&
-                  currentBlog.frontmatter.authorslink[index] ? (
-                    <ExternalLink
-                      to={currentBlog.frontmatter.authorslink[index]}
-                    >
-                      {author}
-                    </ExternalLink>
-                  ) : (
-                    author
-                  )}
-                </ExternalLinkWrapper>
-              ))}
-            </Text>
-          </BoxWithBackground>
-
-          <Markdown html={currentBlog.html as string}></Markdown>
-
-          {/*<PreNext next={nextBlog} previous={previousBlog} />*/}
+          <Box className="scf-home-block">
+            <Box className="scf-home-block__inner">
+              <Box className="scf-grid">
+                <RecommandRead/><Activitys/>
+              </Box>
+            </Box>
+          </Box>
         </Box>
-
-        <Box width={[0.9, 0.9, 0.9, 0.25]}>
-          <BlogCatalogs html={currentBlog.tableOfContents} />
-        </Box>
-      </Content>
-
-      <BackToTop />
+      </Box>
     </Layout>
   )
 }
 
 export default BestPracticeDetail
 
-export const query = graphql`
+export const query = graphql `
   fragment blogFields on MarkdownRemark {
     id
     frontmatter {
