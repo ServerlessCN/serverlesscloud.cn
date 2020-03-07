@@ -89,3 +89,7 @@
   display: block;
   margin-right: 5px;
 }
+
+#scf-blog-tab a:hover {
+  cursor: pointer;
+}

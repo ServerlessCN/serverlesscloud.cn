@@ -221,19 +221,4 @@ const AboutPage = () => {
   )
 }
 
-export const query = graphql `
-  query {
-    about: allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
-      limit: 3
-      filter: { fileAbsolutePath: { regex: "/about / " } }
-) {
-    totalCount
-    edges {
-      node {id html}
-    }
-  }
-}
-`
-
 export default AboutPage
