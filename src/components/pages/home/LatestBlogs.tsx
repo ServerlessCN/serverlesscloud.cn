@@ -215,8 +215,8 @@ export default function () {
     }
 
     getBlogPv(function(error, response) {
-      if (response.error) {
-        console.log(response.error);
+      if (error || response.error) {
+        console.log(error || response.error);
         return;
       }
       const hotBlogList = [];

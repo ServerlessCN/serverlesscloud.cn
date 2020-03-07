@@ -35,8 +35,8 @@ export default function({
     }
 
     getBlogPv(function(error, response) {
-      if (response.error) {
-        console.log(response.error);
+      if (error || response.error) {
+        console.log(error || response.error);
         return;
       }
       const bestList = document.getElementById('scf-best-practice').children;
@@ -59,7 +59,7 @@ export default function({
 
   return (
     <Box>
-      <Box>
+      <Box id="scf-best-practice">
         {blogs.map(blog => (
           <BlogListItem key={blog.node.id} data={blog}  />
         ))}
