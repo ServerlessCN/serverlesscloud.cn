@@ -1,3 +1,5 @@
+import { graphql } from 'gatsby'
+
 /**
  * 2019-10-14T00:00:00.000Z -> AUG 07 2019
  * @param {
@@ -25,3 +27,11 @@ export function debounce(func, wait = 50) {
     }, wait)
   }
 }
+
+
+export function requestBlogs() {
+  console.log(222)
+  return 
+
+}
+

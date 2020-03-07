@@ -16,7 +16,8 @@ interface Props {
   location : any
 }
 
-const IndexPage = (props : Props) => {
+const IndexPage = (props: Props) => {
+  console.log(props)
   return (
     <Layout>
       <Helmet

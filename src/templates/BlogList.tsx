@@ -8,6 +8,7 @@ import { GraphqlBlogResult } from '@src/types'
 import Helmet from '@src/components/Helmet'
 import Content from '@src/components/Content'
 import Breadcrumbs from '@src/components/Breadcrumbs'
+import { requestBlogs} from '@src/utils'
 
 interface Props {
   data: {
@@ -54,43 +55,43 @@ const BlogList = ({
 export default BlogList
 
 export const query = graphql`
-  query Blogs($offset: Int!, $limit: Int!) {
-    blogs: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        frontmatter: { date: { ne: null } }
-        fileAbsolutePath: { regex: "//blog//" }
-      }
-      skip: $offset
-      limit: $limit
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            thumbnail
-            authors
-            categories
-            date
-            title
-            description
-            authorslink
-            translators
-            translatorslink
-          }
-          wordCount {
-            words
-            sentences
-            paragraphs
-          }
-          timeToRead
-          fileAbsolutePath
-          fields {
-            slug
-          }
+query Blogs($offset: Int!, $limit: Int!) {
+  blogs: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }
+    filter: {
+      frontmatter: { date: { ne: null } }
+      fileAbsolutePath: { regex: "//blog//" }
+    }
+    skip: $offset
+    limit: $limit
+  ) {
+    edges {
+      node {
+        id
+        frontmatter {
+          thumbnail
+          authors
+          categories
+          date
+          title
+          description
+          authorslink
+          translators
+          translatorslink
+        }
+        wordCount {
+          words
+          sentences
+          paragraphs
+        }
+        timeToRead
+        fileAbsolutePath
+        fields {
+          slug
         }
       }
-      totalCount
     }
+    totalCount
   }
-`
+}
+` 
