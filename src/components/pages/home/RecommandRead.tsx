@@ -15,7 +15,7 @@ function BlogCard({blog} : {
 }) {
   return (
     <Box className="scf-article-item scf-article-item--block">
-      <Link to={blog.node.fields.slug}>
+      <Link to={blog.node.fields.slug} data-id={blog.node.id}>
         <Box className="scf-article-item__img">
           <Box className="scf-article-item__img-inner">
             <img src={blog.node.frontmatter.thumbnail} alt=""/>
@@ -52,7 +52,7 @@ function Blogs() {
       blogs: GraphqlBlogResult
     }) => {
       return (
-        <Box className="scf-box__body">
+        <Box className="scf-box__body" id="scf-box-best-recommand-read">
           {blogs
             .edges
             .map(blog => (<BlogCard key={blog.node.id} blog={blog}/>))}
@@ -63,6 +63,44 @@ function Blogs() {
 }
 
 export default function () {
+  React.useEffect(() => {
+    function getBlogPv(fn) {
+      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?env=test';
+      fetch(api)
+          .then((response) => response.json() )
+          .then((response)=>{
+        
+            fn(null, response);
+          })
+          .catch((error)=>{
+            fn(error, null);
+          });
+    }
+
+    getBlogPv(function(error, response) {
+      if (error || response.error) {
+        console.log(error || response.error);
+        return;
+      }
+      const bestList = document.getElementById('scf-box-best-recommand-read');
+      if (!bestList) return;
+      const bestItems = bestList.getElementsByTagName('A');
+
+      for (var i = 0; i < bestItems.length; ++i) {
+        const id = bestItems[i].getAttribute('data-id');
+        if (!id) continue;
+        const statistics = bestItems[i].getElementsByClassName('scf-article-item__statistics-item');
+        if (!statistics) continue;
+        const icon = statistics[0].getElementsByClassName('scf-icon');
+        if (!icon) continue;
+        let pv = response.message[id] || Math.ceil(Math.random() * 100);
+        if (pv >= 1000) {
+          pv = (pv / 1000).toFixed(1) + 'K';
+        }
+        icon[0].innerHTML = pv + '&nbsp;·&nbsp;';
+      }
+    });
+  })
   return (
     <Box className="scf-grid__item-16">
       <Box className="scf-grid__box">
