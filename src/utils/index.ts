@@ -10,7 +10,7 @@ export function formateDate(dateString) {
     const month = date.getMonth() + 1
     const day = date.getDate()
 
-    return `${year}年${month}月${day}日`
+    return `${year}-${month}-${day}`
   } catch (err) {
     return dateString
   }

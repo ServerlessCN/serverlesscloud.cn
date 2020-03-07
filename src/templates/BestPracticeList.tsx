@@ -31,10 +31,11 @@ const BlogList = ({
         location={location}
       />
 
-      <Breadcrumbs>最佳实践</Breadcrumbs>
+      {/*<Breadcrumbs>最佳实践</Breadcrumbs>*/}
 
       <Content>
         <List
+          mt={'100px'}
           width={[0.9, 0.9, 0.9, 0.85]}
           generateDataUrl={pageNum =>
             `/best-practice${pageNum === 1 ? '' : `/page/${pageNum}`}`

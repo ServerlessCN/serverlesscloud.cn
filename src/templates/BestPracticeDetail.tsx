@@ -55,24 +55,35 @@ const BestPracticeDetail = ({
   return (
     <Layout>
       <Helmet {...currentBlog.frontmatter} location={location} />
-      <Breadcrumbs>{currentBlog.frontmatter.title}</Breadcrumbs>
+      {/*<Breadcrumbs>{currentBlog.frontmatter.title}</Breadcrumbs>*/}
       <Content>
         <Box
           width={[0.9, 0.9, 0.9, 0.72]}
           py={'40px'}
           px={[0, 0, 0, '10px', 0, 0]}
         >
+          <Box
+            width={1}
+            px={[0, 0, 0, '10px', 0, 0]}
+            >
+              <Text fontSize="32px">
+                {currentBlog.frontmatter.title}
+              </Text>
+          </Box>
           <BoxWithBackground
-            mb="10px"
-            py="10px"
-            px="20px"
-            background={theme.colors.gray[1]}
+            mb="20px"
+            mt="20px"
+            // py="10px"
+            // px="20px"
+            color={'#8c8c8c'}
+            // background={theme.colors.gray[1]}
             width={1}
           >
-            <Text my="5px">
+
+            <Text my="0px">
               发布于: {formateDate(currentBlog.frontmatter.date)}
             </Text>
-            <Text my="5px">
+            <Text mb="10px">
               作者:
               {currentBlog.frontmatter.authors.map((author, index) => (
                 <ExternalLinkWrapper key={author}>
@@ -93,7 +104,7 @@ const BestPracticeDetail = ({
 
           <Markdown html={currentBlog.html as string}></Markdown>
 
-          <PreNext next={nextBlog} previous={previousBlog} />
+          {/*<PreNext next={nextBlog} previous={previousBlog} />*/}
         </Box>
 
         <Box width={[0.9, 0.9, 0.9, 0.25]}>

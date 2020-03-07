@@ -17,7 +17,6 @@ const Wrapper = styled(Box) < DisplayProps & PositionProps & TopProps & RightPro
   ${position}
   ${top}
   ${right}
-
     a {
       color: ${theme.colors.black};
       transition: all 0.3s ease;
