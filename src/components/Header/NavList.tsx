@@ -6,8 +6,8 @@ import { display, color, textAlign, TextAlignProps } from 'styled-system'
 import { Link as InternalLink } from 'gatsby'
 import ExternalLink from '../Link/ExternalLink'
 import theme from '@src/constants/theme'
-import { requestBlogs } from '@src/utils'
 import { getSearch } from '@src/utils/search'
+import { Position } from '../atoms/Position/index';
 
 const NavListItem = styled(ListItemWithNoStyleType)`
   ${display}
@@ -87,8 +87,6 @@ function Blogs(props) {
       render={({ blogs }: {
         blogs: any
       }) => {
-        console.log()
-        console.log(blogs)
         let searchKeys = getSearch(props.value || '', blogs.edges, [])
         if (searchKeys.length > 0) {
           return (
@@ -97,7 +95,6 @@ function Blogs(props) {
                 {blogs.edges.map((item, index) => {
                   return searchKeys.map((itemSearchKey, indexSearchKey) => {
                     if (item.node.id == itemSearchKey) {
-                      console.log(item)
                       return (
                         <li className="scf-header-search-result-list__item">
                           <a target="_blank" href={item.node.fields.slug}>
@@ -149,8 +146,6 @@ export default class NavList extends React.Component<Props, State> {
     const { isActive, isDesktopView } = this.props
     const isMobileNavListDisplay = () => (isActive ? 'block' : 'none')
 
-    console.log(this)
-
     const navListBoxWidth = isDesktopView ? 0.6 : 1
     return (
       <BoxWithTextAlign
@@ -168,7 +163,7 @@ export default class NavList extends React.Component<Props, State> {
         textAlign={isDesktopView ? 'right' : 'left'}
       >
 
-        <List p={0} mr={0} mb={0}>
+        <List p={0} mr={0} mb={0} style={{position:'relative'}}>
           {navList.map(({ title, link, isInternal }, index) => {
             const Link = isInternal
               ? InternalLink
@@ -195,7 +190,6 @@ export default class NavList extends React.Component<Props, State> {
                 <button className="scf-header-search__search-btn"><i className="scf-icon scf-icon-search-white"></i>
                 </button>
                 <input ref={(r) => this.search = r} onInput={(e) => {
-                  console.log(e.target.value)
                   this.setState({
                     searchContnet: e.target.value,
                   })
@@ -219,90 +213,4 @@ export default class NavList extends React.Component<Props, State> {
       </BoxWithTextAlign>
     )
   }
-}
-
-
-{/* <StaticQuery
-              query={graphql`
-              query blogs($offset: Int!, $limit: Int!) {
-                blogs: allMarkdownRemark(
-                  sort: { fields: [frontmatter___date], order: DESC }
-                  filter: {
-                    frontmatter: { date: { ne: null } }
-                    fileAbsolutePath: { regex: "//blog//" }
-                  }
-                  skip: $offset
-                  limit: $limit
-                ) {
-                  edges {
-                    node {
-                      id
-                      frontmatter {
-                        thumbnail
-                        authors
-                        categories
-                        date
-                        title
-                        description
-                        authorslink
-                        translators
-                        translatorslink
-                      }
-                      wordCount {
-                        words
-                        sentences
-                        paragraphs
-                      }
-                      timeToRead
-                      fileAbsolutePath
-                      fields {
-                        slug
-                      }
-                    }
-                  }
-                  totalCount
-                }
-              }
-              ` }
-              render={data => {
-                console.log(data, 9999)
-                return (
-                  <div className="scf-header-search">
-                    <div className="scf-header-search__input-wrap" style={{ display: 'flex' }}>
-                      <button className="scf-header-search__search-btn"><i className="scf-icon scf-icon-search-white"></i></button>
-                      <input type="text" placeholder="搜索文章或关键词" className="scf-header-search__input" />
-                      <button className="scf-header-search__clear-btn" onClick={() => this.changeSearch()}><i className="scf-icon scf-icon-clear"></i></button>
-                      <div className="scf-header-search__panel">
-                        <ul className="scf-header-search-result-list">
-                          <li className="scf-header-search-result-list__item">
-                            <p className="scf-header-search-result-list__item-title">Serverless Framework v1.36: Bug fixes and quality of life inprovements for all!</p>
-                            <p className="scf-header-search-result-list__item-info">Check out the latest Serverless Framework v1.36 release, bug fixes and quality of life improvements for all!</p></li>
-                          <li className="scf-header-search-result-list__item">
-                            <p className="scf-header-search-result-list__item-title">Serverless Framework v1.45.0 - ALB event source, API Gateway Websocket logs, S3 hosted deployment packages, Custom configuration file names &amp; More</p>
-                            <p className="scf-header-search-result-list__item-info">Check out the latest Serverless Framework v1.36 release, bug fixes and quality of life improvements for all!</p></li>
-                          <li className="scf-header-search-result-list__item">
-                            <p className="scf-header-search-result-list__item-title">Serverless Framework v1.45.0 - ALB event source, API Gateway Websocket logs, S3 hosted deployment packages, Custom configuration file names &amp; More</p>
-                            <p className="scf-header-search-result-list__item-info">Check out the latest Serverless Framework v1.36release, bug fixes and quality of life improvements for all!</p></li>
-                          <li className="scf-header-search-result-list__item">
-                            <p className="scf-header-search-result-list__item-title">Serverless Framework v1.45.0 - ALB event source, API Gateway Websocket logs, S3 hosted deployment packages, Custom configuration file names &amp; More</p>
-                            <p className="scf-header-search-result-list__item-info">Check out the latest Serverless Framework v1.36release, bug fixes and quality of life improvements for all!</p></li>
-                          <li className="scf-header-search-result-list__item">
-                            <p className="scf-header-search-result-list__item-title">Serverless Framework v1.45.0 - ALB event source, API Gateway Websocket logs, S3 hosted deployment packages, Custom configuration file names &amp; More</p>
-                            <p className="scf-header-search-result-list__item-info">Check out the latest Serverless Framework v1.36release, bug fixes and quality of life improvements for all!</p></li>
-                          <li className="scf-header-search-result-list__item">
-                            <p className="scf-header-search-result-list__item-title">Serverless Framework v1.45.0 - ALB event source, API Gateway Websocket logs, S3 hosted deployment packages, Custom configuration file names &amp; More</p>
-                            <p className="scf-header-search-result-list__item-info">Check out the latest Serverless Framework v1.36release, bug fixes and quality of life improvements for all!</p></li>
-                          <li className="scf-header-search-result-list__item">
-                            <p className="scf-header-search-result-list__item-title">Serverless Framework v1.45.0 - ALB event source, API Gateway Websocket logs, S3 hosted deployment packages, Custom configuration file names &amp; More</p>
-                            <p className="scf-header-search-result-list__item-info">Check out the latest Serverless Framework v1.36release, bug fixes and quality of life improvements for all!</p></li>
-                          <li className="scf-header-search-result-list__item">
-                            <p className="scf-header-search-result-list__item-title">Serverless Framework v1.45.0 - ALB event source, API Gateway Websocket logs, S3 hosted deployment packages, Custom configuration file names &amp; More</p>
-                            <p className="scf-header-search-result-list__item-info">Check out the latest Serverless Framework v1.36release, bug fixes and quality of life improvements for all!</p></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                )
-              }}
-            /> */
 }

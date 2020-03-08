@@ -488,7 +488,7 @@ a:hover {
   display: flex;
   position: absolute;
   right: 0;
-  top: 13px;
+  top: 0;
   z-index: 10
 }
 

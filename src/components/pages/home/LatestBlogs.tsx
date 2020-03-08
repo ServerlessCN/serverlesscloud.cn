@@ -138,7 +138,6 @@ export default function () {
       let htmlBody = '';
       let n = 6;
       for (var i = 0; i < hotBlogList.length && n > 0; i++) {
-        // console.log(hotBlogList[i]);
         const id = Object.keys(hotBlogList[i])[0];
         let pv;
         if (Object.values(hotBlogList[i])[0] < 1000) {
