@@ -1,16 +1,17 @@
 import * as React from 'react'
 import Footer from '@src/components/Footer'
 import Header from '@src/components/Header'
-import { Flex, Column } from '@src/components/atoms'
+import { Column } from '@src/components/atoms'
 import styled, { ThemeProvider } from 'styled-components'
 import theme from '@src/constants/theme'
 import { width } from 'styled-system'
 import { CheckIfDesktopContext } from '@src/contexts'
+import { debounce } from '@src/utils'
+
 const FlexWithBox = styled(Column)`
   ${width}
   min-height: 100vh;
 `
-import { debounce } from '@src/utils'
 
 const Layout = ({ children }: React.Props<any>) => {
   const [isDesktopView, setIsDesktopView] = React.useState(true)
@@ -27,7 +28,6 @@ const Layout = ({ children }: React.Props<any>) => {
       window.removeEventListener('resize', onResize)
     }
   }, [])
-
   return (
     <ThemeProvider theme={theme}>
       <CheckIfDesktopContext.Provider value={isDesktopView}>

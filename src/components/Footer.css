@@ -155,5 +155,14 @@
   width: 24px;
     height: 24px;
   background-image: url(../assets/images/github.svg);
-  
+}
+.scf-icon-search-white {
+  width: 24px;
+    height: 24px;
+  background: url(../assets/images/header-search.svg) no-repeat;
+}
+.scf-icon-clear {
+  width: 24px;
+    height: 24px;
+  background: url(../assets/images/clear.svg) no-repeat;
 }
