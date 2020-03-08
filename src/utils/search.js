@@ -61,7 +61,7 @@ export function getAticleJson(articleList, replaceList) {
 }
 
 export function getSearch(content, articleList, replaceList) {
-  console.log('输入的内容' + content, articleList)
+  console.log(articleList)
   var searchContent = getContent(content, replaceList)
   var searchReg = searchContent.replace(/ /ig, '|')
   var articleContent = getAticleJson(articleList, replaceList)
@@ -72,5 +72,6 @@ export function getSearch(content, articleList, replaceList) {
       resultList.push(key)
     }
   }
+  console.log(resultList)
   return resultList
 }
