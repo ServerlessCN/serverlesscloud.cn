@@ -54,9 +54,7 @@ export default function () {
     ]}
       px={0}>
       <Box className="scf-home-video">
-        <Box
-          className="scf-box__header"
-          >
+        <Box className="scf-box__header">
           <Box className="scf-box__header-title  size-s">
             <h3>视频</h3>
           </Box>
@@ -66,19 +64,20 @@ export default function () {
             </Link>
           </Box>
         </Box>
-        <Box
-          className="scf-box__body"
-         >
+        <Box className="scf-box__body">
           <Box className="scf-grid">
             <Box className="scf-grid__item-12">
               <Box className="scf-grid__box">
-                <Box className="scf-video-item scf-video-item--block"><img src={VideoList[0].img} alt=""/>
-                  <Box className="scf-video-item__info">
-                    <a href={VideoList[0].link}>
-                      <i className="scf-icon scf-icon-video"></i>
-                    </a>
-                    <span className="scf-video-item__title">{VideoList[0].title}</span>
-                  </Box>
+                <Box className="scf-video-item scf-video-item--block">
+                  <a href={VideoList[0].link}>
+                    <img src={VideoList[0].img} alt=""/>
+                    <Box className="scf-video-item__info">
+                      <a href={VideoList[0].link}>
+                        <i className="scf-icon scf-icon-video"></i>
+                      </a>
+                      <span className="scf-video-item__title">{VideoList[0].title}</span>
+                    </Box>
+                  </a>
                 </Box>
               </Box>
             </Box>
@@ -87,25 +86,31 @@ export default function () {
                 <Box className="scf-grid">
                   <Box className="scf-grid__item-12">
                     <Box className="scf-grid__box">
-                      <Box className="scf-video-item "><img src={VideoList[1].img} alt=""/>
-                        <a href={VideoList[1].link} className="scf-video-item__playbtn">
-                          <i className="scf-icon scf-icon-video"></i>
+                      <Box className="scf-video-item ">
+                        <a href={VideoList[1].link}>
+                          <img src={VideoList[1].img} alt=""/>
+                          <a href={VideoList[1].link} className="scf-video-item__playbtn">
+                            <i className="scf-icon scf-icon-video"></i>
+                          </a>
+                          <Box className="scf-video-item__info">
+                            <Box className="scf-video-item__title">{VideoList[1].title}</Box>
+                          </Box>
                         </a>
-                        <Box className="scf-video-item__info">
-                          <Box className="scf-video-item__title">{VideoList[1].title}</Box>
-                        </Box>
                       </Box>
                     </Box>
                   </Box>
                   <Box className="scf-grid__item-12">
                     <Box className="scf-grid__box">
-                      <Box className="scf-video-item "><img src={VideoList[2].img} alt=""/>
-                        <a href={VideoList[2].link} className="scf-video-item__playbtn">
-                          <i className="scf-icon scf-icon-video"></i>
+                      <Box className="scf-video-item ">
+                        <a href={VideoList[2].link}>
+                          <img src={VideoList[2].img} alt=""/>
+                          <a href={VideoList[2].link} className="scf-video-item__playbtn">
+                            <i className="scf-icon scf-icon-video"></i>
+                          </a>
+                          <Box className="scf-video-item__info">
+                            <Box className="scf-video-item__title">{VideoList[2].title}</Box>
+                          </Box>
                         </a>
-                        <Box className="scf-video-item__info">
-                          <Box className="scf-video-item__title">{VideoList[2].title}</Box>
-                        </Box>
                       </Box>
                     </Box>
                   </Box>
@@ -113,25 +118,31 @@ export default function () {
                 <Box className="scf-grid">
                   <Box className="scf-grid__item-12">
                     <Box className="scf-grid__box">
-                      <Box className="scf-video-item "><img src={VideoList[3].img} alt=""/>
-                        <a href={VideoList[3].link} className="scf-video-item__playbtn">
-                          <i className="scf-icon scf-icon-video"></i>
+                      <Box className="scf-video-item ">
+                        <a href={VideoList[3].link}>
+                          <img src={VideoList[3].img} alt=""/>
+                          <a href={VideoList[3].link} className="scf-video-item__playbtn">
+                            <i className="scf-icon scf-icon-video"></i>
+                          </a>
+                          <Box className="scf-video-item__info">
+                            <Box className="scf-video-item__title">{VideoList[3].title}</Box>
+                          </Box>
                         </a>
-                        <Box className="scf-video-item__info">
-                          <Box className="scf-video-item__title">{VideoList[3].title}</Box>
-                        </Box>
                       </Box>
                     </Box>
                   </Box>
                   <Box className="scf-grid__item-12">
                     <Box className="scf-grid__box">
-                      <Box className="scf-video-item "><img src={VideoList[4].img} alt=""/>
-                        <a href={VideoList[4].link} className="scf-video-item__playbtn">
-                          <i className="scf-icon scf-icon-video"></i>
+                      <Box className="scf-video-item ">
+                        <a href={VideoList[4].link}>
+                          <img src={VideoList[4].img} alt=""/>
+                          <a href={VideoList[4].link} className="scf-video-item__playbtn">
+                            <i className="scf-icon scf-icon-video"></i>
+                          </a>
+                          <Box className="scf-video-item__info">
+                            <Box className="scf-video-item__title">{VideoList[4].title}</Box>
+                          </Box>
                         </a>
-                        <Box className="scf-video-item__info">
-                          <Box className="scf-video-item__title">{VideoList[4].title}</Box>
-                        </Box>
                       </Box>
                     </Box>
                   </Box>

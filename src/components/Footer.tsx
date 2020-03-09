@@ -31,7 +31,7 @@ const links : {
     contents: [
       {
         title: 'GitHub',
-        link: 'https://github.com/serverless/serverless'
+        link: 'https://github.com/serverless/serverless/blob/master/README_CN.md'
       }, {
         title: '博客',
         link: '/blog',
@@ -41,9 +41,7 @@ const links : {
         link: 'https://github.com/serverless/examples'
       }, {
         title: '书籍',
-        link: 'https://item.jd.com/12592747.html?cu=true&utm_source=kong&utm_medium=tuiguang&ut' +
-            'm_campaign=t_1001542270_1001895103_0_1912401775&utm_term=ddc33d2bb10d4eafa032b3d' +
-            '0ffea1f6d'
+        link: 'https://china.serverless.com/blog/2019-11-19-anycodes-book/'
       }
     ]
   }, {
@@ -65,8 +63,7 @@ const links : {
     contents: [
       {
         title: '文档',
-        link: '/doc',
-        isInternal: true
+        link: 'https://serverless.com/cn/framework/docs/',
       }, {
         title: '常见问题',
         link: '/doc/questions',

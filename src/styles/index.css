@@ -120,7 +120,7 @@ section {
   display: block;
 }
 
-body {
+body, button {
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -476,19 +476,11 @@ a:hover {
   visibility: hidden;
 }
 
-
-
-
-
-
-
-
-
 .scf-header-search {
   display: flex;
   position: absolute;
   right: 0;
-  top: 13px;
+  top: 0;
   z-index: 10
 }
 

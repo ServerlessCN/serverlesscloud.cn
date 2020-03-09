@@ -61,7 +61,6 @@ export function getAticleJson(articleList, replaceList) {
 }
 
 export function getSearch(content, articleList, replaceList) {
-  console.log(articleList)
   var searchContent = getContent(content, replaceList)
   var searchReg = searchContent.replace(/ /ig, '|')
   var articleContent = getAticleJson(articleList, replaceList)

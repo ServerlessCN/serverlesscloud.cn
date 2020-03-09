@@ -138,7 +138,6 @@ export default function () {
       let htmlBody = '';
       let n = 6;
       for (var i = 0; i < hotBlogList.length && n > 0; i++) {
-        // console.log(hotBlogList[i]);
         const id = Object.keys(hotBlogList[i])[0];
         let pv;
         if (Object.values(hotBlogList[i])[0] < 1000) {
@@ -174,7 +173,7 @@ export default function () {
         if (!id) continue;
         let pv = blogPvs[id];
         if (!pv) {
-          pv = Math.ceil(Math.random() * 1000);
+          pv = Math.ceil(Math.random() * 100);
         }
 
         if (!latestBlogChilds[i].children[0].children[1] || !latestBlogChilds[i].children[0].children[1].children[0]) continue;

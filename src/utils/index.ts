@@ -27,11 +27,3 @@ export function debounce(func, wait = 50) {
     }, wait)
   }
 }
-
-
-export function requestBlogs() {
-  console.log(222)
-  return 
-
-}
-

@@ -59,7 +59,6 @@ img {
   float: left;
 }
 .scf-article-item__statistics-item .scf-icon {
-  margin-right: 20px;
   padding-left: 23px; 
   font-style: normal;
   /*margin-top: -2px;*/
@@ -71,6 +70,7 @@ img {
 }
 .scf-icon-view {
   min-width: 18px;
+  width: auto;
   height: 18px;
   background-repeat: no-repeat;
   background-image: url(../../../assets/images/view.svg);

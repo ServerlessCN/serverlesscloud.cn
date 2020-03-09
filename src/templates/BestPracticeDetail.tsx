@@ -69,6 +69,31 @@ const BestPracticeDetail = ({
 } : Props) => {
   currentBlog.frontmatter.categories = currentBlog.frontmatter.categories || []
 
+  React.useEffect(() => {
+
+    function reportPv(id, fn) {
+      const data = {
+        article: id
+      }
+      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/report/article';
+      fetch(api, {
+        body: JSON.stringify(data),
+        method: 'POST'})
+          .then((response) => response.json() )
+          .then((response)=>{
+        
+            fn(null, response);
+          })
+          .catch((error)=>{
+            fn(error, null);
+      });
+    }
+    reportPv(currentBlog.id, function (error, response){
+      if (error || response.error) {
+        console.log(error || response.error);
+      }
+    })
+  })
   return (
     <Layout>
       <Helmet {...currentBlog.frontmatter} location={location}/>
