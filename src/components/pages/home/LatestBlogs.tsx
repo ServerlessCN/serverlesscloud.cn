@@ -173,7 +173,7 @@ export default function () {
         if (!id) continue;
         let pv = blogPvs[id];
         if (!pv) {
-          pv = Math.ceil(Math.random() * 1000);
+          pv = Math.ceil(Math.random() * 100);
         }
 
         if (!latestBlogChilds[i].children[0].children[1] || !latestBlogChilds[i].children[0].children[1].children[0]) continue;
