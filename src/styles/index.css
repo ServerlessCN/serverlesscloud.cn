@@ -120,7 +120,7 @@ section {
   display: block;
 }
 
-body {
+body, button {
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -475,14 +475,6 @@ a:hover {
 .gatsby-code-button[data-tooltip]:focus:after {
   visibility: hidden;
 }
-
-
-
-
-
-
-
-
 
 .scf-header-search {
   display: flex;

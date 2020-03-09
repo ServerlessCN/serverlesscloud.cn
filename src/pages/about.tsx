@@ -112,8 +112,7 @@ const AboutPage = () => {
               1200
             ]}
               className="scf-home-block__inner"
-              px={0}
-              pt={30}>
+              px={0}>
               <Box className="scf-grid ">
                 <Box className="scf-grid__item-12">
                   <Box className="scf-grid__box">
@@ -143,10 +142,10 @@ const AboutPage = () => {
                   <Box className="scf-grid__box">
                     <ul className="scf-list scf-list--link">
                       <li className="scf-list__item">
-                        <a href="" className="scf-list__text">GitHub: https://github.com/serverless/serverless</a>
+                        <a href="https://github.com/serverless/serverless" className="scf-list__text">GitHub: https://github.com/serverless/serverless</a>
                       </li>
                       <li className="scf-list__item">
-                        <a href="" className="scf-list__text">Twitter: https://twitter.com/goserverless</a>
+                        <a href="https://twitter.com/goserverless" className="scf-list__text">Twitter: https://twitter.com/goserverless</a>
                       </li>
                     </ul>
                   </Box>

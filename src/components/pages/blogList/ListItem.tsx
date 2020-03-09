@@ -28,6 +28,10 @@ const ColumnWithHeight = styled(Column)`
   height: 100%;
 `
 
+function getBlogLink(blog : Blog) {	
+  return ((blog.node.fields && blog.node.fields.slug) || `/blog/${blog.node.fileAbsolutePath.replace('.md', '').split('/').pop()}`)	
+}
+
 const BoxWithFlex = styled(Box)`
   flex: 1;
   ${width}
@@ -47,7 +51,6 @@ export default function ({data} : {
   return (
 
     <BlogDetailLink blog={data} data-id="jack">
-      {/*
       <a
         className="scf-article-item scf-article-item--block"
         href={getBlogLink(data)}>
@@ -58,7 +61,6 @@ export default function ({data} : {
           <div className="scf-article-item__statistics">
             <span className="scf-article-item__statistics-item">
               <i className="scf-icon scf-icon-view"></i>
-              3.3K ·
             </span>{frontmatter
               .authors
               .join(',')}
@@ -73,7 +75,8 @@ export default function ({data} : {
             {frontmatter.description}</div>
         </div>
       </a>
-      */}
+       {/*
+      
       <Box mt="40px" mb="40px" data-id="1jack">
         <Flex
           alignItems={['center', 'center', 'center', 'flex-start']}
@@ -119,9 +122,9 @@ export default function ({data} : {
                 </Row>
               </Box>
 
-              {/*<Button width="160px" p="0.4rem" fontSize="18px" theme={theme}>
+              <Button width="160px" p="0.4rem" fontSize="18px" theme={theme}>
                               阅读全文
-                            </Button>*/}
+                            </Button>*
             </ColumnWithHeight>
           </BoxWithFlex>
           <Background
@@ -133,6 +136,7 @@ export default function ({data} : {
             backgroundRepeat="no-repeat"/>
         </Flex>
       </Box>
+    */}
     </BlogDetailLink>
   )
 }
