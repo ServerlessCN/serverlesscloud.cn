@@ -72,7 +72,7 @@ export default function () {
                 {questions
                   .slice(0, 2)
                   .map(({question, answer}) => (
-                    <Box className="scf-grid__item-12">
+                    <Box className="scf-grid__item-12" key={question}>
                       <Box className="scf-grid__box">
                         <Box className="scf-home-about-item">
                           <Box className="scf-italic-title">

@@ -31,7 +31,7 @@ const links : {
     contents: [
       {
         title: 'GitHub',
-        link: 'https://github.com/serverless/serverless'
+        link: 'https://github.com/serverless/serverless/blob/master/README_CN.md'
       }, {
         title: '博客',
         link: '/blog',
@@ -41,9 +41,7 @@ const links : {
         link: 'https://github.com/serverless/examples'
       }, {
         title: '书籍',
-        link: 'https://item.jd.com/12592747.html?cu=true&utm_source=kong&utm_medium=tuiguang&ut' +
-            'm_campaign=t_1001542270_1001895103_0_1912401775&utm_term=ddc33d2bb10d4eafa032b3d' +
-            '0ffea1f6d'
+        link: 'https://china.serverless.com/blog/2019-11-19-anycodes-book/'
       }
     ]
   }, {
@@ -65,11 +63,10 @@ const links : {
     contents: [
       {
         title: '文档',
-        link: '/doc',
-        isInternal: true
+        link: 'https://serverless.com/cn/framework/docs/',
       }, {
         title: '常见问题',
-        link: '/doc/questions',
+        link: '/forum',
         isInternal: true
       }, {
         title: '报告 Bug',
@@ -118,7 +115,7 @@ export default function () {
             <div className="scf-footer__left">
               <div className="scf-display-flex">
                 {links.map(({category, contents}) => (
-                  <dl className="scf-footer__link">
+                  <dl className="scf-footer__link" key={category}>
                     <dt className="scf-footer__link-title">{category}</dt>
                     <dd className="scf-footer__link-list">
                       <ul>
@@ -127,7 +124,7 @@ export default function () {
                             ? InternalLink
                             : ExternalLink
                           return (
-                            <li>
+                            <li key={title}>
                               <Link key={title} to={link}>
                                 {title}
                               </Link>
@@ -143,7 +140,7 @@ export default function () {
             <div className="scf-footer__right">
               <div className="scf-display-flex scf-footer__commit">
                 {contacts.map(({title, qrcode, description}) => (
-                  <dl className="scf-footer__link ">
+                  <dl className="scf-footer__link " key={title}>
                     <dt className="scf-footer__link-title">{title}</dt>
                     <dd className="scf-footer__link-list">
                       <p className="scf-footer__commit-tips">{description}</p>

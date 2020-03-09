@@ -25,7 +25,7 @@ interface Props {
 function Blogs({blogs} : Props) {
 
   return (
-    <Box className="scf-box__body">
+    <Box className="scf-box__body" id="scf-box-home-best-practices">
       <Box className="scf-grid">
         {blogs
           .slice(0, 3)

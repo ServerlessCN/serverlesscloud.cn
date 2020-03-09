@@ -20,12 +20,14 @@
 .scf-icon-favout {
   width: 18px;
   height: 18px;
+  background-repeat: no-repeat;
   background-image: url(../../../assets/images/favout.svg);
 }
 
 .scf-icon-download {
   width: 18px;
   height: 18px;
+  background-repeat: no-repeat;
   background-image: url(../../../assets/images/download.svg);
 }
 

@@ -20,8 +20,6 @@ function createCategory(graphql, createPage) {
     }
 
     const categories = result.data.allMarkdownRemark.group
-    console.dir(categories)
-
     categories.forEach(({ categories, totalCount }) => {
       const pages = Math.ceil(totalCount / BLOG_PAGESIZE)
       new Array(pages).fill(0).forEach((o, page) => {

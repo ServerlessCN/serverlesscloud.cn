@@ -1,106 +1,52 @@
 import * as React from 'react'
-import {
-  Box,
-  Text,
-  List,
-  Image,
-  ListItemWithNoStyleType,
-} from '@src/components/atoms'
-import { GraphqlCategoryResult } from '@src/types'
-import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
-import { HeightProps, LineHeightProps, MinHeightProps } from 'styled-system'
-import theme from '@src/constants/theme'
-import CategoryLink from '@src/components/Link/CategoryLink'
-import categoryIconRed from '@src/assets/images/icon-category-red.png'
-import categoryIcon from '@src/assets/images/icon-category.png'
+import {Box, Container} from '@src/components/atoms'
+import {GraphqlCategoryResult} from '@src/types'
+import {StaticQuery, graphql} from 'gatsby'
+import { Link } from 'gatsby'
+import {categoryCnMap} from '@src/constants/categoryCnMap'
 
-const LinkWrapper = styled(ListItemWithNoStyleType)<
-  HeightProps & LineHeightProps & MinHeightProps
->`
-  img {
-    margin-right: 5px;
-  }
-  a {
-    min-height: 40px;
-    line-height: 40px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    world-break: break-all;
-    word-wrap: break-word;
+export const baseCategoryUrl = '/category'
+export function generateCategoryText(category : string) {
+  return categoryCnMap[category] || category
+}
 
-    &:hover {
-      color: ${theme.colors.serverlessRed};
-
-      .icon-category-red {
-        display: inline-block;
-      }
-
-      .icon-category {
-        display: none;
-      }
-    }
-  }
-
-  .icon-category-red {
-    display: none;
-  }
-`
-
-export default function(props) {
+export default function (props) {
   return (
     <StaticQuery
-      query={graphql`
-        query CategoryQuery {
-          categorys: allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "//blog//" } }
-          ) {
-            group(field: frontmatter___categories) {
-              totalCount
-              categories: fieldValue
-            }
-          }
-        }
-      `}
-      render={({ categorys }: { categorys: GraphqlCategoryResult }) => {
-        return (
-          <Box mt="40px" mb="20px" width={[0.9, 0.9, 0.9, 0.22]} {...props}>
-            <Text fontSize="18px" mb="30px" fontWeight="bold">
-              分类
-            </Text>
-
-            <List>
-              {categorys.group.map(category => (
-                <LinkWrapper key={category.categories}>
-                  <CategoryLink
-                    preAddon={
-                      <>
-                        <Image
-                          className="icon-category-red"
-                          width="24px"
-                          height="24px"
-                          alt="categoryIconRed"
-                          src={categoryIconRed}
-                        />
-                        <Image
-                          className="icon-category"
-                          width="24px"
-                          height="24px"
-                          alt="categoryIcon"
-                          src={categoryIcon}
-                        />
-                      </>
-                    }
-                    postAddon={`(${category.totalCount})`}
-                    key={category.categories}
-                    category={category.categories}
-                  />
-                </LinkWrapper>
+      query={graphql ` query CategoryQuery { categorys: allMarkdownRemark( filter: { fileAbsolutePath: { regex: "//blog//" } } ) { group(field: frontmatter___categories) { totalCount categories: fieldValue } } } `}
+      render={({categorys} : {
+      categorys: GraphqlCategoryResult
+    }) => {
+      // @ts-ignore
+     const TotalCount=categorys.group.reduce(function(a, b) {
+       if(typeof(a)==='number') return a + b.totalCount
+       return  a.totalCount + b.totalCount
+     })
+      return (
+        <Box className={"scf-blog-header "+ (props.isDetail?'scf-blog-detail-header':'')} {...props} >
+        <Container
+            width={[
+            0.95,
+            0.95,
+            0.95,
+            0.95,
+            0.76,
+            1200
+          ]}
+            px={0}>
+            <Box className="scf-segment">
+            <Link to={`blog`}><span className={"scf-segment__item "+ (['/blog/','/blog'].includes(props.location.pathname)?'is-active':'')}>所有（{TotalCount}）</span></Link>
+            {categorys
+              .group
+              .map(category => (
+                <Link to={`${baseCategoryUrl}/${category.categories}`} key={category.categories}>
+                <span key={category.categories} className={"scf-segment__item "+ ([`${baseCategoryUrl}/${category.categories}`,`${baseCategoryUrl}/${category.categories}/`].includes(props.location.pathname)?'is-active':'')}>{generateCategoryText(category.categories)}（{category.totalCount}）</span>
+                </Link>
               ))}
-            </List>
-          </Box>
-        )
-      }}
-    />
+            </Box>
+          </Container>
+        </Box>
+      )
+    }}/>
   )
 }

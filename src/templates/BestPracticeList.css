@@ -1,0 +1,29 @@
+.scf-practice-list {
+  margin-bottom: 0;
+}
+.scf-practice-list .scf-article-item {
+  display: flex;
+  margin-bottom: 60px;
+}
+.scf-practice-list .scf-home-block__inner {
+  width: 972px;
+}
+.scf-practice-list .scf-article-item__img {
+  flex: 0 0 350px;
+  margin-left: 60px;
+}
+.scf-practice-list .scf-article-item__img .scf-article-item__img-inner {
+  padding-top: 51.4%;
+}
+.scf-practice-list .scf-article-item__statistics {
+  margin-bottom: 15px;
+}
+.scf-practice-list .scf-article-item__title {
+  font-size: 22px;
+  margin-bottom: 15px;
+  line-height: 38px;
+}
+.scf-practice-list .scf-article-item__intro {
+  line-height: 24px;
+  font-size: 16px;
+}

@@ -1,0 +1,42 @@
+.scf-page-about {
+  padding-top: 90px;
+  padding-bottom: 110px;
+}
+.scf-page-about .scf-home-block:last-child {
+  margin-bottom: 0;
+}
+.scf-page-about .scf-grid {
+  margin-bottom: 39px;
+}
+.scf-page-about .scf-grid__item-12:first-child {
+  width: 45%;
+}
+.scf-page-about .acf-page-about__text {
+  font-size: 17px;
+}
+.scf-page-about .scf-grid__item-12:last-child {
+  width: 55%;
+}
+.scf-list--link .scf-list__item {
+  cursor: pointer;
+}
+.scf-list__item {
+  font-size: 17px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.scf-list--link .scf-list__text.is-active, .scf-list--link .scf-list__text:hover {
+  color: #fe5751;
+}
+.scf-page-about-link__title {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+.scf-page-about-link__commit-tips {
+  font-size: 14px;
+  color: #8c8c8c;
+  margin-bottom: 15px;
+}
+.scf-page-about-link__list img{
+  width:120px;
+}

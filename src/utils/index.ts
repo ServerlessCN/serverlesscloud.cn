@@ -1,3 +1,5 @@
+import { graphql } from 'gatsby'
+
 /**
  * 2019-10-14T00:00:00.000Z -> AUG 07 2019
  * @param {
@@ -10,7 +12,7 @@ export function formateDate(dateString) {
     const month = date.getMonth() + 1
     const day = date.getDate()
 
-    return `${year}年${month}月${day}日`
+    return `${year}-${month}-${day}`
   } catch (err) {
     return dateString
   }
