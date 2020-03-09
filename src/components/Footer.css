@@ -158,11 +158,11 @@
 }
 .scf-icon-search-white {
   width: 24px;
-    height: 24px;
-  background: url(../assets/images/header-search.svg) no-repeat;
+  height: 24px !important;
+  background: url(../assets/images/header-search.svg) no-repeat 0px 4px;
 }
 .scf-icon-clear {
   width: 24px;
-    height: 24px;
+  height: 24px;
   background: url(../assets/images/clear.svg) no-repeat;
 }

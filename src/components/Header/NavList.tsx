@@ -96,7 +96,7 @@ function Blogs(props) {
                   return searchKeys.map((itemSearchKey, indexSearchKey) => {
                     if (item.node.id == itemSearchKey) {
                       return (
-                        <li className="scf-header-search-result-list__item">
+                        <li className="scf-header-search-result-list__item" key={indexSearchKey}>
                           <a target="_blank" href={item.node.fields.slug}>
                             <p className="scf-header-search-result-list__item-title">{item.node.frontmatter.title}</p>
                             <p
@@ -119,7 +119,6 @@ function Blogs(props) {
 
 
 export default class NavList extends React.Component<Props, State> {
-
   constructor(props) {
     super(props)
     this.state = {
@@ -179,7 +178,7 @@ export default class NavList extends React.Component<Props, State> {
                 display={['block', 'block', 'block', 'inline-block']}
               >
                 <Link to={link}>
-                  <Text color={theme.colors.gray_text} style={{ fontSize: 15 }}>{title}</Text>
+                  <Text color={window.location.pathname.includes(link)?'#fff':theme.colors.gray_text} style={{ fontSize: 15 }}>{title}</Text>
                 </Link>
               </NavListItem>
             )
