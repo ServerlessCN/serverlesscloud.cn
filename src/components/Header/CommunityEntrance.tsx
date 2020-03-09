@@ -99,10 +99,10 @@ export default function() {
   return (
     <Background width={1} height="30px" background={theme.colors.black}>
       <Container
-        width={1}
+        width={[1200, 1200, 1200, 1200, 0.76, 1200]}
         height="100%"
         px={0}
-        maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}
+        // maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}
       >
         <Row height="100%" alignItems="center" justifyContent="flex-end">
           <Row>

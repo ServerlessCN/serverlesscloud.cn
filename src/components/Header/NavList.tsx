@@ -159,7 +159,6 @@ export default class NavList extends React.Component<Props, State> {
     
     const { searchVisible, searchContnet } = this.state
     const { isActive, isDesktopView } = this.props
-    // (window as any).location.pathname.includes(link)?'#fff':theme.colors.gray_text;
     const isMobileNavListDisplay = () => (isActive ? 'block' : 'none')
 
     const navListBoxWidth = isDesktopView ? 0.6 : 1

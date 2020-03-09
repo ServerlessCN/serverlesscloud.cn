@@ -18,7 +18,7 @@ export default function({ isActive, onToggleActive, isDesktopView }: Props) {
       width="26px"
       mr="10px"
       display={
-        isDesktopView ? 'none' : ['flex', 'flex', 'flex', 'flex', 'none']
+         ['flex', 'flex', 'flex', 'none', 'none','none']
       }
       onClick={() => {
         onToggleActive && onToggleActive(!isActive)

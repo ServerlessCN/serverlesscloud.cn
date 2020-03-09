@@ -19,7 +19,7 @@ export default function({
 
   React.useEffect(() => {
     const onResize = debounce(() => {
-      if (window.innerWidth >= 992) {
+      if (window.innerWidth >= 1001) {
         setisNavButtonActive(false)
       } else {
         // do nothing
@@ -40,7 +40,7 @@ export default function({
 
   return (
     <Container
-      width={[0.95, 0.95, 0.95, 0.95, 0.76, 1200]}
+      width={[1200, 1200, 1200, 1200, 0.76, 1200]}
       px={0}
       // maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]
     >
