@@ -91,14 +91,7 @@ export default function () {
             ? theme.headerHeights.desktop
             : theme.headerHeights.mobile}>
             <Container
-              width={[
-              0.95,
-              0.95,
-              0.95,
-              0.95,
-              0.76,
-              1200
-            ]}
+              width={[1200, 1200, 1200, 1200, 0.76, 1200]}
               px={0}
               pt={30}>
               <Box className="scf-grid">
