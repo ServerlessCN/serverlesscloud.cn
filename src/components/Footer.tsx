@@ -66,7 +66,7 @@ const links : {
         link: 'https://serverless.com/cn/framework/docs/',
       }, {
         title: '常见问题',
-        link: '/doc/questions',
+        link: '/forum',
         isInternal: true
       }, {
         title: '报告 Bug',

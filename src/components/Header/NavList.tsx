@@ -152,8 +152,14 @@ export default class NavList extends React.Component<Props, State> {
   }
 
   render() {
+    if (typeof window !== 'undefined') {
+
+     
+
+    
     const { searchVisible, searchContnet } = this.state
     const { isActive, isDesktopView } = this.props
+    // (window as any).location.pathname.includes(link)?'#fff':theme.colors.gray_text;
     const isMobileNavListDisplay = () => (isActive ? 'block' : 'none')
 
     const navListBoxWidth = isDesktopView ? 0.6 : 1
@@ -175,6 +181,7 @@ export default class NavList extends React.Component<Props, State> {
 
         <List p={0} mr={0} mb={0} style={{position:'relative'}}>
           {navList.map(({ title, link, isInternal }, index) => {
+            const color= (window as any).location.pathname.includes(link)?'#fff':theme.colors.gray_text;
             const Link = isInternal
               ? InternalLink
               : ExternalLink
@@ -182,14 +189,14 @@ export default class NavList extends React.Component<Props, State> {
               <NavListItem
                 onClick={() => {
                   if (link === '/') {
-                    ;(window as any).MtaH5.clickStat('homelink')
+                    (window as any).MtaH5.clickStat('homelink')
                   }
                 }}
                 key={index}
                 display={['block', 'block', 'block', 'inline-block']}
               >
                 <Link to={link}>
-                  <Text color={window.location.pathname.includes(link)?'#fff':theme.colors.gray_text} style={{ fontSize: 15 }}>{title}</Text>
+                  <Text color={color} style={{ fontSize: 15 }}>{title}</Text>
                 </Link>
               </NavListItem>
             )
@@ -222,5 +229,11 @@ export default class NavList extends React.Component<Props, State> {
         </List>
       </BoxWithTextAlign>
     )
+
+  } else { // if window does not exist
+
+    return null;
+  }
+
   }
 }

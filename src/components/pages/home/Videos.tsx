@@ -31,7 +31,7 @@ const VideoList : Video[] = [
     link: "https://cloud.tencent.com/edu/learning/live-1910"
   }, {
     img: video4,
-    title: "Serverless Python 开发实战之极速制作情人节表白页",
+    title: "Serverless 架构揭秘与静态网站部署实战",
     link: "https://cloud.tencent.com/edu/learning/live-1879"
   }, {
     img: video5,
