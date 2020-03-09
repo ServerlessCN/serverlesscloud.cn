@@ -109,7 +109,7 @@ function Blogs(props) {
                       console.log(item)
                       return (
                         <li className="scf-header-search-result-list__item">
-                          <a target="_blank" href={item.node.fields.slug}>
+                          <a target="_blank" href={item.node.fields.slug} className="scf-header-search-result-list">
                             <p className="scf-header-search-result-list__item-title">{item.node.frontmatter.title}</p>
                             <p
                               className="scf-header-search-result-list__item-info">{item.node.frontmatter.description}</p>
