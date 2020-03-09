@@ -541,6 +541,10 @@ a:hover {
   border: 2px solid #f7f7f7
 }
 
+.scf-header-search-result-list {
+  color: #8c8c8c;
+}
+
 .scf-header-search-result-list__item {
   border: 1px solid #f7f7f7;
   color: #8c8c8c;
@@ -554,7 +558,7 @@ a:hover {
   font-weight: 700;
   margin-bottom: 16px;
   text-align: left;
-  
+
 }
 
 .scf-header-search-result-list__item-info {

@@ -79,25 +79,36 @@ interface State {
 
 function Blogs(props) {
 
-  const query = graphql`query { blogs: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 999999 filter: { fileAbsolutePath: { regex: "//blog//" } frontmatter: { categories: { nin: "best-practice" } } } ) { edges { node { id frontmatter { title thumbnail thumbnail
+  // const query = graphql`query { blogs: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 999999 filter: { fileAbsolutePath: { regex: "//best-practice// | //blog//" } frontmatter: { categories: { nin: "best-practice" } } } ) { edges { node { id frontmatter { title thumbnail thumbnail
+  // authors description date } fileAbsolutePath fields { slug } } } } } `
+  const query = graphql`query { blogs: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 999999 filter: { fileAbsolutePath: { regex: "//blog//" } } ) { edges { node { id frontmatter { title thumbnail thumbnail
+  authors description date } fileAbsolutePath fields { slug } } } }, bests: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 999999 filter: { fileAbsolutePath: { regex: "//best-practice//" } } ) { edges { node { id frontmatter { title thumbnail thumbnail
   authors description date } fileAbsolutePath fields { slug } } } } } `
   return (
     <StaticQuery
       query={query}
-      render={({ blogs }: {
-        blogs: any
+      render={({ blogs, bests }: {
+        blogs: any,
+        bests: any
       }) => {
-        let searchKeys = getSearch(props.value || '', blogs.edges, [])
+        const contentList = new Array()
+        for(let i =0;i<bests.edges.length;i++){
+          contentList.push(bests.edges[i])
+        }
+        for(let i =0;i<blogs.edges.length;i++){
+          contentList.push(blogs.edges[i])
+        }
+        let searchKeys = getSearch(props.value || '', contentList, ['Serverless Framework'])
         if (searchKeys.length > 0) {
           return (
             <div className="scf-header-search__panel">
               <ul className="scf-header-search-result-list">
-                {blogs.edges.map((item, index) => {
+                {contentList.map((item, index) => {
                   return searchKeys.map((itemSearchKey, indexSearchKey) => {
                     if (item.node.id == itemSearchKey) {
                       return (
-                        <li className="scf-header-search-result-list__item" key={indexSearchKey}>
-                          <a target="_blank" href={item.node.fields.slug}>
+                        <li className="scf-header-search-result-list__item">
+                          <a target="_blank" href={item.node.fields.slug} className="scf-header-search-result-list">
                             <p className="scf-header-search-result-list__item-title">{item.node.frontmatter.title}</p>
                             <p
                               className="scf-header-search-result-list__item-info">{item.node.frontmatter.description}</p>

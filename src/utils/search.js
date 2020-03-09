@@ -71,5 +71,6 @@ export function getSearch(content, articleList, replaceList) {
       resultList.push(key)
     }
   }
+  console.log(resultList)
   return resultList
 }
