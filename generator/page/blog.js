@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs')
 const BLOG_PAGESIZE = 10
 
 /**
@@ -96,6 +97,8 @@ function createBlogTask(graphql, createPage) {
               paragraphs
             }
             fileAbsolutePath
+            timeToRead
+            fields { slug }
           }
         }
       }
@@ -106,6 +109,10 @@ function createBlogTask(graphql, createPage) {
     }
 
     const blogs = result.data.allMarkdownRemark.edges
+    if (blogs) {
+      const buff = JSON.stringify(blogs);
+      fs.writeFileSync('./src/constants/blog.json', buff);
+    }
     createBlog(blogs, createPage)
     createBlogList(blogs, createPage)
   })
