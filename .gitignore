@@ -70,6 +70,5 @@ yarn-error.log
 
 
 .env
-
-./src/constants/bestPractice.json
-./src/constants/blog.json
+src/constants/bestPractice.json
+src/constants/blog.json
