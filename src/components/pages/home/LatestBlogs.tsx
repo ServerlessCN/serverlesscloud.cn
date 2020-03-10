@@ -123,7 +123,7 @@ export default function () {
 
     function buildHotBlogBody(hotBlogList, blogHash) {
       const temp = '<div class="Box-jLJQJw evQvdc scf-article-item scf-article-item--block"> \
-        <a href="{LINK}"> \
+        <a href="{LINK}" data-id="{ID}"> \
           <div class="Box-jLJQJw evQvdc scf-article-item__img"> \
             <div class="Box-jLJQJw evQvdc scf-article-item__img-inner"><img src="{IMG}" alt="" /></div> \
           </div> \
@@ -137,6 +137,7 @@ export default function () {
 
       let htmlBody = '';
       let n = 6;
+
       for (var i = 0; i < hotBlogList.length && n > 0; i++) {
         const id = Object.keys(hotBlogList[i])[0];
         let pv;
@@ -153,6 +154,7 @@ export default function () {
         const buildBody = temp.replace('{LINK}', blogItem.fields.slug)
           .replace('{IMG}', blogItem.frontmatter.thumbnail)
           .replace('{PV}', pv)
+          .replace('{ID}', id)
           .replace('{AUTHOR}', blogItem.frontmatter.authors.join(','))
           .replace('{READTIME}', blogItem.timeToRead)
           .replace('{DATE}', blogItem.frontmatter.date.substr(0, 10))
