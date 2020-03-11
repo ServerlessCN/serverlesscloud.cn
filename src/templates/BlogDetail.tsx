@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {graphql} from 'gatsby'
+import crypto from 'crypto'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
 import {Box, InlineBlock} from '@src/components/atoms'
 import {Blog, GraphqlBlogResult} from '@src/types'
@@ -83,7 +84,9 @@ const BlogDetail = ({data: {
             fn(error, null);
       });
     }
-    reportPv(currentBlog.id, function (error, response){
+    var md5 = crypto.createHash('md5');
+    var id = md5.update(currentBlog.fields.slug).digest('hex');
+    reportPv(id, function (error, response){
       if (error || response.error) {
         console.log(error || response.error);
       }

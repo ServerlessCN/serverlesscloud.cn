@@ -22,7 +22,7 @@ export default function({
 } & WidthProps) {
   React.useEffect(() => {
     function getBlogPv(fn) {
-      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?env=test';
+      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?src='+document.location.hostname;
       fetch(api)
           .then((response) => response.json() )
           .then((response)=>{
