@@ -16,7 +16,7 @@ import componentConfig from '@src/constants/componentConfig'
 export default function () {
   React.useEffect(() => {
     function getComponentData(fn) {
-      const api = 'https://serverless-components-info-1300862921.cos.ap-guangzhou.myqcloud.com/components-with-stats.json';
+      const api = 'https://serverless-components-info-1300862921.cos.ap-guangzhou.myqcloud.com/components-with-stats.json?src='+document.location.hostname;
       fetch(api)
           .then((response) => response.json() )
           .then((response)=>{

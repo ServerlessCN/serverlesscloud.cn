@@ -1,4 +1,5 @@
 import * as React from 'react'
+import crypto from 'crypto'
 import {Box, Row, Background, Container, Center} from '@src/components/atoms'
 import {StaticQuery, graphql, Link} from 'gatsby'
 import {Blog, GraphqlBlogResult} from '@src/types'
@@ -22,9 +23,11 @@ interface Props {
 function BlogCard({blog} : {
   blog: Blog
 }) {
+  var md5 = crypto.createHash('md5');
+  var id = md5.update(blog.node.fields.slug).digest('hex');
   return (
     <Box className="scf-article-item scf-article-item--block">
-      <Link to={blog.node.fields.slug} data-id={blog.node.id}>
+      <Link to={blog.node.fields.slug} data-id={id}>
         <Box className="scf-article-item__img">
           <Box className="scf-article-item__img-inner">
             <img src={blog.node.frontmatter.thumbnail} alt=""/>
@@ -103,12 +106,14 @@ export default function () {
     const blogHash = {};
     for (var i = 0; i < BlogLists.length; ++i) {
       const item = BlogLists[i].node;
-      blogHash[item.id] = item;
+      var md5 = crypto.createHash('md5');
+      var id = md5.update(item.fields.slug).digest('hex');
+      blogHash[id] = item;
     }
 
 
     function getBlogPv(fn) {
-      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?env=test';
+      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?src=' + document.location.hostname;
       fetch(api)
           .then((response) => response.json() )
           .then((response)=>{
