@@ -181,7 +181,7 @@ const AboutPage = () => {
                 <Box className="scf-grid__item-12">
                   <Box className="scf-grid__box">
                     <Box className="scf-grid ">
-                      <Box className="scf-grid__item-12">
+                      <Box className="scf-grid__item-12 scf-grid-group scf-grid-group-qq">
                         <Box className="scf-grid__box">
                           <dl className="scf-page-about-link ">
                             <dt className="scf-page-about-link__title">交流 QQ 群</dt>
@@ -190,7 +190,7 @@ const AboutPage = () => {
                           </dl>
                         </Box>
                       </Box>
-                      <Box className="scf-grid__item-12">
+                      <Box className="scf-grid__item-12 scf-grid-group scf-grid-group-wechat">
                         <Box className="scf-grid__box">
                           <dl className="scf-page-about-link ">
                             <dt className="scf-page-about-link__title">微信社区群</dt>

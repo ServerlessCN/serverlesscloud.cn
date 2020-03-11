@@ -571,3 +571,16 @@ a:hover {
 .kJoyfl{
   position: relative;
 }
+
+#scf-box-mobile-titlebar {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  #scf-box-mobile-titlebar {
+    display: block;
+    padding: 0;
+    text-align: left;
+    width: 100px;
+    margin-bottom: 30px;
+  }
+}
