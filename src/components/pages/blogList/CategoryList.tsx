@@ -25,6 +25,7 @@ export default function (props) {
       return (
         <Box className={"scf-blog-header "+ (props.isDetail?'scf-blog-detail-header':'')} {...props} >
         <Container
+        className="scf-box-blog-tabs"
             width={[
             0.95,
             0.95,

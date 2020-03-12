@@ -116,3 +116,9 @@
   line-height: 24px;
   color: #8c8c8c;
 }
+@media screen and (max-width: 992px) {
+
+  #scf-blog-detail-header {
+    display: none;
+  }
+}

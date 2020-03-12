@@ -58,9 +58,11 @@
   /* width: 1200px; */
   margin: 0 auto;
 }
-.scf-blog-list .scf-home-block__inner {
+
+/*.scf-blog-list .scf-home-block__inner {
   width: 972px;
-}
+}*/
+
 .scf-layout-pattern:before {
   content: "";
   display: block;
@@ -69,6 +71,7 @@
   bottom: 0;
   width: 316px;
   height: 226px;
+  z-index: -1;
   background-image: url(../assets/images/decoration-left.svg);
 }
 .scf-layout-pattern:after {
@@ -79,6 +82,8 @@
   bottom: 0;
   width: 399px;
   height: 315px;
+    z-index: -1;
+
   background-image: url(../assets/images/decoration-right.svg);
 }
 .scf-article-list-opeate {
@@ -224,4 +229,90 @@ img {
 @media (max-width: 1599px) 
 .scf-header__inner,scf-home-block__inner {
   width: 76%;
+}
+@media screen and (max-width: 992px) {
+  .scf-page-blog {
+    padding-top: 20px;
+  }
+  .scf-blog-list .scf-article-item__intro {
+    display: none;
+  }
+  .scf-article-item--block .scf-article-item__img {
+    width: 40%;
+    margin-left: 0px;
+    float: right;
+  }
+  .scf-blog-list .scf-article-item__title {
+    font-size: 16px;
+    -webkit-line-clamp: 3;
+    margin-bottom: 0;
+    /*margin-bottom: 10px;*/
+    /*line-height: 38px;*/
+  }
+  .scf-page-blog .scf-home-block__inner .scf-article-item--block {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  .scf-page-blog .scf-articel-item-readtime {
+    display: none;
+  }
+  .scf-blog-list .scf-article-item__statistics {
+    /*margin-bottom: 15px;*/
+    position: absolute;
+    bottom: 0px;
+  }
+  .scf-blog-list .scf-article-item {
+    margin-bottom: 20px;
+  }
+  .scf-article-item--block .scf-article-item__content {
+    display: block;
+    float: left;
+    width: 60%;
+  }
+  .scf-blog-list .scf-article-item__statistics {
+    margin-bottom: 0px;
+  }
+  .scf-blog-header, .scf-segment{
+    border:none;
+  }
+  .scf-blog-header {
+    /*display: none;*/
+    background-color: #fff;
+    position: absolute;
+    margin-top: 160px;
+    padding: 0px;
+    z-index: 999;
+  }
+  .scf-blog-header .scf-box-blog-tabs {
+    width: 76%;
+  }
+  .scf-content { 
+    margin-top: 90px;
+  }
+  .scf-segment__item.is-active,
+  .scf-segment__item:hover {
+    color: #FD5750;
+  }
+  .scf-segment__item {
+    color: #666666;
+    /*display: inline-block;*/
+    font-size: 14px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .scf-box  {
+    margin-top: 60px;
+  }
+  .scf-blog-header .scf-segment {
+    margin:0;
+    padding:0;
+    line-height: 32px;
+    height: 32px;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
 }

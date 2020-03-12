@@ -48,7 +48,9 @@
   .scf-page-about .scf-grid__item-12:last-child {
     width: 100%;
   }
-
+  .jCpxGq {
+    position: fixed;
+  }
   .scf-page-about .scf-grid__item-12:first-child {
     width: 100%;
     margin-top: 20px;
