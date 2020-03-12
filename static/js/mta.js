@@ -1,5 +1,5 @@
 // 判断URL来源
-if (window.location.href.indexOf("china.serverless.com") > -1 || window.location.href.indexOf("serverlesscloud.cn") > -1 ) {
+if (window.location.hostname.indexOf("china.serverless.com") > -1 || window.location.hostname.indexOf("serverlesscloud.cn") > -1 ) {
   var _mtac = {"performanceMonitor":1,"senseQuery":1,"ignoreParams":"test"};
   (function() {
     var mta = document.createElement("script");
