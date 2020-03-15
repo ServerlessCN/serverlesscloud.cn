@@ -64,7 +64,6 @@ const BlogList = ({
             style={{
             padding: "0 10px",
             marginTop: "100px",
-            marginBottom: "-50px"
           }}>
             <Box className="scf-box__header-title">
               <h3>最佳实践</h3>

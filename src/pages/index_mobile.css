@@ -1,4 +1,12 @@
 @media screen and (max-width: 992px) {
+  .scf-box {
+    margin-top: 0px !important;
+  }
+
+  .scf-content {
+    margin-top: 0px !important;
+  }
+
   .scf-footer__inner {
     width: 100%;
     display: block;
@@ -166,6 +174,7 @@
 
   .scf-logo-wrap {
     padding-left: 10px;
+    margin-left: 0px !important;
   }
 
   .go-back-serverless_com {
@@ -252,9 +261,9 @@
     top: 70%;
   }
 
-  .scf-article-item:last-child  .scf-article-item__statistics{
+  .scf-article-item:last-child .scf-article-item__statistics {
     top: 80%;
-}
+  }
 
   .scf-home-blog .scf-article-item {
     padding-bottom: 0px;
@@ -275,10 +284,15 @@
   #scf-best-practice .scf-article-item {
     position: relative;
     padding-bottom: 20px;
+    display: flex;
     border-bottom: 1px solid #eaeaea;
     padding: 0 20px;
     padding-bottom: 0px;
     margin-bottom: 20px;
+  }
+
+  #scf-best-practice .scf-content {
+    margin-top: 0px;
   }
 
   #scf-best-practice a {
