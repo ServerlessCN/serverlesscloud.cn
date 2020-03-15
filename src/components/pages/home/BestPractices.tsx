@@ -51,10 +51,10 @@ export default function () {
         <Box className="scf-best-practices">
         <Container
           width={[
-          0.95,
-          0.95,
-          0.95,
-          0.95,
+          1,
+          1,
+          1,
+          1,
           0.76,
           1200
         ]}

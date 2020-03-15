@@ -5,6 +5,8 @@ import Pagination from './Pagination'
 import { Blog } from '@src/types'
 import { navigate } from 'gatsby'
 import { WidthProps } from 'styled-system'
+import { debounce } from '@src/utils'
+import { BlogCard } from '@src/components/pages/home/RecommandRead'
 
 export default function({
   blogs,
@@ -12,21 +14,23 @@ export default function({
   limit,
   totalCount,
   generateDataUrl,
+  isMobileView,
   ...rest
 }: {
   blogs: Blog[]
   offset: number
   limit: number
   totalCount: number
+  isMobileView: boolean
   generateDataUrl: (pageNum: number) => string
 } & WidthProps) {
+
   React.useEffect(() => {
     function getBlogPv(fn) {
       const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?env=test';
       fetch(api)
           .then((response) => response.json() )
           .then((response)=>{
-        
             fn(null, response);
           })
           .catch((error)=>{
@@ -61,7 +65,7 @@ export default function({
     <Box>
       <Box id="scf-best-practice">
         {blogs.map(blog => (
-          <BlogListItem key={blog.node.id} data={blog}  />
+          isMobileView? <BlogCard key={blog.node.id} blog={blog}/>: <BlogListItem key={blog.node.id} data={blog}  />
         ))}
       </Box>
 

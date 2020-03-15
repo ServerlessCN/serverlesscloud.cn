@@ -3,7 +3,7 @@ import * as React from 'react'
 import { Box, Image } from '@src/components/atoms'
 
 import closeIcon from '@src/assets/images/close.png'
-import mobileMenuIcon from '@src/assets/images/menu.png'
+import mobileMenuIcon from '@src/assets/images/navbar_menu.svg'
 
 interface Props {
   isActive: boolean

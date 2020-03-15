@@ -7,14 +7,6 @@ import BlogLists from '@src/constants/blog.json'
 
 type LatestBlog = Blog
 
-let BlogSort = "DESC"
-
-function changeSort() {
-  BlogSort = "DESC"
-}
-function changeSortAgain() {
-  BlogSort = "!DESC"
-}
 interface Props {
   blogs : LatestBlog[]
 }
@@ -41,7 +33,7 @@ function BlogCard({blog} : {
               .frontmatter
               .date
               .slice(2, 10)}
-            · 阅读大约需要{blog.node.timeToRead}分钟</Box>
+            <span className='scf-article-item__statistics__timeToRead'>· 阅读大约需要{blog.node.timeToRead}分钟</span></Box>
           <Box className="scf-article-item__title">
             <h4>{blog.node.frontmatter.title}</h4>
           </Box>
@@ -128,7 +120,7 @@ export default function () {
             <div class="Box-jLJQJw evQvdc scf-article-item__img-inner"><img src="{IMG}" alt="" /></div> \
           </div> \
           <div class="Box-jLJQJw evQvdc scf-article-item__content"> \
-            <div class="Box-jLJQJw evQvdc scf-article-item__statistics"><span class="scf-blog-item-pv-icon"><i class="scf-icon scf-icon-view"></i></span>{PV} · {AUTHOR} · {DATE} · 阅读大约需要{READTIME}分钟</div>\
+            <div class="Box-jLJQJw evQvdc scf-article-item__statistics"><span class="scf-blog-item-pv-icon"><i class="scf-icon scf-icon-view"></i></span>{PV} · {AUTHOR} · {DATE}<span class="scf-article-item__statistics__timeToRead"> · 阅读大约需要{READTIME}分钟</span></div>\
             <div class="Box-jLJQJw evQvdc scf-article-item__title"><h4>{TITLE}</h4></div>\
             <div class="Box-jLJQJw evQvdc scf-article-item__intro">{DESC}</div>\
           </div>\

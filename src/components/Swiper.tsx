@@ -31,7 +31,7 @@ const Wrapper = styled(Box)`
 .swiper-pagination .swiper-pagination-bullet {
   display: inline-block !important;
   width: 30px;
-  height: 25px;
+  height: 24px;
   margin: 0px !important;
   margin-right: 10px !important;
   background-color: hsla(0,0%,50.2%,.5);

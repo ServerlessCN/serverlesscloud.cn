@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StaticQuery, useStaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import { Box, List, Text, ListItemWithNoStyleType } from '@src/components/atoms'
 import styled from 'styled-components'
 import { display, color, textAlign, TextAlignProps } from 'styled-system'
@@ -7,7 +7,6 @@ import { Link as InternalLink } from 'gatsby'
 import ExternalLink from '../Link/ExternalLink'
 import theme from '@src/constants/theme'
 import { getSearch } from '@src/utils/search'
-import { Position } from '../atoms/Position/index';
 
 const NavListItem = styled(ListItemWithNoStyleType)`
   ${display}
@@ -153,13 +152,8 @@ export default class NavList extends React.Component<Props, State> {
 
   render() {
     if (typeof window !== 'undefined') {
-
-     
-
-    
     const { searchVisible, searchContnet } = this.state
     const { isActive, isDesktopView } = this.props
-    // (window as any).location.pathname.includes(link)?'#fff':theme.colors.gray_text;
     const isMobileNavListDisplay = () => (isActive ? 'block' : 'none')
 
     const navListBoxWidth = isDesktopView ? 0.6 : 1
@@ -187,6 +181,7 @@ export default class NavList extends React.Component<Props, State> {
               : ExternalLink
             return (
               <NavListItem
+                className="scf-header-nav_listItem"
                 onClick={() => {
                   if (link === '/') {
                     (window as any).MtaH5.clickStat('homelink')
@@ -196,7 +191,7 @@ export default class NavList extends React.Component<Props, State> {
                 display={['block', 'block', 'block', 'inline-block']}
               >
                 <Link to={link}>
-                  <Text color={color} style={{ fontSize: 15 }}>{title}</Text>
+                  <Box className="scf-header-nav_item" style={{ fontSize: 15,color:color }}>{title}</Box>
                 </Link>
               </NavListItem>
             )

@@ -40,16 +40,15 @@ export default function({
 
   return (
     <Container
-      width={[0.95, 0.95, 0.95, 0.95, 0.76, 1200]}
+      width={[1, 1, 1, 1, 0.76, 1200]}
       px={0}
       // maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]
     >
     <Flex alignItems="center" flexWrap="wrap" justifyContent="space-between" height={15}>
-      <ExternalLink to="https://serverless.com/cn" ><p style={{position:'absolute',display:"inline-block",fontSize:12,color:theme.colors.gray_text,fontFamily: "Serverless"}}>← serverless.com</p></ExternalLink>
+      <ExternalLink to="https://serverless.com/cn" ><p className="go-back-serverless_com" style={{position:'absolute',display:"inline-block",fontSize:12,color:theme.colors.gray_text,fontFamily: "Serverless"}}>← serverless.com</p></ExternalLink>
     </Flex>
       <Flex alignItems="center" flexWrap="wrap" justifyContent="space-between">
         <Logo logoHeight={height} />
-
         <NavButton
           isDesktopView={isDesktopView}
           isActive={isNavButtonActive}

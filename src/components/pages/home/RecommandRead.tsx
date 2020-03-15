@@ -10,7 +10,7 @@ interface Props {
   blogs : BestPractice[]
 }
 
-function BlogCard({blog} : {
+export function BlogCard({blog} : {
   blog: Blog
 }) {
   return (
@@ -26,13 +26,14 @@ function BlogCard({blog} : {
             <span className="scf-article-item__statistics-item">
               <i className="scf-icon scf-icon-view"></i>
             </span>
-            {blog.node.frontmatter.authors} 
+            {blog.node.frontmatter.authors}
             · {blog
               .node
               .frontmatter
               .date
               .slice(2, 10)}
-            · 阅读大约需要{blog.node.timeToRead}分钟</Box>
+            <span className='scf-article-item__statistics__timeToRead'>· 阅读大约需要{blog.node.timeToRead}分钟</span>
+          </Box>
           <Box className="scf-article-item__title">
             <h4>{blog.node.frontmatter.title}</h4>
           </Box>
@@ -62,37 +63,39 @@ function Blogs() {
   )
 }
 
-export default function () {
+export default function (props) {
   React.useEffect(() => {
     function getBlogPv(fn) {
-      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?env=test';
-      fetch(api)
-          .then((response) => response.json() )
-          .then((response)=>{
-        
-            fn(null, response);
-          })
-          .catch((error)=>{
-            fn(error, null);
-          });
+      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?e' +
+          'nv=test';
+      fetch(api).then((response) => response.json()).then((response) => {
+
+        fn(null, response);
+      }).catch((error) => {
+        fn(error, null);
+      });
     }
 
-    getBlogPv(function(error, response) {
+    getBlogPv(function (error, response) {
       if (error || response.error) {
         console.log(error || response.error);
         return;
       }
       const bestList = document.getElementById('scf-box-best-recommand-read');
-      if (!bestList) return;
+      if (!bestList) 
+        return;
       const bestItems = bestList.getElementsByTagName('A');
 
       for (var i = 0; i < bestItems.length; ++i) {
         const id = bestItems[i].getAttribute('data-id');
-        if (!id) continue;
+        if (!id) 
+          continue;
         const statistics = bestItems[i].getElementsByClassName('scf-article-item__statistics-item');
-        if (!statistics) continue;
+        if (!statistics) 
+          continue;
         const icon = statistics[0].getElementsByClassName('scf-icon');
-        if (!icon) continue;
+        if (!icon) 
+          continue;
         let pv = response.message[id] || Math.ceil(Math.random() * 100);
         if (pv >= 1000) {
           pv = (pv / 1000).toFixed(1) + 'K';
@@ -101,17 +104,18 @@ export default function () {
       }
     });
   })
+
   return (
     <Box className="scf-grid__item-16">
       <Box className="scf-grid__box">
         <Box className="scf-box scf-home-blog">
           <Box className="scf-box__header">
             <Box className="scf-box__header-title">
-              <h3>推荐阅读</h3>
+              <h3>{props.title?props.title:"推荐阅读"}</h3>
             </Box>
             <Box className="scf-box__header-more">
               <Link to="/best-practice">
-               更多推荐 &gt;
+                更多推荐 &gt;
               </Link>
             </Box>
           </Box>

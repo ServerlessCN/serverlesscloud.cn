@@ -4,6 +4,8 @@ import Layout from '@src/layouts'
 import List from '@src/components/pages/blogList/List'
 import {GraphqlBlogResult} from '@src/types'
 import Helmet from '@src/components/Helmet'
+import {Box} from '@src/components/atoms'
+import {debounce} from '@src/utils'
 import './BestPracticeList.css'
 
 interface Props {
@@ -30,20 +32,53 @@ const BlogList = ({
   },
   location
 } : Props) => {
+  const [isMobileView,
+    setisMobileView] = React.useState(false)
+
+  React.useEffect(() => {
+    const onResize = debounce(() => {
+      if (window.innerWidth >= 992) {
+        setisMobileView(false)
+      } else {
+        setisMobileView(true)
+      }
+    }, 50)
+
+    window.addEventListener('resize', onResize)
+    onResize()
+
+    return () => {
+      window.removeEventListener('resize', onResize)
+    }
+  }, []);
+
   return (
     <Layout>
       <Helmet
         title="最佳实践 - Serverless"
         keywords="Serverless教程,Serverless入门,Serverless实践,ServerlessSSR"
         description="Serverless Framework 最佳实践教程指引，帮助开发者快速掌握 Serverless 工程化框架与 Serverless 实战内容。"
-        location={location}/> 
-      <div className="scf-content" style={{marginTop: "80px"}}>
+        location={location}/> {isMobileView
+        ? <Box
+            className="scf-box__header"
+            style={{
+            padding: "0 10px",
+            marginTop: "100px",
+            marginBottom: "-50px"
+          }}>
+            <Box className="scf-box__header-title">
+              <h3>最佳实践</h3>
+            </Box>
+          </Box>
+        : null}
+      <div className="scf-content">
         <div className="scf-page-blog scf-layout-pattern">
           <div className="scf-home-block scf-practice-list">
             <div className="scf-home-block__inner">
-              <div className="scf-box ">
+              <div className="scf-box">
                 <div className="scf-box__body">
                   <List
+                    isMobileView={isMobileView}
                     width={[0.9, 0.9, 0.9, 0.85]}
                     generateDataUrl={pageNum => `/best-practice${pageNum === 1
                     ? ''
