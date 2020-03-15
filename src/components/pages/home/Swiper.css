@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .scf-grid [class*=scf-grid__item] {
   padding: 21px;
 }
@@ -153,4 +154,17 @@
 }
 .scf-btn--primary:hover {
   background-color: #b73832;
+}
+
+@media screen and (max-width: 992px) {
+  .scf-grid {
+    /*margin: -21px;*/
+    margin: 0;
+    display: block;
+    flex-wrap: wrap;
+  }
+
+  .scf-grid [class*=scf-grid__item] {
+    padding: 0px;
+  }
 }

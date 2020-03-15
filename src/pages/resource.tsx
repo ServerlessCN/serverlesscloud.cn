@@ -229,6 +229,36 @@ const resource : {
 ]
 
 const Resource = ({location} : Props) => {
+    React.useEffect(() => {
+        const resourceBodyDom = document.getElementById('scf-box-resource-body');
+        if (!resourceBodyDom) return;
+        const tabs = resourceBodyDom.getElementsByClassName('scf-box-mobile-tabs-ul');
+        const contents = resourceBodyDom.getElementsByClassName('scf-grid');
+        if (!contents) return;
+        if (!tabs) return;
+
+        const tabItems = tabs[0].children;
+        function tabOnClick(n) {
+            for (var i = 0; i < tabItems.length; ++i) {
+                if (i == n) {
+                    tabItems[i].style.color = '#FD5750';
+                    if (contents[i])
+                        contents[i].style.display = 'block';
+                    continue;
+                }
+                tabItems[i].style.color = '#666666';
+                if (contents[i])
+                    contents[i].style.display = 'none';
+            }
+        }
+        for (var i = 0; i < tabItems.length; ++i) {
+            (function (i){
+                tabItems[i].onclick = function(){
+                    tabOnClick(i)
+                };
+            })(i)
+        }
+    })
     return (
         <Layout>
             <Helmet
@@ -240,9 +270,19 @@ const Resource = ({location} : Props) => {
                 flex: "1 1"}}>
                 <div className="scf-page-resource scf-layout-pattern">
                     <div className="scf-home-block">
-                        <div className="scf-home-block__inner">
+                        <div className="scf-home-block__inner" id="scf-box-resource-body">
+                            <div id="scf-box-mobile-titlebar" class="scf-box__header-title">
+                                <h3>资源</h3>
+                            </div>
+                            <div class="scf-box-mobile-tabs">
+                                <ul class="scf-box-mobile-tabs-ul">
+                                {resource.map(({title,list})=>(
+                                    <li>{title}</li>
+                                 ))}
+                                </ul>
+                            </div>
                             {resource.map(({title,list})=>(
-                                <div className="scf-grid ">
+                                <div className="scf-grid">
                                 <div className="scf-grid__item-12">
                                     <div className="scf-grid__box">
                                         <div className="scf-box__header">

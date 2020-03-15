@@ -6,7 +6,8 @@
   margin-bottom: 0;
 }
 .scf-page-about .scf-grid {
-  margin-bottom: 39px;
+  margin-bottom: 50px;
+  overflow: hidden;
 }
 .scf-page-about .scf-grid__item-12:first-child {
   width: 45%;
@@ -17,6 +18,7 @@
 .scf-page-about .scf-grid__item-12:last-child {
   width: 55%;
 }
+
 .scf-list--link .scf-list__item {
   cursor: pointer;
 }
@@ -39,4 +41,29 @@
 }
 .scf-page-about-link__list img{
   width:120px;
+}
+
+
+@media screen and (max-width: 992px) {
+  .scf-page-about .scf-grid__item-12:last-child {
+    width: 100%;
+  }
+  .jCpxGq {
+    position: fixed;
+  }
+  .scf-page-about .scf-grid__item-12:first-child {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .scf-page-about {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .scf-page-about .scf-grid-group:first-child, .scf-page-about .scf-grid-group:last-child {
+    width: 50%;
+    margin-bottom: 70px;
+    float: left;
+    margin-top: 10px;
+  }
 }

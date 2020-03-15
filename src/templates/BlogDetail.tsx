@@ -92,7 +92,7 @@ const BlogDetail = ({data: {
 
   return (
     <Layout>
-      <Category location={location} isDetail={true}/>
+      <Category location={location} isDetail={true} id="scf-blog-detail-header" />
       <Box className="scf-content">
         <Box className="scf-page-blog-detail scf-layout-pattern">
           <Box className="scf-home-block">

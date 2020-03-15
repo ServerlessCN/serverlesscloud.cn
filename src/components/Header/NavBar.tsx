@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Flex, Container } from '@src/components/atoms'
+import { Flex, Container, Text } from '@src/components/atoms'
 import { debounce } from '@src/utils'
 import { Link } from 'gatsby'
 import ExternalLink from '../Link/ExternalLink'
@@ -38,6 +38,11 @@ export default function({
     setisNavButtonActive(isActive)
   }
 
+  const [ navListObject, setnavListObject ] = React.useState(null);
+  function onRef(input) {
+      setnavListObject(input);
+  }
+
   return (
     <Container
       width={[1, 1, 1, 1, 0.76, 1200]}
@@ -49,13 +54,17 @@ export default function({
     </Flex>
       <Flex alignItems="center" flexWrap="wrap" justifyContent="space-between">
         <Logo logoHeight={height} />
+        <NavList 
+          ref={i => {onRef(i)}}
+          isDesktopView={isDesktopView} 
+          isActive={isNavButtonActive} />
         <NavButton
+          navListObject={navListObject}
           isDesktopView={isDesktopView}
           isActive={isNavButtonActive}
           onToggleActive={onToggleActive}
         />
-
-        <NavList isDesktopView={isDesktopView} isActive={isNavButtonActive} />
+        
       </Flex>
     </Container>
   )

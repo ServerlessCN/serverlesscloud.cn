@@ -41,7 +41,7 @@ export default function ({data} : {
           · {frontmatter
             .date
             .slice(2, 10)}
-          · 阅读大约需要{timeToRead}分钟</div>
+          <span class="scf-articel-item-readtime">· 阅读大约需要{timeToRead}分钟</span></div>
         <div className="scf-article-item__title">
           <h4>{frontmatter.title}</h4>
         </div>
