@@ -32,7 +32,12 @@ export default class NavButton extends React.Component<Props, State> {
           isDesktopView ? 'none' : ['flex', 'flex', 'flex', 'flex', 'none']
         }
         onClick={() => {
-          const navIcon = document.getElementById('scf-box-header-menus-icon');
+          const headerBtns = document.getElementsByClassName('scf-container-header-btn');
+          if (!headerBtns) return;
+          const menus = headerBtns[0].getElementsByClassName('scf-box-header-menus-icon');
+          if (!menus) return;
+          const navIcon = menus[0];
+          // const navIcon = document.getElementById('scf-box-header-menus-icon');
           const searchIcon = document.getElementById('scf-bar-header-search-icon');
           if (!isActive) {
             if (searchIcon) searchIcon.style.display = 'none';
@@ -58,7 +63,12 @@ export default class NavButton extends React.Component<Props, State> {
         <Text 
           onClick={() => {
             onToggleActive && onToggleActive(!isActive)
-            const navIcon = document.getElementById('scf-box-header-menus-icon');
+            // const navIcon = document.getElementById('scf-box-header-menus-icon');
+            const headerBtns = document.getElementsByClassName('scf-container-header-btn');
+            if (!headerBtns) return;
+            const menus = headerBtns[0].getElementsByClassName('scf-box-header-menus-icon');
+            if (!menus) return;
+            const navIcon = menus[0];
             const searchIcon = document.getElementById('scf-bar-header-search-icon');
             if (!isActive) {
               if (navIcon) navIcon.style.display = 'none';
