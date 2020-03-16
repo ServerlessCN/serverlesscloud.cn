@@ -1,11 +1,16 @@
+@media screen and (min-width: 993px) {
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  width: auto !important;
+}
+}
 @media screen and (max-width: 992px) {
   .scf-box {
     margin-top: 0px !important;
   }
 
-  .scf-content {
+  /* .scf-content {
     margin-top: 0px !important;
-  }
+  } */
 
   .scf-footer__inner {
     width: 100%;
@@ -264,7 +269,7 @@
   }
 
   .scf-article-item:last-child .scf-article-item__statistics {
-    top: 80%;
+    top: 90%;
   }
 
   .scf-home-blog .scf-article-item {
