@@ -25,7 +25,15 @@ export default function (props) {
       return (
         <Box className={"scf-blog-header "+ (props.isDetail?'scf-blog-detail-header':'')} {...props} >
         <Container
-            width={[1200, 1200, 1200, 1200, 0.76, 1200]}
+        className="scf-box-blog-tabs"
+            width={[
+            1,
+            1,
+            1,
+            1,
+            0.76,
+            1200
+          ]}
             px={0}>
             <Box className="scf-segment">
             <Link to={`blog`}><span className={"scf-segment__item "+ (['/blog/','/blog'].includes(props.location.pathname)?'is-active':'')}>所有（{TotalCount}）</span></Link>

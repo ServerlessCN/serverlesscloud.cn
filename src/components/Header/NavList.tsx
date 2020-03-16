@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StaticQuery, useStaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import { Box, List, Text, ListItemWithNoStyleType } from '@src/components/atoms'
 import styled from 'styled-components'
 import { display, color, textAlign, TextAlignProps } from 'styled-system'
@@ -7,7 +7,6 @@ import { Link as InternalLink } from 'gatsby'
 import ExternalLink from '../Link/ExternalLink'
 import theme from '@src/constants/theme'
 import { getSearch } from '@src/utils/search'
-import { Position } from '../atoms/Position/index';
 
 const NavListItem = styled(ListItemWithNoStyleType)`
   ${display}
@@ -137,6 +136,7 @@ export default class NavList extends React.Component<Props, State> {
       searchContnet: '',
     }
     this.search = null
+
   }
 
   changeSearch() {
@@ -153,9 +153,6 @@ export default class NavList extends React.Component<Props, State> {
 
   render() {
     if (typeof window !== 'undefined') {
-
-     
-
     
     const { searchVisible, searchContnet } = this.state
     const { isActive, isDesktopView } = this.props
@@ -166,6 +163,7 @@ export default class NavList extends React.Component<Props, State> {
       <BoxWithTextAlign
         width={navListBoxWidth}
         bg={theme.colors.black}
+        className="scf-box-header-menu"
         display={[
           isMobileNavListDisplay(),
           isMobileNavListDisplay(),
@@ -186,6 +184,7 @@ export default class NavList extends React.Component<Props, State> {
               : ExternalLink
             return (
               <NavListItem
+                className="scf-header-nav_listItem"
                 onClick={() => {
                   if (link === '/') {
                     (window as any).MtaH5.clickStat('homelink')
@@ -195,12 +194,15 @@ export default class NavList extends React.Component<Props, State> {
                 display={['block', 'block', 'block', 'inline-block']}
               >
                 <Link to={link}>
-                  <Text color={color} style={{ fontSize: 15 }}>{title}</Text>
+                  <Box className="scf-header-nav_item" style={{ fontSize: 15,color:color }}>{title}</Box>
                 </Link>
               </NavListItem>
             )
           })}
-          {searchVisible ?
+          
+
+        </List>
+        {searchVisible ?
             <div className="scf-header-search">
               <div className="scf-header-search__input-wrap" style={{ display: 'flex' }}>
                 <button className="scf-header-search__search-btn"><i className="scf-icon scf-icon-search-white"></i>
@@ -212,21 +214,22 @@ export default class NavList extends React.Component<Props, State> {
                 }} type="text" placeholder="搜索文章或关键词" className="scf-header-search__input"/>
                 <button className="scf-header-search__clear-btn" onClick={() => this.changeSearch()}><i
                   className="scf-icon scf-icon-clear"></i></button>
-                <Blogs value={searchContnet}/>
+                <Blogs value={searchContnet}/>}
               </div>
             </div>
             :
-            <NavListItem
-              key={'search'}
-              display={['block', 'block', 'block', 'inline-block']}
-              onClick={() => this.changeSearch()}
-            >
-              <Text color={theme.colors.gray_text} style={{ fontSize: 15 }}><i
-                className="scf-icon scf-icon-search-white"></i></Text>
-            </NavListItem>}
-
-        </List>
+            
+              <Text 
+                className="scf-box-header-search-icon" 
+                color={theme.colors.gray_text} 
+                onClick={() => this.changeSearch()}
+                style={{ fontSize: 15 }}
+              >
+                <i className="scf-icon scf-icon-search-white"></i>
+              </Text>
+            }
       </BoxWithTextAlign>
+
     )
 
   } else { // if window does not exist

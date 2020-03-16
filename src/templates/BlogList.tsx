@@ -40,10 +40,13 @@ const BlogList = ({
         description="Serverless 中文网分享了 Serverless 技术的最新动态、Serverless 团队的工程实践，以及社区开发者撰写投稿的优质技术博文"
         location={location}/>
       <Category location={location} />
-      <div className="scf-content">
+      <div className="scf-content scf-blogList-content">
         <div className="scf-page-blog scf-layout-pattern">
           <div className="scf-home-block scf-blog-list">
             <div className="scf-home-block__inner">
+              <div id="scf-box-mobile-titlebar" class="scf-box__header-title">
+                  <h3>博客</h3>
+              </div>
               <div className="scf-box ">
                 <div className="scf-box__body">
                   <List

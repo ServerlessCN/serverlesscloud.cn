@@ -34,7 +34,14 @@ export default function () {
   return (
     <Box className="scf-home-about-us">
       <Container
-        width={[1200, 1200, 1200, 1200, 0.76, 1200]}
+        width={[
+        1,
+        1,
+        1,
+        1,
+        0.76,
+        1200
+      ]}
         px={0}>
         <Box className="scf-box">
           <Box className="scf-box__header">

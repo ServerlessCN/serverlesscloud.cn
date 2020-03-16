@@ -7,7 +7,7 @@ const navbarHeights = {
 }
 
 const headerHeights = {
-  mobile: '77px',
+  mobile: '80px',
   desktop: '80px',
 }
 

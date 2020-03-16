@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .scf-grid [class*=scf-grid__item] {
   padding: 21px;
 }
@@ -81,6 +82,12 @@
   background-color: #feeeee;
   border-color: #b73832;
 }
+.hello-world{
+  height: 92%;
+}
+.scf-home-banner_Container{
+  padding-top: 30px;
+}
 .scf-quick-start__banner {
   font-size: 0;
   margin-bottom: 15px;
@@ -147,4 +154,17 @@
 }
 .scf-btn--primary:hover {
   background-color: #b73832;
+}
+
+@media screen and (max-width: 992px) {
+  .scf-grid {
+    /*margin: -21px;*/
+    margin: 0;
+    display: block;
+    flex-wrap: wrap;
+  }
+
+  .scf-grid [class*=scf-grid__item] {
+    padding: 0px;
+  }
 }

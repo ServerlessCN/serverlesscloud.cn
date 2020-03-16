@@ -9,9 +9,15 @@ import { HeightProps } from 'styled-system'
 const Wrapper = styled(Box)`
 .swiper-container{
   position: relative;
-  width: 100% !important;
+  
   height: 100% !important;
   overflow: visible !important;
+}
+
+@media screen and (min-width: 993px) {
+  .swiper-container{
+    width: 100% !important;
+  }
 }
 
 .swiper-pagination{
@@ -31,7 +37,7 @@ const Wrapper = styled(Box)`
 .swiper-pagination .swiper-pagination-bullet {
   display: inline-block !important;
   width: 30px;
-  height: 25px;
+  height: 24px;
   margin: 0px !important;
   margin-right: 10px !important;
   background-color: hsla(0,0%,50.2%,.5);

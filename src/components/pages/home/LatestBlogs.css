@@ -93,3 +93,10 @@
 #scf-blog-tab a:hover {
   cursor: pointer;
 }
+
+@media screen and (max-width: 992px) {
+  .scf-article-item a{
+    display: block;
+    width: 100%;
+  }
+}

@@ -8,14 +8,6 @@ import BlogLists from '@src/constants/blog.json'
 
 type LatestBlog = Blog
 
-let BlogSort = "DESC"
-
-function changeSort() {
-  BlogSort = "DESC"
-}
-function changeSortAgain() {
-  BlogSort = "!DESC"
-}
 interface Props {
   blogs : LatestBlog[]
 }
@@ -44,7 +36,7 @@ function BlogCard({blog} : {
               .frontmatter
               .date
               .slice(2, 10)}
-            · 阅读大约需要{blog.node.timeToRead}分钟</Box>
+            <span className='scf-article-item__statistics__timeToRead'>· 阅读大约需要{blog.node.timeToRead}分钟</span></Box>
           <Box className="scf-article-item__title">
             <h4>{blog.node.frontmatter.title}</h4>
           </Box>
@@ -133,7 +125,7 @@ export default function () {
             <div class="Box-jLJQJw evQvdc scf-article-item__img-inner"><img src="{IMG}" alt="" /></div> \
           </div> \
           <div class="Box-jLJQJw evQvdc scf-article-item__content"> \
-            <div class="Box-jLJQJw evQvdc scf-article-item__statistics"><span class="scf-blog-item-pv-icon"><i class="scf-icon scf-icon-view"></i></span>{PV} · {AUTHOR} · {DATE} · 阅读大约需要{READTIME}分钟</div>\
+            <div class="Box-jLJQJw evQvdc scf-article-item__statistics"><span class="scf-blog-item-pv-icon"><i class="scf-icon scf-icon-view"></i></span>{PV} · {AUTHOR} · {DATE}<span class="scf-article-item__statistics__timeToRead"> · 阅读大约需要{READTIME}分钟</span></div>\
             <div class="Box-jLJQJw evQvdc scf-article-item__title"><h4>{TITLE}</h4></div>\
             <div class="Box-jLJQJw evQvdc scf-article-item__intro">{DESC}</div>\
           </div>\
@@ -174,7 +166,6 @@ export default function () {
 
     function updateLatestBlogPv(blogPvs) {
       const latestBlogChilds = document.getElementById('scf-box-lateat-blogs').children;
-
       for (var i = 0; i < latestBlogChilds.length; ++i) {
         const id = latestBlogChilds[i].children ? latestBlogChilds[i].children[0].getAttribute('data-id') : null;
         if (!id) continue;
@@ -190,7 +181,6 @@ export default function () {
         const idx = oldHtml.indexOf('</span>');
         const text = oldHtml.substr(idx + 7);
         const html = oldHtml.substr(0, idx + 7);
-
         if (text && html) {
           let newHtml;
           if (pv < 1000) {
@@ -198,13 +188,16 @@ export default function () {
           } else {
             newHtml = html + (pv/1000).toFixed(1) + 'K · ' + text;
           }
-          titleDom.innerHTML = newHtml;
+          if (isNaN(parseFloat(text))){
+            titleDom.innerHTML = newHtml;
+          }
         }
       }
     }
 
     function updateHomeBest(blogPvs) {
       const bestList = document.getElementById('scf-box-home-best-practices');
+      if (!bestList) return;
       const links = bestList.getElementsByTagName('A');
 
       for (var i = 0; i < links.length; ++i) {

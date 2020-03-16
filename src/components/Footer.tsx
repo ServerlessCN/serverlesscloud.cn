@@ -180,7 +180,8 @@ export default function () {
                   <i className="scf-icon scf-icon-github"></i>
                 </a>
               </div>
-              <p className="scf-footer__copyright">hello@serverlesscloud.cn - Copyright © 2020 ServerlessCloud. All rights reserved</p>
+              <p className="scf-footer__copyright">hello@serverlesscloud.cn</p>
+              <p className="scf-footer__copyright">Copyright © 2020 ServerlessCloud. All rights reserved</p>
               <p className="scf-footer__copyright">Powered by Serverless Framework</p>
             </div>
           </div>

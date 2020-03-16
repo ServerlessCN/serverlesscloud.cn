@@ -99,11 +99,18 @@ const AboutPage = () => {
         keywords="Serverless简介,Serverless概述,Serverless指引"
         title="关于Serverless - Serverless"
        />
-      <Box className="scf-content">
+      <Box className="scf-content" style={{marginTop:0}}>
         <Box className="scf-page-about scf-layout-pattern">
           <Box className="scf-home-block">
             <Container
-              width={[1200, 1200, 1200, 1200, 0.76, 1200]}
+              width={[
+              1,
+              1,
+              1,
+              1,
+              0.76,
+              1200
+            ]}
               className="scf-home-block__inner"
               px={0}>
               <Box className="scf-grid ">
@@ -162,6 +169,7 @@ const AboutPage = () => {
                   </Box>
                 </Box>
               </Box>
+              {/*
               <Box className="scf-grid ">
                 <Box className="scf-grid__item-12">
                   <Box className="scf-grid__box">
@@ -174,7 +182,7 @@ const AboutPage = () => {
                 <Box className="scf-grid__item-12">
                   <Box className="scf-grid__box">
                     <Box className="scf-grid ">
-                      <Box className="scf-grid__item-12">
+                      <Box className="scf-grid__item-12 scf-grid-group scf-grid-group-qq">
                         <Box className="scf-grid__box">
                           <dl className="scf-page-about-link ">
                             <dt className="scf-page-about-link__title">交流 QQ 群</dt>
@@ -183,7 +191,7 @@ const AboutPage = () => {
                           </dl>
                         </Box>
                       </Box>
-                      <Box className="scf-grid__item-12">
+                      <Box className="scf-grid__item-12 scf-grid-group scf-grid-group-wechat">
                         <Box className="scf-grid__box">
                           <dl className="scf-page-about-link ">
                             <dt className="scf-page-about-link__title">微信社区群</dt>
@@ -196,6 +204,7 @@ const AboutPage = () => {
                   </Box>
                 </Box>
               </Box>
+            */}
             </Container>
           </Box>
         </Box>

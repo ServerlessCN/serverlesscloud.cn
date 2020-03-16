@@ -1,12 +1,5 @@
 import * as React from 'react'
-import {
-  Flex,
-  Row,
-  Background,
-  Container,
-  Box,
-  Center
-} from '@src/components/atoms'
+import {Container, Box} from '@src/components/atoms'
 import theme from '@src/constants/theme'
 import {Link} from 'gatsby'
 import ExternalLink from '@src/components/Link/ExternalLink'
@@ -16,21 +9,21 @@ import componentConfig from '@src/constants/componentConfig'
 export default function () {
   React.useEffect(() => {
     function getComponentData(fn) {
-      const api = 'https://serverless-components-info-1300862921.cos.ap-guangzhou.myqcloud.com/components-with-stats.json?src='+document.location.hostname;
-      fetch(api)
-          .then((response) => response.json() )
-          .then((response)=>{
-        
-            fn(null, response);
-          })
-          .catch((error)=>{
-            fn(error, null);
-          });
+      const api = 'https://serverless-components-info-1300862921.cos.ap-guangzhou.myqcloud.com/comp' +
+          'onents-with-stats.json';
+      fetch(api).then((response) => response.json()).then((response) => {
+
+        fn(null, response);
+      }).catch((error) => {
+        fn(error, null);
+      });
     }
 
     function findComponentByUrl(url, components) {
       for (var i = 0; i < components.length; ++i) {
-        let names = components[i].name.split('/');
+        let names = components[i]
+          .name
+          .split('/');
         let name;
         if (names[0] != '@serverless') {
           name = components[i].name;
@@ -44,13 +37,14 @@ export default function () {
       }
     }
 
-    getComponentData(function (error, response){
+    getComponentData(function (error, response) {
       if (error) {
         console.log(error);
         return;
       }
       const componentDom = document.getElementById('scf-box-recommend-component');
-      if (!componentDom) return;
+      if (!componentDom) 
+        return;
       
       const linkDom = componentDom.getElementsByTagName('A');
       for (var i = 0; i < linkDom.length; ++i) {
@@ -58,7 +52,8 @@ export default function () {
         const down = linkDom[i].getElementsByClassName('scf-icon-download');
         const compData = findComponentByUrl(linkDom[i].getAttribute('href'), response);
 
-        let start, download;
+        let start,
+          download;
         if (compData.githubStars >= 1000) {
           start = (compData.githubStars / 1000).toFixed(1) + 'K';
         } else {
@@ -70,17 +65,28 @@ export default function () {
           download = compData.npmDownloads;
         }
 
-        if (favs)
+        if (favs) 
           favs[0].innerHTML = start;
-        if (down)
+        if (down) 
           down[0].innerHTML = download;
-      }
-    })
+        }
+      })
   })
   return (
     <Box className="scf-component-recommend">
       <Container
+<<<<<<< HEAD
+        width={[
+        1,
+        1,
+        1,
+        1,
+        0.76,
+        1200
+      ]}
+=======
         width={[1200, 1200, 1200, 1200, 0.76, 1200]}
+>>>>>>> origin
         px={0}
         pt={0}>
         <Box className="scf-box">

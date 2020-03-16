@@ -575,3 +575,187 @@ a:hover {
 .kJoyfl{
   position: relative;
 }
+
+#scf-box-mobile-titlebar {
+  display: none;
+}
+
+.scf-box-header-menu {
+  position: relative;
+/*  margin-top: 15px;
+  padding-right: 40px;*/
+}
+
+.scf-bar-header-search-icon {
+  display: none;
+}
+
+.scf-box-header-menus-icon, .scf-box-header-search-icon {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+}
+
+.scf-container-header-btn ul{
+  position: relative;
+  float: right;
+  margin-right: 40px;
+}
+.scf-container-header-btn .scf-box-header-menus-icon{
+  display: block;
+}
+.scf-container-header-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  top: -40px;
+} 
+
+@media screen and (max-width: 992px) {
+
+  #scf-box-mobile-titlebar {
+    display: block;
+    padding: 0;
+    text-align: left;
+    width: 100px;
+    margin-bottom: 30px;
+  }
+  .iFOhOF {
+    right: 0px;
+  }
+  .scf-header-search {
+    display: block;
+    width: 100%;
+    /*margin-top: 48px;*/
+  }
+  .scf-header-search__input-wrap {
+    width: 100%;
+    border: 0;
+  }
+  .scf-header-search__input-wrap .scf-header-search__search-btn {
+    display: none;
+  }
+  .scf-header-search__clear-btn {
+    display: none;
+  }
+  .scf-header-search__input-wrap .scf-header-search__input {
+    background-color: #fff;
+    border-radius: 5px;
+    background-image: url(../assets/images/header-search.svg);
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: center;
+    padding-left: 30px;
+    color: #000;
+    width: 100%;
+  }
+  .scf-header-search-result-list__item {
+    border: 0;
+    border-bottom: 1px solid #333333;
+    padding: 10px 20px;
+  }
+  .scf-header-search-result-list__item .scf-header-search-result-list__item-info {
+    display: none;
+  }
+  .scf-header-search__input-wrap .scf-header-search__panel {
+    border: 0;
+    background-color: #000;
+
+    /*border: 2px solid #f7f7f7*/
+  }
+  .scf-header-search-result-list {
+   
+    display: block;
+  }
+  .scf-header-search-result-list .scf-header-search-result-list__item-title {
+    line-height: 32px;
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+  }
+  .scf-header-search__input-wrap {
+    position: static;
+    display: block;
+    width: 95%;
+    margin:0 auto;
+  }
+
+  .scf-box-header-search-icon {
+    display: none;
+  }
+  .scf-box-header-menu .scf-box-header-menus-icon {
+    position: absolute;
+    /*top: 5px;*/
+    right: 0px;
+    /*display: none;*/
+    top: 2px;
+    right: 0px;
+    display: block;
+    /*position: absolute;*/
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+  }
+  .scf-bar-header-search-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    
+    display: block;
+    
+  }
+  .scf-bar-header-search-icon-normal {
+    background-image: url(../assets/images/search.svg);
+    background-repeat: no-repeat;
+    background-size: 26px 26px;
+    background-position: 0px 1px;
+    top: 4px;
+    right: 40px;
+  }
+
+  .scf-bar-header-search-icon-close {
+    background-image: url(../assets/images/close.svg);
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    background-position: 0px 1px;
+    top: 3px;
+    right: 4px;
+  }
+
+  .scf-box-header-menus-icon-normal {
+    background-image: url(../assets/images/menus.svg);
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    background-position: 0px 1px; 
+  }
+  .scf-box-header-icon-close {
+    background-image: url(../assets/images/close.svg);
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    background-position: 0px 1px;
+  }
+
+  .scf-container-header-btn {
+    display: block;
+    position: absolute!important;
+    top: 20px!important;
+    right: 10px!important;
+
+    /*position: relative;
+    display: block;
+    width: 100%;
+    top: -40px;*/
+  }
+  .cvoOjD {
+    margin-top: 0px !important;
+  }
+  .jfQJdf {
+    display: none !important;
+    /*padding: 0 0 0 15px;*/
+  }
+}

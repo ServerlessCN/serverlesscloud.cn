@@ -95,8 +95,8 @@ const BlogDetail = ({data: {
 
   return (
     <Layout>
-      <Category location={location} isDetail={true}/>
-      <Box className="scf-content">
+      <Category location={location} isDetail={true} id="scf-blog-detail-header" />
+      <Box className="scf-content" style={{marginTop:0}}>
         <Box className="scf-page-blog-detail scf-layout-pattern">
           <Box className="scf-home-block">
             <Box className="scf-home-block__inner">
