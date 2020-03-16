@@ -9,9 +9,15 @@ import { HeightProps } from 'styled-system'
 const Wrapper = styled(Box)`
 .swiper-container{
   position: relative;
-  width: 100% !important;
+  
   height: 100% !important;
   overflow: visible !important;
+}
+
+@media only screen and (min-width: 993px) {
+  .swiper-container{
+    width: 100% !important;
+  }
 }
 
 .swiper-pagination{

@@ -57,8 +57,6 @@ export default function({
         if (pv >= 1000) {
           pv = (pv / 1000).toFixed(1) + 'K';
         }
-        console.dir(icon[0])
-        console.log(pv)
         icon[0].innerHTML = pv + '&nbsp;·&nbsp;';
       }
     });

@@ -43,6 +43,7 @@
 }
 .scf-content {
   flex: 1 1;
+  margin-top: 90px;
 }
 .scf-page-blog {
   padding-top: 60px;
@@ -289,9 +290,7 @@ img {
   .scf-blog-header .scf-box-blog-tabs {
     width: 76%;
   }
-  .scf-content { 
-    margin-top: 90px;
-  }
+
   .scf-segment__item.is-active,
   .scf-segment__item:hover {
     color: #FD5750;
