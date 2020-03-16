@@ -12,10 +12,6 @@
       url("../assets/font/soleil.woff") format("woff");
 }
 
-body{
-  min-width:1200px;
-}
-
 html,
 body,
 div,

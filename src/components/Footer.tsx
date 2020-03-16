@@ -107,10 +107,6 @@ const WhiteTextWith16pxFontSize = styled(WhiteText)`
 `
 
 export default function () {
-  React.useEffect(() => {
-    var viewport = document.querySelector("meta[name=viewport]");
-    viewport.setAttribute('content', 'width=1200, initial-scale=0.3');
-  })
   return (
     <Column>
       <Background width={[1]} background={theme.colors.gray[0]}>
