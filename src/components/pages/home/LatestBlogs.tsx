@@ -197,6 +197,7 @@ export default function () {
 
     function updateHomeBest(blogPvs) {
       const bestList = document.getElementById('scf-box-home-best-practices');
+      if (!bestList) return;
       const links = bestList.getElementsByTagName('A');
 
       for (var i = 0; i < links.length; ++i) {
