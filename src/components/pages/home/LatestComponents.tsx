@@ -75,7 +75,6 @@ export default function () {
   return (
     <Box className="scf-component-recommend">
       <Container
-<<<<<<< HEAD
         width={[
         1,
         1,
@@ -84,9 +83,6 @@ export default function () {
         0.76,
         1200
       ]}
-=======
-        width={[1200, 1200, 1200, 1200, 0.76, 1200]}
->>>>>>> origin
         px={0}
         pt={0}>
         <Box className="scf-box">
