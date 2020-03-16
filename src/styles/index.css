@@ -589,9 +589,9 @@ a:hover {
   cursor: pointer;
 }
 
-.scf-bar-header-search-icon, .scf-container-header-btn {
+/* .scf-bar-header-search-icon, .scf-container-header-btn {
   display: none;
-}
+} */
 
 @media screen and (max-width: 992px) {
   #scf-box-mobile-titlebar {
