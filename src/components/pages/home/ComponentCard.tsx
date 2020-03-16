@@ -26,10 +26,10 @@ export default function ComponentCard({blog} : Component) {
             <Box className="scf-article-item__content">
               <Box className="scf-article-item__statistics">
                               <span className="scf-article-item__statistics-item">
-                                <i className="scf-icon scf-icon-favout">3.3K</i>
+                                <i className="scf-icon scf-icon-favout"></i>
                               </span>
                               <span className="scf-article-item__statistics-item">
-                                <i className="scf-icon scf-icon-download">3.3K</i>
+                                <i className="scf-icon scf-icon-download"></i>
                               </span>
                             </Box>
               <Box className="scf-article-item__title">

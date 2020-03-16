@@ -23,9 +23,11 @@ export default function ({data} : {
   } = data
 
   frontmatter.categories = frontmatter.categories || []
+  var md5 = crypto.createHash('md5');
+  var aid = md5.update(data.node.fields.slug).digest('hex');
   return (
     <a
-      data-id={data.node.id}
+      data-id={aid}
       className="scf-article-item scf-article-item--block"
       href={getBlogLink(data)}>
       <div className="scf-article-item__img">

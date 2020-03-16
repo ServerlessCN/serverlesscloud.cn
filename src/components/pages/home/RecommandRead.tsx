@@ -1,4 +1,5 @@
 import * as React from 'react'
+import crypto from 'crypto'
 import {Box} from '@src/components/atoms'
 import {StaticQuery, graphql, Link} from 'gatsby'
 import {Blog, GraphqlBlogResult} from '@src/types'
@@ -13,9 +14,11 @@ interface Props {
 export function BlogCard({blog} : {
   blog: Blog
 }) {
+  var md5 = crypto.createHash('md5');
+  var id = md5.update(blog.node.fields.slug).digest('hex');
   return (
     <Box className="scf-article-item scf-article-item--block">
-      <Link to={blog.node.fields.slug} data-id={blog.node.id}>
+      <Link to={blog.node.fields.slug} data-id={id}>
         <Box className="scf-article-item__img">
           <Box className="scf-article-item__img-inner">
             <img src={blog.node.frontmatter.thumbnail} alt=""/>

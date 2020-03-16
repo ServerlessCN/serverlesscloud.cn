@@ -15,6 +15,7 @@ import ExternalLink from '@src/components/Link/ExternalLink'
 import Activitys from '@src/components/pages/home/Activitys'
 import CategoryLink from '@src/components/Link/CategoryLink'
 import RecommandRead from '@src/components/pages/home/RecommandRead'
+import crypto from 'crypto'
 
 const ExternalLinkWrapper = styled(InlineBlock)`
   margin-left: 5px;
@@ -88,7 +89,10 @@ const BestPracticeDetail = ({
             fn(error, null);
       });
     }
-    reportPv(currentBlog.id, function (error, response){
+
+    var md5 = crypto.createHash('md5');
+    var id = md5.update(currentBlog.fields.slug).digest('hex');
+    reportPv(id, function (error, response){
       if (error || response.error) {
         console.log(error || response.error);
       }
