@@ -18,7 +18,7 @@ export function BlogCard({blog} : {
   var id = md5.update(blog.node.fields.slug).digest('hex');
   return (
     <Box className="scf-article-item scf-article-item--block"  data-id={id}>
-      <Link to={blog.node.fields.slug}>
+      <Link to={blog.node.fields.slug}  data-id={id}>
         <Box className="scf-article-item__img">
           <Box className="scf-article-item__img-inner">
             <img src={blog.node.frontmatter.thumbnail} alt=""/>
