@@ -83,6 +83,9 @@
 }
 
 @media screen and (max-width: 992px) {
+  .scf-page-resource .scf-home-block {
+    padding: 0 30px;
+  }
   .scf-page-resource .scf-home-block__inner .scf-grid .scf-grid__item-12:first-child {
     display: none;
   }

@@ -597,9 +597,20 @@ a:hover {
   height: 26px;
 }
 
-/* .scf-bar-header-search-icon, .scf-container-header-btn {
-  display: none;
-} */
+.scf-container-header-btn ul{
+  position: relative;
+  float: right;
+  margin-right: 40px;
+}
+.scf-container-header-btn .scf-box-header-menus-icon{
+  display: block;
+}
+.scf-container-header-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  top: -40px;
+} 
 
 @media screen and (max-width: 992px) {
 
@@ -727,9 +738,14 @@ a:hover {
 
   .scf-container-header-btn {
     display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    position: absolute!important;
+    top: 20px!important;
+    right: 10px!important;
+
+    /*position: relative;
+    display: block;
+    width: 100%;
+    top: -40px;*/
   }
   .cvoOjD {
     margin-top: 0px !important;

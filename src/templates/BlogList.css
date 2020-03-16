@@ -232,6 +232,9 @@ img {
   width: 76%;
 }
 @media screen and (max-width: 992px) {
+  .scf-page-blog .scf-blog-list {
+    padding: 0 30px;
+  }
   .scf-page-blog {
     padding-top: 20px;
     margin-top: 90px !important;
@@ -302,8 +305,8 @@ img {
     padding: 0;
     cursor: pointer;
   }
-  .scf-box  {
-    margin-top: 60px;
+  .scf-page-blog .scf-box .scf-box__body {
+    padding-top: 10px;
   }
   .scf-blog-header .scf-segment {
     margin:0;
