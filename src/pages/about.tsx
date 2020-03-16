@@ -99,7 +99,7 @@ const AboutPage = () => {
         keywords="Serverless简介,Serverless概述,Serverless指引"
         title="关于Serverless - Serverless"
        />
-      <Box className="scf-content">
+      <Box className="scf-content" style={{marginTop:0}}>
         <Box className="scf-page-about scf-layout-pattern">
           <Box className="scf-home-block">
             <Container
@@ -169,6 +169,7 @@ const AboutPage = () => {
                   </Box>
                 </Box>
               </Box>
+              {/*
               <Box className="scf-grid ">
                 <Box className="scf-grid__item-12">
                   <Box className="scf-grid__box">
@@ -203,6 +204,7 @@ const AboutPage = () => {
                   </Box>
                 </Box>
               </Box>
+            */}
             </Container>
           </Box>
         </Box>

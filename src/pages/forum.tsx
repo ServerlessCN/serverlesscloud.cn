@@ -10,7 +10,7 @@ const CustomContainer = styled(Container)`
   // display: flex;
   padding: 30px;
   text-align: center;
-  margin-top:90px;
+  margin-top:0px;
 `
 
 interface Props {
