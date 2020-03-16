@@ -239,7 +239,7 @@ img {
   }
   .scf-article-item--block .scf-article-item__img {
     width: 40%;
-    margin-left: 0px;
+    margin-left: 0px !important;
     float: right;
   }
   .scf-blog-list .scf-article-item__title {

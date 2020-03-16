@@ -578,22 +578,38 @@ a:hover {
 
 .scf-box-header-menu {
   position: relative;
-  margin-top: 15px;
-
-  padding-right: 40px;
-}
-.scf-box-header-search-icon {
-  position: absolute;
-  top: 1px;
-  right: 5px;
-  cursor: pointer;
+/*  margin-top: 15px;
+  padding-right: 40px;*/
 }
 
-.scf-bar-header-search-icon, .scf-container-header-btn {
+.scf-bar-header-search-icon {
   display: none;
 }
 
+#scf-box-header-menus-icon, .scf-box-header-search-icon {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+}
+.fkhrrb {
+  position: relative;
+}
+.jhgKmp {
+  position: absolute;
+  right: 0;
+  display: block;
+  padding: 0;
+}
+.iFOhOF {
+  right: 40px;
+}
 @media screen and (max-width: 992px) {
+
   #scf-box-mobile-titlebar {
     display: block;
     padding: 0;
@@ -601,7 +617,9 @@ a:hover {
     width: 100px;
     margin-bottom: 30px;
   }
-
+  .iFOhOF {
+    right: 0px;
+  }
   .scf-header-search {
     display: block;
     width: 100%;
@@ -662,12 +680,18 @@ a:hover {
   .scf-box-header-search-icon {
     display: none;
   }
-  .scf-box-header-menus-icon {
+  .scf-box-header-menu .scf-box-header-menus-icon {
     position: absolute;
-    top: 5px;
+    /*top: 5px;*/
+    right: 0px;
+    /*display: block;*/
+    top: 2px;
     right: 0px;
     display: block;
-    
+    /*position: absolute;*/
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
   }
   .scf-bar-header-search-icon {
     width: 30px;
@@ -680,10 +704,10 @@ a:hover {
   .scf-bar-header-search-icon-normal {
     background-image: url(../assets/images/search.svg);
     background-repeat: no-repeat;
-    background-size: 28px 28px;
+    background-size: 26px 26px;
     background-position: 0px 1px;
-    top: 5px;
-    right: 45px;
+    top: 4px;
+    right: 40px;
   }
 
   .scf-bar-header-search-icon-close {
@@ -691,8 +715,8 @@ a:hover {
     background-repeat: no-repeat;
     background-size: 28px 28px;
     background-position: 0px 1px;
-    top: 5px;
-    right: 0px;
+    top: 3px;
+    right: 4px;
   }
 
   .scf-box-header-menus-icon-normal {
@@ -707,8 +731,12 @@ a:hover {
     background-size: 28px 28px;
     background-position: 0px 1px;
   }
+
   .scf-container-header-btn {
     display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 
   .kJoyfl {
