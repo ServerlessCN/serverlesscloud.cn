@@ -233,6 +233,7 @@ img {
 @media screen and (max-width: 992px) {
   .scf-page-blog {
     padding-top: 20px;
+    margin-top: 90px !important;
   }
   .scf-blog-list .scf-article-item__intro {
     display: none;
@@ -289,9 +290,9 @@ img {
   .scf-blog-header .scf-box-blog-tabs {
     width: 76%;
   }
-  .scf-content { 
+  /*.kPOAcd .scf-content { 
     margin-top: 90px;
-  }
+  }*/
   .scf-segment__item.is-active,
   .scf-segment__item:hover {
     color: #FD5750;
