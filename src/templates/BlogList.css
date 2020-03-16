@@ -234,13 +234,14 @@ img {
 @media screen and (max-width: 992px) {
   .scf-page-blog {
     padding-top: 20px;
+    margin-top: 90px !important;
   }
   .scf-blog-list .scf-article-item__intro {
     display: none;
   }
   .scf-article-item--block .scf-article-item__img {
     width: 40%;
-    margin-left: 0px;
+    margin-left: 0px !important;
     float: right;
   }
   .scf-blog-list .scf-article-item__title {
@@ -290,7 +291,6 @@ img {
   .scf-blog-header .scf-box-blog-tabs {
     width: 76%;
   }
-
   .scf-segment__item.is-active,
   .scf-segment__item:hover {
     color: #FD5750;
