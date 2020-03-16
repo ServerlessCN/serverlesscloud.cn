@@ -51,11 +51,14 @@ export default function({
         const statistics = bestList[i].getElementsByClassName('scf-article-item__statistics-item');
         if (!statistics) continue;
         const icon = statistics[0].getElementsByClassName('scf-icon');
+
         if (!icon) continue;
         let pv = response.message[id] || Math.ceil(Math.random() * 100);
         if (pv >= 1000) {
           pv = (pv / 1000).toFixed(1) + 'K';
         }
+        console.dir(icon[0])
+        console.log(pv)
         icon[0].innerHTML = pv + '&nbsp;·&nbsp;';
       }
     });

@@ -1,11 +1,6 @@
 import * as React from 'react'
-import {
-  Flex,
-  Box,
-} from '@src/components/atoms'
-import styled from 'styled-components'
 import {Blog} from '@src/types'
-import {width} from 'styled-system'
+import crypto from 'crypto'
 
 function getBlogLink(blog : Blog) {
   return ((blog.node.fields && blog.node.fields.slug) || `/blog/${blog.node.fileAbsolutePath.replace('.md', '').split('/').pop()}`)
