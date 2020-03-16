@@ -69,6 +69,7 @@ function Blogs() {
 export default function (props) {
   React.useEffect(() => {
     function getBlogPv(fn) {
+<<<<<<< HEAD
       const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?e' +
           'nv=test';
       fetch(api).then((response) => response.json()).then((response) => {
@@ -77,6 +78,18 @@ export default function (props) {
       }).catch((error) => {
         fn(error, null);
       });
+=======
+      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?src='+document.location.hostname;
+      fetch(api)
+          .then((response) => response.json() )
+          .then((response)=>{
+        
+            fn(null, response);
+          })
+          .catch((error)=>{
+            fn(error, null);
+          });
+>>>>>>> origin
     }
 
     getBlogPv(function (error, response) {

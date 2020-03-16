@@ -19,7 +19,7 @@ export default function({
 
   React.useEffect(() => {
     const onResize = debounce(() => {
-      if (window.innerWidth >= 992) {
+      if (window.innerWidth >= 1001) {
         setisNavButtonActive(false)
       } else {
         // do nothing
