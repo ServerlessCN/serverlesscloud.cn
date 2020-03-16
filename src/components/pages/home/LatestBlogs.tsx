@@ -166,7 +166,6 @@ export default function () {
 
     function updateLatestBlogPv(blogPvs) {
       const latestBlogChilds = document.getElementById('scf-box-lateat-blogs').children;
-
       for (var i = 0; i < latestBlogChilds.length; ++i) {
         const id = latestBlogChilds[i].children ? latestBlogChilds[i].children[0].getAttribute('data-id') : null;
         if (!id) continue;
@@ -182,7 +181,6 @@ export default function () {
         const idx = oldHtml.indexOf('</span>');
         const text = oldHtml.substr(idx + 7);
         const html = oldHtml.substr(0, idx + 7);
-
         if (text && html) {
           let newHtml;
           if (pv < 1000) {
@@ -190,7 +188,9 @@ export default function () {
           } else {
             newHtml = html + (pv/1000).toFixed(1) + 'K · ' + text;
           }
-          titleDom.innerHTML = newHtml;
+          if (isNaN(parseFloat(text))){
+            titleDom.innerHTML = newHtml;
+          }
         }
       }
     }
