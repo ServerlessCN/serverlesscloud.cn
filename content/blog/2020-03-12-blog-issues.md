@@ -46,8 +46,6 @@ remote: Counting objects: 100% (1438/1438), done.remote: Compressing objects: 10
 
 百度之后，发现针对RPC错误需要修改Git的buffer，调到700M后依然报了上面的fatal错误，和网络有关，最后放弃用git，选择老师发在文档里的压缩包，地址上面列出来了，大家可以去自行取用。
 
-
-
 ## 坑二：pip 的源设置和 pymysql
 
 部署过程中因为 init.py 里面用到了 pymysql，可是我没有安装，于是打开Anaconda Prompt 开始用 pip 安装，然而 pip 好像死了一样，完全没有反应，最后报错说找不到包。后来经同学和老师提醒，修改 pip 的源到国内，我用了清华的源，速度一下很快啊，安装成功。修改源的代码是：
@@ -66,7 +64,7 @@ pip install pymysql -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 init.py 的执行一致不顺利，pymysql 的坑填完后继续报错。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s617OTFDR6WWxyTpDeIoFibEibGrj4WoHX6JzAXx0J95h3fKIeHfiaUWg99sMRgftUIqm1nyuJr3GB2vA/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511211265-IMG_0189.PNG)
 
 于是以为自己没有安装对 yaml，后来老师建议删掉该语句，大家要注意，这个语句里 Fullloader 出现在一个逗号后面，所以我们只删掉逗号后面的 loader=yaml.FullLoader 就好了。
 
@@ -90,29 +88,29 @@ init.py 的执行一致不顺利，pymysql 的坑填完后继续报错。
 
 我的报错信息五花八门，给大家分享一下：
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s617OTFDR6WWxyTpDeIoFibEibbkjkA6XyLkHzQ80jyPbralDUiaYFHnE09ic8QWmib3mPcQmXzJjkDFrbQ/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511211267-IMG_0189.PNG)
 
 这个错误出现的原因其实也很难想通，因为给的信息太少，并不知道到底是哪里有问题。后来还报过一个类似的错误，印象里是说读不到 'admin_add_article'，我后来发现 git 上面又更新了一个文件夹 picture，里面有这个名字对应的图片，所以我就重新 git clone 了项目文件，把picture文件夹拷贝了过来。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s617OTFDR6WWxyTpDeIoFibEib0aicmm9A0qeIqkMLUrz3KObruKZfibdA0xTBuXRz3mNM2uBUgsvMic3sg/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511211810-IMG_0189.PNG)
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s617OTFDR6WWxyTpDeIoFibEibZfDdybRzyfTbeNTNgcLNxuy0M2SAk9WhNd9NMGCoNmibHWAIicXT5fAg/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511211686-IMG_0189.PNG)
 
 这类 443 的错误，我是一直没有解决啦，直到我更换了网络。不过大家可以看到上面有一个存储桶的部署信息，那个桶不是我的。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s617OTFDR6WWxyTpDeIoFibEibicK7icDgwAKnWSPfsnWDRWcCHtZp7iaxeF9I8xibo6SXEBILCHicflLNFdg/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511211634-IMG_0189.PNG)
 
 关于 InvalidParameterValue 不太理解，什么样的 ID 是合法的呢？我考虑应该是网络中断丢失了数据，导致有些字符没了。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s617OTFDR6WWxyTpDeIoFibEibpuLfs2aBtsuDLC66p26dH3M0bH03CYRibia3qy59Tc0CVPTeqeXbfuicg/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511212075-IMG_0189.PNG)
 
 ECONNRESET 这个错误报了很多次，具体是什么意思不太明白，socket hang up应该还是网络不通畅吧。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s617OTFDR6WWxyTpDeIoFibEibJiacaOoUmjmkPYjvdibGm4RTBbnclJnVE3CibLGYYqBlnPQLYrUy4V6RA/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511212164-IMG_0189.PNG)
 
 还有一个是超时了，估计是网络情况不好。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s617OTFDR6WWxyTpDeIoFibEibfYEtQHic7LFtxicMYKHMkYfSubfaZ2ygwz3eVhwd7TibJ6lMPuhs3d7xA/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511211785-IMG_0189.PNG)
 
 这个 undefined RequestId 也是出现了多次的错误，很奇特。估计是网络数据丢包造成的吧。
 
@@ -136,7 +134,7 @@ ECONNRESET 这个错误报了很多次，具体是什么意思不太明白，soc
 
 因为每次网络问题都发生在部署uploadPicture这个部分，时间很长，所以我都会忍不住cancel重来。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s617OTFDR6WWxyTpDeIoFibEibj4HhaU2fxLiaRXs0nOWys0hOnlqJuUF7KPGRDHMfZwOIk25JSDMJM0Q/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511212108-IMG_0189.PNG)
 
 于是这个部分后来被我注释掉了。注释之后，部署很顺利，因为换用了手机的网络。这突如其来的顺利让我觉得 uploadPicture 可能是无罪的，我应该把它放回来。于是我就取消了注释，这时候灾难发生了，10000s 之后它还在部署。
 
@@ -150,9 +148,9 @@ ECONNRESET 这个错误报了很多次，具体是什么意思不太明白，soc
 
 部署成功之后，我访问后台，发现只有登陆页可用，其他页面基本上一点就报错，Internal error。在老师的提示下，我到了函数的控制台，查看了Blog_Admin的报错信息，发现是数据库连接不到。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s617OTFDR6WWxyTpDeIoFibEibzFHEQoHTjGYnVAbViciajIWfMyknTxd0qmSRhCZheV5Lz6jd9AEicPxgw/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511212052-IMG_0189.PNG)
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s617OTFDR6WWxyTpDeIoFibEibibfeWJYJFrLXxR6sduUdTMssYp1G95yzd6ZxHVyq2MgicynwhSWR66Kg/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511212266-IMG_0189.PNG)
 
 可是我之前明明在数据库里新增数据的，于是我打开了 serverless.yml 文件和数据库里的库名称对照, 发现数据库的名称多了一个字母 l，哎，粗心啊粗心。修改了 yaml 文件后再次部署，成功了！
 

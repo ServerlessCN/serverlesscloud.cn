@@ -31,7 +31,7 @@ Serverless 正在改变未来软件开发的模式和流程，对于大多数应
 
 关于Serverless 架构，在看这个架构之前，我们先来回顾一下云计算的发展。图中蓝色这部分是由用户来进行管理的这一部分，黄色这一部分是由云服务商来进行管理的。从早期的 On-Premises 到 FaaS ，这是云计算的发展历程。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLM2GxrZP9OMK8PyCS6QpRF0dccS436icTq5wnctzXrvIp4Fgz3D9S8eQ/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511844418-IMG_0195.PNG)
 
 On-Premises 的时候，机房所有的硬件、操作系统、容器、运行时环境、应用、函数等都需要自己管理；发展到 IaaS 之后，那么开发商他们不需要维护自己的硬件了，但是还是需要维护很多东西。
 
@@ -47,7 +47,7 @@ On-Premises 的时候，机房所有的硬件、操作系统、容器、运行�
 
 接下来看一下 Serverless 架构，这里我们以 AWS 的一些服务为例，最左边的一个User Agent（用户），从浏览器去访问一个系统，首先会经过一个API Gateway，API Gateway会出发一个函数 Cloud Function，在AWS中叫 Lambda，然后 Lambda 会去执行一些获取资源、业务操作，这些资源都是受限的，它可能是亚马逊的 DynamoDB、也可能是 AWS S3 存储、也可能是亚马逊的 EC2，也可能是你自己的一个社交数据以及通讯录好友等。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDL4as8PDnH3wI918rkEvQ6lpsHboueybg5lyrALWtUJicrVFApHuJfppA/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511934288-IMG_0191.PNG)
 
 这些资源默认是受限的，受限的时候就需要去访问一个无服务器的身份认证系统，即图中的 Authing ，用户通过 Authing 进行登录，认证完成之后会获取一个 Token，然后用户带 Token 去请求资源，这个时候这个后端必须验证 Token 是合法的，才能够获取用户有权限访问的资源。这是 Serverless 整体的访问的一个流程。
 
@@ -59,7 +59,7 @@ On-Premises 的时候，机房所有的硬件、操作系统、容器、运行�
 
 ### 3）FaaS 函数的生命周期
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLibeuch3sz5KSml6hGK9RVmicuYnDQB0YP2GkyYUtMZh8kYnxcEWBIHOg/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511844052-IMG_0195.PNG)
 
 接下来我们了解一下 FaaS 的生命周期，FaaS 的全称是 Functions as a Service，开发者只需要开发一个函数，然后这个函数会根据函数的访问量来自动的做一些收缩。FaaS 有触发器，就是从哪一方进行调用，比如：你在浏览器上请求一个 FaaS ，那么就是收到一个 HTTP 请求。又如说某个图片被上传到了腾讯云的 OSS 里面（OSS 是腾讯的存储服务），那么上传成功之后有一个回调消息，这个消息会去触发 FaaS 函数，这个就叫做 Webhook。还有一类物联网场景，比如温度采集器，测量到温度之后，会有一种 Pub/Sub 这种消息模型，这种消息模型是异步的，也是会执行这样一个 FaaS 触发器。
 
@@ -71,7 +71,7 @@ On-Premises 的时候，机房所有的硬件、操作系统、容器、运行�
 
 ### 4）IaaS 模型
 
-### ![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLUC3ia6o8TwfDaoI61gic1z6CuXlbw5SiaTISvvCFibCoXXbnZHDPiabuPKA/640?wx_fmt=png) 
+### ![img](https://img.serverlesscloud.cn/2020318/1584511972180-IMG_0193.JPG)
 
 首先，我们先来看 IaaS 模型。分别从四个视角来看一下 IaaS 的整体架构：
 
@@ -96,7 +96,7 @@ On-Premises 的时候，机房所有的硬件、操作系统、容器、运行�
 
 ### 5）CaaS 容器模型
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLQwZTicyBQVaYqibrul8fwiaAajvHt5eTesJwat1XqYk3xZV8QUH9xj8bw/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511844049-IMG_0195.PNG)
 
 随着技术迭代，进入到了容器模型的时代，企业的运维需要管理更多的产品矩阵及服务的稳定。首先是各种各样的服务发现、Container Runtime、包括整个容器集群的管理，还有一些安全性问题、性能问题，基于角色的访问控制（RBAC）、 LDAP/AD 的管理、以及 SSO 的实现等。
 
@@ -104,7 +104,7 @@ On-Premises 的时候，机房所有的硬件、操作系统、容器、运行�
 
 ### 6）Serverless 模型
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLBxibC38D21QyGAslabiat4bnkmliagYzWibXiaSPnNg7CMQ7DRF1nsfgsLw/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020318/1584511844056-IMG_0195.PNG)
 
 行业逐步发展到了今天的 Serverless 模型，在之前模型下客户需要操心很多的组件。但是，进入Serverless 模型后，客户仅需要关心是「业务代码」，设计好自己的业务模型，把代码部署到云服务中，就可以完成所有的复杂的一系列的部署、运维、监控等操作。
 
