@@ -54,6 +54,11 @@ const navList: { title: string; link: string; isInternal?: boolean }[] = [
     isInternal: true,
   },
   {
+    title: '活动',
+    link: '/meetup',
+    isInternal: true,
+  },
+  {
     title: '论坛',
     link: '/forum',
     isInternal: true,
