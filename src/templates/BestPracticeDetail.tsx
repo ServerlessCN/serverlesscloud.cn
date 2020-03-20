@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {graphql} from 'gatsby'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
-import {Box, BackgroundProps, Text, InlineBlock} from '@src/components/atoms'
+import {Box, BackgroundProps, InlineBlock} from '@src/components/atoms'
 import {Blog, GraphqlBlogResult} from '@src/types'
 import styled from 'styled-components'
 import Markdown from '@src/components/Markdown'

@@ -2,7 +2,6 @@ import * as React from 'react'
 import {
   Row,
   Background,
-  Text,
   Container,
   Image,
   InlineBlock,

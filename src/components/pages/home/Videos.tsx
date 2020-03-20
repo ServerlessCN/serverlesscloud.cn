@@ -1,6 +1,5 @@
 import * as React from 'react'
-import {Container, Box, Row} from '@src/components/atoms'
-import theme from '@src/constants/theme'
+import {Container, Box} from '@src/components/atoms'
 import {Link} from 'gatsby'
 import video1 from '@src/assets/images/video1.png'
 import video2 from '@src/assets/images/video2.png'

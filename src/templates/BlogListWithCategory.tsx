@@ -4,13 +4,10 @@ import Layout from '@src/layouts'
 import List from '@src/components/pages/blogList/List'
 import Category from '@src/components/pages/blogList/CategoryList'
 import { GraphqlBlogResult } from '@src/types'
-import Breadcrumbs from '@src/components/Breadcrumbs'
 import Helmet from '@src/components/Helmet'
 import {
-  baseCategoryUrl,
   generateCategoryText,
 } from '@src/components/Link/CategoryLink'
-import Content from '@src/components/Content'
 
 interface Props {
   data: {

@@ -1,15 +1,11 @@
 import * as React from 'react'
 import {
   Center,
-  Text,
   Background,
   Container,
   Box,
   Image,
-  Row,
-  Button
 } from '@src/components/atoms';
-import {debounce} from '@src/utils'
 import theme from '@src/constants/theme'
 import {CheckIfDesktopContext} from '@src/contexts'
 import Swiper from '@src/components/Swiper'

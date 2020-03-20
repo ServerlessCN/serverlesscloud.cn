@@ -1,12 +1,7 @@
 import * as React from 'react'
 import {
-  Flex,
-  Text,
   Container,
   Box,
-  Background,
-  Button,
-  Row
 } from '@src/components/atoms'
 import './AboutUs.css'
 import zhihu from '@src/assets/images/Zhihu_icon.png'

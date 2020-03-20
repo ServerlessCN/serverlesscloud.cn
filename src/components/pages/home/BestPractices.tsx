@@ -1,16 +1,8 @@
 import * as React from 'react'
 import {
-  Flex,
-  Button,
-  Background,
   Container,
-  Center,
   Box,
-  Row
-
 } from '@src/components/atoms'
-import theme from '@src/constants/theme'
-import {MainTitle} from '@src/components/pages/home/Title'
 import {StaticQuery, graphql, Link} from 'gatsby'
 import {Blog, GraphqlBlogResult} from '@src/types'
 import BlogCard from './BlogCard'

@@ -1,9 +1,7 @@
 import * as React from 'react'
-import { Box, Row, Background, Container} from '@src/components/atoms'
-import theme from '@src/constants/theme'
+import { Box} from '@src/components/atoms'
 import {Link} from 'gatsby'
 import './Activitys.css'
-import * as classnames from 'classnames';
 
 interface Activity {
   cover : string

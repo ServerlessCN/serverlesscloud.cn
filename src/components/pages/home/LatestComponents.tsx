@@ -1,7 +1,5 @@
 import * as React from 'react'
 import {Container, Box} from '@src/components/atoms'
-import theme from '@src/constants/theme'
-import {Link} from 'gatsby'
 import ExternalLink from '@src/components/Link/ExternalLink'
 import ComponentCard from './ComponentCard'
 import componentConfig from '@src/constants/componentConfig'

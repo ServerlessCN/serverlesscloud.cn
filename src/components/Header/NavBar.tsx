@@ -1,7 +1,6 @@
 import * as React from 'react'
-import { Flex, Container, Text } from '@src/components/atoms'
+import { Flex, Container } from '@src/components/atoms'
 import { debounce } from '@src/utils'
-import { Link } from 'gatsby'
 import ExternalLink from '../Link/ExternalLink'
 import NavButton from './NavButton'
 import NavList from './NavList'

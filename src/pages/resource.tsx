@@ -1,20 +1,13 @@
 import * as React from 'react'
 import Layout from '@src/layouts'
-import {Box, Flex, Container, Background, Text} from '@src/components/atoms'
+import {Container} from '@src/components/atoms'
 import Helmet from '@src/components/Helmet'
 import styled from 'styled-components'
-import Breadcrumbs from '@src/components/Breadcrumbs'
 import './resource.css'
 
 interface Props {
     location : string
 }
-
-const CustomContainer = styled(Container)`
-  flex: 1;
-  display: flex;
-  padding: 30px;
-`
 
 const resource : {
     title : string

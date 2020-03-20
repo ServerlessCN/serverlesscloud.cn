@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text, TextProps, Heading1 } from '@src/components/atoms'
+import { Text, TextProps } from '@src/components/atoms'
 import theme from '@src/constants/theme'
 
 const defaultColor = theme.colors.black

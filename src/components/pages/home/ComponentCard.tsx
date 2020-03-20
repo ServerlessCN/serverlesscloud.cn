@@ -1,8 +1,6 @@
 import * as React from 'react'
-import theme from '@src/constants/theme'
 import {Component} from '@src/types'
 import ExternalLink from '@src/components/Link/ExternalLink'
-import {Link} from 'gatsby'
 import './ComponentCard.css'
 import { Box } from '../../atoms/Box/index';
 

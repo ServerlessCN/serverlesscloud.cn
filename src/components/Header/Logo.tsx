@@ -1,5 +1,4 @@
 import * as React from 'react'
-import logo from '@src/assets/images/icon-serverless-framework.png'
 
 import {Link} from 'gatsby'
 import {  Row } from '@src/components/atoms'
