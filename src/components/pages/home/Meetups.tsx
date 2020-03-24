@@ -1,10 +1,11 @@
 import * as React from 'react'
-import crypto from 'crypto'
 import {Box} from '@src/components/atoms'
 import {StaticQuery, graphql, Link} from 'gatsby'
 import {Blog, GraphqlBlogResult} from '@src/types'
-import './LatestBlogs.css'
-import BlogLists from '@src/constants/blog.json'
+import {formateDate} from '@src/utils'
+import { debounce } from '@src/utils'
+
+import './Meetups.css'
 
 type LatestBlog = Blog
 
@@ -12,275 +13,141 @@ interface Props {
   blogs : LatestBlog[]
 }
 
-function BlogCard({blog} : {
+function BlogCard({history,blog} : {
   blog: Blog
+  history:boolean
 }) {
-  var md5 = crypto.createHash('md5');
-  var id = md5.update(blog.node.fields.slug).digest('hex');
-  return (
-    <Box className="scf-article-item scf-article-item--block">
-      <Link to={blog.node.fields.slug} data-id={id}>
-        <Box className="scf-article-item__img">
-          <Box className="scf-article-item__img-inner">
+ return (
+    <Box className="scf-meetup-item" key={blog.node.id} >
+      <Link to={blog.node.fields.slug}>
+        <div className="scf-meetup">
+          <div className={!history?"scf-meetup_future scf-meetup_date":"scf-meetup_date"}>
+            <p>{formateDate(blog.node.frontmatter.date, true, '.')}</p>
+          </div>
+          <div className="scf-meetup-content">
+            <h5>{blog.node.frontmatter.title}</h5>
+            <p>{blog.node.frontmatter.description}</p>
+            <div className="meetup-content_location">
+              <i className="scf-icon scf-icon-map">{blog.node.frontmatter.location}</i>
+            </div>
+          </div>
+        </div>
+        <Box className="scf-meetup-item__img">
+          <Box className="scf-meetup-item__img-inner">
             <img src={blog.node.frontmatter.thumbnail} alt=""/>
           </Box>
-        </Box>
-        <Box className="scf-article-item__content">
-          <Box className="scf-article-item__statistics">
-            <span className="scf-blog-item-pv-icon">
-              <i className="scf-icon scf-icon-view"></i>
-              </span>
-            {blog.node.frontmatter.authors}
-            · {blog
-              .node
-              .frontmatter
-              .date
-              .slice(2, 10)}
-            <span className='scf-article-item__statistics__timeToRead'>· 阅读大约需要{blog.node.timeToRead}分钟</span></Box>
-          <Box className="scf-article-item__title">
-            <h4>{blog.node.frontmatter.title}</h4>
-          </Box>
-          <Box className="scf-article-item__intro">{blog.node.frontmatter.description}</Box>
         </Box>
       </Link>
     </Box>
   )
 }
 
-function HotBlogs() {
-  return (
-    <Box className="scf-box__body" id="scf-box-hot-blogs">
-      loading...
-    </Box>
-  )
+function Meetups(Props) {
+  const query = graphql `{
+  meetups: allMarkdownRemark(sort: {fields: frontmatter___date, order: ASC}, limit: 6, filter: {fileAbsolutePath: {regex: "//blog//"}, frontmatter: {categories: {in: "meetup"},  time: {in: "future"}}}) {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          thumbnail
+          thumbnail
+          authors
+          description
+          date
+          location
+        }
+        fileAbsolutePath
+        fields {
+          slug
+        }
+      }
+    }
+  }
+  historyMeetups: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, limit: 6, filter: {fileAbsolutePath: {regex: "//blog//"}, frontmatter: {categories: {in: "meetup"},  time: {nin: "future"}}}) {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          thumbnail
+          thumbnail
+          authors
+          description
+          date
+          location
+        }
+        fileAbsolutePath
+        fields {
+          slug
+        }
+      }
+    }
+  }
 }
-
-function Blogs() {
-  const query = graphql `query { blogs: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 6 filter: { fileAbsolutePath: { regex: "//blog//" } frontmatter: { categories: { nin: "best-practice" } } } ) { edges { node { id frontmatter { title thumbnail thumbnail
-  authors description date } timeToRead fileAbsolutePath fields { slug } } } } } `
+ `;
+ 
   return (
     <StaticQuery
       query={query}
-      render={({blogs} : {
-      blogs: GraphqlBlogResult
+      render={({meetups,historyMeetups} : {
+        meetups: GraphqlBlogResult,
+      historyMeetups: GraphqlBlogResult
     }) => {
       return (
-        <Box className="scf-box__body" id="scf-box-lateat-blogs">
-          {blogs
-            .edges
-            .map(blog => (<BlogCard key={blog.node.id} blog={blog}/>))}
+        <Box className="scf-meetup__body">
+          <Box className="timeline">
+            {Props.history?historyMeetups
+              .edges
+              .map(blog => (<BlogCard key={blog.node.id} blog={blog} {...Props} />))
+            :meetups
+              .edges
+              .map(blog => (<BlogCard key={blog.node.id} blog={blog} history={false} />))}
+          </Box>
         </Box>
       )
     }}/>
   )
 }
 
+export default function (Props) {
 
-
-export default function () {
+  const [isShowAll,
+    setIsShowAll] = React.useState(false)
 
   React.useEffect(() => {
-    function sortFun() {
-      return function(src, tar) {
-          var v1 = Object.values(src)[0];
-          var v2 = Object.values(tar)[0];
-          if (v1 > v2) {
-              return -1;
-          }
-          if (v1 < v2) {
-              return 1;
-          }
-          return 0;
-      };
-    }
+    setIsShowAll(false)
+  }, [])
 
-    
-    const blogHash = {};
-    for (var i = 0; i < BlogLists.length; ++i) {
-      const item = BlogLists[i].node;
-      var md5 = crypto.createHash('md5');
-      var id = md5.update(item.fields.slug).digest('hex');
-      blogHash[id] = item;
-    }
-
-
-    function getBlogPv(fn) {
-      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?src=' + document.location.hostname;
-      fetch(api)
-          .then((response) => response.json() )
-          .then((response)=>{
-        
-            fn(null, response);
-          })
-          .catch((error)=>{
-            fn(error, null);
-          });
-    }
-
-
-    function buildHotBlogBody(hotBlogList, blogHash) {
-      const temp = '<div class="Box-jLJQJw evQvdc scf-article-item scf-article-item--block"> \
-        <a href="{LINK}" data-id="{ID}"> \
-          <div class="Box-jLJQJw evQvdc scf-article-item__img"> \
-            <div class="Box-jLJQJw evQvdc scf-article-item__img-inner"><img src="{IMG}" alt="" /></div> \
-          </div> \
-          <div class="Box-jLJQJw evQvdc scf-article-item__content"> \
-            <div class="Box-jLJQJw evQvdc scf-article-item__statistics"><span class="scf-blog-item-pv-icon"><i class="scf-icon scf-icon-view"></i></span>{PV} · {AUTHOR} · {DATE}<span class="scf-article-item__statistics__timeToRead"> · 阅读大约需要{READTIME}分钟</span></div>\
-            <div class="Box-jLJQJw evQvdc scf-article-item__title"><h4>{TITLE}</h4></div>\
-            <div class="Box-jLJQJw evQvdc scf-article-item__intro">{DESC}</div>\
-          </div>\
-        </a>\
-      </div>';
-
-      let htmlBody = '';
-      let n = 6;
-
-      for (var i = 0; i < hotBlogList.length && n > 0; i++) {
-        const id = Object.keys(hotBlogList[i])[0];
-        let pv;
-        if (Object.values(hotBlogList[i])[0] < 1000) {
-          pv = Object.values(hotBlogList[i])[0];
-        } else {
-          pv = Object.values(hotBlogList[i])[0] / 1000;
-          pv = pv.toFixed(1) + 'K';
-        }
-        const blogItem = blogHash[id];
-        if (!blogItem) 
-          continue;
-
-        const buildBody = temp.replace('{LINK}', blogItem.fields.slug)
-          .replace('{IMG}', blogItem.frontmatter.thumbnail)
-          .replace('{PV}', pv)
-          .replace('{ID}', id)
-          .replace('{AUTHOR}', blogItem.frontmatter.authors.join(','))
-          .replace('{READTIME}', blogItem.timeToRead)
-          .replace('{DATE}', blogItem.frontmatter.date.substr(0, 10))
-          .replace('{TITLE}', blogItem.frontmatter.title)
-          .replace('{DESC}', blogItem.frontmatter.description);
-        htmlBody += buildBody;
-        n--;
-      }
-      return htmlBody;
-    }
-
-
-    function updateLatestBlogPv(blogPvs) {
-      const latestBlogChilds = document.getElementById('scf-box-lateat-blogs').children;
-      for (var i = 0; i < latestBlogChilds.length; ++i) {
-        const id = latestBlogChilds[i].children ? latestBlogChilds[i].children[0].getAttribute('data-id') : null;
-        if (!id) continue;
-        let pv = blogPvs[id];
-        if (!pv) {
-          pv = Math.ceil(Math.random() * 100);
-        }
-
-        if (!latestBlogChilds[i].children[0].children[1] || !latestBlogChilds[i].children[0].children[1].children[0]) continue;
-
-        const titleDom = latestBlogChilds[i].children[0].children[1].children[0];
-        const oldHtml = titleDom.innerHTML;
-        const idx = oldHtml.indexOf('</span>');
-        const text = oldHtml.substr(idx + 7);
-        const html = oldHtml.substr(0, idx + 7);
-        if (text && html) {
-          let newHtml;
-          if (pv < 1000) {
-            newHtml = html + pv + ' · ' + text;
-          } else {
-            newHtml = html + (pv/1000).toFixed(1) + 'K · ' + text;
-          }
-          if (isNaN(parseFloat(text))){
-            titleDom.innerHTML = newHtml;
-          }
-        }
-      }
-    }
-
-    function updateHomeBest(blogPvs) {
-      const bestList = document.getElementById('scf-box-home-best-practices');
-      if (!bestList) return;
-      const links = bestList.getElementsByTagName('A');
-
-      for (var i = 0; i < links.length; ++i) {
-        const id = links[i].getAttribute('data-id');
-        if (!id) continue;
-        let pv = blogPvs[id] || Math.ceil(Math.random() * 100);
-        if (pv >= 1000) {
-          pv = (pv/1000).toFixed(1) + 'K';
-        }
-        const icons = links[i].getElementsByClassName('scf-icon');
-        if (!icons) continue;
-        icons[0].innerHTML = pv;
-      }
-    }
-
-    getBlogPv(function(error, response) {
-      if (error || response.error) {
-        console.log(error || response.error);
-        return;
-      }
-      const hotBlogList = [];
-      for (let k in response.message) {
-        const item = {};
-        item[k] = response.message[k];
-        hotBlogList.push(item);
-      }
-      hotBlogList.sort(sortFun());
-
-      updateLatestBlogPv(response.message);
-      updateHomeBest(response.message);
-
-      let hotBlogs = document.getElementById('scf-box-hot-blogs');
-      hotBlogs.innerHTML = buildHotBlogBody(hotBlogList, blogHash);
-    })
-    
-
-    let blogs = document.getElementById('scf-box-page-blog-top').children;
-    let blogTabsBtn = document.getElementById('scf-blog-tab').children;
-    const tabOnClick = function(n) {
-      for (var i = 0; i < blogTabsBtn.length; ++i) {
-        if (i != n) 
-          blogTabsBtn[i].classList.remove('is-active');
-
-      }
-      blogTabsBtn[n].classList.add('is-active');
-      for (var i = 1; i < blogs.length; ++i) {
-        if (i != n + 1)
-          blogs[i].style.display = 'none';
-        else 
-          blogs[i].style.display = 'block';
-      }
-    }
-
-    for (var i = 0; i < blogTabsBtn.length; ++i) {
-      (function (i){
-        blogTabsBtn[i].onclick = function(){
-          tabOnClick(i)
-        };
-      })(i)
-    }
-    
-  });
-
+  const onToggleShow = () => {
+    setIsShowAll(true)
+  }
   return (
     <Box className="scf-grid__item-16">
-      <Box className="scf-grid__box">
-        <Box className="scf-box scf-home-blog" id="scf-box-page-blog-top">
+      <Box className="">
+        <Box className="scf-box scf-home-blog">
           <Box className="scf-box__header">
             <Box className="scf-box__header-title">
-              <h3>博客</h3>
-              <Box className="scf-box__header-segment" id="scf-blog-tab">
-                <a className={`scf-box__header-segment-item is-active`}>最新</a>
-                <a className={`scf-box__header-segment-item`}>最热</a>
-              </Box>
-            </Box>
-            <Box className="scf-box__header-more">
-              <Link to="/blog">
-                更多博客 &gt;
-              </Link>
+              <h3>近期活动</h3>
             </Box>
           </Box>
-          <Blogs/>
-          <HotBlogs/>
+          <Meetups/>
+        </Box>
+      </Box>
+      <Box className={isShowAll?"showAll":""} >
+        <Box className="scf-box scf-home-blog scf-meetup-history">
+          <Box className="scf-box__header">
+            <Box className="scf-box__header-title">
+              <h3>往期活动</h3>
+            </Box>
+          </Box>
+          <Meetups history={true} />
+          {!isShowAll
+            ? <Box className="scf-detail__show-more">
+                <Box className="scf-detail__mask"></Box>
+                <button className="scf-btn scf-btn--line" onClick={onToggleShow}>查看更多活动</button>
+              </Box>
+            : null}
         </Box>
       </Box>
     </Box>

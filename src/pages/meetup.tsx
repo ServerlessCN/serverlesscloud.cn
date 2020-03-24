@@ -2,8 +2,8 @@ import * as React from 'react'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
 import { Box, Container } from '@src/components/atoms'
 import Helmet from '@src/components/Helmet'
-import LatestBlogs from '@src/components/pages/home/LatestBlogs'
-import Activitys from '@src/components/pages/home/Activitys'
+import Meetups from '@src/components/pages/home/Meetups'
+import AuthorDetail from '@src/components/pages/home/AuthorDetail'
 
 interface Props {
   location: any
@@ -18,14 +18,14 @@ const ForumPage = ({ location }: Props) => {
         title="论坛 - Serverless"
         location={location}
       />
-      <Container
-      width={[ 1, 1, 1, 1, 0.76, 1200 ]}
-      px={0}>
+      <Box className="scf-page-blog scf-layout-pattern">
+      <Container width={[ 1, 1, 1, 1, 0.76, 1200 ]}>
       <Box className="scf-grid">
-        <LatestBlogs/>
-        <Activitys/>
+        <Meetups />
+        <AuthorDetail/>
       </Box>
     </Container>
+    </Box>
     </Layout>
   )
 }

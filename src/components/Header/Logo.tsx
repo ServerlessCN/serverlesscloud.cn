@@ -12,7 +12,7 @@ export default function ({logoHeight} : Props) {
   return (
     <Link to="/">
     <Row
-        minWidth={['auto', 'auto', '320px']}
+        minWidth={['auto', 'auto', '280px']}
         alignItems="center"
         height={logoHeight}
       >

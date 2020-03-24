@@ -83,8 +83,6 @@ interface State {
 
 function Blogs(props) {
 
-  // const query = graphql`query { blogs: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 999999 filter: { fileAbsolutePath: { regex: "//best-practice// | //blog//" } frontmatter: { categories: { nin: "best-practice" } } } ) { edges { node { id frontmatter { title thumbnail thumbnail
-  // authors description date } fileAbsolutePath fields { slug } } } } } `
   const query = graphql`query { blogs: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 999999 filter: { fileAbsolutePath: { regex: "//blog//" } } ) { edges { node { id frontmatter { title thumbnail thumbnail
   authors description date } fileAbsolutePath fields { slug } } } }, bests: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 999999 filter: { fileAbsolutePath: { regex: "//best-practice//" } } ) { edges { node { id frontmatter { title thumbnail thumbnail
   authors description date } fileAbsolutePath fields { slug } } } } } `
@@ -163,7 +161,7 @@ export default class NavList extends React.Component<Props, State> {
     const { isActive, isDesktopView } = this.props
     const isMobileNavListDisplay = () => (isActive ? 'block' : 'none')
 
-    const navListBoxWidth = isDesktopView ? 0.6 : 1
+    const navListBoxWidth = isDesktopView ? 0.69 : 1
     return (
       <BoxWithTextAlign
         width={navListBoxWidth}
@@ -181,7 +179,7 @@ export default class NavList extends React.Component<Props, State> {
         textAlign={isDesktopView ? 'right' : 'left'}
       >
 
-        <List p={0} mr={0} mb={0} style={{position:'relative'}}>
+        <List p={0} mr={0} mb={0} style={{position:'relative',marginRight:35}}>
           {navList.map(({ title, link, isInternal }, index) => {
             const color= (window as any).location.pathname.includes(link)?'#fff':theme.colors.gray_text;
             const Link = isInternal

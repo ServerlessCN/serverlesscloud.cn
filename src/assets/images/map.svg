@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>位置</title>
+    <desc>Created with Sketch.</desc>
+    <g id="位置" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组">
+            <rect id="矩形" x="0" y="0" width="20" height="20"></rect>
+            <path d="M10,1 C13.8659932,1 17,4.25377058 17,8.2675 C17,10.9433196 14.6666667,14.5208196 10,19 C5.33333333,14.5208196 3,10.9433196 3,8.2675 C3,4.25377058 6.13400675,1 10,1 Z M10,5 C8.34314575,5 7,6.34314575 7,8 C7,9.65685425 8.34314575,11 10,11 C11.6568542,11 13,9.65685425 13,8 C13,6.34314575 11.6568542,5 10,5 Z" id="形状结合" fill="#8C8C8C"></path>
+        </g>
+    </g>
+</svg>

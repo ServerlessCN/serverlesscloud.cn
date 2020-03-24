@@ -44,7 +44,7 @@ export default function({
 
   return (
     <Container
-      width={[1, 1, 1, 1, 0.76, 1200]}
+      width={[1, 1, 1, 0.76, 0.76, 1200]}
       px={0}
       // maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]
     >

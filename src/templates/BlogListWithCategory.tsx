@@ -42,7 +42,7 @@ const BlogList = ({
         <div className="scf-page-blog scf-layout-pattern">
           <div className="scf-home-block scf-blog-list">
             <div className="scf-home-block__inner">
-              <div id="scf-box-mobile-titlebar" class="scf-box__header-title">
+              <div id="scf-box-mobile-titlebar" className="scf-box__header-title">
                   <h3>博客</h3>
               </div>
               <div className="scf-box ">
@@ -57,10 +57,6 @@ const BlogList = ({
                     totalCount={totalCount}/>
                 </div>
               </div>
-             {/* <div className="scf-article-list-opeate">
-                <button className="scf-btn scf-btn--line">查看更多</button>
-              </div>
-              */}
             </div>
           </div>
         </div>
