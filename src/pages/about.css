@@ -27,7 +27,7 @@
   line-height: 26px;
   margin-bottom: 10px;
 }
-.scf-list--link .scf-list__text.is-active, .scf-list--link .scf-list__text:hover {
+.scf-list--link .scf-list__text.is-active, .scf-list--link .scf-list__text:hover, .scf-box-about-contributor-list ul li a:hover {
   color: #fe5751;
 }
 .scf-page-about-link__title {
@@ -43,6 +43,63 @@
   width:120px;
 }
 
+.scf-box-about-header {
+  margin-bottom: 40px;
+}
+
+.scf-box-about-contributor-list {
+  width: 100%;
+  overflow: hidden;
+}
+
+.scf-box-about-contributor-list ul, .scf-box-about-community-list ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.scf-box-about-contributor-list ul li {
+  margin: 0;
+  padding: 10px 0 0 0;
+  display: block;
+  float: left;
+  width: 16.5%;
+  height: 80px;
+}
+
+.scf-box-about-community-list ul li {
+  margin: 0;
+  padding: 10px 0;
+  display: block;
+  float: left;
+  width: 20%;
+  height: 80px;
+}
+
+.scf-box-about-contributor-list ul img {
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+
+.scf-box-about-contributor-desc, .scf-box-about-community-desc {
+  margin: 10px 0;
+}
+.scf-box-about-contributor-header-titile h3, .scf-box-about-community-header-titile h3 {
+  display: block;
+  width: 100px;
+  padding-left: 5px;
+}
+
+.scf-box-about-community {
+  margin-top: 50px;
+}
+
+.scf-box-about-community .scf-box-about-community-list {
+  margin-top: 20px;
+}
 
 @media screen and (max-width: 992px) {
   .scf-page-about .scf-grid__item-12:last-child {
@@ -56,6 +113,14 @@
     margin-top: 20px;
   }
 
+  .scf-box-about-contributor-list ul li, .scf-box-about-community-list ul li {
+    
+    width: 50%;
+  }
+  .scf-box-about-community-list ul li {
+    height: 80px;
+  }
+
   .scf-page-about {
     padding-top: 30px;
     padding-bottom: 50px;
@@ -65,5 +130,8 @@
     margin-bottom: 70px;
     float: left;
     margin-top: 10px;
+  }
+  .scf-box-about-header, .scf-box-about-contributor, .scf-box-about-community {
+    padding: 0 10px;
   }
 }
