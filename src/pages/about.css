@@ -68,18 +68,29 @@
   width: 16.5%;
   height: 80px;
 }
-
+.scf-box-about-community-list ul li:nth-child(5n) {
+  margin: 0 0 25px 0;
+}
 .scf-box-about-community-list ul li {
-  margin: 0;
-  padding: 10px 0;
+  margin: 0 5% 25px 0;
+  border: 1px solid #eee;
+  box-sizing: border-box;
   display: block;
   float: left;
-  width: 20%;
-  height: 80px;
+  width: 16%;
+  height: 70px;
   overflow: hidden;
 }
+
+.scf-box-about-community-list ul li a {
+  cursor: default;
+  display: block;
+  line-height: 70px;
+}
+
 .scf-box-about-community-list ul li img {
   width: 100%;
+  vertical-align: middle;
 }
 
 .scf-box-about-contributor-list ul img {
@@ -95,6 +106,7 @@
   display: block;
   width: 100px;
   padding-left: 5px;
+  font-size: 22px;
 }
 
 .scf-box-about-community {
@@ -117,12 +129,22 @@
     margin-top: 20px;
   }
 
-  .scf-box-about-contributor-list ul li, .scf-box-about-community-list ul li {
+  .scf-box-about-contributor-list ul li {
     
     width: 50%;
   }
+  .scf-box-about-community-list ul li:nth-child(2n) {
+    margin: 0 0 15px 10% !important;
+    /*margin-left: 10%;*/
+  }
+
   .scf-box-about-community-list ul li {
-    height: 80px;
+    width: 45%;
+    margin-right: 0;
+    margin-bottom: 15px;
+    height: 60px;
+    border: 1px solid #eee;
+    box-sizing: border-box;
   }
 
   .scf-page-about {
