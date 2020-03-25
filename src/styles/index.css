@@ -607,7 +607,7 @@ a:hover {
 }
 .scf-container-header-btn {
   position: relative;
-  display: none;
+  display: block;
   width: 100%;
   top: -40px;
 } 
