@@ -1,6 +1,7 @@
 ---
 title: Serverless 的资源评估与成本探索
 description: 本文介绍了使用 Serverless 架构布局业务时，需要关注的资源和费用
+keywords: Serverless 架构,Serverless 布局业务,Serverless 资源评估
 date: 2019-12-10
 thumbnail: https://img.serverlesscloud.cn/2020114/1579000616928-HEAD.png
 categories:

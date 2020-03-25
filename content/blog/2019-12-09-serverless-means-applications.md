@@ -1,6 +1,7 @@
 ---
 title: 深入浅出 Serverless：优势、意义与应用
 description: 本文对 Serverless 的前瞻和落地应用进行了深入却易懂的诠释
+keywords: Serverless 优势,Serverless 意义,Serverless 应用
 date: 2019-12-09
 thumbnail: https://img.serverlesscloud.cn/20191227/1577411056121-v2-a72ab46370bfdcd6d32b65b592ab4552_1200x500.jpg
 categories:

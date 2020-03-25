@@ -1,6 +1,7 @@
 ---
 title: "Serverless 设计理念：从头创建品牌标识"
 description: "如何在开源技术社区中做设计？本文来自 Serverless 团队中首席设计的分享 —— 展现了设计过程，供想要创建可靠品牌标识（无论是从头创建品牌标识，还是希望改进现有标识）的设计师参考。"
+keywords: Serverless 开源技术社区,Serverless 品牌标识,Serverless 设计理念
 date: 2018-09-03
 thumbnail: 'https://img.serverlesscloud.cn/20191212/1576153272752-serverless-design-andre-thumb.jpg'
 categories:

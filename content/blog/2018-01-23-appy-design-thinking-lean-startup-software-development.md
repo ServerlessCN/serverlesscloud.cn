@@ -1,6 +1,7 @@
 ---
 title: "如何将设计思维应用到精益初创公司的软件开发中"
 description: "关于将设计思维与敏捷开发相结合的尝试 —— 成功与失败剖析"
+keywords: Serverless 设计思维,Serverless 敏捷开发
 date: 2018-01-24
 thumbnail: 'https://main.qcloudimg.com/raw/4c101fcf0be63a70e0aa992da17dd955.png'
 categories:

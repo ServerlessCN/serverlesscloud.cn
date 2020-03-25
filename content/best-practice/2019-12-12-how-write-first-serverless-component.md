@@ -1,6 +1,7 @@
 ---
 title: 如何开发自己的第一个 Serverless Component
 description: 我们分享了不少基于 Component 的最佳实践案例，本文教你如何自己开发一个 Component！
+keywords: Serverless Component,最佳实践案例,开发Component,实践案例
 date: 2019-12-12
 thumbnail: https://img.serverlesscloud.cn/20191230/1577673977066-16ef85f25ee1af09.jpg
 categories:

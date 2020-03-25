@@ -1,6 +1,7 @@
 ---
 title: 实验室站迁移 Serverless 之路（上）
 description: 本文为 Serverless 社区成员撰稿。作者高晨远，研发工程师，熟悉 Python 开发，常写 Web 和爬虫
+keywords: Serverless Flask 框架,Serverless 框架,Serverless 迁移方案
 date: 2020-03-09
 thumbnail: https://img.serverlesscloud.cn/2020318/1584510373593-lab.jpg
 categories:

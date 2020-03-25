@@ -1,6 +1,7 @@
 ---
 title: 基于 Serverless 的 VuePress 极简静态网站
 description: 通过 Serverless Website 组件快速构建一个 VuePress 极简静态网站
+keywords: VuePress,静态网站管理系统,VuePress 极简静态网站
 date: 2020-02-04
 thumbnail: https://img.serverlesscloud.cn/2020219/1582115734254-VuePress_2_%E9%95%BF%E5%89%AF%E6%9C%AC.png
 categories:

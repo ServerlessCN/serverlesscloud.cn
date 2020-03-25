@@ -1,6 +1,7 @@
 ---
 title: 通过 SCF Component 轻松构建 REST API，再也不用熬夜加班了
 description: 本教程将分享如何通过 Serverless SCF Component 、云函数 SCF 及 API 网关组件，快速构建一个 REST API 并实现 GET/PUT 操作。
+keywords: SCF Component,REST API,构建 REST API,Serverless SCF Component
 date: 2019-12-03
 thumbnail: https://img.serverlesscloud.cn/2020115/1579074115778-1577347088399-website_fang.png
 categories:
