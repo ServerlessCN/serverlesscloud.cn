@@ -41,7 +41,7 @@ export default function({
                   }
                 >
                   <Container
-                    width={[1, 1, 1, 1, 1216]}
+                  width={[1, 1, 1, 912, 0.76, 1200]}
                     maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}
                   >
                     <Flex
