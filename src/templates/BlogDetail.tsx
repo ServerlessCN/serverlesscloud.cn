@@ -1,8 +1,7 @@
 import * as React from 'react'
-import {graphql} from 'gatsby'
 import crypto from 'crypto'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
-import {Box, InlineBlock} from '@src/components/atoms'
+import {Box, InlineBlock,Container} from '@src/components/atoms'
 import Helmet from '@src/components/Helmet'
 import {Blog, GraphqlBlogResult} from '@src/types'
 import styled from 'styled-components'
@@ -101,7 +100,9 @@ const BlogDetail = ({data: {
       <Box className="scf-content" style={{marginTop:0}}>
         <Box className="scf-page-blog-detail scf-layout-pattern">
           <Box className="scf-home-block">
-            <Box className="scf-home-block__inner">
+            <Container
+              width={[1, 1, 1, 912, 0.76, 1200]}
+              px={0}>
               <Box className="scf-detail">
                 <Box className="scf-grid scf-detail__content">
                   <Box className="scf-grid__item-18">
@@ -156,14 +157,16 @@ const BlogDetail = ({data: {
                   <BlogCatalogs html={currentBlog.tableOfContents}/>
                 </Box>
               </Box>
-            </Box>
+              </Container>
           </Box>
           <Box className="scf-home-block">
-            <Box className="scf-home-block__inner">
+            <Container
+              width={[1, 1, 1, 912, 0.76, 1200]}
+              px={0}>
               <Box className="scf-grid">
                 <RecommandRead/><Activitys/>
               </Box>
-            </Box>
+              </Container>
           </Box>
         </Box>
       </Box>

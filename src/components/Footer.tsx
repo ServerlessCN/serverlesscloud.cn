@@ -111,7 +111,10 @@ export default function () {
     <Column>
       <Background width={[1]} background={theme.colors.gray[0]}>
         <div className="scf-footer">
-          <div className="scf-footer__inner">
+          <Container
+          className="scf-footer__inner"
+            width={[1, 1, 1, 912, 0.76, 1200]}
+            px={0}>
             <div className="scf-footer__left">
               <div className="scf-display-flex">
                 {links.map(({category, contents}) => (
@@ -150,8 +153,12 @@ export default function () {
                 ))}
               </div>
             </div>
-          </div>
-          <div className="scf-footer__inner">
+          </Container>
+          <Container
+            width={[1, 1, 1, 912, 0.76, 1200]}
+            px={0}
+            className="scf-footer__inner"
+            >
             <div className="scf-footer__left">
               <div className="scf-logo-wrap">
                 <span className="scf-logo-zh is-dark"></span>
@@ -180,7 +187,7 @@ export default function () {
               <p className="scf-footer__copyright">Copyright © 2020 ServerlessCloud. All rights reserved</p>
               <p className="scf-footer__copyright">Powered by Serverless Framework</p>
             </div>
-          </div>
+          </Container>
 
         </div>
       </Background>

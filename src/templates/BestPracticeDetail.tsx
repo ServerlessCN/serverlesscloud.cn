@@ -1,7 +1,6 @@
 import * as React from 'react'
-import {graphql} from 'gatsby'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
-import {Box, BackgroundProps, InlineBlock} from '@src/components/atoms'
+import {Box, BackgroundProps, InlineBlock,Container} from '@src/components/atoms'
 import {Blog, GraphqlBlogResult} from '@src/types'
 import styled from 'styled-components'
 import Markdown from '@src/components/Markdown'
@@ -104,7 +103,9 @@ const BestPracticeDetail = ({
       <Box className="scf-content" style={{marginTop:0}}>
         <Box className="scf-page-blog-detail scf-layout-pattern">
           <Box className="scf-home-block">
-            <Box className="scf-home-block__inner">
+            <Container
+            width={[1, 1, 1, 912, 0.76, 1200]}
+              px={0}>
               <Box className="scf-detail">
                 <Box className="scf-grid scf-detail__content">
                   <Box className="scf-grid__item-18">
@@ -145,14 +146,16 @@ const BestPracticeDetail = ({
                   <BlogCatalogs html={currentBlog.tableOfContents}/>
                 </Box>
               </Box>
-            </Box>
+              </Container>
           </Box>
           <Box className="scf-home-block">
-            <Box className="scf-home-block__inner">
+            <Container
+              width={[1, 1, 1, 912, 0.76, 1200]}
+              px={0}>
               <Box className="scf-grid">
                 <RecommandRead/><Activitys/>
               </Box>
-            </Box>
+            </Container>
           </Box>
         </Box>
       </Box>

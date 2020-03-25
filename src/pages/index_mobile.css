@@ -2,9 +2,22 @@
   .swiper-container-horizontal>.swiper-pagination-bullets {
     width: auto !important;
   }
+  .scf-Blog-Category{
+    margin-top: 0px !important;
+    flex: 1 1;
+  }
 }
 
 @media screen and (max-width: 992px) {
+  .scf-content{
+    margin-top: 0px !important;
+  }
+
+  .scf-Blog-Category{
+    flex: 1 1;
+    margin-top: 90px !important;
+  }
+
   .scf-box {
     margin-top: 0px !important;
   }
@@ -105,7 +118,7 @@
   }
 
   .scf-grid__item-12 {
-    width: 100%;
+    width: 100% !important;
   }
 
   .scf-video-item img,
@@ -415,5 +428,7 @@
     line-height: 24px;
     font-weight: 600;
   }
+
+ 
   
 }
