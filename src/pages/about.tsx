@@ -49,7 +49,7 @@ const AboutPage = () => {
               <Box className="scf-box-about-contributor">
                 <Box className="scf-box-about-contributor-header-titile"><h3 class="scf-box__header-title">贡献者</h3></Box>
                 <Box className="scf-box-about-contributor-desc">
-                  <p>
+                  <p className="acf-page-about__text">
                     Serverless 中文网在社区伙伴的共同维护下而愈加丰富多彩，我们在此致敬做出过贡献的所有社区成员。
                   </p>
                 </Box>
