@@ -1,8 +1,9 @@
-@media screen and (min-width: 993px) {
-.swiper-container-horizontal>.swiper-pagination-bullets {
-  width: auto !important;
+@media screen and (min-width: 992px) {
+  .swiper-container-horizontal>.swiper-pagination-bullets {
+    width: auto !important;
+  }
 }
-}
+
 @media screen and (max-width: 992px) {
   .scf-box {
     margin-top: 0px !important;
@@ -385,4 +386,34 @@
     width: 100%;
     border-radius: 5px;
   }
+
+  /* 活动页 */
+  .scf-meetup .scf-meetup-content {
+    width: 65% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .scf-meetup .scf-meetup_date {
+    width: 25% !important;
+  }
+
+  .timeline:before {
+    /* left: calc(150px + 12px); */
+    left: calc(25% + 12px) !important;
+
+  }
+
+  .scf-meetup-item__img {
+    display: none !important;
+  }
+
+  .scf-activity__content {
+    font-size: 16px;
+    color: #23282D;
+    letter-spacing: 0;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  
 }

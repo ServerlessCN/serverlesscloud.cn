@@ -1,16 +1,8 @@
 import * as React from 'react'
 import {
-  Flex,
-  Button,
-  Background,
   Container,
-  Center,
   Box,
-  Row
-
 } from '@src/components/atoms'
-import theme from '@src/constants/theme'
-import {MainTitle} from '@src/components/pages/home/Title'
 import {StaticQuery, graphql, Link} from 'gatsby'
 import {Blog, GraphqlBlogResult} from '@src/types'
 import BlogCard from './BlogCard'
@@ -50,14 +42,7 @@ export default function () {
       return (
         <Box className="scf-best-practices">
         <Container
-          width={[
-          1,
-          1,
-          1,
-          1,
-          0.76,
-          1200
-        ]}
+        width={[1, 1, 1, 912, 0.76, 1200]}
           px={0}
           pt={30}>
             <Box className="scf-box__header">

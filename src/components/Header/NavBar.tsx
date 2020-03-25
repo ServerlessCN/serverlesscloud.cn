@@ -1,7 +1,6 @@
 import * as React from 'react'
-import { Flex, Container, Text } from '@src/components/atoms'
+import { Flex, Container } from '@src/components/atoms'
 import { debounce } from '@src/utils'
-import { Link } from 'gatsby'
 import ExternalLink from '../Link/ExternalLink'
 import NavButton from './NavButton'
 import NavList from './NavList'
@@ -45,7 +44,7 @@ export default function({
 
   return (
     <Container
-      width={[1, 1, 1, 1, 0.76, 1200]}
+    width={[1, 1, 1, 912, 0.76, 1200]}
       px={0}
       // maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]
     >

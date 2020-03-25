@@ -1,20 +1,13 @@
 import * as React from 'react'
 import Layout from '@src/layouts'
-import {Box, Flex, Container, Background, Text} from '@src/components/atoms'
+import {Container} from '@src/components/atoms'
 import Helmet from '@src/components/Helmet'
 import styled from 'styled-components'
-import Breadcrumbs from '@src/components/Breadcrumbs'
 import './resource.css'
 
 interface Props {
     location : string
 }
-
-const CustomContainer = styled(Container)`
-  flex: 1;
-  display: flex;
-  padding: 30px;
-`
 
 const resource : {
     title : string
@@ -270,12 +263,14 @@ const Resource = ({location} : Props) => {
                 flex: "1 1"}}>
                 <div className="scf-page-resource scf-layout-pattern">
                     <div className="scf-home-block">
-                        <div className="scf-home-block__inner" id="scf-box-resource-body">
-                            <div id="scf-box-mobile-titlebar" class="scf-box__header-title">
+                        <div
+                        className="scf-home-block__inner"
+                         id="scf-box-resource-body">
+                            <div id="scf-box-mobile-titlebar" className="scf-box__header-title">
                                 <h3>资源</h3>
                             </div>
-                            <div class="scf-box-mobile-tabs">
-                                <ul class="scf-box-mobile-tabs-ul">
+                            <div className="scf-box-mobile-tabs">
+                                <ul className="scf-box-mobile-tabs-ul">
                                 {resource.map(({title,list})=>(
                                     <li>{title}</li>
                                  ))}

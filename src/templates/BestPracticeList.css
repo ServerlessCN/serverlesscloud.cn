@@ -5,9 +5,6 @@
   display: flex;
   margin-bottom: 60px;
 }
-.scf-practice-list .scf-home-block__inner {
-  width: 972px;
-}
 .scf-practice-list .scf-article-item__img {
   flex: 0 0 350px;
   margin-left: 60px;

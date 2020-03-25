@@ -14,7 +14,7 @@ const Wrapper = styled(Box)`
   overflow: visible !important;
 }
 
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 992px) {
   .swiper-container{
     width: 100% !important;
   }

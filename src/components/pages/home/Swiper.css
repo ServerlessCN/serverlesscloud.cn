@@ -82,8 +82,21 @@
   background-color: #feeeee;
   border-color: #b73832;
 }
-.hello-world{
-  height: 92%;
+
+@media screen and (max-width: 1280px) {
+  .hello-world{
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1599px) {
+  .hello-world{
+    height: 94%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .hello-world{
+    height: 92%;
+  }
 }
 .scf-home-banner_Container{
   padding-top: 30px;

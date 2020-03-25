@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { Box} from '@src/components/atoms'
+import {Box} from '@src/components/atoms'
 import {Link} from 'gatsby'
-import './Activitys.css'
+import './AuthorDetail.css'
 
 interface Activity {
   cover : string
@@ -12,7 +12,8 @@ interface Activity {
 
 const activityList : Activity[] = [
   {
-    cover: "https://img.serverlesscloud.cn/20191227/1577413467740-v2-b65fcb6a94208a494005fc0c40a99eb6_1200x500.jpg",
+    cover: "https://img.serverlesscloud.cn/20191227/1577413467740-v2-b65fcb6a94208a494005fc0" +
+        "c40a99eb6_1200x500.jpg",
     title: "荐书 | Serverless 架构：从原理、设计到项目实战1",
     decription: "安利一下 Serverless 中文技术社区成员 Anycodes 的大作",
     link: "/blog/2019-11-19-anycodes-book/"
@@ -34,18 +35,18 @@ function ActivityCard({activity} : {
 }) {
   return (
     <Box className="scf-article-item">
-    <Link to={activity.link}>
-      <Box className="scf-article-item__img">
-        <img src={activity.cover} alt=""/>
-      </Box>
-      <Box className="scf-article-item__content">
-        <Box className="scf-article-item__title">
-          <h4>{activity.title}</h4>
+      <Link to={activity.link}>
+        <Box className="scf-article-item__img">
+          <img src={activity.cover} alt=""/>
         </Box>
-        <Box className="scf-article-item__intro">
-          {activity.decription}
+        <Box className="scf-article-item__content">
+          <Box className="scf-article-item__title">
+            <h4>{activity.title}</h4>
+          </Box>
+          <Box className="scf-article-item__intro">
+            {activity.decription}
+          </Box>
         </Box>
-      </Box>
       </Link>
     </Box>
 
@@ -55,7 +56,8 @@ function ActivityCard({activity} : {
 function ActivityCards() {
   return (
     <Box className="scf-box__body">
-        {activityList.map(activity => (<ActivityCard key={activity.title} activity={activity}/>))}
+      <p className="scf-activity__content">不论您是行业大会主办方，还是垂直技术沙龙发起者，我们都欢迎您与 Serverless 中文网进行合作。技术共享，共建生态，Serverless
+        探索之路，我们携手通行。</p>
     </Box>
   )
 }
@@ -63,23 +65,16 @@ function ActivityCards() {
 export default function () {
   return (
     <Box className="scf-grid__item-8">
-    <Box className="scf-grid__box">
-    <Box className="scf-box scf-home-active">
-        <Box
-          className="scf-box__header"
-          >
-          <Box className="scf-box__header-title size-s">
-            <h3>活动</h3>
+      <Box className="scf-grid__box scf-meetup-author">
+        <Box className="scf-box scf-home-active">
+          <Box className="scf-box__header">
+            <Box className="scf-box__header-title size-s">
+              <h3>交流合作</h3>
+            </Box>
           </Box>
-          <Box className="scf-box__header-more">
-            <Link to="/category/news">
-              更多活动 &gt;
-            </Link>
-          </Box>
+          <ActivityCards/>
         </Box>
-        <ActivityCards/>
       </Box>
-    </Box>
     </Box>
   )
 }

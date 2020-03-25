@@ -28,7 +28,7 @@ const ForumPage = ({ location }: Props) => {
       />
 
       <CustomContainer maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}>
-        <div id="scf-box-mobile-titlebar" class="scf-box__header-title">
+        <div id="scf-box-mobile-titlebar" className="scf-box__header-title">
         <h3>论坛</h3></div>
         <Box justifyContent="center" alignItems="center" align="center">
           <Text align="center" mb="20px" fontSize="24px" lineHeight={1.5}>

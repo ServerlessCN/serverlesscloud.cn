@@ -1,12 +1,7 @@
 import * as React from 'react'
 import {
-  Flex,
-  Text,
   Container,
   Box,
-  Background,
-  Button,
-  Row
 } from '@src/components/atoms'
 import './AboutUs.css'
 import zhihu from '@src/assets/images/Zhihu_icon.png'
@@ -34,14 +29,7 @@ export default function () {
   return (
     <Box className="scf-home-about-us">
       <Container
-        width={[
-        1,
-        1,
-        1,
-        1,
-        0.76,
-        1200
-      ]}
+      width={[1, 1, 1, 912, 0.76, 1200]}
         px={0}>
         <Box className="scf-box">
           <Box className="scf-box__header">

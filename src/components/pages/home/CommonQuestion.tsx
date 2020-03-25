@@ -1,16 +1,10 @@
 import * as React from 'react'
 import {
-  Flex,
   Text,
   Container,
   Box,
-  Background,
-  Button,
-  Row
 } from '@src/components/atoms'
 import theme from '@src/constants/theme'
-import {SubMainTitle} from '@src/components/pages/home/Title'
-import styled from 'styled-components'
 import {Link} from 'gatsby'
 import './CommonQuestion.css'
 
@@ -46,14 +40,7 @@ export default function () {
   return (
     <Box className="scf-home-about">
     <Container
-      width={[
-      1,
-      1,
-      1,
-      1,
-      0.76,
-      1200
-    ]}
+    width={[1, 1, 1, 912, 0.76, 1200]}
       px={0}>
       <Box className="scf-box">
         <Box className="scf-box__header">

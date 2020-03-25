@@ -1,5 +1,4 @@
 import * as React from 'react'
-import logo from '@src/assets/images/icon-serverless-framework.png'
 
 import {Link} from 'gatsby'
 import {  Row } from '@src/components/atoms'
@@ -13,7 +12,7 @@ export default function ({logoHeight} : Props) {
   return (
     <Link to="/">
     <Row
-        minWidth={['auto', 'auto', '320px']}
+        minWidth={['auto', 'auto', '210px']}
         alignItems="center"
         height={logoHeight}
       >
