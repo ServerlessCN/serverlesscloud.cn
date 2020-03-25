@@ -76,6 +76,10 @@
   float: left;
   width: 20%;
   height: 80px;
+  overflow: hidden;
+}
+.scf-box-about-community-list ul li img {
+  width: 100%;
 }
 
 .scf-box-about-contributor-list ul img {
