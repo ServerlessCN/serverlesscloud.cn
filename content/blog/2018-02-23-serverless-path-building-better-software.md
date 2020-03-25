@@ -1,6 +1,7 @@
 ---
 title: 通过 Serverless 架构构建更好的软件
 description: Nick Gottlieb 分享了他在 ServerlessConf Tokyo 上关于 Serverless、软件状态以及提高生产效率方法的演讲。
+keywords: Serverless 架构构建,ServerlessConf Tokyo,Serverless 效率方法
 date: 2018-02-23
 thumbnail: https://main.qcloudimg.com/raw/c2598ce0fad913a7d1fe2bfcdd3324e3.jpeg
 categories:

@@ -1,6 +1,7 @@
 ---
 title: 工程师快速成长指北
 description: 随着互联网技术的发展，前端领域的从业人员越来越多，随之而来的还有工程师的成长问题。
+keywords: 工程师的成长,前端领域的从业人员,互联网技术的发展
 date: 2020-03-18
 thumbnail: 'https://liujiang-1253970226.cos.ap-chengdu.myqcloud.com/%E6%91%84%E5%9B%BE%E7%BD%91_401149997_banner.jpg'
 categories:

@@ -1,6 +1,7 @@
 ---
 title: "如何在远程工作中保持企业文化的凝聚力"
 description: "当您的团队分散各地或远程办公时，建立企业文化需要付出不同寻常的努力。下面就来看看我们如何在 Serverless 保持强大的凝聚力。"
+keywords: Serverless 企业文化,Serverless 凝聚力,Serverless 远程开发
 date: 2018-09-17
 thumbnail: https://img.serverlesscloud.cn/20191231/1577759132588-remotework.jpg
 categories:

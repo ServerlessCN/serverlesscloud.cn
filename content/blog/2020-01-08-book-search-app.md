@@ -1,6 +1,7 @@
 ---
 title: "如何使用 Serverless 实现一个图书查询 App"
 description: "基于 Serverless 的轻量级图书检索系统"
+keywords: Serverless 轻量级图书检索,Serverless 图书查询,Serverless 检索系统
 date: 2020-01-08
 thumbnail: "https://img.serverlesscloud.cn/2020218/1582040387776-timg.jpeg"
 categories:

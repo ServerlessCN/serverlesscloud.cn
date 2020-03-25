@@ -1,6 +1,7 @@
 ---
 title: Serverless 公司的远程团队沟通策略
 description: Serverless 团队分散在全球各地，本文介绍我们如何管理沟通策略和远程协作。
+keywords: Serverless 远程团队,Serverless 沟通策略,Serverless 远程协作
 date: 2018-02-09
 thumbnail: 'https://main.qcloudimg.com/raw/67b0bff4886896e1ee5d4f5917cf6096.jpg'
 categories:

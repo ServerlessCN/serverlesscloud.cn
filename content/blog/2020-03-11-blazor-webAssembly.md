@@ -1,6 +1,7 @@
 ---
 title: 通过 Serverless 加速 Blazor WebAssembly
 description: 本文为 Serverless 社区成员撰稿。作者杨舜杰，系统架构研发工程师，开源爱好者，.NET开源项目 shriek-fx 作者
+keywords: Serverless Blazor,Blazor WebAssembly,Serverless加速
 date: 2020-03-11
 thumbnail: https://img.serverlesscloud.cn/2020318/1584508672111-Blazor.jpg
 categories:

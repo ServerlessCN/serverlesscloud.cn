@@ -1,6 +1,7 @@
 ---
 title: Serverless 的内存配置与超时时间
 description: 当我们使用 Serverless 架构的时候，如何设置运行内存和超时时间呢？
+keywords: Serverless 内存配置,Serverless 超时时间,Serverless 统计方案
 date: 2020-02-22
 thumbnail: https://img.serverlesscloud.cn/202033/1583244278485-0.jpg
 categories:

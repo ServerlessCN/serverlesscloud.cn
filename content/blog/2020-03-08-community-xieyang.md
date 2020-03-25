@@ -1,6 +1,7 @@
 ---
 title: Serverless 的前景和机会
 description: 本文为 Serverless 社区成员撰稿。作者谢扬，蒸汽记忆创始人，SoLiD 中文社区（learnsolid.cn）发起人。目前聚焦研发一款 IDaaS 身份即服务产品 Authing
+keywords: Serverless前景,Serverless机会,Serverless使用场景
 date: 2020-03-08
 thumbnail: https://img.serverlesscloud.cn/2020318/1584509669262-qian.jpg
 categories:

@@ -1,6 +1,7 @@
 ---
 title: "如何在 10 周内打造你的个人影响力"
 description: "Serverless 团队希望提高在社交媒体上的活跃度，因此创建了一个为期 10 周的项目，结果很成功，本文分享了他们的行动！"
+keywords: Serverless 个人影响力,Serverless 团队管理
 date: 2018-08-30
 thumbnail: 'https://img.serverlesscloud.cn/20191212/1576150379315-serverless-thought-leader-header.png'
 categories:

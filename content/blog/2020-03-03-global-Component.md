@@ -1,6 +1,7 @@
 ---
 title: Serverless 组件开发尝试：全局变量组件和单独部署组件
 description: 为了方便，我开发了这样的 Component
+keywords: Serverless 全局变量组件,Serverless 单独部署组件,Serverless Component
 date: 2020-03-03
 thumbnail: https://img.serverlesscloud.cn/202034/1583323516946-v2-1a569e74722930de772e470209db3c05_1200x500.jpg
 categories:
