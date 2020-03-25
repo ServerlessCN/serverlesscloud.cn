@@ -15,11 +15,11 @@ const ForumPage = ({ location }: Props) => {
       <Helmet
         description="Serverless Framework 简介，快速了解Serverless基本概念与详情介绍。"
         keywords="Serverless简介,Serverless概述,Serverless指引"
-        title="论坛 - Serverless"
+        title="活动 - Serverless"
         location={location}
       />
       <Box className="scf-page-blog scf-layout-pattern">
-      <Container width={[ 1, 1, 1, 1, 0.76, 1200 ]}>
+      <Container width={[1, 1, 1, 912, 0.76, 1200]}>
       <Box className="scf-grid">
         <Meetups />
         <AuthorDetail/>

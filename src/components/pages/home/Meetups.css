@@ -77,8 +77,8 @@
   transform: translate3d(0, -50%, 0); */
   left: 0;
   max-width: 100%;
-  width: 210px;
-  height: 120px;
+  /* width: 210px;
+  height: 120px; */
 }
 
 .item__title {
@@ -261,10 +261,10 @@
   line-height: 20px;
   font-family: PingFangSC-Regular;
 }
-.scf-meetup-history .scf-meetup-item:nth-child(n+3){
+.scf-meetup-history .scf-meetup-item:nth-child(n+8){
   display: none;
 }
-.showAll .scf-meetup-history .scf-meetup-item:nth-child(n+3){
+.showAll .scf-meetup-history .scf-meetup-item:nth-child(n+8){
   display: block !important;
 }
 

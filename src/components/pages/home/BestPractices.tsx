@@ -42,14 +42,7 @@ export default function () {
       return (
         <Box className="scf-best-practices">
         <Container
-          width={[
-          1,
-          1,
-          1,
-          1,
-          0.76,
-          1200
-        ]}
+        width={[1, 1, 1, 912, 0.76, 1200]}
           px={0}
           pt={30}>
             <Box className="scf-box__header">

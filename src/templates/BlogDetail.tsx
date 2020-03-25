@@ -3,6 +3,7 @@ import {graphql} from 'gatsby'
 import crypto from 'crypto'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
 import {Box, InlineBlock} from '@src/components/atoms'
+import Helmet from '@src/components/Helmet'
 import {Blog, GraphqlBlogResult} from '@src/types'
 import styled from 'styled-components'
 import Markdown from '@src/components/Markdown'
@@ -95,6 +96,7 @@ const BlogDetail = ({data: {
 
   return (
     <Layout>
+    <Helmet {...currentBlog.frontmatter} location={location}/>
       <Category location={location} isDetail={true} id="scf-blog-detail-header" />
       <Box className="scf-content" style={{marginTop:0}}>
         <Box className="scf-page-blog-detail scf-layout-pattern">

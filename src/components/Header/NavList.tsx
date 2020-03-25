@@ -161,7 +161,7 @@ export default class NavList extends React.Component<Props, State> {
     const { isActive, isDesktopView } = this.props
     const isMobileNavListDisplay = () => (isActive ? 'block' : 'none')
 
-    const navListBoxWidth = isDesktopView ? 0.69 : 1
+    const navListBoxWidth = isDesktopView ? 0.71 : 1
     return (
       <BoxWithTextAlign
         width={navListBoxWidth}

@@ -31,14 +31,7 @@ const AboutPage = () => {
         <Box className="scf-page-about scf-layout-pattern">
           <Box className="scf-home-block">
             <Container
-              width={[
-              1,
-              1,
-              1,
-              1,
-              0.76,
-              1200
-            ]}
+            width={[1, 1, 1, 912, 0.76, 1200]}
               className="scf-home-block__inner"
               px={0}>
               <Box className="scf-grid ">

@@ -76,18 +76,11 @@ export default function () {
             : theme.headerHeights.mobile} mb={'30px'}>
             <Container
             className="scf-home-banner_Container"
-              width={[
-              1,
-              1,
-              1,
-              1,
-              0.76,
-              1200
-            ]}
+            width={[1, 1, 1, 912, 0.76, 1200]}
               px={0}>
               <Box className="scf-grid">
                 <Box className="scf-grid__item-16">
-                  <Swiper height={"92%"}>
+                  <Swiper height={["100%","100%","100%","100%","92%","92%"]}>
                     {bannerConfigs.map((config, index) => {
                       return (
                         <Background

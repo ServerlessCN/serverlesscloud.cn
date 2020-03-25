@@ -43,14 +43,7 @@ export default function () {
 
   return (
     <Container
-      width={[
-      1,
-      1,
-      1,
-      1,
-      0.76,
-      1200
-    ]}
+    width={[1, 1, 1, 912, 0.76, 1200]}
       px={0}>
       <Box className="scf-home-video">
         <Box className="scf-box__header">

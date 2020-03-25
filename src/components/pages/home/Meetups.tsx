@@ -44,7 +44,7 @@ function BlogCard({history,blog} : {
 
 function Meetups(Props) {
   const query = graphql `{
-  meetups: allMarkdownRemark(sort: {fields: frontmatter___date, order: ASC}, limit: 6, filter: {fileAbsolutePath: {regex: "//blog//"}, frontmatter: {categories: {in: "meetup"},  time: {in: "future"}}}) {
+  meetups: allMarkdownRemark(sort: {fields: frontmatter___date, order: ASC}, filter: {fileAbsolutePath: {regex: "//blog//"}, frontmatter: {categories: {in: "meetup"},  time: {in: "future"}}}) {
     edges {
       node {
         id
@@ -64,7 +64,7 @@ function Meetups(Props) {
       }
     }
   }
-  historyMeetups: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, limit: 6, filter: {fileAbsolutePath: {regex: "//blog//"}, frontmatter: {categories: {in: "meetup"},  time: {nin: "future"}}}) {
+  historyMeetups: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {fileAbsolutePath: {regex: "//blog//"}, frontmatter: {categories: {in: "meetup"},  time: {nin: "future"}}}) {
     edges {
       node {
         id
