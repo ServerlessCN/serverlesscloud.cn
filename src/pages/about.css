@@ -78,19 +78,21 @@
   display: block;
   float: left;
   width: 16%;
-  height: 70px;
+  /*height: 70px;*/
   overflow: hidden;
 }
 
 .scf-box-about-community-list ul li a {
   cursor: default;
   display: block;
-  line-height: 70px;
+  line-height: 60px;
+  /*height: 60px;*/
 }
 
 .scf-box-about-community-list ul li img {
   width: 100%;
   vertical-align: middle;
+  margin: 5px 0;
 }
 
 .scf-box-about-contributor-list ul img {
@@ -142,7 +144,7 @@
     width: 45%;
     margin-right: 0;
     margin-bottom: 15px;
-    height: 60px;
+    /*height: 60px;*/
     border: 1px solid #eee;
     box-sizing: border-box;
   }
