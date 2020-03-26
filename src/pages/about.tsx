@@ -57,7 +57,7 @@ const AboutPage = () => {
                     <li>
                       <a href={contributor.link} target="_blank">
                         <img src={contributor.avatar ? contributor.avatar : 'https://avatars.githubusercontent.com/' + contributor.name} width="60px" />
-                        {contributor.name}
+                        <div>{contributor.name}</div>
                       </a>
                     </li>
                     ))}
