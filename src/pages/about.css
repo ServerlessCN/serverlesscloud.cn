@@ -73,6 +73,7 @@
   display: table-cell;
   vertical-align: middle;
   height: 60px;
+  word-break: break-all;
 }
 
 .scf-box-about-contributor-list ul li img{
