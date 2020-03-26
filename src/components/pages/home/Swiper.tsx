@@ -59,13 +59,6 @@ const bannerConfigs : {
 ]
 
 export default function () {
-  // const [isNavButtonActive, setisNavButtonActive] = React.useState(true)
-  // React.useEffect(() => {   const onResize = debounce(() => {     if
-  // (window.innerWidth >= 992) {       setisNavButtonActive(true)     } else {
-  //    setisNavButtonActive(false)     }   }, 50)
-  // window.addEventListener('resize', onResize)   onResize()   return () => {
-  // window.removeEventListener('resize', onResize)   } }, [])
-
   return (
     <CheckIfDesktopContext.Consumer>
       {isDesktopView => {

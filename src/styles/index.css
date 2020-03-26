@@ -718,7 +718,7 @@ a:hover {
     background-repeat: no-repeat;
     background-size: 26px 26px;
     background-position: 0px 1px;
-    top: 4px;
+    top: -8px;
     right: 40px;
   }
 
@@ -727,7 +727,7 @@ a:hover {
     background-repeat: no-repeat;
     background-size: 28px 28px;
     background-position: 0px 1px;
-    top: 3px;
+    top: 0px;
     right: 4px;
   }
 

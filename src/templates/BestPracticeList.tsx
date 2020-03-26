@@ -37,7 +37,7 @@ const BlogList = ({
 
   React.useEffect(() => {
     const onResize = debounce(() => {
-      if (window.innerWidth >= 992) {
+      if (window.innerWidth > 992) {
         setisMobileView(false)
       } else {
         setisMobileView(true)

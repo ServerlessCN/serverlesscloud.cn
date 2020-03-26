@@ -1,4 +1,4 @@
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 993px) {
   .swiper-container-horizontal>.swiper-pagination-bullets {
     width: auto !important;
   }
@@ -9,6 +9,14 @@
 }
 
 @media screen and (max-width: 992px) {
+  .scf-box-header-menus-icon{
+    top:-8px !important;
+  }
+
+ .scf-blog-header {
+  padding: 0 30px;
+ }
+
   .scf-content{
     margin-top: 0px !important;
   }

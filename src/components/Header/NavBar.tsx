@@ -48,9 +48,11 @@ export default function({
       px={0}
       // maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]
     >
-    <Flex alignItems="center" flexWrap="wrap" justifyContent="space-between" height={15}>
-      <ExternalLink to="https://serverless.com/cn" ><p className="go-back-serverless_com" style={{position:'absolute',display:"inline-block",fontSize:12,color:theme.colors.gray_text,fontFamily: "Serverless"}}>← serverless.com</p></ExternalLink>
-    </Flex>
+    { isDesktopView?
+      <Flex alignItems="center" flexWrap="wrap" justifyContent="space-between" height={15}>
+        <ExternalLink to="https://serverless.com/cn" ><p className="go-back-serverless_com" style={{position:'absolute',display:"inline-block",fontSize:12,color:theme.colors.gray_text,fontFamily: "Serverless"}}>← serverless.com</p></ExternalLink>
+      </Flex>
+  :null}
       <Flex alignItems="center" flexWrap="wrap" justifyContent="space-between">
         <Logo logoHeight={height} />
         <NavList 

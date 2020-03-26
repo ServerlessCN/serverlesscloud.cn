@@ -217,7 +217,7 @@ export default class NavList extends React.Component<Props, State> {
                 }} type="text" placeholder="搜索文章或关键词" className="scf-header-search__input"/>
                 <button className="scf-header-search__clear-btn" onClick={() => this.changeSearch()}><i
                   className="scf-icon scf-icon-clear"></i></button>
-                <Blogs value={searchContnet}/>}
+                <Blogs value={searchContnet}/>
               </div>
             </div>
             :
