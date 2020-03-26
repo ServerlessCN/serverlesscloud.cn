@@ -343,6 +343,8 @@ img {
     z-index: 999;
   }
 
+
+
   .scf-segment__item.is-active,
   .scf-segment__item:hover {
     color: #FD5750;
