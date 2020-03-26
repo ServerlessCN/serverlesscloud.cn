@@ -344,7 +344,8 @@ img {
   }
 
   .scf-blog-header .scf-box-blog-tabs {
-    width: 76%;
+    width: 100%;
+    padding: 0 30px
   }
 
   .scf-segment__item.is-active,
