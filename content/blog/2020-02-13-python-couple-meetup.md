@@ -1,6 +1,6 @@
 ---
 title: Serverless Python 开发实战：极速制作情人节表白页 - 直播课
-description: 最近受到疫情的困扰，相隔几百米的恋人都成了异地恋，就连情人节也需要云相聚。程序员如何用一种即浪漫又 Geek 的方式来进行表白？
+description: 程序员如何用一种即浪漫又 Geek 的方式来进行表白？
 date: 2020-02-13
 thumbnail: https://img.serverlesscloud.cn/2020325/1585130450955-6.jpeg
 categories:

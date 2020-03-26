@@ -1,8 +1,8 @@
 ---
 title: 国产 Serverless Identity 开源组件工作坊 - 在线分享
-description: 在阻击物理世界「新冠」病毒的同时，不要忽视数字空间的安全。我们邀请了业界 Identity 专家一起探讨 Identity 技术的发展！主题涵盖：IDaaS/IAM、Serverless、ZeroTrust、Cloud Native 等开源技术。
+description: 在阻击「新冠」病毒的同时，不要忽视数字空间的安全。我们邀请了业界专家一起探讨 Identity 技术的发展！
 date: 2020-02-29
-thumbnail: https://img.serverlesscloud.cn/2020325/1585130310416-2.jpg
+thumbnail: https://img.serverlesscloud.cn/2020326/1585184691643-images.jpeg
 categories:
   - meetup
 authors:

@@ -2,7 +2,7 @@
 title: 云+社区技术沙龙：高效智能运维 - 深圳站
 description: 本期沙龙将围绕运维展开一场技术盛宴，从 AIOps、Serverless DevOps、蓝鲸 PaaS 平台、K8S 等分享关于业务运维的技术实践干货
 date: 2019-11-09
-thumbnail: https://img.serverlesscloud.cn/2020325/1585131168879-10.png
+thumbnail: https://img.serverlesscloud.cn/2020326/1585185314095-9.jpg
 categories:
   - meetup
 authors:
