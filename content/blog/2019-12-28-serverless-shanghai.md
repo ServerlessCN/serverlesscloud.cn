@@ -2,7 +2,7 @@
 title: Serverless 技术行沙龙 - 上海站
 description: 告别后端，4 招教你基于 Serverless 快速构建应用
 date: 2019-12-28
-thumbnail: https://img.serverlesscloud.cn/2020325/1585130672663-8.jpeg
+thumbnail: https://img.serverlesscloud.cn/2020326/1585185314084-9.jpg
 categories:
   - meetup
 authors:

@@ -57,7 +57,7 @@ function ActivityCards() {
   return (
     <Box className="scf-box__body">
       <p className="scf-activity__content">不论您是行业大会主办方，还是垂直技术沙龙发起者，我们都欢迎您与 Serverless 中文网进行合作。技术共享，共建生态，Serverless
-        探索之路，我们携手通行。</p>
+        探索之路，我们携手同行。您可以添加微信 (WeChat ID: jiangliu_0418) 与我们进一步交流。</p>
     </Box>
   )
 }

@@ -1,6 +1,6 @@
 ---
 title: Serverless 工程化实战：基于 Python + JS 的动态博客开发 - 直播课
-description: 本次课程将以一个动态博客系统的开发为例子，详细分享 Serverless 架构下基于 Python + HTML/JS 的工程化实战，以及Serverless 工程化项目开发的一些经验总结。
+description: 本次课程将以一个动态博客系统的开发为例子，详细分享 Serverless 架构的工程化实战
 date: 2020-02-19
 thumbnail: https://img.serverlesscloud.cn/2020325/1585130372376-4.jpeg
 categories:
