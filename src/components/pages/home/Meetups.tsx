@@ -145,7 +145,7 @@ export default function (Props) {
           {!isShowAll
             ? <Box className="scf-detail__show-more">
                 <Box className="scf-detail__mask"></Box>
-                <button className="scf-btn scf-btn--line" onClick={onToggleShow}>查看更多活动</button>
+                <button className="scf-btn scf-btn--line scf-meetup-btn" onClick={onToggleShow}>查看更多活动</button>
               </Box>
             : null}
         </Box>

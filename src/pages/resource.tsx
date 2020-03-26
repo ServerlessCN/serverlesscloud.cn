@@ -257,7 +257,7 @@ const Resource = ({location} : Props) => {
             <Helmet
                 title="资源 - Serverless"
                 keywords="Serverless components,Serverless组件,Serverless案例"
-                descirption="Serverless components 组件实战，快速上手Serverless框架组件能力，帮助上手Serverless最佳操作场景实战。"
+                description="Serverless components 组件实战，快速上手Serverless框架组件能力，帮助上手Serverless最佳操作场景实战。"
                 location={location}/>
             <div style={{marginTop: "80px",flex: "1 1"}}>
                 <div className="scf-page-resource scf-layout-pattern">

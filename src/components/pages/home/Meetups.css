@@ -241,7 +241,7 @@
   min-width: 18px;
   padding-left: 25px;
   width: auto;
-  height: 20px;
+  height: 20px !important;
   font-style:normal;
   background-repeat: no-repeat;
   background-image: url(../../../assets/images/map.svg);

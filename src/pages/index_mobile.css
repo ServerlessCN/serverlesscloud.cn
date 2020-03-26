@@ -6,9 +6,17 @@
     margin-top: 0px !important;
     flex: 1 1;
   }
+  .scf-meetup-btn{
+    position: absolute;
+    left: 50%;
+  }
 }
 
 @media screen and (max-width: 992px) {
+  .scf-page-resource .scf-grid__item-12{
+    padding: 0 !important;
+  }
+
   .scf-box-header-menus-icon{
     top:-8px !important;
   }
