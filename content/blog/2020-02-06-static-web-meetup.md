@@ -1,8 +1,8 @@
 ---
 title: Serverless 架构揭秘与静态网站部署实战 - 直播课
-description: 共克时艰，停工不停学 Serverless 在线课堂免费开课
+description: Serverless Framework 社区专家陈涛将分享 Serverless 的技术架构和开发实战，从 0 到 1 快速掌握 Serverless 开发知识
 date: 2020-02-06
-thumbnail: https://img.serverlesscloud.cn/2020325/1585130629709-7.jpeg
+thumbnail: https://img.serverlesscloud.cn/2020327/1585306882746-9.jpg
 categories:
   - meetup
 authors:
@@ -10,7 +10,7 @@ authors:
 authorslink:
   - https://china.serverless.cn/
 location: 
-  - 线上直播
+  - 线上直播 | 腾讯云 & 云+社区 & Serverless 中文社区
 ---
 
 二月份，Serverless 团队联合腾讯云大学与云+社区免费推出 Serverless 在线直播课程，课程涵盖 Serverless 架构解密、技术解析以及不同应用场景下的最佳实战指导，让你从 0 到 1 快速掌握 Serverless 开发知识，足不出户，就能完成开发技能升级。

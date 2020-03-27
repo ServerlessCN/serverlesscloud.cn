@@ -1,8 +1,8 @@
 ---
 title: 面对突发需求，如何借助 Serverless 快速上云 - 直播课
-description: 当突发事件来临时，当绝佳 idea 闪现时，如何快速搞定开发和部署，使之变身为产品？快，则应万变！
+description: 腾讯云 Serverless 技术专家王俊杰分享突发需求下，如何使用 Serverless Framework 实现快速上云！
 date: 2020-02-27
-thumbnail: https://img.serverlesscloud.cn/2020325/1585129906895-1.jpeg
+thumbnail: https://img.serverlesscloud.cn/2020327/1585306882572-9.jpg
 categories:
   - meetup
 authors:
@@ -10,7 +10,7 @@ authors:
 authorslink:
   - https://china.serverless.cn/
 location: 
-  - 线上直播
+  - 线上直播 | 腾讯云 & 云+社区 & Serverless 中文社区
 ---
 
 当突发事件来临时，当绝佳 idea 闪现时，如何快速搞定开发和部署，使之变身为产品？快，则应万变！Serverless 具有拥有免运维、开发成本降低、按需自动扩缩容等诸多优点，并且已经支持 Express、Koa、Flask、Lavaral 等传统语言框架，这些使得开发者能够更快的构建和上线应用，为新业务和原有服务快速上云，提供了便捷的支持。明晚（2月27日） 20:00 - 21:00，腾讯云 Serverless 技术专家王俊杰，将为大家分享突发需求下，如何使用 Serverless Framework 实现快速上云！

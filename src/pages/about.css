@@ -14,6 +14,7 @@
 }
 .scf-page-about .acf-page-about__text {
   font-size: 17px;
+  margin-bottom: 20px;
 }
 .scf-page-about .scf-grid__item-12:last-child {
   width: 55%;

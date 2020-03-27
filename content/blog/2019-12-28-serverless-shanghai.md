@@ -1,6 +1,6 @@
 ---
-title: Serverless 技术行沙龙 - 上海站
-description: 告别后端，4 招教你基于 Serverless 快速构建应用
+title: Serverless 技术行沙龙
+description: 来自深圳清华大学研究院 、Serverless 社区专家们围绕 Serverless + 5G，Serverless SSR 技术探索等话题展开深入分享
 date: 2019-12-28
 thumbnail: https://img.serverlesscloud.cn/2020326/1585185314084-9.jpg
 categories:
@@ -10,7 +10,7 @@ authors:
 authorslink:
   - https://china.serverless.cn/
 location: 
-  - 中国 · 上海
+  - 上海 | 中国计算机学会 & 深圳清华大学研究院 & 腾讯云 & 云+社区
 ---
 
 ![活动信息](https://img.serverlesscloud.cn/2020325/1585121773487-IMG_0291.JPG)  

@@ -1,8 +1,8 @@
 ---
 title: Serverless Python 开发实战：极速制作情人节表白页 - 直播课
-description: 程序员如何用一种即浪漫又 Geek 的方式来进行表白？
+description: Serverless 专家陈涛讲解 Serverless 架构的处理规范、工作流程以及 Serverless 工程化的挑战与最佳实践
 date: 2020-02-13
-thumbnail: https://img.serverlesscloud.cn/2020325/1585130450955-6.jpeg
+thumbnail: https://img.serverlesscloud.cn/2020327/1585306882267-9.jpg
 categories:
   - meetup
 authors:
@@ -10,7 +10,7 @@ authors:
 authorslink:
   - https://china.serverless.cn/
 location: 
-  - 线上直播
+  - 线上直播 | 腾讯云 & 云+社区 & Serverless 中文社区
 ---
 
 最近受到疫情的困扰，相隔几百米的恋人都成了异地恋，就连情人节也需要云相聚。程序员如何用一种即浪漫又Geek的方式来进行表白？本周四（2月13日）晚 19:00，Serverless 团队联合腾讯云大学与云+社区免费推出的Serverless在线课堂第三期，将分享《Serverless Python 开发实战之极速制作情人节表白页》，讲师将在线指导三分钟完成表白页制作部署。小伙伴们周四完成制作，周五情人节当天就可以派上用场啦！
