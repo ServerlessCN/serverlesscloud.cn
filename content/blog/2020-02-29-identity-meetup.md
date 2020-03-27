@@ -1,8 +1,8 @@
 ---
 title: 国产 Serverless Identity 开源组件工作坊 - 在线分享
-description: 在阻击「新冠」病毒的同时，不要忽视数字空间的安全。我们邀请了业界专家一起探讨 Identity 技术的发展！
+description: Authing 联合腾讯云、Serverless 中文社区专家分享 Serverless Framework 组件的开发及应用
 date: 2020-02-29
-thumbnail: https://img.serverlesscloud.cn/2020326/1585184691643-images.jpeg
+thumbnail: https://img.serverlesscloud.cn/2020327/1585306882234-9.jpg
 categories:
   - meetup
 authors:
@@ -10,7 +10,7 @@ authors:
 authorslink:
   - https://china.serverless.cn/
 location: 
-  - 线上直播
+  - 线上直播 | Authing & 腾讯云 & Serverless 中文社区
 ---
 
 疫情肆虐，不仅对老百姓生命健康造成重大威胁，对各行各业的发展也造成重大影响。同时，开学、复工在即，疫情防控进入了关键阶段，「居家隔离、远程办公」是当下遏制疫情扩散的最佳防控措施。

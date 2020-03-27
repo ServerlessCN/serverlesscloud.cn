@@ -1,8 +1,8 @@
 ---
 title: Serverless 之 Nodejs 开发实战：三分钟搞定疫情信息展示页 - 直播课
-description: 本次课程将分享如何利用 Serverless 快速定制新型冠状病毒信息查询页，帮助你和身边人更及时了解疫情动态与信息。 
+description: 腾讯云高级产品经理方坤丁分享如何利用 Serverless 快速定制新型冠状病毒信息查询页，帮助大家及时了解疫情动态与信息
 date: 2020-02-10
-thumbnail: https://img.serverlesscloud.cn/2020325/1585130450976-6.jpeg
+thumbnail: https://img.serverlesscloud.cn/2020327/1585306882657-9.jpg
 categories:
   - meetup
 authors:
@@ -10,7 +10,7 @@ authors:
 authorslink:
   - https://china.serverless.cn/
 location: 
-  - 线上直播
+  - 线上直播 | 腾讯云 & 云+社区 & Serverless 中文社区
 ---
 
 Serverless 在线直播课程第二期，我们将分享 Serverless 的最佳应用场景以及如何利用 Serverless 快速定制新型冠状病毒信息查询页，帮助你和身边人更及时了解疫情动态与信息。  

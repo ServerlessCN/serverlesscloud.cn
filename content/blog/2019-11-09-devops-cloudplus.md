@@ -1,6 +1,6 @@
 ---
-title: 云+社区技术沙龙：高效智能运维 - 深圳站
-description: 本期沙龙将围绕运维展开一场技术盛宴，从 AIOps、Serverless DevOps、蓝鲸 PaaS 平台、K8S 等分享关于业务运维的技术实践干货
+title: Serverless DevOps 最佳实践 - 云+社区沙龙
+description: 腾讯云高级架构师孔令飞在大会上分享了 Serverless DevOps 最佳实践
 date: 2019-11-09
 thumbnail: https://img.serverlesscloud.cn/2020326/1585185314095-9.jpg
 categories:
@@ -10,7 +10,7 @@ authors:
 authorslink:
   - https://china.serverless.cn/
 location: 
-  - 中国 · 深圳
+  - 腾讯云 & 云+社区 & Serverless 中文社区
 ---
 
 ## 活动信息

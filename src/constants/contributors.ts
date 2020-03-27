@@ -11,14 +11,6 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/ac360',
   },
   {
-    name: 'Aceyclee',
-    link: 'https://github.com/Aceyclee',
-  },
-  {
-    name: 'Anycodes',
-    link: 'https://github.com/anycodes',
-  },
-  {
     name: 'Avery Harnish',
     link: 'https://github.com/EverlastingBugstopper',
     avatar: 'https://avatars.githubusercontent.com/EverlastingBugstopper',
@@ -34,24 +26,31 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/billfine',
   },
   {
-    name: 'Çağatay Gürtürk',
+    name: 'Çağatay',
     link: 'https://github.com/cagataygurturk',
     avatar: 'https://avatars.githubusercontent.com/cagataygurturk',
   },
   {
-    name: 'CanMeng',
-    link: 'https://github.com/canmengfly',
-    avatar: 'https://avatars.githubusercontent.com/canmengfly',
-  },
-  {
-    name: 'Carlos Santana',
+    name: 'Carlos',
     link: 'https://github.com/csantanapr',
     avatar: 'https://avatars.githubusercontent.com/csantanapr',
+  },
+  {
+    name: '陈涛',
+    cn_name: 'CanMeng',
+    link: 'https://github.com/canmengfly',
+    avatar: 'https://avatars.githubusercontent.com/canmengfly',
   },
   {
     name: 'Chris Seto',
     link: 'https://github.com/chrisseto',
     avatar: 'https://avatars.githubusercontent.com/chrisseto',
+  },
+  {
+    name: '丁坤方',
+    cn_name: 'Tinafang',
+    link: 'https://github.com/tinafangkunding',
+    avatar: 'https://avatars.githubusercontent.com/tinafangkunding',
   },
   {
     name: 'Edouard',
@@ -64,7 +63,7 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/laardee',
   },
   {
-    name: 'Eslam λ Hefnawy',
+    name: 'Eslam',
     link: 'https://github.com/eahefnawy',
     avatar: 'https://avatars.githubusercontent.com/eahefnawy',
   },
@@ -96,16 +95,7 @@ const contributors = [
     name: 'James Hall',
     link: 'https://github.com/MrRio',
     avatar: 'https://avatars.githubusercontent.com/MrRio',
-  },
-  {
-    name: 'Jenswang',
-    link: 'https://github.com/jenswang',
-  },
-  {
-    name: 'Jiangliu',
-    link: 'https://github.com/jiangliu5267',
-    avatar: 'https://avatars.githubusercontent.com/jiangliu5267',
-  },  
+  }, 
   {
     name: 'John McKim',
     link: 'https://github.com/johncmckim',
@@ -132,14 +122,27 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/jwulf',
   },
   {
-    name: 'Juli',
-    link: 'https://github.com/Juliiii',
-    avatar: 'https://avatars.githubusercontent.com/Juliiii',
-  },
+    name: '江柳',
+    cn_name: 'Jiangliu',
+    link: 'https://github.com/jiangliu5267',
+    avatar: 'https://avatars.githubusercontent.com/jiangliu5267',
+  }, 
   {
-    name: 'Kamil Burzynski',
+    name: 'Kamil',
     link: 'https://github.com/Nopik',
     avatar: 'https://avatars.githubusercontent.com/Nopik',
+  },
+  {
+    name: '李永程',
+    cn_name: 'Aceyclee',
+    link: 'https://github.com/Aceyclee',
+    avatar: 'https://avatars.githubusercontent.com/Aceyclee',
+  },
+  {
+    name: '刘宇',
+    cn_name: 'Anycodes',
+    link: 'https://github.com/anycodes',
+    avatar: 'https://avatars.githubusercontent.com/anycodes',
   },
   {
     name: 'Mark Lawlor',
@@ -147,12 +150,12 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/marklawlor',
   },
   {
-    name: 'Mariusz Nowak',
+    name: 'Mariusz',
     link: 'https://github.com/medikoo',
     avatar: 'https://avatars.githubusercontent.com/medikoo',
   },
   {
-    name: 'Matt Hernandez',
+    name: 'Matt',
     link: 'https://github.com/fiveisprime',
     avatar: 'https://avatars.githubusercontent.com/fiveisprime',
   },
@@ -185,24 +188,15 @@ const contributors = [
     link: 'https://github.com/skierkowski',
   },
   {
-    name: 'Syz',
-    link: 'https://github.com/syzh',
-    avatar: 'https://avatars.githubusercontent.com/syzh',
+    name: '孙远高',
+    cn_name: 'Yuga Sun',
+    link: 'https://github.com/yugasun',
+    avatar: 'https://avatars.githubusercontent.com/yugasun',
   },
   {
-    name: 'Takahiro Horike',
+    name: 'Takahiro',
     link: 'https://github.com/horike37',
     avatar: 'https://avatars.githubusercontent.com/horike37',
-  },
-  {
-    name: 'Teclipse',
-    link: 'https://github.com/tongtingting',
-    avatar: 'https://avatars.githubusercontent.com/tongtingting',
-  },
-  {
-    name: 'Tinafang',
-    link: 'https://github.com/tinafangkunding',
-    avatar: 'https://avatars.githubusercontent.com/tinafangkunding',
   },
   {
     name: 'Tyler Neely',
@@ -215,7 +209,13 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/tmilewski',
   },
   {
-    name: 'Vaidas Mykolaitis',
+    name: '童婷婷',
+    cn_name: 'Teclipse',
+    link: 'https://github.com/tongtingting',
+    avatar: 'https://avatars.githubusercontent.com/tongtingting',
+  },
+  {
+    name: 'Vaidas',
     link: 'https://github.com/codepreneur',
     avatar: 'https://avatars.githubusercontent.com/codepreneur',
   },
@@ -225,19 +225,26 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/wbreza',
   },
   {
+    name: '王俊杰',
+    cn_name: 'Jenswang',
+    link: 'https://github.com/jenswang',
+    avatar: 'https://avatars.githubusercontent.com/jenswang',
+  },
+  {
     name: 'Yermakou',
     link: 'https://github.com/rma4ok',
     avatar: 'https://avatars.githubusercontent.com/rma4ok',
   },
   {
-    name: 'Yuga Sun',
-    link: 'https://github.com/yugasun',
-    avatar: 'https://avatars.githubusercontent.com/yugasun',
-  },
-  {
     name: 'Zev Mo Green',
     link: 'https://github.com/zevmo',
     avatar: 'https://avatars.githubusercontent.com/zevmo',
+  },
+  {
+    name: '朱理锋',
+    cn_name: 'Juli',
+    link: 'https://github.com/Juliiii',
+    avatar: 'https://avatars.githubusercontent.com/Juliiii',
   },
 ]
 

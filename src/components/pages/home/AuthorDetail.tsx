@@ -56,8 +56,11 @@ function ActivityCard({activity} : {
 function ActivityCards() {
   return (
     <Box className="scf-box__body">
-      <p className="scf-activity__content">不论您是行业大会主办方，还是垂直技术沙龙发起者，我们都欢迎您与 Serverless 中文网进行合作。技术共享，共建生态，Serverless
-        探索之路，我们携手同行。您可以添加微信 (WeChat ID: jiangliu_0418) 与我们进一步交流。</p>
+      <p className="scf-activity__content">Serverless 中文社区由开发者和技术爱好者发起，致力于分享 Serverless 知识和技术，探讨技术落地和未来发展。
+</p>
+      <p className="scf-activity__content">我们欢迎更多志同道合者一起贡献 Serverless 技术的知识和实践。Serverless 期待与您任何形式的社区交流、开源协作、内容共建、活动合作。
+</p>
+      <p className="scf-activity__content">微信联系：jiangliu_0418</p>
     </Box>
   )
 }

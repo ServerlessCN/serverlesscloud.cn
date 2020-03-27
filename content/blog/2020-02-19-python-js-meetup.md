@@ -1,8 +1,8 @@
 ---
 title: Serverless 工程化实战：基于 Python + JS 的动态博客开发 - 直播课
-description: 本次课程将以一个动态博客系统的开发为例子，详细分享 Serverless 架构的工程化实战
+description: 腾讯云研发工程师刘宇分享 Serverless 工程化项目开发实战和经验总结
 date: 2020-02-19
-thumbnail: https://img.serverlesscloud.cn/2020325/1585130372376-4.jpeg
+thumbnail: https://img.serverlesscloud.cn/2020327/1585306882217-9.jpg
 categories:
   - meetup
 authors:
@@ -10,7 +10,7 @@ authors:
 authorslink:
   - https://china.serverless.cn/
 location: 
-  - 线上直播
+  - 线上直播 | 腾讯云 & 云+社区 & Serverless 中文社区
 ---
 
 Tencent Serverless 目前已经支持了不少语言的热门框架，包括 Express、 Koa、Egg 以及 Flask 等等大家熟悉的框架都可以轻松上云部署。不过在实际业务的使用中，尤其是迁移过程中，还是有不少需要注意的地方，比如 POST/GET 的参数传输方法难以原生获取等等。

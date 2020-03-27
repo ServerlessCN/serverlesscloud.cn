@@ -1,9 +1,9 @@
 ---
 title: 基于 Vuejs + Express 快速构建 Serverless 应用 - 在线 Workshop
-description: 在线分享基于 Vuejs+Express 快速构建 Serverless 应用
+description: Authing 的全栈工程师高鹏洋将实操教学如何基于 Vuejs+Express 快速构建 Serverless 应用
 date: 2020-03-26
 time: future
-thumbnail: https://img.serverlesscloud.cn/2020326/1585217744291-%E6%91%84%E5%9B%BE%E7%BD%91_400730082_wx.jpg
+thumbnail: https://img.serverlesscloud.cn/2020327/1585307844594-1212.jpg
 categories:
   - meetup
 authors:
@@ -11,7 +11,7 @@ authors:
 authorslink:
   - https://china.serverless.cn/
 location: 
-  - 线上直播
+  - 线上直播 | Serverless 中文社区
 ---
 
 在社区，我们经常会收到关于 Serverless 的「灵魂」三问：

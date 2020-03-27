@@ -1,8 +1,8 @@
 ---
 title: 如何开发一个 Serverless Express 组件 - 直播课
-description: 业务快速迁移 Serverless，你必须知道这件事儿
+description: Serverless 专家陈涛在线分享如何开发一个 Serverless 组件
 date: 2020-03-04
-thumbnail: https://img.serverlesscloud.cn/2020325/1585129765443-0.jpeg
+thumbnail: https://img.serverlesscloud.cn/2020327/1585306882197-9.jpg
 categories:
   - meetup
 authors:
@@ -10,7 +10,7 @@ authors:
 authorslink:
   - https://china.serverless.cn/
 location: 
-  - 线上直播
+  - 线上直播 | 腾讯云大学 & 云+社区 & Serverless 中文社区
 ---
 
 Tencent Serverless 目前已经支持了不少语言的热门框架，包括 Express、 Koa、Egg 以及 Flask 等等大家熟悉的框架都可以通过  Component 轻松上云部署。但用户的业务场景和功能需求是多种多样的，如果现有的 Component 无法满足业务诉求，开发者则需要制作一个自己的 Component 来支持自身的业务。

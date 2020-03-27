@@ -1,9 +1,9 @@
 ---
-title: Serverless 粉丝，腾讯云喊你领取「专属」T 恤
-description: 疫情之下，我们都能贡献自己的力量！
+title: Serverless 中文社区有奖征稿
+description: 欢迎将您的技术实践、开发经验分享更多人借鉴学习！
 date: 2020-04-15
 time: future
-thumbnail: https://img.serverlesscloud.cn/2020325/1585135128362-11.jpeg
+thumbnail: https://img.serverlesscloud.cn/2020327/1585306882223-9.jpg
 categories:
   - meetup
 authors:
@@ -11,7 +11,7 @@ authors:
 authorslink:
   - https://china.serverless.cn/
 location: 
-  - 线上直播
+  - 线上直播 | Serverless 中文社区
 ---
 
 亲爱的小伙伴们，Serverless 在线课堂已经开展了三期直播，我们分享了 Serverless 的概念、技术架构、典型应用场景、开发实战以及工程化应用等技术干货。在这里，要感谢大家抽出时间来学习和使用 Serverless，在此期间，你们提的需求产品都已记录在小本本上了，研发同学也正在加急开发中……
