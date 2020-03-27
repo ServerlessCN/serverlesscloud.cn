@@ -1,12 +1,6 @@
 ---
-<<<<<<< HEAD
 title: "wuhan2020 黑客松大赛"
 description: "Hack for Wuhan，每颗渺小的种子都能创造伟大的力量"
-=======
-title: "Hack for Wuhan，每一颗渺小的种子都能创造伟大的力量！"
-description: "疫情之下，我们都能贡献自己的力量！"
-keywords: Hack for Wuhan,Serverless 开源,Serverless 援助平台
->>>>>>> master
 date: 2020-03-02
 thumbnail: https://img.serverlesscloud.cn/202032/1583158864577-wuhan_wechat6.jpg
 categories:
