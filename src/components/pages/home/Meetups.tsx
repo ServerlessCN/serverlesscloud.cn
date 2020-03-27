@@ -25,8 +25,8 @@ function BlogCard({history,blog} : {
             <p>{formateDate(blog.node.frontmatter.date, true, '.')}</p>
           </div>
           <div className="scf-meetup-content">
-            <h5>{blog.node.frontmatter.title}</h5>
-            <p>{blog.node.frontmatter.description}</p>
+            <h5 title={blog.node.frontmatter.title}>{blog.node.frontmatter.title}</h5>
+            <p title={blog.node.frontmatter.description}>{blog.node.frontmatter.description}</p>
             <div className="meetup-content_location">
               <i className="scf-icon scf-icon-map">{blog.node.frontmatter.location}</i>
             </div>
