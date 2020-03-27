@@ -2,7 +2,6 @@ import * as React from 'react'
 import {
   Row,
   Background,
-  Text,
   Container,
   Image,
   InlineBlock,
@@ -99,7 +98,7 @@ export default function() {
   return (
     <Background width={1} height="30px" background={theme.colors.black}>
       <Container
-        width={[1200, 1200, 1200, 1200, 0.76, 1200]}
+      width={[1, 1, 1, 912, 0.76, 1200]}
         height="100%"
         px={0}
         // maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}

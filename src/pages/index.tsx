@@ -24,7 +24,7 @@ const IndexPage = (props : Props) => {
 
   React.useEffect(() => {
     const onResize = debounce(() => {
-      if (window.innerWidth >= 992) {
+      if (window.innerWidth > 992) {
         setisMobileView(false)
       } else {
         setisMobileView(true)
@@ -53,14 +53,7 @@ const IndexPage = (props : Props) => {
         : <BestParctices/>}
       <LatestComponents/>
       <Container
-        width={[
-        1,
-        1,
-        1,
-        1,
-        0.76,
-        1200
-      ]}
+        width={[1, 1, 1, 912, 0.76, 1200]}
         px={0}>
         <Box className="scf-grid">
           <LatestBlogs/>

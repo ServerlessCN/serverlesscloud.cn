@@ -343,9 +343,7 @@ img {
     z-index: 999;
   }
 
-  .scf-blog-header .scf-box-blog-tabs {
-    width: 76%;
-  }
+
 
   .scf-segment__item.is-active,
   .scf-segment__item:hover {

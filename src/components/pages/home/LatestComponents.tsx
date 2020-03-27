@@ -1,7 +1,5 @@
 import * as React from 'react'
 import {Container, Box} from '@src/components/atoms'
-import theme from '@src/constants/theme'
-import {Link} from 'gatsby'
 import ExternalLink from '@src/components/Link/ExternalLink'
 import ComponentCard from './ComponentCard'
 import componentConfig from '@src/constants/componentConfig'
@@ -75,14 +73,7 @@ export default function () {
   return (
     <Box className="scf-component-recommend">
       <Container
-        width={[
-        1,
-        1,
-        1,
-        1,
-        0.76,
-        1200
-      ]}
+      width={[1, 1, 1, 912, 0.76, 1200]}
         px={0}
         pt={0}>
         <Box className="scf-box">

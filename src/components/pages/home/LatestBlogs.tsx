@@ -1,6 +1,6 @@
 import * as React from 'react'
 import crypto from 'crypto'
-import {Box, Row, Background, Container, Center} from '@src/components/atoms'
+import {Box} from '@src/components/atoms'
 import {StaticQuery, graphql, Link} from 'gatsby'
 import {Blog, GraphqlBlogResult} from '@src/types'
 import './LatestBlogs.css'

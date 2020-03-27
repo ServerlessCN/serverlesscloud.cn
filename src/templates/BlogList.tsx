@@ -2,6 +2,7 @@ import * as React from 'react'
 import {graphql} from 'gatsby'
 import Layout from '@src/layouts'
 import List from '@src/components/pages/blogList/List'
+import {Container} from '@src/components/atoms'
 import Category from '@src/components/pages/blogList/CategoryList'
 import {GraphqlBlogResult} from '@src/types'
 import Helmet from '@src/components/Helmet'
@@ -43,8 +44,10 @@ const BlogList = ({
       <div className="scf-content scf-blogList-content">
         <div className="scf-page-blog scf-layout-pattern">
           <div className="scf-home-block scf-blog-list">
-            <div className="scf-home-block__inner">
-              <div id="scf-box-mobile-titlebar" class="scf-box__header-title">
+            <Container
+            width={[1, 1, 1, 912, 0.76, 1200]}
+            px={0}>
+              <div id="scf-box-mobile-titlebar" className="scf-box__header-title">
                   <h3>博客</h3>
               </div>
               <div className="scf-box ">
@@ -63,7 +66,7 @@ const BlogList = ({
                 <button className="scf-btn scf-btn--line">查看更多</button>
               </div>
               */}
-            </div>
+              </Container>
           </div>
         </div>
       </div>
