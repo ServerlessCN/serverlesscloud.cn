@@ -1,6 +1,6 @@
 ---
 title: Serverless 架构揭秘与静态网站部署实战 - 直播课
-description: Serverless Framework 社区专家陈涛将分享 Serverless 的技术架构和开发实战，从 0 到 1 快速掌握 Serverless 开发知识
+description: Serverless 专家陈涛将分享 Serverless 的技术架构和开发实战，从 0 到 1 快速掌握 Serverless 开发知识
 date: 2020-02-06
 thumbnail: https://img.serverlesscloud.cn/2020327/1585306882746-9.jpg
 categories:
