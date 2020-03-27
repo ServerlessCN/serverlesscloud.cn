@@ -134,7 +134,7 @@
   top: 5px;
   /* left: calc(150px + 12px); */
   left: calc(16% + 12px);
-  height: calc(100% - 180px);
+  height: calc(100% - 200px);
   bottom: 0px;
   width: 1px;
   background: #ddd;
@@ -147,7 +147,7 @@
 }
 
 .scf-meetup-item {
-  height: 180px;
+  height: 200px;
 }
 
 .scf-meetup {

@@ -34,6 +34,13 @@ const bannerConfigs : {
   title : string
 }[] = [
   {
+    img: banner_vue,
+    backgroundColor: '#fff',
+    alt: 'vue_meetup',
+    link: 'https://china.serverless.com/blog/2020-03-29-vuejs-express-meetup',
+    title: ""
+  },
+  {
     img: banner1,
     backgroundColor: '#000',
     alt: 'Serverless.com',
@@ -45,12 +52,6 @@ const bannerConfigs : {
     alt: 'Serverless 组件',
     link: 'https://serverless.com/cn/components/',
     title: "Serverless 组件支持各种主流应用框架，持续发布中"
-  }, {
-    img: banner_vue,
-    backgroundColor: '#fff',
-    alt: 'vue_meetup',
-    link: 'https://china.serverless.com/blog/2020-03-29-vuejs-express-meetup',
-    title: "在线分享基于 Vuejs+Express 快速构建 Serverless 应用"
   }, {
     img: banner4,
     backgroundColor: '#fff',
