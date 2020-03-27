@@ -1,6 +1,7 @@
 ---
 title: 三分钟入坑指北 🔜 Docsify + Serverless Framework 快速创建个人博客系统
 description: 通过 Serverless Website 组件快速构建一个 Serverless docsify 个人博客系统。
+keywords: Docsify,个人博客系统,Serverless Website,Serverless docsify
 date: 2019-12-14
 thumbnail: https://img.serverlesscloud.cn/20191217/1576565954158-docsify.png
 categories:

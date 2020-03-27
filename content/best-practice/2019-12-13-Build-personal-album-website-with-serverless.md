@@ -1,6 +1,7 @@
 ﻿---
 title: 用 Serverless 搭建个人静态相册网站
 description: "通过 Serverless 组件，基于 ThumbsUp 快速搭建个人静态相册网站"
+keywords: Serverless 组件,ThumbsUp相册,搭建个人静态相册网站,ThumbsUp搭建
 date: 2019-12-13
 thumbnail: 'https://video-1251001047.cos.ap-chengdu.myqcloud.com/thumbsup.png'
 categories:

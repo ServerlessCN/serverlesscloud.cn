@@ -1,6 +1,7 @@
 ---
 title: 前端为什么要关注 Serverless?
 description: 前端为什么要接 serverless? 交给后端不行吗?
+keywords: serverless发展,Serverless 基本概念,Serverless生产力
 date: 2020-03-14
 thumbnail: https://img.serverlesscloud.cn/2020115/1579078112543-1577769064015-joshua-aragon-FGXqbqbGt5o-unsplash.jpg
 categories:

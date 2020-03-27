@@ -1,6 +1,7 @@
 ---
 title: "Serverless Component 是什么，我怎样使用它？"
 description: "Serverless Component 介绍和使用指南"
+keywords: Serverless 使用指南,Serverless Component介绍,Serverless Component使用
 date: 2018-04-25
 thumbnail: "https://img.serverlesscloud.cn/20191213/1576236926383-serverless-components.gif"
 categories:

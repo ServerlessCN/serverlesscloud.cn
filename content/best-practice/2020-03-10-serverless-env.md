@@ -1,6 +1,7 @@
 ---
 title: Serverless 多环境配置方案探索
 description: 业务开发完了，如何管理不同环境的配置呢？
+keywords: Serverless 多环境配置,Serverless 管理环境,Serverless配置方案
 date: 2020-03-10
 thumbnail: https://img.serverlesscloud.cn/20191230/1577673977066-16ef85f25ee1af09.jpg
 categories:

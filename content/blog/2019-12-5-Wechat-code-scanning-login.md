@@ -1,6 +1,7 @@
 ---
 title: 极简配置，业务上云只需 3min
 description: Serverless Framework 最新发布微信扫码一键登录能力，支持用户在本地环境扫码注册登陆。
+keywords: Serverless 微信扫码一键登录,Serverless 本地环境扫码
 date: 2019-12-04
 thumbnail: https://hello-world-1253970226.cos.ap-chengdu.myqcloud.com/wechat.png
 categories:

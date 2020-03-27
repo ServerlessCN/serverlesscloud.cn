@@ -1,6 +1,7 @@
 ---
 title: 如何通过 Serverless 与自然语言处理，让搜索引擎“看” 到你的博客
 description: Serverless 与自然语言处理结合的一个小应用
+keywords: Serverless 自然语言处理
 date: 2019-09-01
 thumbnail: https://img.serverlesscloud.cn/2020114/1578988490344-v2-8b2cd2c5275aa2c5a3c5083a148a7a9f_1200x500.jpg
 categories:

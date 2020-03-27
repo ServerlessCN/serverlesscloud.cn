@@ -1,6 +1,7 @@
 ---
 title: 一名时尚艺术家转行到科技行业的历程
 description: Serverless 团队新成员 Charmmie 是从高级时装行业转行到技术领域的，本文是她的故事，太酷了。
+keywords: Serverless 团队成员,Charmmie
 date: 2018-02-01
 thumbnail: 'https://img.serverlesscloud.cn/20191212/1576149285117-charmmie-square.jpg'
 categories:

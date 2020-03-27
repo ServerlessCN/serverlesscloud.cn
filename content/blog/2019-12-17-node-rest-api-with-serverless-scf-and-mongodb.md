@@ -3,6 +3,7 @@ title:
   使用 Serverless Framework，结合云函数 SCF、API 网关和云数据库 MySQL 构建
   REST API
 description: 本文介绍如何创建一个进行自动化面试评估的 Serverless 应用！
+keywords: Serverless 自动化面试评估,Serverless 云数据库 MySQL,云函数 SCF
 date: 2019-12-17
 thumbnail: https://img.serverlesscloud.cn/2020115/1579078112543-1577769064015-joshua-aragon-FGXqbqbGt5o-unsplash.jpg
 categories:

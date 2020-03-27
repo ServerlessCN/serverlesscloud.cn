@@ -1,6 +1,7 @@
 ---
 title: 20 行代码：Serverless 架构下用 Python 轻松搞定图像分类
 description: 如何快速搭建一个图像分类/识别 API
+keywords: Serverless 图像分类,Serverless 识别 API,Serverless Python
 date: 2020-02-29
 thumbnail: https://img.serverlesscloud.cn/202034/1583317036981-video3.png
 categories:
