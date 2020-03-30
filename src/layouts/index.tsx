@@ -18,11 +18,11 @@ const Layout = ({ children }: React.Props<any>) => {
 
   React.useEffect(() => {
     const onResize = debounce(() => {
-      setIsDesktopView(!!(window.innerWidth >= 992))
+      setIsDesktopView(!!(window.innerWidth > 992))
     }, 50)
 
     window.addEventListener('resize', onResize)
-    setIsDesktopView(!!(window.innerWidth >= 992))
+    setIsDesktopView(!!(window.innerWidth > 992))
 
     return () => {
       window.removeEventListener('resize', onResize)

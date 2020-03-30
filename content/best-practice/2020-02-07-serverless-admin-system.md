@@ -1,6 +1,7 @@
 ---
 title: Serverless + Egg.js 后台管理系统实战
 description: 本文将介绍如何基于 Egg.js 和 Serverless 实现一个后台管理系统
+keywords: Egg.js,Serverless后台管理,Serverless Egg.js 
 date: 2020-02-07
 thumbnail: https://img.serverlesscloud.cn/20191226/1577362754931-egg.png
 categories:

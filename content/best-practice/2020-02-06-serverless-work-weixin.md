@@ -1,6 +1,7 @@
 ---
 title: 基于 Serverless + 企业微信打造 nCoV 疫情监控小助手
 description: 使用 Serverless 基本功能，配合企业微信打造 nCoV 疫情监控小助手
+keywords: Serverless 企业微信,Serverless 基本功能,nCoV 疫情监控小助手
 date: 2020-02-06
 thumbnail: https://img.serverlesscloud.cn/202026/1580962859953-probider.png
 categories:

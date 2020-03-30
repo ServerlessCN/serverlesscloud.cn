@@ -1,6 +1,7 @@
 ---
 title: "2018 年社区调查：Serverless 使用率大幅增长"
 description: "我们曾在开发社区进行问卷调查，询问 Serverless 的使用情况。它的使用率增长连我们自己都惊讶不已，下面来看看数据。"
+keywords: Serverless 社区调查,Serverless 使用情况,Serverless 数据
 date: 2018-07-19
 thumbnail: 'https://main.qcloudimg.com/raw/8a0db1c9fd8b51c15d0b006291d52bf5.jpg'
 categories:

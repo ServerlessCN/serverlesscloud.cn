@@ -1,6 +1,7 @@
 ---
 title: Serverless 基本概念入门
 description: 从行业趋势看，Serverless 是云计算必经的一场革命
+keywords: Serverless 基本概念,Serverless 入门,Serverless 基础
 date: 2019-08-01
 thumbnail: https://img.serverlesscloud.cn/20191227/1577408769674-v2-3635e3b55ee1fda578ea953ba927da13_1200x500.jpg
 categories:

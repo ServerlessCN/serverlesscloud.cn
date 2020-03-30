@@ -1,6 +1,7 @@
 ---
 title: 使用 Wintersmith + Serverless Framework 快速创建个人站点
 description: 通过 Serverless Website 组件快速构建一个 Serverless Wintersmith 个人站点。
+keywords: Wintersmith,Wintersmith 站点,Serverless Framework 快速创建个人站点
 date: 2020-01-13
 thumbnail: https://img.serverlesscloud.cn/2020113/1578918119146-WINTERS.png
 categories:

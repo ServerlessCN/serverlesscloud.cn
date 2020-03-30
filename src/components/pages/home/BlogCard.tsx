@@ -1,7 +1,5 @@
 import * as React from 'react'
-import {Flex, Box} from '@src/components/atoms'
-import theme from '@src/constants/theme'
-import styled from 'styled-components'
+import {Box} from '@src/components/atoms'
 import {Blog} from '@src/types'
 import BlogDetailLink from '@src/components/Link/BlogDetailLink'
 import './BlogCard.css'

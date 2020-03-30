@@ -1,6 +1,7 @@
 ---
 title: "Serverless 架构与事件规范"
 description: "Serverless 架构与事件规范"
+keywords: Serverless 架构,Serverless 规范,Serverless 架构与事件规范
 date: 2020-02-19
 thumbnail: "https://img.serverlesscloud.cn/202031/1583055662380-th.jpeg"
 categories:

@@ -1,6 +1,7 @@
 ---
 title: 基于 Serverless Component 全栈解决方案 Ⅱ
 description: 如何借助 Serverless Component 快速开发全栈 Web 应用 - 续集
+keywords: Serverless Component,全栈 Web 应用,全栈解决方案
 date: 2019-12-11
 thumbnail: https://img.serverlesscloud.cn/20191226/1577353101878-vue.js.png
 categories:

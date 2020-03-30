@@ -1,6 +1,7 @@
 ---
 title: 如何优雅地给网站图片加水印
 description: Serverless 在 Web 后端与应用服务端的应用
+keywords: Serverless 应用服务端,Serverless 应用,Serverless Web 后端
 date: 2019-10-08
 thumbnail: https://img.serverlesscloud.cn/2020114/1578990760585-v2-7d9090260d7f4a17539902a2c1ef8264_r.jpg
 categories:

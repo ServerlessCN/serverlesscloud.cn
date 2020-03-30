@@ -1,20 +1,13 @@
 import * as React from 'react'
 import Layout from '@src/layouts'
-import {Box, Flex, Container, Background, Text} from '@src/components/atoms'
+import {Container} from '@src/components/atoms'
 import Helmet from '@src/components/Helmet'
 import styled from 'styled-components'
-import Breadcrumbs from '@src/components/Breadcrumbs'
 import './resource.css'
 
 interface Props {
     location : string
 }
-
-const CustomContainer = styled(Container)`
-  flex: 1;
-  display: flex;
-  padding: 30px;
-`
 
 const resource : {
     title : string
@@ -264,18 +257,20 @@ const Resource = ({location} : Props) => {
             <Helmet
                 title="资源 - Serverless"
                 keywords="Serverless components,Serverless组件,Serverless案例"
-                descirption="Serverless components 组件实战，快速上手Serverless框架组件能力，帮助上手Serverless最佳操作场景实战。"
+                description="Serverless components 组件实战，快速上手Serverless框架组件能力，帮助上手Serverless最佳操作场景实战。"
                 location={location}/>
-            <div style={{    marginTop: "80px",
-                flex: "1 1"}}>
+            <div style={{marginTop: "80px",flex: "1 1"}}>
                 <div className="scf-page-resource scf-layout-pattern">
                     <div className="scf-home-block">
-                        <div className="scf-home-block__inner" id="scf-box-resource-body">
-                            <div id="scf-box-mobile-titlebar" class="scf-box__header-title">
+                        <Container
+                            width={[1, 1, 1, 912, 0.76, 1200]}
+                            id="scf-box-resource-body"
+                            px={0}>
+                            <div id="scf-box-mobile-titlebar" className="scf-box__header-title">
                                 <h3>资源</h3>
                             </div>
-                            <div class="scf-box-mobile-tabs">
-                                <ul class="scf-box-mobile-tabs-ul">
+                            <div className="scf-box-mobile-tabs">
+                                <ul className="scf-box-mobile-tabs-ul">
                                 {resource.map(({title,list})=>(
                                     <li>{title}</li>
                                  ))}
@@ -307,7 +302,7 @@ const Resource = ({location} : Props) => {
                                 </div>
                             </div>
                             ))}
-                        </div>
+                        </Container>
                     </div>
                 </div>
             </div>

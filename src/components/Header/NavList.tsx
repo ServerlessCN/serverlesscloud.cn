@@ -54,6 +54,11 @@ const navList: { title: string; link: string; isInternal?: boolean }[] = [
     isInternal: true,
   },
   {
+    title: '活动',
+    link: '/meetup',
+    isInternal: true,
+  },
+  {
     title: '论坛',
     link: '/forum',
     isInternal: true,
@@ -78,8 +83,6 @@ interface State {
 
 function Blogs(props) {
 
-  // const query = graphql`query { blogs: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 999999 filter: { fileAbsolutePath: { regex: "//best-practice// | //blog//" } frontmatter: { categories: { nin: "best-practice" } } } ) { edges { node { id frontmatter { title thumbnail thumbnail
-  // authors description date } fileAbsolutePath fields { slug } } } } } `
   const query = graphql`query { blogs: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 999999 filter: { fileAbsolutePath: { regex: "//blog//" } } ) { edges { node { id frontmatter { title thumbnail thumbnail
   authors description date } fileAbsolutePath fields { slug } } } }, bests: allMarkdownRemark( sort: { fields: frontmatter___date, order: DESC } limit: 999999 filter: { fileAbsolutePath: { regex: "//best-practice//" } } ) { edges { node { id frontmatter { title thumbnail thumbnail
   authors description date } fileAbsolutePath fields { slug } } } } } `
@@ -158,7 +161,7 @@ export default class NavList extends React.Component<Props, State> {
     const { isActive, isDesktopView } = this.props
     const isMobileNavListDisplay = () => (isActive ? 'block' : 'none')
 
-    const navListBoxWidth = isDesktopView ? 0.6 : 1
+    const navListBoxWidth = isDesktopView ? 0.71 : 1
     return (
       <BoxWithTextAlign
         width={navListBoxWidth}
@@ -176,7 +179,7 @@ export default class NavList extends React.Component<Props, State> {
         textAlign={isDesktopView ? 'right' : 'left'}
       >
 
-        <List p={0} mr={0} mb={0} style={{position:'relative'}}>
+        <List p={0} mr={0} mb={0} style={{position:'relative',marginRight:35}}>
           {navList.map(({ title, link, isInternal }, index) => {
             const color= (window as any).location.pathname.includes(link)?'#fff':theme.colors.gray_text;
             const Link = isInternal
@@ -214,7 +217,7 @@ export default class NavList extends React.Component<Props, State> {
                 }} type="text" placeholder="搜索文章或关键词" className="scf-header-search__input"/>
                 <button className="scf-header-search__clear-btn" onClick={() => this.changeSearch()}><i
                   className="scf-icon scf-icon-clear"></i></button>
-                <Blogs value={searchContnet}/>}
+                <Blogs value={searchContnet}/>
               </div>
             </div>
             :

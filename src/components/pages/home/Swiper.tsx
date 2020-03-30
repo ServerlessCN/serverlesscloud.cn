@@ -1,15 +1,11 @@
 import * as React from 'react'
 import {
   Center,
-  Text,
   Background,
   Container,
   Box,
   Image,
-  Row,
-  Button
 } from '@src/components/atoms';
-import {debounce} from '@src/utils'
 import theme from '@src/constants/theme'
 import {CheckIfDesktopContext} from '@src/contexts'
 import Swiper from '@src/components/Swiper'
@@ -17,6 +13,8 @@ import banner1 from '@src/assets/images/banner1.png'
 import banner2 from '@src/assets/images/banner2.png'
 import banner3 from '@src/assets/images/banner3.png'
 import banner4 from '@src/assets/images/banner4.png'
+import banner_vue from '@src/assets/images/banner_vue.png'
+
 import helloworld from '@src/assets/images/hello-world.png'
 import ExternalLink from '@src/components/Link/ExternalLink'
 
@@ -36,6 +34,13 @@ const bannerConfigs : {
   title : string
 }[] = [
   {
+    img: banner_vue,
+    backgroundColor: '#fff',
+    alt: 'vue_meetup',
+    link: 'https://china.serverless.com/blog/2020-03-29-vuejs-express-meetup',
+    title: ""
+  },
+  {
     img: banner1,
     backgroundColor: '#000',
     alt: 'Serverless.com',
@@ -48,12 +53,6 @@ const bannerConfigs : {
     link: 'https://serverless.com/cn/components/',
     title: "Serverless 组件支持各种主流应用框架，持续发布中"
   }, {
-    img: banner3,
-    backgroundColor: '#fff',
-    alt: '荐书',
-    link: 'https://china.serverless.com/blog/2019-11-19-anycodes-book',
-    title: "Serverless 社区成员出版新书啦！"
-  }, {
     img: banner4,
     backgroundColor: '#fff',
     alt: 'Serverless Component',
@@ -63,13 +62,6 @@ const bannerConfigs : {
 ]
 
 export default function () {
-  // const [isNavButtonActive, setisNavButtonActive] = React.useState(true)
-  // React.useEffect(() => {   const onResize = debounce(() => {     if
-  // (window.innerWidth >= 992) {       setisNavButtonActive(true)     } else {
-  //    setisNavButtonActive(false)     }   }, 50)
-  // window.addEventListener('resize', onResize)   onResize()   return () => {
-  // window.removeEventListener('resize', onResize)   } }, [])
-
   return (
     <CheckIfDesktopContext.Consumer>
       {isDesktopView => {
@@ -80,18 +72,11 @@ export default function () {
             : theme.headerHeights.mobile} mb={'30px'}>
             <Container
             className="scf-home-banner_Container"
-              width={[
-              1,
-              1,
-              1,
-              1,
-              0.76,
-              1200
-            ]}
+            width={[1, 1, 1, 912, 0.76, 1200]}
               px={0}>
               <Box className="scf-grid">
                 <Box className="scf-grid__item-16">
-                  <Swiper height={"92%"}>
+                  <Swiper height={["100%","100%","100%","100%","92%","92%"]}>
                     {bannerConfigs.map((config, index) => {
                       return (
                         <Background

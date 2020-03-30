@@ -1,80 +1,10 @@
 import * as React from 'react'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
-import Markdown from '@src/components/Markdown'
-import {Box, Flex, Container} from '@src/components/atoms'
+import {Box, Container} from '@src/components/atoms'
 import Helmet from '@src/components/Helmet'
-import styled from 'styled-components'
-import {graphql} from 'gatsby'
-import QQQRcode from '@src/assets/images/qq_qrcode.png'
-import WechatQRcode from '@src/assets/images/wechat_qrcode.png'
 import './about.css'
-
-const CustomContainer = styled(Container)`
-  flex: 1;
-
-  .markdown-body img {
-    width: 200px;
-    height: 200px;
-  }
-
-  #qrcode table {
-    width: auto;
-    margin-right: 10px;
-  }
-
-  #qrcode {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  #contact, #question, #qrcode {
-    // display: none;
-    margin-top: 50px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-  }
-
-  #about {
-    overflow: hidden;
-    display: flex;
-    position: relative;
-    padding-top: 60px;
-  }
-  #contact h1, #question h1, #qrcode h1{
-    position: relative;
-    float: left;
-    margin: 10px 0 0 0;
-    padding: 0;
-    font-size: 22px;
-    line-height: 44px;
-    height: 44px;
-    border: none;
-    min-width: 150px;
-    background-image: url(/static/box-title-bg-322b028f8b95fd6b130f15372d21b8de.svg)
-  }
-
-  #contact p, #question p, #qrcode p {
-    position: relative;
-    margin-left: 250px;
-  }
-
-  #about h1{
-    position: relative;
-    float: left;
-    margin: 10px 0 0 0;
-    padding: 0;
-    font-size: 22px;
-    line-height: 44px;
-    height: 44px;
-    border: none;
-    min-width: 150px;
-    background-image: url(/static/box-title-bg-322b028f8b95fd6b130f15372d21b8de.svg)
-  }
-  #about p{
-    position: relative;
-    margin-left: 250px;
-  }
-`
+import contributors from '@src/constants/contributors'
+import communitys from '@src/constants/communitys'
 
 interface Props {
   data : {
@@ -103,121 +33,64 @@ const AboutPage = () => {
         <Box className="scf-page-about scf-layout-pattern">
           <Box className="scf-home-block">
             <Container
-              width={[
-              1,
-              1,
-              1,
-              1,
-              0.76,
-              1200
-            ]}
-              className="scf-home-block__inner"
+              width={[1, 1, 1, 912, 0.76, 1200]}
               px={0}>
-              <Box className="scf-grid ">
-                <Box className="scf-grid__item-12">
+              <Box className="scf-box-about-header">
+                <Box>
                   <Box className="scf-grid__box">
-                    <Box className="scf-box__header">
-                      <Box className="scf-box__header-title"><h3>关于</h3>
-                      </Box>
-                    </Box>
-                  </Box>
-                </Box>
-                <Box className="scf-grid__item-12">
-                  <Box className="scf-grid__box">
-                    <p className="acf-page-about__text">Serverless 中文技术社区是国内开发者技术交流社区。提供 Serverless
-                      最新信息、实践案例、技术博客、组件文档、学习资源，帮助开发者快速应用 Severless 技术和解决开发中的问题。</p>
-                  </Box>
-                </Box>
-              </Box>
-              <Box className="scf-grid ">
-                <Box className="scf-grid__item-12">
-                  <Box className="scf-grid__box">
-                    <Box className="scf-box__header">
-                      <Box className="scf-box__header-title"><h3>联系方式</h3>
-                      </Box>
-                    </Box>
-                  </Box>
-                </Box>
-                <Box className="scf-grid__item-12">
-                  <Box className="scf-grid__box">
-                    <ul className="scf-list scf-list--link">
-                      <li className="scf-list__item">
-                        <a href="https://github.com/serverless/serverless" className="scf-list__text">GitHub: https://github.com/serverless/serverless</a>
-                      </li>
-                      <li className="scf-list__item">
-                        <a href="https://twitter.com/goserverless" className="scf-list__text">Twitter: https://twitter.com/goserverless</a>
-                      </li>
-                    </ul>
+                    <p className="acf-page-about__text">Serverless is the future of the cloud. Serverless is like superpowers for developers. 
+—— Austen Collins (serverless.com CEO)
+</p>
+                    <p className="acf-page-about__text">在 Serverless 中文网，我们相信很多事情，其中之一就是 —— Serverless 是一种未来的开发方式，属于每一个开发者。这种技术理念和技术架构，能让开发者将更多精力放在为用户带来价值上。
+</p>
+                    <p className="acf-page-about__text">而放眼到整个开源生态中，我们也相信，开源协作的使命就是开发者们凭借着开放的心态，自发贡献，最终给彼此都带来开发效率的提升。
+</p>
+                    <p className="acf-page-about__text">我们谨代表 Serverless 中文社区，感谢以下贡献者和社区， 为 Serverless 技术的知识和实践的创作、分享和传播做出的贡献。</p>
                   </Box>
                 </Box>
               </Box>
-              <Box className="scf-grid ">
-                <Box className="scf-grid__item-12">
-                  <Box className="scf-grid__box">
-                    <Box className="scf-box__header">
-                      <Box className="scf-box__header-title"><h3>问题讨论</h3>
-                      </Box>
-                    </Box>
-                  </Box>
-                </Box>
-                <Box className="scf-grid__item-12">
-                  <Box className="scf-grid__box">
-                    <ul className="scf-list scf-list--link">
-                      <li className="scf-list__item">在 SegmentFault 上快速提问</li>
-                      <li className="scf-list__item">加上「Serverless」和「ServerlessFramework」标签</li>
-                    </ul>
-                  </Box>
-                </Box>
-              </Box>
-              {/*
-              <Box className="scf-grid ">
-                <Box className="scf-grid__item-12">
-                  <Box className="scf-grid__box">
-                    <Box className="scf-box__header">
-                      <Box className="scf-box__header-title"><h3>加入组群</h3>
-                      </Box>
-                    </Box>
-                  </Box>
-                </Box>
-                <Box className="scf-grid__item-12">
-                  <Box className="scf-grid__box">
-                    <Box className="scf-grid ">
-                      <Box className="scf-grid__item-12 scf-grid-group scf-grid-group-qq">
-                        <Box className="scf-grid__box">
-                          <dl className="scf-page-about-link ">
-                            <dt className="scf-page-about-link__title">交流 QQ 群</dt>
-                            <dd className="scf-page-about-link__list">
-                              <p className="scf-page-about-link__commit-tips">群号：871445853</p><img src={QQQRcode} alt=""/></dd>
-                          </dl>
-                        </Box>
-                      </Box>
-                      <Box className="scf-grid__item-12 scf-grid-group scf-grid-group-wechat">
-                        <Box className="scf-grid__box">
-                          <dl className="scf-page-about-link ">
-                            <dt className="scf-page-about-link__title">微信社区群</dt>
-                            <dd className="scf-page-about-link__list">
-                              <p className="scf-page-about-link__commit-tips">WeChat ID：serverlesscloud</p><img src={WechatQRcode} alt=""/></dd>
-                          </dl>
-                        </Box>
-                      </Box>
-                    </Box>
-                  </Box>
+              
+              <Box className="scf-box-about-contributor">
+                <Box className="scf-box-about-contributor-header-titile"><h3 className="scf-box__header-title">贡献者</h3></Box>
+                {/*<Box className="scf-box-about-contributor-desc">
+                  <p className="acf-page-about__text">
+                    Serverless 中文网在社区伙伴的共同维护下而愈加丰富多彩，我们在此感谢做出过贡献的所有社区成员。
+                  </p>
+  </Box>*/}
+                <Box className="scf-box-about-contributor-list">
+                  <ul>
+                    {contributors.map(contributor => (
+                    <li>
+                      <a href={contributor.link} target="_blank">
+                        <img src={contributor.avatar ? contributor.avatar : 'https://avatars.githubusercontent.com/' + contributor.name} width="60px" />
+                    <div>{contributor.name}<br />{contributor.cn_name}</div>
+                      </a>
+                    </li>
+                    ))}
+
+                  </ul>
                 </Box>
               </Box>
-            */}
+
+              <Box className="scf-box-about-community">
+                <Box className="scf-box-about-community-header-titile"><h3 className="scf-box__header-title">合作社区</h3></Box>
+                <Box className="scf-box-about-community-list">
+                  <ul>
+                    {communitys.map(community => (
+                    <li>
+                      <a href={community.link}>
+                        <img src={community.logo} alt={community.name} />
+                      </a>
+                    </li>
+                    ))}
+
+                  </ul>
+                </Box>
+              </Box>
             </Container>
           </Box>
         </Box>
       </Box>
-      {/*
-      <CustomContainer maxWidth={[1216, 1216, 1216, 1216, '100%', 1216]}>
-        <Flex justifyContent="center">
-          <Box pt={'30px'} pb={'30px'} width={'80%'}>
-            <Markdown html={edges[0].node.html}></Markdown>
-          </Box>
-        </Flex>
-      </CustomContainer>
-      */}
     </Layout>
   )
 }

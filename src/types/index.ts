@@ -12,6 +12,7 @@ export interface Blog {
       authorslink?: string[]
       translators?: string[]
       translatorslink?: string[]
+      location?:string
     }
     timeToRead: number
     wordCount: {

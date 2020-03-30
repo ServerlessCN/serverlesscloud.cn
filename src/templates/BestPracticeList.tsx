@@ -4,7 +4,7 @@ import Layout from '@src/layouts'
 import List from '@src/components/pages/blogList/List'
 import {GraphqlBlogResult} from '@src/types'
 import Helmet from '@src/components/Helmet'
-import {Box} from '@src/components/atoms'
+import {Box,Container} from '@src/components/atoms'
 import {debounce} from '@src/utils'
 import './BestPracticeList.css'
 
@@ -37,7 +37,7 @@ const BlogList = ({
 
   React.useEffect(() => {
     const onResize = debounce(() => {
-      if (window.innerWidth >= 992) {
+      if (window.innerWidth > 992) {
         setisMobileView(false)
       } else {
         setisMobileView(true)
@@ -73,7 +73,9 @@ const BlogList = ({
       <div className="scf-content">
         <div className="scf-page-blog scf-layout-pattern">
           <div className="scf-home-block scf-practice-list">
-            <div className="scf-home-block__inner">
+            <Container
+              width={[1, 1, 1, 912, 0.76, 1200]}
+              px={0}>
               <div className="scf-box">
                 <div className="scf-box__body">
                   <List
@@ -88,7 +90,7 @@ const BlogList = ({
                     totalCount={totalCount}/>
                 </div>
               </div>
-            </div>
+            </Container>
           </div>
         </div>
       </div>
