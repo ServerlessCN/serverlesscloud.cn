@@ -10,7 +10,7 @@ interface Props {
 
 export default function ({logoHeight} : Props) {
   return (
-    <Link to="/">
+    <Link to="/" style={{zIndex:999}}>
     <Row
         minWidth={['auto', 'auto', '210px']}
         alignItems="center"
