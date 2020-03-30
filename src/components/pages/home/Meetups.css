@@ -121,6 +121,7 @@
 
 .timeline {
   width: 100%;
+  z-index: 999;
   font-family: PingFangSC-Regular;
   max-width: 800px;
   background: #fff;
@@ -280,7 +281,7 @@
 }
 
 .scf-meetup-history .scf-detail__show-more {
-  margin-top: -250px !important;
+  margin-top: -220px !important;
 }
 
 .scf-meetup-history .scf-detail__mask {
