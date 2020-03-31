@@ -111,7 +111,7 @@ On-Premises 的时候，机房所有的硬件、操作系统、容器、运行�
 
  **a. FaaS 优势**
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLEIGNwib2XABG2wrMxnSMcrQmlR33IE3XEkXiavcfTRklXQqtLn9YEhKg/640?wx_fmt=png)Serverless 带来的好处，首先是：零运维，也叫做零管理。除了零运维和零管理之外，还有其他很多优势，比如说按运行时间付费，你运行多长时间，就付多少钱；没有运行资源损耗的时候，不需要付任何钱。
+![img](https://img.serverlesscloud.cn/2020-03-31-073312.jpg)Serverless 带来的好处，首先是：零运维，也叫做零管理。除了零运维和零管理之外，还有其他很多优势，比如说按运行时间付费，你运行多长时间，就付多少钱；没有运行资源损耗的时候，不需要付任何钱。
 
 举个例子，可以看上面这张图，蓝色的线代表是每秒处理多少请求；红色的线是处理这些请求需要的服务器数量。可以看到蓝色的线有两个峰值，这代表需要 200 台服务器，在传统的架构下就需要准备 200 台服务器。那么有了 FaaS 之后，就不需要买那么多服务器，只需要是把这个业务逻辑写好，然后它会自动为你进行伸缩。
 
@@ -119,7 +119,7 @@ On-Premises 的时候，机房所有的硬件、操作系统、容器、运行�
 
 **b. FaaS 劣势**
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLice8XiapHGtmZNrErfl9TGQ8C0uvHkxJKictWD1nk9u5u98RZ3ttj7iaaA/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073426.jpg)
 
 除了优势之外，FaaS 还有很多劣势，没有一个通用的标准。比如 AWS、Google，还有国内腾讯、阿里云、华为、京东云都有 FaaS 服务，但他们没有一个通用的标准；这也造成了：客户被供应商锁定的问题，无法便捷迁移。比如说我现在用 AWS，每天请求可能上亿，想要迁移到阿里云和腾讯云就非常的麻烦。第 2 点是 FaaS 是一个黑盒子环境，开发者需要去非常了解这个东西的底层是怎么回事，他才能敢去使用，否则他无法去预估一些潜在的风险。第 4 是冷启动的问题，也不算什么太大的问题，云厂商已经解决了这类问题，有很多处理方式。
 
@@ -129,7 +129,7 @@ On-Premises 的时候，机房所有的硬件、操作系统、容器、运行�
 
 下图是全球范围内在做 FaaS 的厂商，第一个 OpenWhisk 是 IBM 的开源的 FaaS 框架。另外一个是大家都知道的 AWS 的 Lambda，亚马逊的云服务算是业界的一个标准，还有 Google、微软都有类似的服务。国内主要是阿里云、腾讯云、华为云，除了这三家之外，其实京东、滴滴其他的云都有。另外一家就是字节跳动，他们叫做轻服务，这也是我当时在字节跳动开发的一款服务。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLU2ic7E3V4Uwrqo3O4eDrTHxIaGoQktDaPicSYEcwSqbKjuCekBMDKhwg/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073432.jpg)
 
 此外，还有一股不可忽视的力量，就是美国的 Auth0，是一款 IDaaS - 身份认证即服务，把身份认证上云，他们拥有一个 Webtasks 产品，可以让用户、开发者通过他们的服务快速完成身份认证功能，更多的精力聚焦到具体的业务方面。另外一个就是我们在做的 Authing ，未来的话也会有一个 FnSuite 这样一款函数产品，会和我们的业务有一个非常好的打通。
 
@@ -137,7 +137,7 @@ On-Premises 的时候，机房所有的硬件、操作系统、容器、运行�
 
 ### 1）无服务器的应用后端场景
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLA8ry4MNgN5f7F2OKmDBfLGPfa1T63BrSo3WA2MQFMsGgqJYiaOicqiaOw/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073437.jpg)
 
 接下来介绍一下 Serverless 的使用场景。
 
@@ -155,7 +155,7 @@ On-Premises 的时候，机房所有的硬件、操作系统、容器、运行�
 
 ### 2）人工智能应用场景
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLNLv7497Wkcf5GB7oguvZPPWG1lliaHFdG0XlfibxR5EOCpn8lh4OOPAA/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073443.jpg)
 
 第二类场景：人工智能应用。这张图来自 Google，大家可以从左往右看，比如通过 Slack、 Messenger、或 Google Home 和机器人对话，会发送一个 Http 请求，这个请求会在云端执行函数，然后这个函数会请求谷歌的 Dialogflow 是谷歌的一项对话管理服务。
 
@@ -165,13 +165,13 @@ Dialogflow 把多轮的对话管理起来，后面的其他服务：ML、Vision 
 
 ### 3）实时数据处理场景
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLxiagibqg2zNLdkeloWhxp8erm11dicAjv97p0CQTHibyc5mcWXHD54YHNA/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073452.jpg)
 
 第三类场景：实时数据处理，最典型的就是物联网应用，数据量非常大，用 Serverless 也是非常匹配。假如需要 1万 QPS ，函数可以立马生成支持 1万 QPS 的集群，如果你自己搭一个 EC 2 服务器或者是其他应用的话，还需要自己去管理集群，成本会变得很大。
 
 ### 4）AaaS 认证即服务场景
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDL1cLgLoYSPLbXRdvEIsUsib0DFcgGX7Zehnrl65lmFm3kyNuV00QBACQ/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073458.jpg)
 
 那么还有一类最不容忽视的一个场景是：AaaS （Authentication as a Service：认证即服务），把用户注册、登录、用户管理、认证及授权等模块 SaaS 服务化。为什么需要 AaaS 这类服务呢？主要有三点原因：
 
@@ -179,7 +179,7 @@ Dialogflow 把多轮的对话管理起来，后面的其他服务：ML、Vision 
 
 在没有 AaaS 云服务之前，大家都需要自己造的轮子，那么 AaaS 云服务的出现就让这种重复造轮子的事情不在发生，节省巨大的社会生产力，并且让身份管理变得非常简单安全。这个也是很多的厂商都看到的这样一个机会。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLspeBNvFS1AFvSAg7Thsmpbv0PuIDRMvfVQCsCpIEoCwFTnHySB7DlQ/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073503.jpg)
 
 第二点：身份管理问题在数十年间，从未得到一个很好的解决，用户以自己隐私代价来为企业「身份管理不善」买单。比如很多站点的用户数据泄露事故，这些用户泄露事故不仅给企业的名声造成很大的影响，而且，严重损害了用户的隐私。近期了解到的一家公司每年花几百万来购买身份管理服务。AaaS云服务产品的出现，将大大降低客户的投入成本及安全成本。
 
@@ -191,31 +191,31 @@ Dialogflow 把多轮的对话管理起来，后面的其他服务：ML、Vision 
 
 首先是 40% 的企业已经采用了 Serverless，这个占比还是比较大的，60% 没有采用，市场空间还是有很大的提升空间。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLJsxbCicstBXxe00dDVeGjAVN49348INhiazpvoPEd7FPfB9VW8IiapONw/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073511.jpg)
 
 30% 的 Serverless 用户是一线工程师，然后是架构师、技术 leader 占 25%左右；还有技术类的也不少，另外一个出乎我意料的是：VP、总监、经理级别的用户也近20%；
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLhBClXssl8GTdldVYwFGGibq0Wd6xec3C0NLQlk16KWOauTAryO3ETKQ/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073517.jpg)
 
 另外报告显示，采纳 Serverless 技术的行业也非常广泛，采用最多的是软件行业，第二大是金融及银行业，第三大行业是咨询行业。所以如果要在 Serverless 领域创业的话，可能最好的客户是金融业，要么做外包，要么服务金融业。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLz5xPJYTx70QhAKWmHdv56MVXlK9gbN6rqjlOG8FdmicyAGRo2bMEXyA/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073523.jpg)
 
 60% 的中大型规模企业采纳 Serverless：这个数字也是比较出乎意料，我们潜意识觉得采用 Serverless 新技术的可能都是小企业，但是从图中可以看到，其中一万人以上规模的公司，占到了 20%。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLVb7rbia0wwEIBzvH3dloUjHX1yDZWaqGBzmxUyG8lWAslCAlR3hocuw/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073528.jpg)
 
 50%的 Serverless 用户，以经常使用 Serverless 超过一年时间，采用 Serverless 技术超过三年时间的企业也超过了10%
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLeCY6RAV4pCqo77RU8Dl9FOaiab1hWOVxsqAQah0Sus9t3xWib0zqcwOw/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073533.jpg)
 
 然后 66% 的用户表示，采用 Serverless 技术后效果显著。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLUkSRTnHDYPjYhW42JgicX39cw1Mw8K96d3oJjKLYuBTnm40cJRlDibHg/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073538.jpg)
 
 这是为什么要使用 Serverless 的一些调查。我们看前三个最主要的几个理由，分别是减少运营成本、可以按序的自动的伸缩。第3个是不需要再关心服务器的维护问题，和第一点差不多，降低成本。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLNwTeCsIdMqjbvcrZ4N1sCBDJU3672oMWGZsKSIxibYUDRR6lGZEK4Tg/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073543.jpg)
 
 为什么不用 Serverless 的原因调查显示：
 
@@ -223,15 +223,15 @@ Dialogflow 把多轮的对话管理起来，后面的其他服务：ML、Vision 
 - 第二大挑战是因为 Serverless 领域缺乏标准，很容易被供应商锁定，不容易迁移到其他供应商，这个可能需要加快推动 Serverless 行业的标准化进程，防止被供应商锁定，现在 CNCF 基金会也在推动着这个事情。第三大挑战是集成测试、调试非常困难，这也反映了 Serverless 生态供应链的不健全问题，同样，也存在创业机会。
 - 不采用 Serverless 最大的原因是：考虑到安全问题。如果要创业的话，那么去解决 Serverless 的安全性问题也是一个很大的机会。第二大原因是：因为对于 Serverless 的未知而产生的畏难情绪，不知道使用了 Serverless 会发生什么的问题。第 3 个原因是：底层云服务商正在迁移中，来不及采用 Serverless。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDL4w7RNRaFCOdwGUsouFof889CK94coW8LMTeDN8nibPyP5WoDKDX11Vw/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073547.jpg)
 
 什么角色在管理公司内部 Serverless 的基础设施？首先是负责DevOps 的运营人员，第二是：软件工程师、第三是技术架构师。这个是一个全球调查，我认为和中国的实际情况可能不太吻合，中国可能要反过来，第一可能是架构师来决定。第二是具有话语权的软件工程师来决定是否采纳。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLOQfMSibm5VD9esolMUDGVu4uuVQ9ex89y0AGHtubzDNKcbFVLRlnn6A/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073552.jpg)
 
 最后一个调查显示：50%+ 的企业愿意在未来三年尝试 Serverless，所以说 Serverless 在未来还会有一个非常大的增长。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLhczB9BN01JqLSDHM0cl5Os4gG0yHicJDDtlhAqnFncE314MyWuLcKGw/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073557.jpg)
 
 
 
@@ -249,7 +249,7 @@ Dialogflow 把多轮的对话管理起来，后面的其他服务：ML、Vision 
 
 此外，可能还有一些其它工具有待于补充。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLphOsLLVic26bHibpaxhOA3TrFBz36lwkXxhiaOa4PSPHSc9QrNzRweA1w/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073602.jpg)
 
 ### 2）部署工具
 
@@ -263,7 +263,7 @@ Dialogflow 把多轮的对话管理起来，后面的其他服务：ML、Vision 
 
 ## 5. 三个能促进产业发展的机会
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLWXHdJhVjLlzia8B5qqX0B4JhxLNk8Otx5o5DHIzVZ7rw7icJlAr7iaA1A/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073606.jpg)
 
 第一件事情是有一个 FaaS Framework 专门用来编写大型项目，同时他是完全兼容 FaaS 架构的。为什么需要 FaaS Framework 呢？如果没有 FaaS Framework 的话，我们是没有办法用 FaaS 编写大型项目的。一个函数，只能做一些简单的事情，假如说需要做一个QQ，做一个微信，一个函数是肯定不行的。
 
@@ -275,7 +275,7 @@ Dialogflow 把多轮的对话管理起来，后面的其他服务：ML、Vision 
 
 ## 6. 总结
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YHl6UWa9s60lk9Qiaz779rjazgZALEYDLGiaM7PcoMvoPkLFndntQys8ft1v1WUNMPq5M6DhqBWBlIwQG2JrpDMw/640?wx_fmt=png)
+![img](https://img.serverlesscloud.cn/2020-03-31-073611.jpg)
 
 最后总结一下，Serverless 是真正的云计算，它真的是按需付费，然后不需要去自己去管理任何的基础设施，只需要关注自己的核心业务，目前的云计算还没有真正做到这一点。然后小公司做 Serverlss 的话基本上没戏，主要原因是缺乏信任。
 

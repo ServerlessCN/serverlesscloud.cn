@@ -7,8 +7,10 @@ import ImgCloudplus from '@src/assets/images/cloudplus.png'
 import ImgCoding from '@src/assets/images/coding.png'
 import ImgDevops from '@src/assets/images/devops.png'
 import ImgDbaplus from '@src/assets/images/dbaplus.png'
+import ImgEvb from '@src/assets/images/evb.png'
 import ImgInfoQ from '@src/assets/images/infoQ.png'
 import ImgWuhan2020 from '@src/assets/images/wuhan2020.png'
+import ImgVuebj from '@src/assets/images/vuebj.png'
 
 const communitys = [
     {
@@ -36,12 +38,21 @@ const communitys = [
         logo: ImgDbaplus,
         link: 'javascript:;'
     },
-    
     {
         name: 'wuhan2020',
         logo: ImgWuhan2020,
         link: 'javascript:;'
-    }
+    },
+    {
+        name: 'evb',
+        logo: ImgEvb,
+        link: 'javascript:;'
+    },
+    {
+        name: 'vuebj',
+        logo: ImgVuebj,
+        link: 'javascript:;'
+    },
 ]
 
 export default communitys;
