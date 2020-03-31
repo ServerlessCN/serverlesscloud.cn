@@ -159,7 +159,7 @@
     overflow: hidden;
   }
   .scf-box-about-community-list ul li:nth-child(2n), .scf-box-about-contributor-list ul li:nth-child(2n) {
-    margin: 0 0 20px 10% !important;
+    margin: 0 0 25px 10% !important;
         overflow: hidden;
 
     /*margin-left: 10%;*/
@@ -168,7 +168,7 @@
   .scf-box-about-community-list ul li {
     width: 45%;
     margin-right: 0;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     /*height: 60px;*/
     border: 1px solid #eee;
     box-sizing: border-box;
