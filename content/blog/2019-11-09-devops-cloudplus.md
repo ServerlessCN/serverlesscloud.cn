@@ -1,6 +1,7 @@
 ---
 title: Serverless DevOps 最佳实践 - 云+社区沙龙
 description: 腾讯云高级架构师孔令飞在大会上分享了 Serverless DevOps 最佳实践
+keywords: Serverless 全局变量组件,Serverless 单独部署组件,Serverless Component
 date: 2019-11-09
 thumbnail: https://img.serverlesscloud.cn/2020326/1585185314095-9.jpg
 categories:

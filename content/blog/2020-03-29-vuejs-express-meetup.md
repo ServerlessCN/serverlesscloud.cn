@@ -1,6 +1,7 @@
 ---
 title: 基于 Vuejs + Express 快速构建 Serverless 应用 - 在线 Workshop
 description: Authing 的全栈工程师高鹏洋将实操教学如何基于 Vuejs+Express 快速构建 Serverless 应用
+keywords: Serverless 全局变量组件,Serverless 单独部署组件,Serverless Component
 date: 2020-03-29
 thumbnail: https://img.serverlesscloud.cn/2020327/1585307844594-1212.jpg
 categories:

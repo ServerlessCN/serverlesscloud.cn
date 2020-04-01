@@ -1,6 +1,7 @@
 ---
 title: 国产 Serverless Identity 开源组件工作坊 - 在线分享
 description: Authing 联合腾讯云、Serverless 中文社区专家分享 Serverless Framework 组件的开发及应用
+keywords: Serverless 全局变量组件,Serverless 单独部署组件,Serverless Component
 date: 2020-02-29
 thumbnail: https://img.serverlesscloud.cn/2020327/1585306882234-9.jpg
 categories:
