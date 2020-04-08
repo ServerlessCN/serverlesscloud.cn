@@ -59,9 +59,9 @@ const navList: { title: string; link: string; isInternal?: boolean }[] = [
     isInternal: true,
   },
   {
-    title: '论坛',
-    link: '/forum',
-    isInternal: true,
+    title: '课程',
+    link: 'https://cloud.tencent.com/edu/paths/series/Serverless',
+    isInternal: false,
   },
   {
     title: '关于',

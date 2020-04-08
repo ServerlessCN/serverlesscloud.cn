@@ -11,6 +11,7 @@ import {CheckIfDesktopContext} from '@src/contexts'
 import Swiper from '@src/components/Swiper'
 import banner1 from '@src/assets/images/banner1.png'
 import banner2 from '@src/assets/images/banner2.png'
+import banner_course from '@src/assets/images/banner_course.png'
 import banner3 from '@src/assets/images/banner3.png'
 import banner4 from '@src/assets/images/banner4.png'
 
@@ -44,6 +45,12 @@ const bannerConfigs : {
     alt: 'Serverless 组件',
     link: 'https://serverless.com/cn/components/',
     title: "Serverless 组件支持各种主流应用框架，持续发布中"
+  }, {
+    img: banner_course,
+    backgroundColor: '#dcdcdc',
+    alt: 'Serverless 课程',
+    link: 'https://cloud.tencent.com/edu/paths/series/Serverless',
+    title: "帮助您从零基础入门，到可基于 Serverless 构建工程化应用"
   }, {
     img: banner3,
     backgroundColor: '#fff',
