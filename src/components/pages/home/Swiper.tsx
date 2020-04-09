@@ -9,6 +9,7 @@ import {
 import theme from '@src/constants/theme'
 import {CheckIfDesktopContext} from '@src/contexts'
 import Swiper from '@src/components/Swiper'
+import banner_sat from '@src/assets/images/banner_sat.png'
 import banner1 from '@src/assets/images/banner1.png'
 import banner2 from '@src/assets/images/banner2.png'
 import banner_course from '@src/assets/images/banner_course.png'
@@ -34,6 +35,12 @@ const bannerConfigs : {
   title : string
 }[] = [
   {
+    img: banner_sat,
+    backgroundColor: '#000',
+    alt: 'Serverless 前端开发探索',
+    link: 'https://cloud.tencent.com/edu/learning/live-2236',
+    title: "直播预约 | Serverless 的前端开发探索"
+  }, {
     img: banner1,
     backgroundColor: '#000',
     alt: 'Serverless.com',
