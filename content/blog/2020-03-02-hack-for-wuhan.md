@@ -1,6 +1,7 @@
 ---
 title: "wuhan2020 黑客松大赛"
 description: "Hack for Wuhan，每颗渺小的种子都能创造伟大的力量"
+keywords: Serverless 全局变量组件,Serverless 单独部署组件,Serverless Component
 date: 2020-03-02
 thumbnail: https://img.serverlesscloud.cn/202032/1583158864577-wuhan_wechat6.jpg
 categories:

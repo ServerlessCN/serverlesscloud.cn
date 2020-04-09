@@ -78,6 +78,12 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/HyperBrain',
   },
   {
+    name: '福尔高斯',
+    cn_name: 'Holegots',
+    link: 'https://github.com/fuergaosi233',
+    avatar: 'https://avatars.githubusercontent.com/fuergaosi233',
+  },
+  {
     name: 'Harry Solovay',
     link: 'https://github.com/harrysolovay',
     avatar: 'https://avatars.githubusercontent.com/harrysolovay',
@@ -133,6 +139,12 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/Nopik',
   },
   {
+    name: '拉链',
+    cn_name: 'Leo',
+    link: 'https://github.com/usenet506',
+    avatar: 'https://avatars.githubusercontent.com/usenet506',
+  },
+  {
     name: '李永程',
     cn_name: 'Aceyclee',
     link: 'https://github.com/Aceyclee',
@@ -158,6 +170,12 @@ const contributors = [
     name: 'Matt',
     link: 'https://github.com/fiveisprime',
     avatar: 'https://avatars.githubusercontent.com/fiveisprime',
+  },
+  {
+    name: '莫承霖',
+    cn_name: 'Jason',
+    link: 'https://github.com/Handsomedoggy',
+    avatar: 'https://avatars.githubusercontent.com/Handsomedoggy',
   },
   {
     name: 'Nicka',
@@ -231,9 +249,45 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/jenswang',
   },
   {
+    name: '王秀龙',
+    cn_name: 'XiuLongWang',
+    link: 'https://github.com/hzjsj',
+    avatar: 'https://avatars.githubusercontent.com/hzjsj',
+  }, 
+  {
+    name: '囍冯总囍',
+    cn_name: 'sdlyfjx',
+    link: 'https://github.com/sdlyfjx',
+    avatar: 'https://avatars.githubusercontent.com/sdlyfjx',
+  },
+  {
+    name: '谢扬',
+    cn_name: 'Ivy',
+    link: 'https://github.com/leinue',
+    avatar: 'https://avatars.githubusercontent.com/leinue',
+  },
+  {
     name: 'Yermakou',
     link: 'https://github.com/rma4ok',
     avatar: 'https://avatars.githubusercontent.com/rma4ok',
+  },
+  {
+    name: '杨舜杰',
+    cn_name: 'James Yeung',
+    link: 'https://github.com/ElderJames',
+    avatar: 'https://avatars.githubusercontent.com/ElderJames',
+  },
+  {
+    name: '远哥制造',
+    cn_name: 'yuangezhizao',
+    link: 'https://github.com/yuangezhizao',
+    avatar: 'https://avatars.githubusercontent.com/yuangezhizao',
+  },
+  {
+    name: '云洋',
+    cn_name: 'Gloria Yun',
+    link: 'https://github.com/GloriaYY',
+    avatar: 'https://avatars.githubusercontent.com/GloriaYY',
   },
   {
     name: 'Zev Mo Green',
@@ -245,6 +299,12 @@ const contributors = [
     cn_name: 'Juli',
     link: 'https://github.com/Juliiii',
     avatar: 'https://avatars.githubusercontent.com/Juliiii',
+  },
+  {
+    name: '周涛',
+    cn_name: 'Zhotoa',
+    link: 'https://github.com/zepoch',
+    avatar: 'https://avatars.githubusercontent.com/zepoch',
   },
 ]
 

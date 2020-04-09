@@ -18,8 +18,8 @@ interface Video {
 const VideoList : Video[] = [
   {
     img: video1,
-    title: "Serverless 工程化实战：基于 Python + JS 的动态博客开发",
-    link: "https://cloud.tencent.com/edu/learning/live-1926"
+    title: "Serverless 学习路径课",
+    link: "https://cloud.tencent.com/edu/paths/series/Serverless"
   }, {
     img: video2,
     title: "Serverless 开发实战之 Nodejs",

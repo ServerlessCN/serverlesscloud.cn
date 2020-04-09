@@ -20,8 +20,8 @@ const questions : {
     answer: '目前已支持 REST API 、静态网站、Express.js Web应用、Koa Web应用等场景 ，更多实际应用场景在持续建设中。'
   }, {
     question: 'Serverless Framework 具有什么能力？',
-    answer: 'Serverless Framework 具有资源编排、自动伸缩、事件驱动等能力，覆盖编码-调试-测试-部署等全生命周期。帮助开发者通过联动云上上下游 serv' +
-        'erless 服务，迅速构建应用。'
+    answer: 'Serverless Framework 具有资源编排、自动伸缩、事件驱动等能力，能够覆盖编码-调试-测试-部署等全生命周期。' 
+
   }, {
     question: '在哪里可以交流 Serverless 技术？',
     answer: (

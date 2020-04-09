@@ -1,6 +1,7 @@
 ---
 title: Serverless 之 Nodejs 开发实战：三分钟搞定疫情信息展示页 - 直播课
 description: 腾讯云高级产品经理方坤丁分享如何利用 Serverless 快速定制新型冠状病毒信息查询页，帮助大家及时了解疫情动态与信息
+keywords: Serverless 全局变量组件,Serverless 单独部署组件,Serverless Component
 date: 2020-02-10
 thumbnail: https://img.serverlesscloud.cn/2020327/1585306882657-9.jpg
 categories:

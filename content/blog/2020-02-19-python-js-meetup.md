@@ -1,6 +1,7 @@
 ---
 title: Serverless 工程化实战：基于 Python + JS 的动态博客开发 - 直播课
 description: 腾讯云研发工程师刘宇分享 Serverless 工程化项目开发实战和经验总结
+keywords: Serverless 全局变量组件,Serverless 单独部署组件,Serverless Component
 date: 2020-02-19
 thumbnail: https://img.serverlesscloud.cn/2020327/1585306882217-9.jpg
 categories:

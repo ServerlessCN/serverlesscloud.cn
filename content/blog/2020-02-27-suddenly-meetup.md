@@ -1,6 +1,7 @@
 ---
 title: 面对突发需求，如何借助 Serverless 快速上云 - 直播课
 description: 腾讯云 Serverless 技术专家王俊杰分享突发需求下，如何使用 Serverless Framework 实现快速上云！
+keywords: Serverless 全局变量组件,Serverless 单独部署组件,Serverless Component
 date: 2020-02-27
 thumbnail: https://img.serverlesscloud.cn/2020327/1585306882572-9.jpg
 categories:

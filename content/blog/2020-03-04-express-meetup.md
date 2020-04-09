@@ -1,6 +1,7 @@
 ---
 title: 如何开发一个 Serverless Express 组件 - 直播课
 description: Serverless 专家陈涛在线分享如何开发一个 Serverless 组件
+keywords: Serverless 全局变量组件,Serverless 单独部署组件,Serverless Component
 date: 2020-03-04
 thumbnail: https://img.serverlesscloud.cn/2020327/1585306882197-9.jpg
 categories:

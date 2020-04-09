@@ -1,6 +1,7 @@
 ---
 title: Serverless Python 开发实战：极速制作情人节表白页 - 直播课
 description: Serverless 专家陈涛讲解 Serverless 架构的处理规范、工作流程以及 Serverless 工程化的挑战与最佳实践
+keywords: Serverless 全局变量组件,Serverless 单独部署组件,Serverless Component
 date: 2020-02-13
 thumbnail: https://img.serverlesscloud.cn/2020327/1585306882267-9.jpg
 categories:

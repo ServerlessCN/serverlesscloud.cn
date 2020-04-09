@@ -1,6 +1,7 @@
 ---
 title: Serverless 技术行沙龙
 description: 来自深圳清华大学研究院 、Serverless 社区专家们围绕 Serverless + 5G，Serverless SSR 技术探索等话题展开深入分享
+keywords: Serverless 全局变量组件,Serverless 单独部署组件,Serverless Component
 date: 2019-12-28
 thumbnail: https://img.serverlesscloud.cn/2020326/1585185314084-9.jpg
 categories:

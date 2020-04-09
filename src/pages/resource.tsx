@@ -213,7 +213,7 @@ const resource : {
                 link: "https://github.com/TencentCloud/Serverless-demos"
             }, 
             {
-                title: " 书籍推荐：《Serverless 架构：从原理、设计到项目实战》",
+                title: "推荐书籍：《Serverless 架构：从原理、设计到项目实战》",
                 link: "https://item.jd.com/12592747.html"
             }
         ],
