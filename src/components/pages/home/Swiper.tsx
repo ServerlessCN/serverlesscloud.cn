@@ -38,7 +38,7 @@ const bannerConfigs : {
     img: banner_sat,
     backgroundColor: '#000',
     alt: 'Serverless 前端开发探索',
-    link: 'https://cloud.tencent.com/edu/learning/live-2236',
+    link: 'https://cloud.tencent.com/edu/learning/live-2267',
     title: "直播预约 | Serverless 的前端开发探索"
   }, {
     img: banner1,
