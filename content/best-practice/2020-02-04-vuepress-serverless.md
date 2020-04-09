@@ -33,7 +33,7 @@ authorslink:
 $ npm install -g serverless
 ```
 
-**2. 安装 docsify**
+**2. 安装 VuePress**
 
 ```
 $ npm install -g vuepress
