@@ -138,7 +138,10 @@ sls --debug
 
 本文使用了非常流行的无服务器框架 [Serverless Framework](https://github.com/serverless/serverless/blob/master/README_CN.md) 来搭建照片墙网站，更多产品信息可以点击进入 [官网](https://serverless.com/) 学习。
 
+---
+
 > **传送门：**
+>
 > - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
 > - 官网：[serverless.com](https://serverless.com/)
 

@@ -209,7 +209,10 @@ async getUsers() {
 
 以上基于腾讯云 [Serverless Framework](https://cloud.tencent.com/product/sf) 来实现。到这里，有关 `Serverless Component` 全栈解决方案的全部内容就到此结束啦！
 
+---
+
 > **传送门：**
+>
 > - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
 > - 官网：[serverless.com](https://serverless.com/)
 

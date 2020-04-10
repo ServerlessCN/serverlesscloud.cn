@@ -106,3 +106,4 @@ $ serverless invoke -f hello_world
 部署完成后，即可在命令行中看到部署情况，也可以在腾讯云控制台看到对应资源。
 
 ![](https://img.serverlesscloud.cn/2020312/1584006765436-IMG_0123.PNG)
+
