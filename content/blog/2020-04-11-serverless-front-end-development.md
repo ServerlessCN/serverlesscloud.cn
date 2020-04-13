@@ -3,7 +3,6 @@ title: 前端基于 Serverless 的开发探索 | 直播课
 description: 本次直播将深入讲解 Serverless 给前端带来的变革、前端 Serverless 的发展方向，以及开发者如何基于 Serverless 获得成长，创造收益！
 keywords: Serverless;Front-end;
 date: 2020-04-11
-time: future
 thumbnail: https://img.serverlesscloud.cn/202049/1586443473383-1586438917%281%29_%E5%89%AF%E6%9C%AC.jpg
 categories:
   - meetup
