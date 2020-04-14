@@ -6,6 +6,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "csstype": "^2.6.7",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.17.11",
     "gatsby-image": "^2.2.31",
     "gatsby-plugin-alias-imports": "^1.0.5",
@@ -13,6 +14,7 @@
     "gatsby-plugin-manifest": "^2.2.27",
     "gatsby-plugin-react-helmet": "^3.1.14",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
+    "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.3.5",
     "gatsby-plugin-sitemap": "^2.2.24",
     "gatsby-plugin-styled-components": "^3.1.13",
