@@ -9,6 +9,7 @@ import {
 import theme from '@src/constants/theme'
 import {CheckIfDesktopContext} from '@src/contexts'
 import Swiper from '@src/components/Swiper'
+import banner_release from '@src/assets/images/banner_release.jpg'
 import banner1 from '@src/assets/images/banner1.png'
 import banner2 from '@src/assets/images/banner2.png'
 import banner_course from '@src/assets/images/banner_course.png'
@@ -34,6 +35,12 @@ const bannerConfigs : {
   title : string
 }[] = [
   {
+    img: banner_release,
+    backgroundColor: '#000',
+    alt: '腾讯云 Serverless Framework 正式发布',
+    link: 'https://serverless.com/cn/trends/sfga/',
+    title: ""
+  }, {
     img: banner1,
     backgroundColor: '#000',
     alt: 'Serverless.com',

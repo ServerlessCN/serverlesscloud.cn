@@ -384,7 +384,10 @@ api:
 
 当然全栈方案，并没有这么简单，这里只是简单介绍，如何使用 Serverless Component，快速实现一个全栈应用。如果要应用到实际的业务场景，我们还需考虑更多的问题，期待大家去探索和发现！
 
+---
+
 > **传送门：**
+>
 > - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
 > - 官网：[serverless.com](https://serverless.com/)
 

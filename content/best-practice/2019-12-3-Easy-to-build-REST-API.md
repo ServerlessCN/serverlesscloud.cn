@@ -192,7 +192,10 @@ TENCENT_SECRET_KEY=123
 
 目前 REST API 模板主要展示了 GET/PUT 操作，后续腾讯云 [Serverless Framework](https://cloud.tencent.com/product/sf) 也将支持对 Serverless DB 的连接，可以完整实现 CRUD 操作，并支持资源的弹性扩缩容。您可以通过该模板快速开发业务 REST API、扩展代码，探索更丰富的场景。
 
+---
+
 > **传送门：**
+>
 > - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
 > - 官网：[serverless.com](https://serverless.com/)
 

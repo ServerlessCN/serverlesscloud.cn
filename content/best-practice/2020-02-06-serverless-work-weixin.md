@@ -284,9 +284,11 @@ nction.zip
 
 这样，我们就完成了一个 nCoV 的在线触发函数机器人～是不是很简单呢？快来开始动手吧～
 
+---
 
 > **传送门：**
+>
 > - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
 > - 官网：[serverless.com](https://serverless.com/)
 
-欢迎访问：[Serverless 中文网](https://china.serverless.com/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
