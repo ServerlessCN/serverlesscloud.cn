@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "author": "Juli<zynleifung@gmail.com>",
   "dependencies": {
+    "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "csstype": "^2.6.7",
     "gatsby": "^2.17.11",
@@ -33,7 +34,8 @@
     "react-metismenu": "^1.4.0",
     "styled-components": "^4.4.1",
     "styled-system": "^5.1.2",
-    "swiper": "^5.2.1"
+    "swiper": "^5.2.1",
+    "uuid": "^7.0.3"
   },
   "devDependencies": {
     "@types/node": "^12.12.9",

@@ -26,6 +26,15 @@ const BlogList = ({
   location,
 }: Props) => {
   const categoriesText = generateCategoryText(categories)
+  const generateDataUrl= pageNum =>{
+    let local
+    if(location.pathname.includes('/page/')){
+      local=location.pathname.split('/page/')[0]
+    }else{
+    local=location.pathname
+    }
+    return `${local}${pageNum === 1 ? '' : `/page/${pageNum}`}`
+  }
   return (
     <Layout>
       <Helmet
@@ -51,9 +60,7 @@ const BlogList = ({
               <div className="scf-box ">
                 <div className="scf-box__body">
                   <List
-                    generateDataUrl={pageNum => `/blog${pageNum === 1
-                    ? ''
-                    : `/page/${pageNum}`}`}
+                    generateDataUrl={generateDataUrl}
                     blogs={edges}
                     offset={offset}
                     limit={limit}

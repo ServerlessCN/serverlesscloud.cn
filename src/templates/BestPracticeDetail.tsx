@@ -9,12 +9,15 @@ import theme from '@src/constants/theme'
 import Helmet from '@src/components/Helmet'
 import {background} from 'styled-system'
 import {formateDate} from '@src/utils'
+import userBehaviorStatistics from '@src/utils/statistics'
 import {display, DisplayProps, space, SpaceProps} from 'styled-system'
 import ExternalLink from '@src/components/Link/ExternalLink'
 import Activitys from '@src/components/pages/home/Activitys'
 import CategoryLink from '@src/components/Link/CategoryLink'
 import RecommandRead from '@src/components/pages/home/RecommandRead'
 import crypto from 'crypto'
+import { debounce } from '@src/utils'
+import { v4 as uuidv4 } from 'uuid';
 
 const ExternalLinkWrapper = styled(InlineBlock)`
   margin-left: 5px;
@@ -51,26 +54,42 @@ interface Props {
   location : any
 }
 
-const BoxWithBackground = styled(Box) < BackgroundProps > `
-  ${background}
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-`
-
 const BestPracticeDetail = ({
-  data: {
-    currentBlog,
-    previousBlog,
-    nextBlog,
-    recommendBlogs
-  },
+  data: {currentBlog},
   location
 } : Props) => {
   currentBlog.frontmatter.categories = currentBlog.frontmatter.categories || []
 
-  React.useEffect(() => {
+  const [uuid, setUuid] = React.useState(uuidv4())
 
+  React.useEffect(() => {
+    var md5 = crypto.createHash('md5');
+    var id = md5.update(currentBlog.fields.slug).digest('hex');
+
+    userBehaviorStatistics({dataType:'startViewPage',acticleType:1,uuid,acticleId:id,acticleTitle:currentBlog.frontmatter.title});
+    function isInViewPort (el) {
+      const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight 
+      const top = el.getBoundingClientRect() && el.getBoundingClientRect().top
+      return top  <= viewPortHeight + 100
+    }
+    const onScroll = debounce(() => {
+      const isShowCode = isInViewPort(document.getElementsByTagName('code')[0]);
+      const isEndViewPage = isInViewPort(document.getElementById('EndBlogDetail'));
+      if (isShowCode) {
+        userBehaviorStatistics({dataType:'startViewCode',uuid});
+      }
+      if (isEndViewPage) {
+        userBehaviorStatistics({dataType:'endViewPage',uuid});
+      }
+    }, 50)
+    const onCopy = (el) => {
+      if(el.target.tagName==='CODE'){
+        userBehaviorStatistics({dataType:'copyCode',uuid});
+      }
+    }
+    
+    document.addEventListener('copy', onCopy);
+    document.addEventListener('scroll', onScroll)
     function reportPv(id, fn) {
       const data = {
         article: id
@@ -89,14 +108,27 @@ const BestPracticeDetail = ({
       });
     }
 
-    var md5 = crypto.createHash('md5');
-    var id = md5.update(currentBlog.fields.slug).digest('hex');
+   
     reportPv(id, function (error, response){
       if (error || response.error) {
         console.log(error || response.error);
       }
     })
-  })
+   
+    const copyButtonList= document.getElementsByClassName('gatsby-code-button')
+    for (var i = 0; i < copyButtonList.length; ++i) {
+      (function (i){
+        copyButtonList[i].onclick = function(){
+          userBehaviorStatistics({dataType:'copyCode',uuid});
+        };
+      })(i)
+    }
+
+    return () => {
+      document.removeEventListener('copy', onCopy);
+      document.removeEventListener('scroll', onScroll)
+    }
+  },[uuid])
   return (
     <Layout>
       <Helmet {...currentBlog.frontmatter} location={location}/>
@@ -147,6 +179,7 @@ const BestPracticeDetail = ({
                 </Box>
               </Box>
               </Container>
+              <div id='EndBlogDetail' />
           </Box>
           <Box className="scf-home-block">
             <Container

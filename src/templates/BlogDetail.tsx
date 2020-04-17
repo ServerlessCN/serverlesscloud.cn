@@ -15,6 +15,9 @@ import ExternalLink from '@src/components/Link/ExternalLink'
 import CategoryLink from '@src/components/Link/CategoryLink'
 import Activitys from '@src/components/pages/home/Activitys'
 import RecommandRead from '@src/components/pages/home/RecommandRead'
+import { debounce } from '@src/utils'
+import userBehaviorStatistics from '@src/utils/statistics'
+import { v4 as uuidv4 } from 'uuid';
 import './BlogDetail.css'
 
 const ExternalLinkWrapper = styled(InlineBlock)`
@@ -53,19 +56,45 @@ interface Props {
 const BlogDetail = ({data: {
     currentBlog
   }, location} : Props) => {
-
-  const [isShowAll,
-    setIsShowAll] = React.useState(false)
-
-  React.useEffect(() => {
-    setIsShowAll(false)
-  }, [])
+  
+  const [uuid, setUuid] = React.useState(uuidv4())
+  const [isShowAll, setIsShowAll] = React.useState(false)
 
   const onToggleShow = () => {
+    userBehaviorStatistics({dataType:'showAll',uuid});
     setIsShowAll(true)
   }
 
   React.useEffect(() => {
+    var md5 = crypto.createHash('md5');
+    var id = md5.update(currentBlog.fields.slug).digest('hex');
+
+    setIsShowAll(false);
+    userBehaviorStatistics({dataType:'startViewPage',acticleType:2,uuid,acticleId:id,acticleTitle:currentBlog.frontmatter.title});
+    function isInViewPort (el) {
+      const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight 
+      const top = el.getBoundingClientRect() && el.getBoundingClientRect().top
+      return top  <= viewPortHeight + 100
+    }
+    const onScroll = debounce(() => {
+      const isEndViewPage = isInViewPort(document.getElementById('EndBlogDetail'));
+      const isShowCode = document.getElementsByTagName('code').length && isInViewPort(document.getElementsByTagName('code')[0]);
+      if (isEndViewPage) {
+        userBehaviorStatistics({dataType:'endViewPage',uuid});
+      }
+      if (isShowCode) {
+        userBehaviorStatistics({dataType:'startViewCode',uuid});
+      }
+    }, 50)
+
+    const onCopy = (el) => {
+      if(el.target.tagName==='CODE'){
+        userBehaviorStatistics({dataType:'copyCode',uuid});
+      }
+    }
+    
+    document.addEventListener('copy', onCopy);
+    document.addEventListener('scroll', onScroll);
 
     function reportPv(id, fn) {
       const data = {
@@ -84,14 +113,27 @@ const BlogDetail = ({data: {
             fn(error, null);
       });
     }
-    var md5 = crypto.createHash('md5');
-    var id = md5.update(currentBlog.fields.slug).digest('hex');
+    
     reportPv(id, function (error, response){
       if (error || response.error) {
         console.log(error || response.error);
       }
     })
-  })
+
+    const copyButtonList= document.getElementsByClassName('gatsby-code-button')
+    for (var i = 0; i < copyButtonList.length; ++i) {
+      (function (i){
+        copyButtonList[i].onclick = function(){
+          userBehaviorStatistics({dataType:'copyCode',uuid});
+        };
+      })(i)
+    }
+
+    return () => {
+      document.removeEventListener('copy', onCopy);
+      document.removeEventListener('scroll', onScroll)
+    }
+  },[uuid])
 
   return (
     <Layout>
@@ -158,6 +200,7 @@ const BlogDetail = ({data: {
                 </Box>
               </Box>
               </Container>
+              <div id='EndBlogDetail' />
           </Box>
           <Box className="scf-home-block">
             <Container
