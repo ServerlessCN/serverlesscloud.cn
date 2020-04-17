@@ -3,7 +3,6 @@ title: Serverless 中文社区有奖征稿
 description: 欢迎将您的技术实践、开发经验分享更多人借鉴学习！
 keywords: Serverless 全局变量组件,Serverless 征稿,Serverless Component
 date: 2020-04-15
-time: future
 thumbnail: https://img.serverlesscloud.cn/2020327/1585306882223-9.jpg
 categories:
   - meetup
