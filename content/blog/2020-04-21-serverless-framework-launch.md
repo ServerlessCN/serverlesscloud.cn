@@ -4,7 +4,7 @@ description: "4 月 21 日（周二）下午 14：00，我们诚邀您参加此�
 keywords: Serverless,腾讯云 serverless,serverless framework
 date: 2020-04-21
 time: future
-thumbnail: https://img.serverlesscloud.cn/2020416/1587052964160-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%E4%BC%9A%E6%B5%B7%E6%8A%A5banner.png
+thumbnail: https://img.serverlesscloud.cn/2020417/1587091850654-launch.jpg
 categories:
   - meetup
 authors:
@@ -19,12 +19,13 @@ location:
 
 发布会上，来自 Serverless.com CEO Austen Collins、腾讯云中间件总经理 & 首席架构师 Yunong Xiao 等重磅嘉宾，将分享腾讯云 Serverless Framework 的产品战略与思考。我们的资深技术专家，也将带您解密这些新特性背后的技术实现与最佳实践，欢迎预约线上发布会，与我们共同交流与探讨。
 
-活动时间：4 月 21 日 14:00
-参与方式：腾讯会议
-
-![](https://img.serverlesscloud.cn/2020416/1587049888320-%E5%8F%91%E5%B8%83%E4%BC%9A%E6%B5%B7%E6%8A%A5%20%E7%BB%88%E7%A8%BF%20.png)
+- 活动时间：4 月 21 日 14:00
+- 参与方式：腾讯会议
 
 欢迎扫描海报二维码，填写提交报名信息，Serverless 小助手审核通过后，将为您发送腾讯会议邀请链接。
+
+![腾讯云 Serverless Framework 正式发布会](https://img.serverlesscloud.cn/2020417/1587090895945-%E5%8F%91%E5%B8%83%E4%BC%9A%E6%B5%B7%E6%8A%A5%E7%BB%88%E7%A8%BF%2002.png)
+
 
 > **传送门：**
 > - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 

@@ -38,7 +38,7 @@ const bannerConfigs : {
     img: banner_release,
     backgroundColor: '#000',
     alt: '腾讯云 Serverless Framework 正式发布',
-    link: 'https://serverlesscloud.cn/blog/2020-04-21-serverless-framework-lauch/',
+    link: 'https://serverlesscloud.cn/blog/2020-04-21-serverless-framework-launch/',
     title: ""
   }, {
     img: banner1,
