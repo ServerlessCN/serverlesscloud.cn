@@ -11,6 +11,7 @@ import ImgEvb from '@src/assets/images/evb.png'
 import ImgInfoQ from '@src/assets/images/infoQ.png'
 import ImgWuhan2020 from '@src/assets/images/wuhan2020.png'
 import ImgVuebj from '@src/assets/images/vuebj.png'
+import ImgFecourse from '@src/assets/images/fecourse.png'
 
 const communitys = [
     {
@@ -44,13 +45,18 @@ const communitys = [
         link: 'javascript:;'
     },
     {
+        name: 'vuebj',
+        logo: ImgVuebj,
+        link: 'javascript:;'
+    },
+    {
         name: 'evb',
         logo: ImgEvb,
         link: 'javascript:;'
     },
     {
-        name: 'vuebj',
-        logo: ImgVuebj,
+        name: 'fecourse',
+        logo: ImgFecourse,
         link: 'javascript:;'
     },
 ]

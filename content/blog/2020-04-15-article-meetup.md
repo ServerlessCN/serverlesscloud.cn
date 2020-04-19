@@ -7,11 +7,11 @@ thumbnail: https://img.serverlesscloud.cn/2020327/1585306882223-9.jpg
 categories:
   - meetup
 authors:
-  - Serverless 中文网
+  - Serverless 社区
 authorslink:
-  - https://china.serverless.cn/
+  - https://serverlesscloud.cn
 location: 
-  - 线上投稿 | Serverless 中文社区
+  - 线上投稿 | Serverless 社区
 ---
 
 亲爱的小伙伴们，Serverless 在线课堂已经开展了三期直播，我们分享了 Serverless 的概念、技术架构、典型应用场景、开发实战以及工程化应用等技术干货。在这里，要感谢大家抽出时间来学习和使用 Serverless，在此期间，你们提的需求产品都已记录在小本本上了，研发同学也正在加急开发中……

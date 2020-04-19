@@ -7,7 +7,7 @@ thumbnail: https://img.serverlesscloud.cn/2020114/1578992366948-16e6e6a4c7f54ffb
 categories:
   - guides-and-tutorials
 authors:
-  - 腾讯IVWEB团队
+  - 腾讯 IVWEB 团队
 authorslink:
   - https://juejin.im/user/5a9f77666fb9a028c14a01eb
 ---

@@ -7,9 +7,9 @@ thumbnail: https://img.serverlesscloud.cn/2020326/1585185314084-9.jpg
 categories:
   - meetup
 authors:
-  - Serverless 中文网
+  - Serverless 社区
 authorslink:
-  - https://china.serverless.cn/
+  - https://serverlesscloud.cn
 location: 
   - 上海 | 中国计算机学会 & 深圳清华大学研究院 & 腾讯云 & 云+社区
 ---

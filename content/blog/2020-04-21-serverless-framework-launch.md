@@ -10,7 +10,7 @@ categories:
 authors:
   -  腾讯云
 authorslink:
-  - https://china.serverless.cn/
+  - https://serverlesscloud.cn
 location: 
   - 线上直播 | TencentServerless
 ---

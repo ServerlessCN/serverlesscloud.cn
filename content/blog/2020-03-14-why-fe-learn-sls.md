@@ -17,8 +17,8 @@ Serverless 的概念或应用场景我们以前讲过很多，这里不再冗述
 
 完备的基础性文章推荐阅读这两篇：
 
-- [Serverless 基本概念入门](https://china.serverless.com/blog/2019-08-01-serverless-basic-concept)
-- [Serverless 的运行原理与组件架构](https://china.serverless.com/blog/2019-08-21-serverless-operation-architecture)
+- [Serverless 基本概念入门](https://serverlesscloud.cn/blog/2019-08-01-serverless-basic-concept)
+- [Serverless 的运行原理与组件架构](https://serverlesscloud.cn/blog/2019-08-21-serverless-operation-architecture)
 
 本文尝试从出圈的角度，以更接地气的方式聊聊 Serverless。
 
@@ -46,7 +46,7 @@ Serverless 的概念或应用场景我们以前讲过很多，这里不再冗述
 
 ## ▎Talk is cheap, show you the code.
 
-先给大家展示一个基于 Serverless 构建 docsify 文档的 [demo](https://china.serverless.com/best-practice/2019-12-14-docsify-with-serverless)
+先给大家展示一个基于 Serverless 构建 docsify 文档的 [demo](https://serverlesscloud.cn/best-practice/2019-12-14-docsify-with-serverless)
 
 这个三分钟的 demo，不仅完成了 docsify 发布代码的上传，还包括了腾讯云对象存储 COS 资源的申请和配置。而这仅仅是我第一次使用 Serverless 来构建应用，可见它上手性之高。
 
@@ -54,7 +54,7 @@ Serverless 的概念或应用场景我们以前讲过很多，这里不再冗述
 <source id="mp4" src="https://img.serverlesscloud.cn/video/docsify%2B%E7%89%87%E5%B0%BE4.mp4">
 </video>
 
-> 原文链接：[《三分钟入坑指北   Docsify + Serverless Framework 快速创建个人博客》](https://china.serverless.com/best-practice/2019-12-14-docsify-with-serverless)
+> 原文链接：[《三分钟入坑指北   Docsify + Serverless Framework 快速创建个人博客》](https://serverlesscloud.cn/best-practice/2019-12-14-docsify-with-serverless)
 
 **再进一步，我们演示个 Fullstack Application。**该项目借助社区现有的 [@serverless/tencent-express](https://github.com/serverless-components/tencent-express) 和 [@serverless/tencent-website](https://github.com/serverless-components/tencent-website) 组件来完成。
 
@@ -165,7 +165,7 @@ $ serverless --debug
 
 既然是全栈，怎么少得了数据库的读写呢？
 
-读者可移步作者原文继续阅读：[《基于 Serverless Component 的全栈解决方案》](https://china.serverless.com/best-practice/2019-12-5-Full-stack-solution-based-on-serverless-component)
+读者可移步作者原文继续阅读：[《基于 Serverless Component 的全栈解决方案》](https://serverlesscloud.cn/best-practice/2019-12-5-Full-stack-solution-based-on-serverless-component)
 
 从这两个小项目中已然得解 ——  Serverless 的内涵就是对全部底层资源和运维工作的封装，让开发者更专注于业务逻辑。
 

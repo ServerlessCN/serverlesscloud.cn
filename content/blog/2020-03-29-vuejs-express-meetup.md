@@ -7,11 +7,11 @@ thumbnail: https://img.serverlesscloud.cn/2020327/1585307844594-1212.jpg
 categories:
   - meetup
 authors:
-  - Serverless 中文网
+  - Serverless 社区
 authorslink:
-  - https://china.serverless.cn/
+  - https://serverlesscloud.cn
 location: 
-  - 线上直播 | Vue Beijing 社区 & Serverless 中文社区
+  - 线上直播 | Vue Beijing 社区 & Serverless 社区
 ---
 
 在社区，我们经常会收到关于 Serverless 的「灵魂」三问：
@@ -66,4 +66,4 @@ Workshop 环节，我们会将讲师实操的源代码发送至 Zoom 会议室�
 > - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
 > - 官网：[serverless.com](https://serverless.com/)
 
-欢迎访问：[Serverless 中文网](https://china.serverless.com)，您可以在 [最佳实践](https://china.serverless.com/best-practice/) 里体验更多关于 Serverless 应用的开发！
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice/) 里体验更多关于 Serverless 应用的开发！

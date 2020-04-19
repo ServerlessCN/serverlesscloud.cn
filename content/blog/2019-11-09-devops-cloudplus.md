@@ -7,11 +7,11 @@ thumbnail: https://img.serverlesscloud.cn/2020326/1585185314095-9.jpg
 categories:
   - meetup
 authors:
-  - Serverless 中文网
+  - Serverless 社区
 authorslink:
-  - https://china.serverless.cn/
+  - https://serverlesscloud.cn
 location: 
-  - 腾讯云 & 云+社区 & Serverless 中文社区
+  - 腾讯云 & 云+社区 & Serverless 社区
 ---
 
 ## 活动信息
