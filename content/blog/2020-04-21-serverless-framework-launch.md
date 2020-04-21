@@ -1,6 +1,6 @@
 ---
 title: 腾讯云 Serverless Framework 正式发布会
-description: "4 月 21 日（周二）下午 14：00，我们诚邀您参加此次发布会，届时您将获得更多的产品信息，欢迎进一步交流"
+description: "4 月 21 日（周二） 14：00，我们诚邀您参加此次发布会，届时您将获得更多的产品信息，欢迎进一步交流"
 keywords: Serverless,腾讯云 serverless,serverless framework
 date: 2020-04-21
 time: future
