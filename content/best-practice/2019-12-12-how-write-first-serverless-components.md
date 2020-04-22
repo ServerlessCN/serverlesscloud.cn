@@ -10,6 +10,10 @@ authors:
   - yugasun
 authorslink:
   - https://yugasun.com
+tags:
+  - serverless
+  - Component
+  - 实践案例
 ---
 
 ## 前言

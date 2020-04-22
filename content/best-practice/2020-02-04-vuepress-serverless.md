@@ -10,6 +10,11 @@ authors:
   - Aceyclee
 authorslink:
   - https://www.zhihu.com/people/Aceyclee
+tags:
+  - serverless
+  - VuePress
+  - 静态网站
+  - 个人博客
 ---
 
 之前用过 [Docsify + Serverless Framework 快速创建个人博客系统](https://serverlesscloud.cn/best-practice/2019-12-14-docsify-with-serverless/)，虽然 docsify 也是基于 Vue，然而它是完全的运行时驱动，因此对 SEO 不够友好。所以这次尝试使用 VuePress 来搭建一个静态网站，依然部署在 Serverless 架构上。

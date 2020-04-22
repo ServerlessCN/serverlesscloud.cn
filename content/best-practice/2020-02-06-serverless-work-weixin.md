@@ -10,6 +10,9 @@ authors:
   - Tabor
 authorslink:
   - https://canmeng.net
+tags:
+  - serverless
+  - 企业微信
 ---
 
 最近的一些疫情信息很让人揪心，为了方便大家掌握疫情信息，在空闲之余做了一个关于 nCoV 的疫情监控小助手。主要的功能是通过企业微信的 WebHook 来推送疫情信息。这里将使用 Serverless 的整体代码思路和架构方式分享给大家。
