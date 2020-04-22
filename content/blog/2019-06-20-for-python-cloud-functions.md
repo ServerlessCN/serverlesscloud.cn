@@ -1,11 +1,11 @@
 ---
-title: Serverless实践系列（二）：为Python云函数打包依赖
+title: 如何用 Serverless 为 Python 云函数打包依赖
 description: "在使用无服务器云函数SCF时通常会遇到导入第三方库的问题，很多小伙伴比较头疼是：应该如何打包进去？这里，推荐几个不错的方法。"
 keywords: Serverless,Serverless应用,无服务器云函数
 date: 2019-06-20
 thumbnail: https://img.serverlesscloud.cn/2020414/1586871710979-%E5%85%AC%E5%85%B1%E7%94%A8.png
 categories:
-  - best-practice
+  - guides-and-tutorials
 authors:
   - 刘宇
 authorslink:
@@ -127,7 +127,7 @@ sudo pip3 install -r requirements.txt -t /home/dfounderliu/code/pillowtest
 
 ## 《[Serverless实践系列（一）：如何通过SCF与自然语言处理为网站赋能](https://mp.weixin.qq.com/s?__biz=Mzg4NzEyMzI1NQ==&mid=2247483846&idx=1&sn=52b42168950810ba52abbe9f12f9216d&scene=21#wechat_redirect)》
 
-感兴趣的同学可以通过SCF进行部署实践~
+感兴趣的同学可以通过 SCF 进行部署实践~
 
 
 **【Serverless实践系列】**是腾讯云Serverless团队策划的SCF场景落地系列案例指导，旨在帮忙开发者了解SCF可应用的场景及其实现方式。同时，我们也欢迎大家**分享、反馈SCF相关技术实践、产品体验问题及建议等，一经选用，即有精美礼品送**，欢迎大家积极投稿~
