@@ -33,10 +33,17 @@ authorslink:
 
 发布会嘉宾分享结束后，进行 Q&A 环节，大家就实际业务中遇到的问题在会话区踊跃提问，主持人王俊杰组织嘉宾解答大家的问题，其中有参会者 Jovi 提到「目前 Tencent Serverless 是否支持用户自定义 DB，比如 elasticsearch，couchbase，redis，mongoDB 等其他 NoSQL，未来是否有这方面的支持和拓展计划，以及可能上线的时间点」，可见大家对腾讯云 Serverless Framework 产品以及其未来的发展非常关注。
 
-## 立即体验 serverless 实战部署
+## Serverless 极速部署体验
 
-只需 3 秒！一键部署 Serverless  HTTP 服务：
-> https://serverless.cloud.tencent.com/deploy/express
+扫描下方二维码，只需 3 秒，立即体验史上最快的 [Serverless  HTTP](https://serverless.cloud.tencent.com/deploy/express) 实战部署！
+
+ <iframe  
+ height=500 
+ width=100% 
+ src="https://serverless.cloud.tencent.com/deploy/express"  
+ frameborder=0  
+ allowfullscreen>
+ </iframe>
 
 ## Serverless Framework 30 天试用计划
 

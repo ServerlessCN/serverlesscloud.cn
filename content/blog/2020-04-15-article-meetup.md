@@ -62,47 +62,17 @@ Serverless Framework 落地 Serverless 架构的全云端开发闭环体验，�
 ![具体免费详情可查阅：https://cloud.tencent.com/document/product/1154/38792](https://img.serverlesscloud.cn/2020312/1584006765599-IMG_0123.PNG)
 
 
-## 立即使用 Serverless，只需三步
+## Serverless 极速部署体验
 
-Serverless Framework 是构建和运维 Serverless 应用的框架，简单三步，即可通过 Serverless Framework 快速实现服务部署。
+扫描下方二维码，只需 3 秒，立即体验史上最快的 [Serverless  HTTP](https://serverless.cloud.tencent.com/deploy/express) 实战部署
 
-**1、创建本地应用**
-
-- 通过 npm 安装 Serverless
-
-```
-$ npm install -g serverless
-```
-
-- 基于 tencent_nodejs 模板创建 hello_world
-
-```
-$ serverless create --template tencent-nodejs --path my-service
-```
-
-**2、安装相关依赖**
-
-- 执行 npm install 安装相关依赖
-
-```
-$ cd my-service$ npm install
-```
-
-**3. 部署**
-
-- 扫描微信二维码一键登录腾讯云账号，部署函数到云端
-
-```
-$ serverless deploy
-```
-
-- 触发云函数
-
-```
-$ serverless invoke -f hello_world
-```
-
-部署完成后，即可在命令行中看到部署情况，也可以在腾讯云控制台看到对应资源。
+ <iframe  
+ height=500 
+ width=100% 
+ src="https://serverless.cloud.tencent.com/deploy/express"  
+ frameborder=0  
+ allowfullscreen>
+ </iframe>
 
 ![](https://img.serverlesscloud.cn/2020312/1584006765436-IMG_0123.PNG)
 

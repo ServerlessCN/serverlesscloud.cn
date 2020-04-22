@@ -25,6 +25,17 @@ location:
 
 ![腾讯云 Serverless Framework 正式发布会](https://img.serverlesscloud.cn/2020417/1587090895945-%E5%8F%91%E5%B8%83%E4%BC%9A%E6%B5%B7%E6%8A%A5%E7%BB%88%E7%A8%BF%2002.png)
 
+## Serverless 极速部署体验
+
+扫描下方二维码，只需 3 秒，立即体验史上最快的 [Serverless  HTTP](https://serverless.cloud.tencent.com/deploy/express) 实战部署
+
+ <iframe  
+ height=500 
+ width=100% 
+ src="https://serverless.cloud.tencent.com/deploy/express"  
+ frameborder=0  
+ allowfullscreen>
+ </iframe>
 
 > **传送门：**
 > - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
