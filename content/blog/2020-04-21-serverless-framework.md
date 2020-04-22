@@ -33,57 +33,18 @@ authorslink:
 
 发布会嘉宾分享结束后，进行 Q&A 环节，大家就实际业务中遇到的问题在会话区踊跃提问，主持人王俊杰组织嘉宾解答大家的问题，其中有参会者 Jovi 提到「目前 Tencent Serverless 是否支持用户自定义 DB，比如 elasticsearch，couchbase，redis，mongoDB 等其他 NoSQL，未来是否有这方面的支持和拓展计划，以及可能上线的时间点」，可见大家对腾讯云 Serverless Framework 产品以及其未来的发展非常关注。
 
-## 欢迎体验 serverless 实战部署
+## 立即体验 serverless 实战部署
 
-1. 扫码部署你的第一个 Serverless 应用
-https://serverless.cloud.tencent.com/   
-
-2. 部署 express.js 应用，体验实时日志和云端调试能力
-https://cloud.tencent.com/document/product/1154/41775
+只需 3 秒！一键部署 Serverless  HTTP 服务：
+> https://serverless.cloud.tencent.com/deploy/express
 
 ## Serverless Framework 30 天试用计划
 
-Serverless Framework 试用名额已开放，我们诚邀您来体验最便捷的 Serverless 开发和部署方式。服务中使用到云函数 SCF、API 网关、对象存储 COS 等产品，均提供试用资源，并伴有专业的技术支持，帮助您的业务快速、便捷实现 Serverless ！
+Serverless Framework 试用名额已开放，我们诚邀您来体验最便捷的 Serverless 开发和部署方式。服务中使用到云函数 SCF、API 网关、对象存储 COS、云数据库 PostgreSQL Serverless 等产品，均提供试用资源，并伴有专业的技术支持，帮助您的业务快速、便捷实现 Serverless ！
 
 Serverless Framework 落地 Serverless 架构的全云端开发闭环体验，覆盖编码、运维、调试、部署等开发全生命周期。使用 Serverless Framework 即可在几秒钟内将业务部署至云端。
 
-![详情请查阅：https://cloud.tencent.com/document/product/1154/38792](https://img.serverlesscloud.cn/2020312/1584006765599-IMG_0123.PNG)
-
-## 立即使用 Serverless，只需三步
-
-Serverless Framework 是构建和运维 Serverless 应用的框架。简单三步，即可通过 Serverless Framework 快速实现服务部署。
-
-**1. 安装 Serverless**
-
-macOS/Linux 系统：推荐使用二进制安装
-
-```
-$ curl -o- -L https://slss.io/install | bash
-```
-
-Windows 系统：可通过 npm 安装
-
-```
-$ npm install -g serverless
-```
-
-**2. 创建云上应用**
-
-在空文件夹下输入 `serverless` 命令：
-
-```
-$ serverless
-```
-
-访问命令行中输出的网页链接，即可访问成功部署后的应用。
-
-**3. 查看部署信息**
-
-进入到部署成功的文件夹，运行如下命令，查看部署状态和资源信息：
-
-```
-$ sls info
-```
+![详情请查阅：https://cloud.tencent.com/document/product/1154/38792](https://img.serverlesscloud.cn/2020422/1587538442266-WechatIMG2309.png)
 
 > **传送门：**
 > - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
