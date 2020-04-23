@@ -61,18 +61,41 @@ Serverless Framework 落地 Serverless 架构的全云端开发闭环体验，�
 
 ![具体免费详情可查阅：https://cloud.tencent.com/document/product/1154/38792](https://img.serverlesscloud.cn/2020312/1584006765599-IMG_0123.PNG)
 
+## 立即使用 Serverless，只需三步
 
-## Serverless 极速部署体验
+Serverless Framework 是构建和运维 Serverless 应用的框架。简单三步，即可通过 Serverless Framework 快速实现服务部署。
 
-扫描下方二维码，只需 3 秒，立即体验史上最快的 [Serverless  HTTP](https://serverless.cloud.tencent.com/deploy/express) 实战部署
+**1. 安装 Serverless**
 
- <iframe  
- height=500 
- width=100% 
- src="https://serverless.cloud.tencent.com/deploy/express"  
- frameborder=0  
- allowfullscreen>
- </iframe>
+macOS/Linux 系统：推荐使用二进制安装
+
+```
+$ curl -o- -L https://slss.io/install | bash
+```
+
+Windows 系统：可通过 npm 安装
+
+```
+$ npm install -g serverless
+```
+
+**2. 创建云上应用**
+
+在空文件夹下输入 `serverless` 命令：
+
+```
+$ serverless
+```
+
+访问命令行中输出的网页链接，即可访问成功部署后的应用。
+
+**3. 查看部署信息**
+
+进入到部署成功的文件夹，运行如下命令，查看部署状态和资源信息：
+
+```
+$ sls info
+```
 
 ![](https://img.serverlesscloud.cn/2020312/1584006765436-IMG_0123.PNG)
 

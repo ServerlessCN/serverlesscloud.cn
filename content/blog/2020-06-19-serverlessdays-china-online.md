@@ -25,14 +25,3 @@ ServerlessDays 是面向开发人员举办的无服务器技术会议。
 
 ![ServerlessDays](https://img.serverlesscloud.cn/2020417/1587135550712-7fff4d46d771485c3e5648fded8e374.png)
 
-## Serverless 极速部署体验
-
-扫描下方二维码，只需 3 秒，立即体验史上最快的 [Serverless  HTTP](https://serverless.cloud.tencent.com/deploy/express) 实战部署
-
- <iframe  
- height=500 
- width=100% 
- src="https://serverless.cloud.tencent.com/deploy/express"  
- frameborder=0  
- allowfullscreen>
- </iframe>
