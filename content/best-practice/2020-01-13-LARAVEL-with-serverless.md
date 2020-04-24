@@ -10,6 +10,11 @@ authors:
   - Tabor
 authorslink:
   - https://canmeng.net
+tags:
+  - serverless
+  - 内容管理
+  - Laravel
+  - CMS
 ---
 
 今天，为大家带来一篇 Laravel + Serverless Framework 的综合实战，里面信息量有点多，大家仔细看哦～
