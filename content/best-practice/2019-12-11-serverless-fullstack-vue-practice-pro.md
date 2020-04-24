@@ -10,6 +10,10 @@ authors:
   - yugasun
 authorslink:
   - https://github.com/yugasun
+tags:
+  - serverless
+  - Component
+  - 全栈
 ---
 
 虽然之前的文章 [基于 Serverless Component 的全栈解决方案](https://yugasun.com/post/serverless-fullstack-vue-practice.html) 介绍了如何借助 Serverless Component 快速搭建 `Restful API` 后端服务 和 `Vue.js + Parcel` 的前端开发架构，但是最终部署后，腾讯云 COS 的访问 URL 并非自定义的，而且实际应用中，我们更偏向于使用自定义域名，同时静态文件一般都会通过 CDN 加速。那么如何为之前部署的静态网站配置 CDN 加速域名呢？

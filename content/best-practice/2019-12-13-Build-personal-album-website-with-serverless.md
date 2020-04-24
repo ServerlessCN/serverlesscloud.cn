@@ -10,6 +10,10 @@ authors:
   - alanoluo
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - serverless
+  - 静态网站
+  - ThumbsUp
 ---
 
 日常生活中我们经常会拍摄一些视频、照片等，这些文件会占用比较多的存储空间。本文将介绍一种方法：利用 ThumbsUp 工具，结合 Serverless Framework 的 component 快速搭建个人相册网站，为存储空间减压。
