@@ -94,7 +94,7 @@ export const query = graphql `query Blogs($offset:
         edges {
           node {
             id
-            frontmatter {thumbnail authors categories date title description authorslink translators translatorslink}
+            frontmatter {thumbnail authors categories date title description authorslink translators translatorslink tags}
             wordCount {words sentences paragraphs}
             timeToRead
             fileAbsolutePath

@@ -14,7 +14,7 @@
   transition: all .3s ease;
 }
 .scf-article-item--block {
-  flex-direction: row-reverse;
+  flex-direction: row-reverse !important;
 }
 img {
   border-style: none;
@@ -22,9 +22,7 @@ img {
 .scf-article-item__content {
   margin-bottom: top;
 }
-/* Todo */
 .scf-article-item__statistics {
-  /*margin-bottom: 10px;*/
   display: flex; 
   color: #8c8c8c;
   font-size: 14px;
@@ -53,7 +51,6 @@ img {
 }
 .scf-article-item__statistics-item {
   display: block;
-  /*align-items: center;*/
   color: #8c8c8c;
   margin-left: 20px;
   float: left;
@@ -61,11 +58,9 @@ img {
 .scf-article-item__statistics-item .scf-icon {
   padding-left: 23px; 
   font-style: normal;
-  /*margin-top: -2px;*/
 }
 .scf-icon {
   display: inline-block;
-  /*width: 16px;*/
   height: 16px;
 }
 .scf-icon-view {
@@ -75,3 +70,12 @@ img {
   background-repeat: no-repeat;
   background-image: url(../../../assets/images/view.svg);
 }
+.scf-icon-tag {
+  min-width: 18px;
+  width: auto;
+  height: 18px;
+  
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/images/tag.svg);
+}
+

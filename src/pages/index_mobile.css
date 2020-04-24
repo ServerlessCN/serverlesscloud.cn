@@ -352,10 +352,7 @@
 
   #scf-best-practice .scf-article-item--block .scf-article-item__content {
     flex: 0 0 60%;
-    /*margin-right: 10px;*/
-    padding: 10px 0px;
-    padding-bottom: 40px;
-
+    padding: 10px 0px 50px;
   }
 
   .scf-article-item__title {
@@ -374,6 +371,9 @@
     display: none;
   }
 
+  .scf-article-item__seotag{
+    display: none;
+  }
 
   /* 最佳实践详情页 */
   .scf-page-resource .scf-footer__inner,

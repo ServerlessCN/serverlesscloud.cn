@@ -13,6 +13,7 @@ export interface Blog {
       translators?: string[]
       translatorslink?: string[]
       location?:string
+      tags?: string[]
     }
     timeToRead: number
     wordCount: {
@@ -36,6 +37,14 @@ export interface GraphqlBlogResult {
 interface Category {
   totalCount: number
   categories: string
+}
+
+interface Tag {
+  totalCount: number
+  tags: string
+}
+export interface GraphqlTagResult {
+  group: Tag[]
 }
 
 export interface GraphqlCategoryResult {

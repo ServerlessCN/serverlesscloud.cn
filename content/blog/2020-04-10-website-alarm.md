@@ -505,6 +505,18 @@ def sendEmail(content, to_user):
 
 通过本场景实践，我们也可以对项目进行额外的优化或者应用在不同的领域以及场景中。例如，我们可以通过增加短信告警、微信告警、企业微信告警等多个维度，来确保相关人员可以及时收到告警信息；我们也可以通过监控某个小说网站、视频网站等，看到我们关注的小说或者视频的更新情况，便于追更等。
 
+## Serverless 极速部署体验
+
+扫描下方二维码，只需 3 秒，立即体验史上最快的 [Serverless  HTTP](https://serverless.cloud.tencent.com/deploy/express) 实战部署
+
+ <iframe  
+ height=500 
+ width=100% 
+ src="https://serverless.cloud.tencent.com/deploy/express"  
+ frameborder=0  
+ allowfullscreen>
+ </iframe>
+ 
 ---
 
 > **传送门：**

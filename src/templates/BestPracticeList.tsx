@@ -121,6 +121,7 @@ export const query = graphql `
             title
             description
             authorslink
+            tags
           }
           wordCount {
             words
