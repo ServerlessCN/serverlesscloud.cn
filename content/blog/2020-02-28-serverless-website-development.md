@@ -10,6 +10,9 @@ authors:
   - liujiang
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - Serverless
+  - 活动  
 ---
 
 Serverless被誉为下一代云计算技术，因为其能带来研发交付速度提升与成本的降低在业内异常火爆。本文主要为大家分享 Serverless Framework 的架构演进、技术解析以及应用发展，并通过 Serverless+Hexo 实战案例，分享如何快速基于 Serverless Framework 进行业务开发部署。

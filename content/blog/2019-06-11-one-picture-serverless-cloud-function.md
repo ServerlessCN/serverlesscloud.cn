@@ -10,6 +10,9 @@ authors:
   - Serverless 社区
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
+tags:
+  - 无服务器云函数
+  - Serverless
 ---
 ​
 

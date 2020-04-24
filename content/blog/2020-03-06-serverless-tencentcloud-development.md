@@ -10,6 +10,9 @@ authors:
   - Serverless 社区
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - Serverless
+  - 云端开发
 ---
 
 在第三代通用计算平台的探索和布局上，腾讯云已经走在了全球的前列。3月6日，腾讯云正式向外界展示了其在 Serverless 领域的最新进展，包括**率先在业界推出1毫秒计费模式，并通过进一步打通上下生态链，构建三步上云的极致全云端开发体验。**

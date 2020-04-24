@@ -15,6 +15,9 @@ translators:
   - Tinafangkunding
 translatorslink: 
   - http://github.com/tinafangkunding/
+tags:
+  - Component
+  - Serverless
 ---
 
 ## Serverless Components 的目标是什么？

@@ -10,6 +10,9 @@ authors:
   - 李帅
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
+tags:
+  - DevOPS
+  - Serverless
 ---
 
 当前Serverless热度越来越高，越来越多的开发者们开始抛弃传统开发模式基于Serverless来搭建自己的产品服务。在享受腾讯云Serverless产品SCF的免运维、低成本优势的同时，也要适应SCF与传统开发模式的差异。其中DevOps便是很重要的一环，因为SCF特有的runtime，使得开发者无法复用现有DevOps平台完成CI/CD流程。

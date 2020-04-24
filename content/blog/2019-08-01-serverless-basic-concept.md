@@ -10,6 +10,9 @@ authors:
   - Alfred Huang
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
+tags:
+  - Serverless 概念
+  - Serverless
 ---
 
 > 从行业趋势看，Serverless 是云计算必经的一场革命

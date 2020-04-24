@@ -9,6 +9,8 @@ categories:
   - engineering-culture
 authors:
   - 冉叶兰
+tags:
+  - Serverless
 ---
 
 随着互联网技术的发展，前端领域的从业人员越来越多，随之而来的还有工程师的成长问题。Yunong Xiao，在互联网领域深耕 12 年，他曾在腾讯、AWS、Netflix 等知名互联网公司，从最开始的工程师到现在的腾讯云中间件总经理。为此我们请到了 Yunong 来聊下，国内外顶尖互联网公司的氛围区别，以及自身快速成长的经验。

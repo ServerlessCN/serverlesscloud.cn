@@ -10,6 +10,9 @@ authors:
   - 腾讯云
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
+tags:
+  - 云原生
+  - Serverless
 ---
 
 云原生时代真的来了。

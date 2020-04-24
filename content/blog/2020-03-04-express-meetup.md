@@ -12,6 +12,9 @@ authorslink:
   - https://serverlesscloud.cn
 location: 
   - 线上直播 | 腾讯云大学 & 云+社区 & Serverless 社区
+tags:
+  - Serverless
+  - 活动  
 ---
 
 Tencent Serverless 目前已经支持了不少语言的热门框架，包括 Express、 Koa、Egg 以及 Flask 等等大家熟悉的框架都可以通过  Component 轻松上云部署。但用户的业务场景和功能需求是多种多样的，如果现有的 Component 无法满足业务诉求，开发者则需要制作一个自己的 Component 来支持自身的业务。

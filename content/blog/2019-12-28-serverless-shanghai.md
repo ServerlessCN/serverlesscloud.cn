@@ -12,6 +12,9 @@ authorslink:
   - https://serverlesscloud.cn
 location: 
   - 上海 | 中国计算机学会 & 深圳清华大学研究院 & 腾讯云 & 云+社区
+tags:
+  - Serverless
+  - 活动  
 ---
 
 ![活动信息](https://img.serverlesscloud.cn/2020325/1585121773487-IMG_0291.JPG)  

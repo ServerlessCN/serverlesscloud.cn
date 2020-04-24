@@ -10,6 +10,9 @@ authors:
   - 黄文俊
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
+tags:
+  - 无服务器
+  - Serverless
 ---
 6月25日，在上海召开的KubeCon 2019大会上，腾讯云重磅发布了下一代无服务器的发展形态：Serverless2.0。本文将以 Serverless 的概念、发展、形态、应用及优劣对比展开，进一步介绍腾讯云针对 Serverless 2.0 的形态演进以及发展思考。
 

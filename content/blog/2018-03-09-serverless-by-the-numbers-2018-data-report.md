@@ -15,6 +15,10 @@ translators:
   - Aceyclee
 translatorslink: 
   - https://www.zhihu.com/people/Aceyclee
+tags:
+  - 事件源
+  - Serverless
+  - 服务结构
 ---
 
 说起如何使用 Serverless Framework，大家都有很多想分享的。

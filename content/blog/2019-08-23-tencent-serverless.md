@@ -10,6 +10,9 @@ authors:
   - 孔令飞
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
+tags:
+  - 技术演进
+  - Serverless
 ---
 
 > 注：本文整理自上周六举办的「Hello Serverless」技术沙龙深圳站演讲内容，讲师是腾讯云 Serverless 产品架构师孔令飞，文末提供了讲师演讲 PDF 的下载，回复「Serverless 深圳」免费可得。

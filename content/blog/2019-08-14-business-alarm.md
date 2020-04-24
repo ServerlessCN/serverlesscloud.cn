@@ -10,6 +10,9 @@ authors:
   - 刘宇
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
+tags:
+  - 业务告警
+  - Serverless
 ---
 
 尽管腾讯云提供了监控告警功能，但并不是「定制化」的。本文将会通过腾讯云云 API 对 Kafka 消息积压数量进行监控（在云监控部分并不提供这个指标的告警），当超过阈值时，通过 Email、企业微信和[短信](https://link.zhihu.com/?target=https%3A//cloud.tencent.com/product/sms%3Ffrom%3D9253)等进行业务告警。

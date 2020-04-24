@@ -10,6 +10,9 @@ authors:
   - Alfred Huang
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
+tags:
+  - 运行原理
+  - Serverless
 ---
 
 过去一年，我们和大量 Serverless 用户进行了线上和线下的交流，了解大家的业务场景、对 Serverless 的看法和使用体验。
