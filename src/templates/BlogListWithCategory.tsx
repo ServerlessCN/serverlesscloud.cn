@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '@src/layouts'
+import {debounce} from '@src/utils'
 import List from '@src/components/pages/blogList/List'
 import {Container} from '@src/components/atoms'
 import Category from '@src/components/pages/blogList/CategoryList'
@@ -25,6 +26,25 @@ const BlogList = ({
   pathContext: { offset, limit, categories },
   location,
 }: Props) => {
+  const [isMobileView,
+    setisMobileView] = React.useState(false)
+
+  React.useEffect(() => {
+    const onResize = debounce(() => {
+      if (window.innerWidth > 992) {
+        setisMobileView(false)
+      } else {
+        setisMobileView(true)
+      }
+    }, 50)
+
+    window.addEventListener('resize', onResize)
+    onResize()
+
+    return () => {
+      window.removeEventListener('resize', onResize)
+    }
+  }, []);
   const categoriesText = generateCategoryText(categories)
   const generateDataUrl= pageNum =>{
     let local
@@ -60,6 +80,7 @@ const BlogList = ({
               <div className="scf-box ">
                 <div className="scf-box__body">
                   <List
+                    isMobileView={isMobileView}
                     generateDataUrl={generateDataUrl}
                     blogs={edges}
                     offset={offset}
@@ -101,6 +122,7 @@ export const query = graphql`
             authorslink
             translators
             translatorslink
+            tags
           }
           wordCount {
             words

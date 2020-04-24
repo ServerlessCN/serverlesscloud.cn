@@ -51,13 +51,10 @@ export default function ({data} : {
         </div>
         {frontmatter.tags
           ? <div
-              className="scf-article-item__statistics scf-article-item__seotag"
-              style={{
-              marginTop: 10
-            }}>
-              <span>
-                <i className="scf-icon scf-icon-tag"></i>
-              </span>{frontmatter
+              className="scf-article-item__seotag"
+             >
+              <i className="scf-icon scf-icon-tag"></i>
+             {frontmatter
                 .tags
                 .map(tag => <Link to={`${baseCategoryUrl}/${tag}`} key={tag}>
                   <span className="scf-seotag__item" key={tag}>{tag}</span>

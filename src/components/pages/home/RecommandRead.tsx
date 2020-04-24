@@ -4,6 +4,7 @@ import {Box} from '@src/components/atoms'
 import {StaticQuery, graphql, Link} from 'gatsby'
 import {Blog, GraphqlBlogResult} from '@src/types'
 import './LatestBlogs.css'
+const baseCategoryUrl = '/tags'
 
 type BestPractice = Blog
 
@@ -43,6 +44,17 @@ export function BlogCard({blog} : {
           <Box className="scf-article-item__intro">{blog.node.frontmatter.description}</Box>
         </Box>
       </Link>
+      {blog.node.frontmatter.tags
+        ? <div
+            className="scf-article-item__seotag">
+              <i className="scf-icon scf-icon-tag"></i>
+            {blog.node.frontmatter
+              .tags
+              .map(tag => <Link to={`${baseCategoryUrl}/${tag}`} key={tag}>
+                <span className="scf-seotag__item" key={tag}>{tag}</span>
+              </Link>)}
+              </div>
+        : null}
     </Box>
   )
 }

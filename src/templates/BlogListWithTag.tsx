@@ -6,6 +6,7 @@ import {Container} from '@src/components/atoms'
 import Tag from '@src/components/pages/blogList/TagList'
 import { GraphqlBlogResult } from '@src/types'
 import Helmet from '@src/components/Helmet'
+import {debounce} from '@src/utils'
 
 interface Props {
   data: {
@@ -22,6 +23,25 @@ const BlogList = ({
   pathContext: { offset, limit, tags },
   location,
 }: Props) => {
+  const [isMobileView,
+    setisMobileView] = React.useState(false)
+
+  React.useEffect(() => {
+    const onResize = debounce(() => {
+      if (window.innerWidth > 992) {
+        setisMobileView(false)
+      } else {
+        setisMobileView(true)
+      }
+    }, 50)
+
+    window.addEventListener('resize', onResize)
+    onResize()
+
+    return () => {
+      window.removeEventListener('resize', onResize)
+    }
+  }, []);
   const generateDataUrl= pageNum =>{
     let local
     if(location.pathname.includes('/page/')){
@@ -44,18 +64,19 @@ const BlogList = ({
         location={location}
       />
       <Tag location={location} />
-      <div className="scf-Blog-Category">
+      <div className="scf-Blog-Category scf-page_seotag">
         <div className="scf-page-blog scf-layout-pattern">
           <div className="scf-home-block scf-blog-list">
             <Container
             width={[1, 1, 1, 912, 0.76, 1200]}
             px={0}>
               <div id="scf-box-mobile-titlebar" className="scf-box__header-title">
-                  <h3>博客</h3>
+                  <h3>Tags</h3>
               </div>
               <div className="scf-box ">
                 <div className="scf-box__body">
                   <List
+                    isMobileView={isMobileView}
                     generateDataUrl={generateDataUrl}
                     blogs={edges}
                     offset={offset}
