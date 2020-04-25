@@ -1,8 +1,8 @@
 ---
 title: 腾讯云正式发布 Serverless Framework
-description: "4 月 21 日（周二） 14：00，腾讯云召开了 Serverless Framework 线上发布会"
+description: 该版中发布了全新的组件（Component）机制、云引擎部署支持、实时日志和调试等能力，这些新功能为 Serverless 应用程序开发提供了顶级的顺畅体验！
 keywords: Serverless,Serverless Framework,全栈解决方案
-date: 2020-04-21
+date: 2020-04-22
 thumbnail: https://img.serverlesscloud.cn/2020421/1587478396860-bannner.jpg
 categories:
   - news
@@ -31,7 +31,7 @@ authorslink:
 
 ![](https://img.serverlesscloud.cn/2020421/1587477685086-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-04-21%2022.00.20.png)
 
-发布会嘉宾分享结束后，进行 Q&A 环节，大家就实际业务中遇到的问题在会话区踊跃提问，主持人王俊杰组织嘉宾解答大家的问题，其中有参会者 Jovi 提到「目前 Tencent Serverless 是否支持用户自定义 DB，比如 elasticsearch，couchbase，redis，mongoDB 等其他 NoSQL，未来是否有这方面的支持和拓展计划，以及可能上线的时间点」，可见大家对腾讯云 Serverless Framework 产品以及其未来的发展非常关注。
+发布会嘉宾分享结束后，进行 Q&A 环节，大家就实际业务中遇到的问题在会话区踊跃提问，主持人王俊杰组织嘉宾解答大家的问题，其中有参会者 Jovi 提到「目前 Tencent Serverless 是否支持用户自定义 DB，比如 elasticsearch，couchbase，redis，mongoDB 等其他 NoSQL，未来是否有这方面的支持和拓展计划，以及可能上线的时间点」。可见大家对腾讯云 Serverless Framework 产品以及其未来的发展非常关注。
 
 ## 立即使用 Serverless，只需三步
 
