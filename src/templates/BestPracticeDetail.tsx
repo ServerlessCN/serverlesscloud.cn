@@ -175,7 +175,7 @@ const BestPracticeDetail = ({
                             {currentBlog.frontmatter.tags && currentBlog.frontmatter.tags.length
                               ?  <p>标签：
                               {currentBlog.frontmatter.tags.map(tag=>
-                                <Link to={`${baseCategoryUrl}/${tag}`} key={tag}>
+                                <Link to={`${baseCategoryUrl}/${tag}/`} key={tag}>
                                   <span className="scf-seotag__item" key={tag}>{tag}</span>
                                 </Link>)}
                             </p>

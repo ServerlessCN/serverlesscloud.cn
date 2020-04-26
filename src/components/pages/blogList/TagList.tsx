@@ -24,7 +24,7 @@ export default function (props) {
             {tags
               .group
               .map(tag => (
-                <Link to={`${baseCategoryUrl}/${tag.tags}`} key={tag.tags}>
+                <Link to={`${baseCategoryUrl}/${tag.tags}/`} key={tag.tags}>
                 <span key={tag.tags} className={"scf-segment__item scf-tag__item "+ ([`${baseCategoryUrl}/${tag.tags}`,`${baseCategoryUrl}/${tag.tags}/`].includes(props.location.pathname)?'is-active':'')}>{tag.tags}</span>
                 </Link>
               ))}
