@@ -7,11 +7,14 @@ thumbnail: https://img.serverlesscloud.cn/2020327/1585306882223-9.jpg
 categories:
   - meetup
 authors:
-  - Serverless 社区
+  - serverless 社区
 authorslink:
   - https://serverlesscloud.cn
 location: 
   - 线上投稿 | Serverless 社区
+tags:
+  - serverless
+  - 活动  
 ---
 
 亲爱的小伙伴们，Serverless 在线课堂已经开展了三期直播，我们分享了 Serverless 的概念、技术架构、典型应用场景、开发实战以及工程化应用等技术干货。在这里，要感谢大家抽出时间来学习和使用 Serverless，在此期间，你们提的需求产品都已记录在小本本上了，研发同学也正在加急开发中……
@@ -33,7 +36,7 @@ location:
 
 - 腾讯云云函数 100元无门槛代金券一张；
 - 腾讯云专属定制限量版 T 恤一件；
-- Serverless Framework 社区贴纸（独家）。
+- serverless Framework 社区贴纸（独家）。
 
 ## 内容方向建议
 

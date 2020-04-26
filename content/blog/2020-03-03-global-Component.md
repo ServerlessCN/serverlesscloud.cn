@@ -11,6 +11,9 @@ authors:
   - Anycodes
 authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
+tags:
+  - serverless
+  - serverless 组件
 ---
 
 ## 前言

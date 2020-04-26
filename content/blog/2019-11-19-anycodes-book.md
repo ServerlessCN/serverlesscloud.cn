@@ -11,6 +11,9 @@ authors:
   - Aceyclee
 authorslink:
   - https://www.zhihu.com/people/Aceyclee
+tags:
+  - 项目实战
+  - serverless
 ---
 
 📚推荐一下社区成员 [Anycodes](https://github.com/anycodes) 写的书！👉[《Serverless 架构：从原理、设计到项目实战》](https://item.jd.com/12592747.html?cu=true&utm_source=kong&utm_medium=tuiguang&utm_campaign=t_1001542270_1001895103_0_1912401775&utm_term=3380c6c4d9f24f5c84a305328060c402)

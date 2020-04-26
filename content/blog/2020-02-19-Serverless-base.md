@@ -11,6 +11,9 @@ authors:
   - Tabor
 authorslink:
   - https://canmeng.net
+tags:
+  - serverless
+  - 活动  
 ---
 
 ## 基础服务架构

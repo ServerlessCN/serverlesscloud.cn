@@ -1,37 +1,28 @@
 import * as React from 'react'
-import {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '@src/layouts'
 import List from '@src/components/pages/blogList/List'
-import {GraphqlBlogResult} from '@src/types'
+import {Container} from '@src/components/atoms'
+import Tag from '@src/components/pages/blogList/TagList'
+import { GraphqlBlogResult } from '@src/types'
 import Helmet from '@src/components/Helmet'
-import {Box,Container} from '@src/components/atoms'
 import {debounce} from '@src/utils'
-import './BestPracticeList.css'
 
 interface Props {
-  data : {
+  data: {
     blogs: GraphqlBlogResult
   }
-  pathContext : {
-    offset: number;
-    limit: number
-  }
-  location : any
+  pathContext: { offset: number; limit: number; tags: string }
+  location: any
 }
 
 const BlogList = ({
   data: {
-    blogs: {
-      edges,
-      totalCount
-    }
+    blogs: { edges, totalCount },
   },
-  pathContext: {
-    offset,
-    limit
-  },
-  location
-} : Props) => {
+  pathContext: { offset, limit, tags },
+  location,
+}: Props) => {
   const [isMobileView,
     setisMobileView] = React.useState(false)
 
@@ -51,39 +42,42 @@ const BlogList = ({
       window.removeEventListener('resize', onResize)
     }
   }, []);
-
+  const generateDataUrl= pageNum =>{
+    let local
+    if(location.pathname.includes('/page/')){
+      local=location.pathname.split('/page/')[0]
+    }else{
+    local=location.pathname
+    }
+    return `${local}${pageNum === 1 ? '' : `/page/${pageNum}`}`
+  }
   return (
     <Layout>
       <Helmet
-        title="最佳实践 - Serverless"
-        keywords="Serverless教程,Serverless入门,Serverless实践,ServerlessSSR"
-        description="Serverless Framework 最佳实践教程指引，帮助开发者快速掌握 Serverless 工程化框架与 Serverless 实战内容。"
-        location={location}/> {isMobileView
-        ? <Box
-            className="scf-box__header"
-            style={{
-            padding: "0 10px",
-            marginTop: "100px",
-          }}>
-            <Box className="scf-box__header-title">
-              <h3>最佳实践</h3>
-            </Box>
-          </Box>
-        : null}
-      <div className="scf-content">
+        title={`${tags} - Serverless`}
+        keywords={
+          'Serverless团队博客,Serverless发布,Serverless动态,Serverless新闻'
+        }
+        description={
+          'Serverless 中文网分享了 Serverless 技术的最新动态、Serverless 团队的工程实践，以及社区开发者撰写投稿的优质技术博文'
+        }
+        location={location}
+      />
+      <Tag location={location} />
+      <div className="scf-Blog-Category scf-page_seotag">
         <div className="scf-page-blog scf-layout-pattern">
-          <div className="scf-home-block scf-practice-list">
+          <div className="scf-home-block scf-blog-list">
             <Container
-              width={[1, 1, 1, 912, 0.76, 1200]}
-              px={0}>
-              <div className="scf-box">
+            width={[1, 1, 1, 912, 0.76, 1200]}
+            px={0}>
+              <div id="scf-box-mobile-titlebar" className="scf-box__header-title">
+                  <h3>Tags</h3>
+              </div>
+              <div className="scf-box ">
                 <div className="scf-box__body">
                   <List
                     isMobileView={isMobileView}
-                    width={[0.9, 0.9, 0.9, 0.85]}
-                    generateDataUrl={pageNum => `/best-practice${pageNum === 1
-                    ? ''
-                    : `/page/${pageNum}`}`}
+                    generateDataUrl={generateDataUrl}
                     blogs={edges}
                     offset={offset}
                     limit={limit}
@@ -100,13 +94,13 @@ const BlogList = ({
 
 export default BlogList
 
-export const query = graphql `
-  query BestPractice($offset: Int!, $limit: Int!) {
+export const query = graphql`
+  query TagBlogs($offset: Int!, $limit: Int!, $tags: [String!]) {
     blogs: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        frontmatter: { date: { ne: null } }
-        fileAbsolutePath: { regex: "//best-practice//" }
+        frontmatter: { date: { ne: null }, tags: { in: $tags } }
+        fileAbsolutePath: { regex: "//blog|best-practice//" }
       }
       skip: $offset
       limit: $limit
@@ -117,10 +111,13 @@ export const query = graphql `
           frontmatter {
             thumbnail
             authors
+            categories
             date
             title
             description
             authorslink
+            translators
+            translatorslink
             tags
           }
           wordCount {

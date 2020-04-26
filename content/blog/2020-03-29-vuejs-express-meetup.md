@@ -7,18 +7,21 @@ thumbnail: https://img.serverlesscloud.cn/2020327/1585307844594-1212.jpg
 categories:
   - meetup
 authors:
-  - Serverless 社区
+  - serverless 社区
 authorslink:
   - https://serverlesscloud.cn
 location: 
   - 线上直播 | Vue Beijing 社区 & Serverless 社区
+tags:
+  - serverless
+  - 活动  
 ---
 
 在社区，我们经常会收到关于 Serverless 的「灵魂」三问：
 
-- Serverless 是什么？
-- Serverless 能做什么？
-- Serverless 怎么用？
+- serverless 是什么？
+- serverless 能做什么？
+- serverless 怎么用？
 
 为了解答社区小伙伴们的日常疑问，本周末（3 月 29 日），Vue Beijing 社区与 Tencent Serverless 联合，发起了一场在线 Workshop 活动，我们邀请了来自 Authing 的全栈工程师高鹏洋，为大家分享 Serverless 技术应用，并通过在线 WorkShop 的形式，实操教学如何基于 Vuejs+Express 快速构建 Serverless 应用。😊
 

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import crypto from 'crypto'
+import {graphql,Link} from 'gatsby'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
 import {Box, InlineBlock,Container} from '@src/components/atoms'
 import Helmet from '@src/components/Helmet'
@@ -19,6 +20,8 @@ import { debounce } from '@src/utils'
 import userBehaviorStatistics from '@src/utils/statistics'
 import { v4 as uuidv4 } from 'uuid';
 import './BlogDetail.css'
+
+const baseCategoryUrl = '/tags'
 
 const ExternalLinkWrapper = styled(InlineBlock)`
   margin-left: 5px;
@@ -177,6 +180,14 @@ const BlogDetail = ({data: {
                                     </LinkWrapper>
                                   ))}</p>
                             : null}
+                            {currentBlog.frontmatter.tags && currentBlog.frontmatter.tags.length
+                              ?  <p>标签：
+                              {currentBlog.frontmatter.tags.map(tag=>
+                                <Link to={`${baseCategoryUrl}/${tag}`} key={tag}>
+                                  <span className="scf-seotag__item" key={tag}>{tag}</span>
+                                </Link>)}
+                            </p>
+                              : null}
                         </Box>
                         <Box
                           style={!isShowAll
@@ -232,6 +243,7 @@ export const query = graphql `
       authorslink
       translators
       translatorslink
+      tags
     }
     wordCount {
       words

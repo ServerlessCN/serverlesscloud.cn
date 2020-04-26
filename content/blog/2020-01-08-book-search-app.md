@@ -11,6 +11,9 @@ authors:
   - 刘宇
 authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
+tags:
+  - serverless
+  - 应用实战  
 ---
 
 我有一个朋友（这朋友不是我），朋友的单位里有一个小型图书室，图书室中存放了不少书。

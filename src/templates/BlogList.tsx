@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {graphql} from 'gatsby'
+import {debounce} from '@src/utils'
 import Layout from '@src/layouts'
 import List from '@src/components/pages/blogList/List'
 import {Container} from '@src/components/atoms'
@@ -32,6 +33,25 @@ const BlogList = ({
   },
   location
 } : Props) => {
+  const [isMobileView,
+    setisMobileView] = React.useState(false)
+
+  React.useEffect(() => {
+    const onResize = debounce(() => {
+      if (window.innerWidth > 992) {
+        setisMobileView(false)
+      } else {
+        setisMobileView(true)
+      }
+    }, 50)
+
+    window.addEventListener('resize', onResize)
+    onResize()
+
+    return () => {
+      window.removeEventListener('resize', onResize)
+    }
+  }, []);
 
   return (
     <Layout>
@@ -53,6 +73,7 @@ const BlogList = ({
               <div className="scf-box ">
                 <div className="scf-box__body">
                   <List
+                   isMobileView={isMobileView}
                     generateDataUrl={pageNum => `/blog${pageNum === 1
                     ? ''
                     : `/page/${pageNum}`}`}
@@ -94,7 +115,7 @@ export const query = graphql `query Blogs($offset:
         edges {
           node {
             id
-            frontmatter {thumbnail authors categories date title description authorslink translators translatorslink}
+            frontmatter {thumbnail authors categories date title description authorslink translators translatorslink tags}
             wordCount {words sentences paragraphs}
             timeToRead
             fileAbsolutePath

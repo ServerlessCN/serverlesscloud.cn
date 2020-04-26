@@ -10,6 +10,8 @@ authors:
   - Elder James
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
+tags:
+  - serverless 
 ---
 
 ## Blazor ❤ Serverless

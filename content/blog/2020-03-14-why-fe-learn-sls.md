@@ -11,6 +11,8 @@ authors:
   - Aceyclee
 authorslink:
   - https://www.zhihu.com/people/Aceyclee
+tags:
+  - serverless
 ---
 
 Serverless 的概念或应用场景我们以前讲过很多，这里不再冗述。概括性地讲 —— **Serverless 的内涵就是对全部底层资源和运维工作的封装，让开发者更专注于业务逻辑。**

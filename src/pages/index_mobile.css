@@ -10,6 +10,22 @@
     position: absolute;
     left: 50%;
   }
+  .scf-article-item__seotag{
+    margin-top: 10px;
+  }
+  .scf-article-item--block {
+  flex-direction: row-reverse !important;
+}
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 3px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
 
 @media screen and (max-width: 992px) {
@@ -298,10 +314,6 @@
     top: 70%;
   }
 
-  .scf-article-item:last-child .scf-article-item__statistics {
-    top: 90%;
-  }
-
   .scf-home-blog .scf-article-item {
     padding-bottom: 0px;
     margin-bottom: 20px;
@@ -324,7 +336,6 @@
     display: flex;
     border-bottom: 1px solid #eaeaea;
     /*padding: 0 20px;*/
-    padding-bottom: 0px;
     margin-bottom: 20px;
   }
 
@@ -334,6 +345,7 @@
 
   #scf-best-practice a {
     display: block;
+    position: relative;
     width: 100%;
   }
 
@@ -352,10 +364,7 @@
 
   #scf-best-practice .scf-article-item--block .scf-article-item__content {
     flex: 0 0 60%;
-    /*margin-right: 10px;*/
-    padding: 10px 0px;
-    padding-bottom: 40px;
-
+    padding: 10px 0px 40px;
   }
 
   .scf-article-item__title {
@@ -367,13 +376,16 @@
 
   #scf-best-practice .scf-article-item__statistics {
     position: absolute;
-    top: 70%;
+    bottom: 0px;
   }
 
   #scf-best-practice .scf-article-item__intro {
     display: none;
   }
 
+  .scf-article-item__seotag {
+    width: 100%;
+}
 
   /* 最佳实践详情页 */
   .scf-page-resource .scf-footer__inner,

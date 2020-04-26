@@ -16,6 +16,9 @@ translators:
   - Aceyclee
 translatorslink: 
   - https://www.zhihu.com/people/Aceyclee
+tags:
+  - Component
+  - serverless
 ---
 
 我们在 Serverless 社区进行了一项面向所有开发者的 Serverless 使用情况调查。我们期望能获得一些有意思的数据，然后与大家分享。
@@ -113,7 +116,7 @@ translatorslink:
 
 ## 基于数据得出的关键要点
 
-- Serverless 正在快速发展。几个关键指标均是去年的 2 倍。不仅仅是小公司，大企业也在迅速为核心采用 Serverless 技术。
-- Serverless 的运维监控是目前普及 Serverless 的最大卡点。
+- serverless 正在快速发展。几个关键指标均是去年的 2 倍。不仅仅是小公司，大企业也在迅速为核心采用 Serverless 技术。
+- serverless 的运维监控是目前普及 Serverless 的最大卡点。
 - 与去年相比，使用多个云厂商的人数增加，这只会使 [CloudEvents](https://cloudevents.io/) 等项目以及其他支持选择供应商的计划更加重要。
 - 对于许多人来说，Serverless 是他们第一次接触云服务。这意味着 Serverless 已经在改变开发人员的工作方式，提高云服务的使用。

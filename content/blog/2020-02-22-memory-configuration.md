@@ -10,6 +10,9 @@ authors:
   - Anycodes
 authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
+tags:
+  - serverless
+  - 内存配置
 ---
 
 在上一篇文章[《Serverless 的资源评估与成本探索》](https://serverlesscloud.cn/blog/2019-12-10-resource-cost/)中，我们对性能和成本探索进行了些思考，在此就引出一个新的问题：当我们使用 Serverless 架构的时候，如何设置运行内存和超时时间呢？这里分享下我的评估方法供大家参考。

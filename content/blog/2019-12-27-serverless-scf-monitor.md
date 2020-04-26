@@ -10,6 +10,9 @@ authors:
   - 腾讯云监控
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - serverless
+  - 监控
 ---
 
 # **SCF 基础监控指标**

@@ -7,9 +7,12 @@ thumbnail: https://img.serverlesscloud.cn/2020414/1586880172144-%E5%B0%81%E9%9D%
 categories:
   - guides-and-tutorials
 authors:
-  - Serverless 社区
+  - serverless 社区
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
+tags:
+  - 无服务器云函数
+  - serverless
 ---
 ​
 

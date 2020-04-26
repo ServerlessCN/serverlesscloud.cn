@@ -11,6 +11,9 @@ authors:
   - Anycodes
 authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
+tags:
+  - 个人博客
+  - serverless
 ---
 
 自然语言的内容有很多，本文所介绍的自然语言处理部分是「文本摘要」和「关键词提取」。

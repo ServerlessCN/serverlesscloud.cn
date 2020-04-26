@@ -1,13 +1,13 @@
 import * as React from 'react'
+import {graphql,Link} from 'gatsby'
 import Layout from '@src/layouts/HeaderNotFixedLayout'
-import {Box, BackgroundProps, InlineBlock,Container} from '@src/components/atoms'
+import {Box, InlineBlock,Container} from '@src/components/atoms'
 import {Blog, GraphqlBlogResult} from '@src/types'
 import styled from 'styled-components'
 import Markdown from '@src/components/Markdown'
 import BlogCatalogs from '@src/components/Markdown/Catalogs'
 import theme from '@src/constants/theme'
 import Helmet from '@src/components/Helmet'
-import {background} from 'styled-system'
 import {formateDate} from '@src/utils'
 import userBehaviorStatistics from '@src/utils/statistics'
 import {display, DisplayProps, space, SpaceProps} from 'styled-system'
@@ -18,6 +18,8 @@ import RecommandRead from '@src/components/pages/home/RecommandRead'
 import crypto from 'crypto'
 import { debounce } from '@src/utils'
 import { v4 as uuidv4 } from 'uuid';
+
+const baseCategoryUrl = '/tags'
 
 const ExternalLinkWrapper = styled(InlineBlock)`
   margin-left: 5px;
@@ -170,6 +172,14 @@ const BestPracticeDetail = ({
                                     </LinkWrapper>
                                   ))}</Box>
                             : null}
+                            {currentBlog.frontmatter.tags && currentBlog.frontmatter.tags.length
+                              ?  <p>标签：
+                              {currentBlog.frontmatter.tags.map(tag=>
+                                <Link to={`${baseCategoryUrl}/${tag}`} key={tag}>
+                                  <span className="scf-seotag__item" key={tag}>{tag}</span>
+                                </Link>)}
+                            </p>
+                              : null}
                         </Box>
                         <Markdown html={currentBlog.html as string}></Markdown>
                       </Box>
@@ -211,6 +221,7 @@ export const query = graphql `
       authorslink
       translators
       translatorslink
+      tags
     }
     wordCount {
       words

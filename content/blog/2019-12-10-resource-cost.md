@@ -10,6 +10,9 @@ authors:
   - Anycodes
 authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
+tags:
+  - 资源成本
+  - serverless
 ---
 
 Serverless 布道师在讲解 Serverless 架构和云主机等区别的时候，总会有类似的描述：
