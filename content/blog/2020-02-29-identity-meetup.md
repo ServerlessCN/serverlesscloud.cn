@@ -7,11 +7,11 @@ thumbnail: https://img.serverlesscloud.cn/2020327/1585306882234-9.jpg
 categories:
   - meetup
 authors:
-  - Serverless 中文网
+  - Serverless 社区
 authorslink:
-  - https://china.serverless.cn/
+  - https://serverlesscloud.cn
 location: 
-  - 线上直播 | Authing & 腾讯云 & Serverless 中文社区
+  - 线上直播 | Authing & 腾讯云 & Serverless 社区
 ---
 
 疫情肆虐，不仅对老百姓生命健康造成重大威胁，对各行各业的发展也造成重大影响。同时，开学、复工在即，疫情防控进入了关键阶段，「居家隔离、远程办公」是当下遏制疫情扩散的最佳防控措施。

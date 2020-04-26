@@ -12,7 +12,7 @@ authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
 ---
 
-在上一篇文章[《Serverless 的资源评估与成本探索》](https://china.serverless.com/blog/2019-12-10-resource-cost/)中，我们对性能和成本探索进行了些思考，在此就引出一个新的问题：当我们使用 Serverless 架构的时候，如何设置运行内存和超时时间呢？这里分享下我的评估方法供大家参考。
+在上一篇文章[《Serverless 的资源评估与成本探索》](https://serverlesscloud.cn/blog/2019-12-10-resource-cost/)中，我们对性能和成本探索进行了些思考，在此就引出一个新的问题：当我们使用 Serverless 架构的时候，如何设置运行内存和超时时间呢？这里分享下我的评估方法供大家参考。
 
 首先在函数上线时，选择一个稍微大一点的内存。例如，这里执行一次函数，得到下图结果：
 
@@ -180,4 +180,4 @@ authorslink:
 > - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
 > - 官网：[serverless.com](https://serverless.com/)
 
-欢迎访问：[Serverless 中文网](https://china.serverless.com/)，您可以在 [最佳实践](https://china.serverless.com/best-practice) 里体验更多关于 Serverless 应用的开发！
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

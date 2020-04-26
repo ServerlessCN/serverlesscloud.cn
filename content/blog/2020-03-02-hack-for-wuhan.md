@@ -7,11 +7,11 @@ thumbnail: https://img.serverlesscloud.cn/202032/1583158864577-wuhan_wechat6.jpg
 categories:
   - meetup
 authors:
-  - Serverless 中文网
+  - Serverless 社区
 authorslink:
-  - https://china.serverless.cn/
+  - https://serverlesscloud.cn
 location: 
-  - 线上竞赛 | 开源社 & Datewhale & WUHAN2020 & Serverless 中文社区
+  - 线上竞赛 | 开源社 & Datewhale & WUHAN2020 & Serverless 社区
 ---
 
 2020 年春，一场突如其来的疫情席卷而来。身处于危机之下，作为普通人的我们，也希望可以通过自身力量参与到这场生死攸关的战斗中来。

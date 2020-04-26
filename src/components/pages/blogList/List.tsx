@@ -20,7 +20,7 @@ export default function({
   offset: number
   limit: number
   totalCount: number
-  isMobileView: boolean
+  isMobileView?: boolean
   generateDataUrl: (pageNum: number) => string
 } & WidthProps) {
 

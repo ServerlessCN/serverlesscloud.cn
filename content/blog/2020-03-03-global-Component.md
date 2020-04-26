@@ -26,8 +26,8 @@ authorslink:
 
 > 再进行下文阅读前，可以先了解这些背景知识：
 >
-> - [Serverless Component 是什么，我怎样使用它？](https://china.serverless.com/blog/2018-04-25-what-are-serverless-components-how-use/)
-> - [如何开发自己的第一个 Serverless Component](https://china.serverless.com/best-practice/2019-12-12-how-write-first-serverless-component/)
+> - [Serverless Component 是什么，我怎样使用它？](https://serverlesscloud.cn/blog/2018-04-25-what-are-serverless-components-how-use/)
+> - [如何开发自己的第一个 Serverless Component](https://serverlesscloud.cn/best-practice/2019-12-12-how-write-first-serverless-component/)
 
 ## 全局变量组件
 
@@ -240,4 +240,4 @@ DFOUNDERLIU-MB0:website_test dfounderliu$ sls --debug -n test2
 > - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
 > - 官网：[serverless.com](https://serverless.com/)
 
-欢迎访问：[Serverless 中文网](https://china.serverless.com/)，您可以在 [最佳实践](https://china.serverless.com/best-practice) 里体验更多关于 Serverless 应用的开发！
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

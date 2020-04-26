@@ -9,11 +9,10 @@ import {
 import theme from '@src/constants/theme'
 import {CheckIfDesktopContext} from '@src/contexts'
 import Swiper from '@src/components/Swiper'
-import banner_release from '@src/assets/images/banner_release.jpg'
+import banner_slsday from '@src/assets/images/banner_slsday.png'
 import banner1 from '@src/assets/images/banner1.png'
 import banner2 from '@src/assets/images/banner2.png'
 import banner_course from '@src/assets/images/banner_course.png'
-import banner3 from '@src/assets/images/banner3.png'
 import banner4 from '@src/assets/images/banner4.png'
 
 import helloworld from '@src/assets/images/hello-world.png'
@@ -35,10 +34,10 @@ const bannerConfigs : {
   title : string
 }[] = [
   {
-    img: banner_release,
+    img: banner_slsday,
     backgroundColor: '#000',
-    alt: '腾讯云 Serverless Framework 正式发布',
-    link: 'https://serverless.com/cn/trends/sfga/',
+    alt: 'ServerlessDays',
+    link: 'https://china.serverlessdays.io/',
     title: ""
   }, {
     img: banner1,
@@ -58,12 +57,6 @@ const bannerConfigs : {
     alt: 'Serverless 课程',
     link: 'https://cloud.tencent.com/edu/paths/series/Serverless',
     title: "帮助您从零基础入门，到可基于 Serverless 构建工程化应用"
-  }, {
-    img: banner3,
-    backgroundColor: '#fff',
-    alt: '荐书',
-    link: 'https://china.serverless.com/blog/2019-11-19-anycodes-book',
-    title: "Serverless 社区成员出版新书啦！"
   },{
     img: banner4,
     backgroundColor: '#fff',

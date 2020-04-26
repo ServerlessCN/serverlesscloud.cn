@@ -41,7 +41,7 @@ const links : {
         link: 'https://github.com/serverless/examples'
       }, {
         title: '书籍',
-        link: 'https://china.serverless.com/blog/2019-11-19-anycodes-book/'
+        link: 'https://serverlesscloud.cn/blog/2019-11-19-anycodes-book/'
       }
     ]
   }, {

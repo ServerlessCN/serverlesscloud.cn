@@ -3,16 +3,15 @@ title: Serverless 中文社区有奖征稿
 description: 欢迎将您的技术实践、开发经验分享更多人借鉴学习！
 keywords: Serverless 全局变量组件,Serverless 征稿,Serverless Component
 date: 2020-04-15
-time: future
 thumbnail: https://img.serverlesscloud.cn/2020327/1585306882223-9.jpg
 categories:
   - meetup
 authors:
-  - Serverless 中文网
+  - Serverless 社区
 authorslink:
-  - https://china.serverless.cn/
+  - https://serverlesscloud.cn
 location: 
-  - 线上投稿 | Serverless 中文社区
+  - 线上投稿 | Serverless 社区
 ---
 
 亲爱的小伙伴们，Serverless 在线课堂已经开展了三期直播，我们分享了 Serverless 的概念、技术架构、典型应用场景、开发实战以及工程化应用等技术干货。在这里，要感谢大家抽出时间来学习和使用 Serverless，在此期间，你们提的需求产品都已记录在小本本上了，研发同学也正在加急开发中……
@@ -62,48 +61,41 @@ Serverless Framework 落地 Serverless 架构的全云端开发闭环体验，�
 
 ![具体免费详情可查阅：https://cloud.tencent.com/document/product/1154/38792](https://img.serverlesscloud.cn/2020312/1584006765599-IMG_0123.PNG)
 
-
 ## 立即使用 Serverless，只需三步
 
-Serverless Framework 是构建和运维 Serverless 应用的框架，简单三步，即可通过 Serverless Framework 快速实现服务部署。
+Serverless Framework 是构建和运维 Serverless 应用的框架。简单三步，即可通过 Serverless Framework 快速实现服务部署。
 
-**1、创建本地应用**
+**1. 安装 Serverless**
 
-- 通过 npm 安装 Serverless
+macOS/Linux 系统：推荐使用二进制安装
+
+```
+$ curl -o- -L https://slss.io/install | bash
+```
+
+Windows 系统：可通过 npm 安装
 
 ```
 $ npm install -g serverless
 ```
 
-- 基于 tencent_nodejs 模板创建 hello_world
+**2. 创建云上应用**
+
+在空文件夹下输入 `serverless` 命令：
 
 ```
-$ serverless create --template tencent-nodejs --path my-service
+$ serverless
 ```
 
-**2、安装相关依赖**
+访问命令行中输出的网页链接，即可访问成功部署后的应用。
 
-- 执行 npm install 安装相关依赖
+**3. 查看部署信息**
 
-```
-$ cd my-service$ npm install
-```
-
-**3. 部署**
-
-- 扫描微信二维码一键登录腾讯云账号，部署函数到云端
+进入到部署成功的文件夹，运行如下命令，查看部署状态和资源信息：
 
 ```
-$ serverless deploy
+$ sls info
 ```
-
-- 触发云函数
-
-```
-$ serverless invoke -f hello_world
-```
-
-部署完成后，即可在命令行中看到部署情况，也可以在腾讯云控制台看到对应资源。
 
 ![](https://img.serverlesscloud.cn/2020312/1584006765436-IMG_0123.PNG)
 

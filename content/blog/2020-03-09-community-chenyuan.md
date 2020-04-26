@@ -17,7 +17,7 @@ authorslink:
 
 2 月份，TencentServerless 举办了系列在线课堂分享，讲解了 Serverless 概念、架构、最佳实践以及如何开发一个 component 等技术知识。
 
-因为对 Serverless 非常感兴趣，每次都参加了直播学习并提交了课堂作业，一路下来感觉还不错，因此决定把自己的实验室站（https://lab.yuangezhizao.cn/）迁移到 Serverless 试试看。
+因为对 Serverless 非常感兴趣，每次都参加了直播学习并提交了课堂作业，一路下来感觉还不错，因此决定把自己的[实验室站](https://lab.yuangezhizao.cn/)迁移到 Serverless 试试看。
 
 ## 1. TencentServerless 介绍
 
@@ -76,16 +76,34 @@ serverless create --template-url https://github.com/serverless/components/tree/m
 源码如下：
 
 ```
-# -*- coding: utf8 -*- 
+# -*- coding: utf8 -*-
+ 
 import json
 from flask import Flask, jsonify, request
-app = Flask(__name__)  
-
-@app.route("/")def index():    return "Hello Flash" @app.route('/user', methods = ['POST'])def addUser():    # we must get request body from clound function event;    event = request.environ['event']    user = json.loads(event['body'])    return jsonify(data=user)  
-
-@app.route("/user", methods = ['GET'])def listUser():    users = [{'name': 'test1'}, {'name': 'test2'}]    return jsonify(data=users)  
-
-@app.route("/user/<id>", methods = ['GET'])def getUser(id):    return jsonify(data={'name': 'test1'})
+app = Flask(__name__)
+ 
+ 
+@app.route("/")
+def index():
+    return "Hello Flash"
+ 
+@app.route('/user', methods = ['POST'])
+def addUser():
+    # we must get request body from clound function event;
+    event = request.environ['event']
+    user = json.loads(event['body'])
+    return jsonify(data=user)
+ 
+ 
+@app.route("/user", methods = ['GET'])
+def listUser():
+    users = [{'name': 'test1'}, {'name': 'test2'}]
+    return jsonify(data=users)
+ 
+ 
+@app.route("/user/<id>", methods = ['GET'])
+def getUser(id):
+    return jsonify(data={'name': 'test1'})
 ```
 
 - 不基于模板
@@ -101,16 +119,16 @@ app = Flask(__name__)
 源码如下：
 
 ```
-
 from flask import Flask
-
-app = Flask(__name__) 
-
-@app.route('/')def hello_world():    return 'Hello World!' 
-
+ 
+app = Flask(__name__)
+ 
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
+ 
 if __name__ == '__main__':
-app.run()
-
+    app.run()
 ```
 
 **2) 配置Serverless**
@@ -118,9 +136,26 @@ app.run()
 - 创建serverless.yml，这里更改了几处配置
 
 ```
+
 MyComponent:
-component: '@serverless/tencent-flask'  
-inputs:    region: ap-beijing    functionName: LAB_Serverless    code: ./    functionConf:      timeout: 10      memorySize: 128      environment:        variables:          TEST: value          Version: 2020-2-23_21:01:44      vpcConfig:        subnetId: ''        vpcId: ''    apigatewayConf:      protocol: https      environment: test
+  component: '@serverless/tencent-flask'
+  inputs:
+    region: ap-beijing
+    functionName: LAB_Serverless
+    code: ./
+    functionConf:
+      timeout: 10
+      memorySize: 128
+      environment:
+        variables:
+          TEST: value
+          Version: 2020-2-23_21:01:44
+      vpcConfig:
+        subnetId: ''
+        vpcId: ''
+    apigatewayConf:
+      protocol: https
+      environment: test
 
 ```
 
@@ -129,9 +164,8 @@ inputs:    region: ap-beijing    functionName: LAB_Serverless    code: ./    fun
 - 创建.env，写入密匙（因为懒得每次部署都得拿起手机扫一扫授权(^_−)☆
 
 ```
-
-TENCENT_SECRET_ID=<rm>TENCENT_SECRET_KEY=<rm>
-
+TENCENT_SECRET_ID=<rm>
+TENCENT_SECRET_KEY=<rm>
 ```
 
 **3) 部署**
@@ -141,9 +175,43 @@ serverless 的缩写是 sls，因此也可以用 sls 简化命令。但是这里
 查看终端
 
 ```
-
-Microsoft Windows [版本10.0.17763.1039](c) 2018 Microsoft Corporation。保留所有权利。 D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>sls --debug   DEBUG─Resolving the template's static variables.  DEBUG─Collecting components from the template.  DEBUG─Downloading any NPM components found in the template.  DEBUG─Analyzing the template's components dependencies.  DEBUG─Creating the template's components graph.  DEBUG─Syncing template state.  DEBUG─Executing the template's components graph.  DEBUG─Compressing function LAB_Serverless file to D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless\.serverless/LAB_Serverless.zip.(node:22500) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, stat 'D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless\.serverless\requirements'eploying    at Object.statSync (fs.js:946:3)    at Object.statSync (C:\Users\yuangezhizao\AppData\Roaming\npm\node_modules\serverless\node_modules\_graceful-fs@4.2.3@graceful-fs\polyfills.js:308:16)    at WriteStream.<anonymous> (C:\Users\yuangezhizao\.serverless\components\registry\npm\@serverless\tencent-flask@0.2.0\node_modules\@serverless\tencent-flask\node_modules\@serverless\tencent-scf\library\utils.js:124:20)    at WriteStream.emit (events.js:304:20)    at C:\Users\yuangezhizao\.serverless\components\registry\npm\@serverless\tencent-flask@0.2.0\node_modules\@serverless\tencent-flask\node_modules\graceful-fs\graceful-fs.js:298:14    at C:\Users\yuangezhizao\.serverless\components\registry\npm\@serverless\tencent-flask@0.2.0\node_modules\@serverless\tencent-flask\node_modules\graceful-fs\graceful-fs.js:325:16    at C:\Users\yuangezhizao\AppData\Roaming\npm\node_modules\serverless\node_modules\_graceful-fs@4.2.3@graceful-fs\graceful-fs.js:325:16    at FSReqCallback.oncomplete (fs.js:152:23)(node:22500) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function withouta catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)(node:22500) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.   194s»MyComponent»canceled 终止批处理操作吗(Y/N)? Y D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>
-
+Microsoft Windows [版本10.0.17763.1039]
+(c) 2018 Microsoft Corporation。保留所有权利。
+ 
+D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>sls --debug
+ 
+  DEBUG─Resolving the template's static variables.
+  DEBUG─Collecting components from the template.
+  DEBUG─Downloading any NPM components found in the template.
+  DEBUG─Analyzing the template's components dependencies.
+  DEBUG─Creating the template's components graph.
+  DEBUG─Syncing template state.
+  DEBUG─Executing the template's components graph.
+  DEBUG─Compressing function LAB_Serverless file to D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless\.serverless/LAB_Serverless.zip.
+(node:22500) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, stat 'D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless\.
+serverless\requirements'eploying
+    at Object.statSync (fs.js:946:3)
+    at Object.statSync (C:\Users\yuangezhizao\AppData\Roaming\npm\node_modules\serverless\node_modules\_graceful-fs@4.2.3@graceful-fs\polyfills.js:308:16
+)
+    at WriteStream.<anonymous> (C:\Users\yuangezhizao\.serverless\components\registry\npm\@serverless\tencent-flask@0.2.0\node_modules\@serverless\tencen
+t-flask\node_modules\@serverless\tencent-scf\library\utils.js:124:20)
+    at WriteStream.emit (events.js:304:20)
+    at C:\Users\yuangezhizao\.serverless\components\registry\npm\@serverless\tencent-flask@0.2.0\node_modules\@serverless\tencent-flask\node_modules\grac
+eful-fs\graceful-fs.js:298:14
+    at C:\Users\yuangezhizao\.serverless\components\registry\npm\@serverless\tencent-flask@0.2.0\node_modules\@serverless\tencent-flask\node_modules\grac
+eful-fs\graceful-fs.js:325:16
+    at C:\Users\yuangezhizao\AppData\Roaming\npm\node_modules\serverless\node_modules\_graceful-fs@4.2.3@graceful-fs\graceful-fs.js:325:16
+    at FSReqCallback.oncomplete (fs.js:152:23)
+(node:22500) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without
+a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:22500) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will termi
+nate the Node.js process with a non-zero exit code.
+ 
+  194s»MyComponent»canceled
+ 
+终止批处理操作吗(Y/N)? Y
+ 
+D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>
 ```
 
 然后去 .serverless 文件下的 Template.MyComponent.pyRequirements.json 文件中看到了requirements.txt。这里其实是故意操作的（特意没添加requirements.txt），说明 requirements.txt 必须存在！
@@ -153,9 +221,46 @@ Microsoft Windows [版本10.0.17763.1039](c) 2018 Microsoft Corporation。保留
 因此，去创建文件内容为 Flask 的 requirements.txt
 
 ```
-
-D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>sls --debug   DEBUG─Resolving the template's static variables.  DEBUG─Collecting components from the template.  DEBUG─Downloading any NPM components found in the template.  DEBUG─Analyzing the template's components dependencies.  DEBUG─Creating the template's components graph.  DEBUG─Syncing template state.  DEBUG─Executing the template's components graph.  DEBUG─Generated requirements from D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless\requirements.txt in D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless\.serverless\requirements.txt...  DEBUG─Installing requirements from C:\Users\yuangezhizao\AppData\Local\Yugasun\serverless-python-requirements\Cache\2a1a661c4e3e6faadab5d001bc10cc3acccf648921aad7c279d94f138eaaf833_slspyc\requirements.txt ...  DEBUG─Using download cache directory C:\Users\yuangezhizao\AppData\Local\Yugasun\serverless-python-requirements\Cache\downloadCacheslspyc  DEBUG─Running ...  DEBUG─Compressing function LAB_Serverless file to D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless\.serverless/LAB_Serverless.zip.  DEBUG─Compressed function LAB_Serverless file successful  DEBUG─Uploading service package to cos[sls-cloudfunction-ap-beijing-code]. sls-cloudfunction-default-LAB_Serverless-1582464464.zip  DEBUG─Uploaded package successful D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless\.serverless/LAB_Serverless.zip  DEBUG─Creating function LAB_Serverless  DEBUG─Created function LAB_Serverless successful  DEBUG─Setting tags for function LAB_Serverless  DEBUG─Creating trigger for function LAB_Serverless  DEBUG─Deployed function LAB_Serverless successful  DEBUG─Starting API-Gateway deployment with name MyComponent.TencentApiGateway in the ap-beijing region  DEBUG─Service with ID service-0ok85tqh created.  DEBUG─API with id api-ivk6tk0y created.  DEBUG─Deploying service with id service-0ok85tqh.  DEBUG─Deployment successful for the api named MyComponent.TencentApiGateway in the ap-beijing region.   MyComponent:    region:              ap-beijing    functionName:        LAB_Serverless    apiGatewayServiceId: service-0ok85tqh    url:                 http://service-0ok85tqh-1251901037.bj.apigw.tencentcs.com/test/   44s»MyComponent»done  D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>
-
+D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>sls --debug
+ 
+  DEBUG─Resolving the template's static variables.
+  DEBUG─Collecting components from the template.
+  DEBUG─Downloading any NPM components found in the template.
+  DEBUG─Analyzing the template's components dependencies.
+  DEBUG─Creating the template's components graph.
+  DEBUG─Syncing template state.
+  DEBUG─Executing the template's components graph.
+  DEBUG─Generated requirements from D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless\requirements.txt in D:\yuangezhizao\Documents\PycharmProje
+cts\LAB_Serverless\.serverless\requirements.txt...
+  DEBUG─Installing requirements from C:\Users\yuangezhizao\AppData\Local\Yugasun\serverless-python-requirements\Cache\2a1a661c4e3e6faadab5d001bc10cc3ac
+ccf648921aad7c279d94f138eaaf833_slspyc\requirements.txt ...
+  DEBUG─Using download cache directory C:\Users\yuangezhizao\AppData\Local\Yugasun\serverless-python-requirements\Cache\downloadCacheslspyc
+  DEBUG─Running ...
+  DEBUG─Compressing function LAB_Serverless file to D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless\.serverless/LAB_Serverless.zip.
+  DEBUG─Compressed function LAB_Serverless file successful
+  DEBUG─Uploading service package to cos[sls-cloudfunction-ap-beijing-code]. sls-cloudfunction-default-LAB_Serverless-1582464464.zip
+  DEBUG─Uploaded package successful D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless\.serverless/LAB_Serverless.zip
+  DEBUG─Creating function LAB_Serverless
+  DEBUG─Created function LAB_Serverless successful
+  DEBUG─Setting tags for function LAB_Serverless
+  DEBUG─Creating trigger for function LAB_Serverless
+  DEBUG─Deployed function LAB_Serverless successful
+  DEBUG─Starting API-Gateway deployment with name MyComponent.TencentApiGateway in the ap-beijing region
+  DEBUG─Service with ID service-0ok85tqh created.
+  DEBUG─API with id api-ivk6tk0y created.
+  DEBUG─Deploying service with id service-0ok85tqh.
+  DEBUG─Deployment successful for the api named MyComponent.TencentApiGateway in the ap-beijing region.
+ 
+  MyComponent:
+    region:              ap-beijing
+    functionName:        LAB_Serverless
+    apiGatewayServiceId: service-0ok85tqh
+    url:                 http://service-0ok85tqh-1251901037.bj.apigw.tencentcs.com/test/
+ 
+  44s»MyComponent»done
+ 
+ 
+D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>
 ```
 
 趁机看下部署成功之后的 .serverless 文件夹：
@@ -165,8 +270,17 @@ D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>sls --debug   DEBUG─R
 这里 Template.MyComponent.TencentCloudFunction.json 即云函数
 
 ```
-
-{  "deployed": {    "Name": "LAB_Serverless",    "Runtime": "Python3.6",    "Handler": "api_service.handler",    "MemorySize": 128,    "Timeout": 10,    "Region": "ap-beijing",    "Description": "This is a template function"  }}
+{
+  "deployed": {
+    "Name": "LAB_Serverless",
+    "Runtime": "Python3.6",
+    "Handler": "api_service.handler",
+    "MemorySize": 128,
+    "Timeout": 10,
+    "Region": "ap-beijing",
+    "Description": "This is a template function"
+  }
+}
 ```
 
 第三方包全在这里：
@@ -176,15 +290,36 @@ D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>sls --debug   DEBUG─R
 Template.MyComponent.TencentApiGateway.json 即 API 网关
 
 ```
-{  "protocols": [    "http"  ],  "subDomain": "service-0ok85tqh-1251901037.bj.apigw.tencentcs.com",  "environment": "test",  "region": "ap-beijing",  "service": {    "value": "service-0ok85tqh",    "created": true  },  "apis": [    {      "path": "/",      "method": "ANY",      "apiId": {        "value": "api-ivk6tk0y",        "created": true      }    }  ]}
+{
+  "protocols": [
+    "http"
+  ],
+  "subDomain": "service-0ok85tqh-1251901037.bj.apigw.tencentcs.com",
+  "environment": "test",
+  "region": "ap-beijing",
+  "service": {
+    "value": "service-0ok85tqh",
+    "created": true
+  },
+  "apis": [
+    {
+      "path": "/",
+      "method": "ANY",
+      "apiId": {
+        "value": "api-ivk6tk0y",
+        "created": true
+      }
+    }
+  ]
+}
 ```
 
 也就是说CLI自动帮我们创建SCF并将运行环境一并上传，再创建API 网关配置到SCF的触发器上。
 
 ```
-
-apigatewayConf:    protocol: https    environment: test
-
+apigatewayConf:
+    protocol: https
+    environment: test
 ```
 
 到这里demo就搞定了，已经可以正常访问了 。
@@ -210,7 +345,13 @@ apigatewayConf:    protocol: https    environment: test
 但是，对于动态页面就比较好奇了，这是怎么实现的呢？其实就是靠着serverless.wsgi 这个文件等等。能看到这个模块描述：此模块将 AWS APIGateway 代理请求转换为 WSGI 请求。
 
 ```
-"""This module converts an AWS API Gateway proxied request to a WSGI request. Inspired by: https://github.com/miserlou/zappa Author: Logan Raarup <logan@logan.dk>"""
+"""
+This module converts an AWS API Gateway proxied request to a WSGI request.
+ 
+Inspired by: https://github.com/miserlou/zappa
+ 
+Author: Logan Raarup <logan@logan.dk>
+"""
 ```
 
 还是相当有意思的。

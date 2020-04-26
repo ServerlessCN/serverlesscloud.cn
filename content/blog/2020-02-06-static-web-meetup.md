@@ -7,11 +7,11 @@ thumbnail: https://img.serverlesscloud.cn/2020327/1585306882746-9.jpg
 categories:
   - meetup
 authors:
-  - Serverless 中文网
+  - Serverless 社区
 authorslink:
-  - https://china.serverless.cn/
+  - https://serverlesscloud.cn
 location: 
-  - 线上直播 | 腾讯云 & 云+社区 & Serverless 中文社区
+  - 线上直播 | 腾讯云 & 云+社区 & Serverless 社区
 ---
 
 二月份，Serverless 团队联合腾讯云大学与云+社区免费推出 Serverless 在线直播课程，课程涵盖 Serverless 架构解密、技术解析以及不同应用场景下的最佳实战指导，让你从 0 到 1 快速掌握 Serverless 开发知识，足不出户，就能完成开发技能升级。
