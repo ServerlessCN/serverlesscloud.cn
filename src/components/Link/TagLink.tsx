@@ -20,11 +20,11 @@ export default function({
   children,
 }: Props) {
   if (custom) {
-    return <Link to={`${baseCategoryUrl}/${tag}/`}>{children}</Link>
+    return <Link to={`${baseCategoryUrl}/${tag}`}>{children}</Link>
   }
 
   return (
-    <Link to={`${baseCategoryUrl}/${tag}/`}>
+    <Link to={`${baseCategoryUrl}/${tag}`}>
       {preAddon}
       {tag}
       {postAddon}
