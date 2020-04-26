@@ -7,7 +7,7 @@ thumbnail: https://img.serverlesscloud.cn/202032/1583158864577-wuhan_wechat6.jpg
 categories:
   - meetup
 authors:
-  - Serverless 社区
+  - serverless 社区
 authorslink:
   - https://serverlesscloud.cn
 location: 

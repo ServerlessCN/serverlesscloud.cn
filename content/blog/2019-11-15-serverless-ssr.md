@@ -12,7 +12,7 @@ authorslink:
   - https://juejin.im/user/5a9f77666fb9a028c14a01eb
 tags:
   - SSR
-  - Serverless
+  - serverless
 ---
 
 ## ▎目录：

@@ -12,7 +12,7 @@ authorslink:
   - https://github.com/tinafangkunding
 tags:
   - 工具建设
-  - Serverless
+  - serverless
 ---
 
 由于 Serverless 平台具备弹性扩缩、免运维、按需付费等特点，越来越多的公司和个人开始使用 Serverless 承载项目。但对于开发者而言，Serverless 一定程度上减少了开发难度，可以让我们聚焦业务逻辑进行开发；但同时，由于 Serverless 颠覆了传统的开发模式，从而在相关的开发工具，函数编排组织上也面临着重大挑战。

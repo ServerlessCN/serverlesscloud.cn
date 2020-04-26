@@ -7,7 +7,7 @@ thumbnail: https://img.serverlesscloud.cn/2020327/1585306882223-9.jpg
 categories:
   - meetup
 authors:
-  - Serverless 社区
+  - serverless 社区
 authorslink:
   - https://serverlesscloud.cn
 location: 
@@ -36,7 +36,7 @@ tags:
 
 - 腾讯云云函数 100元无门槛代金券一张；
 - 腾讯云专属定制限量版 T 恤一件；
-- Serverless Framework 社区贴纸（独家）。
+- serverless Framework 社区贴纸（独家）。
 
 ## 内容方向建议
 

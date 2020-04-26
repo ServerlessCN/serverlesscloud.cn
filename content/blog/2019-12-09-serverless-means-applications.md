@@ -11,8 +11,8 @@ authors:
 authorslink:
   - https://www.zhihu.com/people/jenswang
 tags:
-  - Serverless 优势
-  - Serverless
+  - serverless 优势
+  - serverless
 ---
 
 Serverless 是炙手可热的技术，被认为是云计算发展的未来方向。尤其是在前端研发领域，使用 Node 开发云函数，可以让前端工程师更加专注于业务逻辑，实现全栈工程师的角色转变。

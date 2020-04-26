@@ -7,7 +7,7 @@ thumbnail:  https://img.serverlesscloud.cn/qianyi/images/67ufDnLOiaDSZIgWQM91Xq6
 categories:
   - news
 authors:
-  - Serverless 社区
+  - serverless 社区
 authorslink: 
   - https://github.com/jiangliu5267
 tags:

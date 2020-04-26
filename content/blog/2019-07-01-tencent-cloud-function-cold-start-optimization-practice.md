@@ -12,7 +12,7 @@ authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - 性能优化
-  - Serverless
+  - serverless
 ---
 
 随着当下Serverless、FaaS生态的不断发展以及小程序的空前繁荣，越来越多的企业和个人用户把自己的应用，小程序部署到腾讯云无服务器云函数平台上，但随之而来的FaaS场景下高并发、大规模、快速启动等需求也给我们带来了巨大的挑战。为此我们打造了新一代Severless函数计算平台，在安全、可用性、性能上进行了全面升级。 

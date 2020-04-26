@@ -7,7 +7,7 @@ thumbnail: https://img.serverlesscloud.cn/2020327/1585306882234-9.jpg
 categories:
   - meetup
 authors:
-  - Serverless 社区
+  - serverless 社区
 authorslink:
   - https://serverlesscloud.cn
 location: 
@@ -38,10 +38,10 @@ tags:
 参与 Serverless 社区及开源的相关研发工作。拥有丰富前端、JavaScript 技术经验，以及网站及小程序等项目开发经验，腾讯云 Serverless 系列课程特约讲师。   
 内容简介：
 
-- Serverless Component 运行机制
-- Serverless Component 开发步骤（功能需求，组建配置）
-- Serverless Component 组件开发（default 函数，remove 函数）
-- Serverless Component 运行，调试与发布
+- serverless Component 运行机制
+- serverless Component 开发步骤（功能需求，组建配置）
+- serverless Component 组件开发（default 函数，remove 函数）
+- serverless Component 运行，调试与发布
 
 ### 二、Authing 是如何开发 Serverless-OIDC 组件？
 

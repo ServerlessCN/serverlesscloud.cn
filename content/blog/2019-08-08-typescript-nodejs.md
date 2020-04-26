@@ -13,7 +13,7 @@ authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - 最佳实践
-  - Serverless
+  - serverless
 ---
 
 ## 目的

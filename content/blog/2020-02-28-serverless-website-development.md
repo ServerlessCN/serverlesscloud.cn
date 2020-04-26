@@ -78,8 +78,8 @@ Serverless的开发模型，应用层有 REST API、BFF、 SSR、Website、Full-
 
 ![serverless](https://img.serverlesscloud.cn/qianyi/images/YHl6UWa9s63Cico1xISoyNt4dsb6jIVbUfiaicKzyNyKpR3rem7t5U8n9gyac1zsVrC7tp4oQDAasw6icaGB8A6sVg.jpg)
 
-- Serverless Framework 应用生命周期管理是由CLI和Dashboard组成，覆盖了serverless的整个应用生命周期，如服务的部署/删除/查看/回滚、调试、查看日志、统计运行数据、DevOps支持。
-- Serverless 应用，也就是上述提到的标准化框架和组件化开发。
+- serverless Framework 应用生命周期管理是由CLI和Dashboard组成，覆盖了serverless的整个应用生命周期，如服务的部署/删除/查看/回滚、调试、查看日志、统计运行数据、DevOps支持。
+- serverless 应用，也就是上述提到的标准化框架和组件化开发。
 - Serverless资源，是可以无缝对接腾讯云Serverless资源。Serverless Framework 其实类似一个承接层或开发组件或包管理的工具。
 
 ![serverless](https://img.serverlesscloud.cn/qianyi/images/YHl6UWa9s63Cico1xISoyNt4dsb6jIVbUKJtSySDibcLia2ibym5AwewpXnVnic7Cr9fqgiaLLASO7212oRbpcmzvS8g.jpg)

@@ -17,7 +17,7 @@ tags:
   - Node.js
   - API网关
   - 数据库
-  - Serverless
+  - serverless
 ---
 
 Serverless 字面意思是「无服务器」。根据语境的不同，Serverless 可能有不同的解读方

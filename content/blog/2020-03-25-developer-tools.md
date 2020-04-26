@@ -11,7 +11,7 @@ authors:
 authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
 tags:
-  - Serverless
+  - serverless
 ---
 
 > Serverless 架构是云发展的产物，是一种去服务器化更加明显的架构。然而，细心的朋友可能会发现，有一个开发者工具也叫 Serverless，那么 Serverless 到底是一个架构，还是一个开发者工具呢？这个开发者工具和 Serverless 架构又有什么关系呢？

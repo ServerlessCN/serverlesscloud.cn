@@ -8,7 +8,7 @@ categories:
   - user-stories
   - engineering-culture
 authors:
-  - Serverless 社区
+  - serverless 社区
 tags:
   - serverless
   - Python

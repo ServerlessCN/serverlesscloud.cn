@@ -12,7 +12,7 @@ authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - 网络架构
-  - Serverless
+  - serverless
 ---
 
 [《腾讯云函数计算冷启动优化实践》](https://mp.weixin.qq.com/s?__biz=Mzg4NzEyMzI1NQ==&mid=2247483940&idx=1&sn=33b5db4a0248b35c0bb317068ffb9239&scene=21#wechat_redirect)文章，主要讲解了云函数冷启动方面的优化实践。Serverless中的函数除了计算任务外，绝大部分还有网络访问需求，本篇文章，将详细介绍SCF网络架构优化。

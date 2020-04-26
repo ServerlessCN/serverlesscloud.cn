@@ -13,7 +13,7 @@ authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
 tags:
   - serverless
-  - Serverless 组件
+  - serverless 组件
 ---
 
 ## 前言

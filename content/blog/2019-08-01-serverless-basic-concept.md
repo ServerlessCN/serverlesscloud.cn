@@ -11,8 +11,8 @@ authors:
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
-  - Serverless 概念
-  - Serverless
+  - serverless 概念
+  - serverless
 ---
 
 > 从行业趋势看，Serverless 是云计算必经的一场革命

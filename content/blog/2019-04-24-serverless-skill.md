@@ -11,7 +11,7 @@ authors:
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
-  - Serverless
+  - serverless
 ---
 ​
 Serverless架构在IT行业蓄势待发，并非没有道理。尽管这是一个相对较新的技术，但已引起了广泛的关注。专家指出，Serverless 架构具有缩短交付时间，改善操作和安全实践等功能，以及创造出一种革命性的付费模式——按资源消耗付费。Serverless 从底层开始变革计算机资源的形态，为软件架构与应用服务部署带来新的设计思路。

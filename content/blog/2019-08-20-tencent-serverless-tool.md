@@ -12,7 +12,7 @@ authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - 最佳实践
-  - Serverless
+  - serverless
 ---
 
 > 注：本文整理自上周六举办的「Hello Serverless」技术沙龙深圳站演讲内容，文章核心内容包括四部分：第一，什么是 Serverless；第二，在面向 Serverless 的开发模式中，开发者将会面对哪些困难；第三，我们如何通过开发者工具来提升开发者们的开发体验；最后是工具的一些衍生价值。

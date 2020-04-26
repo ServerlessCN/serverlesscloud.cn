@@ -7,7 +7,7 @@ thumbnail: https://serverlessimg-1253970226.cos.ap-chengdu.myqcloud.com/qianyi/i
 categories:
   - news
 authors:
-  - Serverless 社区
+  - serverless 社区
 authorslink: 
   - https://github.com/jiangliu5267
 tags:

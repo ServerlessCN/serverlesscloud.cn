@@ -7,7 +7,7 @@ thumbnail: https://img.serverlesscloud.cn/2020326/1585185314084-9.jpg
 categories:
   - meetup
 authors:
-  - Serverless 社区
+  - serverless 社区
 authorslink:
   - https://serverlesscloud.cn
 location: 
@@ -65,7 +65,7 @@ PHP做为世界上流行的编程语言之一，怎能缺席 Serverless，本次
 SSR 是 Web 应用常见的优化手段，使用了 SSR 意味着开发者必须要维护一个 Node 服务。在 Serverless 时代，这将成为历史。本次分享将介绍 NOW 直播团队是如何将 Serverless 平滑落地到现有业务中的，如何与团队工作流打通来提升研发效能，以及传统 SSR 存在的痛点和如何优化。
 
 1. 同构 SSR 的前世今生
-2. Serverless 落地到 SSR 中 -- Serverless Render
+2. Serverless 落地到 SSR 中 -- serverless Render
 3. Serverless + CI Flow
 4. 追求极致: Serverless Render 性能优化
 5. 未来: 组件即服务

@@ -13,7 +13,7 @@ authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
 tags:
   - 监控脚本
-  - Serverless
+  - serverless
 ---
 
 很多小伙伴都有自己的博客，或者做过 Web，但是自己的 Web 是否健康？当前状态是否可访问？网站挂了谁的锅？这些问题都可以用相关的[网站监控](https://link.zhihu.com/?target=https%3A//cloud.tencent.com/product/cat%3Ffrom%3D10680)脚本进行监测。

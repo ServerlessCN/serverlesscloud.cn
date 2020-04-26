@@ -7,7 +7,7 @@ thumbnail: https://img.serverlesscloud.cn/202049/1586443473383-1586438917%281%29
 categories:
   - meetup
 authors:
-  - Serverless 社区
+  - serverless 社区
 authorslink:
   - https://serverlesscloud.cn
 location: 

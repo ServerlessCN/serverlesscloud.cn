@@ -13,7 +13,7 @@ authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
 tags:
   - serverless
-  - Serverless AI  
+  - serverless AI  
 ---
 
 「图像分类」是人工智能领域的一个热门话题，我们在实际生活中甚至业务的生产环境里，也经常遇到图像分类相似的需求，如何能快速搭建一个图像分类或者内容识别的 API 呢？
