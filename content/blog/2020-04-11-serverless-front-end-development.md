@@ -12,6 +12,9 @@ authorslink:
   - https://serverlesscloud.cn
 location: 
   - 线上直播 | 腾讯云大学 & 前端早读课 & Serverless 社区
+tags:
+  - Serverless
+  - 活动  
 ---
 
 前端开发已进入了深水区，产品端形态愈加丰富，公司密集上云的趋势在加速，为了保证海量的前端产品顺利上线，产研模式也在不断被探索。而如今大热的 Serverless，因其能成帮助前端工程师提升开发能力和效率，成为当前前端开发的新风向。那么，如何基于 Serverless 进行前端开发？

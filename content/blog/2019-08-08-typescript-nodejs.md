@@ -11,6 +11,9 @@ authors:
   - 朱理锋
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
+tags:
+  - 最佳实践
+  - Serverless
 ---
 
 ## 目的

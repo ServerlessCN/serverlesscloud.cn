@@ -10,6 +10,9 @@ authors:
   - Yunong Xiao
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
+tags:
+  - 核心业务
+  - Serverless
 ---
 
 据调查报告显示，无服务器架构市场规模在2018年达到42.5亿美元，预计在2023年将达到149.3亿美元，复合年增长率将达29％。成本和效率两大原因促使无服务器架构的市场规模正在快速增长，并将成为下一代云计算服务的主流形态。

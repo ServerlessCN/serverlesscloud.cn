@@ -12,6 +12,9 @@ authorslink:
   - https://serverlesscloud.cn
 location: 
   - 线上直播 | 腾讯云大学 & Serverless 社区
+tags:
+  - 课程
+  - Serverless
 ---
 
 ## 他是谁？

@@ -11,6 +11,9 @@ authors:
   - Anycodes
 authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
+tags:
+  - 在线编程
+  - Serverless
 ---
 
 > Online Judge 系统（简称 OJ）是一个在线的判题系统。用户可以在线提交多种程序（如C、C++、Pascal）源代码，系统对源代码进行编译和执行，并通过预先设计的测试数据来检验程序源代码的正确性。

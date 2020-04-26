@@ -14,6 +14,9 @@ translators:
   - Aceyclee
 translatorslink: 
   - https://www.zhihu.com/people/Aceyclee
+tags:
+  - 远程协同
+  - Serverless
 ---
 
 首先向不了解我们的人说明一下，Serverless 团队成员总共跨越了 18 个时区，不同成员之间重合的工作时间非常少。

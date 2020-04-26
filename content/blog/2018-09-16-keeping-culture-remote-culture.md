@@ -14,6 +14,9 @@ translators:
   - Aceyclee
 translatorslink: 
   - https://www.zhihu.com/people/Aceyclee
+tags:
+  - 远程开发
+  - Serverless
 ---
 
 保持优秀的企业文化本身就是一件不容易的事情，而要在远程办公的情况下实现这一点，更是难上加难。但是，世上无难事只怕有心人！

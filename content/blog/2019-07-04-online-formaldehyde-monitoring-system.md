@@ -10,6 +10,9 @@ authors:
   - ecky
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
+tags:
+  - 树莓派
+  - Serverless
 ---
 
 扔掉小瓶盖，腾讯云带你体验在线甲醛监测系统！本文详述腾讯云多产品组合设计和体验报告 之 “树莓派+腾讯云=在线甲醛监测系统”。涉及腾讯云产品：API网关、无服务器云函数、云数据库、腾讯云图。

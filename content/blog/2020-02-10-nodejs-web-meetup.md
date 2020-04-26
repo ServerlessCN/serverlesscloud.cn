@@ -12,6 +12,9 @@ authorslink:
   - https://serverlesscloud.cn
 location: 
   - 线上直播 | 腾讯云 & 云+社区 & Serverless 社区
+tags:
+  - Serverless
+  - 活动  
 ---
 
 Serverless 在线直播课程第二期，我们将分享 Serverless 的最佳应用场景以及如何利用 Serverless 快速定制新型冠状病毒信息查询页，帮助你和身边人更及时了解疫情动态与信息。  

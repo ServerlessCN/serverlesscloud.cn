@@ -14,6 +14,9 @@ translators:
   - Aceyclee
 translatorslink: 
   - https://www.zhihu.com/people/Aceyclee
+tags:
+  - 敏捷开发
+  - Serverless
 ---
 
 我们所说的设计思维，是指由 IDEO 公司的 Tim Brown 提出，并且正在改变全世界组织的设计思维，简称 DT。

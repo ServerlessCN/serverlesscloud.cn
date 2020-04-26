@@ -10,6 +10,9 @@ authors:
   - 腾讯云中间件
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
+tags:
+  - 架构迁移
+  - Serverless
 ---
 
 作为继虚拟机、容器后的第三代通用计算平台，无服务器架构是腾讯云原生的重点发力领域。针对目前行业遇到的问题，腾讯云持续探索研究，并发布了下一代无服务器计算平台：Severless 2.0，Severless 2.0在已有的事件触发函数的基础之上，根据实际的用户使用场景，进一步提供了面向 HTTP 场景的 HTTP Function 和 HTTP Service，提供了高层次的通用开发框架，不仅更好的支持开发者面向 Web Service 的开发诉求，也可以支持已有业务代码向 Serverless 架构的无缝迁移。
