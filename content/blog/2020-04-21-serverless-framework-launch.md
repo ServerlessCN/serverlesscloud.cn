@@ -13,7 +13,7 @@ authorslink:
 location: 
   - 线上直播 | TencentServerless
 tags:
-  - Serverless
+  - serverless
   - 活动  
 ---
 

@@ -13,7 +13,7 @@ authorslink:
 location: 
   - 线上投稿 | Serverless 社区
 tags:
-  - Serverless
+  - serverless
   - 活动  
 ---
 

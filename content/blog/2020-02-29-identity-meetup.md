@@ -13,7 +13,7 @@ authorslink:
 location: 
   - 线上直播 | Authing & 腾讯云 & Serverless 社区
 tags:
-  - Serverless
+  - serverless
   - 活动  
 ---
 

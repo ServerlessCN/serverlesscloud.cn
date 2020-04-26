@@ -17,7 +17,7 @@ translatorslink:
   - https://www.zhihu.com/people/Aceyclee
 tags:
   - 事件源
-  - Serverless
+  - serverless
   - 服务结构
 ---
 

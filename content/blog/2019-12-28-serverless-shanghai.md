@@ -13,7 +13,7 @@ authorslink:
 location: 
   - 上海 | 中国计算机学会 & 深圳清华大学研究院 & 腾讯云 & 云+社区
 tags:
-  - Serverless
+  - serverless
   - 活动  
 ---
 

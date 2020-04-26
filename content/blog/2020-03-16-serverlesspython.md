@@ -10,7 +10,7 @@ categories:
 authors:
   - Serverless 社区
 tags:
-  - Serverless
+  - serverless
   - Python
 ---
 
