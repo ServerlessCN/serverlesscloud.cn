@@ -38,12 +38,15 @@ ServerlessDays 是由社区发起、面向开发人员的无服务器技术会�
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-<div id='scf-deploy-iframe-or-md'><iframe height="500px" width="100%" src="https://serverless.cloud.tencent.com/deploy/express" frameborder="0"  allowfullscreen></iframe></div>
+## One More Thing
+<div id='scf-deploy-iframe-or-md'>
+<p>扫码写代码，这可能是你从未尝试过的开发体验。不来试试吗？</p>
+<p>3 秒极速部署，立即体验史上最快的 <a href="https://serverless.cloud.tencent.com/deploy/express">Serverless  HTTP</a> 实战开发！</p><iframe height="500px" width="100%" src="https://serverless.cloud.tencent.com/deploy/express" frameborder="0"  allowfullscreen></iframe></div>
 
 <script>
 var n = navigator.userAgent.toLowerCase();
 if (n.indexOf('android')>-1 || n.indexOf('iphone')>-1 || n.indexOf('iPhone')>-1 || n.indexOf('ipod')>-1 || n.indexOf('ipad')>-1 || n.indexOf('ios')>-1){
-  document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<div><h2 id="one-more-thing-1"><a href="#one-more-thing-1" aria-label="one more thing 1 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>One More Thing</h2><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 <a href="https://serverless.cloud.tencent.com/deploy/express">Serverless</a> 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 <a href="https://serverless.cloud.tencent.com/deploy/express">Serverless  HTTP</a> 实战开发！</p></div>';
+  document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 <a href="https://serverless.cloud.tencent.com/deploy/express">Serverless</a> 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 <a href="https://serverless.cloud.tencent.com/deploy/express">Serverless  HTTP</a> 实战开发！</p></div>';
 }
 </script>
 
