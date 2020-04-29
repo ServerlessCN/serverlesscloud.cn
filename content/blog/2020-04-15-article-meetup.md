@@ -54,51 +54,30 @@ tags:
 
 您也可以在文章评论区写下你对 Serverless 的理解、建议，或者即将撰写发布的内容主题、方向，为其他人提供思路和灵感，留言点赞前三名，我们额外赠送计算器笔记本一个。
 
-征稿截止时间：4 月 15 日 24:00 截止提交。
+**征稿时间：长期有效**
 
-## Serverless Framework 免费试用计划
+## Serverless Framework 30 天试用计划
 
-Serverless Framework 免费试用名额已开放，我们诚邀您来试用和体验最便捷的 Serverless 开发和部署方式。包括服务中使用到云函数 SCF、API 网关、对象存储 COS 等产品，均在试用期内提供免费资源，并伴有专业的技术支持，帮助您的业务快速、便捷实现 Serverless ！
+我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
 
-Serverless Framework 落地 Serverless 架构的全云端开发闭环体验，覆盖编码、运维、调试、部署等开发全生命周期。使用 Serverless Framework 即可在几秒钟内将业务部署至云端。
+> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-![具体免费详情可查阅：https://cloud.tencent.com/document/product/1154/38792](https://img.serverlesscloud.cn/2020312/1584006765599-IMG_0123.PNG)
+## One More Thing
+<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
 
-## 立即使用 Serverless，只需三步
+<script>
+var n = navigator.userAgent.toLowerCase();
+if (n.indexOf('android')>-1 || n.indexOf('iphone')>-1 || n.indexOf('iPhone')>-1 || n.indexOf('ipod')>-1 || n.indexOf('ipad')>-1 || n.indexOf('ios')>-1){
+  document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div>';
+}else{
+  document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<p>扫码写代码，这可能是你从未尝试过的开发体验。不来试试吗？</p><p>3 秒极速部署，立即体验史上最快的 <a href="https://serverless.cloud.tencent.com/deploy/express">Serverless  HTTP</a> 实战开发！</p><iframe height="500px" width="100%" src="https://serverless.cloud.tencent.com/deploy/express" frameborder="0"  allowfullscreen></iframe>';
+}
+</script>
 
-Serverless Framework 是构建和运维 Serverless 应用的框架。简单三步，即可通过 Serverless Framework 快速实现服务部署。
+---
 
-**1. 安装 Serverless**
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
 
-macOS/Linux 系统：推荐使用二进制安装
-
-```
-$ curl -o- -L https://slss.io/install | bash
-```
-
-Windows 系统：可通过 npm 安装
-
-```
-$ npm install -g serverless
-```
-
-**2. 创建云上应用**
-
-在空文件夹下输入 `serverless` 命令：
-
-```
-$ serverless
-```
-
-访问命令行中输出的网页链接，即可访问成功部署后的应用。
-
-**3. 查看部署信息**
-
-进入到部署成功的文件夹，运行如下命令，查看部署状态和资源信息：
-
-```
-$ sls info
-```
-
-![](https://img.serverlesscloud.cn/2020312/1584006765436-IMG_0123.PNG)
-
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

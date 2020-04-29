@@ -508,22 +508,27 @@ def sendEmail(content, to_user):
 
 通过本场景实践，我们也可以对项目进行额外的优化或者应用在不同的领域以及场景中。例如，我们可以通过增加短信告警、微信告警、企业微信告警等多个维度，来确保相关人员可以及时收到告警信息；我们也可以通过监控某个小说网站、视频网站等，看到我们关注的小说或者视频的更新情况，便于追更等。
 
-## Serverless 极速部署体验
+## Serverless Framework 30 天试用计划
 
-扫描下方二维码，只需 3 秒，立即体验史上最快的 [Serverless  HTTP](https://serverless.cloud.tencent.com/deploy/express) 实战部署
+我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
 
- <iframe  
- height=500 
- width=100% 
- src="https://serverless.cloud.tencent.com/deploy/express"  
- frameborder=0  
- allowfullscreen>
- </iframe>
- 
+> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
+
+## One More Thing
+<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+
+<script>
+var n = navigator.userAgent.toLowerCase();
+if (n.indexOf('android')>-1 || n.indexOf('iphone')>-1 || n.indexOf('iPhone')>-1 || n.indexOf('ipod')>-1 || n.indexOf('ipad')>-1 || n.indexOf('ios')>-1){
+  document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div>';
+}else{
+  document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<p>扫码写代码，这可能是你从未尝试过的开发体验。不来试试吗？</p><p>3 秒极速部署，立即体验史上最快的 <a href="https://serverless.cloud.tencent.com/deploy/express">Serverless  HTTP</a> 实战开发！</p><iframe height="500px" width="100%" src="https://serverless.cloud.tencent.com/deploy/express" frameborder="0"  allowfullscreen></iframe>';
+}
+</script>
+
 ---
 
 > **传送门：**
->
 > - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
 > - 官网：[serverless.com](https://serverless.com/)
 

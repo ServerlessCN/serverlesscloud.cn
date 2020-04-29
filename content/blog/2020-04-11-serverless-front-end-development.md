@@ -38,16 +38,28 @@ tags:
 
 ![serverless](https://img.serverlesscloud.cn/202049/1586443176723-%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%9B%BE%E7%89%87_4%E6%9C%889%E6%97%A522%E6%97%B638%E5%88%8626%E7%A7%92.png)
 
-## 免费试用
+## Serverless Framework 30 天试用计划
 
-腾讯 Serverless Framework 助您快速、简单地构建和部署 Serverless 应用程序。目前，我们已提供免费产品试用方案，欢迎立即试用！
+我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
 
-> 立即试用地址： https://github.com/serverless/components/blob/master/README.cn.md
+> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-无论是构建一个 Serverless Express.js 应用程序、Serverless 静态网站，还是 Serverless 云函数，我们诚邀您参加接下来的在线产品发布会，学习如何使用所有这些激动人心的新功能。
+## One More Thing
+<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
 
-> 产品官网： https://cloud.tencent.com/product/sls
+<script>
+var n = navigator.userAgent.toLowerCase();
+if (n.indexOf('android')>-1 || n.indexOf('iphone')>-1 || n.indexOf('iPhone')>-1 || n.indexOf('ipod')>-1 || n.indexOf('ipad')>-1 || n.indexOf('ios')>-1){
+  document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div>';
+}else{
+  document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<p>扫码写代码，这可能是你从未尝试过的开发体验。不来试试吗？</p><p>3 秒极速部署，立即体验史上最快的 <a href="https://serverless.cloud.tencent.com/deploy/express">Serverless  HTTP</a> 实战开发！</p><iframe height="500px" width="100%" src="https://serverless.cloud.tencent.com/deploy/express" frameborder="0"  allowfullscreen></iframe>';
+}
+</script>
 
-> 快速入门： https://cloud.tencent.com/document/product/1154/41775
+---
 
-![](https://img.serverlesscloud.cn/2020312/1584006765436-IMG_0123.PNG)
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - 官网：[serverless.com](https://serverless.com/)
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
