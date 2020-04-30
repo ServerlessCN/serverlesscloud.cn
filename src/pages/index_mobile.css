@@ -14,9 +14,10 @@
     margin-top: 10px;
   }
   .scf-article-item--block {
-  flex-direction: row-reverse !important;
+    flex-direction: row-reverse;
+  }
 }
-}
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 3px;
@@ -31,6 +32,10 @@
 @media screen and (max-width: 992px) {
   .scf-page-resource .scf-grid__item-12{
     padding: 0 !important;
+  }
+
+  .scf-article-item--block {
+    flex-direction: column;
   }
 
   .scf-box-header-menus-icon{

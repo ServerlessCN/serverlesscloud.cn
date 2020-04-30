@@ -12,6 +12,7 @@ import {
   RightProps
 } from 'styled-system'
 import {Box} from '../atoms'
+import {adBanner} from '@src/constants/ad_banner'
 
 const Wrapper = styled(Box) < DisplayProps & PositionProps & TopProps & RightProps > `
   ${position}
@@ -105,7 +106,19 @@ export default function (props : {
   }, [eleScrollTop])
 
   return (
-    <Box className="scf-grid__item-6" ref={eleRef}>
+    <Box className="scf-grid__item-8" ref={eleRef}>
+        <Box className="scf-box scf-home-active" pb={20}>
+          <Box className="scf-box__header">
+            <Box className="scf-box__header-title size-s">
+              <h3>正在进行</h3>
+            </Box>
+          </Box>
+          <Box className='scf-article_ad_banner'>
+            <a href={adBanner.link} style={{display:'contents'}}>
+              <img src={adBanner.thumbnail} />
+            </a>
+          </Box>
+        </Box>
       <Wrapper
         className="scf-grid__box"
         ref={eleRef}

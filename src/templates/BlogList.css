@@ -114,7 +114,7 @@
 
 .scf-article-item {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   cursor: pointer;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
@@ -240,6 +240,14 @@ img {
   margin-top: 0 !important;
 }
 
+.scf-article_ad_banner {
+  width:100%;
+}
+
+.scf-article_ad_banner img{
+  width:100%;
+  height: auto;
+}
 @media (max-width: 1599px) {
 
   .scf-header__inner,
