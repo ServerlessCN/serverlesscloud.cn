@@ -109,7 +109,7 @@ export default function (props : {
     <Box className="scf-grid__item-8" ref={eleRef}>
         <Box className="scf-box scf-home-active" pb={20}>
           <Box className="scf-box__header">
-            <Box className="scf-box__header-title size-s">
+            <Box className="scf-box__header-title">
               <h3>正在进行</h3>
             </Box>
           </Box>

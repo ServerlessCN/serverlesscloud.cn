@@ -6,6 +6,6 @@
         }
 */
 export const adBanner:{link:string,thumbnail:string} ={
-    link:'https://china.serverlessdays.io',
-    thumbnail: 'https://img.serverlesscloud.cn/2020429/1588150812440-video1.png'
+    link:'https://cloud.tencent.com/apply/p/v1kekxicqhj',
+    thumbnail: 'https://img.serverlesscloud.cn/2020429/1588164013282-banner_hours.jpg'
 }
