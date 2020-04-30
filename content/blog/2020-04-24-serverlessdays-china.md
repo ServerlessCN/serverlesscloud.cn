@@ -48,6 +48,7 @@ if (n.indexOf('android')>-1 || n.indexOf('iphone')>-1 || n.indexOf('iPhone')>-1 
 }else{
   document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<p>扫码写代码，这可能是你从未尝试过的开发体验。不来试试吗？</p><p>3 秒极速部署，立即体验史上最快的 <a href="https://serverless.cloud.tencent.com/deploy/express">Serverless  HTTP</a> 实战开发！</p><iframe height="500px" width="100%" src="https://serverless.cloud.tencent.com/deploy/express" frameborder="0"  allowfullscreen></iframe>';
 }
+location.reload();
 </script>
 
 ---
