@@ -50,7 +50,7 @@
 }
 .scf-activity-article-item {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   cursor: pointer;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
