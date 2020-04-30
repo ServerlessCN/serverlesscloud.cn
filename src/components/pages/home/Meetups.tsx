@@ -4,6 +4,7 @@ import {StaticQuery, graphql, Link} from 'gatsby'
 import {Blog, GraphqlBlogResult} from '@src/types'
 import {formateDate} from '@src/utils'
 import { debounce } from '@src/utils'
+import crypto from 'crypto'
 
 import './Meetups.css'
 
@@ -17,9 +18,11 @@ function BlogCard({history,blog} : {
   blog: Blog
   history:boolean
 }) {
+  var md5 = crypto.createHash('md5');
+  var id = md5.update(blog.node.fields.slug).digest('hex');
  return (
     <Box className="scf-meetup-item" key={blog.node.id} >
-      <Link to={blog.node.fields.slug}>
+      <Link to={blog.node.fields.slug}  data-id={id}>
         <div className="scf-meetup">
           <div className={!history?"scf-meetup_future scf-meetup_date":"scf-meetup_date"}>
             <p>{formateDate(blog.node.frontmatter.date, true, '.')}</p>
