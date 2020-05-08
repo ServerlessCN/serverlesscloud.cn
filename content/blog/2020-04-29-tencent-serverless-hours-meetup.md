@@ -1,9 +1,8 @@
 ---
-title: Tencent Serverless Hours 线上分享会第一期即将举办
-description: 5 月 8 日（周五）15:00 即将举办 Tencent Serverless Hours 第一期线上分享会，届时将有腾讯云高级产品经理黄文俊、腾讯云高级前端开发工程师蔡卫峰为您分享云函数的最新进展！
+title: Tencent Serverless Hours 线上分享会第一期
+description: 届时将有腾讯云高级产品经理黄文俊、腾讯云高级前端开发工程师蔡卫峰为您分享云函数的最新进展！
 keywords: Serverless;Serverless Framework;Tencent Serverless
 date: 2020-04-29
-time: future
 thumbnail: https://img.serverlesscloud.cn/2020429/1588164013282-banner_hours.jpg
 categories:
   - meetup
