@@ -9,7 +9,6 @@ import {
 import theme from '@src/constants/theme'
 import {CheckIfDesktopContext} from '@src/contexts'
 import Swiper from '@src/components/Swiper'
-import banner_hours from '@src/assets/images/banner_hours.png'
 import banner_slsday from '@src/assets/images/banner_slsday.png'
 import banner1 from '@src/assets/images/banner1.png'
 import banner2 from '@src/assets/images/banner2.png'
@@ -35,12 +34,6 @@ const bannerConfigs : {
   title : string
 }[] = [
   {
-    img: banner_hours,
-    backgroundColor: '#000',
-    alt: 'TencentServerlessHours',
-    link: 'https://cloud.tencent.com/apply/p/v1kekxicqhj',
-    title: ""
-  }, {
     img: banner_slsday,
     backgroundColor: '#000',
     alt: 'ServerlessDays',

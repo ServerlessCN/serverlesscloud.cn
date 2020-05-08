@@ -3,7 +3,7 @@ title: 用 Serverless 搭建个人静态相册网站
 description: "通过 Serverless 组件，基于 ThumbsUp 快速搭建个人静态相册网站"
 keywords: Serverless 组件,ThumbsUp相册,搭建个人静态相册网站,ThumbsUp搭建
 date: 2019-12-13
-thumbnail: 'https://video-1251001047.cos.ap-chengdu.myqcloud.com/thumbsup.png'
+thumbnail: 'https://img.serverlesscloud.cn/202058/1588928638838-v2-b6f54fc4d2939af6f53a5e5592f9d19c_1200x500.jpg'
 categories:
   - best-practice
 authors:
@@ -26,7 +26,7 @@ tags:
 
 整个网站的搭建部署只需三步：安装与初始化 → 配置 yml 文件 → 部署。
 
-<video id="video" controls="" preload="none" poster="https://video-1251001047.cos.ap-chengdu.myqcloud.com/thumbsup.png">
+<video id="video" controls="" preload="none" poster="https://img.serverlesscloud.cn/202058/1588928638838-v2-b6f54fc4d2939af6f53a5e5592f9d19c_1200x500.jpg">
 <source id="mp4" src="https://video-1251001047.cos.ap-chengdu.myqcloud.com/thubmsup.mp4" type="video/mp4">
 </video>
 
@@ -142,10 +142,25 @@ sls --debug
 
 本文使用了非常流行的无服务器框架 [Serverless Framework](https://github.com/serverless/serverless/blob/master/README_CN.md) 来搭建照片墙网站，更多产品信息可以点击进入 [官网](https://serverless.com/) 学习。
 
+目前，Serverless Framework 提供 30 天试用。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
+
+> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
+
+## One More Thing
+<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+
+<script>
+var n = navigator.userAgent.toLowerCase();
+if (n.indexOf('android')>-1 || n.indexOf('iphone')>-1 || n.indexOf('iPhone')>-1 || n.indexOf('ipod')>-1 || n.indexOf('ipad')>-1 || n.indexOf('ios')>-1){
+  document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div>';
+}else{
+  document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<p>扫码写代码，这可能是你从未尝试过的开发体验。不来试试吗？</p><p>3 秒极速部署，立即体验史上最快的 <a href="https://serverless.cloud.tencent.com/deploy/express">Serverless  HTTP</a> 实战开发！</p><iframe height="500px" width="100%" src="https://serverless.cloud.tencent.com/deploy/express" frameborder="0"  allowfullscreen></iframe>';
+}
+</script>
+
 ---
 
 > **传送门：**
->
 > - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
 > - 官网：[serverless.com](https://serverless.com/)
 
