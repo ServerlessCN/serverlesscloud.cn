@@ -2,7 +2,7 @@
 title: 回顾 | Tencent Serverless Hours 线上分享会第一期
 description: 5 月 8 日（周五）15:00 举办的 Tencent Serverless Hours 第一期线上分享会如期举行！
 keywords: Serverless;Serverless Framework;Tencent Serverless
-date: 2020-05-08
+date: 2020-05-09
 thumbnail: https://img.serverlesscloud.cn/202058/1588940051457-%E4%BC%9A%E5%90%8E%E5%AE%A3%E4%BC%A0banner.png
 categories:
   - news
