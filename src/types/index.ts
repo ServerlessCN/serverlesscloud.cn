@@ -12,7 +12,7 @@ export interface Blog {
       authorslink?: string[]
       translators?: string[]
       translatorslink?: string[]
-      location?:string
+      location?: string
       tags?: string[]
     }
     timeToRead: number
