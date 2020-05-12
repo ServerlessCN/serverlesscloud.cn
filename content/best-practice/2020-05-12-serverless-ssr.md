@@ -1,5 +1,5 @@
 ---
-title: 诚心求问：做一个 Serverless SSR 的模式需要几步？
+title: 诚心求问：做一个 Serverless SSR 需要几步？
 description: Serverless Framework 支持 Next.js SSR 框架实践
 keywords: Serverless 多环境配置,Serverless 管理环境,Serverless配置方案
 date: 2020-05-12
