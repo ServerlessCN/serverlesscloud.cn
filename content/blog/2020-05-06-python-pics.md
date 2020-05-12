@@ -3,7 +3,7 @@ title: Serverless 实战：用 20 行 Python 代码轻松搞定图像分类和�
 description: 本文将尝试通过一个有趣的 Python 库，快速将图像分类的功能搭建在云函数上，并且和 API 网关结合，对外提供 API 功能，实现一个 Serverless 架构的「图像分类 API」
 keywords: Serverless 全局变量组件,Serverless 单独部署组件,Serverless Component
 date: 2020-05-06
-thumbnail: https://img.serverlesscloud.cn/202057/1588853662146-314c7ef5334f5d3a9eab340824b8de27.jpg
+thumbnail: https://img.serverlesscloud.cn/2020512/1589276332053-Python-Programming-Course-The-Complete-Bootcamp.jpg
 categories:
   - guides-and-tutorials
 authors:
@@ -12,7 +12,6 @@ authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
 tags:
   - serverless
-
 ---
 
 图像分类是人工智能领域的一个热门话题，通俗来讲，就是根据各自在图像信息中反映的不同特征，把不同类别的目标区分开。图像分类利用计算机对图像进行定量分析，把图像或图像中的每个像元或区域划归为若干个类别中的某一种，代替人的视觉判读。

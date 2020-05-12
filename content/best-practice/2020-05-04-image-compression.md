@@ -2,7 +2,7 @@
 title: Serverless 实现图片压缩与水印
 description: 图片和 Web 服务非常紧密，在 Serverless 架构下，是否有一种方法，可以对图像的压缩与水印实现「一条龙」服务，而且不会因为用户量比较多，而影响用户整体体验呢？
 keywords: Serverless 多环境配置,Serverless 管理环境,Serverless配置方案
-date: 2020-04-24
+date: 2020-05-04
 thumbnail: https://img.serverlesscloud.cn/2020511/1589207417692-ZalNtxgQAC_small.jpg
 categories:
   - best-practice

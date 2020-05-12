@@ -2,7 +2,7 @@
 title: 云函数 SCF 与对象存储实现 WordCount
 description: 本文将通过 MapReduce 模型实现一个简单的 WordCount 算法，区别于传统使用 Hadoop 等大数据框架，本文使用的是对象存储 COS 与云函数 SCF 的结合
 keywords: Serverless 多环境配置,Serverless 管理环境,Serverless配置方案
-date: 2020-05-01
+date: 2020-05-08
 thumbnail: https://img.serverlesscloud.cn/2020511/1589207417923-ZalNtxgQAC_small.jpg
 categories:
   - best-practice

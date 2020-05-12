@@ -2,7 +2,7 @@
 title: Serverless 实现视频压缩与格式转换
 description: 在 Serverless 架构的应用案例中，有这样一个非常实在的应用：视频处理，我们应该如何实现它呢？
 keywords: Serverless 多环境配置,Serverless 管理环境,Serverless配置方案
-date: 2020-04-28
+date: 2020-05-05
 thumbnail: https://img.serverlesscloud.cn/2020511/1589207417703-ZalNtxgQAC_small.jpg
 categories:
   - best-practice
