@@ -2,7 +2,7 @@
 title: Serverless 与 Websocket 的聊天工具
 description: 传统业务实现 Websocket 并不难，然而函数计算基本上都是事件驱动，不支持长链接操作。如果将函数计算与 API 网关结合，是否可以有 Websocket 的实现方案呢？
 keywords: Serverless 多环境配置,Serverless 管理环境,Serverless配置方案
-date: 2020-05-05
+date: 2020-05-09
 thumbnail: https://img.serverlesscloud.cn/2020511/1589207418781-ZalNtxgQAC_small.jpg
 categories:
   - best-practice
