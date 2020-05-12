@@ -50,7 +50,7 @@
     "@types/swiper": "^5.2.0",
     "babel-plugin-styled-components": "^1.10.6",
     "prettier": "^1.19.1",
-    "typescript": "^3.7.2"
+    "typescript": "^3.8.2"
   },
   "keywords": [
     "gatsby"

@@ -23,50 +23,57 @@ export default function({
   isMobileView?: boolean
   generateDataUrl: (pageNum: number) => string
 } & WidthProps) {
-
   React.useEffect(() => {
     function getBlogPv(fn) {
-      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?src='+document.location.hostname;
+      const api =
+        'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?src=' +
+        document.location.hostname
       fetch(api)
-          .then((response) => response.json() )
-          .then((response)=>{
-            fn(null, response);
-          })
-          .catch((error)=>{
-            fn(error, null);
-          });
+        .then(response => response.json())
+        .then(response => {
+          fn(null, response)
+        })
+        .catch(error => {
+          fn(error, null)
+        })
     }
 
     getBlogPv(function(error, response) {
       if (error || response.error) {
-        console.log(error || response.error);
-        return;
+        console.log(error || response.error)
+        return
       }
-      const bestList = document.getElementById('scf-best-practice').children;
+      const bestList = document.getElementById('scf-best-practice')!.children
       for (var i = 0; i < bestList.length; ++i) {
-        const id = bestList[i].getAttribute('data-id');
-        if (!id) continue;
+        const id = bestList[i].getAttribute('data-id')
+        if (!id) continue
 
-        const statistics = bestList[i].getElementsByClassName('scf-article-item__statistics-item');
-        if (!statistics) continue;
-        const icon = statistics[0].getElementsByClassName('scf-icon');
+        const statistics = bestList[i].getElementsByClassName(
+          'scf-article-item__statistics-item'
+        )
+        if (!statistics) continue
+        const icon = statistics[0].getElementsByClassName('scf-icon')
 
-        if (!icon) continue;
-        let pv = response.message[id] || Math.ceil(Math.random() * 100);
+        if (!icon) continue
+        let pv = response.message[id] || Math.ceil(Math.random() * 100)
         if (pv >= 1000) {
-          pv = (pv / 1000).toFixed(1) + 'K';
+          pv = (pv / 1000).toFixed(1) + 'K'
         }
-        icon[0].innerHTML = pv + '&nbsp;·&nbsp;';
+        icon[0].innerHTML = pv + '&nbsp;·&nbsp;'
       }
-    });
+    })
   })
 
   return (
     <Box>
       <Box id="scf-best-practice">
-        {blogs.map(blog => (
-          isMobileView? <BlogCard key={blog.node.id} blog={blog}/>: <BlogListItem key={blog.node.id} data={blog}  />
-        ))}
+        {blogs.map(blog =>
+          isMobileView ? (
+            <BlogCard key={blog.node.id} blog={blog} />
+          ) : (
+            <BlogListItem key={blog.node.id} data={blog} />
+          )
+        )}
       </Box>
 
       <Pagination
