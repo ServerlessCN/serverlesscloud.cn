@@ -61,8 +61,10 @@ function Blogs() {
         sort: { fields: frontmatter___date, order: DESC }
         limit: 6
         filter: {
+          frontmatter: {
+            categories: { nin: ["best-practice", "guides-and-tutorials"] }
+          }
           fileAbsolutePath: { regex: "/blog/" }
-          frontmatter: { categories: { nin: "best-practice" } }
         }
       ) {
         edges {
@@ -169,6 +171,12 @@ export default function() {
         }
         const blogItem = blogHash[id]
         if (!blogItem) continue
+        if (
+          blogItem.frontmatter.categories?.includes('guides-and-tutorials') ||
+          blogItem.frontmatter.categories?.includes('best-practice')
+        ) {
+          continue
+        }
 
         const buildBody = temp
           .replace('{LINK}', blogItem.fields.slug)
