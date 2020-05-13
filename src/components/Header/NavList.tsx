@@ -182,6 +182,7 @@ function Blogs(props) {
 }
 
 export default class NavList extends React.Component<Props, State> {
+  search: HTMLInputElement | null
   constructor(props) {
     super(props)
     this.state = {
@@ -274,7 +275,7 @@ export default class NavList extends React.Component<Props, State> {
                 </button>
                 <input
                   ref={r => (this.search = r)}
-                  onInput={e => {
+                  onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
                     this.setState({
                       searchContnet: e.target.value,
                     })

@@ -106,8 +106,8 @@ export default function() {
   React.useEffect(() => {
     function sortFun() {
       return function(src, tar) {
-        var v1 = Object.values(src)[0]
-        var v2 = Object.values(tar)[0]
+        var v1 = Object.values(src)[0] as number
+        var v2 = Object.values(tar)[0] as number
         if (v1 > v2) {
           return -1
         }
@@ -161,10 +161,10 @@ export default function() {
       for (var i = 0; i < hotBlogList.length && n > 0; i++) {
         const id = Object.keys(hotBlogList[i])[0]
         let pv
-        if (Object.values(hotBlogList[i])[0] < 1000) {
+        if (Object.values(hotBlogList[i] as number[])[0] < 1000) {
           pv = Object.values(hotBlogList[i])[0]
         } else {
-          pv = Object.values(hotBlogList[i])[0] / 1000
+          pv = Object.values(hotBlogList[i] as number[])[0] / 1000
           pv = pv.toFixed(1) + 'K'
         }
         const blogItem = blogHash[id]
@@ -187,7 +187,7 @@ export default function() {
     }
 
     function updateLatestBlogPv(blogPvs) {
-      const latestBlogChilds = document.getElementById('scf-box-lateat-blogs')
+      const latestBlogChilds = document.getElementById('scf-box-lateat-blogs')!
         .children
       for (var i = 0; i < latestBlogChilds.length; ++i) {
         const id = latestBlogChilds[i].children
@@ -247,7 +247,7 @@ export default function() {
         console.log(error || response.error)
         return
       }
-      const hotBlogList = []
+      const hotBlogList: any[] = []
       for (let k in response.message) {
         const item = {}
         item[k] = response.message[k]
@@ -259,25 +259,27 @@ export default function() {
       updateHomeBest(response.message)
 
       let hotBlogs = document.getElementById('scf-box-hot-blogs')
-      hotBlogs.innerHTML = buildHotBlogBody(hotBlogList, blogHash)
+      hotBlogs!.innerHTML = buildHotBlogBody(hotBlogList, blogHash)
     })
 
-    let blogs = document.getElementById('scf-box-page-blog-top').children
-    let blogTabsBtn = document.getElementById('scf-blog-tab').children
+    let blogs = document.getElementById('scf-box-page-blog-top')!.children
+    let blogTabsBtn = document.getElementById('scf-blog-tab')!.children
     const tabOnClick = function(n) {
       for (var i = 0; i < blogTabsBtn.length; ++i) {
         if (i != n) blogTabsBtn[i].classList.remove('is-active')
       }
       blogTabsBtn[n].classList.add('is-active')
       for (var i = 1; i < blogs.length; ++i) {
-        if (i != n + 1) blogs[i].style.display = 'none'
-        else blogs[i].style.display = 'block'
+        const ele = blogs[i] as HTMLElement
+        if (i != n + 1) ele.style.display = 'none'
+        else ele.style.display = 'block'
       }
     }
 
     for (var i = 0; i < blogTabsBtn.length; ++i) {
       ;(function(i) {
-        blogTabsBtn[i].onclick = function() {
+        const ele = blogTabsBtn[i] as HTMLElement
+        ele.onclick = function() {
           tabOnClick(i)
         }
       })(i)
