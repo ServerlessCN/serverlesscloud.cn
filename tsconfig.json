@@ -12,6 +12,7 @@
     "allowJs": true,
     "noImplicitAny": false,
     "noImplicitThis": false,
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
       "@src/*": ["src/*"]
