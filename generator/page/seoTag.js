@@ -7,7 +7,9 @@ const BLOG_PAGESIZE = 10
 function createCategory(graphql, createPage) {
   return graphql(`
     query {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "//blog|best-practice//" } }) {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/blog|best-practice/" } }
+      ) {
         group(field: frontmatter___tags) {
           totalCount
           tags: fieldValue
@@ -25,9 +27,7 @@ function createCategory(graphql, createPage) {
       const pages = Math.ceil(totalCount / BLOG_PAGESIZE)
       new Array(pages).fill(0).forEach((o, page) => {
         createPage({
-          path: `tags/${tags}${
-            page === 0 ? '' : '/page/' + (page + 1)
-          }`,
+          path: `tags/${tags}${page === 0 ? '' : '/page/' + (page + 1)}`,
           component: path.resolve(
             __dirname,
             '../../src/templates/BlogListWithTag.tsx'

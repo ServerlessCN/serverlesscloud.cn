@@ -2,11 +2,11 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '@src/layouts'
 import List from '@src/components/pages/blogList/List'
-import {Container} from '@src/components/atoms'
+import { Container } from '@src/components/atoms'
 import Tag from '@src/components/pages/blogList/TagList'
 import { GraphqlBlogResult } from '@src/types'
 import Helmet from '@src/components/Helmet'
-import {debounce} from '@src/utils'
+import { debounce } from '@src/utils'
 
 interface Props {
   data: {
@@ -23,8 +23,7 @@ const BlogList = ({
   pathContext: { offset, limit, tags },
   location,
 }: Props) => {
-  const [isMobileView,
-    setisMobileView] = React.useState(false)
+  const [isMobileView, setisMobileView] = React.useState(false)
 
   React.useEffect(() => {
     const onResize = debounce(() => {
@@ -41,13 +40,13 @@ const BlogList = ({
     return () => {
       window.removeEventListener('resize', onResize)
     }
-  }, []);
-  const generateDataUrl= pageNum =>{
+  }, [])
+  const generateDataUrl = pageNum => {
     let local
-    if(location.pathname.includes('/page/')){
-      local=location.pathname.split('/page/')[0]
-    }else{
-    local=location.pathname
+    if (location.pathname.includes('/page/')) {
+      local = location.pathname.split('/page/')[0]
+    } else {
+      local = location.pathname
     }
     return `${local}${pageNum === 1 ? '' : `/page/${pageNum}`}`
   }
@@ -67,11 +66,12 @@ const BlogList = ({
       <div className="scf-Blog-Category scf-page_seotag">
         <div className="scf-page-blog scf-layout-pattern">
           <div className="scf-home-block scf-blog-list">
-            <Container
-            width={[1, 1, 1, 912, 0.76, 1200]}
-            px={0}>
-              <div id="scf-box-mobile-titlebar" className="scf-box__header-title">
-                  <h3>Tags</h3>
+            <Container width={[1, 1, 1, 912, 0.76, 1200]} px={0}>
+              <div
+                id="scf-box-mobile-titlebar"
+                className="scf-box__header-title"
+              >
+                <h3>Tags</h3>
               </div>
               <div className="scf-box ">
                 <div className="scf-box__body">
@@ -81,7 +81,8 @@ const BlogList = ({
                     blogs={edges}
                     offset={offset}
                     limit={limit}
-                    totalCount={totalCount}/>
+                    totalCount={totalCount}
+                  />
                 </div>
               </div>
             </Container>
@@ -100,7 +101,7 @@ export const query = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
         frontmatter: { date: { ne: null }, tags: { in: $tags } }
-        fileAbsolutePath: { regex: "//blog|best-practice//" }
+        fileAbsolutePath: { regex: "/best-practice|blog/" }
       }
       skip: $offset
       limit: $limit

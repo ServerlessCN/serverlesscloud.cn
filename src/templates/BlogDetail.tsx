@@ -330,7 +330,7 @@ export const query = graphql`
       filter: {
         id: { ne: $blogId }
         frontmatter: { date: { ne: null }, categories: { in: $categories } }
-        fileAbsolutePath: { regex: "//blog//" }
+        fileAbsolutePath: { regex: "/blog/" }
       }
       limit: 8
     ) {

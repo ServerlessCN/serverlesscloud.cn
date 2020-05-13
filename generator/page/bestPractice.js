@@ -66,7 +66,12 @@ function createBestPracticeTask(graphql, createPage) {
     query {
       allMarkdownRemark(
         sort: { fields: frontmatter___date, order: DESC }
-        filter: { fileAbsolutePath: { regex: "//best-practice//" } }
+        filter: {
+          frontmatter: {
+            categories: { regex: "/best-practice|guides-and-tutorials/" }
+          }
+          fileAbsolutePath: { regex: "/best-practice|blog/" }
+        }
       ) {
         totalCount
         edges {
@@ -87,7 +92,9 @@ function createBestPracticeTask(graphql, createPage) {
             }
             fileAbsolutePath
             timeToRead
-            fields { slug }
+            fields {
+              slug
+            }
           }
         }
       }
@@ -99,8 +106,8 @@ function createBestPracticeTask(graphql, createPage) {
 
     const blogs = result.data.allMarkdownRemark.edges
     if (blogs) {
-      const buff = JSON.stringify(blogs);
-      fs.writeFileSync('./src/constants/bestPractice.json', buff);
+      const buff = JSON.stringify(blogs)
+      fs.writeFileSync('./src/constants/bestPractice.json', buff)
     }
     createBestPractice(blogs, createPage)
     createBestPracticeList(blogs, createPage)

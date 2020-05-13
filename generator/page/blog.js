@@ -74,7 +74,7 @@ function createBlogTask(graphql, createPage) {
     query {
       allMarkdownRemark(
         sort: { fields: frontmatter___date, order: DESC }
-        filter: { fileAbsolutePath: { regex: "//blog//" } }
+        filter: { fileAbsolutePath: { regex: "/blog/" } }
       ) {
         totalCount
         edges {
@@ -98,7 +98,9 @@ function createBlogTask(graphql, createPage) {
             }
             fileAbsolutePath
             timeToRead
-            fields { slug }
+            fields {
+              slug
+            }
           }
         }
       }
@@ -110,8 +112,8 @@ function createBlogTask(graphql, createPage) {
 
     const blogs = result.data.allMarkdownRemark.edges
     if (blogs) {
-      const buff = JSON.stringify(blogs);
-      fs.writeFileSync('./src/constants/blog.json', buff);
+      const buff = JSON.stringify(blogs)
+      fs.writeFileSync('./src/constants/blog.json', buff)
     }
     createBlog(blogs, createPage)
     createBlogList(blogs, createPage)

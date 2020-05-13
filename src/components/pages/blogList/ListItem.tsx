@@ -39,9 +39,6 @@ export default function({ data }: { data: Blog }) {
             <i className="scf-icon scf-icon-view"></i>
           </span>
           {frontmatter.authors.join(',')}· {frontmatter.date.slice(2, 10)}
-          <span className="scf-articel-item-readtime">
-            · 阅读大约需要{timeToRead}分钟
-          </span>
         </div>
         <div className="scf-article-item__title">
           <h4>{frontmatter.title}</h4>
