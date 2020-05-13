@@ -27,7 +27,7 @@ tags:
 
 这个部分在之前是若干个大模块，现在统一整理到一个模块中进行项目重构，所以这里继续复用之前的数据库：
 
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-4-2.png)
+![](https://img.serverlesscloud.cn/202058/3-4-2.png)
 
 在这个数据库中，基本上是有四个模块分别是：新闻文章、开发文档、基础教程以及图书资源。其中开发文档包括大分类，子列表以及正文等内容，这里表关联并没有使用外键，而是直接用的id进行表之间的关联。
 
@@ -37,7 +37,7 @@ tags:
 
 后端将会整体部署到一个函数上，功能整体结构：
 
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-3-3.png)
+![](https://img.serverlesscloud.cn/202058/3-3-3.png)
 
 整体功能就是云函数绑定API网关触发器，用户访问API网关指定的地址，触发云函数，然后函数在入口处进行功能拆分，请求不同的方法获得对应的数据。
 
@@ -47,7 +47,7 @@ tags:
 
 前端设计，预计在学习资源部分需要有8个页面，主要就是科技类新闻、教程、文档、图书等相关功能，通过墨刀绘制的原型图如下：
 
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-3-1.png)
+![](https://img.serverlesscloud.cn/202058/3-3-1.png)
 
 前端项目开发将会采用Vue.js，并且将其部署到对象存储中，通过腾讯云对象存储的静态网站功能对外提供服务。
 
@@ -158,7 +158,7 @@ def main_handler(event, context):
 
 函数部分完成之后，可以配置API网关部分：
 
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-3-4.png)
+![](https://img.serverlesscloud.cn/202058/3-3-4.png)
 
 在整个后端接口开发过程中，其实并没有遇到什么太大的问题，因为这个学习功能的模块基本上就是对数据库进行查询的操作，所以相对来说非常顺利。
 
@@ -166,39 +166,39 @@ def main_handler(event, context):
 
 整体预览结果：一共包括十几个页面，这里取其中8个主要的页面进行效果展示：
 
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-3-5.png)
+![](https://img.serverlesscloud.cn/202058/3-3-5.png)
 
 整个页面基本上是还原了设计稿的样子，并且和原有项目进行了部分的整合，无论是列表页面还是图书页面等，数据加载速度表现良好。
 
 通过PostMan进行基本测试：
 
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-3-9.png)
+![](https://img.serverlesscloud.cn/202058/3-3-9.png)
 
 对接口进行1000次访问测试：
 
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-3-10.png)
+![](https://img.serverlesscloud.cn/202058/3-3-10.png)
 
 可以看到，接口表现良好，并未出现失败的情况，对该测试结果进行耗时的可视化：
 
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-3-11.png)
+![](https://img.serverlesscloud.cn/202058/3-3-11.png)
 
 其中最大的时间消耗是219毫秒，最小是27毫秒，平均值是35毫秒，可以看到整体的效果还是非常不错。
 
 这样一个项目开发完成，上线之后，前端部分被放到对象存储中，后端业务被放到函数计算中，触发器使用的是API网关，在监控层面，函数计算有着比较不错的监控纬度：
 
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-3-6.png)
+![](https://img.serverlesscloud.cn/202058/3-3-6.png)
 
 同时函数并发，弹性伸缩等问题都由云厂商来解决，可以这样说，自从这个组件部署到了Serverless架构上，我所做的操作就是如果业务代码有问题，进行简单修复和简单维护。讲真，整个效果还是不错的。
 
 通过按量付费，可以看到我后端服务产生的费用：
 
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-3-7.png)
+![](https://img.serverlesscloud.cn/202058/3-3-7.png)
 
 由于云函数没办法看到单个资源的费用，所以整个函数我有几十个，一共花费的费用也远远比服务器的一个月便宜很多。
 
 当然虽然说在计算服务这里整体费用只有几元钱相对来说非常便宜，但是其还有API网关的费用和对象存储的费用，例如API网关费用：
 
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-3-12.png)
+![](https://img.serverlesscloud.cn/202058/3-3-12.png)
 
 同样，我这里的API网关也是有很多服务的，不仅仅是Anycodes这样一个服务产生的，但是整体加一起2月份只有1元钱，相对来说也是蛮低的。
 
