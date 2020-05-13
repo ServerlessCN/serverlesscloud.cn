@@ -86,7 +86,7 @@ function Blogs(props) {
     query {
       blogs: allMarkdownRemark(
         sort: { fields: frontmatter___date, order: DESC }
-        limit: 20
+        limit: 999999
         filter: { fileAbsolutePath: { regex: "/blog/" } }
       ) {
         edges {
@@ -109,7 +109,7 @@ function Blogs(props) {
       }
       bests: allMarkdownRemark(
         sort: { fields: frontmatter___date, order: DESC }
-        limit: 20
+        limit: 999999
         filter: { fileAbsolutePath: { regex: "/best-practice/" } }
       ) {
         edges {
