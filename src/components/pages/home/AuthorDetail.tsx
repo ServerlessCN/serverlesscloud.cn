@@ -14,19 +14,19 @@ const activityList : Activity[] = [
   {
     cover: "https://img.serverlesscloud.cn/20191227/1577413467740-v2-b65fcb6a94208a494005fc0" +
         "c40a99eb6_1200x500.jpg",
-    title: "荐书 | Serverless 架构：从原理、设计到项目实战1",
+    title: "荐书 | Serverless 架构：从原理、设计到项目实战",
     decription: "安利一下 Serverless 中文技术社区成员 Anycodes 的大作",
     link: "/blog/2019-11-19-anycodes-book/"
   }, {
-    cover: "https://main.qcloudimg.com/raw/8a0db1c9fd8b51c15d0b006291d52bf5.jpg",
+    cover: "https://main.qcloudimg.com/raw/3cb7b20955d78ced738e0279bb3f6f41.jpg",
     title: "2018 年社区调查：Serverless 使用率大幅增长",
-    decription: "我们曾在开发社区进行问卷调查，询问 Serverless 的使用情况。它的使用率增长连我们自己都惊讶不已，下面来看看数据。",
+    decription: "我们在开发社区进行的问卷调查，Serverless 的使用率增长连我们自己都惊讶不已！",
     link: "/blog/2018-07-19-2018-serverless-community-survey-huge-growth-usage/"
   }, {
-    cover: "https://main.qcloudimg.com/raw/3cb7b20955d78ced738e0279bb3f6f41.jpg",
-    title: "Serverless 数据解读：2018 报告",
-    decription: "Serverless Framework 使用统计数据：事件源、服务结构、运行时长等等。",
-    link: "/blog/2018-03-09-serverless-by-the-numbers-2018-data-report/"
+    cover: "https://img.serverlesscloud.cn/2020514/1589460703762-zg.jpg",
+    title: "Serverless 中文社区有奖征稿",
+    decription: "欢迎分享您的技术实践和开发经验！",
+    link: "/blog/2020-04-15-article-meetup/"
   }
 ]
 

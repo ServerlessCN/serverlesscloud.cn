@@ -3,7 +3,7 @@ title: 如何借助 Layer 实现云函数快速打包轻松部署
 description: 层的功能为依赖库和不经常修改的静态文件提供了新的存储方案，与函数的剥离使得这类文件能够多函数复用，版本化管理；随着层功能的发展，腾讯云 Serverless team 也将进一步拓展层功能的使用
 keywords: Serverless 全局变量组件,Serverless 单独部署组件,Serverless Component
 date: 2020-05-11
-thumbnail: https://img.serverlesscloud.cn/2020511/1589197411427-%E4%BA%91%E5%87%BD%E6%95%B0%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20Layer%20%E5%AE%9E%E7%8E%B0%E8%BD%BB%E6%9D%BE%E9%83%A8%E7%BD%B2%E5%89%AF%E6%9C%AC.jpg
+thumbnail: https://img.serverlesscloud.cn/2020514/1589461771804-layer.jpg
 categories:
   - guides-and-tutorials
 authors:
@@ -12,6 +12,7 @@ authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
 tags:
   - serverless
+  - layer
 ---
 
 ## 在使用云函数进行项目开发的时候，当函数数量变多后，您是否遇到函数的依赖库的管理问题？  

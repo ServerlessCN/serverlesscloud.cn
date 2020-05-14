@@ -23,7 +23,7 @@ tags:
 
 如果您错过了直播，我们也邀请你分享你了解的 Serverless 知识。
 
-我们将使用 Serverless 社区平台，给大家提供一个展示自己学习和掌握 Serverless 过程的机会，同时，也将为分享文章的同学提供 Serverless 社区专属纪念礼品包，包括腾讯云限量版 T恤 以及 Serverless 社区贴纸等。
+我们将使用 Serverless 社区平台，给大家提供一个展示自己学习和掌握 Serverless 过程的机会。同时，也将为分享文章的同学提供 Serverless 社区专属纪念礼品包，包括腾讯云限量版 T恤 以及 Serverless 社区贴纸等。
 
 ## 投稿福利
 
