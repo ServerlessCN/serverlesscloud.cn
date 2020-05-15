@@ -1,9 +1,9 @@
 ---
-title: Serverless Dashboard 设计解读和实战演练
+title: Serverless Dashboard 设计解读与实战
 description: 基于用户需求推出了可视化的运维界，应用部署后可直观地进行应用监控、告警、日志排障等操作
 keywords: Serverless 多环境配置,Serverless 管理环境,Serverless配置方案
 date: 2020-05-13
-thumbnail: https://img.serverlesscloud.cn/2020513/1589376144130-1589373237849-%E5%85%AC%E4%BC%97%E5%8F%B7%20dashboard%E5%89%AF%E6%9C%AC.jpg
+thumbnail: https://img.serverlesscloud.cn/2020515/1589548897451-serverless%20dashboard%E5%89%AF%E6%9C%AC.jpg
 categories:
   - best-practice
 authors:
