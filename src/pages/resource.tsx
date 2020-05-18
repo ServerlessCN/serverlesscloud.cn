@@ -23,12 +23,36 @@ const resource : {
                 link: "https://github.com/serverless-components/tencent-apigateway"
             }, 
             {
+                title: "@serverless/tencent-cam-role - 腾讯云 CAM 角色组件",
+                link: "https://github.com/serverless-components/tencent-cam-role"
+            }, 
+            {
+                title: "@serverless/tencent-cam-policy - 腾讯云 CAM 策略组件",
+                link: "https://github.com/serverless-components/tencent-cam-policy"
+            }, 
+            {
+                title: "@serverless/tencent-cdn - 腾讯云 CDN 组件",
+                link: "https://github.com/serverless-components/tencent-cdn"
+            }, 
+            {
                 title: "@serverless/tencent-cos - 腾讯云云对象存储组件",
                 link: "https://github.com/serverless-components/tencent-cos"
             }, 
             {
-                title: "@serverless/tencent-scf - 腾讯云函数组件",
+                title: "@serverless/tencent-postgresql - 腾讯云 PG DB Serverless 数据库组件",
+                link: "https://github.com/serverless-components/tencent-postgresql"
+            }, 
+            {
+                title: "@serverless/tencent-scf - 腾讯云云函数组件",
                 link: "https://github.com/serverless-components/tencent-scf"
+            }, 
+            {
+                title: "@serverless/tencent-ssl - 腾讯云 SSL 证书组件",
+                link: "https://github.com/serverless-tencent/tencent-ssl"
+            }, 
+            {
+                title: "@serverless/tencent-vpc - 腾讯云 VPC 私有网络组件",
+                link: "https://github.com/serverless-components/tencent-vpc"
             }, 
             {
                 title: "@serverless/tencent-express - 快速部署基于 Express.js 的后端服务到腾讯云函数的组件",
@@ -43,10 +67,6 @@ const resource : {
                 link: "https://github.com/serverless-components/tencent-website"
             }, 
             {
-                title: "@serverless/tencent-cdn - 腾讯云 CDN 组件",
-                link: "https://github.com/serverless-components/tencent-cdn"
-            }, 
-            {
                 title: "@serverless/tencent-flask - 腾讯云 Flask 框架组件",
                 link: "https://github.com/serverless-components/tencent-flask"
             }, 
@@ -57,6 +77,14 @@ const resource : {
             {
                 title: "@serverless/tencent-laravel - 腾讯云 Laravel 框架组件",
                 link: "https://github.com/serverless-components/tencent-laravel"
+            }, 
+            {
+                title: "@twn39/tencent-fastify - 快速部署基于 fastify.js 的后端服务到腾讯云函数的组件",
+                link: "https://github.com/twn39/tencent-fastify"
+            }, 
+            {
+                title: "@authing/serverless-oidc - 快速部署基于 Authing 的身份认证组件",
+                link: "https://github.com/Authing/serverless-oidc"
             }, 
             {
                 title: "@twn39/tencent-fastify - 快速部署基于 fastify.js 的后端服务到腾讯云函数的组件",

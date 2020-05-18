@@ -3,7 +3,7 @@ title: 诚心求问：做一个 Serverless SSR 需要几步？
 description: Serverless Framework 支持 Next.js SSR 框架实践
 keywords: Serverless 多环境配置,Serverless 管理环境,Serverless配置方案
 date: 2020-05-12
-thumbnail: https://img.serverlesscloud.cn/2020512/1589289922483-1589281631852-%E5%85%AC%E4%BC%97%E5%8F%B7SSR%20%E7%A4%BE%E5%8C%BA%E5%89%AF%E6%9C%AC.jpg
+thumbnail: https://img.serverlesscloud.cn/2020518/1589792300410-nextjs%E5%89%AF%E6%9C%AC.png
 categories:
   - best-practice
 authors:

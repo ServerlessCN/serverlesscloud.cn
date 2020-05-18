@@ -3,7 +3,7 @@ title: Serverless DB 设计解读与实战
 description: Serverless PostgreSQL 组件和 Serverless TCB 组件满足了用户通过云上资源使用数据库的需求
 keywords: Serverless,Serverless Framework,DB,PostgreSQL,TCB
 date: 2020-05-14
-thumbnail: https://img.serverlesscloud.cn/2020515/1589548802180-serverlesssdashboard%E5%89%AF%E6%9C%AC%20.jpg
+thumbnail: https://img.serverlesscloud.cn/2020518/1589791034615-db%E5%89%AF%E6%9C%AC.jpg
 categories:
   - best-practice
 authors:
