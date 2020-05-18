@@ -78,6 +78,7 @@ const BestPracticeDetail = ({ data: { currentBlog }, location }: Props) => {
         window.innerHeight ||
         document.documentElement.clientHeight ||
         document.body.clientHeight
+      if (!el) return false
       const top = el.getBoundingClientRect() && el.getBoundingClientRect().top
       return top <= viewPortHeight + 100
     }
