@@ -5,7 +5,7 @@ keywords: Serverless,Serverless Framework,SSR
 date: 2020-05-15
 thumbnail: https://img.serverlesscloud.cn/2020518/1589791033511-db%E5%89%AF%E6%9C%AC.jpg
 categories:
-  - guides-and-tutorials
+  - best-practice
 authors:
   - 董文枭
 authorslink:

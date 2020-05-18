@@ -1,5 +1,5 @@
 ---
-title: 大咖集结 | ServerlessDays · China 大会嘉宾阵容曝光
+title: 大咖集结 | 首届 ServerlessDays · China 嘉宾阵容曝光
 description: 大会不仅有 ServerlessDays 组织者 Ant Stanley、Serverless 白皮书作者 Johann Schleier-Smith 等全球顶级意见领袖分享 Serverless 前瞻，也有 Google、IBM、腾讯云等国内外一线厂商带来 Serverless 技术新风向，更有 BBC、滴滴、爱奇艺等企业的最佳实践指导！
 keywords: Serverless,ServerlessDays,ServerlessChina
 date: 2020-05-12
