@@ -8,7 +8,6 @@ date: 2019-12-17
 thumbnail: https://img.serverlesscloud.cn/2020115/1579078112543-1577769064015-joshua-aragon-FGXqbqbGt5o-unsplash.jpg
 categories:
   - guides-and-tutorials
-  - user-stories
 authors:
   - Aceyclee
 authorslink:

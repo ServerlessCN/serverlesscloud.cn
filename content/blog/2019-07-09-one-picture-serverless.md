@@ -5,7 +5,7 @@ keywords: Serverless,serverless framework,腾讯云serverless
 date: 2019-07-09
 thumbnail: https://img.serverlesscloud.cn/2020414/1586872053915-%E5%B0%81%E9%9D%A2%E5%9B%BE%20%282%29.png
 categories:
-  - guides-and-tutorials
+  - news
 authors:
   - 腾讯云中间件
 authorslink:

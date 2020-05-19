@@ -5,9 +5,9 @@ keywords: Serverless 优势,Serverless 意义,Serverless 应用
 date: 2019-12-09
 thumbnail: https://img.serverlesscloud.cn/20191227/1577411056121-v2-a72ab46370bfdcd6d32b65b592ab4552_1200x500.jpg
 categories:
-  - guides-and-tutorials
+  - news
 authors:
-  - jenswang
+  - engineering-culture
 authorslink:
   - https://www.zhihu.com/people/jenswang
 tags:

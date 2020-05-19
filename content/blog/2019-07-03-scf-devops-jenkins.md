@@ -1,6 +1,6 @@
 ---
-title: SCF场景下的DevOps实现--Jenkins篇
-description: "本文意图描述在SCF场景下，如何基于Jenkins搭建自己的CI/CD流程"
+title: 云函数 SCF 场景下的 DevOps 实现 —— Jenkins 篇
+description: "本文意图描述在 SCF 场景下，如何基于 Jenkins 搭建自己的 CI/CD 流程"
 keywords: Serverless,serverless cloud function,无服务器架构
 date: 2019-07-03
 thumbnail: https://img.serverlesscloud.cn/2020414/1586871710979-%E5%85%AC%E5%85%B1%E7%94%A8.png

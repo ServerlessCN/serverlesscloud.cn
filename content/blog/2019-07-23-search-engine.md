@@ -5,7 +5,6 @@ keywords: Serverless 应用服务端,Serverless 应用,Serverless Web 后端
 date: 2019-07-23
 thumbnail: https://img.serverlesscloud.cn/2020414/1586878208210-search.jpg
 categories:
-  - guides-and-tutorials
   - user-stories
 authors:
   - Anycodes

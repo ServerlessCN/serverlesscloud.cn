@@ -5,7 +5,7 @@ keywords: Serverless
 date: 2019-08-14
 thumbnail: https://img.serverlesscloud.cn/2020414/1586850670017-%E5%B0%81%E9%9D%A2%E5%9B%BE%20%283%29.png
 categories:
-  - guides-and-tutorials
+  - user-stories
 authors:
   - 刘宇
 authorslink:

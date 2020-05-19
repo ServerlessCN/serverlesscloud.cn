@@ -1,11 +1,11 @@
 ---
 title: 腾讯云函数访问 VPC 网络架构优化
-description: "文章整理自腾讯云专家工程师周维跃及腾讯云高级工程师李艳博在Kubecon 2019 上的分享,本篇文章分享云函数访问VPC网络方面的优化。"
+description: "文章整理自腾讯云专家工程师周维跃及腾讯云高级工程师李艳博在 Kubecon 2019 上的分享,本篇文章分享云函数访问 VPC 网络方面的优化。"
 keywords: Serverless,serverless framework,腾讯云serverless
 date: 2019-07-02
 thumbnail: https://img.serverlesscloud.cn/qianyi/YHl6UWa9s62sLCrvZhrtRH5BpLicw7aUOFcf8AVCXXFd1r1Gs9AgoXkqPY0icjL9koxzxcJ8RFiagsQnQdc29IKvg.jpg
 categories:
-  - guides-and-tutorials
+  - user-stories
 authors:
   - 李艳博
 authorslink:
@@ -17,7 +17,7 @@ tags:
 
 [《腾讯云函数计算冷启动优化实践》](https://mp.weixin.qq.com/s?__biz=Mzg4NzEyMzI1NQ==&mid=2247483940&idx=1&sn=33b5db4a0248b35c0bb317068ffb9239&scene=21#wechat_redirect)文章，主要讲解了云函数冷启动方面的优化实践。Serverless中的函数除了计算任务外，绝大部分还有网络访问需求，本篇文章，将详细介绍SCF网络架构优化。
 
-_注：文章整理自腾讯云专家工程师周维跃及腾讯云高级工程师李艳博在Kubecon 2019上的分享，原分享主题为《加速：无服务器平台中的冷启动优化》，本篇文章将分享云函数访问VPC网络方面的优化。_
+_注：文章整理自腾讯云专家工程师周维跃及腾讯云高级工程师李艳博在 Kubecon 2019 上的分享，原分享主题为《加速：无服务器平台中的冷启动优化》，本篇文章将分享云函数访问 VPC 网络方面的优化。_
 
 ![](https://img.serverlesscloud.cn/qianyi/YHl6UWa9s62sLCrvZhrtRH5BpLicw7aUOfWRhclAKugeQ5WsviadTTYerqrHlLwcEicwb4PycSvj5eVj29G6HNDYA.jpg)
 

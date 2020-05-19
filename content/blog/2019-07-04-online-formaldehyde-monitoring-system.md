@@ -1,11 +1,11 @@
 ---
-title: 基于“树莓派+腾讯云”的在线甲醛监测系统
+title: 基于「树莓派+腾讯云」的在线甲醛监测系统
 description: "本文详述腾讯云多产品组合设计和体验报告 之 “树莓派+腾讯云=在线甲醛监测系统”。涉及腾讯云产品：API网关、无服务器云函数、云数据库、腾讯云图。"
 keywords: Serverless,serverless framework,腾讯云serverless
 date: 2019-07-04
 thumbnail: https://img.serverlesscloud.cn/qianyi/b96CibCt70iaaJcib7FH02wTKvoHALAMw4f553WgrmrmItKmjkMfO2fI0YJcpdO2WibwHXYAOGZyMaQruxD3skk7icQ.jpg
 categories:
-  - guides-and-tutorials
+  - user-stories
 authors:
   - ecky
 authorslink:

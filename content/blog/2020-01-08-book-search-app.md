@@ -6,7 +6,6 @@ date: 2020-01-08
 thumbnail: "https://img.serverlesscloud.cn/2020218/1582040387776-timg.jpeg"
 categories:
   - user-stories
-  - guides-and-tutorials
 authors:
   - 刘宇
 authorslink:
