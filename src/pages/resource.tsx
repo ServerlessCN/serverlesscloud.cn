@@ -55,8 +55,36 @@ const resource : {
                 link: "https://github.com/serverless-components/tencent-vpc"
             }, 
             {
+                title: "@serverless/tencent-bottle - 腾讯云 Python Bottle RESTful API 组件",
+                link: "https://github.com/serverless-tencent/tencent-bottle"
+            },    
+            {
+                title: "@serverless/tencent-django - 腾讯云 Python Django RESTful API 组件",
+                link: "https://github.com/serverless-tencent/tencent-django"
+            }, 
+            {
+                title: "@serverless/tencent-egg - 快速部署基于 Egg.js 的后端服务到腾讯云函数的组件",
+                link: "https://github.com/serverless-components/tencent-egg"
+            }, 
+            {
                 title: "@serverless/tencent-express - 快速部署基于 Express.js 的后端服务到腾讯云函数的组件",
                 link: "https://github.com/serverless-components/tencent-express"
+            }, 
+            {
+                title: "@serverless/tencent-flask - 腾讯云 Python Flask RESTful API 组件",
+                link: "https://github.com/serverless-components/tencent-flask"
+            }, 
+            {
+                title: "@serverless/serverless-global - 管理全局变量的组件",
+                link: "https://github.com/serverless-tencent/serverless-global"
+            }, 
+            {
+                title: "@serverless/tencent-koa - 快速部署基于 Koa.js 的后端服务到腾讯云函数的组件",
+                link: "https://github.com/serverless-components/tencent-koa"
+            }, 
+            {
+                title: "@serverless/tencent-laravel - 腾讯云 PHP Laravel RESTful API 组件",
+                link: "https://github.com/serverless-components/tencent-laravel"
             }, 
             {
                 title: "@serverless/tencent-nextjs - 快速部署基于 Next.js 框架到腾讯云函数的组件",
@@ -67,24 +95,8 @@ const resource : {
                 link: "https://github.com/serverless-components/tencent-nuxtjs"
             }, 
             {
-                title: "@serverless/tencent-koa - 快速部署基于 Koa.js 的后端服务到腾讯云函数的组件",
-                link: "https://github.com/serverless-components/tencent-koa"
-            }, 
-            {
                 title: "@serverless/tencent-website - 快速部署静态网站到腾讯云的组件",
                 link: "https://github.com/serverless-components/tencent-website"
-            }, 
-            {
-                title: "@serverless/tencent-flask - 腾讯云 Flask 框架组件",
-                link: "https://github.com/serverless-components/tencent-flask"
-            }, 
-            {
-                title: "@serverless/tencent-egg - 腾讯云 Egg.js 框架组件",
-                link: "https://github.com/serverless-components/tencent-egg"
-            }, 
-            {
-                title: "@serverless/tencent-laravel - 腾讯云 Laravel 框架组件",
-                link: "https://github.com/serverless-components/tencent-laravel"
             }, 
             {
                 title: "@twn39/tencent-fastify - 快速部署基于 fastify.js 的后端服务到腾讯云函数的组件",

@@ -123,7 +123,7 @@ export default function () {
                           <Image src={helloworld} alt=""/>
                         </Box>
                         <Box className="scf-quick-start__opeate">
-                          <ExternalLink to={'https://serverless.com/cn/framework/docs/getting-started/'}>
+                          <ExternalLink to={'https://serverless.cloud.tencent.com/deploy/express'}>
                             <button className="scf-btn scf-btn--primary">快速开始</button>
                           </ExternalLink>
                           <ExternalLink
