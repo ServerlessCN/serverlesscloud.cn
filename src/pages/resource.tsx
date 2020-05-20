@@ -59,6 +59,14 @@ const resource : {
                 link: "https://github.com/serverless-components/tencent-express"
             }, 
             {
+                title: "@serverless/tencent-nextjs - 快速部署基于 Next.js 框架到腾讯云函数的组件",
+                link: "https://github.com/serverless-components/tencent-nextjs"
+            }, 
+            {
+                title: "@serverless/tencent-nuxtjs - 快速部署基于 Nuxt.js 框架到腾讯云函数的组件",
+                link: "https://github.com/serverless-components/tencent-nuxtjs"
+            }, 
+            {
                 title: "@serverless/tencent-koa - 快速部署基于 Koa.js 的后端服务到腾讯云函数的组件",
                 link: "https://github.com/serverless-components/tencent-koa"
             }, 
