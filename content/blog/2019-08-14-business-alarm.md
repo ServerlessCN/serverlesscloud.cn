@@ -7,7 +7,7 @@ thumbnail: https://img.serverlesscloud.cn/2020414/1586850670017-%E5%B0%81%E9%9D%
 categories:
   - user-stories
 authors:
-  - 刘宇
+  - Anycodes
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:

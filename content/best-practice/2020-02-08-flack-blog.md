@@ -7,7 +7,7 @@ thumbnail: https://img.serverlesscloud.cn/2020512/1589274779819-flask.jpg
 categories:
   - best-practice
 authors:
-  - 刘宇
+  - Anycodes
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
@@ -54,7 +54,7 @@ tags:
 
 由于是做一个简单的博客，所以数据库相对设计比较简单，只有文章表、分类表以及标签表、评论表等，整体的 ER 图如下所示：
 
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-5-6.png)
+![](https://img.serverlesscloud.cn/202058/3-5-6.png)
 
 ### 项目开发
 
@@ -138,7 +138,7 @@ index执行结果：
 
 Flask部署到Serverless架构可以用@serverless/tencent-flask，但是这里为了更加深入了解传统框架如何部署到Serverless架构，所以此处自行'造轮子'实现，先来看一张图：
 
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-5-7.png)
+![](https://img.serverlesscloud.cn/202058/3-5-7.png)
 
 在通常情况下，我们使用Flask等框架实际上要通过web_server，进入到下一个环节，而我们云函数更多是一个函数，本不需要启动web server，所以我们就可以直接调用wsgi_app这个方法，其中这里的environ就是我们刚才的通过对event/context等进行处理后的对象，start_response可以认为是我们的一种特殊的数据结构，例如我们的response结构形态等。所以，如果我们自己想要实现这个过程，不使用腾讯云flask-component，可以这样做：
 
@@ -738,22 +738,22 @@ Blog_Web_addComment:
 ### 前台功能
 
 * 列表页
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-5-1.png)
+![](https://img.serverlesscloud.cn/202058/3-5-1.png)
 
 * 内容页
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-5-2.png)
+![](https://img.serverlesscloud.cn/202058/3-5-2.png)
 
 
 ### 后台功能
 
 * 登录功能
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-5-3.png)
+![](https://img.serverlesscloud.cn/202058/3-5-3.png)
 
 * 列表页
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-5-4.png)
+![](https://img.serverlesscloud.cn/202058/3-5-4.png)
 
 * 表单页
-![](https://others-1256773370.cos.ap-chengdu.myqcloud.com/article/material/3-5-5.png)
+![](https://img.serverlesscloud.cn/202058/3-5-5.png)
 
 ## 项目部署
 

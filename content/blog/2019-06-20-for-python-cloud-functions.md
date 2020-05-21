@@ -7,7 +7,7 @@ thumbnail: https://img.serverlesscloud.cn/2020414/1586871710979-%E5%85%AC%E5%85%
 categories:
   - guides-and-tutorials
 authors:
-  - 刘宇
+  - Anycodes
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:

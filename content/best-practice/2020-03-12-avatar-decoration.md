@@ -7,7 +7,7 @@ thumbnail: https://img.serverlesscloud.cn/2020511/1589207418152-ZalNtxgQAC_small
 categories:
   - best-practice
 authors:
-  - 刘宇
+  - Anycodes
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 ---

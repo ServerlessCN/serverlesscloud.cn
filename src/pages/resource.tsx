@@ -19,6 +19,9 @@ const resource : {
     {
         list: [
             {
+                title: "一、基础组件",
+            }, 
+            {
                 title: "@serverless/tencent-apigateway - 腾讯云 API 网关组件",
                 link: "https://github.com/serverless-components/tencent-apigateway"
             }, 
@@ -55,6 +58,13 @@ const resource : {
                 link: "https://github.com/serverless-components/tencent-vpc"
             }, 
             {
+                title: "二、高阶组件",
+            }, 
+            {
+                title: "@serverless/serverless-global - 管理全局变量的组件",
+                link: "https://github.com/serverless-tencent/serverless-global"
+            }, 
+            {
                 title: "@serverless/tencent-bottle - 腾讯云 Python Bottle RESTful API 组件",
                 link: "https://github.com/serverless-tencent/tencent-bottle"
             },    
@@ -75,10 +85,6 @@ const resource : {
                 link: "https://github.com/serverless-components/tencent-flask"
             }, 
             {
-                title: "@serverless/serverless-global - 管理全局变量的组件",
-                link: "https://github.com/serverless-tencent/serverless-global"
-            }, 
-            {
                 title: "@serverless/tencent-koa - 快速部署基于 Koa.js 的后端服务到腾讯云函数的组件",
                 link: "https://github.com/serverless-components/tencent-koa"
             }, 
@@ -95,12 +101,23 @@ const resource : {
                 link: "https://github.com/serverless-components/tencent-nuxtjs"
             }, 
             {
+                title: "@serverless/tencent-pyramid - 腾讯云 Python Pyramid RESTful API 组件",
+                link: "https://github.com/serverless-tencent/tencent-pyramid"
+            }, 
+            {
+                title: "@serverless/tencent-thinkphp - 腾讯云 ThinkPHP RESTful API 组件",
+                link: "https://github.com/serverless-components/tencent-thinkphp"
+            }, 
+            {
+                title: "@serverless/tencent-tornado - 腾讯云 Python Tornado RESTful API 组件",
+                link: "https://github.com/serverless-tencent/tencent-tornado"
+            }, 
+            {
                 title: "@serverless/tencent-website - 快速部署静态网站到腾讯云的组件",
                 link: "https://github.com/serverless-components/tencent-website"
             }, 
             {
-                title: "@twn39/tencent-fastify - 快速部署基于 fastify.js 的后端服务到腾讯云函数的组件",
-                link: "https://github.com/twn39/tencent-fastify"
+                title: "三、社区贡献组件",
             }, 
             {
                 title: "@authing/serverless-oidc - 快速部署基于 Authing 的身份认证组件",

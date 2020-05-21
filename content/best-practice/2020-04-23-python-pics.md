@@ -7,7 +7,7 @@ thumbnail: https://img.serverlesscloud.cn/2020512/1589276332053-Python-Programmi
 categories:
   - best-practice
 authors:
-  - 刘宇
+  - Anycodes
 authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
 tags:
