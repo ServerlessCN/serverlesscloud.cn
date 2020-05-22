@@ -29,44 +29,52 @@ const BoxWithTextAlign = styled(Box)<TextAlignProps>`
   ${textAlign}
 `
 
-const navList: { title: string; link: string; isInternal?: boolean }[] = [
+const navList: { title: string; link: string; isInternal?: boolean, event?: () => void }[] = [
   {
     title: '最佳实践',
     link: '/best-practice',
     isInternal: true,
+    event: () => MtaH5.clickStat('bestpractice'),
   },
   {
     title: '组件',
     link: 'https://serverless.com/cn/components/',
+    event: () => MtaH5.clickStat('component'),
   },
   {
     title: '文档',
     link: 'https://serverless.com/cn/framework/docs/',
+    event: () => MtaH5.clickStat('doc'),
   },
   {
     title: '博客',
     link: '/blog',
     isInternal: true,
+    event: () => MtaH5.clickStat('blog'),
   },
   {
     title: '资源',
     link: '/resource',
     isInternal: true,
+    event: () => MtaH5.clickStat('resource'),
   },
   {
     title: '活动',
     link: '/meetup',
     isInternal: true,
+    event: () => MtaH5.clickStat('meetup'),
   },
   {
     title: '课程',
     link: 'https://cloud.tencent.com/edu/paths/series/Serverless',
     isInternal: false,
+    event: () => MtaH5.clickStat('course'),
   },
   {
     title: '关于',
     link: '/about',
     isInternal: true,
+    event: () => MtaH5.clickStat('about'),
   },
 ]
 
@@ -236,7 +244,7 @@ export default class NavList extends React.Component<Props, State> {
             mb={0}
             style={{ position: 'relative', marginRight: 35 }}
           >
-            {navList.map(({ title, link, isInternal }, index) => {
+            {navList.map(({ title, link, isInternal , event}, index) => {
               const color = (window as any).location.pathname.includes(link)
                 ? '#fff'
                 : theme.colors.gray_text
@@ -256,6 +264,7 @@ export default class NavList extends React.Component<Props, State> {
                     <Box
                       className="scf-header-nav_item"
                       style={{ fontSize: 15, color: color }}
+                      onClick={() => event && event()}
                     >
                       {title}
                     </Box>

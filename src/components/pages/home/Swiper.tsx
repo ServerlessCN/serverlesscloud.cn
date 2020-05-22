@@ -124,7 +124,7 @@ export default function () {
                         </Box>
                         <Box className="scf-quick-start__opeate">
                           <ExternalLink to={'https://serverless.cloud.tencent.com/deploy/express'}>
-                            <button className="scf-btn scf-btn--primary">快速开始</button>
+                            <button className="scf-btn scf-btn--primary" onClick={() => MtaH5.clickStat("start")}>快速开始</button>
                           </ExternalLink>
                           <ExternalLink
                             to={'https://github.com/serverless/serverless/blob/master/README_CN.md'}>
