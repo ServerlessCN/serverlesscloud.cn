@@ -4,8 +4,7 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 import { Blog, GraphqlBlogResult } from '@src/types'
 import { formateDate } from '@src/utils'
 import { debounce } from '@src/utils'
-
-import './Meetups.css'
+import './Meetups.less'
 
 type LatestBlog = Blog
 
@@ -18,24 +17,14 @@ function BlogCard({ history, blog }: { blog: Blog; history: boolean }) {
     <Box className="scf-meetup-item" key={blog.node.id}>
       <Link to={blog.node.fields.slug}>
         <div className="scf-meetup">
-          <div
-            className={
-              !history ? 'scf-meetup_future scf-meetup_date' : 'scf-meetup_date'
-            }
-          >
+          <div className={!history ? 'scf-meetup_future scf-meetup_date' : 'scf-meetup_date'}>
             <p>{formateDate(blog.node.frontmatter.date, true, '.')}</p>
           </div>
           <div className="scf-meetup-content">
-            <h5 title={blog.node.frontmatter.title}>
-              {blog.node.frontmatter.title}
-            </h5>
-            <p title={blog.node.frontmatter.description}>
-              {blog.node.frontmatter.description}
-            </p>
+            <h5 title={blog.node.frontmatter.title}>{blog.node.frontmatter.title}</h5>
+            <p title={blog.node.frontmatter.description}>{blog.node.frontmatter.description}</p>
             <div className="meetup-content_location">
-              <i className="scf-icon scf-icon-map">
-                {blog.node.frontmatter.location}
-              </i>
+              <i className="scf-icon scf-icon-map">{blog.node.frontmatter.location}</i>
             </div>
           </div>
         </div>
@@ -110,23 +99,13 @@ function Meetups(Props) {
   return (
     <StaticQuery
       query={query}
-      render={({
-        meetups,
-        historyMeetups,
-      }: {
-        meetups: GraphqlBlogResult
-        historyMeetups: GraphqlBlogResult
-      }) => {
+      render={({ meetups, historyMeetups }: { meetups: GraphqlBlogResult; historyMeetups: GraphqlBlogResult }) => {
         return (
           <Box className="scf-meetup__body">
             <Box className="timeline">
               {Props.history
-                ? historyMeetups.edges.map(blog => (
-                    <BlogCard key={blog.node.id} blog={blog} {...Props} />
-                  ))
-                : meetups.edges.map(blog => (
-                    <BlogCard key={blog.node.id} blog={blog} history={false} />
-                  ))}
+                ? historyMeetups.edges.map(blog => <BlogCard key={blog.node.id} blog={blog} {...Props} />)
+                : meetups.edges.map(blog => <BlogCard key={blog.node.id} blog={blog} history={false} />)}
             </Box>
           </Box>
         )
@@ -168,10 +147,7 @@ export default function(Props) {
           {!isShowAll ? (
             <Box className="scf-detail__show-more">
               <Box className="scf-detail__mask"></Box>
-              <button
-                className="scf-btn scf-btn--line scf-meetup-btn"
-                onClick={onToggleShow}
-              >
+              <button className="scf-btn scf-btn--line scf-meetup-btn" onClick={onToggleShow}>
                 查看更多活动
               </button>
             </Box>

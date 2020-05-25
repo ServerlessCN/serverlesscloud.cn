@@ -28,18 +28,13 @@ function BlogCard({ blog }: { blog: Blog }) {
             <span className="scf-blog-item-pv-icon">
               <i className="scf-icon scf-icon-view"></i>
             </span>
-            {blog.node.frontmatter.authors}·{' '}
-            {blog.node.frontmatter.date.slice(2, 10)}
-            <span className="scf-article-item__statistics__timeToRead">
-              · 阅读大约需要{blog.node.timeToRead}分钟
-            </span>
+            {blog.node.frontmatter.authors}· {blog.node.frontmatter.date.slice(2, 10)}
+            <span className="scf-article-item__statistics__timeToRead">· 阅读大约需要{blog.node.timeToRead}分钟</span>
           </Box>
           <Box className="scf-article-item__title">
             <h4>{blog.node.frontmatter.title}</h4>
           </Box>
-          <Box className="scf-article-item__intro">
-            {blog.node.frontmatter.description}
-          </Box>
+          <Box className="scf-article-item__intro">{blog.node.frontmatter.description}</Box>
         </Box>
       </Link>
     </Box>
@@ -61,9 +56,7 @@ function Blogs() {
         sort: { fields: frontmatter___date, order: DESC }
         limit: 6
         filter: {
-          frontmatter: {
-            categories: { nin: ["best-practice", "guides-and-tutorials"] }
-          }
+          frontmatter: { categories: { nin: ["best-practice", "guides-and-tutorials"] } }
           fileAbsolutePath: { regex: "/blog/" }
         }
       ) {
@@ -195,22 +188,16 @@ export default function() {
     }
 
     function updateLatestBlogPv(blogPvs) {
-      const latestBlogChilds = document.getElementById('scf-box-lateat-blogs')!
-        .children
+      const latestBlogChilds = document.getElementById('scf-box-lateat-blogs')!.children
       for (var i = 0; i < latestBlogChilds.length; ++i) {
-        const id = latestBlogChilds[i].children
-          ? latestBlogChilds[i].children[0].getAttribute('data-id')
-          : null
+        const id = latestBlogChilds[i].children ? latestBlogChilds[i].children[0].getAttribute('data-id') : null
         if (!id) continue
         let pv = blogPvs[id]
         if (!pv) {
           pv = Math.ceil(Math.random() * 100)
         }
 
-        if (
-          !latestBlogChilds[i].children[0].children[1] ||
-          !latestBlogChilds[i].children[0].children[1].children[0]
-        )
+        if (!latestBlogChilds[i].children[0].children[1] || !latestBlogChilds[i].children[0].children[1].children[0])
           continue
 
         const titleDom = latestBlogChilds[i].children[0].children[1].children[0]

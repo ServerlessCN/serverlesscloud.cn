@@ -7,7 +7,9 @@ import { Container } from '@src/components/atoms'
 import Category from '@src/components/pages/blogList/CategoryList'
 import { GraphqlBlogResult } from '@src/types'
 import Helmet from '@src/components/Helmet'
-import './BlogList.css'
+import './BlogList.less'
+import RightAd from '@src/components/RightAd/RightAd'
+import HotArticle from '@src/components/HotArticle/HotArticle'
 
 interface Props {
   data: {
@@ -58,20 +60,15 @@ const BlogList = ({
       <div className="scf-content scf-blogList-content">
         <div className="scf-page-blog scf-layout-pattern">
           <div className="scf-home-block scf-blog-list">
-            <Container width={[1, 1, 1, 912, 0.76, 1200]} px={0}>
-              <div
-                id="scf-box-mobile-titlebar"
-                className="scf-box__header-title"
-              >
+            <Container width={[1, 1, 1, 912, 0.76, 1200]} px={0} className="list-con">
+              <div id="scf-box-mobile-titlebar" className="scf-box__header-title">
                 <h3>博客</h3>
               </div>
-              <div className="scf-box ">
+              <div className="scf-box">
                 <div className="scf-box__body">
                   <List
                     isMobileView={isMobileView}
-                    generateDataUrl={pageNum =>
-                      `/blog${pageNum === 1 ? '' : `/page/${pageNum}`}`
-                    }
+                    generateDataUrl={pageNum => `/blog${pageNum === 1 ? '' : `/page/${pageNum}`}`}
                     blogs={edges}
                     offset={offset}
                     limit={limit}
@@ -79,10 +76,12 @@ const BlogList = ({
                   />
                 </div>
               </div>
-              {/* <div className="scf-article-list-opeate">
-                <button className="scf-btn scf-btn--line">查看更多</button>
+              <div className="list-right">
+                <RightAd />
+                <div className="mobile-hide">
+                  <HotArticle type="blog" />
+                </div>
               </div>
-              */}
             </Container>
           </div>
         </div>
@@ -96,10 +95,7 @@ export const query = graphql`
   query Blogs($offset: Int!, $limit: Int!) {
     blogs: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        frontmatter: { categories: { nin: "guides-and-tutorials" } }
-        fileAbsolutePath: { regex: "/blog/" }
-      }
+      filter: { frontmatter: { categories: { nin: "guides-and-tutorials" } }, fileAbsolutePath: { regex: "/blog/" } }
       skip: $offset
       limit: $limit
     ) {

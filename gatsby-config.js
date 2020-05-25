@@ -1,12 +1,9 @@
 const path = require('path')
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const {
-  NODE_ENV,
-  CONTEXT: NETLIFY_ENV = NODE_ENV
-} = process.env
+const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env
 
 module.exports = {
   siteMetadata: {
@@ -16,6 +13,7 @@ module.exports = {
     siteUrl: `https://serverlesscloud.cn`,
   },
   plugins: [
+    `gatsby-plugin-less`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -124,20 +122,20 @@ module.exports = {
           production: {
             policy: [],
             sitemap: null,
-            host: null
+            host: null,
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
-            host: null
+            host: null,
           },
           'deploy-preview': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
-            host: null
-          }
-        }
-      }
+            host: null,
+          },
+        },
+      },
     },
   ],
 }

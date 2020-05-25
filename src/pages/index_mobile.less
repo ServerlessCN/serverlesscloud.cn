@@ -339,6 +339,7 @@
     position: relative;
     padding-bottom: 20px;
     display: flex;
+    flex-direction: column;
     border-bottom: 1px solid #eaeaea;
     /*padding: 0 20px;*/
     margin-bottom: 20px;
@@ -462,6 +463,40 @@
     font-weight: 600;
   }
 
- 
-  
+  .scf-practice-list, .scf-blog-list, .scf-detail {
+    .list-con {
+      display: block;
+    }
+    .scf-seotag__item {
+      padding: 0 10px;
+    }
+    .scf-article-item__img .scf-article-item__img-inner {
+      width: auto;
+    }
+    .list-ad {
+      padding: 0 0 20px 0;
+    }
+    .ad-title {
+      padding: 20px 20px 0;
+      font-size: 16px;
+    }
+    .ad-text {
+      padding: 10px 20px 0;
+      font-size: 14px;
+    }
+  }
+
+  .scf-practice-list .list-right {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .scf-blog-list .list-right {
+    margin-left: 0;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+
 }
