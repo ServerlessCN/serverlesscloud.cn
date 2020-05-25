@@ -11,8 +11,7 @@ authors:
 authorslink: 
   - https://github.com/jiangliu5267
 tags:
-  - serverless
-  - 静态网站
+  - Wintersmith
   - ThumbsUp
 ---
 

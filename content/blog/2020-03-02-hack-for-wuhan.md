@@ -13,7 +13,7 @@ authorslink:
 location: 
   - 线上竞赛 | 开源社 & Datewhale & WUHAN2020 & Serverless 社区
 tags:
-  - serverless
+  - Serverless
   - 活动  
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Serverless 动态博客开发趟“坑”记
+title: Serverless 动态博客开发趟「坑」记
 description: 本文为 Serverless 社区成员撰稿。作者云洋，从事信息管理工作，多年电子政务信息系统建设管理经验，对 Serverless 技术和架构有浓厚兴趣。
 keywords: Serverless 动态博客开发,Serverless 动态博客,Serverless 开发
 date: 2020-03-12
@@ -11,7 +11,7 @@ authors:
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
-  - serverless
+  - Serverless
   - 动态博客
 ---
 

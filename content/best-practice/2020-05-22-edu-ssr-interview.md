@@ -11,8 +11,8 @@ authors:
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
-  - serverless framework
-  - SSR
+  - Serverless Framework
+  - Serverless SSR
 ---
 
 ![](https://img.serverlesscloud.cn/2020522/1590142488439-%E8%85%BE%E8%AE%AF%E5%9C%A8%E7%BA%BF%E6%95%99%E8%82%B201.jpg)

@@ -11,15 +11,13 @@ authors:
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
-  - serverless
-  - websocket
+  - Serverless
+  - Websocket
 ---
-
-## 前言
 
 传统业务实现 Websocket 并不难，然而函数计算基本上都是事件驱动，不支持长链接操作。如果将函数计算与 API 网关结合，是否可以有 Websocket 的实现方案呢？
 
-## API网关触发器实现Websocket
+## API 网关触发器实现 Websocket
 
 WebSocket 协议是基于 TCP 的一种新的网络协议。它实现了浏览器与服务器全双工（full-duplex）通信，即允许服务器主动发送信息给客户端。WebSocket 在服务端有数据推送需求时，可以主动发送数据至客户端。而原有 HTTP 协议的服务端对于需推送的数据，仅能通过轮询或 long poll 的方式来让客户端获得。
 
@@ -276,7 +274,7 @@ ChatClean:
 
 ![](https://img.serverlesscloud.cn/202058/3-8-4.png)
 
-这里理论上设计的不是很合理，按照道理是可以通过`${restApi.url[0].internalDomain}`自动获得到url的，但是我并没有成功获得到这个url，所以只能先部署API网关，获得到这个地址之后，再重新部署。
+这里理论上设计的不是很合理，按照道理是可以通过 `${restApi.url[0].internalDomain}` 自动获得到url的，但是我并没有成功获得到这个url，所以只能先部署API网关，获得到这个地址之后，再重新部署。
 
 部署完成之后，我们可以编写HTML代码，实现可视化的Websocket Client，其核心的JavaScript代码为：
 

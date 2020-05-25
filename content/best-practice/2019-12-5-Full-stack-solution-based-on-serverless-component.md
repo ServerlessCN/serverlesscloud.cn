@@ -11,9 +11,8 @@ authors:
 authorslink:
   - https://github.com/yugasun
 tags:
-  - serverless
-  - Component
-  - 全栈
+  - Serverless
+  - 全栈应用
 ---
 
 # 什么是 Serverless Component

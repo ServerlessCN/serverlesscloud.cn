@@ -11,8 +11,8 @@ authors:
 authorslink:
   - https://serverlesscloud.cn
 tags:
-  - serverless
-  - 全栈解决方案
+  - Serverless
+  - 全栈应用
 ---
 
 4 月 21 日 14:00，腾讯云召开了 Serverless Framework 线上发布会，会议邀请到了 serverless.com CEO Austen Collins 、腾讯云中间件总经理 & 首席架构师 Yunong Xiao 等重磅嘉宾进行相关分享和探讨，本次发布会在腾讯云大学、哔哩哔哩、知乎平台同步直播，近千人观看了本次发布会。

@@ -11,9 +11,8 @@ authors:
 authorslink:
   - https://yugasun.com
 tags:
-  - serverless
+  - Wintersmith
   - Component
-  - 实践案例
 ---
 
 ## 前言

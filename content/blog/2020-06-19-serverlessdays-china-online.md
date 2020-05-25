@@ -14,7 +14,7 @@ authorslink:
 location: 
   - 线上直播 | ServerlessDays & 腾讯云 & Serverless 社区
 tags:
-  - serverless
+  - ServerlessDays
   - 活动  
 ---
 

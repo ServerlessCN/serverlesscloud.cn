@@ -11,8 +11,8 @@ authors:
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
-  - serverless
-  - 活动  
+  - Serverless
+  - Authing 
 ---
 
 Serverless 正在改变未来软件开发的模式和流程，对于大多数应用而言，借助 Serverless 服务，开发者可以将绝大多数精力投入在业务逻辑的开发整合上，大大缩短开发周期，降低运维成本。本文将探讨 Serverless 生态中缺少的工具以及潜在的创业机会。

@@ -13,7 +13,7 @@ authorslink:
 location: 
   - 线上直播 | 腾讯云大学 & 前端早读课 & Serverless 社区
 tags:
-  - serverless
+  - Serverless
   - 活动  
 ---
 

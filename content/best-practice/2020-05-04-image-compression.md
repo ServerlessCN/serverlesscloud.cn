@@ -11,7 +11,7 @@ authors:
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
-  - serverless
+  - Serverless
   - 图片压缩
 ---
 

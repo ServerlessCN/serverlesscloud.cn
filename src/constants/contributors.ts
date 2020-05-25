@@ -249,6 +249,12 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/jenswang',
   },
   {
+    name: '王天云',
+    cn_name: 'Taryn',
+    link: 'https://github.com/wangtianyun816',
+    avatar: 'https://avatars.githubusercontent.com/wangtianyun816',
+  },
+  {
     name: '王秀龙',
     cn_name: 'XiuLongWang',
     link: 'https://github.com/hzjsj',

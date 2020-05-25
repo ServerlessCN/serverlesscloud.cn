@@ -5,15 +5,14 @@ keywords: Serverless 图像分类,Serverless 识别 API,Serverless Python
 date: 2020-02-29
 thumbnail: https://img.serverlesscloud.cn/202034/1583317036981-video3.png
 categories:
-  - guides-and-tutorials
   - user-stories
 authors:
   - Anycodes
 authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
 tags:
-  - serverless
-  - serverless AI  
+  - Serverless
+  - Python 
 ---
 
 「图像分类」是人工智能领域的一个热门话题，我们在实际生活中甚至业务的生产环境里，也经常遇到图像分类相似的需求，如何能快速搭建一个图像分类或者内容识别的 API 呢？

@@ -11,8 +11,8 @@ authors:
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
-  - serverless
-  - SSR
+  - Serverless
+  - Serverless SSR
 ---
 
 很久之前，看到过一个段子：“把大象塞进冰箱需要几步？” 回答是：“三步，第一步打开冰箱，第二步把大象塞进去，第三步关上冰箱”。这是一个无厘头式的幽默，用极简平淡的回答，来解释看似夸张的问题。

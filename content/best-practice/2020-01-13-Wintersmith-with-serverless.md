@@ -11,8 +11,7 @@ authors:
 authorslink:
   - https://canmeng.net
 tags:
-  - serverless
-  - 个人博客
+  - Serverless
   - Wintersmith
 ---
 首先我们来介绍下，Wintersmith 是一个简单而灵活的静态站点生成器。采用 markdown 构建，这个是我们的基础条件。

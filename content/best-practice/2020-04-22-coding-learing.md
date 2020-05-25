@@ -11,11 +11,9 @@ authors:
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
-  - serverless
+  - Serverless
   - 程序员
 ---
-
-## 前言
 
 我在很久之前，做过一个在线编程的软件，目前用户量大概有几十万，通过这个APP不仅仅可以进行代码的编写、运行还可以进行编程的学习。自己一直对 Serverless 架构情有独钟，恰好赶到我的这个 APP 学习板块被很多人吐槽难用，所以索性就对这个学习板块进行重构，并且打算在重构的时候，直接将这个学习板块搬上Serverless架构。
 

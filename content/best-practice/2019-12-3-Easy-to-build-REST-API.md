@@ -11,9 +11,8 @@ authors:
 authorslink:
   - https://github.com/jiangliu5267
 tags:
-  - serverless
-  - restful api
-  - faas
+  - Serverless
+  - Restful
 ---
 
 当一个应用需要对第三方提供服务接口时，REST API 无疑是目前最主流的选择。不过，如果自建 REST API，开发者需要购买虚拟机、配置环境等等，等一切都搞定，可能已经又是一个深夜。

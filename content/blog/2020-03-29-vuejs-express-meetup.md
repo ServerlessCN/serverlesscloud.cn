@@ -13,7 +13,7 @@ authorslink:
 location: 
   - 线上直播 | Vue Beijing 社区 & Serverless 社区
 tags:
-  - serverless
+  - Serverless
   - 活动  
 ---
 

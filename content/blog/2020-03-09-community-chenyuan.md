@@ -11,7 +11,8 @@ authors:
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
-  - serverless 
+  - Serverless
+  - Python
 ---
 
 
