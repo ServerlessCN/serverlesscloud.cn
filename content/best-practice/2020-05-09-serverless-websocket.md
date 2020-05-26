@@ -19,42 +19,44 @@ tags:
 
 ## API 网关触发器实现 Websocket
 
-WebSocket 协议是基于 TCP 的一种新的网络协议。它实现了浏览器与服务器全双工（full-duplex）通信，即允许服务器主动发送信息给客户端。WebSocket 在服务端有数据推送需求时，可以主动发送数据至客户端。而原有 HTTP 协议的服务端对于需推送的数据，仅能通过轮询或 long poll 的方式来让客户端获得。
+WebSocket 协议是基于 TCP 的一种新的网络协议。它实现了浏览器与服务器全双工 (full-duplex) 通信，即允许服务器主动发送信息给客户端。WebSocket 在服务端有数据推送需求时，可以主动发送数据至客户端。而原有 HTTP 协议的服务端对于需推送的数据，仅能通过轮询或 long poll 的方式来让客户端获得。
 
-由于云函数是无状态且以触发式运行，即在有事件到来时才会被触发，因此，为了实现 WebSocket，云函数与 API 网关相结合，通过 API 网关承接及保持与客户端的连接。您可以认为 API 网关与 SCF 一起实现了服务端。当客户端有消息发出时，会先传递给 API 网关，再由 API 网关触发云函数执行。当服务端云函数要向客户端发送消息时，会先由云函数将消息 POST 到 API 网关的反向推送链接，再由 API 网关向客户端完成消息的推送。具体的实现架构如下：
+由于云函数是无状态且以触发式运行，即在有事件到来时才会被触发。因此，为了实现 WebSocket，云函数 SCF 与 API 网关相结合，通过 API 网关承接及保持与客户端的连接。您可以认为云函数与 API 网关一起实现了服务端。当客户端有消息发出时，会先传递给 API 网关，再由 API 网关触发云函数执行。当服务端云函数要向客户端发送消息时，会先由云函数将消息 POST 到 API 网关的反向推送链接，再由 API 网关向客户端完成消息的推送。
 
-![](https://img.serverlesscloud.cn/tmp/2-8-2.png)
+具体的实现架构如下：
+
+![实现架构](https://img.serverlesscloud.cn/tmp/2-8-2.png)
 
 对于 WebSocket 的整个生命周期，主要由以下几个事件组成：
 
-* 连接建立：客户端向服务端请求建立连接并完成连接建立。
-* 数据上行：客户端通过已经建立的连接向服务端发送数据。
-* 数据下行：服务端通过已经建立的连接向客户端发送数据。
-* 客户端断开：客户端要求断开已经建立的连接。
+* 连接建立：客户端向服务端请求建立连接并完成连接建立；
+* 数据上行：客户端通过已经建立的连接向服务端发送数据；
+* 数据下行：服务端通过已经建立的连接向客户端发送数据；
+* 客户端断开：客户端要求断开已经建立的连接；
 * 服务端断开：服务端要求断开已经建立的连接。
 
 对于 WebSocket 整个生命周期的事件，云函数和 API 网关的处理过程如下：
 
-* 连接建立：客户端与 API 网关建立 WebSocket 连接，API 网关将连接建立事件发送给 SCF。
-* 数据上行：客户端通过 WebSocket 发送数据，API 网关将数据转发送给 SCF。
-* 数据下行：SCF 通过向 API 网关指定的推送地址发送请求，API 网关收到后会将数据通过 WebSocket 发送给客户端。
-* 客户端断开：客户端请求断开连接，API 网关将连接断开事件发送给 SCF。
+* 连接建立：客户端与 API 网关建立 WebSocket 连接，API 网关将连接建立事件发送给 SCF；
+* 数据上行：客户端通过 WebSocket 发送数据，API 网关将数据转发送给 SCF；
+* 数据下行：SCF 通过向 API 网关指定的推送地址发送请求，API 网关收到后会将数据通过 WebSocket 发送给客户端；
+* 客户端断开：客户端请求断开连接，API 网关将连接断开事件发送给 SCF；
 * 服务端断开：SCF 通过向 API 网关指定的推送地址发送断开请求，API 网关收到后断开 WebSocket 连接。
 
-因此，API 网关与 SCF 之间的交互，需要由3类云函数来承载：
+因此，云函数与 API 网关之间的交互，需要由 3 类云函数来承载：
 
-* 注册函数：在客户端发起和 API 网关之间建立 WebSocket 连接时触发该函数，通知 SCF WebSocket 连接的 secConnectionID。通常会在该函数记录 secConnectionID 到持久存储中，用于后续数据的反向推送。
-* 清理函数：在客户端主动发起 WebSocket 连接中断请求时触发该函数，通知 SCF 准备断开连接的 secConnectionID。通常会在该函数清理持久存储中记录的该 secConnectionID。
+* 注册函数：在客户端发起和 API 网关之间建立 WebSocket 连接时触发该函数，通知 SCF WebSocket 连接的 secConnectionID。通常会在该函数记录 secConnectionID 到持久存储中，用于后续数据的反向推送；
+* 清理函数：在客户端主动发起 WebSocket 连接中断请求时触发该函数，通知 SCF 准备断开连接的 secConnectionID。通常会在该函数清理持久存储中记录的该 secConnectionID；
 * 传输函数：在客户端通过 WebSocket 连接发送数据时触发该函数，告知 SCF 连接的 secConnectionID 以及发送的数据。通常会在该函数处理业务数据。例如，是否将数据推送给持久存储中的其他 secConnectionID。
 
 
-## Websocket功能实现
+## Websocket 功能实现
 
-根据腾讯云官网提供的该动能的整体架构图：
+根据腾讯云官网提供的该功能的整体架构图：
 
-![](https://img.serverlesscloud.cn/202058/2-8-3.png)
+![整体架构图](https://img.serverlesscloud.cn/202058/2-8-3.png)
 
-这里我们可以使用COS（对象存储）作为持久化的方案，当用户建立链接存储ConnectionId到COS中，当用户断开连接删除该链接Id。
+这里我们可以使用对象存储 COS 作为持久化的方案，当用户建立链接存储 `ConnectionId` 到 COS 中，当用户断开连接删除该链接 ID。
 
 其中注册函数：
 
@@ -184,7 +186,7 @@ def main_handler(event, context):
 
 ```
 
-我们的Yaml格式可以如下：
+Yaml 文件如下：
 
 ```yaml
 Conf:
@@ -270,13 +272,13 @@ ChatClean:
         url: http://set-gwm9thyc.cb-guangzhou.apigateway.tencentyun.com/api-etj7lhtw
 ```
 
-这里要注意，我们需要先部署API网关，部署完成，获得到回推地址，将回推地址以url的形式写入到对应函数的环境变量中：
+注意，这里需要先部署 API 网关。当部署完成，获得回推地址，将回推地址以 url 的形式写入到对应函数的环境变量中：
 
 ![](https://img.serverlesscloud.cn/202058/3-8-4.png)
 
-这里理论上设计的不是很合理，按照道理是可以通过 `${restApi.url[0].internalDomain}` 自动获得到url的，但是我并没有成功获得到这个url，所以只能先部署API网关，获得到这个地址之后，再重新部署。
+理论上应该是可以通过 `${restApi.url[0].internalDomain}` 自动获得到 url 的，但是我并没有成功获得到这个 url，只能先部署 API 网关，获得到这个地址之后，再重新部署。
 
-部署完成之后，我们可以编写HTML代码，实现可视化的Websocket Client，其核心的JavaScript代码为：
+部署完成之后，我们可以编写 HTML 代码，实现可视化的 Websocket Client，其核心的 JavaScript 代码为：
 
 ```javascript
 window.onload = function () {
@@ -347,11 +349,11 @@ window.onload = function () {
 
 ## 总结
 
-通过云函数 + API网关进行Websocket的实践，绝对不仅仅是一个聊天工具这么简单，他可以用在很多方面，例如通过Websocket进行实时日志系统的制作等。
+通过云函数 + API 网关进行 Websocket 的实践，绝对不仅仅是一个聊天工具这么简单，它可以用在很多方面，例如通过 Websocket 进行实时日志系统的制作等。
 
-单独的函数计算，仅仅是一个计算平台，只有和周边的BaaS结合，才能展示出Serverless架构的价值和真正的能力，意义。这也是为什么很多人说Serverless=FaaS+BaaS的一个原因。
+单独的函数计算，仅仅是一个计算平台，只有和周边的 BaaS 结合，才能展示出 Serverless 架构的价值和真正的能力。这也是为什么很多人说 Serverless=FaaS+BaaS 的一个原因。
 
-期待更多人，可以通过Serverless架构，创造出更多有趣的应用。
+期待更多小伙伴，可以通过 Serverless 架构，创造出更多有趣的应用。
 
 ## Serverless Framework 30 天试用计划
 

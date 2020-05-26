@@ -1,6 +1,6 @@
 ---
 title: Serverless SSR 技术在猎豹移动的实践
-description: 猎豹移动前端团队基于腾讯云 Serverless 技术在其前端项目中应用 SSR
+description: 猎豹移动前端团队基于腾讯云 Serverless 技术在其项目中应用 SSR
 keywords: Serverless,Serverless Framework,SSR
 date: 2020-05-15
 thumbnail: https://img.serverlesscloud.cn/2020518/1589791033511-db%E5%89%AF%E6%9C%AC.jpg
