@@ -5,8 +5,10 @@ import List from '@src/components/pages/blogList/List'
 import { GraphqlBlogResult } from '@src/types'
 import Helmet from '@src/components/Helmet'
 import { Box, Container } from '@src/components/atoms'
+import RightAd from '@src/components/RightAd/RightAd'
 import { debounce } from '@src/utils'
-import './BestPracticeList.css'
+import './BestPracticeList.less'
+import HotArticle from '@src/components/HotArticle/HotArticle'
 
 interface Props {
   data: {
@@ -69,20 +71,24 @@ const BlogList = ({
       <div className="scf-content">
         <div className="scf-page-blog scf-layout-pattern">
           <div className="scf-home-block scf-practice-list">
-            <Container width={[1, 1, 1, 912, 0.76, 1200]} px={0}>
+            <Container width={[1, 1, 1, 912, 0.76, 1200]} px={0} className="list-con">
               <div className="scf-box">
                 <div className="scf-box__body">
                   <List
                     isMobileView={isMobileView}
                     width={[0.9, 0.9, 0.9, 0.85]}
-                    generateDataUrl={pageNum =>
-                      `/best-practice${pageNum === 1 ? '' : `/page/${pageNum}`}`
-                    }
+                    generateDataUrl={pageNum => `/best-practice${pageNum === 1 ? '' : `/page/${pageNum}`}`}
                     blogs={edges}
                     offset={offset}
                     limit={limit}
                     totalCount={totalCount}
                   />
+                </div>
+              </div>
+              <div className="list-right">
+                <RightAd />
+                <div className="mobile-hide">
+                  <HotArticle type="bestPractice" />
                 </div>
               </div>
             </Container>
@@ -100,9 +106,7 @@ export const query = graphql`
     blogs: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        frontmatter: {
-          categories: { in: ["best-practice", "guides-and-tutorials"] }
-        }
+        frontmatter: { categories: { in: ["best-practice", "guides-and-tutorials"] } }
         fileAbsolutePath: { regex: "/best-practice|blog/" }
       }
       skip: $offset

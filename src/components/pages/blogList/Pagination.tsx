@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Flex, Box } from '@src/components/atoms'
 import theme from '@src/constants/theme'
 import styled from 'styled-components'
-import Pagination from 'react-js-pagination'
+import Pagination from 'react-paginate'
 
 const PaginationWrapper = styled(Flex)`
   ul {
@@ -46,8 +46,8 @@ export default function({
   onChange?: (pageNum: number) => void
   getPageUrl?: (pageNum: number) => string
 }) {
-  const _onChange = (pageNum: number) => {
-    onChange && onChange(pageNum)
+  const _onChange = (selectedItem: { selected: number }) => {
+    onChange && onChange(selectedItem.selected + 1)
   }
 
   const _getPageUrl = (pageNum: number) => {
@@ -56,18 +56,18 @@ export default function({
 
   return (
     <Box mt="40px" mb="40px">
-      <PaginationWrapper justifyContent="center">
+      <PaginationWrapper justifyContent="center" className="pagination">
         <Pagination
-          onChange={_onChange}
-          totalItemsCount={totalCount}
-          pageRangeDisplayed={8}
-          activePage={currentPage}
-          getPageUrl={_getPageUrl}
-          itemsCountPerPage={pageSize}
-          firstPageText={<noscript />}
-          lastPageText={<noscript />}
-          prevPageText={'上一页'}
-          nextPageText={'下一页'}
+          onPageChange={_onChange}
+          pageCount={Math.ceil(totalCount / 10)}
+          pageRangeDisplayed={3}
+          initialPage={currentPage - 1}
+          marginPagesDisplayed={2}
+          disableInitialCallback={true}
+          activeClassName="active"
+          previousLabel={null}
+          nextLabel={null}
+          // getPageUrl={_getPageUrl}
         />
       </PaginationWrapper>
     </Box>

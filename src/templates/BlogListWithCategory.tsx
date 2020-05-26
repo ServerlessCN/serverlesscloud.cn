@@ -8,6 +8,8 @@ import Category from '@src/components/pages/blogList/CategoryList'
 import { GraphqlBlogResult } from '@src/types'
 import Helmet from '@src/components/Helmet'
 import { generateCategoryText } from '@src/components/Link/CategoryLink'
+import RightAd from '@src/components/RightAd/RightAd'
+import HotArticle from '@src/components/HotArticle/HotArticle'
 
 interface Props {
   data: {
@@ -56,9 +58,7 @@ const BlogList = ({
     <Layout>
       <Helmet
         title={`${categoriesText} - Serverless`}
-        keywords={
-          'Serverless团队博客,Serverless发布,Serverless动态,Serverless新闻'
-        }
+        keywords={'Serverless团队博客,Serverless发布,Serverless动态,Serverless新闻'}
         description={
           'Serverless 中文网分享了 Serverless 技术的最新动态、Serverless 团队的工程实践，以及社区开发者撰写投稿的优质技术博文'
         }
@@ -68,14 +68,11 @@ const BlogList = ({
       <div className="scf-Blog-Category">
         <div className="scf-page-blog scf-layout-pattern">
           <div className="scf-home-block scf-blog-list">
-            <Container width={[1, 1, 1, 912, 0.76, 1200]} px={0}>
-              <div
-                id="scf-box-mobile-titlebar"
-                className="scf-box__header-title"
-              >
+            <Container width={[1, 1, 1, 912, 0.76, 1200]} px={0} className="list-con">
+              <div id="scf-box-mobile-titlebar" className="scf-box__header-title">
                 <h3>博客</h3>
               </div>
-              <div className="scf-box ">
+              <div className="scf-box">
                 <div className="scf-box__body">
                   <List
                     isMobileView={isMobileView}
@@ -85,6 +82,12 @@ const BlogList = ({
                     limit={limit}
                     totalCount={totalCount}
                   />
+                </div>
+              </div>
+              <div className="list-right">
+                <RightAd />
+                <div className="mobile-hide">
+                  <HotArticle type="blog" />
                 </div>
               </div>
             </Container>
@@ -102,10 +105,7 @@ export const query = graphql`
     blogs: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        frontmatter: {
-          date: { ne: null }
-          categories: { in: $categories, nin: "guides-and-tutorials" }
-        }
+        frontmatter: { date: { ne: null }, categories: { in: $categories, nin: "guides-and-tutorials" } }
         fileAbsolutePath: { regex: "/blog/" }
       }
       skip: $offset
