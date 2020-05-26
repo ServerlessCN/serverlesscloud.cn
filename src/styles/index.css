@@ -616,6 +616,9 @@ a:hover {
   width: 100%;
   top: -40px;
 }
+.pagination li {
+  cursor: pointer;
+}
 
 @media screen and (max-width: 992px) {
 
