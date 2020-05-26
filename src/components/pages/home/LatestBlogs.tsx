@@ -29,7 +29,6 @@ function BlogCard({ blog }: { blog: Blog }) {
               <i className="scf-icon scf-icon-view"></i>
             </span>
             {blog.node.frontmatter.authors}· {blog.node.frontmatter.date.slice(2, 10)}
-            <span className="scf-article-item__statistics__timeToRead">· 阅读大约需要{blog.node.timeToRead}分钟</span>
           </Box>
           <Box className="scf-article-item__title">
             <h4>{blog.node.frontmatter.title}</h4>
@@ -143,7 +142,7 @@ export default function() {
             <div class="Box-jLJQJw evQvdc scf-article-item__img-inner"><img src="{IMG}" alt="" /></div> \
           </div> \
           <div class="Box-jLJQJw evQvdc scf-article-item__content"> \
-            <div class="Box-jLJQJw evQvdc scf-article-item__statistics"><span class="scf-blog-item-pv-icon"><i class="scf-icon scf-icon-view"></i></span>{PV} · {AUTHOR} · {DATE}<span class="scf-article-item__statistics__timeToRead"> · 阅读大约需要{READTIME}分钟</span></div>\
+            <div class="Box-jLJQJw evQvdc scf-article-item__statistics"><span class="scf-blog-item-pv-icon"><i class="scf-icon scf-icon-view"></i></span>{PV} · {AUTHOR} · {DATE}</div>\
             <div class="Box-jLJQJw evQvdc scf-article-item__title"><h4>{TITLE}</h4></div>\
             <div class="Box-jLJQJw evQvdc scf-article-item__intro">{DESC}</div>\
           </div>\

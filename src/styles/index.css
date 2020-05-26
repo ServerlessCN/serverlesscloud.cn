@@ -615,7 +615,7 @@ a:hover {
   display: block;
   width: 100%;
   top: -40px;
-} 
+}
 
 @media screen and (max-width: 992px) {
 
@@ -673,7 +673,7 @@ a:hover {
     /*border: 2px solid #f7f7f7*/
   }
   .scf-header-search-result-list {
-   
+
     display: block;
   }
   .scf-header-search-result-list .scf-header-search-result-list__item-title {
@@ -709,9 +709,9 @@ a:hover {
     width: 30px;
     height: 30px;
     position: absolute;
-    
+
     display: block;
-    
+
   }
   .scf-bar-header-search-icon-normal {
     background-image: url(../assets/images/search.svg);
@@ -735,7 +735,7 @@ a:hover {
     background-image: url(../assets/images/menus.svg);
     background-repeat: no-repeat;
     background-size: 28px 28px;
-    background-position: 0px 1px; 
+    background-position: 0px 1px;
   }
   .scf-box-header-icon-close {
     background-image: url(../assets/images/close.svg);
