@@ -28,18 +28,12 @@ export function BlogCard({ blog }: { blog: Blog }) {
             <span className="scf-article-item__statistics-item">
               <i className="scf-icon scf-icon-view"></i>
             </span>
-            {blog.node.frontmatter.authors}·{' '}
-            {blog.node.frontmatter.date.slice(2, 10)}
-            <span className="scf-article-item__statistics__timeToRead">
-              · 阅读大约需要{blog.node.timeToRead}分钟
-            </span>
+            {blog.node.frontmatter.authors}· {blog.node.frontmatter.date.slice(2, 10)}
           </Box>
           <Box className="scf-article-item__title">
             <h4>{blog.node.frontmatter.title}</h4>
           </Box>
-          <Box className="scf-article-item__intro">
-            {blog.node.frontmatter.description}
-          </Box>
+          <Box className="scf-article-item__intro">{blog.node.frontmatter.description}</Box>
         </Box>
       </Link>
       {blog.node.frontmatter.tags ? (
@@ -65,9 +59,7 @@ function Blogs() {
         sort: { fields: frontmatter___date, order: DESC }
         limit: 6
         filter: {
-          frontmatter: {
-            categories: { regex: "/best-practice|guides-and-tutorials/" }
-          }
+          frontmatter: { categories: { regex: "/best-practice|guides-and-tutorials/" } }
           fileAbsolutePath: { regex: "/best-practice|blog/" }
         }
       ) {
@@ -110,9 +102,7 @@ function Blogs() {
 export default function(props) {
   React.useEffect(() => {
     function getBlogPv(fn) {
-      const api =
-        'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?e' +
-        'nv=test'
+      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?e' + 'nv=test'
       fetch(api)
         .then(response => response.json())
         .then(response => {
@@ -135,9 +125,7 @@ export default function(props) {
       for (var i = 0; i < bestItems.length; ++i) {
         const id = bestItems[i].getAttribute('data-id')
         if (!id) continue
-        const statistics = bestItems[i].getElementsByClassName(
-          'scf-article-item__statistics-item'
-        )
+        const statistics = bestItems[i].getElementsByClassName('scf-article-item__statistics-item')
         if (!statistics) continue
         const icon = statistics[0].getElementsByClassName('scf-icon')
         if (!icon) continue

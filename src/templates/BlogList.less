@@ -70,36 +70,34 @@
   position: relative;
   padding-bottom: 160px;
 }
+.scf-layout-pattern:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 316px;
+  height: 226px;
+  z-index: -1;
+  background-image: url(../assets/images/decoration-left.svg);
+}
+
+.scf-layout-pattern:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 399px;
+  height: 315px;
+  z-index: -1;
+  background-image: url(../assets/images/decoration-right.svg);
+}
 
 .scf-blog-list {
   margin-bottom: 0;
   .scf-home-block__inner {
     margin: 0 auto;
-  }
-
-  .scf-layout-pattern:before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 316px;
-    height: 226px;
-    z-index: -1;
-    background-image: url(../assets/images/decoration-left.svg);
-  }
-
-  .scf-layout-pattern:after {
-    content: "";
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 399px;
-    height: 315px;
-    z-index: -1;
-
-    background-image: url(../assets/images/decoration-right.svg);
   }
 
   .scf-article-list-opeate {

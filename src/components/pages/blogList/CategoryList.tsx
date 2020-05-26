@@ -11,15 +11,14 @@ export function generateCategoryText(category: string) {
 }
 
 export default function(props) {
+  const matchPath = props.location.pathname.replace(/\/page\/\d+/, '')
   return (
     <StaticQuery
       query={graphql`
         query CategoryQuery {
           categorys: allMarkdownRemark(
             filter: {
-              frontmatter: {
-                categories: { nin: ["best-practice", "guides-and-tutorials"] }
-              }
+              frontmatter: { categories: { nin: ["best-practice", "guides-and-tutorials"] } }
               fileAbsolutePath: { regex: "/blog/" }
             }
           ) {
@@ -37,36 +36,16 @@ export default function(props) {
           return a.totalCount + b.totalCount
         })
         return (
-          <Box
-            className={
-              'scf-blog-header ' +
-              (props.isDetail ? 'scf-blog-detail-header' : '')
-            }
-            {...props}
-          >
-            <Container
-              className="scf-box-blog-tabs"
-              width={[1, 1, 1, 912, 0.76, 1200]}
-              px={0}
-            >
+          <Box className={'scf-blog-header ' + (props.isDetail ? 'scf-blog-detail-header' : '')} {...props}>
+            <Container className="scf-box-blog-tabs" width={[1, 1, 1, 912, 0.76, 1200]} px={0}>
               <Box className="scf-segment">
                 <Link to={`blog`}>
-                  <span
-                    className={
-                      'scf-segment__item ' +
-                      (['/blog/', '/blog'].includes(props.location.pathname)
-                        ? 'is-active'
-                        : '')
-                    }
-                  >
+                  <span className={'scf-segment__item ' + (['/blog/', '/blog'].includes(matchPath) ? 'is-active' : '')}>
                     所有（{TotalCount}）
                   </span>
                 </Link>
                 {categorys.group.map(category => (
-                  <Link
-                    to={`${baseCategoryUrl}/${category.categories}`}
-                    key={category.categories}
-                  >
+                  <Link to={`${baseCategoryUrl}/${category.categories}`} key={category.categories}>
                     <span
                       key={category.categories}
                       className={
@@ -74,13 +53,12 @@ export default function(props) {
                         ([
                           `${baseCategoryUrl}/${category.categories}`,
                           `${baseCategoryUrl}/${category.categories}/`,
-                        ].includes(props.location.pathname)
+                        ].includes(matchPath)
                           ? 'is-active'
                           : '')
                       }
                     >
-                      {generateCategoryText(category.categories)}（
-                      {category.totalCount}）
+                      {generateCategoryText(category.categories)}（{category.totalCount}）
                     </span>
                   </Link>
                 ))}
