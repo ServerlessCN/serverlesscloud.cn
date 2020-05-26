@@ -79,7 +79,8 @@ export default (props: Props) => {
       <div className="hot-article">
         {list.map(item => (
           <Link className="right-item" to={item.fields.slug} key={item.id}>
-            • {item.frontmatter.title}
+            <span className="right-dot">•</span>
+            <span className="right-text">{item.frontmatter.title}</span>
           </Link>
         ))}
       </div>
