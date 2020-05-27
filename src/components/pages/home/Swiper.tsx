@@ -127,24 +127,27 @@ export default function() {
                               <span>Windows</span>
                             </div>
                           </div>
-                          <div className="start-content">
-                            <div className="start-content-item">
-                              <div className="start-content-anno"># Step 1. Install Serverless Globally</div>
-                              {activeLinux ? (
-                                <div className="start-content-command">
-                                  $ curl -o- -L https://slss.io/install | bash
-                                </div>
-                              ) : (
-                                <div className="start-content-command">$ npm install -g serverless</div>
-                              )}
-                            </div>
-                            <div className="start-content-item">
-                              <div className="start-content-anno"># Step 2. Create a serverless function</div>
-                              <div className="start-content-command">$ serverless</div>
-                            </div>
-                            <div className="start-content-item">
-                              <div className="start-content-anno"># Step 3. Your Function is deployed!</div>
-                              <div className="start-content-command">$ https://serverless.cloud.tencent.com</div>
+                          <div className="start-re">
+                            <div className="start-back"></div>
+                            <div className="start-content">
+                              <div className="start-content-item">
+                                <div className="start-content-anno"># Step 1. Install Serverless Globally</div>
+                                {activeLinux ? (
+                                  <div className="start-content-command">
+                                    $ curl -o- -L https://slss.io/install | bash
+                                  </div>
+                                ) : (
+                                  <div className="start-content-command">$ npm install -g serverless</div>
+                                )}
+                              </div>
+                              <div className="start-content-item">
+                                <div className="start-content-anno"># Step 2. Create a serverless function</div>
+                                <div className="start-content-command">$ serverless</div>
+                              </div>
+                              <div className="start-content-item">
+                                <div className="start-content-anno"># Step 3. Your Function is deployed!</div>
+                                <div className="start-content-command">$ https://serverless.cloud.tencent.com</div>
+                              </div>
                             </div>
                           </div>
                         </Box>

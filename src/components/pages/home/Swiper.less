@@ -18,6 +18,7 @@
   border: 1px solid #eaeaea;
   padding: 12px 15px 15px;
   height: 100%;
+  font-family: "Serverless";
 }
 .scf-quick-start__banner img {
   position: absolute;
@@ -96,6 +97,7 @@
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
   border-radius: 4px;
   color: #fff;
+  font-size: 14px;
 }
 .start-tab {
   display: flex;
@@ -141,12 +143,16 @@
   }
 }
 .start-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   margin-bottom: 15px;
   padding-bottom: 12px;
 }
 .start-content-item {
-  margin-top: 12px;
-  padding: 0 15px;
+  margin-top: 9px;
+  padding: 0 13px;
 }
 .start-content-anno {
   color: #5F7985;
@@ -208,48 +214,40 @@
 .scf-btn--primary:hover {
   background-color: #b73832;
 }
+.start-re {
+  position: relative;
+}
+.start-back {
+  width: 100%;
+  padding-top: 52.6%;
+  margin-bottom: 3%;
+  background: #000;
+}
 
 @media screen and (min-width: 992px) and (max-width: 1550px) {
-  .scf-quick-start__opeate .scf-btn {
-    height: 40px;
-    font-size: 15px;
+  .scf-quick-start__banner {
+    font-size: 12px;
   }
-  .start-content {
-    margin-bottom: 5px;
-    padding-bottom: 6px;
+  .scf-quick-start__opeate .scf-btn {
+    height: 34px;
+    font-size: 14px;
   }
   .start-content-item {
-    margin-top: 4px;
+    margin-top: 7px;
+    padding: 2px 7px;
   }
+  .scf-grid [class*=scf-grid__item] {
+    padding: 6px;
+  }
+  .scf-quick-start {
+    padding: 12px 10px 15px;
+  }
+}
+@media screen and (min-width: 1378px) and (max-width: 1550px) {
   .scf-quick-start__banner {
-    font-size: 13px;
-  }
-  .scf-quick-start__body {
-    display: flex;
-    flex-direction: column;
-    height: calc(100% - 20px);
-    justify-content: space-around;
+    font-size: 14px;
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1280px) {
-  .scf-quick-start {
-    padding: 8px 6px 8px;
-  }
-  .scf-grid [class*=scf-grid__item] {
-    padding: 15px;
-  }
-}
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  .scf-quick-start {
-    padding: 8px 6px 17px;
-    height: 292px;
-  }
-  .scf-grid [class*=scf-grid__item] {
-    padding: 15px;
-  }
-}
-
-
 @media screen and (max-width: 992px) {
   .scf-grid {
     /*margin: -21px;*/
