@@ -117,7 +117,7 @@ export default function() {
                               <i className="start-icon linux-icon"></i>
                               <span>Linux</span>
                               <i className="start-icon macos-icon"></i>
-                              <span>MacOS</span>
+                              <span>macOS</span>
                             </div>
                             <div
                               className={!activeLinux ? 'start-item active' : 'start-item'}
