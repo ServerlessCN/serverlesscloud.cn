@@ -66,7 +66,7 @@ export default function() {
         <Box className="scf-box scf-home-active">
           <Box className="scf-box__header">
             <Box className="scf-box__header-title size-s">
-              <h3>正在进行</h3>
+              <h3>活动</h3>
             </Box>
           </Box>
           <ActivityCards />

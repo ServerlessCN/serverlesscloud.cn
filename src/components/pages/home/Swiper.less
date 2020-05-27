@@ -17,7 +17,7 @@
   box-shadow: 2px 2px 8px 0 rgba(0,0,0,.08);
   border: 1px solid #eaeaea;
   padding: 12px 15px 15px;
-  height: 100%;
+  min-height: 100%;
 }
 .scf-quick-start__banner img {
   position: absolute;
@@ -97,14 +97,64 @@
   padding-top: 30px;
 }
 .scf-quick-start__banner {
-  font-size: 0;
-  margin-bottom: 15px;
-  height: 0;
-  padding-top: 62.6%;
-  position: relative;
-  overflow: hidden;
+  background: #000000;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
   border-radius: 4px;
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
+  color: #fff;
+}
+.start-tab {
+  display: flex;
+}
+.start-item {
+  flex: 1;
+  border-bottom: 1px solid #222;
+  text-align: center;
+  padding: 13px 0 11px;
+  cursor: pointer;
+  color: #A0B7BF;
+  .start-icon {
+    width: 14px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 4px;
+    position: relative;
+    top: 2px;
+  }
+  .linux-icon {
+    background: url(../../../assets/images/linux.svg) no-repeat;
+  }
+  .macos-icon {
+    background: url(../../../assets/images/mac.svg) no-repeat;
+    margin-left: 12px;
+  }
+  .win-icon {
+    background: url(../../../assets/images/win.svg) no-repeat;
+  }
+  &.active {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    .linux-icon {
+      background: url(../../../assets/images/linux-active.svg) no-repeat;
+    }
+    .macos-icon {
+      background: url(../../../assets/images/mac-active.svg) no-repeat;
+      margin-left: 12px;
+    }
+    .win-icon {
+      background: url(../../../assets/images/win-active.svg) no-repeat;
+    }
+  }
+}
+.start-content {
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+}
+.start-content-item {
+  margin-top: 12px;
+  padding: 0 15px;
+}
+.start-content-anno {
+  color: #5F7985;
 }
 .scf-quick-start__opeate {
   display: flex;
