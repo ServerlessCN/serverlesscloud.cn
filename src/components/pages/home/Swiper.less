@@ -88,23 +88,73 @@
     height: 92%;
   }
 }
-/* @media screen and (min-width: 1280px) {
-  .hello-world{
-    height: 92%;
-  }
-} */
 .scf-home-banner_Container{
   padding-top: 30px;
 }
 .scf-quick-start__banner {
-  font-size: 0;
-  margin-bottom: 15px;
-  height: 0;
-  padding-top: 62.6%;
-  position: relative;
-  overflow: hidden;
+  background: #000000;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
   border-radius: 4px;
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
+  color: #fff;
+  font-size: 14px;
+}
+.start-tab {
+  display: flex;
+}
+.start-item {
+  flex: 1;
+  border-bottom: 1px solid #222;
+  text-align: center;
+  padding: 13px 0 11px;
+  cursor: pointer;
+  color: #A0B7BF;
+  .start-icon {
+    width: 14px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 4px;
+    position: relative;
+    top: 2px;
+  }
+  .linux-icon {
+    background: url(../../../assets/images/linux.svg) no-repeat;
+  }
+  .macos-icon {
+    background: url(../../../assets/images/mac.svg) no-repeat;
+    margin-left: 12px;
+  }
+  .win-icon {
+    background: url(../../../assets/images/win.svg) no-repeat;
+  }
+  &.active {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    .linux-icon {
+      background: url(../../../assets/images/linux-active.svg) no-repeat;
+    }
+    .macos-icon {
+      background: url(../../../assets/images/mac-active.svg) no-repeat;
+      margin-left: 12px;
+    }
+    .win-icon {
+      background: url(../../../assets/images/win-active.svg) no-repeat;
+    }
+  }
+}
+.start-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+}
+.start-content-item {
+  margin-top: 12px;
+  padding: 0 13px;
+}
+.start-content-anno {
+  color: #5F7985;
 }
 .scf-quick-start__opeate {
   display: flex;
@@ -163,7 +213,39 @@
 .scf-btn--primary:hover {
   background-color: #b73832;
 }
+.start-re {
+  position: relative;
+}
+.start-back {
+  width: 100%;
+  padding-top: 52.6%;
+  margin-bottom: 3%;
+  background: #000;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
 
+@media screen and (min-width: 992px) and (max-width: 1550px) {
+  .scf-quick-start__banner {
+    font-size: 12px;
+  }
+  .scf-quick-start__opeate .scf-btn {
+    height: 34px;
+    font-size: 14px;
+  }
+  .start-content-item {
+    margin-top: 5px;
+    padding: 2px 7px 2px 17px;
+  }
+  .scf-quick-start {
+    padding: 12px 10px 15px;
+  }
+}
+@media screen and (min-width: 1378px) and (max-width: 1550px) {
+  .scf-quick-start__banner {
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 992px) {
   .scf-grid {
     /*margin: -21px;*/
@@ -174,5 +256,13 @@
 
   .scf-grid [class*=scf-grid__item] {
     padding: 0px;
+  }
+  .start-back {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .start-content {
+    position: relative;
   }
 }
