@@ -10,6 +10,8 @@ authors:
   - brzhang
 authorslink:
   - https://cloud.tencent.com/developer/article/1609581
+tags:
+  - 云函数
   - 小程序
 ---
 
