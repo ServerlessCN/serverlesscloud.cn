@@ -16,7 +16,7 @@ translatorslink:
   - https://www.zhihu.com/people/Aceyclee
 tags:
   - 团队管理
-  - serverless
+  - Serverless
 ---
 
 Serverless 团队中，Growth team 的一个主要目标就是减少运营成本，使员工有更多时间从事有吸引力的创造性工作，这也是公司理念之一。

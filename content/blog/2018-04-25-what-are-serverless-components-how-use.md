@@ -17,7 +17,7 @@ translatorslink:
   - http://github.com/tinafangkunding/
 tags:
   - Component
-  - serverless
+  - Serverless
 ---
 
 ## Serverless Components 的目标是什么？

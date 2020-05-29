@@ -12,7 +12,7 @@ authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - 云原生
-  - serverless
+  - Serverless
 ---
 
 云原生时代真的来了。

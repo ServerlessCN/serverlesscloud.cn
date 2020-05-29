@@ -12,7 +12,7 @@ authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - 云函数
-  - serverless
+  - Serverless
 ---
 ​
 

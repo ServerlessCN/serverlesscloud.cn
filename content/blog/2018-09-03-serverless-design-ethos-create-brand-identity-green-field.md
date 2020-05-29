@@ -16,7 +16,7 @@ translatorslink:
   - https://www.zhihu.com/people/Aceyclee  
 tags:
   - 品牌标识
-  - serverless
+  - Serverless
 ---
 
 ![AndrePires](https://img.serverlesscloud.cn/20191212/1576153272664-serverless-design-andre-thumb.jpg)

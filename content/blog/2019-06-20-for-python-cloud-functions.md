@@ -12,7 +12,7 @@ authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - 云函数
-  - serverless
+  - Serverless
 ---
 
 在使用无服务器云函数SCF时通常会遇到导入第三方库的问题，很多小伙伴比较头疼是：应该如何打包进去？这里，推荐几个不错的方法。

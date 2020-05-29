@@ -15,7 +15,7 @@ translators:
 translatorslink: 
   - https://www.zhihu.com/people/Aceyclee
 tags:
-  - serverless
+  - Serverless
 ---
 
 我是一名艺术家、时尚行业从业者。讲真的，我从没想过自己有一天会像现在这样，坐在旧金山一家科技初创公司的办公桌前撰写这篇博客。

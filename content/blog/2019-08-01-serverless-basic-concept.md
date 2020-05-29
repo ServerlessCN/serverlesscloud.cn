@@ -12,7 +12,7 @@ authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - 云计算
-  - serverless
+  - Serverless
 ---
 
 > 从行业趋势看，Serverless 是云计算必经的一场革命

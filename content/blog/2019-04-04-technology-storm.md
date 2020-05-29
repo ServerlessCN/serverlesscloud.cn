@@ -12,7 +12,7 @@ authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - 应用场景
-  - serverless
+  - Serverless
 ---
 
 ​在当前的软件架构领域，Serverless无疑是最为热门话题之一。伴随着云+端、小程序等的兴起，Serverless技术的发展到达了一个有趣的时间点，开发人员开始意识到Serverless架构在不同技术领域的价值，一个全新的创业生态系统正逐渐围绕它展开。

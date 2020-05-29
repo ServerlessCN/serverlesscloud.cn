@@ -17,7 +17,7 @@ translatorslink:
   - https://www.zhihu.com/people/Aceyclee
 tags:
   - 应用开发
-  - serverless
+  - Serverless
 ---
 我的软件开发入行经历非常有趣 —— 我一开始其实是厨师。
 

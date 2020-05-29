@@ -15,7 +15,7 @@ translators:
 translatorslink: 
   - https://www.zhihu.com/people/Aceyclee
 tags:
-  - serverless
+  - Serverless
 ---
 
 我们软件工具行业为开发者提供的支持还很不到位，无法帮助他们构建更好的软件。
