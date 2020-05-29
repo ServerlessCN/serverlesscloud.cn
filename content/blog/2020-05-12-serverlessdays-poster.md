@@ -12,7 +12,7 @@ authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - ServerlessDays
-  - 活动  
+  - Meetup  
 ---
 
 作为下一代云计算发展的风向标，Serverless 正在改变未来软件开发的模式和流程。据 Gartner 报告，2020 年，全球 20% 的企业将采用 Serverless 技术部署，Serverless 从底层技术变革计算资源的形态，为企业的软件架构设计和应用服务部署引入创新的设计思路。

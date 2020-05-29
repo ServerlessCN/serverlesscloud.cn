@@ -10,6 +10,9 @@ authors:
   - Serverless 中文网
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - API
+  - 云函数
 ---
 
 ![serverless](https://img.serverlesscloud.cn/qianyi/images/YHl6UWa9s62zicSFHQTm5RAchm5pOdynuj5PhOKpDQ5x70nXbiaR2JImuNRcZmKALEhOAXyxXUIiaQwUWaDoxN3Rg.jpg)

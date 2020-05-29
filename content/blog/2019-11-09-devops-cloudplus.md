@@ -13,8 +13,8 @@ authorslink:
 location: 
   - 腾讯云 & 云+社区 & Serverless 社区
 tags:
-  - 最佳实践
-  - serverless
+  - DevOps
+  - Serverless
 ---
 
 ## 活动信息

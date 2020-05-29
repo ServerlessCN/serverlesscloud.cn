@@ -12,7 +12,7 @@ authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - Serverless
-  - 活动  
+  - Meetup  
 ---
 
 ​5 月 8 日 15:00，由腾讯云 Serverless 主办的 Tencent Serverless Hours 第一期线上分享会如期举行。本次分享会主题是云函数，邀请到了腾讯云高级产品经理黄文俊 (Alfred) 和腾讯云高级前端开发工程师蔡卫峰 (Wes) 进行相关分享和实战演示，会议在腾讯云大学平台同步直播，近五百人参加了本次分享会。

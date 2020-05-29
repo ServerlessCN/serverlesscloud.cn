@@ -15,52 +15,49 @@ tags:
   - Flask
 ---
 
-## 需求背景
+随着时间的发展，Serverless 架构越来越火热，其按量付费、弹性伸缩等诸多优质特性，让人眼前一亮，不得不惊叹云计算为我们带来的便利。
 
-随着时间的发展，Serverless 架构越来越火热，其按量付费，弹性伸缩... 等很多优质特性，都让人眼前一亮，不得惊叹云计算为我们带来的便利。但是就目前而言，Serverless 架构相关的业务框架还是比较少的。虽然腾讯云 Serverless 与 Serverless Framework 联手，目前已经支持了 Express， Koa， Egg 以及 Flask 等众多项目的轻松上云，但是实际上在使用过程中，尤其是迁移过程中还是很痛苦的，以这些框架在 Serverless 组件上的表现来看，POST/GET的参数传输方法，就比较难原生获取，这可能导致原有项目上云要经历很大的演进过程。
+但是就目前而言，与 Serverless 架构相关的业务框架还是比较少的。虽然腾讯云 Serverless 与 serverless.com 联手，已经支持了 Express、Koa、Egg 以及 Flask 等众多项目的轻松上云，但是实际使用过程中，尤其是迁移过程中还是很痛苦的，以这些框架在 Serverless 组件上的表现来看，POST/GET 的参数传输方法，原生获取比较难，这可能导致原有项目上云要经历较大的改造。
 
-当然，除了刚才说的原生的框架直接部署在Serverless架构上，直接在Serverless架构开发的框架，也是少的可怜，所以实践就是通过一个博客系统的开发，和大家简单的体验一个基于Serverless架构的博客系统长什么样子。
+当然，除了刚才说的原生框架直接部署在 Serverless 架构上，直接在 Serverless 架构开发的框架，也是少得可怜，所以本实践通过一个博客系统的开发，和大家简单地体验一下基于 Serverless 架构的博客系统是什么样的。
 
 ## 开发前的思考
 
-### 思考
+1. 博客系统需要哪些功能？本文仅仅是 demo 性质，所以功能比较少，只有两个页面。具有文章管理、分类管理、标签管理以及留言管理等功能。同时为了方便用户管理，要有前台和后台两部分。
 
-* 博客系统需要哪些功能？ 这个博客系统仅作为抛砖引玉项目，所以功能还比较少，只有两个页面，具有文章管理、分类管理、标签管理以及留言管理等功能，但是为了方便用户管理，要有前台和后台两部分。
+2. 前台如何做？前台可能是用户流量比较大的（相对后台而言），所以这部分就是用单独的函数。每个功能一个函数，初步判断前台可能需要：获取文章分类，获取文章列表，获取评论列表，增加评论，获取标签列表等接口。
 
-* 前台如何做？前台可能是用户流量比较大的（相对后台而言），所以这部分就是用单独的函数，每个功能一个函数，初步判断，前台可能需要：获取文章分类，获取文章列表，获取评论列表，增加评论，获取标签列表等接口。
+3. 后台如何做？后台理论上是管理员的专属地盘，所以这一部分流量比较小，可以通过 `flask-admin`，放入到一个函数中来解决。
 
-* 后台如何做？后台理论上来说是管理员的专属地盘，所以这一部分流量比较小，可以通过flask-admin，放入到一个函数中来解决。
-
-* 为什么前台要那么多函数，后台用一个框架？整个项目就用一个框架不好么？首先要回答，整个项目用一个框架是可以的，但是并不好。例如这个项目的后台，使用的是Flask框架，用了Flask-admin来做后台管理，这个开发过程很简单，简单的多，可能整个后台就一百来行代码就搞定了，但是这涉及到
-  * 网页的返回，需要APIGW开启响应集成，响应集成的性能其实很差，所以相对来说，不太适合放在前端。
-  * 一个完整项目比较大，可能需要的资源也会更多，那么我们就需要给这个函数更多的资源内存，可能会导致收费的增加，例如我的后台给的资源是1024，我的前端每个函数给的内存资源是128/256，在执行同样时间的时候，明显后者的费用降低了4-8倍。同样，函数可能涉及大冷启动，冷启动一个函数和冷启动函数中的一个完整的框架/项目，前者的速度和性能可能会更好一下。
+4. 为什么前台要那么多函数，后台用一个框架？整个项目就用一个框架不好么？首先要回答，整个项目用一个框架也是可以的，但是并不好。例如这个项目的后台，使用的是 Flask 框架，用了 `flask-admin` 来做后台管理，这个开发过程很简单，可能整个后台就一百来行代码就搞定了，但是这涉及到：
+  * 网页的返回，需要 APIGW 开启响应集成，响应集成的性能其实很差，所以相对来说，不太适合放在前端；
+  * 一个完整项目比较大，可能需要的资源也会更多，那么我们就需要给这个函数更多的资源内存，可能会导致收费的增加，例如我的后台给的资源是 1024，我的前端每个函数给的内存资源是 128/256，在执行同样时间的时候，明显后者的费用降低了 4~8 倍。同样，函数可能涉及大冷启动，冷启动一个函数和冷启动函数中的一个完整的框架/项目，前者的速度和性能可能会更好一下；
   * 函数都有并发上限的，如果所有的资源全都请求到一个函数，那么很可能实际用户并发几个的时候，对用的函数并发就可能是几十几百，这很可能在用户稍微多一点的情况下，就会触及用户实例的上限限制，后台功能是非频繁功能，前台相对来说是更频繁的，所以前台是用单独接口更合理。
 
-* 登陆功能怎么做？非常抱歉，函数并不能像传统开发，将客户的一些登录信息缓存到机器上，但是客户端依旧可以使用cookie，所以利用这个方法，可以做以下流程：
-  * 后台登录入口处，拉取APIGW传过来的APIGW Event，看其中headers/cookie是否存在，不存在就会返回登录页面
-  * 如果headers/cookie存在，取cookie中的token字段，判断token字段是否和服务端的token字段吻合，吻合进入系统后台，不吻合返回登录页面
-  * 用户登录，请求后台的登陆功能，如果账号密码正确，则返回给用户一个token，客户端将token记录到cookie中
-  * 问题来了：
-     * token是什么？Token可以认为是一个登录凭证，生成方法可以按照自己设计升级，本实践比较简单，就直接用账号密码组合，然后md5。
-     * token存在那里？下次如何获取？Token可以存在Mysql数据库中，也可以存在Redis中，甚至可以存在COS中，例如Redis和COS，都可以利用其自身的一些特性做一些额外的操作，例如数据有效期（用来做登录过期等）。当然本文不想做的那么麻烦，所以每次用户请求过来，都是单独计算token，然后进行的对比。
-     * 这种token登陆方法可以用于其他项目么？还是仅适用于这种博客系统。可以适用其他项目，很多项目都可以通过这种方法来做，例如我自己的Anycodes，也是通过Token进行鉴权，只不过在Serverless架构下，Token如何存储是一个问题，但是我个人推荐有钱就用redis，没钱就用cos，不想额外花钱就像我，每次是用单独对比。
-     * token存在redis可以理解，但是存在cos是为什么？cos本身是对象存储，用来存储文件的，其实完全可以用来存储token，例如我们每次生成一个新的token，都把这个token设置为一个文件，文件内容就是这个token对应的用户信息或者是权限信息，或者其他的信息，然后存储桶策略设置成文件过期时间，例如文件存入1天自动删除，那么1天之后，你存储的这个token文件就会被删除。等用户带着token过来的时候，直接通过内网请求cos（没有流量费）获取指定文件名，如果获取到了就下载回来（文件一般也就1K或者以下），然后进行其他操作，不存在就证明用户已过期，或者token错误，让他重新登录就好了。当然，这种方法可能不是最优解，但是确实是在Serverless条件下的一个有趣的做法。可以在小项目中尝试使用。
+5. 登陆功能怎么做？非常抱歉，函数并不能像传统开发，将客户的一些登录信息缓存到机器上，但是客户端依旧可以使用 cookie，所以利用这个方法，可以做以下流程：
+  * 后台登录入口处，拉取 APIGW 传过来的 APIGW Event，看其中 headers/cookie 是否存在，不存在就会返回登录页面；
+  * 如果 headers/cookie 存在，取 cookie 中的 token 字段，判断 token 字段是否和服务端的 token 字段吻合，吻合进入系统后台，不吻合返回登录页面
+  * 用户登录，请求后台的登陆功能，如果账号密码正确，则返回给用户一个 token，客户端将 token 记录到 cookie 中
 
-* 项目本地开发如何进行调试？众所周知Serverless架构的本地调试很难。确实如此，虽然说本地调试很困难，但也不是不能越过去的，可以根据项目自己的需求，来做一些调试策略。
+* 问题来了：
+    * token 是什么？Token 可以认为是一个登录凭证，生成方法可以按照自己设计升级，本实践比较简单，就直接用账号密码组合，然后 md5。
+    * token 存在那里？下次如何获取？Token 可以存在 Mysql 数据库中，也可以存在 Redis 中，甚至可以存在 COS 中，例如 Redis 和 COS，都可以利用其自身的一些特性做一些额外的操作，例如数据有效期（用来做登录过期等）。当然本文不想做的那么麻烦，所以每次用户请求过来，都是单独计算 token，然后进行的对比。
+    * 这种 token 登陆方法可以用于其他项目么？还是仅适用于这种博客系统。可以适用其他项目，很多项目都可以通过这种方法来做，例如我自己的 Anycodes，也是通过 Token 进行鉴权，只不过在 Serverless 架构下，Token 如何存储是一个问题，但是我个人推荐有钱就用 redis，没钱就用 cos，不想额外花钱就像我，每次是用单独对比。
+    * token 存在 redis 可以理解，但是存在 cos 是为什么？cos 本身是对象存储，用来存储文件的，其实完全可以用来存储 token，例如我们每次生成一个新的 token，都把这个 token 设置为一个文件，文件内容就是这个 token 对应的用户信息或者是权限信息，或者其他的信息，然后存储桶策略设置成文件过期时间，例如文件存入 1 天自动删除，那么 1 天之后，你存储的这个 token 文件就会被删除。等用户带着 token 过来的时候，直接通过内网请求 cos（没有流量费）获取指定文件名，如果获取到了就下载回来（文件一般也就 1K 或者以下），然后进行其他操作，不存在就证明用户已过期，或者 token 错误，让他重新登录就好了。当然，这种方法可能不是最优解，但是确实是在 Serverless 条件下的一个有趣的做法。可以在小项目中尝试使用。
+
+6. 项目本地开发如何进行调试？众所周知 Serverless 架构的本地调试很难。确实如此，虽然说本地调试很困难，但也不是不能越过去的，可以根据项目自己的需求，来做一些调试策略。
 
 ## 项目开发
+
+项目开发过程主要就是数据库的增删改查，为了更加适应 Serverless 架构下的项目开发，也为了提高项目的开发效率特总结了相关的开发技巧和经验。
 
 ### 数据库设计
 
 由于是做一个简单的博客，所以数据库相对设计比较简单，只有文章表、分类表以及标签表、评论表等，整体的 ER 图如下所示：
 
-![](https://img.serverlesscloud.cn/202058/3-5-6.png)
+![ER 图](https://img.serverlesscloud.cn/202058/3-5-6.png)
 
-### 项目开发
-
-项目开发过程主要就是数据库的增删改查，为了更加适应Serverless架构下的项目开发，也为了提高项目的开发效率特总结了相关的开发技巧和经验：
-
-#### 本地开发与调试
+### 本地开发与调试
 
 对于开发调试，我在每个函数后面增加了对应触发器的调试方案，例如 APIGW 触发器，我增加了以下代码：
 
@@ -101,7 +98,7 @@ if __name__ == "__main__":
 {'uuid': '749ca9f6-4dfb-11ea-9c5b-acde48001122', 'error': False, 'message': ''}
 ```
 
-可以认为，是在通过本地模拟一些线上环境。当然，如果有redis等一些需要内网资源的函数，就比较麻烦，但是我这做法，可以用于绝大部分函数。包括后台的Flaks框架部分：
+可以认为，是在通过本地模拟一些线上环境。当然，如果有 redis 等一些需要内网资源的函数，就比较麻烦，但是我这做法，可以用于绝大部分函数。包括后台的 Flaks 框架部分：
 
 ```
 def test():
@@ -127,20 +124,20 @@ if __name__ == "__main__":
     test()
 ```
 
-index执行结果：
+index 执行结果：
 
 ```text
 {'body': 'name=sdsadasdsadasd&remark=', 'headerParameters': {}, 'headers': {'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'accept-encoding': 'gzip, deflate', 'accept-language': 'zh-CN,zh;q=0.9', 'cache-control': 'no-cache', 'connection': 'keep-alive', 'content-length': '27', 'content-type': 'application/x-www-form-urlencoded', 'cookie': 'Hm_lvt_a0c900918361b31d762d9cf4dc81ee5b=1574491278,1575257377', 'endpoint-timeout': '15', 'host': 'blog.0duzhan.com', 'origin': 'http://blog.0duzhan.com', 'pragma': 'no-cache', 'proxy-connection': 'keep-alive', 'referer': 'http://blog.0duzhan.com/admin/tag/new/?url=%2Fadmin%2Ftag%2F', 'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36', 'x-anonymous-consumer': 'true', 'x-api-requestid': '656622f3b008a0d406a376809b03b52c', 'x-b3-traceid': '656622f3b008a0d406a376809b03b52c', 'x-qualifier': '$LATEST'}, 'httpMethod': 'POST', 'path': '/admin/tag/new/', 'pathParameters': {}, 'queryString': {'url': '/admin/tag/'}, 'queryStringParameters': {}, 'requestContext': {'httpMethod': 'ANY', 'identity': {}, 'path': '/admin', 'serviceId': 'service-23ybmuq7', 'sourceIp': '119.123.224.87', 'stage': 'release'}}
 {'isBase64Encoded': False, 'statusCode': 200, 'headers': {'Content-Type': 'text/html'}, 'body': '<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <title>Title</title>\n    <script>\n        var url = window.location.href\n        url = url.split("admin")[0] + "admin"\n        String.prototype.endWith = function (s) {\n            var d = this.length - s.length;\n            return (d >= 0 && this.lastIndexOf(s) == d)\n        }\n        if (window.location.href != url) {\n            if (!window.location.href.endsWith("admin") || !window.location.href.endsWith("admin/"))\n                window.location = url\n        }\n\n        function doLogin() {\n            var xmlhttp = window.XMLHttpRequest ? (new XMLHttpRequest()) : (new ActiveXObject("Microsoft.XMLHTTP"))\n            xmlhttp.onreadystatechange = function () {\n                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {\n                    if (JSON.parse(xmlhttp.responseText)["token"]) {\n                        document.cookie = "token=" + JSON.parse(xmlhttp.responseText)["token"];\n                        window.location = `http://${window.location.host}/admin`\n                    } else {\n                        alert(JSON.parse(xmlhttp.responseText)["message"])\n                    }\n                }\n            }\n            xmlhttp.open("POST", window.location.pathname, true);\n            xmlhttp.setRequestHeader("Content-type", "application/json");\n            xmlhttp.send(JSON.stringify({\n                "username": document.getElementById("username").value,\n                "password": document.getElementById("password").value,\n            }));\n        }\n    </script>\n</head>\n<body>\n\n<center><h1>Serverless Blog 后台管理</h1>\n    管理账号：<input type="text" id="username"><br>\n    管理密码：<input type="password" id="password"><br>\n    <input type="reset"><input type="submit" onclick="doLogin()"><br>\n</center>\n</body>\n</html>'}
 ```
 
-#### Flask部署
+### Flask部署
 
-Flask部署到Serverless架构可以用@serverless/tencent-flask，但是这里为了更加深入了解传统框架如何部署到Serverless架构，所以此处自行'造轮子'实现，先来看一张图：
+Flask 部署到 Serverless 架构可以用 `@serverless/tencent-flask`，但是这里为了更加深入了解传统框架如何部署到 `Serverless` 架构，所以此处自行「造轮子」实现，先来看一张图：
 
 ![](https://img.serverlesscloud.cn/202058/3-5-7.png)
 
-在通常情况下，我们使用Flask等框架实际上要通过web_server，进入到下一个环节，而我们云函数更多是一个函数，本不需要启动web server，所以我们就可以直接调用wsgi_app这个方法，其中这里的environ就是我们刚才的通过对event/context等进行处理后的对象，start_response可以认为是我们的一种特殊的数据结构，例如我们的response结构形态等。所以，如果我们自己想要实现这个过程，不使用腾讯云flask-component，可以这样做：
+在通常情况下，我们使用 Flask 等框架实际上要通过 web_server，进入到下一个环节，而我们云函数更多是一个函数，本不需要启动 web server，所以我们就可以直接调用 `wsgi_app` 这个方法，其中这里的 environ 就是我们刚才的通过对 event/context 等进行处理后的对象，`start_response` 可以认为是我们的一种特殊的数据结构，例如我们的 response 结构形态等。所以，如果我们自己想要实现这个过程，不使用腾讯云 flask-component，可以这样做：
 
 ```python
 # -*- coding: utf-8 -*-
@@ -270,9 +267,9 @@ class FlaskLambda(Flask):
 
 ```
 
-这个代码，可以将APIGW过来的请求，变成请求集成的形式，传送给Flask框架，用户可以通过request.form来获取post内容，通过request.args获取get内容等。
+这个代码，可以将 APIGW 过来的请求，变成请求集成的形式，传送给 Flask 框架，用户可以通过 `request.form` 来获取 post 内容，通过 `request.args` 获取 get 内容等。
 
-#### 全局变量
+### 全局变量
 
 全局变量可能包括用户账号，密码，云的密钥信息，数据库信息等，为了统一配置和修改，可以使用我自己写的全局变量组件：
 
@@ -328,9 +325,9 @@ Blog_Web_addComment:
         mysql_db: ${Conf.mysql_db}
 ```
 
-#### 让项目初始化更容易
+### 项目初始化
 
-为了让项目更容易初始化，例如我修改网站的名字，描述，关键词，或者我需要建立数据库等。所以这个时候我单独做了一个init文件：
+为了让项目更容易初始化，例如我修改网站的名字，描述，关键词，或者我需要建立数据库等。所以这个时候我单独做了一个 init 文件：
 
 ```text
 # -*- coding: utf8 -*-
@@ -449,7 +446,7 @@ if __name__ == "__main__":
 
 ```
 
-#### 公共组件的开发
+### 公共组件的开发
 
 在项目中会有很多公共组件，例如数据库的部分，所以我把数据库的代码，统一放到了一起：`common/mysqlCommon.py`:
 
@@ -698,7 +695,7 @@ class mysqlCommon:
         return False if result == False else True
 ```
 
-这里基本上是，这个项目需要的数据库增删改查的全部功能（admin除外），在使用的时候，分为本地和线上：
+这里基本上是，这个项目需要的数据库增删改查的全部功能（admin 除外），在使用的时候，分为本地和线上：
 
 ```text
 
@@ -716,7 +713,7 @@ except:
 mysql = mysqlCommon()
 ```
 
-通过python的异常，如果导入没找到，那就说明是本地测试，如果`from mysqlCommon import mysqlCommon`找到了，那就说明是线上环境。除了数据库的公共组件，我还有`returnCommon`等公共文件。当然， 这些文件，在使用的时候也需要打包进入，可以在yaml中增加include，例如：
+通过 python 的异常，如果导入没找到，那就说明是本地测试，如果 `from mysqlCommon import mysqlCommon` 找到了，那就说明是线上环境。除了数据库的公共组件，我还有 `returnCommon` 等公共文件。当然， 这些文件，在使用的时候也需要打包进入，可以在 yaml 中增加 include，例如：
 
 ```text
 Blog_Web_addComment:
@@ -738,26 +735,26 @@ Blog_Web_addComment:
 ### 前台功能
 
 * 列表页
-![](https://img.serverlesscloud.cn/202058/3-5-1.png)
+![列表页](https://img.serverlesscloud.cn/202058/3-5-1.png)
 
 * 内容页
-![](https://img.serverlesscloud.cn/202058/3-5-2.png)
+![内容页](https://img.serverlesscloud.cn/202058/3-5-2.png)
 
 
 ### 后台功能
 
 * 登录功能
-![](https://img.serverlesscloud.cn/202058/3-5-3.png)
+![登录功能](https://img.serverlesscloud.cn/202058/3-5-3.png)
 
 * 列表页
-![](https://img.serverlesscloud.cn/202058/3-5-4.png)
+![列表页](https://img.serverlesscloud.cn/202058/3-5-4.png)
 
 * 表单页
-![](https://img.serverlesscloud.cn/202058/3-5-5.png)
+![表单页](https://img.serverlesscloud.cn/202058/3-5-5.png)
 
 ## 项目部署
 
-* 配置`serverless.yaml`：
+* 配置 `serverless.yaml`：
 
 ```yaml
 # 函数们的整体配置信息
@@ -782,7 +779,7 @@ Conf:
     admin_password: mytest
 ```
 
-除了上面的内容，还要看一下域名问题(例如CosBucket)：
+除了上面的内容，还要看一下域名问题（例如 CosBucket）：
 
 ```
 # 网站
@@ -809,10 +806,10 @@ CosBucket:
       apiUrl: ${APIService.subDomain}
 ```
 
-以及API网关内容：
+以及 API 网关内容：
 
 ```
-# 创建API网关Service
+# 创建 API 网关 Service
 APIService:
   component: "@serverless/tencent-apigateway"
   inputs:
@@ -831,10 +828,11 @@ APIService:
     ........
 ```
 
-这两部分域名可以修改成自己的，或者删除掉这两个额key
+这两部分域名可以修改成自己的，或者删除掉这两个 key
 
 * 执行`init.py`:
-这里要注意，我是在MacOS下开发的，所以init.py应该可恶意在mac/linux运行，windows用户可能要适当修改一下。还有这里面需要一个依赖：pyyaml，需要自行安装一下。
+
+这里要注意，我是在 macOS 下开发的，`init.py` 可以在 macOS/Linux 运行，Windows 用户可能要适当修改一下。还有这里面需要一个依赖：pyyaml，需要自行安装一下。
 
 ```
 获取Yaml数据：  True
@@ -843,7 +841,7 @@ APIService:
 初始化HTML： True
 ```
 
-* 部署资源，执行`serverless --debug`
+* 部署资源，执行 `serverless --debug`
 
 ```text
 (venv) ServerlessBlog:ServerlessBlog dfounderliu$ sls --debug
@@ -890,4 +888,6 @@ APIService:
 
 ## 项目总结
 
-传统博客已经有很多了，无论是基于PHP的zblog还是wp等开源项目，都可以帮助我们快速搭建一个博客系统；除了这些博客系统之外，还有很多静态博客系统。但是就目前而言，基于Serverless架构的博客系统还是比较少见的，本文通过原生的Serverless项目开发与Flask框架的部署上Serverless实现了一个基于Python语言的博客系统。通过该博客系统，用户可以发布文章，自动撰写文章的关键词和摘要，还可以进行留言评论的管理。当然，这个博客系统仅作为工程实践使用，实际上还是有一些BUG或者设计不合理的地方，但是我相信，随着时间的发展，Serverless架构的越发火热，基于Serverless的开源Blog项目或者说CMS项目也会越来越多起来，期待那一天的到来。
+传统博客已经有很多了，无论是基于 PHP 的 zblog 还是 wp 等开源项目，都可以帮助我们快速搭建一个博客系统。除了这些博客系统之外，还有很多静态博客系统。但是就目前而言，基于 Serverless 架构的博客系统还是比较少见的。
+
+本文通过原生的 Serverless 项目开发与 Flask 框架的部署上 Serverless 实现了一个基于 Python 语言的博客系统。通过该博客系统，用户可以发布文章，自动撰写文章的关键词和摘要，还可以进行留言评论的管理。当然，这个博客系统仅作为工程实践使用，实际上还是有一些设计不合理的地方，但是我相信，随着时间的发展，Serverless 架构越来越成熟，基于 Serverless 的开源 Blog 项目或 CMS 项目也会越来越多，期待那一天的到来！

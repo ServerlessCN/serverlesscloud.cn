@@ -14,7 +14,7 @@ location:
   - 线上直播 | TencentServerless
 tags:
   - Serverless
-  - 活动  
+  - Meetup  
 ---
 
 2020 年 4 月 21 日（周二）14：00，腾讯云 Serverless Framework 将正式召开线上发布会，这是由腾讯云提供的专为中国开发人员定制的 Serverless Framework 版本。此版本中，我们发布了全新的组件（Component）机制、云引擎部署支持、实时日志和调试等能力，这些新功能为 Serverless 应用程序开发提供了顶级的顺畅体验。

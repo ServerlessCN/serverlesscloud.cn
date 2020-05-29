@@ -10,6 +10,9 @@ authors:
   - Serverless 中文网
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - TSF
+  - 云原生
 ---
 
 “以微服务、容器、无服务器以等为代表的云原生技术正在成为下一代云计算发展的重要支撑，腾讯云云原生团队正在从技术、产品、生态等多个层面全面布局，引领整个行业的发展，为用户提供极致的云计算服务。”腾讯云中间件产品总经理 Yunong Xiao 表示。

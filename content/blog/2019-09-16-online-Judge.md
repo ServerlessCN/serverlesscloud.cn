@@ -1,5 +1,5 @@
 ---
-title: 突破传统 OJ 瓶颈，“判题姬”接入云函数
+title: 突破传统 OJ 瓶颈，「判题姬」接入云函数
 description: 通过 Serverless 实现在线编程
 keywords: Serverless 在线编程,Serverless OJ
 date: 2019-09-16
@@ -13,7 +13,7 @@ authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
 tags:
   - 在线编程
-  - serverless
+  - 云函数
 ---
 
 > Online Judge 系统（简称 OJ）是一个在线的判题系统。用户可以在线提交多种程序（如C、C++、Pascal）源代码，系统对源代码进行编译和执行，并通过预先设计的测试数据来检验程序源代码的正确性。

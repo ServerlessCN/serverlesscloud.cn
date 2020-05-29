@@ -1,7 +1,5 @@
 ---
-title:
-  使用 Serverless Framework，结合云函数 SCF、API 网关和云数据库 MySQL 构建
-  REST API
+title: 使用 Serverless Framework，结合云函数 SCF、API 网关和云数据库 MySQL 构建 REST API
 description: 本文介绍如何创建一个进行自动化面试评估的 Serverless 应用！
 keywords: Serverless 自动化面试评估,Serverless 云数据库 MySQL,云函数 SCF
 date: 2019-12-17
@@ -15,8 +13,6 @@ authorslink:
 tags:
   - Node.js
   - API 网关
-  - 数据库
-  - serverless
 ---
 
 Serverless 字面意思是「无服务器」。根据语境的不同，Serverless 可能有不同的解读方

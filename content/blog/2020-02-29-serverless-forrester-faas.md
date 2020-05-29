@@ -12,7 +12,7 @@ authorslink:
   - https://github.com/jiangliu5267
 tags:
   - Serverless
-  - 活动  
+  - Meetup  
 ---
 
 很荣幸，在Forrester最新发布的《The Forrester New WaveTM: Function-As-A- Service Platforms, Q1 2020》报告中，腾讯云FaaS能力凭借在产品体验、安全性、战略愿景等方面的绝对优势脱颖而出，综合评分位居全球前三，也是中国唯一进入全球Top3的云厂商，并被Forrester官方赞为“强劲表现者”。

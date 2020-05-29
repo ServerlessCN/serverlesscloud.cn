@@ -14,7 +14,7 @@ location:
   - 线上直播 | 腾讯云 & Serverless 社区
 tags:
   - Serverless
-  - 活动  
+  - Meetup  
 ---
 
 Tencent Serverless Hours 系列线上分享会是由腾讯云 serverless 团队发起的，定期与开发者和用户交流的时间，以在线方式举办。

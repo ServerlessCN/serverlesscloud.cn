@@ -10,6 +10,9 @@ authors:
   - Serverless 中文网
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - NGW
+  - 云函数
 ---
 
 本篇文章，将分享腾讯NOW直播在Serverless技术的探索实践。

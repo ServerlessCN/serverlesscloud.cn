@@ -9,6 +9,9 @@ authors:
   - liujiang
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - 小程序
+  - DevOps
 ---
 
 > 近日，云+社区技术沙龙“高效智能运维”圆满落幕。本期沙龙围绕运维展开了一场技术盛宴，从 AIOps、Serverless DevOps、蓝鲸 PaaS平台、K8S等分享关于业务运维的技术实践干货，同时带来腾讯海量业务自研上云实践，推动传统运维向云运维转型。本文是孔令飞老师关于腾讯云 Serverless 的运维能力，Serverless 对运维的影响，微信小程序相册的运维案例等内容的分享。

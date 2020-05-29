@@ -12,8 +12,8 @@ authors:
 authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
 tags:
-  - serverless 服务端
-  - serverless
+  - 图像处理
+  - Serverless
 ---
 
 > 很多论坛、博客在进行图片上传之后，都会给自己的图像加上水印，这样可以证明这张图片「属于我」或者是「来自我的博客/网站」。那么使用 Serverless 技术来加水印的方法比传统方法好在哪儿呢，本文将对此进行一个简单的分享。

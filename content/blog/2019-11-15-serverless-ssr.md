@@ -11,8 +11,8 @@ authors:
 authorslink:
   - https://juejin.im/user/5a9f77666fb9a028c14a01eb
 tags:
-  - SSR
-  - serverless
+  - NGW
+  - Serverless SSR
 ---
 
 ## ▎目录：

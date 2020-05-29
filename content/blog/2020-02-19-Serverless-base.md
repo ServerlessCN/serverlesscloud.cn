@@ -13,7 +13,7 @@ authorslink:
   - https://canmeng.net
 tags:
   - serverless
-  - 活动  
+  - Meetup  
 ---
 
 ## 基础服务架构

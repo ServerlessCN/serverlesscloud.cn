@@ -7,9 +7,12 @@ thumbnail: https://img.serverlesscloud.cn/qianyi/images/l7x0FXB2eW7ibWsCibiaAIeG
 categories: 
   - news
 authors: 
-  - 云开发团队周俊鹏
+  - 周俊鹏
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - 云开发
+  - 云函数
 ---
 
 **导语**

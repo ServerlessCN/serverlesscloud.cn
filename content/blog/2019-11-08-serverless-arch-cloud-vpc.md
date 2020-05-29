@@ -10,6 +10,9 @@ authors:
   - Serverless 中文网
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - Serverless
+  - Techo
 ---
 
 11月6日，在腾讯云主办的首届Techo开发者大会上，腾讯云宣布与全球最流行的Serverless开发平台 Serverless.com 达成战略合作，成为 **Serverless.com 的全球战略合作伙伴以及大中华区独家合作伙伴**。

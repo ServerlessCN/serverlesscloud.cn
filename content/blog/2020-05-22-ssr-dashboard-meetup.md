@@ -14,7 +14,7 @@ location:
   - 线上直播 | 腾讯云 & Serverless 社区
 tags:
   - Serverless
-  - 活动  
+  - Meetup  
 ---
 
 为了解决用户在业务查询及监控等方面的痛点，带来更极致的开发体验。腾讯云 Serverless Framework 发布了 Serverless Dashboard 新特性，支持应用级别的监控页面，实现「0」配置的监控指标展示。

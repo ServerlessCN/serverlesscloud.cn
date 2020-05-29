@@ -12,7 +12,7 @@ authorslink:
   - https://cloud.tencent.com/developer/article/1610316
 tags:
   - Serverless
-  - 对象存储 COS
+  - 对象存储
 ---
 
 

@@ -11,7 +11,7 @@ authors:
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
-  - serverless 概念
+  - 云计算
   - serverless
 ---
 

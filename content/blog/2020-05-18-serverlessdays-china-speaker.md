@@ -12,7 +12,7 @@ authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - ServerlessDays
-  - 活动  
+  - Meetup  
 ---
 
 ServerlessDays 是面向开发人员的全球无服务器技术大会。作为 Serverless 领域最负盛名的会议之一，ServerlessDays 已经在全球 40 多个城市留下足迹，无数开发者、架构师在这里交流经验、收获成长。

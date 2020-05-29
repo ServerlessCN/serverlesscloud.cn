@@ -15,7 +15,6 @@ translators:
 translatorslink: 
   - https://www.zhihu.com/people/Aceyclee
 tags:
-  - Serverless架构
   - serverless
 ---
 

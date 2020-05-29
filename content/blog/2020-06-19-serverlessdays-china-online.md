@@ -15,7 +15,7 @@ location:
   - 线上直播 | ServerlessDays & 腾讯云 & Serverless 社区
 tags:
   - ServerlessDays
-  - 活动  
+  - Meetup
 ---
 
 ServerlessDays 是面向开发人员举办的无服务器技术会议。

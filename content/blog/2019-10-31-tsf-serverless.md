@@ -10,6 +10,9 @@ authors:
   - Serverless 中文网
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - TSF
+  - 微服务
 ---
 
 10月29日，在成都举办的腾讯全球数字生态大会城市峰会上，腾讯云重磅发布自研 PaaS 一站式开发平台 TSF Serverless，TSF Serverless 是 TSF 产品的重大升级，是 Serverless 架构和微服务平台的完美融合。

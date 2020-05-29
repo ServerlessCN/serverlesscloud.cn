@@ -12,8 +12,8 @@ authors:
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
-  - 最佳实践
-  - serverless
+  - TypeScript
+  - Node.js
 ---
 
 ## 目的

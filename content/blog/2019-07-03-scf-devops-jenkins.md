@@ -11,7 +11,7 @@ authors:
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
-  - DevOPS
+  - DevOps
   - serverless
 ---
 

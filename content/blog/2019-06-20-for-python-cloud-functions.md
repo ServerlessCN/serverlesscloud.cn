@@ -5,13 +5,13 @@ keywords: Serverless,Serverless应用,无服务器云函数
 date: 2019-06-20
 thumbnail: https://img.serverlesscloud.cn/2020414/1586871710979-%E5%85%AC%E5%85%B1%E7%94%A8.png
 categories:
-  - guides-and-tutorials
+  - user-stories
 authors:
   - Anycodes
 authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
-  - 云函数依赖
+  - 云函数
   - serverless
 ---
 
@@ -132,10 +132,6 @@ sudo pip3 install -r requirements.txt -t /home/dfounderliu/code/pillowtest
 
 感兴趣的同学可以通过 SCF 进行部署实践~
 
-
-**【Serverless实践系列】**是腾讯云Serverless团队策划的SCF场景落地系列案例指导，旨在帮忙开发者了解SCF可应用的场景及其实现方式。同时，我们也欢迎大家**分享、反馈SCF相关技术实践、产品体验问题及建议等，一经选用，即有精美礼品送**，欢迎大家积极投稿~
-
-【投稿邮箱】liujiang@tencent.com
 
 > **传送门：**
 > - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 

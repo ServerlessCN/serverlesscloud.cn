@@ -10,6 +10,9 @@ authors:
   - Anycodes
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - SCF CLI
+  - 云函数
 ---
 
 SCF CLI 是腾讯云云函数（Serverless Cloud Function，SCF）产品的命令行工具，想必很多小伙伴已经有所了解，或者试用过了。作为一个可以提高开发者效率的工具，腾讯云 Serverless 团队一直在对 SCF CLI 进行优化工作，**本文将给大家介绍新版 SCF CLI 增加的有趣功能！**

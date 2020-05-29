@@ -1,6 +1,6 @@
 ---
 title: Hello Serverless 实战沙龙回顾
-description: 2019年10月26日，Hello Serverless 沙龙活动在广州市海珠区腾讯众创空间成功举办，现在跟着小编的步伐来看看我们都为大家准备了哪些精彩的演讲吧！
+description: 2019 年 10 月 26 日，Hello Serverless 沙龙活动在广州市海珠区腾讯众创空间成功举办，一起看看我们都为大家准备了哪些精彩的演讲吧！
 keywords: Serverless, Serverless技术沙龙,Hello Serverless
 date: 2019-10-26
 thumbnail: https://img.serverlesscloud.cn/qianyi/images/YHl6UWa9s629ucl0iaVcic8rL06uEBM5go4LSXiaHnibDJSBjLGAhGlWz3QZ1RZzd3NeCibjJxOyUApDO7TaPYcwxsw.jpg
@@ -10,6 +10,8 @@ authors:
   - Serverless 中文网
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - Meetup
 ---
 
 2019年10月26日，Hello Serverless 沙龙活动在广州市海珠区腾讯众创空间成功举办，现在跟着小编的步伐来看看我们都为大家准备了哪些精彩的演讲吧！

@@ -17,8 +17,7 @@ translatorslink:
   - https://www.zhihu.com/people/Aceyclee
 tags:
   - CORS
-  - API Gateway
-  - ServerlessWEB
+  - API 网关
 ---
 
 构建 Web API 是 Serverless 应用中最流行的用例之一，您能在不增加其他操作开销的情况下，获得简单、可扩展的后端优势。

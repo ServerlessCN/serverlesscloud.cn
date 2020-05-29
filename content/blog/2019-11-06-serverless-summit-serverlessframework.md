@@ -10,6 +10,9 @@ authors:
   - Serverless 中文网
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - Serverless
+  - Techo
 ---
 
 在云计算技术领域，“Serverless（无服务器）”作为一种新型的软件设计架构正在快速崛起。作为继虚拟机、容器后的第三代通用计算平台，Serverless技术也一直是腾讯云原生的重点发力领域。

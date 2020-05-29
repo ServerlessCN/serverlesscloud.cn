@@ -1,6 +1,6 @@
 ---
 title: Serverless 如何帮助前端实现全栈？
-description: 从 Web 1.0 开始，我们对前端领域的探索从未停止。Nodejs 的出现更是彻底而深刻的改变了JavaScript 及前端开发工具的应用场景，那么身处大前端时代的我们，该如何真正由前端转向全栈呢？
+description: 从 Web 1.0 开始，我们对前端领域的探索从未停止。Nodejs 的出现更是彻底而深刻的改变了 JavaScript 及前端开发工具的应用场景，那么身处大前端时代的我们，该如何真正由前端转向全栈呢？
 keywords: Serverless, Serverless前端开发, Serverless全栈
 date: 2019-10-21
 thumbnail: https://img.serverlesscloud.cn/qianyi/images/YHl6UWa9s63icwfPNdpmT5N3Mas5icFEDQKNAJkwVpLm930RxFmIR7UTGh5anQFCUiam1T5Y8RRbnvaicGj8icGZzvw.jpg
@@ -10,6 +10,9 @@ authors:
   - Serverless 中文网
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - 全栈应用
+  - 云函数
 ---
 
 从 Web 1.0 开始，我们对前端领域的探索从未停止。Nodejs 的出现更是彻底而深刻的改变了JavaScript 及前端开发工具的应用场景，那么身处大前端时代的我们，该如何真正由前端转向全栈呢？

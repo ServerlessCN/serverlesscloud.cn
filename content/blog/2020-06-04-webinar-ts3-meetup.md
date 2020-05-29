@@ -15,7 +15,7 @@ location:
   - 线上直播 | 腾讯云 & Serverless 社区
 tags:
   - Serverless
-  - 活动  
+  - Meetup  
 ---
 
 云函数简便好用，但实际使用发现比较黑盒。  

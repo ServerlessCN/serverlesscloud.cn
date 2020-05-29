@@ -12,7 +12,7 @@ authorslink:
   - https://github.com/jiangliu5267
 tags:
   - ServerlessDays
-  - 活动  
+  - Meetup  
 ---
 
 小伙伴们，你们知道 ServerlessDays 么？ 如果你知道 Serverless 技术，但不知道 ServerlessDays 的话，那你就真的 out 了！

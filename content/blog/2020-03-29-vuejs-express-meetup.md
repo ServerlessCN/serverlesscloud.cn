@@ -14,7 +14,7 @@ location:
   - 线上直播 | Vue Beijing 社区 & Serverless 社区
 tags:
   - Serverless
-  - 活动  
+  - Meetup  
 ---
 
 在社区，我们经常会收到关于 Serverless 的「灵魂」三问：

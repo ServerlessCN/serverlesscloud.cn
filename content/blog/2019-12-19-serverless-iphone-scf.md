@@ -1,6 +1,6 @@
 ---
 title: 数千台 iPhone 同时送出，刷屏朋友圈的纪念礼有这些黑科技
-description: 腾讯云2019年度收入在第三季度破百亿，并且给员工推送了一个 H5，内含领取一部 iPhone 11 pro 作为纪念礼的消息。而在这张包含惊喜的 H5 推送背后，腾讯云云函数为其提供了底层技术支持，完美支撑了短时间内超万名用户的访问请求。
+description: 腾讯云 2019 年度收入在第三季度破百亿，并且给员工推送了一个 H5，内含领取一部 iPhone 11 pro 作为纪念礼的消息。而在这张包含惊喜的 H5 推送背后，腾讯云云函数为其提供了底层技术支持，完美支撑了短时间内超万名用户的访问请求。
 keywords: Serverless,iphone,Serverless云函数,
 date: 2019-12-19
 thumbnail:  https://serverlessimg-1253970226.cos.ap-chengdu.myqcloud.com/qianyi/images/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15867969387612.png

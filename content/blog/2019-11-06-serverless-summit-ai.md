@@ -10,6 +10,9 @@ authors:
   - Serverless 中文网
 authorslink: 
   - https://github.com/jiangliu5267
+tags:
+  - AI
+  - 云函数
 ---
 
 近两年，Serverless的发展带来了架构开发的新思路，开发者可以避免繁杂的后台开发配置工作和巨型系统架构城堡，快速构建起应用并部署，应对市场的变化。
