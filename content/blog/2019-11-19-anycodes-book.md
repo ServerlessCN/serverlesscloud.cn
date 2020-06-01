@@ -15,7 +15,7 @@ tags:
   - Serverless
 ---
 
-📚推荐一下社区成员 [Anycodes](https://github.com/anycodes) 写的书！👉[《Serverless 架构：从原理、设计到项目实战》](https://item.jd.com/12592747.html?cu=true&utm_source=kong&utm_medium=tuiguang&utm_campaign=t_1001542270_1001895103_0_1912401775&utm_term=3380c6c4d9f24f5c84a305328060c402)
+📚推荐一下社区成员 [Anycodes](https://github.com/anycodes) 写的书！👉[《Serverless 架构：从原理、设计到项目实战》](https://union-click.jd.com/jdc?e=jdext-1235945425166544896-0&p=AyIGZRNeEAAbAF0aXyUFFg5VG10RAxUAUisfSlpMWGVCHlBDUAxLBQNQVk4YDk5ER1xOGVIfUhUCFANUHFwSHUtCCUZrEkdsezZSJhVgRn0cGhxzX2FdJRldZQ4eN1USWxcKEwZVHFglAhMGVR9eFgEUBmUrWxAyU2lSH1scAxU3VCtbEQsUAlEYWREBEgNXK1sdBiLR%2B4%2BOnb3Lt%2FDN8bvXn7eAkvDBvJQ3ZStYJVlHUxxeRxUBEANdHl8QARYHUhxfEAcbD1IHWiUCEwZVElMRAhMFOxo1FQoSBFAaWxMEFjdVK1slXVZaCCtZFAMQBQ%3D%3D)
 
 Serverless 是一项很有意思的技术，字面意思是「无服务器」，当然并不是把服务器给你拿掉了，而是指的开发者无需再进行复杂的服务器运维、管理等。
 
@@ -31,7 +31,7 @@ Serverless 亦如此，现在的开发者只需要关注业务代码就可以了
 
 但是今天，我们正处于云计算发展的转折点。
 
-**Serverless 是云计算发展到一定阶段的必然产物。**Serverless —— 一个客户仅编写所需的业务逻辑代码而云厂商提供其他所有功能的架构，代表了云计算的一种巨大进步与飞跃。
+**Serverless 是云计算发展到一定阶段的必然产物。** Serverless —— 一个客户仅编写所需的业务逻辑代码而云厂商提供其他所有功能的架构，代表了云计算的一种巨大进步与飞跃。
 
 这个架构有可能抽象出硬件、基础架构、应用程序平台和操作等，这个架构可以使开发人员将精力完全放在产品创新上。这意味着，**开发者将不再需要参与基础设施及软件的维护，尤其是大规模的集群运营，成本将大幅度降低。**
 
@@ -41,8 +41,8 @@ Serverless 亦如此，现在的开发者只需要关注业务代码就可以了
 
 Serverless 自概念被提出到现在，尽管搜索热度与关注度都在增加。但是依旧很多人会觉得 Serverless 还在炒概念，其实不然，国内的落地实践已经很多了。
 
-这本实战书籍[《Serverless 架构：从原理、设计到项目实战》](https://item.jd.com/12592747.html?cu=true&utm_source=kong&utm_medium=tuiguang&utm_campaign=t_1001542270_1001895103_0_1912401775&utm_term=3380c6c4d9f24f5c84a305328060c402)就是为了让更多开发者了解并轻松入门 Serverless，无论是基础知识还是场景实践，都非常全面系统。值得一提的是，此前的书籍都是讲 AWS 的，本书是国内经验首著，比较适合国情（误
+这本实战书籍[《Serverless 架构：从原理、设计到项目实战》](https://union-click.jd.com/jdc?e=jdext-1235945425166544896-0&p=AyIGZRNeEAAbAF0aXyUFFg5VG10RAxUAUisfSlpMWGVCHlBDUAxLBQNQVk4YDk5ER1xOGVIfUhUCFANUHFwSHUtCCUZrEkdsezZSJhVgRn0cGhxzX2FdJRldZQ4eN1USWxcKEwZVHFglAhMGVR9eFgEUBmUrWxAyU2lSH1scAxU3VCtbEQsUAlEYWREBEgNXK1sdBiLR%2B4%2BOnb3Lt%2FDN8bvXn7eAkvDBvJQ3ZStYJVlHUxxeRxUBEANdHl8QARYHUhxfEAcbD1IHWiUCEwZVElMRAhMFOxo1FQoSBFAaWxMEFjdVK1slXVZaCCtZFAMQBQ%3D%3D)就是为了让更多开发者了解并轻松入门 Serverless，无论是基础知识还是场景实践，都非常全面系统。值得一提的是，此前的书籍都是讲 AWS 的，本书是国内经验首著，比较适合国情（误
 
 👇直戳链接可以购买，本专栏也会有书籍里的一些 demo 示例，方便在 PC 上直接实践。爱大家！
 
-📚**购买：**[《Serverless 架构：从原理、设计到项目实战》](https://item.jd.com/12592747.html?cu=true&utm_source=kong&utm_medium=tuiguang&utm_campaign=t_1001542270_1001895103_0_1912401775&utm_term=3380c6c4d9f24f5c84a305328060c402)
+📚**购买：**[《Serverless 架构：从原理、设计到项目实战》](https://union-click.jd.com/jdc?e=jdext-1235945425166544896-0&p=AyIGZRNeEAAbAF0aXyUFFg5VG10RAxUAUisfSlpMWGVCHlBDUAxLBQNQVk4YDk5ER1xOGVIfUhUCFANUHFwSHUtCCUZrEkdsezZSJhVgRn0cGhxzX2FdJRldZQ4eN1USWxcKEwZVHFglAhMGVR9eFgEUBmUrWxAyU2lSH1scAxU3VCtbEQsUAlEYWREBEgNXK1sdBiLR%2B4%2BOnb3Lt%2FDN8bvXn7eAkvDBvJQ3ZStYJVlHUxxeRxUBEANdHl8QARYHUhxfEAcbD1IHWiUCEwZVElMRAhMFOxo1FQoSBFAaWxMEFjdVK1slXVZaCCtZFAMQBQ%3D%3D)

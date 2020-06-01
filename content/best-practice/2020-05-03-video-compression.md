@@ -15,13 +15,11 @@ tags:
   - 视频处理
 ---
 
-## 前言
-
 在 Serverless 架构的应用案例中，有这样一个非常实在的应用：视频的处理。
 
 腾讯云的函数计算平台对这个领域的描述：
 
-> 视频应用、社交应用等场景下，用户上传的图片、音视频的总量大、频率高，对处理系统的实时性和并发能力都有较高的要求。例如：对于用户上传的视频短片，我们可以使用多个云函数对其分别处理，对应不同的清晰度（1080p、720p等），以满足不同场景下用户的需求，适应移动网络带宽较小且不稳定的特性。
+> 视频应用、社交应用等场景下，用户上传的图片、音视频的总量大、频率高，对处理系统的实时性和并发能力都有较高的要求。例如：对于用户上传的视频短片，我们可以使用多个云函数对其分别处理，对应不同的清晰度（1080p、720p 等），以满足不同场景下用户的需求，适应移动网络带宽较小且不稳定的特性。
 
 ![](https://img.serverlesscloud.cn/202058/2-6-1.png)
 
@@ -29,18 +27,18 @@ tags:
 
 ![](https://img.serverlesscloud.cn/202058/2-6-2.png)
 
-所以可以看到视频的压缩/转码等操作，在Serverless架构下确实是一个很好的典型"应用"。那么有了这样的一个"典型"应用，我们应该如何实现它呢？
+所以可以看到视频的压缩/转码等操作，在 Serverless 架构下确实是一个很好的典型应用。那么有了这样的一个"典型"应用，我们应该如何实现它呢？
 
-## 准备开始ffmpeg
+## 准备开始 FFmpeg
 
 在百科上可以看到这样的描述：
 
-> FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频/视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。
-> FFmpeg在Linux平台下开发，但它同样也可以在其它操作系统环境中编译运行，包括Windows、Mac OS X等。这个项目最早由Fabrice Bellard发起，2004年至2015年间由Michael Niedermayer主要负责维护。许多FFmpeg的开发人员都来自MPlayer项目，而且当前FFmpeg也是放在MPlayer项目组的服务器上。项目的名称来自MPEG视频编码标准，前面的"FF"代表"Fast Forward"。
+> FFmpeg 是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用 LGPL 或 GPL 许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频/视频编解码库 libavcodec，为了保证高可移植性和编解码质量，libavcodec 里很多 code 都是从头开发的。
+> FFmpeg 在 Linux 平台下开发，但它同样也可以在其它操作系统环境中编译运行，包括 Windows、macOS 等。这个项目最早由Fabrice Bellard 发起，2004 年至 2015 年间由 Michael Niedermayer 主要负责维护。许多 FFmpeg 的开发人员都来自 MPlayer 项目，而且当前 FFmpeg 也是放在 MPlayer 项目组的服务器上。项目的名称来自 MPEG 视频编码标准，前面的「FF」代表「Fast Forward」。
 
-而在实际生产生活中，ffmpeg确实也是一个非常好的工具，我们可以通过这个工具来进行图像的压缩/转码等操作。
+而在实际生产生活中，ffmpeg 确实也是一个非常好的工具，我们可以通过这个工具来进行图像的压缩/转码等操作。
 
-通过ffmpeg的官网，我们可以看到不同的操作系统，有着不同的文件供我们选择：
+通过 ffmpeg 的官网，我们可以看到不同的操作系统，有着不同的文件供我们选择：
 
 ![](https://img.serverlesscloud.cn/202058/2-6-3.png)
 
@@ -48,25 +46,25 @@ tags:
 
 ![](https://img.serverlesscloud.cn/202058/2-6-4.png)
 
-也就是说，我们要有一个在CentOS操作系统下可以使用的ffmpeg，接下来，我们就准备这个文件：
+也就是说，我们要有一个在 CentOS 操作系统下可以使用的 ffmpeg，接下来，我们就准备这个文件：
 
-1. 在CentOS操作系统上，下载源码包：`wget http://www.ffmpeg.org/releases/ffmpeg-3.1.tar.gz`
+1. 在 CentOS 操作系统上，下载源码包：`wget http://www.ffmpeg.org/releases/ffmpeg-3.1.tar.gz`
 2. 解压并进入目录：`tar -zxvf ffmpeg-3.1.tar.gz && cd ffmpeg-3.1`
 3. 编译安装： `./configure && make && make install`
 
-在进行`./configure`操作的时候，可能出现`yasm/nasm not found or too old. Use --disable-yasm for a crippledbuild`错误。
+在进行 `./configure` 操作的时候，可能出现 `yasm/nasm not found or too old. Use --disable-yasm for a crippledbuild` 错误。 
+ 
+yasm 是汇编编译器，ffmpeg 为了提高效率使用了汇编指令，如 MMX 和 SSE 等。所以系统中未安装 yasm 时，就会报错误，此时可以安装 yasm 编译器来解决：
 
-yasm是汇编编译器，ffmpeg为了提高效率使用了汇编指令，如MMX和SSE等。所以系统中未安装yasm时，就会报错误，此时可以安装yasm编译器来解决：
-
-1. 下载`wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz`
+1. 下载 `wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz`
 2. 解压并进入目录：`tar zxvf yasm-1.3.0.tar.gz && cd yasm-1.3.0`
 3. 编译安装：`./configure && make && make install`
 
-完成ffmpeg的编译安装，可以在当前目录下看到生成了文件：ffmpeg
+完成 ffmpeg 的编译安装，可以在当前目录下看到生成了文件：ffmpeg
 
 此时我们保存这个文件即可在腾讯云的云函数中使用。
 
-## Serverless助力视频压缩
+## Serverless 助力视频压缩
 
 按照腾讯云提供的时间架构图，我们可以看到其推荐的是对象存储触发器触发函数，也就是说我们将视频存储到对象存储中，然后通过对象存储的相关触发器触发函数，进行视频的处理，处理之后再回传对象存储的操作。
 
@@ -83,7 +81,7 @@ secret_key = os.environ.get('secret_key')
 region = os.environ.get('region')
 cosClient = CosS3Client(CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key))
 
-# 移动ffmpeg到tmp目录，并且赋予权限
+# 移动 ffmpeg 到 tmp 目录，并且赋予权限
 with open("./ffmpeg", "rb") as rf:
     with open("/tmp/ffmpeg", "wb") as wf:
         wf.write(rf.read())
@@ -102,7 +100,7 @@ def main_handler(event, context):
         response = cosClient.get_object(Bucket=bucket, Key=key)
         response['Body'].get_stream_to_file(download_path)
 
-        # 执行ffmpeg指令压缩视频
+        # 执行 ffmpeg 指令压缩视频
         child = subprocess.run('/tmp/ffmpeg  -i %s -r 10 -b:a 32k %s'%(download_path, upload_path), stdout=subprocess.PIPE, stderr=subprocess.PIPE, close_fds=True, shell=True)
 
         # 上传图片
@@ -115,7 +113,7 @@ def main_handler(event, context):
     
 ```
 
-这里的主要操作就是在容器建立的时候，或者说是函数冷启动的时候，将ffmpeg复制到可执行目录，并且设置其权限为`755`。
+这里的主要操作就是在容器建立的时候，或者说是函数冷启动的时候，将 ffmpeg 复制到可执行目录，并且设置其权限为 `755`。
 
 完成之后可以进行`serverless.yaml`的编写：
 
@@ -156,21 +154,21 @@ MyVideo:
 
 可以看到两个视频文件的差距。
 
-当然，这里仅仅是通过`/tmp/ffmpeg  -i 原视频 -r 10 -b:a 32k 生成视频`来进行视频压缩，除此之外，我们还可以使用ffmpeg进行额外的操作(以下内容来源于canmeng的博客)：
+当然，这里仅仅是通过 `/tmp/ffmpeg  -i 原视频 -r 10 -b:a 32k 生成视频` 来进行视频压缩，除此之外，我们还可以使用 ffmpeg 进行额外的操作（以下内容来源于 canmeng 的博客）：
 
 ```text
 ffmpeg -ss 00:00:00 -t 00:00:30 -i test.mp4 -vcodec copy -acodec copy output.mp4
 ```
 
->-ss 指定从什么时间开始   
->-t 指定需要截取多长时间   
->-i 指定输入文件
+> -ss 指定从什么时间开始   
+> -t 指定需要截取多长时间   
+> -i 指定输入文件
 
-这个命令就是从00秒开始裁剪到00+30=30秒结束，总共30秒的视频。这个命令执行很快，因为只是原始数据的拷贝，中间没有什么编码和解码的过程。执行这个命令后你能得到output.mp4这个输出文件。你可以用视频播放软件播放这个视频看看。
+这个命令就是从 00 秒开始裁剪到 00+30=30 秒结束，总共 30 秒的视频。这个命令执行很快，因为只是原始数据的拷贝，中间没有什么编码和解码的过程。执行这个命令后你能得到 `output.mp4` 这个输出文件。你可以用视频播放软件播放这个视频看看。
 
-可能有些视频裁剪后的效果，如期望一致，00秒开始，30秒结束，总共30秒的视频，但是有些视频裁剪后你会发现可能开始和结束都不是很准确，有可能是从00秒开始，33秒结束。这是为什么呢？
+可能有些视频裁剪后的效果，如期望一致，00 秒开始，30 秒结束，总共 30 秒的视频，但是有些视频裁剪后你会发现可能开始和结束都不是很准确，有可能是从 00 秒开始，33 秒结束。这是为什么呢？
 
-因为这些视频里30秒处地方刚好不是关键帧，而ffmpeg会在你输入的时间点附近圆整到最接近的关键帧处，然后做接下来的事情。如果你不懂什么是关键帧，没关系，这也不影响你使用这个命令。
+因为这些视频里 30 秒处地方刚好不是关键帧，而 ffmpeg 会在你输入的时间点附近圆整到最接近的关键帧处，然后做接下来的事情。如果你不懂什么是关键帧，没关系，这也不影响你使用这个命令。
 
 合并视频
 
@@ -291,13 +289,13 @@ ffmpeg -i in.mp4 -filter:v "crop=in_w:in_h-40" -c:a copy out.mp4
 >-map file:stream 设置输入流映射   
 >-debug 打印特定调试信息  
 
- ## 总结
+## 总结
  
- Serverless架构在做一些同步的业务是有很不错效果的，同时Serverless架构在异步的一些流程上，也是有很棒的表现，无论是通过Serverless架构做大数据的分析实现MapReduce，还是做图像的压缩、水印和格式转换，抑或本文分享的视频相关的处理。
+Serverless 架构在做一些同步的业务是有很不错效果的，同时 Serverless 架构在异步的一些流程上，也有很棒的表现，无论是通过 Serverless 架构做大数据的分析实现 MapReduce，还是做图像的压缩、水印和格式转换，抑或本文分享的视频相关的处理。
  
- 通过Serverless架构，我们还可以挖掘更多领域的应用，例如通过Serverless架构做一个Word/PPT转PDF的工具等。Serverless架构的行业应用，领域应用，需要更多人提供更多的实践。
+通过 Serverless 架构，我们还可以挖掘更多领域的应用，例如通过 Serverless 架构做一个 Word/PPT 转 PDF 的工具等。Serverless 架构的行业应用，领域应用，需要更多人提供更多的实践。
 
- ## Serverless Framework 30 天试用计划
+## Serverless Framework 30 天试用计划
 
 我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
 
