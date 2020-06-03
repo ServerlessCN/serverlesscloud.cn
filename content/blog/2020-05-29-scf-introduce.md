@@ -8,7 +8,7 @@ categories:
   - user-stories
 authors:
   - tianyun
-authorslink: 
+authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - 云函数
@@ -24,7 +24,7 @@ tags:
 
 腾讯云云函数提供了满足多种开发场景的工具和能力，目前支持通过控制台、SCF CLI、SCF VS Code 插件完成函数创建，创建函数的详细步骤可参考: https://cloud.tencent.com/document/product/583/19806
 
-### Hello World 
+### Hello World
 
 **以云函数控制台为例，带领大家一起创建你的第一个模版函数。**
 
@@ -42,8 +42,8 @@ tags:
 
 > 说明：`index.main_handler` 参数值表示 SCF 控制台会将此段代码自动保存为 `index.py` 文件，并将该文件压缩和上传至 SCF 平台，用于创建云函数。
 
-> 示例代码中的 `main_handler` 为入口函数，主要参数为：  
-> - event 参数：可以获取触发源的消息。  
+> 示例代码中的 `main_handler` 为入口函数，主要参数为：
+> - event 参数：可以获取触发源的消息。
 > - context 参数：可以获取本函数的环境及配置信息。
 
 ### 如何使用控制台部署函数
@@ -100,13 +100,13 @@ tags:
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

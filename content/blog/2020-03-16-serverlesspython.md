@@ -29,7 +29,7 @@ Python是一种热门的编程语言，Serverless 是近年来迅速兴起的一
 
 ## 一、Serverless 的架构规范
 
-### **1、Serverless Web 场景处理的典型结构** 
+### **1、Serverless Web 场景处理的典型结构**
 
 如下图所示，一般的 Web
 场景无非通过客户端，到服务器，然后服务器去调用数据库，这是最常用的一个简单
@@ -82,7 +82,7 @@ Web 场景，那么 Serverless
 
 
 
-### **3、Serverless场景典型的工作流程** 
+### **3、Serverless场景典型的工作流程**
 
 它有涉及到这个概念，第一个概念是事件状态，表示允许等待来自事件源的一个事件。第二个是操作/任务状态，表示这个状态下允许按照顺序或者并行运行一个函数。第三个是切换状态，它允许切换到多个其他状态，比方说前一个函数的结果，然后触发分支，转换到不同的一个状态。第四个是停止状态，用来终止工作流程。
 
@@ -100,7 +100,7 @@ FunctionC，这个流程就结束了。这是我们典型的事件状态，包�
 
 
 
-### **4、Serverless 函数架构规范** 
+### **4、Serverless 函数架构规范**
 
 现在我们来看一下 Serverless 的底层的 FaaS
 函数、调用模型如何定义，包括约束。
@@ -358,33 +358,33 @@ Component，你也可以成为我们开源社区的贡献者，可以去直接�
 
 -   通过 npm 安装 serverless
 
-``` 
+```
 $ npm install -g serverless
 ```
 
-### 2. 创建 
+### 2. 创建
 
 -   本地创建 serverless.yml 文件：
 
-``` 
+```
 $ touch serverless.yml
 ```
 
 
 -   初始化一个新的 npm 包，并安装 Express：
 
-``` 
+```
 npm init              # 创建后持续回车npm i --save express  # 安装express
 ```
 
 -   创建一个 `app.js`文件，并在其中创建您的
     Express App：
 
-``` 
+```
 const express = require('express')const app = express()app.get('/', function(req, res) {  res.send('Hello Express')})// don't forget to export!module.exports = app
 ```
 
-### 3. 配置 
+### 3. 配置
 
 -   在 serverless.yml 中进行如下配置
 
@@ -392,12 +392,12 @@ const express = require('express')const app = express()app.get('/', function(req
 # serverless.ymlexpress:  component: '@serverless/tencent-express'  inputs:    region: ap-shanghai
 ```
 
-### 4. 部署 
+### 4. 部署
 
 -   通过`sls`命令进行部署，并可以添加`--debug`参数查看部署过程中的信息
 
 
-``` 
+```
 $ sls --debug  DEBUG ─ Resolving the template's static variables.  DEBUG ─ Collecting components from the template.  DEBUG ─ Downloading any NPM components found in the template.  DEBUG ─ Analyzing the template's components dependencies.  DEBUG ─ Creating the template's components graph.  DEBUG ─ Syncing template state.  DEBUG ─ Executing the template's components graph.  DEBUG ─ Compressing function ExpressComponent_7xRrrd file to /Users/dfounderliu/Desktop/temp/code/.serverless/ExpressComponent_7xRrrd.zip.  DEBUG ─ Compressed function ExpressComponent_7xRrrd file successful  DEBUG ─ Uploading service package to cos[sls-cloudfunction-ap-shanghai-code]. sls-cloudfunction-default-ExpressComponent_7xRrrd-1572512568.zip  DEBUG ─ Uploaded package successful /Users/dfounderliu/Desktop/temp/code/.serverless/ExpressComponent_7xRrrd.zip  DEBUG ─ Creating function ExpressComponent_7xRrrd  DEBUG ─ Created function ExpressComponent_7xRrrd successful  DEBUG ─ Starting API-Gateway deployment with name express.TencentApiGateway in the ap-shanghai region  DEBUG ─ Using last time deploy service id service-n0vs2ohb  DEBUG ─ Updating service with serviceId service-n0vs2ohb.  DEBUG ─ Endpoint ANY / already exists with id api-9z60urs4.  DEBUG ─ Updating api with api id api-9z60urs4.  DEBUG ─ Service with id api-9z60urs4 updated.  DEBUG ─ Deploying service with id service-n0vs2ohb.  DEBUG ─ Deployment successful for the api named express.TencentApiGateway in the ap-shanghai region.  express:    region:              ap-shanghai    functionName:        ExpressComponent_7xRrrd    apiGatewayServiceId: service-n0vs2ohb    url:                 http://service-n0vs2ohb-1300415943.ap-shanghai.apigateway.myqcloud.com/release/  36s › express › done
 ```
 
@@ -411,13 +411,13 @@ $ sls --debug  DEBUG ─ Resolving the template's static variables.  DEBUG ─ C
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

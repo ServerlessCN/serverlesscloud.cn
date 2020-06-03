@@ -10,11 +10,11 @@ authors:
   -  腾讯云
 authorslink:
   - https://serverlesscloud.cn
-location: 
+location:
   - 线上直播 | TencentServerless
 tags:
   - Serverless
-  - Meetup  
+  - Meetup
 ---
 
 2020 年 4 月 21 日（周二）14：00，腾讯云 Serverless Framework 将正式召开线上发布会，这是由腾讯云提供的专为中国开发人员定制的 Serverless Framework 版本。此版本中，我们发布了全新的组件（Component）机制、云引擎部署支持、实时日志和调试等能力，这些新功能为 Serverless 应用程序开发提供了顶级的顺畅体验。
@@ -35,13 +35,13 @@ tags:
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

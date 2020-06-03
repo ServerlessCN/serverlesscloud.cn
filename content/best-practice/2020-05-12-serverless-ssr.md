@@ -46,7 +46,7 @@ $ npm install -g serverless
 在项目根目录创建 `serverless.yml` 文件：
 
 ```
-$ touch serverless.yml 
+$ touch serverless.yml
 ```
 
 在其中进行如下配置：
@@ -93,7 +93,7 @@ $ sls deploy
 
 ## 查看和管理你的 SSR 项目
 
-刚才的步骤，我们完成了 Next.js 框架的 Serverless 方式部署。那么，如何查看和管理刚才部署的 Next.js 项目呢？  
+刚才的步骤，我们完成了 Next.js 框架的 Serverless 方式部署。那么，如何查看和管理刚才部署的 Next.js 项目呢？
 
 腾讯云 Serverless 提供了一站式的 Dashboard，可以方便地对项目进行可视化的管理和后续操作。访问地址：`https://serverless.cloud.tencent.com`
 
@@ -111,13 +111,13 @@ $ sls deploy
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

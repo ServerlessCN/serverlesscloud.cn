@@ -8,13 +8,13 @@ categories:
   - meetup
 authors:
   - Serverless 社区
-authorslink: 
+authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
-location: 
+location:
   - 线上直播 | 腾讯云 & Serverless 社区
 tags:
   - Serverless
-  - Meetup  
+  - Meetup
 ---
 
 Tencent Serverless Hours 系列线上分享会是由腾讯云 serverless 团队发起的，定期与开发者和用户交流的时间，以在线方式举办。
@@ -25,7 +25,7 @@ Tencent Serverless Hours 系列线上分享会是由腾讯云 serverless 团队�
 
 分享会暂定每两周举办一次，每次历时一小时左右。Tencent Serverless Hours 第一期线上分享会即将举办，届时将有腾讯云高级产品经理黄文俊 (Alfred)、腾讯云高级前端开发工程师蔡卫峰 (Wes) 为您分享云函数的最新进展！
 
-- **举办时间：** 5 月 8 日（周五）15:00 
+- **举办时间：** 5 月 8 日（周五）15:00
 - **举办方式：** 线上直播
 
 详情见下方海报，欢迎广大开发者奔走相告！
@@ -38,13 +38,13 @@ Tencent Serverless Hours 系列线上分享会是由腾讯云 serverless 团队�
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

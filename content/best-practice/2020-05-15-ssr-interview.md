@@ -73,7 +73,7 @@ Koot.js 是基于 React、Koa、Webpack 来架构的，其中用 Koa 搭建的 N
 
 答：如果要做 ToC 的产品，建议做 SSR 尝试，让用户尽快的看见页面内容总是更好的。
 
-前端的 SSR 一定会考虑是否需要 Isomorphic，如果小团队建议先从比较流行的框架着手尝试，如 Next.js、Nuxt.js 等，也推荐体验我们的 Koot.js。Next.js、Nuxt.js 这些框架在腾讯云 Serverless Framework 都现成的组件支持，Koot.js 也可以用我们的方案。无论是 SSR 还是 Serverless，最好都是基于现有框架，从零开始搭建框架坑太多了，如果没有足够业务支持不要浪费精力自己去做框架，学会一个框架的成本要远小于维护一个框架的成本。  
+前端的 SSR 一定会考虑是否需要 Isomorphic，如果小团队建议先从比较流行的框架着手尝试，如 Next.js、Nuxt.js 等，也推荐体验我们的 Koot.js。Next.js、Nuxt.js 这些框架在腾讯云 Serverless Framework 都现成的组件支持，Koot.js 也可以用我们的方案。无论是 SSR 还是 Serverless，最好都是基于现有框架，从零开始搭建框架坑太多了，如果没有足够业务支持不要浪费精力自己去做框架，学会一个框架的成本要远小于维护一个框架的成本。
 
 最后，感谢董老师接受 [Serverless 中文社区](https://serverlesscloud.cn)的采访。
 
@@ -83,13 +83,13 @@ Koot.js 是基于 React、Koa、Webpack 来架构的，其中用 Koa 搭建的 N
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

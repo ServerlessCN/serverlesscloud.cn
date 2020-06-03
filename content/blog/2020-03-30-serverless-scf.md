@@ -3,7 +3,7 @@ title: 腾讯云云函数 SCF 初探
 description: 现在 Serverless 这么火，那么就拿腾讯云的 SCF 云函数作为一个入门的 helloword。
 keywords: Serverless,SCF,Serverless应用
 date: 2020-03-30
-thumbnail: https://img.serverlesscloud.cn/2020522/1590164894454-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901648851993.png 
+thumbnail: https://img.serverlesscloud.cn/2020522/1590164894454-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901648851993.png
 categories:
   - user-stories
 authors:
@@ -71,7 +71,7 @@ VS Code创建流程差不多，略过。
 
 接下来就是**编写函数**部分了。
 
-执行项目初始化命令：`scf init -n go_test -r go1` 
+执行项目初始化命令：`scf init -n go_test -r go1`
 
 这个命令中参数`-n`是执行项目名，`-r`是指定开发环境，不指定的话默认初始化用的是Python3，具体可用的环境可以查看文档的相关部分或使用`scf init --help`查看帮助信息。
 
@@ -136,13 +136,13 @@ go build -o index index.go  //如果没有修改生成的默认文件名index.go
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

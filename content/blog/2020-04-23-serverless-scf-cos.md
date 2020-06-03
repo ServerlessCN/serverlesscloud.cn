@@ -115,7 +115,7 @@ export default {
   flex: 0 0 13%;
 .box_phone
   margin:2.5vw;
-  flex: 0 0 28%; 
+  flex: 0 0 28%;
 </style>
 ```
 
@@ -133,7 +133,7 @@ export default {
 
 下面就让我们一起来解开Severless的神秘面纱一探究竟吧~
 
-## **1. 安装Tencent Serverless Toolkit for VS Code** 
+## **1. 安装Tencent Serverless Toolkit for VS Code**
 
 所谓工欲善其事，必先利其器。
 
@@ -202,7 +202,7 @@ Resources:
         #     Type: APIGW
         #     Properties:
         #       StageName: release
-        #       ServiceId: 
+        #       ServiceId:
         #       HttpMethod: ANY
       Type: 'TencentCloud::Serverless::Function'
 Globals:
@@ -214,7 +214,7 @@ OK，这样我们就创建好了一个新的云函数，下面开始编写业务
 
 首先我们来看一下函数上线后，通过Timer或者Api网关触发函数时，main\_handler(event, context)入口函数里的event长啥样
 
-假设我们通过访问api网关 
+假设我们通过访问api网关
 
 ```javascript
 https://service-xxxxx-66666666.sh.apigw.tencentcs.com/release/demo?key=叶问
@@ -315,7 +315,7 @@ else:
     from qcloud_cos_v5 import CosS3Client
     from qcloud_cos_v5 import CosServiceError
     from qcloud_cos_v5 import CosClientError
-    
+
 # 配置存储桶
 appid = '66666666666'
 secret_id = u'xxxxxxxxxxxxxxx'
@@ -404,7 +404,7 @@ Resources:
         Type: Event
         Environment:
           Variables:
-        Description: 这是一个测试函数 
+        Description: 这是一个测试函数
         Handler: index.main_handler
         MemorySize: 64
         Timeout: 3
@@ -414,7 +414,7 @@ Resources:
             Type: APIGW
             Properties:
               StageName: release
-              ServiceId: 
+              ServiceId:
               HttpMethod: ANY
       Type: 'TencentCloud::Serverless::Function'
 ```
@@ -493,13 +493,13 @@ Resources:
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
