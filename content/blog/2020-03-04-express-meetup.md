@@ -10,11 +10,11 @@ authors:
   - serverless 社区
 authorslink:
   - https://serverlesscloud.cn
-location: 
+location:
   - 线上直播 | 腾讯云大学 & 云+社区 & Serverless 社区
 tags:
   - Serverless
-  - Meetup  
+  - Meetup
 ---
 
 Tencent Serverless 目前已经支持了不少语言的热门框架，包括 Express、 Koa、Egg 以及 Flask 等等大家熟悉的框架都可以通过  Component 轻松上云部署。但用户的业务场景和功能需求是多种多样的，如果现有的 Component 无法满足业务诉求，开发者则需要制作一个自己的 Component 来支持自身的业务。
@@ -27,8 +27,8 @@ Tencent Serverless 目前已经支持了不少语言的热门框架，包括 Exp
 
 ![免费预约](https://img.serverlesscloud.cn/2020325/1585125194298-IMG_0295.PNG)
 
-**福利一：**将文章转发至朋友圈，并将朋友圈截图发送至 TencentServerless 公众号，我们将随机抽取10名幸运朋友送上计算器笔记本一个。  
-  
+**福利一：**将文章转发至朋友圈，并将朋友圈截图发送至 TencentServerless 公众号，我们将随机抽取10名幸运朋友送上计算器笔记本一个。
+
 **福利二：**课堂包含在线分享+互动答疑环节，直播分享过程中讲师将布置课堂作业，3月6日（本周五）24:00之前完成作业，还有腾讯企鹅公仔、腾讯云云函数产品无门槛代金券等礼品 100\% 放送！
 - 前30名部署成功用户，可免费获得腾讯企鹅公仔一个；
 - 30名之后部署成功用户，可免费获得价值50元的腾讯云云函数产品无门槛代金券一张。
@@ -45,13 +45,13 @@ Tencent Serverless 目前已经支持了不少语言的热门框架，包括 Exp
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

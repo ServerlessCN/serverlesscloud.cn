@@ -10,11 +10,11 @@ authors:
   - serverless 社区
 authorslink:
   - https://serverlesscloud.cn
-location: 
+location:
   - 线上直播 | 腾讯云 & 云+社区 & Serverless 社区
 tags:
   - serverless
-  - Meetup  
+  - Meetup
 ---
 
 Tencent Serverless 目前已经支持了不少语言的热门框架，包括 Express、 Koa、Egg 以及 Flask 等等大家熟悉的框架都可以轻松上云部署。不过在实际业务的使用中，尤其是迁移过程中，还是有不少需要注意的地方，比如 POST/GET 的参数传输方法难以原生获取等等。
@@ -50,7 +50,7 @@ Tencent Serverless 目前已经支持了不少语言的热门框架，包括 Exp
 
 - 30名之后部署成功用户，可免费获得价值50元的腾讯云云函数产品无门槛代金券一张。
 
-**福利三：**结合在线课堂的分享，撰写部署的最佳实践文章、学习心得或者其他与Serverless 相关内容，并发布在您的知乎、博客或者朋友圈等平台，**即可获得腾讯蓝牙音箱、腾讯云产品无门槛代金券等好礼。**  
+**福利三：**结合在线课堂的分享，撰写部署的最佳实践文章、学习心得或者其他与Serverless 相关内容，并发布在您的知乎、博客或者朋友圈等平台，**即可获得腾讯蓝牙音箱、腾讯云产品无门槛代金券等好礼。**
 
 ## Serverless Framework 30 天试用计划
 
@@ -58,13 +58,13 @@ Tencent Serverless 目前已经支持了不少语言的热门框架，包括 Exp
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

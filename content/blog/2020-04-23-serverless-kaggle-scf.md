@@ -242,15 +242,15 @@ api网关+?base64Image=base64编码后的验证码数据
 
 这里我推荐几个 github 仓库，都是可以直接上手应用的程度
 
-use cnn recognize captcha by tensorflow. 本项目针对字符型图片验证码，使用tensorflow实现卷积神经网络，进行验证码识别。         
+use cnn recognize captcha by tensorflow. 本项目针对字符型图片验证码，使用tensorflow实现卷积神经网络，进行验证码识别。
 
 [https://github.com/nickliqian/cnn\_captcha](https://github.com/nickliqian/cnn_captcha)
 
-[验证码识别-训练] This  project is based on CNN/ResNet/DenseNet+GRU/LSTM+CTC/CrossEntropy to  realize verification code identification. This project is only for  training the model.   
+[验证码识别-训练] This  project is based on CNN/ResNet/DenseNet+GRU/LSTM+CTC/CrossEntropy to  realize verification code identification. This project is only for  training the model.
 
 [https://github.com/kerlomz/captcha\_trainer](https://github.com/kerlomz/captcha_trainer)
 
-[验证码识别-部署] This  project is based on CNN+BLSTM+CTC to realize verificationtion. This  projeccode identificat is only for deployment models.     
+[验证码识别-部署] This  project is based on CNN+BLSTM+CTC to realize verificationtion. This  projeccode identificat is only for deployment models.
 
 [https://github.com/kerlomz/captcha\_platform](https://github.com/kerlomz/captcha_platform)
 
@@ -260,13 +260,13 @@ use cnn recognize captcha by tensorflow. 本项目针对字符型图片验证码
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

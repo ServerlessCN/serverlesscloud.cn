@@ -10,7 +10,7 @@ authors:
   - serverless 社区
 authorslink:
   - https://serverlesscloud.cn
-location: 
+location:
   - 线上直播 | Authing & 腾讯云 & Serverless 社区
 tags:
   - Serverless
@@ -35,7 +35,7 @@ tags:
 
 陈涛：Serverless Framework 社区专家 
 
-参与 Serverless 社区及开源的相关研发工作。拥有丰富前端、JavaScript 技术经验，以及网站及小程序等项目开发经验，腾讯云 Serverless 系列课程特约讲师。   
+参与 Serverless 社区及开源的相关研发工作。拥有丰富前端、JavaScript 技术经验，以及网站及小程序等项目开发经验，腾讯云 Serverless 系列课程特约讲师。 
 内容简介：
 
 - serverless Component 运行机制
@@ -53,7 +53,7 @@ tags:
 
 ### 三、基于Serverless Framework和OIDC 组件设计一个图床应用
 
-谢扬：Authing 创始人  
+谢扬：Authing 创始人
 SoLiD 中文社区（learnsolid.cn）发起人 
 
 曾任职字节跳动 LarkCloud 云服务部门核心 Hacker，负责⽇活过亿 Serverless 平台产品设计和技术研发，该平台支撑来头条系全产品矩阵：今日头条、抖音、西瓜视频、飞书等。⻓期关注生产⼒科技，以提⾼社会生产⼒为个⼈使命。
@@ -74,13 +74,13 @@ Authing Live 直播间：https://live.bilibili.com/4850077
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

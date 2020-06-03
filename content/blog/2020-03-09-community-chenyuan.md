@@ -80,30 +80,30 @@ serverless create --template-url https://github.com/serverless/components/tree/m
 
 ```
 # -*- coding: utf8 -*-
- 
+
 import json
 from flask import Flask, jsonify, request
 app = Flask(__name__)
- 
- 
+
+
 @app.route("/")
 def index():
     return "Hello Flash"
- 
+
 @app.route('/user', methods = ['POST'])
 def addUser():
     # we must get request body from clound function event;
     event = request.environ['event']
     user = json.loads(event['body'])
     return jsonify(data=user)
- 
- 
+
+
 @app.route("/user", methods = ['GET'])
 def listUser():
     users = [{'name': 'test1'}, {'name': 'test2'}]
     return jsonify(data=users)
- 
- 
+
+
 @app.route("/user/<id>", methods = ['GET'])
 def getUser(id):
     return jsonify(data={'name': 'test1'})
@@ -123,13 +123,13 @@ def getUser(id):
 
 ```
 from flask import Flask
- 
+
 app = Flask(__name__)
- 
+
 @app.route('/')
 def hello_world():
     return 'Hello World!'
- 
+
 if __name__ == '__main__':
     app.run()
 ```
@@ -180,9 +180,9 @@ serverless 的缩写是 sls，因此也可以用 sls 简化命令。但是这里
 ```
 Microsoft Windows [版本10.0.17763.1039]
 (c) 2018 Microsoft Corporation。保留所有权利。
- 
+
 D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>sls --debug
- 
+
   DEBUG─Resolving the template's static variables.
   DEBUG─Collecting components from the template.
   DEBUG─Downloading any NPM components found in the template.
@@ -209,11 +209,11 @@ eful-fs\graceful-fs.js:325:16
 a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
 (node:22500) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will termi
 nate the Node.js process with a non-zero exit code.
- 
+
   194s»MyComponent»canceled
- 
+
 终止批处理操作吗(Y/N)? Y
- 
+
 D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>
 ```
 
@@ -225,7 +225,7 @@ D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>
 
 ```
 D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>sls --debug
- 
+
   DEBUG─Resolving the template's static variables.
   DEBUG─Collecting components from the template.
   DEBUG─Downloading any NPM components found in the template.
@@ -253,16 +253,16 @@ ccf648921aad7c279d94f138eaaf833_slspyc\requirements.txt ...
   DEBUG─API with id api-ivk6tk0y created.
   DEBUG─Deploying service with id service-0ok85tqh.
   DEBUG─Deployment successful for the api named MyComponent.TencentApiGateway in the ap-beijing region.
- 
+
   MyComponent:
     region:              ap-beijing
     functionName:        LAB_Serverless
     apiGatewayServiceId: service-0ok85tqh
     url:                 http://service-0ok85tqh-1251901037.bj.apigw.tencentcs.com/test/
- 
+
   44s»MyComponent»done
- 
- 
+
+
 D:\yuangezhizao\Documents\PycharmProjects\LAB_Serverless>
 ```
 
@@ -333,7 +333,7 @@ apigatewayConf:
 
 ## 4. 原理深入
 
-去云函数看实际运行环境，发现把.idea文件夹也给上传了 另外，多了如下俩本地没有的文件： 
+去云函数看实际运行环境，发现把.idea文件夹也给上传了 另外，多了如下俩本地没有的文件：
 
 ![img](https://img.serverlesscloud.cn/2020323/1584939428669-IMG_0276.JPG)
 
@@ -350,9 +350,9 @@ apigatewayConf:
 ```
 """
 This module converts an AWS API Gateway proxied request to a WSGI request.
- 
+
 Inspired by: https://github.com/miserlou/zappa
- 
+
 Author: Logan Raarup <logan@logan.dk>
 """
 ```
@@ -361,7 +361,7 @@ Author: Logan Raarup <logan@logan.dk>
 
 ## 5. 迁移 LAB
 
-接下来就得一点儿一点儿进行迁移了，不难想到应该有非常多的坑的，比如如何访问自己的 MySQL、Redis、 MongoDB，再比如Celery计划任务，自己是用RabbitMQ 的消息队列，这东西要怎么上云？这些问题都是自己需要后期去解决的。毕竟上大学就开始写的网站，有非常非常多的依赖…… 
+接下来就得一点儿一点儿进行迁移了，不难想到应该有非常多的坑的，比如如何访问自己的 MySQL、Redis、 MongoDB，再比如Celery计划任务，自己是用RabbitMQ 的消息队列，这东西要怎么上云？这些问题都是自己需要后期去解决的。毕竟上大学就开始写的网站，有非常非常多的依赖……
 
 更新日志：当前 git 版本：7a65018，总提交 824 次
 
@@ -373,13 +373,13 @@ Author: Logan Raarup <logan@logan.dk>
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

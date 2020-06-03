@@ -53,7 +53,7 @@ PostgreSQL for Serverless 是一款基于 PostgreSQL 数据库实现的按需分
 
 还未安装的小伙伴，可以通以下文档指引安装完成：[Serverless Framework 快速开始](https://www.serverless.com/cn/framework/docs/getting-started/)
 
-## 实战一：部署 Vue + Express + PostgreSQL 全栈网站  
+## 实战一：部署 Vue + Express + PostgreSQL 全栈网站
 
 1. 通过 npm 全局安装 Serverless Framework：
 
@@ -64,7 +64,7 @@ $ npm install -g serverless
 安装完毕后，用如下命令查看 Serverless Framework 的版本信息，确保版本不低于 Components: 2.30.1
 
 ```
-$ serverless -v 
+$ serverless -v
 ```
 
 2. 新建本地文件夹 `serverless-wty`，下载相关的 template。
@@ -81,11 +81,11 @@ $ touch .env 
 vim.env
 ```
 
-> .env  
-TENCENT_SECRET_ID=xxx  // 您账号的 SecretId  
-TENCENT_SECRET_KEY=xxx // 您账号的 SecretKey  
-地域可用区配置  
-REGION=ap-guangzhou //资源部署区，该项目中指云函数与静态页面部署区  
+> .env
+TENCENT_SECRET_ID=xxx  // 您账号的 SecretId
+TENCENT_SECRET_KEY=xxx // 您账号的 SecretKey
+地域可用区配置
+REGION=ap-guangzhou //资源部署区，该项目中指云函数与静态页面部署区
 ZONE=ap-guangzhou-2 //资源部署可用区 ，该项目中指 DB 部署所在的可用区
 
 *说明：如果没有腾讯云账号，请先[注册新账号](https://url.cn/UVqywKDk)。如果已有腾讯云账号，请保证您的账号已经授权了 AdministratorAccess 权限。您可以在 API 密钥管理中获取 SecretId 和 SecretKey。*
@@ -122,7 +122,7 @@ $  sls remove --all
 **上述实战主要包含以下组件:**
 
 - Serverless RESTful API：通过云函数和 API 网关构建的 Express 框架实现
-RESTful API。  
+RESTful API。
 - Serverless 静态网站：前端通过托管 Vue.js 静态页面到 COS 对象存储中。
 - PostgreSQL Serverless：通过创建 PostgreSQL DB 为全栈网站提供数据库服务。
 VPC：通过创建 VPC 和 子网，提供 SCF 云函数和数据库的网络打通和使用。
@@ -138,7 +138,7 @@ $ npm install -g serverless
 安装完毕后，用如下命令查看 Serverless Framework 的版本信息，确保版本不低于 `Components: 2.30.1`
 
 ```
-$ serverless -v 
+$ serverless -v
 ```
 
 2. 新建一个本地文件夹，使用 `create --template-url` 命令，下载相关 template：
@@ -193,13 +193,13 @@ Serverless PostgreSQL 组件和 Serverless TCB 组件不仅满足了大家通过
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

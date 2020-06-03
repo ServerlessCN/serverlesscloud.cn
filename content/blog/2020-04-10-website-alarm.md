@@ -38,34 +38,34 @@ import smtplib
 import urllib.request
 from email.mime.text import MIMEText
 from email.header import Header
- 
+
 ssl._create_default_https_context = ssl._create_unverified_context
- 
- 
+
+
 def sendEmail(content, to_user):
     sender = 'service@anycodes.cn'
     receivers = [to_user]
- 
+
     mail_msg = content
     message = MIMEText(mail_msg, 'html', 'utf-8')
     message['From'] = Header(" 网站监控 ", 'utf-8')
     message['To'] = Header(" 站长 ", 'utf-8')
- 
+
     subject = " 网站监控告警 "
     message['Subject'] = Header(subject, 'utf-8')
- 
+
     try:
         smtpObj = smtplib.SMTP_SSL("smtp.exmail.qq.com", 465)
         smtpObj.login('发送邮件的邮箱地址', '密码')
         smtpObj.sendmail(sender, receivers, message.as_string())
     except smtplib.SMTPException as e:
         print(e)
- 
- 
+
+
 def getStatusCode(url):
     return urllib.request.urlopen(url).getcode()
- 
- 
+
+
 def main_handler(event, context):
     url = "http://www.anycodes.cn"
     if getStatusCode(url) == 200:
@@ -165,7 +165,7 @@ Cron 表达式有五个必需字段，按空格分隔。
 ```python
 import urllib.request
 import urllib.parse
- 
+
 url = "* 某测速网站地址 *"
 form_data = {
     'guid': '62a55a0e-387e-4d87-bf69-5e0c9dd6b983',
@@ -181,7 +181,7 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
     'X-Requested-With': 'XMLHttpRequest'
 }
- 
+
 print(urllib.request.urlopen(
     urllib.request.Request(
         url=url,
@@ -189,7 +189,7 @@ print(urllib.request.urlopen(
         headers=headers
     )
 ).read().decode("utf-8"))
- 
+
 ```
 
 获得结果：
@@ -212,7 +212,7 @@ print(urllib.request.urlopen(
 		pagehtml: ''
 	}
 })
- 
+
 ```
 
 在这个结果中，我们可以提取部分数据，例如江苏宿迁 [电信] 访问目标网站的基础数据：
@@ -221,7 +221,7 @@ print(urllib.request.urlopen(
 总耗时：alltime:'212'
 链接耗时：conntime:'116'
 下载耗时：downtime:'78'
- 
+
 ```
 
 此时，我们可以改造代码对更多的节点，进行测试：
@@ -236,7 +236,7 @@ print(urllib.request.urlopen(
 江苏泰州 [电信]	总耗时:180	链接耗时:104	下载耗时:69
 安徽合肥 [电信]	总耗时:196	链接耗时:110	下载耗时:73
 ...
- 
+
 ```
 
 并对项目中的 index.py 进行代码修改：
@@ -251,15 +251,15 @@ import smtplib
 import urllib.request
 from email.mime.text import MIMEText
 from email.header import Header
- 
+
 socket.setdefaulttimeout(2.5)
 ssl._create_default_https_context = ssl._create_unverified_context
- 
+
 def getWebTime():
- 
+
     final_list = []
     final_status = True
- 
+
     total_list = '''62a55a0e-387e-4d87-bf69-5e0c9dd6b983 江苏宿迁 [电信]
     f403cdf2-27f8-4ccd-8f22-6f5a28a01309 广东佛山 [电信]
     5bea1430-f7c2-4146-88f4-17a7dc73a953 河南新乡 [多线]
@@ -268,7 +268,7 @@ def getWebTime():
     2805fa9f-05ea-46bc-8ac0-1769b782bf52 黑龙江哈尔滨 [联通]
     722e28ca-dd02-4ccd-a134-f9d4218505a5 广东深圳 [移动]
 8e7a403c-d998-4efa-b3d1-b67c0dfabc41 广东深圳 [移动]'''
- 
+
     url = "* 某测速网站地址 *"
     for eve in total_list.split('\n'):
         id_data, node_name = eve.strip().split(" ")
@@ -323,16 +323,16 @@ def sendEmail(content, to_user):
         smtpObj.sendmail(sender, receivers, message.as_string())
     except smtplib.SMTPException:
         pass
- 
+
 def getStatusCode(url):
     return urllib.request.urlopen(url).getcode()
- 
+
 def main_handler(event, context):
     url = "http://www.anycodes.cn"
     final_status,final_list = getWebTime()
     if not final_status:
         sendEmail(" 您的网站 %s 的状态：<br>%s" % (url, "<br>".join(final_list)), "service@52exe.cn")
- 
+
 ```
 
 由于本文是以学习为主，所以我们将节点列表进行缩减，只保留几个。通过部署，可得到结果：
@@ -382,7 +382,7 @@ def GetSignature(param):
     # 签名串编码
     signature = urllib.parse.quote(signature)
     return signature
- 
+
 def GetGroupOffsets(max_lag, phoneList):
     param = {}
     param["Action"] = "GetGroupOffsets"
@@ -413,7 +413,7 @@ def GetGroupOffsets(max_lag, phoneList):
         if len(result_list)>0:
             KafkaLagRobot(result_list)
             KafkaLagSMS(result_list,phoneList)
- 
+
 ```
 
 - 接入企业微信机器人模块：
@@ -431,7 +431,7 @@ def KafkaLagRobot(content):
     req_attr = urllib.request.Request(url, data)
     resp_attr = urllib.request.urlopen(req_attr)
     return_msg = resp_attr.read().decode("utf-8")
- 
+
 ```
 
 - 接入腾讯云短信服务模块：
@@ -446,7 +446,7 @@ def KafkaLagSMS(infor, phone_list):
     strSign = "appkey=%s&random=%s&time=%s&mobile=%s" % (strAppKey, strRand, strTime, ",".join(strMobile))
     sig = hashlib.sha256()
     sig.update(strSign.encode("utf-8"))
- 
+
     phone_dict = []
     for eve_phone in phone_list:
         phone_dict.append(
@@ -471,7 +471,7 @@ def KafkaLagSMS(infor, phone_list):
     req_attr = urllib.request.Request(url=url, data=data)
     resp_attr = urllib.request.urlopen(req_attr)
     return_msg = resp_attr.read().decode("utf-8")
- 
+
 ```
 
 - 发送邮件告警模块：
@@ -489,7 +489,7 @@ def sendEmail(content, to_user):
         smtpObj.sendmail(sender, [to_user], message.as_string())
     except smtplib.SMTPException as e:
         logging.debug(e)
- 
+
 ```
 
 完成模块编写，和上面的方法一样，进行项目部署。部署成功之后进行测试，测试可看到功能可用：
@@ -514,13 +514,13 @@ def sendEmail(content, to_user):
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
