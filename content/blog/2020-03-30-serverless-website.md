@@ -49,14 +49,14 @@ tags:
 import sys, getopt, random
 import json
 def main_handler(event, context):
-    print("Received event: %s" % event) 
+    print("Received event: %s" % event)
     print("Received context: %s" % context)
     params = event["queryString"]
     return auto_cal_generator(int(params["limit"]), int(params["op_count"]), params["op_type"].split(","), int(params["total"]))
 
 def auto_cal_generator(limit=100, op_count=1, op_type=["+"], total=100):
     if limit>999 or op_count>9 or total>99:
-        return "exceed max input limit" 
+        return "exceed max input limit"
     res = {}
     res["msg"] = "Here are today's %d works, good luck!" % total
     questions = []
@@ -67,7 +67,7 @@ def auto_cal_generator(limit=100, op_count=1, op_type=["+"], total=100):
         for i in range(0, op_count+1):
             num = 0
             if i == 0:
-                num = random.randint(1,max(1,min(limit,up))) 
+                num = random.randint(1,max(1,min(limit,up)))
                 question = "%s%d" % (question, num)
                 up -= num
                 continue
@@ -77,10 +77,10 @@ def auto_cal_generator(limit=100, op_count=1, op_type=["+"], total=100):
                 op = op_type[op_i]
             question = "%s%s" % (question, op)
             if op =="+":
-                num = random.randint(1,max(1,min(limit,up))) 
+                num = random.randint(1,max(1,min(limit,up)))
                 up -= num
             elif op == "-":
-                num = random.randint(1,max(limit-up, 1)) 
+                num = random.randint(1,max(limit-up, 1))
                 up += num
             else:
                 print("operator error: %s" % op)
@@ -135,11 +135,11 @@ def auto_cal_generator(limit=100, op_count=1, op_type=["+"], total=100):
 //<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
 
 function getHeader(){
-	var nowDate = new Date(); 
+	var nowDate = new Date();
 	var dateTime = nowDate.toGMTString();
 	var SecretId = '****';
-	var SecretKey = '****'; 
-	var source = 'your_source'; 
+	var SecretKey = '****';
+	var source = 'your_source';
 	var auth = "hmac id=\"" + SecretId + "\", algorithm=\"hmac-sha1\", headers=\"x-date source\", signature=\"";
 	var signStr = "x-date: " + dateTime + "\n" + "source: " + source;
 	var sign = CryptoJS.HmacSHA1(signStr, SecretKey)
@@ -155,19 +155,19 @@ function getQ(){
 		type: "get",
 		data:{
 			"op_count" : 1,
-			"op_type" : "+,-", 
+			"op_type" : "+,-",
 			"limit" : 100,
 			"total" : 10
 		},
 		dataType: "json",
 		crossDomain: true,
-		headers: getHeader(), 
+		headers: getHeader(),
 		success: function (data) {
 			if (data.errorCode < 0){
 				//deal function error: data.errorMessage
 				return
 			}
-			data= $.parseJSON(data); 
+			data= $.parseJSON(data);
 			//show result in page
 		},
 		error: function(jqXHR, textStatus, errorThrown){
@@ -191,13 +191,13 @@ function getQ(){
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

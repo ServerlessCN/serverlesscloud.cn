@@ -8,7 +8,7 @@ categories:
   - news
 authors:
   - InfoQ
-authorslink: 
+authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - ServerlessDays
@@ -27,12 +27,12 @@ Serverless 可以使几乎所有的互联网开发者以及互联网应用都从
 
 如果你是 Serverless 爱好者，如果你是互联网前沿技术的观察者，如果你在工作中需要用到 Serverless，如果你想要先人一步掌握关于 Serverless 的关键内容，那么我们 InfoQ 将强烈建议大家报名此次大会，这场专注于 Serverless 的大会将会从以下几个方面为你带来关于 Serverless 的全新视野。
 
-- Serverless 最具权威性质的全球性技术大会，趋势、痛点、实践等一应俱全；  
-- 全面了解 Serverless 的前世今生；  
-- 国际范拉满，全球最具代表性的Serverless技术大佬一一到场；  
-- 腾讯、百度、滴滴、京东、爱奇艺等国内大厂，最贴合中国市场应用现状的最佳厂商实践；  
-- 从 0 到 1，Serverless 在各大厂落地的真实痛点解析；  
-- Serverless 在 Google 的无服务器化实践；  
+- Serverless 最具权威性质的全球性技术大会，趋势、痛点、实践等一应俱全；
+- 全面了解 Serverless 的前世今生；
+- 国际范拉满，全球最具代表性的Serverless技术大佬一一到场；
+- 腾讯、百度、滴滴、京东、爱奇艺等国内大厂，最贴合中国市场应用现状的最佳厂商实践；
+- 从 0 到 1，Serverless 在各大厂落地的真实痛点解析；
+- Serverless 在 Google 的无服务器化实践；
 
 ......
 
@@ -52,13 +52,13 @@ Serverless 可以使几乎所有的互联网开发者以及互联网应用都从
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

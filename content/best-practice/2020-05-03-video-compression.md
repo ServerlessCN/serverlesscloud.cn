@@ -52,8 +52,8 @@ tags:
 2. 解压并进入目录：`tar -zxvf ffmpeg-3.1.tar.gz && cd ffmpeg-3.1`
 3. 编译安装： `./configure && make && make install`
 
-在进行 `./configure` 操作的时候，可能出现 `yasm/nasm not found or too old. Use --disable-yasm for a crippledbuild` 错误。 
- 
+在进行 `./configure` 操作的时候，可能出现 `yasm/nasm not found or too old. Use --disable-yasm for a crippledbuild` 错误。
+
 yasm 是汇编编译器，ffmpeg 为了提高效率使用了汇编指令，如 MMX 和 SSE 等。所以系统中未安装 yasm 时，就会报错误，此时可以安装 yasm 编译器来解决：
 
 1. 下载 `wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz`
@@ -110,7 +110,7 @@ def main_handler(event, context):
             Key="/new_mp4/" + key.split('/')[-1]
         )
 
-    
+
 ```
 
 这里的主要操作就是在容器建立的时候，或者说是函数冷启动的时候，将 ffmpeg 复制到可执行目录，并且设置其权限为 `755`。
@@ -160,8 +160,8 @@ MyVideo:
 ffmpeg -ss 00:00:00 -t 00:00:30 -i test.mp4 -vcodec copy -acodec copy output.mp4
 ```
 
-> -ss 指定从什么时间开始   
-> -t 指定需要截取多长时间   
+> -ss 指定从什么时间开始
+> -t 指定需要截取多长时间
 > -i 指定输入文件
 
 这个命令就是从 00 秒开始裁剪到 00+30=30 秒结束，总共 30 秒的视频。这个命令执行很快，因为只是原始数据的拷贝，中间没有什么编码和解码的过程。执行这个命令后你能得到 `output.mp4` 这个输出文件。你可以用视频播放软件播放这个视频看看。
@@ -192,60 +192,60 @@ ffmpeg -i in.mp4 -filter:v "crop=in_w:in_h-40" -c:a copy out.mp4
 // 去掉视频中的音频
 ffmpeg -i input.mp4 -vcodec copy -an output.mp4
 // -an: 去掉音频；-vcodec:视频选项，一般后面加copy表示拷贝
- 
+
 // 提取视频中的音频
 ffmpeg -i input.mp4 -acodec copy -vn output.mp3
 // -vn: 去掉视频；-acodec: 音频选项， 一般后面加copy表示拷贝
- 
+
 // 音视频合成
 ffmpeg -y –i input.mp4 –i input.mp3 –vcodec copy –acodec copy output.mp4
 // -y 覆盖输出文件
- 
+
 //剪切视频
 ffmpeg -ss 0:1:30 -t 0:0:20 -i input.mp4 -vcodec copy -acodec copy output.mp4
 // -ss 开始时间; -t 持续时间
- 
+
 // 视频截图
 ffmpeg –i test.mp4 –f image2 -t 0.001 -s 320x240 image-%3d.jpg
 // -s 设置分辨率; -f 强迫采用格式fmt;
- 
+
 // 视频分解为图片
 ffmpeg –i test.mp4 –r 1 –f image2 image-%3d.jpg
 // -r 指定截屏频率
- 
+
 // 将图片合成视频
 ffmpeg -f image2 -i image%d.jpg output.mp4
- 
+
 //视频拼接
 ffmpeg -f concat -i filelist.txt -c copy output.mp4
- 
+
 // 将视频转为gif
 ffmpeg -i input.mp4 -ss 0:0:30 -t 10 -s 320x240 -pix_fmt rgb24 output.gif
 // -pix_fmt 指定编码
- 
+
 // 将视频前30帧转为gif
 ffmpeg -i input.mp4 -vframes 30 -f gif output.gif
- 
+
 // 旋转视频
 ffmpeg -i input.mp4 -vf rotate=PI/2 output.mp4
- 
+
 // 缩放视频
 ffmpeg -i input.mp4 -vf scale=iw/2:-1 output.mp4
 // iw 是输入的宽度， iw/2就是一半;-1 为保持宽高比
- 
+
 //视频变速
 ffmpeg -i input.mp4 -filter:v setpts=0.5*PTS output.mp4
- 
+
 //音频变速
 ffmpeg -i input.mp3 -filter:a atempo=2.0 output.mp3
- 
+
 //音视频同时变速，但是音视频为互倒关系
 ffmpeg -i input.mp4 -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]" -map "[v]" -map "[a]" output.mp4
- 
+
 // 视频添加水印
 ffmpeg -i input.mp4 -i logo.jpg -filter_complex [0:v][1:v]overlay=main_w-overlay_w-10:main_h-overlay_h-10[out] -map [out] -map 0:a -codec:a copy output.mp4
 // main_w-overlay_w-10 视频的宽度-水印的宽度-水印边距；
- 
+
 // 截取视频局部
 ffmpeg -i in.mp4 -filter:v "crop=out_w:out_h:x:y" out.mp4
 // 截取部分视频，从[80,60]的位置开始，截取宽200，高100的视频
@@ -257,42 +257,42 @@ ffmpeg -i in.mp4 -filter:v "crop=in_w:in_h-40" -c:a copy out.mp4
 
 ```
 参数说明：
->-vcodec xvid 使用xvid压缩   
->-s 320×240 指定分辨率   
->-r fps 设置帧频 缺省25   
->-b <比特率> 指定压缩比特   
->-acodec aac 设定声音编码   
->-ac <数值> 设定声道数，1就是单声道，2就是立体声   
->-ar <采样率> 设定声音采样率，PSP只认24000   
->-ab <比特率> 设定声音比特率   
->-vol <百分比> 设定音量   
->-y 覆盖输出文件   
->-t duration 设置纪录时间 hh:mm:ss\[.xxx]格式的记录时间也支持   
->-ss position 搜索到指定的时间 \[-]hh:mm:ss\[.xxx]的格式也支持   
->-title string 设置标题   
->-author string 设置作者   
->-copyright string 设置版权   
->-hq 激活高质量设置   
->-aspect aspect 设置横纵比 4:3 16:9 或 1.3333 1.7777   
->-croptop size 设置顶部切除带大小 像素单位   
->-cropbottom size -cropleft size -cropright size   
->-padtop size 设置顶部补齐的大小 像素单位   
->-padbottom size -padleft size -padright size -padcolor color 设置补齐条颜色(hex,6个16进制的数，红:绿:兰排列，比如 000000代表黑色)   
->-bt tolerance 设置视频码率容忍度kbit/s   
->-maxrate bitrate设置最大视频码率容忍度   
->-minrate bitreate 设置最小视频码率容忍度   
->-bufsize size 设置码率控制缓冲区大小   
->-vcodec codec 强制使用codec编解码方式。 如果用copy表示原始编解码数据必须被拷贝   
->-sameq 使用同样视频质量作为源（VBR）   
->-pass n 选择处理遍数（1或者2）。两遍编码非常有用。第一遍生成统计信息，第二遍生成精确的请求的码率   
->-passlogfile file 选择两遍的纪录文件名为file   
->-map file:stream 设置输入流映射   
->-debug 打印特定调试信息  
+>-vcodec xvid 使用xvid压缩
+>-s 320×240 指定分辨率
+>-r fps 设置帧频 缺省25
+>-b <比特率> 指定压缩比特
+>-acodec aac 设定声音编码
+>-ac <数值> 设定声道数，1就是单声道，2就是立体声
+>-ar <采样率> 设定声音采样率，PSP只认24000
+>-ab <比特率> 设定声音比特率
+>-vol <百分比> 设定音量
+>-y 覆盖输出文件
+>-t duration 设置纪录时间 hh:mm:ss\[.xxx]格式的记录时间也支持
+>-ss position 搜索到指定的时间 \[-]hh:mm:ss\[.xxx]的格式也支持
+>-title string 设置标题
+>-author string 设置作者
+>-copyright string 设置版权
+>-hq 激活高质量设置
+>-aspect aspect 设置横纵比 4:3 16:9 或 1.3333 1.7777
+>-croptop size 设置顶部切除带大小 像素单位
+>-cropbottom size -cropleft size -cropright size
+>-padtop size 设置顶部补齐的大小 像素单位
+>-padbottom size -padleft size -padright size -padcolor color 设置补齐条颜色(hex,6个16进制的数，红:绿:兰排列，比如 000000代表黑色)
+>-bt tolerance 设置视频码率容忍度kbit/s
+>-maxrate bitrate设置最大视频码率容忍度
+>-minrate bitreate 设置最小视频码率容忍度
+>-bufsize size 设置码率控制缓冲区大小
+>-vcodec codec 强制使用codec编解码方式。 如果用copy表示原始编解码数据必须被拷贝
+>-sameq 使用同样视频质量作为源（VBR）
+>-pass n 选择处理遍数（1或者2）。两遍编码非常有用。第一遍生成统计信息，第二遍生成精确的请求的码率
+>-passlogfile file 选择两遍的纪录文件名为file
+>-map file:stream 设置输入流映射
+>-debug 打印特定调试信息
 
 ## 总结
- 
+
 Serverless 架构在做一些同步的业务是有很不错效果的，同时 Serverless 架构在异步的一些流程上，也有很棒的表现，无论是通过 Serverless 架构做大数据的分析实现 MapReduce，还是做图像的压缩、水印和格式转换，抑或本文分享的视频相关的处理。
- 
+
 通过 Serverless 架构，我们还可以挖掘更多领域的应用，例如通过 Serverless 架构做一个 Word/PPT 转 PDF 的工具等。Serverless 架构的行业应用，领域应用，需要更多人提供更多的实践。
 
 ## Serverless Framework 30 天试用计划
@@ -301,13 +301,13 @@ Serverless 架构在做一些同步的业务是有很不错效果的，同时 Se
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

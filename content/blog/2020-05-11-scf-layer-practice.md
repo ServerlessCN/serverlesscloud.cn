@@ -7,8 +7,8 @@ thumbnail: https://img.serverlesscloud.cn/2020514/1589461771804-layer.jpg
 categories:
   - guides-and-tutorials
 authors:
-  - Alfred 
-authorslink: 
+  - Alfred
+authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - Serverless
@@ -21,7 +21,7 @@ tags:
 
 **在这种情况下**
 
-每个云函数的代码目录下均有一套依赖库代码，而这其中有很多在若干个函数中都是重复的，不但占用了大量的空间，而且管理麻烦，在某些依赖库需要进行升级时，要进入到每个函数项目中去检查依赖关系和升级操作。  
+每个云函数的代码目录下均有一套依赖库代码，而这其中有很多在若干个函数中都是重复的，不但占用了大量的空间，而且管理麻烦，在某些依赖库需要进行升级时，要进入到每个函数项目中去检查依赖关系和升级操作。
 
 另一方面，这些依赖库通常不会有大的变动，但是却需要在每次函数进行更新时，都要和业务代码一同打包上传，导致实际的代码更新可能就一两行，但是需要生成一个十几兆甚至几十兆的包去上传，在网络环境不好的情况下还需要忍受缓慢的上传速度。
 
@@ -37,7 +37,7 @@ tags:
 
 ![](https://img.serverlesscloud.cn/2020511/1589168582373-%E6%88%AA%E5%B1%8F2020-05-11%20%E4%B8%8A%E5%8D%8811.42.24.png)
 
-层作为一个和云函数独立的资源，有独立的创建、管理流程。和函数创建类似，可以通过上传 zip 包，或者控制台上选择文件夹，或者将 zip 包提前上传 cos 后再引用的方式，来将文件内容提交到云上，并创建好层。每一个提交到层中的文件包，都将生成一个新的版本。  
+层作为一个和云函数独立的资源，有独立的创建、管理流程。和函数创建类似，可以通过上传 zip 包，或者控制台上选择文件夹，或者将 zip 包提前上传 cos 后再引用的方式，来将文件内容提交到云上，并创建好层。每一个提交到层中的文件包，都将生成一个新的版本。
 
 因此，在创建好一个层以后，就将具有了第一个版本；而后续如果依赖库或文件内容有升级，可以继续更新层，并生成新的版本，版本号依次增大。在创建层，或发布新版本的时候，还可以指定当前层所可支持的 runtime，这样相应 runtime 的函数，才可以浏览或绑定当前层。
 
@@ -62,9 +62,9 @@ tags:
 首先在本地分别创建两个文件夹：  `requests-lib` 和 `cmq-lib`，通过命令行进入 `requests-lib` 文件夹后，执行命令
 
 ```
- pip install requests -t 
+ pip install requests -t
 ```
-  
+
 在此目录下完成 requests 库的下载安装。而在 cmq-lib 文件夹内，我们通过下载或 clone https://github.com/tencentyun/cmq-python-sdk 项目，将 cmq 的 sdk 下载到本地。
 
 接下来，使用这两个文件夹分别创建两个层，同样命名为 `requests-lib` 和 `cmq-lib`，通过直接选择文件夹创建，并选择好适配 runtime 为 python2。在创建完成两个层后，他们都具有版本 1可供函数绑定。
@@ -156,23 +156,14 @@ def main_handler(event, context):
 
 > 详情可查阅：[Serverless Framework 30 天试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
+---
 
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
-
-<script>
-var n = navigator.userAgent.toLowerCase();
-if (n.indexOf('android')>-1 || n.indexOf('iphone')>-1 || n.indexOf('iPhone')>-1 || n.indexOf('ipod')>-1 || n.indexOf('ipad')>-1 || n.indexOf('ios')>-1){
-  document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div>';
-}else{
-  document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<p>扫码写代码，这可能是你从未尝试过的开发体验。不来试试吗？</p><p>3 秒极速部署，立即体验史上最快的 <a href="https://serverless.cloud.tencent.com/deploy/express">Serverless  HTTP</a> 实战开发！</p><iframe height="500px" width="100%" src="https://serverless.cloud.tencent.com/deploy/express" frameborder="0"  allowfullscreen></iframe>';
-}
-</script>
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

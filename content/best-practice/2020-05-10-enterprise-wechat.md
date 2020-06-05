@@ -333,7 +333,7 @@ MyRobot_Monitor:
 随着网络技术的不断发展，IoT 技术也逐渐走进了千家万户，无论是扫地机器人、智能窗帘等智能家居，还是智能音箱等娱乐设施，IoT 技术都变得可见可及。
 
 小爱同学，也能通过 Serverless 架构，快速开发出专属新功能。
-	
+
 首先我们去「小爱同学」的开放平台注册账号，并且提交认证：
 
 ![](https://img.serverlesscloud.cn/202058/2-9-9.png)
@@ -422,13 +422,13 @@ def main_handler(event, context):
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

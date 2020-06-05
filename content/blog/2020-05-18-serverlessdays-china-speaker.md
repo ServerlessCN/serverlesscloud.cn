@@ -4,15 +4,15 @@ description: 15 位全球顶级专家将从 Serverless 发展前瞻、技术演�
 keywords: Serverless,Serverlessdays,Serverlessdays议程
 date: 2020-05-18
 thumbnail: https://img.serverlesscloud.cn/2020512/1589268598969-haibao.jpg
-categories: 
+categories:
   - news
-authors: 
+authors:
   - Serverless 社区
-authorslink: 
+authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - ServerlessDays
-  - Meetup  
+  - Meetup
 ---
 
 ServerlessDays 是面向开发人员的全球无服务器技术大会。作为 Serverless 领域最负盛名的会议之一，ServerlessDays 已经在全球 40 多个城市留下足迹，无数开发者、架构师在这里交流经验、收获成长。
@@ -53,13 +53,13 @@ ServerlessDays 是面向开发人员的全球无服务器技术大会。作为 S
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

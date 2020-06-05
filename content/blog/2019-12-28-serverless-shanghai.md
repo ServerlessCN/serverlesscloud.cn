@@ -10,23 +10,23 @@ authors:
   - serverless 社区
 authorslink:
   - https://serverlesscloud.cn
-location: 
+location:
   - 上海 | 中国计算机学会 & 深圳清华大学研究院 & 腾讯云 & 云+社区
 tags:
   - serverless
-  - Meetup  
+  - Meetup
 ---
 
-![活动信息](https://img.serverlesscloud.cn/2020325/1585121773487-IMG_0291.JPG)  
+![活动信息](https://img.serverlesscloud.cn/2020325/1585121773487-IMG_0291.JPG)
 
 
-Serverless 架构在 IT 行业蓄势待发，并非没有道理。Serverless 架构具有缩短交付时间，简化操作和运维成本等能力，以及创造出一种革命性的付费模式——按资源消耗付费，这些能极大节约企业资源以及人力成本。  
+Serverless 架构在 IT 行业蓄势待发，并非没有道理。Serverless 架构具有缩短交付时间，简化操作和运维成本等能力，以及创造出一种革命性的付费模式——按资源消耗付费，这些能极大节约企业资源以及人力成本。
 
 12 月 28 日，由中国计算机学会、深圳清华大学研究院、腾讯云联合举办，清华校友总会互联网与新媒体专业委员会、深圳清华校友互联网与人工智能协会、通联支付共同协办的**Serverless 技术行 · 上海站沙龙**，将围绕 **Serverless + 5G，Serverless Framework 框架与应用实践， Serverless SSR 技术探索，以及提升前端研发效能等热门话题**，展开深入分享，拨开 Serverless 技术迷雾，帮助企业级开发者快速落地 Serverless 应用。
 
 ## 活动指南
 
-**活动时间：**12 月 28 日 13:30-18:00  
+**活动时间：**12 月 28 日 13:30-18:00
 **活动地点：**上海市浦东新区金沪路 55 号通华科技大厦 6 楼多功能厅
 
 ## 活动议程
@@ -76,13 +76,13 @@ SSR 是 Web 应用常见的优化手段，使用了 SSR 意味着开发者必须
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

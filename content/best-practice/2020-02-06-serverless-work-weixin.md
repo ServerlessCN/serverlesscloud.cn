@@ -133,13 +133,13 @@ if ($err) {
 } else {
 //疫情监控告警机器人
 $sc = $sc=" **2019-nCoV 疫情信息同步:** \n
-> 全国疫情: 
+> 全国疫情:
 > 确诊人数<font color=\"info\">".$echo_responseall['results'][0]['confirmedCount']."</font>,疑似感染人数<font color=\"info\">".$echo_responseall['results'][0]['suspectedCount']."</font>,治愈人数<font color=\"info\">".$echo_responseall['results'][0]['curedCount']."</font>,死亡人数<font color=\"info\">".$echo_responseall['results'][0]['deadCount']."</font>\n
-> 广东省: 
+> 广东省:
 > 确诊人数<font color=\"info\">".$echo_responsesz['results'][0]['confirmedCount']."</font>,疑似感染人数<font color=\"info\">".$echo_responsesz['results'][0]['suspectedCount']."</font>,治愈人数<font color=\"info\">".$echo_responsesz['results'][0]['curedCount']."</font>,死亡人数<font color=\"info\">".$echo_responsesz['results'][0]['deadCount']."</font>\n
-> 湖北省: 
+> 湖北省:
 > 确诊人数<font color=\"info\">".$echo_responsehb['results'][0]['confirmedCount']."</font>,疑似感染人数<font color=\"info\">".$echo_responsehb['results'][0]['suspectedCount']."</font>,治愈人数<font color=\"info\">".$echo_responsehb['results'][0]['curedCount']."</font>,死亡人数<font color=\"info\">".$echo_responsehb['results'][0]['deadCount']."</font>\n
-> 深圳市: 
+> 深圳市:
 > 确诊人数<font color=\"info\">".$echo_responseszqz."</font>,疑似感染人数<font color=\"info\">".$echo_responseszys."</font>,治愈人数<font color=\"info\">".$echo_responseszzy."</font>,死亡人数<font color=\"info\">".$echo_responseszsw."</font>\n
 
 > <font color=\"info\">".$echo_responseall['results'][0]['note1']."</font>
@@ -172,7 +172,7 @@ $err = curl_error($curl);
 
 curl_close($curl);
 
-return "运行成功"; 
+return "运行成功";
 }
 
 }
@@ -289,13 +289,13 @@ nction.zip
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

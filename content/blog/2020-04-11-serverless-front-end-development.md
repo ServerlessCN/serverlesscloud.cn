@@ -10,11 +10,11 @@ authors:
   - serverless 社区
 authorslink:
   - https://serverlesscloud.cn
-location: 
+location:
   - 线上直播 | 腾讯云大学 & 前端早读课 & Serverless 社区
 tags:
   - Serverless
-  - Meetup  
+  - Meetup
 ---
 
 前端开发已进入了深水区，产品端形态愈加丰富，公司密集上云的趋势在加速，为了保证海量的前端产品顺利上线，产研模式也在不断被探索。而如今大热的 Serverless，因其能成帮助前端工程师提升开发能力和效率，成为当前前端开发的新风向。那么，如何基于 Serverless 进行前端开发？
@@ -34,7 +34,7 @@ tags:
 
 ## 直播预约入口
 
-点击或扫描二维码立即免费预约直播课程，开课前将发送提醒！ 
+点击或扫描二维码立即免费预约直播课程，开课前将发送提醒！
 
 ![serverless](https://img.serverlesscloud.cn/202049/1586443176723-%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%9B%BE%E7%89%87_4%E6%9C%889%E6%97%A522%E6%97%B638%E5%88%8626%E7%A7%92.png)
 
@@ -44,13 +44,13 @@ tags:
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

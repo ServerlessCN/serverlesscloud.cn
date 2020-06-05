@@ -8,7 +8,7 @@ categories:
   - guides-and-tutorials
 authors:
   - Wes
-authorslink: 
+authorslink:
   - https://zhuanlan.zhihu.com/ServerlessGo
 tags:
   - Node.js
@@ -33,7 +33,7 @@ exports.main_handler = (event, context, callback) => {
   console.log("Hello World");
   console.log(event);
   console.log(context);
-  callback(null, event); 
+  callback(null, event);
 };
 ```
 runtime 会将三个参数传递到处理程序方法。
@@ -70,7 +70,7 @@ request_id: "ab42b693-8bfd-4dc1-b228-60360a63e06c",
 tencentcloud_appid: "...",
 tencentcloud_region: "ap-chengdu",
 tencentcloud_uin: "..."
-``` 
+```
 
 从上面的内容可以看到，该对象包含的内容有：
 
@@ -94,7 +94,7 @@ exports.main_handler = function(event, context, callback) {
     callback(Error(e))
   })
 }
-``` 
+```
 
 ## 函数返回
 
@@ -133,7 +133,7 @@ exports.handler =  async function(event, context) {
     throw e
   }
 }
-``` 
+```
 
 ### 同步函数
 
@@ -153,11 +153,11 @@ exports.handler = function(event, context, callback) {
     callback(Error(e))
   })
 }
-``` 
+```
 
 ### 返回的时机
 
-正常的 Node.js web framework 在 response 返回后，异步逻辑还是继续在执行的。而 Serverless 场景下，由于机制和 framework的差别，对于已经返回 responese 的情况，一种是等着异步都处理完再来返回，这样保证了一次调用的完整性。另外一种就是在返回后就直接结束当次调用，直接挂起异步处理。 
+正常的 Node.js web framework 在 response 返回后，异步逻辑还是继续在执行的。而 Serverless 场景下，由于机制和 framework的差别，对于已经返回 responese 的情况，一种是等着异步都处理完再来返回，这样保证了一次调用的完整性。另外一种就是在返回后就直接结束当次调用，直接挂起异步处理。
 
 腾讯云云函数针对 Node.js 的异步场景，实现了**返回和结束分离**的特殊机制。
 
@@ -200,7 +200,7 @@ exports.main_handler =  async function(event, context) {
     throw e
   }
 }
-``` 
+```
 
 在 http 请求完成后，会立即返回给调用方，不会等待 setTimeout 的异步实践执行完。而在返回后，程序会继续执行，直到 setTimeout 的事件执行完才算本次调用结束。
 
@@ -226,23 +226,14 @@ exports.main_handler =  async function(event, context) {
 
 > 详情可查阅：[Serverless Framework 30 天试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
+---
 
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
-
-<script>
-var n = navigator.userAgent.toLowerCase();
-if (n.indexOf('android')>-1 || n.indexOf('iphone')>-1 || n.indexOf('iPhone')>-1 || n.indexOf('ipod')>-1 || n.indexOf('ipad')>-1 || n.indexOf('ios')>-1){
-  document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div>';
-}else{
-  document.getElementById('scf-deploy-iframe-or-md').innerHTML = '<p>扫码写代码，这可能是你从未尝试过的开发体验。不来试试吗？</p><p>3 秒极速部署，立即体验史上最快的 <a href="https://serverless.cloud.tencent.com/deploy/express">Serverless  HTTP</a> 实战开发！</p><iframe height="500px" width="100%" src="https://serverless.cloud.tencent.com/deploy/express" frameborder="0"  allowfullscreen></iframe>';
-}
-</script>
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

@@ -16,15 +16,15 @@ tags:
 ---
 
 MapReduce 在维基百科中的解释如下：
-	
+
 > MapReduce 是 Google 提出的一个软件架构，用于大规模数据集（大于 1TB）的并行运算。概念「Map（映射）」和「Reduce（归纳）」，及他们的主要思想，都是从函数式编程语言借来的，还有从矢量编程语言借来的特性。
 
 通过这段描述，我们知道，MapReduce 是面向大数据并行处理的计算模型、框架和平台，在传统学习中，通常会在 Hadoop 等分布式框架下进行 MapReduce 相关工作，随着云计算的逐渐发展，各个云厂商也都先后推出了在线的 MapReduce 业务。
 
 本文将尝试通过 MapReduce 模型实现一个简单的 WordCount 算法，区别于传统使用 Hadoop 等大数据框架，本文使用对象存储 COS 与云函数 SCF 来实现。
-	
+
 ## 理论基础
-	
+
 在开始之前，我们根据 MapReduce 的要求，先绘制一个简单的流程图:
 
 ![](https://img.serverlesscloud.cn/202058/2-7-1.png)
@@ -37,7 +37,7 @@ MapReduce 在维基百科中的解释如下：
 对象存储3	ap-guangzhou	destcmr
 ```
 
-为了让整个 Mapper 和 Reducer 逻辑更加清晰，在开始之前先对传统的 WordCount 结构进行改造，使其更加适合云函数，同时合理分配 
+为了让整个 Mapper 和 Reducer 逻辑更加清晰，在开始之前先对传统的 WordCount 结构进行改造，使其更加适合云函数，同时合理分配
 Mapper 和 Reducer 的工作：
 
 ![](https://img.serverlesscloud.cn/202058/2-7-2.png)
@@ -133,8 +133,8 @@ def main_handler(event, context):
     logger.info("start main handler")
     if "Records" not in event.keys():
         return {"errorMsg": "event is not come from cos"}
-    secret_id = "" 
-    secret_key = ""  
+    secret_id = ""
+    secret_key = ""
     config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, )
     cos_client = CosS3Client(config)
     start_time = datetime.datetime.now()
@@ -243,8 +243,8 @@ def main_handler(event, context):
     logger.info("start main handler")
     if "Records" not in event.keys():
         return {"errorMsg": "event is not come from cos"}
-    secret_id = "SecretId" 
-    secret_key = "SecretKey"  
+    secret_id = "SecretId"
+    secret_key = "SecretKey"
     config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, )
     cos_client = CosS3Client(config)
     start_time = datetime.datetime.now()
@@ -337,13 +337,13 @@ Serverless 架构相是适用于大数据处理的。在腾讯云官网，我们
 
 > 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
-## One More Thing
-<div id='scf-deploy-iframe-or-md'><div><p>3 秒你能做什么？喝一口水，看一封邮件，还是 —— 部署一个完整的 Serverless 应用？</p><blockquote><p>复制链接至 PC 浏览器访问：<a href="https://serverless.cloud.tencent.com/deploy/express">https://serverless.cloud.tencent.com/deploy/express</a></p></blockquote><p>3 秒极速部署，立即体验史上最快的 Serverless HTTP 实战开发！</p></div></div>
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
