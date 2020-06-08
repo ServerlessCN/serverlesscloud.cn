@@ -15,7 +15,7 @@ export default function BlogCard({ blog }: Props) {
         <Box className="scf-grid__box">
           <div className="scf-article-item">
             <div className="scf-article-item__img">
-              <img src={blog.node.frontmatter.thumbnail} alt="" />
+              <img src={blog.node.frontmatter.thumbnail} alt={blog.node.frontmatter.title} />
             </div>
             <div className="scf-article-item__content">
               <div className="scf-article-item__statistics">
@@ -26,9 +26,7 @@ export default function BlogCard({ blog }: Props) {
               <div className="scf-article-item__title">
                 <h4>{blog.node.frontmatter.title}</h4>
               </div>
-              <div className="scf-article-item__intro">
-                {blog.node.frontmatter.description}
-              </div>
+              <div className="scf-article-item__intro">{blog.node.frontmatter.description}</div>
             </div>
           </div>
         </Box>

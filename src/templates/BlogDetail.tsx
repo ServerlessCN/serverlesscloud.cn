@@ -79,20 +79,14 @@ const BlogDetail = ({ data: { currentBlog }, location }: Props) => {
       acticleTitle: currentBlog.frontmatter.title,
     })
     function isInViewPort(el) {
-      const viewPortHeight =
-        window.innerHeight ||
-        document.documentElement.clientHeight ||
-        document.body.clientHeight
+      const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
       const top = el.getBoundingClientRect() && el.getBoundingClientRect().top
       return top <= viewPortHeight + 100
     }
     const onScroll = debounce(() => {
-      const isEndViewPage = isInViewPort(
-        document.getElementById('EndBlogDetail')
-      )
+      const isEndViewPage = isInViewPort(document.getElementById('EndBlogDetail'))
       const isShowCode =
-        document.getElementsByTagName('code').length &&
-        isInViewPort(document.getElementsByTagName('code')[0])
+        document.getElementsByTagName('code').length && isInViewPort(document.getElementsByTagName('code')[0])
       if (isEndViewPage) {
         userBehaviorStatistics({ dataType: 'endViewPage', uuid })
       }
@@ -114,8 +108,7 @@ const BlogDetail = ({ data: { currentBlog }, location }: Props) => {
       const data = {
         article: id,
       }
-      const api =
-        'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/report/article'
+      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/report/article'
       fetch(api, {
         body: JSON.stringify(data),
         method: 'POST',
@@ -154,11 +147,7 @@ const BlogDetail = ({ data: { currentBlog }, location }: Props) => {
   return (
     <Layout>
       <Helmet {...currentBlog.frontmatter} location={location} />
-      <Category
-        location={location}
-        isDetail={true}
-        id="scf-blog-detail-header"
-      />
+      <Category location={location} isDetail={true} id="scf-blog-detail-header" />
       <Box className="scf-content" style={{ marginTop: 0 }}>
         <Box className="scf-page-blog-detail scf-layout-pattern">
           <Box className="scf-home-block">
@@ -168,60 +157,36 @@ const BlogDetail = ({ data: { currentBlog }, location }: Props) => {
                   <Box className="scf-grid__item-16">
                     <Box className="scf-grid__box  scf-detail__content">
                       <Box className="scf-detail__docs">
-                        <h1 className="scf-detail-docs__title">
-                          {currentBlog.frontmatter.title}
-                        </h1>
+                        <h1 className="scf-detail-docs__title">{currentBlog.frontmatter.title}</h1>
                         <Box className="scf-detail-docs__info">
                           <p>
                             作者：
-                            {currentBlog.frontmatter.authors.map(
-                              (author, index) => (
-                                <ExternalLinkWrapper key={author}>
-                                  {currentBlog.frontmatter.authorslink &&
-                                  currentBlog.frontmatter.authorslink[index] ? (
-                                    <ExternalLink
-                                      to={
-                                        currentBlog.frontmatter.authorslink[
-                                          index
-                                        ]
-                                      }
-                                    >
-                                      {author}
-                                    </ExternalLink>
-                                  ) : (
-                                    author
-                                  )}
-                                </ExternalLinkWrapper>
-                              )
-                            )}
+                            {currentBlog.frontmatter.authors.map((author, index) => (
+                              <ExternalLinkWrapper key={author}>
+                                {currentBlog.frontmatter.authorslink && currentBlog.frontmatter.authorslink[index] ? (
+                                  <ExternalLink to={currentBlog.frontmatter.authorslink[index]}>{author}</ExternalLink>
+                                ) : (
+                                  author
+                                )}
+                              </ExternalLinkWrapper>
+                            ))}
                           </p>
-                          <p>
-                            发布于： {formateDate(currentBlog.frontmatter.date)}
-                          </p>
-                          {currentBlog.frontmatter.categories &&
-                          currentBlog.frontmatter.categories.length ? (
+                          <p>发布于： {formateDate(currentBlog.frontmatter.date)}</p>
+                          {currentBlog.frontmatter.categories && currentBlog.frontmatter.categories.length ? (
                             <p>
                               归档于：{' '}
                               {currentBlog.frontmatter.categories.map(o => (
-                                <LinkWrapper
-                                  key={o}
-                                  display="inline-block"
-                                  ml="5px"
-                                >
+                                <LinkWrapper key={o} display="inline-block" ml="5px">
                                   <CategoryLink category={o} />
                                 </LinkWrapper>
                               ))}
                             </p>
                           ) : null}
-                          {currentBlog.frontmatter.tags &&
-                          currentBlog.frontmatter.tags.length ? (
+                          {currentBlog.frontmatter.tags && currentBlog.frontmatter.tags.length ? (
                             <p>
                               标签：
                               {currentBlog.frontmatter.tags.map(tag => (
-                                <Link
-                                  to={`${baseCategoryUrl}/${tag}`}
-                                  key={tag}
-                                >
+                                <Link to={`${baseCategoryUrl}/${tag}`} key={tag}>
                                   <span className="scf-seotag__item" key={tag}>
                                     {tag}
                                   </span>
@@ -240,18 +205,13 @@ const BlogDetail = ({ data: { currentBlog }, location }: Props) => {
                               : {}
                           }
                         >
-                          <Markdown
-                            html={currentBlog.html as string}
-                          ></Markdown>
+                          <Markdown html={currentBlog.html as string}></Markdown>
                         </Box>
                       </Box>
                       {!isShowAll ? (
                         <Box className="scf-detail__show-more">
                           <Box className="scf-detail__mask"></Box>
-                          <button
-                            className="scf-btn scf-btn--line"
-                            onClick={onToggleShow}
-                          >
+                          <button className="scf-btn scf-btn--line" onClick={onToggleShow}>
                             展开阅读全文
                           </button>
                         </Box>
@@ -306,12 +266,7 @@ export const query = graphql`
     }
   }
 
-  query BlogDetails(
-    $blogId: String!
-    $previousBlogId: String
-    $nextBlogId: String
-    $categories: [String!]
-  ) {
+  query BlogDetails($blogId: String!, $previousBlogId: String, $nextBlogId: String, $categories: [String!]) {
     currentBlog: markdownRemark(id: { eq: $blogId }) {
       ...blogFields
       html

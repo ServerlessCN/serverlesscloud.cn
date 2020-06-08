@@ -53,18 +53,18 @@ export function fitPromote() {
 
 function showPromoteCLI(promoteEle: HTMLElement) {
   promoteEle.innerHTML = `
-<p><strong>Serverless 极速部署，只需三步</strong></p>
+<p><span class="bold-text">Serverless 极速部署，只需三步</span></p>
 <p>Serverless Framework 是构建和运维 Serverless 应用的框架。简单三步，即可通过 Serverless Framework 快速实现服务部署。</p>
-<p><strong>1. 安装 Serverless</strong></p>
+<p><span class="bold-text">1. 安装 Serverless</stspan/p>
 <p>macOS/Linux 系统：推荐使用二进制安装</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">$ curl -o- -L https://slss.io/install | bash</code></pre></div>
 <p>Windows 系统：可通过 npm 安装</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">$ npm install -g serverless</code></pre></div>
-<p><strong>2. 创建云上应用</strong></p>
+<p><span class="bold-text">2. 创建云上应用</span></p>
 <p>在空文件夹下输入 serverless 命令</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">$ serverless</code></pre></div>
 <p>访问命令行中输出的链接，即可访问成功部署后的应用。</p>
-<p><strong>3. 查看部署信息</strong></p>
+<p><span class="bold-text">3. 查看部署信息</span></p>
 <p>进入到部署成功的文件夹，运行如下命令，查看部署状态和资源信息：</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">$ sls info</code></pre></div>
 `

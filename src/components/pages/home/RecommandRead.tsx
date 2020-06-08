@@ -20,7 +20,7 @@ export function BlogCard({ blog }: { blog: Blog }) {
       <Link to={blog.node.fields.slug} data-id={id}>
         <Box className="scf-article-item__img">
           <Box className="scf-article-item__img-inner">
-            <img src={blog.node.frontmatter.thumbnail} alt="" />
+            <img src={blog.node.frontmatter.thumbnail} alt={blog.node.frontmatter.title} />
           </Box>
         </Box>
         <Box className="scf-article-item__content">

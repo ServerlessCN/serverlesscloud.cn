@@ -54,23 +54,19 @@ const BlogList = ({
     <Layout>
       <Helmet
         title={`${tags} - Serverless`}
-        keywords={
-          'Serverless团队博客,Serverless发布,Serverless动态,Serverless新闻'
-        }
+        keywords={'Serverless团队博客,Serverless发布,Serverless动态,Serverless新闻'}
         description={
           'Serverless 中文网分享了 Serverless 技术的最新动态、Serverless 团队的工程实践，以及社区开发者撰写投稿的优质技术博文'
         }
         location={location}
       />
+      <h1 className="page-title">Serverless 中文网 - 标签</h1>
       <Tag location={location} />
       <div className="scf-Blog-Category scf-page_seotag">
         <div className="scf-page-blog scf-layout-pattern">
           <div className="scf-home-block scf-blog-list">
             <Container width={[1, 1, 1, 912, 0.76, 1200]} px={0}>
-              <div
-                id="scf-box-mobile-titlebar"
-                className="scf-box__header-title"
-              >
+              <div id="scf-box-mobile-titlebar" className="scf-box__header-title">
                 <h3>Tags</h3>
               </div>
               <div className="scf-box ">

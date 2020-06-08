@@ -18,14 +18,15 @@ const ForumPage = ({ location }: Props) => {
         title="活动 - Serverless"
         location={location}
       />
+      <h1 className="page-title">Serverless 中文网 - 活动</h1>
       <Box className="scf-page-blog scf-layout-pattern">
-      <Container width={[1, 1, 1, 912, 0.76, 1200]}>
-      <Box className="scf-grid">
-        <Meetups />
-        <AuthorDetail/>
+        <Container width={[1, 1, 1, 912, 0.76, 1200]}>
+          <Box className="scf-grid">
+            <Meetups />
+            <AuthorDetail />
+          </Box>
+        </Container>
       </Box>
-    </Container>
-    </Box>
     </Layout>
   )
 }

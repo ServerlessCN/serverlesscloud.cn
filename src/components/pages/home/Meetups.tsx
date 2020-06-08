@@ -30,7 +30,7 @@ function BlogCard({ history, blog }: { blog: Blog; history: boolean }) {
         </div>
         <Box className="scf-meetup-item__img">
           <Box className="scf-meetup-item__img-inner">
-            <img src={blog.node.frontmatter.thumbnail} alt="" />
+            <img src={blog.node.frontmatter.thumbnail} alt={blog.node.frontmatter.title} />
           </Box>
         </Box>
       </Link>

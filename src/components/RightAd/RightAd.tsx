@@ -9,7 +9,7 @@ export default () => {
         <h3>正在进行</h3>
       </div>
       <a className="list-ad" href={adBanner.link}>
-        <img className="ad-image" src={adBanner.thumbnail} />
+        <img className="ad-image" src={adBanner.thumbnail} alt={adBanner.title} />
         <div className="ad-title">{adBanner.title}</div>
         <div className="ad-text">{adBanner.text}</div>
       </a>

@@ -36,7 +36,7 @@ function ActivityCard({ activity }: { activity: Activity }) {
     <Box className="scf-article-item">
       <Link to={activity.link}>
         <Box className="scf-article-item__img">
-          <img src={activity.cover} alt="" />
+          <img src={activity.cover} alt={activity.title} />
         </Box>
         <Box className="scf-article-item__content">
           <Box className="scf-article-item__title">

@@ -49,6 +49,7 @@ const BlogList = ({
 
   return (
     <Layout>
+      <h1 className="page-title">Serverless 中文网 - 最佳实践</h1>
       <Helmet
         title="最佳实践 - Serverless"
         keywords="Serverless教程,Serverless入门,Serverless实践,ServerlessSSR"
