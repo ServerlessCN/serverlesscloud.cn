@@ -15,53 +15,34 @@ tags:
   - 对象存储
 ---
 
-# **一、本文介绍**
 
-或许你有用过或者听说过《给未来写封信》，
+或许你有用过或者听说过《给未来写封信》，这是由全知工坊开发的一款免费应用，你可以在此刻给自己或他人写下一封信，然后选择在未来的某一天寄出，想必那时收到信的人看着这封来自过往的信时一定会十分感动吧。
 
-这是由全知工坊开发的一款免费应用，
+这次我就带大家一起来使用无服务器云函数 SCF 和对象存储 COS，快速开发一个属于自己的「给未来写封信」应用。
 
-你可以在此刻给自己或他人写下一封信，然后选择在未来的某一天寄出，
+## 效果展示
 
-想必那时收到信的人看着这封来自过往的信时一定会十分感动吧。
+写下一封信，然后投递：
 
-这次我就带大家一起来
+![写下一封信，然后投递](https://img.serverlesscloud.cn/2020523/1590214762613-2404.jpg)
 
-使用无服务器云函数（SCF）和对象存储（COS），
+一封来自很久以前的信：
 
-快速开发一个属于自己的给未来写封信应用
-
-废话少说，上图
-
-![serverless](https://img.serverlesscloud.cn/2020523/1590214762613-2404.jpg)
-
-写下一封信，然后投递
-
-![serverless](https://img.serverlesscloud.cn/2020523/1590214762631-2404.jpg)
-
-一封来自很久以前的信
-
-![serverless](https://img.serverlesscloud.cn/2020523/1590214762627-2404.jpg)
+![一封来自很久以前的信](https://img.serverlesscloud.cn/2020523/1590214762631-2404.jpg)
 
 写给未来的自己
 
-你也可以访问[ http://letter.idoo.top/letter ](http://letter.idoo.top/letter)来亲自体验一下（仅供测试之用，不保证服务一直可用）
+![写给未来的自己](https://img.serverlesscloud.cn/2020523/1590214762627-2404.jpg)
 
-# **二、开始教程**
+你也可以访问[letter.idoo.top/letter](http://letter.idoo.top/letter)来亲自体验一下（仅供测试之用，不保证服务一直可用）
 
-首先说明一下，这篇教程是在《万物皆可Serverless》系列文章的基础之上进行的一次综合实践，
+## 操作步骤
 
-如果你没有阅读过这个系列的文章，建议你先去《万物皆可Serverless》专栏了解一下关于Serverless的基础知识，
+### 第一步：新建 python 云函数
 
-包括云函数的创建，本地调试，上线发布，Timer定时器配置，API网关启用响应集成，对象存储的读写，云函数发送邮件等内容
+参见我之前的系列文章[《万物皆可 Serverless 之使用 SCF+COS 快速开发全栈应用》](https://serverlesscloud.cn/blog/2020-04-23-serverless-scf-cos/)
 
-话不多说，开始教程。
-
-## **第一步：新建python云函数**
-
-参见我之前的系列文章[《万物皆可Serverless之使用SCF+COS快速开发全栈应用》](https://cloud.tencent.com/developer/article/1612750?from=10680)
-
-## **第二步：编写python云函数**
+### 第二步：编写云函数
 
 > Life is short, show me the code.
 
@@ -337,9 +318,9 @@ def main_handler(event, context):
     return apiReply('', html=True)
 ```
 
-没错，这就是前面展示的网页应用的全部源码了，使用SCF构建一个完整的前后端的全栈应用就是这么简单。
+没错，这就是前面展示的网页应用的全部源码了，使用云函数 SCF 构建一个完整的前后端的全栈应用就是这么简单。
 
-代码可能有点长，其实也没多少知识点，前面的系列文章我都有详细讲过，下面咱们再一起捋一下这个云函数哈~
+代码可能有点长，其实也没多少知识点，下面咱们再一起捋一下这个云函数 ~
 
 ```javascript
 import json
@@ -365,13 +346,9 @@ else:
     from qcloud_cos_v5 import CosClientError
 ```
 
-首先是依赖的导入，这里主要导入了python自带的email模块和腾讯云对象存储SDK，来实现信件的发送和后端存储需求。
+首先是依赖的导入，这里主要导入了 python 自带的 email 模块和腾讯云对象存储 SDK，来实现信件的发送和后端存储需求。
 
-这里需要注意一点，在腾讯云的云函数在线运行环境中，已经安装了 qcloud\_cos\_v5 对象存储SDK，
-
-而我在本地环境安装的对象存储SDK是qcloud\_cos，为了方便本地调试，这里我设置了一个debug开关，
-
-来动态导入qcloud\_cos依赖，这一点我在之前的系列文章[《万物皆可Serverless之使用SCF+COS快速开发全栈应用》](https://cloud.tencent.com/developer/article/1612750?from=10680)中有讲到。
+这里需要注意一点，在腾讯云的云函数在线运行环境中，已经安装了 `qcloud\_cos\_v5` 对象存储 SDK，而我在本地环境安装的对象存储 SDK 是 `qcloud\_cos`，为了方便本地调试，这里我设置了一个 debug 开关，来动态导入 `qcloud\_cos` 依赖，这一点我在之前的系列文章[《万物皆可Serverless之使用SCF+COS快速开发全栈应用》](https://cloud.tencent.com/developer/article/1612750?from=10680)中有讲到。
 
 ```javascript
 # 配置存储桶
@@ -412,7 +389,7 @@ def main_handler(event, context):
 
 这里我们根据event的keys里有无'Time'来判断云函数是否是通过定时器来触发的，
 
-这一点我在之前的系列文章[《万物皆可Serverless之使用云函数Timer触发器实现每天自动定时打卡》](https://cloud.tencent.com/developer/article/1612169?from=10680)中有讲到。
+这一点我在之前的系列文章[《万物皆可 Serverless 之使用 SCF+COS 快速开发全栈应用》](https://serverlesscloud.cn/blog/2020-04-23-serverless-scf-cos/)中有讲到。
 
 ```javascript
 #每天定时检查需要发送的信件
@@ -424,11 +401,9 @@ def check_send_letters():
             sendEmail(letters[date])
 ```
 
-检查云函数是否是通过定时器触发，是因为在后面我们会给这个云函数添加定时触发器来每天定时检查需要发送的信件
+检查云函数是否是通过定时器触发，是因为在后面我们会给这个云函数添加定时触发器来每天定时检查需要发送的信件。
 
-这里的 check\_send\_letters 函数的作用就是登录我们的邮箱并读取在cos中的所有信件，然后逐封检查信件的发信日期，
-
-如果信件发信日期与当前的日期相符，就会向指定的邮箱发送信件，完成在指定日期投放信件的功能。
+这里的 `check\_send\_letters` 函数的作用就是登录我们的邮箱并读取在 cos 中的所有信件，然后逐封检查信件的发信日期，如果信件发信日期与当前的日期相符，就会向指定的邮箱发送信件，完成在指定日期投放信件的功能。
 
 ```javascript
 if event['httpMethod'] == 'GET':
@@ -442,7 +417,7 @@ if event['httpMethod'] == 'POST':  # 添加信件
     })
 ```
 
-如果我们的云函数是通过api网关触发的话，就判断一下http请求的方法是GET还是POST
+如果我们的云函数是通过 api 网关触发的话，就判断一下 http 请求的方法是 GET 还是 POST
 
 ```javascript
 <!DOCTYPE html>
@@ -558,11 +533,9 @@ if event['httpMethod'] == 'POST':  # 添加信件
 </html>
 ```
 
-如果是GET请求就返回上面的前端网页，也就是文章开头第一张图，再来瞅一眼
+如果是 GET 请求就返回上面的前端网页，也就是文章开头第一张图，再来瞅一眼
 
-![serverless](https://img.serverlesscloud.cn/2020523/1590215207162-16200.jpg)
-
-云函数返回的前端网页
+![云函数返回的前端网页](https://img.serverlesscloud.cn/2020523/1590215207162-16200.jpg)
 
 再来看下前端网页的发信过程
 
@@ -585,7 +558,7 @@ function send() {
 }
 ```
 
-这里我们是向当前网页地址，也是云函数的api网关地址POST了一个包含所有信件信息的json字符串
+这里我们是向当前网页地址，也是云函数的 api 网关地址 POST 了一个包含所有信件信息的 json 字符串
 
 ```javascript
 if event['httpMethod'] == 'POST':  # 添加信件
@@ -597,15 +570,13 @@ if event['httpMethod'] == 'POST':  # 添加信件
     })
 ```
 
-回到云函数后端，我们在收到POST请求之后，在event里拿到POST的请求体，并重新将json字符串转成map对象
-
-之后将body传给addletter函数，将信件信息保存到cos里，然后向网页前端回复信件是否添加成功
+回到云函数后端，我们在收到 POST 请求之后，在 event 里拿到 POST 的请求体，并重新将 json 字符串转成 map 对象，之后将 body 传给 addletter 函数，将信件信息保存到 cos 里，然后向网页前端回复信件是否添加成功。
 
 这样整个应用的前后端只用一个云函数就都实现了，是不是很酸爽呀( •̀ ω •́ )y~
 
-## **第三步：配置云函数触发器**
+### 第三步：配置云函数触发器
 
-找到本地云函数文件夹下面的 template.yaml 配置文件
+找到本地云函数文件夹下面的 `template.yaml` 配置文件
 
 ```javascript
 Resources:
@@ -637,29 +608,21 @@ Resources:
       Type: 'TencentCloud::Serverless::Function'
 ```
 
-这里主要配置了一下云函数的名称，timer触发器和api网管触发器，你可以自行设置。
+这里主要配置了一下云函数的名称，timer 触发器和 api 网关触发器，可以自行设置。
 
-## **第四步：上线发布云函数，api网关启用响应集成**
+### 第四步：上线发布云函数，api 网关启用响应集成
 
-参见我之前的系列文章[《万物皆可Serverless之使用SCF+COS快速开发全栈应用》](https://cloud.tencent.com/developer/article/1612750?from=10680)
+参见我之前的系列文章[《万物皆可 Serverless 之使用 SCF+COS 快速开发全栈应用》](https://serverlesscloud.cn/blog/2020-04-23-serverless-scf-cos/)
 
-## **第五步：绑定备案域名**
+### 第五步：绑定备案域名
 
-如果你有备案域名并且想给api网关自定义域名的话，
+如果你有备案域名并且想给 api 网关自定义域名的话，可参考我之前的系列文章[《万物皆可Serverless之免费搭建自己的不限速大容量云盘（5TB）》](https://serverlesscloud.cn/blog/2020-04-23-serverless-cloud-cos/)
 
-可参考我之前的系列文章[《万物皆可Serverless之免费搭建自己的不限速大容量云盘（5TB）》](https://cloud.tencent.com/developer/article/1612098?from=10680)
+## 写在最后
 
-# **三、文章最后**
+OK，没啥问题的话现在你应该已经成功上线了自己的给未来写封信网页应用，或许你也可以趁热打铁，试着静下心来认真的给未来的自己留几句话呢？
 
-OK，没啥问题的话现在你应该已经成功上线了自己的给未来写封信网页应用，
-
-或许你也可以趁热打铁，试着静下心来认真的给未来的自己留几句话呢？
-
-以上，我们可以总结出把一个简单的网页应用前后端都在一个云函数里来实现是完全没有问题的，
-
-而且极大的缩短了我们应用开发的时间，非常的方便，还省去了购买配置和维护服务器的费用，
-
-让开发者可以真正将精力放到业务本身的开发上，这就是 Serverless 最大的魅力！
+以上，我们可以总结出把一个简单的网页应用前后端都在一个云函数里来实现是完全没有问题的，而且极大缩短了我们应用开发的时间，非常的方便，还省去了购买配置和维护服务器的费用，让开发者可以真正将精力放到业务本身的开发上，这就是 Serverless 最大的魅力！
 
 ## Serverless Framework 30 天试用计划
 

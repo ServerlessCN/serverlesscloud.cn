@@ -15,13 +15,13 @@ tags:
   - 全栈应用
 ---
 
-# 什么是 Serverless Component
+## 什么是 Serverless Component
 
 [Serverless Component](https://github.com/serverless/components) 是 [Serverless Framework](https://github.com/serverless/serverless) 的，支持多个云资源编排和组织的场景化解决方案。
 
 Serverless Component 的目标是磨平不同云服务平台之间差异，你可以将它看作是可以更轻松地构建应用程序的依赖模块。目前 Serverless Component 已经形成一个由社区贡献驱动的生态系统，你可以浏览和使用社区的所有组件，快速开发一款自己想要的应用。
 
-# Serverless Component 工作原理
+## Serverless Component 工作原理
 
 基于 Serverless Component 架构，你可以将任何云服务打包成一个组件。这个组件将含有一份 `serverless.yml` 配置文件，并且通过简单地进行配置就可以使用。本文以 [@serverless/tencent-express](https://github.com/serverless-components/tencent-express) 来举例。
 
@@ -56,7 +56,7 @@ module.exports = app
 
 通过此图可以清晰地查看组件带来的收益，借助社区现有的 [@serverless/tencent-express](https://github.com/serverless-components/tencent-express) 和 [@serverless/tencent-website](https://github.com/serverless-components/tencent-website) 组件，我们就可以很快构建想要的全栈应用。
 
-# 全栈应用实战
+## 全栈应用实战
 
 接下来将介绍如何借助 Serverless Component 快速开发全栈 Web 应用。
 
@@ -64,7 +64,7 @@ module.exports = app
 
 > 在开始所有步骤前，需执行 `npm install -g serverless` 命令，全局安装 `serverless cli`。
 
-## 准备
+### 准备
 
 新建项目目录 `fullstack-application-vue`，在该项目目录下新增 `api` 和 `dashboard` 目录。然后新增 `serverless.yml` 和 `.env` 配置文件，项目目录结构如下：
 
@@ -76,7 +76,7 @@ module.exports = app
 └── serverless.yml	// serverless 文件
 ```
 
-## 后端服务开发
+### 后端服务开发
 
 进入目录 `api`，新增 `app.js` 文件，编写 `express` 服务代码，这里先新增一个路由 `/`，并返回当前服务器时间：
 
@@ -92,7 +92,7 @@ app.get('/', (req, res) => {
 module.exports = app
 ```
 
-## 前端页面开发
+### 前端页面开发
 
 本案例使用的是 `Vue.js` + `Parcel` 的前端模板，当然你可以使用任何前端项目脚手架，比如 Vue.js 官方推荐的 [Vue CLI](https://github.com/vuejs/vue-cli) 生成的项目。进入 `dashboard` 目录，静态资源你可以直接复制我准备好的 [项目模板](https://github.com/yugasun/tencent-serverless-demo/tree/master/fullstack-application-vue)，编写入口文件 `src/index.js`:
 
@@ -118,7 +118,7 @@ module.exports = new Vue({
 })
 ```
 
-## 配置
+### 配置
 
 前后端代码都准备好了，现在我们还需要简单配置下 `serverless.yml` 文件了：
 
@@ -151,7 +151,7 @@ api:
 
 > 简单的介绍下配置：首先，该文件定义了 `frontend` 和 `api` 两个模块，分别通过 `component` 属性指定依赖的 Serverless Component。对于一个标准的 Serverless Component，都会接受一个 `inputs` 属性参数，然后组件会根据 `inputs` 的配置进行处理和部署，具体有关配置的参数说明，请参考相关组件的官方配置说明。
 
-## 部署
+### 部署
 
 以上所有的步骤都完成后，接下来就是第一次部署了。
 
@@ -173,11 +173,11 @@ $ serverless --debug
 
 [在线 Demo](https://br1ovx-efmogqe-1251556596.cos-website.ap-guangzhou.myqcloud.com/)
 
-# 数据库连接
+## 数据库连接
 
 既然是全栈，怎么少得了数据库的读写呢？接下来介绍如何添加数据库的读写操作。
 
-## 准备
+### 准备
 
 想要操作数据库，必须先拥有一台数据库实例，[腾讯云 MySQL 云数据库](https://console.cloud.tencent.com/cdb) 现在也很便宜，可以购买一个最基本按量计费 `1 核 1G 内存` 的 1 小时收费不到 `4 毛钱`，是不是非常划算。购买好之后初始化配置，然后新增一个 `serverless` 数据库，同时新增一张 `users` 表：
 
@@ -185,7 +185,7 @@ $ serverless --debug
 CREATE TABLE if not exists `test` ( `name` varchar (32) NOT NULL ,`email` varchar (64) NOT NULL ,`site` varchar (128) NOT NULL ) ENGINE = innodb DEFAULT CHARACTER SET = "utf8mb4" COLLATE = "utf8mb4_general_ci"
 ```
 
-## 前端修改
+### 前端修改
 
 首先修改前端入口文件 `frontend/src/index.js` 新增相关函数操作：
 
@@ -272,7 +272,7 @@ module.exports = new Vue({
 
 > 注意：如果还不熟悉 Vue.js 语法，请移至 [官方文档](https://cn.vuejs.org/)，当然如果你想快速上手 Vue.js 开发，也可以阅读这份 [Vue 从入门到精通](https://yugasun.github.io/You-May-Not-Know-Vuejs/) 教程。
 
-## 后端修改
+### 后端修改
 
 这里使用 `.env` 来进行数据库连接参数配置，在 `api` 目录下新增 `.env` 文件，将之前的数据库配置填入文件中，参考 `api/.env.example` 文件。然后添加并安装 `dotenv` 依赖，同时添加 `mysql2` 模块进行数据库操作，`body-parser` 模块进行 `POST` 请求时的 `body` 解析。
 
@@ -353,7 +353,7 @@ app.post('/users', async (req, res) => {
 module.exports = app
 ```
 
-## 配置修改
+### 配置修改
 
 这里数据库访问需要通过腾讯云私有网络，所以还需要为云函数配置私有网络（VPC），同时还需要配置能够操作数据库的角色（关于角色配置，可以直接到 [角色管理页面](https://console.cloud.tencent.com/cam/role)），这里我新建了一个 `QCS_SCFFull` 的角色，可以用来访问数据库。然后修改 `serverless.yml` 中的配置：
 
@@ -383,7 +383,7 @@ api:
 - [完整的模板仓库](https://github.com/yugasun/tencent-serverless-demo/tree/master/fullstack-application-vue)
 - [在线 Demo](https://br1ovx-efmogqe-1251556596.cos-website.ap-guangzhou.myqcloud.com)
 
-# 小结
+## 小结
 
 当然全栈方案，并没有这么简单，这里只是简单介绍，如何使用 Serverless Component，快速实现一个全栈应用。如果要应用到实际的业务场景，我们还需考虑更多的问题，期待大家去探索和发现！
 

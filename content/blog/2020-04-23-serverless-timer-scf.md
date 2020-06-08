@@ -3,7 +3,7 @@ title: 万物皆可 Serverless 之使用云函数 Timer 触发器实现每天自
 description: 本文并不探讨如何编写自动化的操作脚本，而是和大家介绍一下如何使用腾讯云函数的 Timer 触发器实现定时任务，来快速、稳定、低成本地实现一些 fancy 的操作。
 keywords: Serverless,云函数触发器,Serverless应用
 date: 2020-04-23
-thumbnail: https://img.serverlesscloud.cn/2020522/1590160217283-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901601368204.png
+thumbnail: https://img.serverlesscloud.cn/202068/1591592316812-13ui2js5xx.png
 categories:
   - user-stories
 authors:

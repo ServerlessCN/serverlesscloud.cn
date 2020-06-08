@@ -1,9 +1,9 @@
 ---
-title: 万物皆可 Serverless 之使用 SCF+COS 快速开发全栈应用
+title: 万物皆可 Serverless 之使用云函数 SCF+COS 快速开发全栈应用
 description: 我是在一个前端初学者的背景下，前后仅花了大概三天的时间，就完成了一个比较简单的网页应用，这就是 Severless 的魅力所在，它可以让你快速开发上线全栈应用，无论你是前端或是后端开发者都可以获益许多。
 keywords: Serverless,Serverless全栈,Serverless应用
 date: 2020-04-23
-thumbnail: https://img.serverlesscloud.cn/2020523/1590202785387-16206.jpg
+thumbnail: https://img.serverlesscloud.cn/202068/1591592273724-70zt6hhv58%20%281%29.png
 categories:
   - user-stories
 authors:

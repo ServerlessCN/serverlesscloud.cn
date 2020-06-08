@@ -891,3 +891,20 @@ APIService:
 传统博客已经有很多了，无论是基于 PHP 的 zblog 还是 wp 等开源项目，都可以帮助我们快速搭建一个博客系统。除了这些博客系统之外，还有很多静态博客系统。但是就目前而言，基于 Serverless 架构的博客系统还是比较少见的。
 
 本文通过原生的 Serverless 项目开发与 Flask 框架的部署上 Serverless 实现了一个基于 Python 语言的博客系统。通过该博客系统，用户可以发布文章，自动撰写文章的关键词和摘要，还可以进行留言评论的管理。当然，这个博客系统仅作为工程实践使用，实际上还是有一些设计不合理的地方，但是我相信，随着时间的发展，Serverless 架构越来越成熟，基于 Serverless 的开源 Blog 项目或 CMS 项目也会越来越多，期待那一天的到来！
+
+## Serverless Framework 30 天试用计划
+
+我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
+
+> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
+
+---
+<div id='scf-deploy-iframe-or-md'></div>
+
+---
+
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
+> - 官网：[serverless.com](https://serverless.com/)
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

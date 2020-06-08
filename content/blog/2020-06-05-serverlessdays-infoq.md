@@ -117,3 +117,20 @@ Serverless 前期因为生态缺乏而被诟病，要想更进一步，生态问
 如果你是 Serverless 爱好者，如果你是互联网前沿技术的观察者，如果你在工作中需要用到 Serverless，如果你想要先人一步掌握关于 Serverless 的关键内容，那么我们强烈建议你报名此次大会，从各位技术大神的视野出发，去看不一样的 Serverless。
 
 ![image](https://img.serverlesscloud.cn/202064/1591260495193-7fff4d46d771485c3e5648fded8e374.png)
+
+## Serverless Framework 30 天试用计划
+
+我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
+
+> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
+
+---
+<div id='scf-deploy-iframe-or-md'></div>
+
+---
+
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
+> - 官网：[serverless.com](https://serverless.com/)
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
