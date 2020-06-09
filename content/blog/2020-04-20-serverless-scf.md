@@ -15,21 +15,21 @@ tags:
   - HelloWorld
 ---
 
-`serverless` 是各大云服务商提供出来的一种无服务的计算资源。为什么叫无服务呢，因为如果你使用 `serverless`，你只需要关注应用层，而无需关心底层基础设施，无需运维。简而言之，`serverless` 并不是真的无服务，而是关于有服务的不归你管，云服务商帮你搞定，比如 `google`，`aws` 或者 `aliyun`。
+`Serverless` 是各大云服务商提供出来的一种无服务的计算资源。为什么叫无服务呢，因为如果你使用 `serverless`，你只需要关注应用层，而无需关心底层基础设施，无需运维。简而言之，`serverless` 并不是真的无服务，而是关于有服务的不归你管，云服务商帮你搞定，比如 `Google`，`AWS` 或者 `TencentCloud`。
 
-关注点分离，好呀好，有了 `serverless` 以后只需要也只能关心业务了，这也不知是喜是忧。但你也无需过于担心，这是对已有并且成熟的开发模式的挑战，解决痛点有限，因此很多团队对于替换为 `serverless` 也动力不足。
+关注点分离，好呀好！有了 `serverless` 以后只需要也只能关心业务了，这也不知是喜是忧。但你也无需过于担心，这是对已有并且成熟的开发模式的挑战，解决痛点有限，因此很多团队对于替换为 `serverless` 也动力不足。
 
 但是我仍然建议你学习 `serverless`，毕竟各大云厂商对于 `serverless` 有很多免费额度可以让你薅羊毛，对于个人开发者利好。
 
-## **Serverless Framework**
+## Serverless Framework
 
 `serverless` 是基于各大云服务商的产品，每一个云厂商对于 `serverless` 都有一套自己的 API。为了能够兼容这些 API，为了让你的代码 `Write Once, Run Everywhere`，于是 `serverless framework` 诞生了。
 
 > 通常认为 serverless = faas + baas，然而 serverless framework 只兼容到了 faas，对于 baas，如各家提供的数据存储服务，要做到兼容还是很难。
 
-## **快速开始**
+## 快速开始
 
-`serverless framework` 与腾讯云的云函数来开始一个 `hello world` 吧
+`serverless framework` 与腾讯云的云函数来开始一个 `hello world` 吧！
 
 ```javascript
 $ npm install -g serverless
@@ -60,9 +60,9 @@ Serverless: Successfully generated boilerplate for template: "tencent-nodejs"
 $ npm i
 ```
 
-## **简述**
+## 简述
 
-## **serverless.yaml**
+### serverless.yaml
 
 `serverless.yaml` 是 `serverless framework` 的核心，是一个 `sls` 服务的资源配置文件。如果把 `sls` 等同于 `faas + baas`，那么 `faas` 与 `baas` 的配置都在这里。
 
@@ -83,7 +83,7 @@ functions:
     handler: index.main_handler # 该函数所调用的函数
 ```
 
-### **index.js**
+### index.js
 
 ```javascript
 exports.main_handler = (event, context, callback) => {
@@ -93,7 +93,7 @@ exports.main_handler = (event, context, callback) => {
 
 `index.js` 中是 `faas` 中的核心，`function`。在 `callback` 中来回调你所需的数据。
 
-## **部署**
+## 部署
 
 使用 `sls deploy` 打包资源并部署到腾讯云，此时需要你在腾讯云的凭证信息。**你可以通过与腾讯云绑定的微信扫码授权**，相比其他厂商需要手动维护凭证信息，还是很方便的。
 
@@ -126,7 +126,7 @@ $ sls deploy --stage  production
 
 稍等一分钟，就可以看到部署成功的信息。
 
-## **函数调用**
+## 函数调用
 
 本地函数可以很简单地通过调用函数名来执行，`serverless` 也可以通过 `sls invoke` 来调用函数。
 
@@ -146,7 +146,7 @@ END RequestId: 69ffc57f-0afb-471b-865d-c7289e16f2ac
 Report RequestId: 69ffc57f-0afb-471b-865d-c7289e16f2ac Duration:64ms Memory:128MB MemUsage:21.8125MB
 ```
 
-## **日志与监控**
+## 日志与监控
 
 `serverless` 号称 `noops`，很大程度上是由于少了 `log` 及 `metrics` 的基础设施搭建。使用 `sls logs` 与 `sls metrics` 可以获取相关信息，但是丰富度及可定制化就完全不如 `kubernetes` 运维了。
 
@@ -199,17 +199,9 @@ Functions:
     Duration(avg.): 7.3 ms
 ```
 
-## **下一步**
+## 小结
 
-从本篇文章，可以大概知道如何在腾讯云初建一个 `serverless` 函数，并且知道了如何执行并且调用它，但好像仅仅如此。在日常的技术讨论中，它往往与业务开发结合在一起，在接下来的篇章中，我将介绍
-
-1. 如何使用 `serverless` 部署前端应用，如 `react`/`vue`。
-2. 如何使用 `serverless` 部署 API Server，如 `koa`，`python`，`go`
-3. 如何使用 `serverless` 跑定时任务及爬虫
-
-## **原理**
-
-以上都是基于 `sls` 的应用，而关于 `sls` 的原理，如服务编排以及容器化，可以在继续深入学习。
+从本篇文章，可以大概知道如何在腾讯云初建一个 `serverless` 函数，并且知道了如何执行并且调用它。而关于 `sls` 的原理，如服务编排以及容器化，可以再继续深入学习。
 
 ## Serverless Framework 30 天试用计划
 

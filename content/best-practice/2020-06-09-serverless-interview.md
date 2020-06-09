@@ -1,0 +1,63 @@
+---
+title: Serverless 技术在格灵深瞳的落地实践
+description: 使用腾讯云 Serverless 技术加速了格灵深瞳产品迭代，在验证原型方面效率和服务稳定性上提升了不少
+keywords: Serverless,scf,Serverless Framework
+date: 2020-06-09
+thumbnail: https://img.serverlesscloud.cn/202069/1591692109083-%E6%A0%BC%E6%9E%97.png
+categories:
+  - best-practice
+authors:
+  - 陈新宇
+authorslink: 
+tags:
+  - 云函数
+  - 客户案例
+---
+
+![](https://img.serverlesscloud.cn/202069/1591700984000-1591691323064-%E6%A0%BC%E6%9E%97%E6%A3%AE%E7%9E%B3.jpg)
+
+我们考虑使用 Serverless 技术方案是经过一些调研，结合我们自己的业务需求最终决定的，主要有以下几点：
+
+1. 我们服务的客户与场景流量潮汐现象很明显，Serverless 自动弹性伸缩能力可以为我们解决这个问题，比起普通服务器，可以提高机器利用效率，降低成本。
+
+2. 我们部分业务场景，如图片采集和上传，是典型的事件触发摸式。我们通过前端直接上传图片到对象存储，通过回调与云函数，实现统一的图片信息处理。将这类事件触发通过 Serverless 方案处理，与核心后端逻辑解耦，既降低了应用复杂性也缓解了后端压力。
+
+3. 转移部分运维压力，创业公司永远面临人手不够的问题，我们的运维资源有限，通过成熟的云厂商 Serverless 方案，可以借助成熟的框架与云服务厂商实现更好的可靠性保障，提供更稳定的服务。
+
+4. 产品原型验证与短期需求，相信大部分研发同学都遇到过原型验证与短期需求的『折磨』，这类需求往往时间紧迫，生命周期很短却又需要经过编码、测试、部署、上线整个研发流程，使用 Serverless 方案可以大大加快这类需求的开发与迭代速度。
+
+总的来说，使用 Serverless 的技术方案，对于我们团队最大的收益就是加快了产品迭代，在验证原型方面效率和服务稳定性上提升了不少。
+
+当然，和其他新技术的应用一样， Serverless 的技术方案在落地过程中也遇到了问题。
+
+### 第一个问题是源代码与版本管理问题
+
+Serverless 方案与我们现有的源代码管理及关联的 CI/CD 流程无法直接整合、开始的时候上线与部署有不少手动操作的方式，研发的配合与流程被打断，后面我们结合自己的研发流程，通过开发运维工具适配api解决了这个问题。
+
+### 第二个问题是私有化部署问题
+
+我们的应用既提供公有云服务，也要为有需要的客户做私有化部署，所以更倾向于使用同构的技术方案，能应用在不同的云基础设施上，这方面 Knative 与腾讯云支持的 Serverless Framework 都是不错的选择。
+
+Serverless 技术有众多优势，但是作为这两年才兴起的技术方案，其概念、形式都没有定型，很多实践也都在探索的阶段，这方面腾讯云 Serverless 团队，在周边社区和生态支持还是比较全面的。对中小型企业与开发者而言，我们更希望社区与企业共同努力演化出如 Kubernetes 之于云原生一样的事实标准方案，如果有了统一的、基础设施般的标准，能降低学习、开发、运维等各方面成本，进而给更多开发者使用和迁移的信心。
+
+Serverless 作为将来的技术趋势之一，肯定是值得了解和尝试的，但是任何技术都有其适合的场景和业务需求。作为一个年轻的团队，我们并不排斥新的技术与方案，但是技术方案的选择是多方因素综合考虑的结果、除了场景是否适合、性能是否满足等技术指标外，还要考虑与现有的技术方案是否兼容、迁移成本评估、可运维性甚至团队成员的学习成本等多方面因素。建议有意向使用 Serverless 技术的团队可以从新的、非核心的业务场景开始尝试。
+
+### Serverless Framework 30 天试用计划
+
+我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
+
+> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
+
+---
+<div id='scf-deploy-iframe-or-md'></div>
+
+---
+
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
+> - 官网：[serverless.com](https://serverless.com/)
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
+
+
+
