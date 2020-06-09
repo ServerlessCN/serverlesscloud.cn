@@ -352,7 +352,7 @@ def delBlacks(black):
     return cosWrite('blacks.txt', json.dumps(blackMap, ensure_ascii=False)) if len(blackMap) > 0 else False
 ```
 
-### 2. 云函数上线发布
+### 3. 云函数上线发布
 
 OK，终于来到最后一步了，下面我们再去看一下前面提到的 template.yaml 云函数配置文件
 
