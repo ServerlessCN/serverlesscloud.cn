@@ -1,6 +1,6 @@
 ---
 title: 使用 Serverless Framework Express 组件快速创建文本翻译工具
-description: 通过 Serverless Framework 的 Express Component 实现一款文本翻译工具
+description: 通过 Express Component 实现一款文本翻译工具
 keywords: Serverless,scf,Serverless Framework
 date: 2020-06-04
 thumbnail: https://img.serverlesscloud.cn/202064/1591262740524-%E6%96%87%E6%9C%AC%E7%BF%BB%E8%AF%91.jpg
