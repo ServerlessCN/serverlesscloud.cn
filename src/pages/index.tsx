@@ -46,6 +46,7 @@ const IndexPage = (props: Props) => {
         keywords="Serverless,Serverless Framework,FaaS,函数计算,无服务器"
         location={props.location}
       />
+      <h1 className="page-title">Serverless 中文网 - 首页</h1>
       <Swiper />{' '}
       {isMobileView ? (
         <Box className="scf-grid">

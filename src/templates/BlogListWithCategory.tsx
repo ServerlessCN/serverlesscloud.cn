@@ -64,6 +64,7 @@ const BlogList = ({
         }
         location={location}
       />
+      <h1 className="page-title">Serverless 中文网 - 分类</h1>
       <Category location={location} />
       <div className="scf-Blog-Category">
         <div className="scf-page-blog scf-layout-pattern">

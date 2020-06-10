@@ -20,7 +20,7 @@ function BlogCard({ blog }: { blog: Blog }) {
       <Link to={blog.node.fields.slug} data-id={id}>
         <Box className="scf-article-item__img">
           <Box className="scf-article-item__img-inner">
-            <img src={blog.node.frontmatter.thumbnail} alt="" />
+            <img src={blog.node.frontmatter.thumbnail} alt={blog.node.frontmatter.title} />
           </Box>
         </Box>
         <Box className="scf-article-item__content">
@@ -139,7 +139,7 @@ export default function() {
         '<div class="Box-jLJQJw evQvdc scf-article-item scf-article-item--block"> \
         <a href="{LINK}" data-id="{ID}"> \
           <div class="Box-jLJQJw evQvdc scf-article-item__img"> \
-            <div class="Box-jLJQJw evQvdc scf-article-item__img-inner"><img src="{IMG}" alt="" /></div> \
+            <div class="Box-jLJQJw evQvdc scf-article-item__img-inner"><img src="{IMG}" alt="{ALT}" /></div> \
           </div> \
           <div class="Box-jLJQJw evQvdc scf-article-item__content"> \
             <div class="Box-jLJQJw evQvdc scf-article-item__statistics"><span class="scf-blog-item-pv-icon"><i class="scf-icon scf-icon-view"></i></span>{PV} · {AUTHOR} · {DATE}</div>\
@@ -173,6 +173,7 @@ export default function() {
         const buildBody = temp
           .replace('{LINK}', blogItem.fields.slug)
           .replace('{IMG}', blogItem.frontmatter.thumbnail)
+          .replace('{ALT}', blogItem.frontmatter.title)
           .replace('{PV}', pv)
           .replace('{ID}', id)
           .replace('{AUTHOR}', blogItem.frontmatter.authors.join(','))

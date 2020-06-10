@@ -61,14 +61,12 @@ export default function() {
               <Box className="scf-grid__box">
                 <Box className="scf-video-item scf-video-item--block">
                   <a href={VideoList[0].link}>
-                    <img src={VideoList[0].img} alt="" />
+                    <img src={VideoList[0].img} alt={VideoList[0].title} />
                     <Box className="scf-video-item__info">
                       <a href={VideoList[0].link}>
                         <i className="scf-icon scf-icon-video"></i>
                       </a>
-                      <span className="scf-video-item__title">
-                        {VideoList[0].title}
-                      </span>
+                      <span className="scf-video-item__title">{VideoList[0].title}</span>
                     </Box>
                   </a>
                 </Box>
@@ -81,14 +79,12 @@ export default function() {
                     <Box className="scf-grid__box">
                       <Box className="scf-video-item scf-video-item--block">
                         <a href={VideoList[1].link}>
-                          <img src={VideoList[1].img} alt="" />
+                          <img src={VideoList[1].img} alt={VideoList[1].title} />
                           <Box className="scf-video-item__info">
                             <a href={VideoList[1].link}>
                               <i className="scf-icon scf-icon-video"></i>
                             </a>
-                            <span className="scf-video-item__title">
-                              {VideoList[1].title}
-                            </span>
+                            <span className="scf-video-item__title">{VideoList[1].title}</span>
                           </Box>
                         </a>
                       </Box>
@@ -98,14 +94,12 @@ export default function() {
                     <Box className="scf-grid__box">
                       <Box className="scf-video-item scf-video-item--block">
                         <a href={VideoList[2].link}>
-                          <img src={VideoList[2].img} alt="" />
+                          <img src={VideoList[2].img} alt={VideoList[2].title} />
                           <Box className="scf-video-item__info">
                             <a href={VideoList[2].link}>
                               <i className="scf-icon scf-icon-video"></i>
                             </a>
-                            <span className="scf-video-item__title">
-                              {VideoList[2].title}
-                            </span>
+                            <span className="scf-video-item__title">{VideoList[2].title}</span>
                           </Box>
                         </a>
                       </Box>
@@ -117,14 +111,12 @@ export default function() {
                     <Box className="scf-grid__box">
                       <Box className="scf-video-item scf-video-item--block">
                         <a href={VideoList[3].link}>
-                          <img src={VideoList[3].img} alt="" />
+                          <img src={VideoList[3].img} alt={VideoList[3].title} />
                           <Box className="scf-video-item__info">
                             <a href={VideoList[3].link}>
                               <i className="scf-icon scf-icon-video"></i>
                             </a>
-                            <span className="scf-video-item__title">
-                              {VideoList[3].title}
-                            </span>
+                            <span className="scf-video-item__title">{VideoList[3].title}</span>
                           </Box>
                         </a>
                       </Box>
@@ -134,14 +126,12 @@ export default function() {
                     <Box className="scf-grid__box">
                       <Box className="scf-video-item scf-video-item--block">
                         <a href={VideoList[4].link}>
-                          <img src={VideoList[4].img} alt="" />
+                          <img src={VideoList[4].img} alt={VideoList[4].title} />
                           <Box className="scf-video-item__info">
                             <a href={VideoList[4].link}>
                               <i className="scf-icon scf-icon-video"></i>
                             </a>
-                            <span className="scf-video-item__title">
-                              {VideoList[4].title}
-                            </span>
+                            <span className="scf-video-item__title">{VideoList[4].title}</span>
                           </Box>
                         </a>
                       </Box>

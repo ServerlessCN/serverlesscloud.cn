@@ -10,14 +10,7 @@ export default function(props: any) {
     title: string
   }>[] = []
 
-  const {
-    location = {},
-    description,
-    thumbnail,
-    rss,
-    prefetches,
-    keywords,
-  } = props
+  const { location = {}, description, thumbnail, rss, prefetches, keywords } = props
   const hostname = 'https://serverlesscloud.cn'
   const uri = `${hostname}${location.pathname}`
   const metaTitle = props.metaTitle || props.title
@@ -50,6 +43,13 @@ export default function(props: any) {
   if (prefetches && prefetches instanceof Array) {
     prefetches.forEach(prefetchLink => {
       link.push({ rel: 'prefetch', href: prefetchLink })
+    })
+  }
+
+  if (location.pathname) {
+    link.push({
+      rel: 'canonical',
+      href: `https://serverlesscloud.cn${location.pathname}`,
     })
   }
 

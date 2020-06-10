@@ -26,7 +26,7 @@ export default function({ data }: { data: Blog }) {
     <Link data-id={aid} className="scf-article-item scf-article-item--block" to={getBlogLink(data)}>
       <div className="scf-article-item__img">
         <div className="scf-article-item__img-inner">
-          <img src={frontmatter.thumbnail} alt="" />
+          <img src={frontmatter.thumbnail} alt={frontmatter.title} />
         </div>
       </div>
       <div className="scf-article-item__content">
