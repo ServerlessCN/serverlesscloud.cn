@@ -38,11 +38,7 @@ tags:
 
 ![serverless](https://img.serverlesscloud.cn/202049/1586443176723-%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%9B%BE%E7%89%87_4%E6%9C%889%E6%97%A522%E6%97%B638%E5%88%8626%E7%A7%92.png)
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

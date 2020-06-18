@@ -278,11 +278,7 @@ cost:  1.2248001098632812
 
 Serverless 架构下进行人工智能相关的应用可以是说是非常多的，本文是通过一个已有的依赖库，实现一个图像分类 / 预测的接口。`imageAI`这个依赖库相对来说自由度比较高，可以根据自身需要用来定制化自己的模型。本文算是抛砖引玉，期待更多人通过 Serverless 架构部署自己的"人工智能" API。
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

@@ -295,11 +295,7 @@ Serverless 架构在做一些同步的业务是有很不错效果的，同时 Se
 
 通过 Serverless 架构，我们还可以挖掘更多领域的应用，例如通过 Serverless 架构做一个 Word/PPT 转 PDF 的工具等。Serverless 架构的行业应用，领域应用，需要更多人提供更多的实践。
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

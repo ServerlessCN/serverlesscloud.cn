@@ -58,10 +58,7 @@ tags:
 > 
 > —— 腾讯云 Serverless 产品副总监张浩
 
-# 免费试用
 
-腾讯 Serverless Framework 助您快速、简单地构建和部署 Serverless 应用程序。目前，我们已提供免费产品试用方案，欢迎立即试用！
-> 立即试用地址： https://github.com/serverless/components/blob/master/README.cn.md
 
 无论是构建一个 Serverless Express.js 应用程序、Serverless 静态网站，还是 Serverless 云函数，我们诚邀您参加接下来的在线产品发布会，学习如何使用所有这些激动人心的新功能。
 

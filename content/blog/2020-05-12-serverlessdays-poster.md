@@ -31,9 +31,7 @@ tags:
 
 讲师持续招募中，如果您希望与这些专家同台论道，可以点击进入大会官网：[ServerlessDays · China](https://china.serverlessdays.io/)，填写提交议题信息，我们将第一时间与您联系！
 
-同时，我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
 
-> 详情可查阅：[Serverless Framework 30 天试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 

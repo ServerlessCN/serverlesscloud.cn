@@ -105,11 +105,7 @@ $ sls deploy
 
 以上，就是使用 Serverless Framework 轻松部署 SSR 框架 Next.js 的全部过程。不仅是 Next.js，包括 Express、Koa、Egg、Nuxt 等 Node 框架，都可以用同样的方法轻松完成部署。
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

@@ -47,11 +47,7 @@ tags:
 
 如果读者的团队还没有做 SSR，希望大家可以评估一下自身的业务特点，对首屏和 SEO 有刚需的，或者想再进一步优化用户体验的同学，可以尽早准备起来尝试一下，Serverless 下的 SSR 方案还是挺便捷的，整体开发体验上完成度还挺高，没有遇到过很大的坑，SSR 借助 Serverless 这种方式，相信在今年会越来越流行。
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

@@ -200,9 +200,7 @@ serverless --debug
 
 ![完成效果](https://img.serverlesscloud.cn/2020113/1578915365153-kru2vmr2j2%5B1%5D.png)
 
-目前，Serverless Framework 提供 30 天试用。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
 
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

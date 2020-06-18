@@ -249,11 +249,7 @@ serverless remove --debug
 - Components 相对 Plugin 在功能上略显单薄，除了部署和删除，再没有其他功能。当你需要部署多个东西，并写在了某个 Components 的 yaml 上，那么即使你只修改了一个函数，它都需要全部重新部署一遍；
 - Components 更多的定义是组件，所以在 Components 中是没有全局变量的。
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

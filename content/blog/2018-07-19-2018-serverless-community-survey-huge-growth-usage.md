@@ -121,11 +121,7 @@ tags:
 - 与去年相比，使用多个云厂商的人数增加，这只会使 [CloudEvents](https://cloudevents.io/) 等项目以及其他支持选择供应商的计划更加重要。
 - 对于许多人来说，Serverless 是他们第一次接触云服务。这意味着 Serverless 已经在改变开发人员的工作方式，提高云服务的使用。
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

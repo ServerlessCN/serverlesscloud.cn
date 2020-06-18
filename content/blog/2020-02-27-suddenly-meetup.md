@@ -29,11 +29,7 @@ tags:
 **福利二：部署大奖。**学习期间可跟随老师一起完成 Live Demo，2月28日（本周五）24:00之前成功完成 Demo 部署的小伙伴，还有**计算器笔记本、价值50元的腾讯云云函数产品无门槛代金券等奖品 100\% 放送**！
 
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

@@ -58,10 +58,7 @@ tags:
 附录：SCF上报自定义监控数据多方案对比
 
 ![serverless](https://img.serverlesscloud.cn/qianyi/images/YHl6UWa9s63pOMMx0c5M1iaGZic692hVUe5aKxHal8FHibSlQyyaujKMru3icUV9XxlF0EicOhnChzITEdrwxhnhhwg.png)
-## 免费试用
-
-腾讯 Serverless Framework 助您快速、简单地构建和部署 Serverless 应用程序。目前，我们已提供免费产品试用方案，欢迎立即试用！
-> 立即试用地址： https://github.com/serverless/components/blob/master/README.cn.md
+#
 
 ---
 

@@ -52,11 +52,7 @@ Tencent Serverless 目前已经支持了不少语言的热门框架，包括 Exp
 
 **福利三：**结合在线课堂的分享，撰写部署的最佳实践文章、学习心得或者其他与Serverless 相关内容，并发布在您的知乎、博客或者朋友圈等平台，**即可获得腾讯蓝牙音箱、腾讯云产品无门槛代金券等好礼。**
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

@@ -52,13 +52,10 @@ Serverless技术的兴起，让FaaS成为继IaaS、PaaS、SaaS之后一种新的
 > 腾讯云正在从技术、产品、功能以及生态等层面加速推进，帮助开发者获得更完善的功能特性以及更加人性化的开发体验，助力用户业务在云原生时代不断开拓创新、引领未来。
 > 
 > 
-> —— 腾讯云中间件总经理Yunong Xiao
+> —— 腾讯云中间件总经理 Yunong Xiao
 > 
 
-# 免费试用
 
-腾讯 Serverless Framework 助您快速、简单地构建和部署 Serverless 应用程序。目前，我们已提供免费产品试用方案，欢迎立即试用！
-> 立即试用地址： https://github.com/serverless/components/blob/master/README.cn.md
 
 ---
 

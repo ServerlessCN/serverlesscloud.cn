@@ -285,9 +285,7 @@ nction.zip
 
 ![](https://img.serverlesscloud.cn/202026/1580963150682-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A120200206114514.png)
 
-这样，我们就完成了一个 nCoV 的在线触发函数机器人～是不是很简单呢？快来开始动手吧～ 目前，Serverless Framework 提供 30 天试用。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
+这样，我们就完成了一个 nCoV 的在线触发函数机器人～是不是很简单呢？快来开始动手吧～ 
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

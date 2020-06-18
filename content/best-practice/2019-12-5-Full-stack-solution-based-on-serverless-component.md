@@ -387,10 +387,6 @@ api:
 
 当然全栈方案，并没有这么简单，这里只是简单介绍，如何使用 Serverless Component，快速实现一个全栈应用。如果要应用到实际的业务场景，我们还需考虑更多的问题，期待大家去探索和发现！
 
-目前，Serverless Framework 提供 30 天试用。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
-
 ---
 <div id='scf-deploy-iframe-or-md'></div>
 

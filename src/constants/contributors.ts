@@ -301,6 +301,12 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/zevmo',
   },
   {
+    name: '张远哲',
+    cn_name: 'Aaron Zhang',
+    link: 'https://github.com/a3nz3g',
+    avatar: 'https://avatars.githubusercontent.com/a3nz3g',
+  },
+  {
     name: '朱理锋',
     cn_name: 'Juli',
     link: 'https://github.com/Juliiii',

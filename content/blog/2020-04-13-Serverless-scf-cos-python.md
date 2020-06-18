@@ -624,11 +624,7 @@ OK，没啥问题的话现在你应该已经成功上线了自己的给未来写
 
 以上，我们可以总结出把一个简单的网页应用前后端都在一个云函数里来实现是完全没有问题的，而且极大缩短了我们应用开发的时间，非常的方便，还省去了购买配置和维护服务器的费用，让开发者可以真正将精力放到业务本身的开发上，这就是 Serverless 最大的魅力！
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

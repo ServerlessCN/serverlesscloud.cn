@@ -321,9 +321,7 @@ load_dotenv(dotenv_path=env_path)
 
 全文到这里就结束了，当然这只是本人在日常开发中总结的经验而已，如果你有更好的实践方式，欢迎一起为 Serverless 开源社区做贡献。
 
-目前，Serverless Framework 提供 30 天试用。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
 
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

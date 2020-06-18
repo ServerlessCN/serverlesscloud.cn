@@ -175,11 +175,7 @@ What？为啥我都初始化了程序为啥还是一片空白？
 
 存点啥不行呢，视频音乐文档统统都可以在线预览，简直不要太爽~ 祝各位玩得愉快！
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

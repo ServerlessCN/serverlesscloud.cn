@@ -205,11 +205,7 @@ MyComponent:
 1. 静态网站发布后，默认输出是 http 地址，如果你试图访问 https 地址你将会看到地址会从 https 301 到 http…，虽然去 COS 桶中开启强制 https 选项修复掉。但这还是一个很不「技术」的 bug。
 2. 在部署 Egg.js 应用前，serverless cli 会将整个项目打包成一个 zip 然后上传（是的，node\_modules 也被打包），这就导致 serverless cli 很容易会处于「卡死」状态，可以在部署前执行 `npm i --production` 来 hack 这个问题，但依然是一种很不好的体验。相信腾讯云团队后面会改成忽略 node\_modules 并在上传后执行 install npm 包的方式。
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

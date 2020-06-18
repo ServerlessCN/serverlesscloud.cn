@@ -46,11 +46,7 @@ Serverless 可以使几乎所有的互联网开发者以及互联网应用都从
 
 [ServerlessDays](https://china.serverlessdays.io) 是由社区发起、面向开发人员的全球无服务器技术会议。过去，ServerlessDays 在全球举办了系列技术交流与分享活动，无数 Serverless 领域的国内外专家和开发者在这里交流分享、学习成长。近年来随着中国 Serverless 技术的发展与成熟，ServerlessDays 与腾讯云联合主办了 ServerlessDays · China 大会。大会将邀请全球顶级技术专家、架构师以及开发者，解读 Serverless 前沿趋势，分享 Serverless 技术落地经验。
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

@@ -17,17 +17,9 @@ tags:
 
 当一个应用需要对第三方提供服务接口时，REST API 无疑是目前最主流的选择。不过，如果自建 REST API，开发者需要购买虚拟机、配置环境等等，等一切都搞定，可能已经又是一个深夜。
 
-而这些，都可以用 Serverless Framework 来解决。本教程将分享如何通过 Serverless SCF Component 、云函数 SCF 及 API 网关组件，快速构建一个 REST API ，并实现 GET/PUT 操作。
+REST API 模板使用 Tencent SCF 组件及其触发器能力，方便的在腾讯云创建，配置和管理一个 REST API 应用。您可以通过 Serverless SCF 组件快速构建一个 REST API 应用，实现 GET/PUT 操作。
 
-![](https://main.qcloudimg.com/raw/918551c66d6fa9c01f3667706d44f1b7.png)
-
-## 快速开始
-
-1. [安装](#1-安装)
-2. [配置](#2-配置)
-3. [部署](#3-部署)
-4. [测试](#4-测试)
-5. [移除](#5-移除)
+![Serverless](https://main.qcloudimg.com/raw/918551c66d6fa9c01f3667706d44f1b7.png)
 
 ### 1. 安装
 
@@ -42,7 +34,7 @@ $ npm install -g serverless
 通过如下命令直接下载该例子，目录结构如下：
 
 ```
-$ serverless create --template-url https://github.com/serverless/components/tree/master/templates/tencent-python-rest-api
+serverless create --template-url https://github.com/serverless/components/tree/v1/templates/tencent-python-rest-api
 ```
 
 ```
@@ -51,7 +43,55 @@ $ serverless create --template-url https://github.com/serverless/components/tree
 |   └── index.py
 └── serverless.yml
 ```
+目前 SCF 组件已支持 v2 版本，因此修改了 serverless.yml 文件，改为以下内容：
+```
+# serverless.yml 
 
+component: scf 
+name: apidemo 
+org: test 
+app: scfApp 
+stage: dev 
+
+inputs:
+  name: myRestAPI
+  enableRoleAuth: ture
+  src: ./code
+  handler: index.main_handler
+  runtime: Python3.6
+  region: ap-guangzhou
+  description: My Serverless Function
+  memorySize: 128
+  timeout: 20
+  events:
+      - apigw:
+          name: serverless
+          parameters:
+            protocols:
+              - http
+            serviceName: serverless
+            description: the serverless service
+            environment: release
+            endpoints:
+              - path: /users/{user_type}/{action}
+                method: GET
+                description: Serverless REST API
+                enableCORS: TRUE
+                serviceTimeout: 10
+                param:
+                  - name: user_type
+                    position: PATH
+                    required: 'TRUE'
+                    type: string
+                    defaultValue: teacher
+                    desc: mytest
+                  - name: action
+                    position: PATH
+                    required: 'TRUE'
+                    type: string
+                    defaultValue: go
+                    desc: mytest
+```
 查看 code/index.py 代码，可以看到接口的传参和返回逻辑：
 
 ```
@@ -89,50 +129,27 @@ def main_handler(event, context):
 
 ### 3. 部署
 
-通过 `sls` 命令进行部署，并可以添加 `--debug` 参数查看部署过程中的信息
+通过 `sls deploy` 命令进行部署，并可以添加 `--debug` 参数查看部署过程中的信息
 
 如您的账号未[登陆](https://cloud.tencent.com/login)或[注册](https://cloud.tencent.com/register)腾讯云，您可以直接通过微信扫描命令行中的二维码进行授权登陆和注册。
 
 ```
-$ serverless --debug
+$ sls deploy
 
-  DEBUG ─ Resolving the template's static variables.
-  DEBUG ─ Collecting components from the template.
-  DEBUG ─ Downloading any NPM components found in the template.
-  DEBUG ─ Analyzing the template's components dependencies.
-  DEBUG ─ Creating the template's components graph.
-  DEBUG ─ Syncing template state.
-  DEBUG ─ Executing the template's components graph.
-  DEBUG ─ Compressing function myRestAPI file to /Users/dfounderliu/Desktop/restAPI/component/.serverless/myRestAPI.zip.
-  DEBUG ─ Compressed function myRestAPI file successful
-  DEBUG ─ Uploading service package to cos[sls-cloudfunction-ap-singapore-code]. sls-cloudfunction-default-myRestAPI-1574856533.zip
-  DEBUG ─ Uploaded package successful /Users/dfounderliu/Desktop/restAPI/component/.serverless/myRestAPI.zip
-  DEBUG ─ Creating function myRestAPI
-  DEBUG ─ Updating code...
-  DEBUG ─ Updating configure...
-  DEBUG ─ Created function myRestAPI successful
-  DEBUG ─ Setting tags for function myRestAPI
-  DEBUG ─ Creating trigger for function myRestAPI
-  DEBUG ─ Starting API-Gateway deployment with name myRestAPI.serverless in the ap-singapore region
-  DEBUG ─ Service with ID service-ibmk6o22 created.
-  DEBUG ─ API with id api-pjs3q3qi created.
-  DEBUG ─ Deploying service with id service-ibmk6o22.
-  DEBUG ─ Deployment successful for the api named myRestAPI.serverless in the ap-singapore region.
-  DEBUG ─ Deployed function myRestAPI successful
+serverless ⚡ framework
+Action: "deploy" - Stage: "dev" - App: "scfApp" - Instance: "myRestAPI"
 
-  myRestAPI:
-    Name:        myRestAPI
-    Runtime:     Python3.6
-    Handler:     index.main_handler
-    MemorySize:  128
-    Timeout:     20
-    Region:      ap-singapore
-    Role:        QCS_SCFExcuteRole
-    Description: My Serverless Function
-    APIGateway:
-      - serverless - http://service-ibmk6o22-1250000000.sg.apigw.tencentcs.com/release
+FunctionName: myRestAPI
+Description:  My Serverless Function
+Namespace:    default
+Runtime:      Python3.6
+Handler:      index.main_handler
+MemorySize:   128
+Triggers: 
+  apigw: 
+    - http://service-jyl9i6mc-1258834142.gz.apigw.tencentcs.com/release/users/{user_type}/{action}
 
-  10s › myRestAPI › done
+31s › myRestAPI › Success
 
 ```
 
@@ -142,13 +159,13 @@ $ serverless --debug
 > 注：如 Windows 系统中未安装 `curl`，也可以直接通过浏览器打开对应链接查看返回情况
 
 ```
-$ curl -XGET http://service-9t28e0tg-1250000000.sg.apigw.tencentcs.com/release/users/teacher/go
+$ curl -XGET http://service-9t28e0tg-1250000000.gz.apigw.tencentcs.com/release/users/teacher/go
 
 {"result": "it is student_get action"}
 ```
 
 ```
-$ curl -PUT http://service-9t28e0tg-1250000000.sg.apigw.tencentcs.com/release/users/student/go
+$ curl -PUT http://service-9t28e0tg-1250000000.gz.apigw.tencentcs.com/release/users/student/go
 
 {"result": "it is teacher_put action"}
 ```
@@ -169,33 +186,8 @@ $ sls remove --debug
   7s » myRestAPI » done
 ```
 
-### 账号配置（可选）
 
-当前默认支持 CLI 扫描二维码登录，如您希望配置持久的环境变量/秘钥信息，也可以本地创建 `.env` 文件
-
-```
-$ touch .env # 腾讯云的配置信息
-```
-
-在 `.env` 文件中配置腾讯云的 SecretId 和 SecretKey 信息并保存
-
-如果没有腾讯云账号，可以在此[注册新账号](https://cloud.tencent.com/register)。
-
-如果已有腾讯云账号，可以在 [API 密钥管理](https://console.cloud.tencent.com/cam/capi)中获取 `SecretId` 和`SecretKey`.
-
-```
-# .env
-TENCENT_SECRET_ID=123
-TENCENT_SECRET_KEY=123
-```
-
-查看：[完整仓库模板](https://github.com/serverless/components/blob/master/templates/tencent-python-rest-api/README_CN.md)
-
-目前 REST API 模板主要展示了 GET/PUT 操作，后续腾讯云 [Serverless Framework](https://cloud.tencent.com/product/sf) 也将支持对 Serverless DB 的连接，可以完整实现 CRUD 操作，并支持资源的弹性扩缩容。您可以通过该模板快速开发业务 REST API、扩展代码，探索更丰富的场景。
-
-现在，Serverless Framework 提供 30 天试用。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
+查看：[操作指南](https://cloud.tencent.com/document/product/1154/40216)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

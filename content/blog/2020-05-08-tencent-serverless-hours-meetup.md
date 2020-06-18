@@ -32,11 +32,7 @@ Tencent Serverless Hours 系列线上分享会是由腾讯云 serverless 团队�
 
 ![](https://img.serverlesscloud.cn/2020430/1588230170647-tencent%20serverless%20hours%20%E4%BF%AE%E6%94%B9%E7%89%88%E6%9C%AC%402x.jpg)
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

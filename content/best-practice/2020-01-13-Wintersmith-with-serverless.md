@@ -118,9 +118,7 @@ $ sls --debug
 
 虽然这只是一个非常简单的示例，但是不难看出，Serverless Framework 在快速部署方面的强大能力。比如集成了微信扫描二维码，就直接让我们避开了繁琐的云服务的账号注册、配置的环节。而你需要做的，只是根据 Wintersmith 自身的能力，进行网站的定制。
 
-目前，Serverless Framework 提供 30 天试用。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
 
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

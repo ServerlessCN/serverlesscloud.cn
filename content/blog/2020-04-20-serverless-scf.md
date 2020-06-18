@@ -203,11 +203,7 @@ Functions:
 
 从本篇文章，可以大概知道如何在腾讯云初建一个 `serverless` 函数，并且知道了如何执行并且调用它。而关于 `sls` 的原理，如服务编排以及容器化，可以再继续深入学习。
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

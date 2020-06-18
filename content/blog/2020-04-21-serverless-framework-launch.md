@@ -29,11 +29,7 @@ tags:
 ![腾讯云 Serverless Framework 正式发布会](https://img.serverlesscloud.cn/2020417/1587090895945-%E5%8F%91%E5%B8%83%E4%BC%9A%E6%B5%B7%E6%8A%A5%E7%BB%88%E7%A8%BF%2002.png)
 
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

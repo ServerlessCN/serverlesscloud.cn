@@ -210,9 +210,7 @@ async getUsers() {
 
 ## 小结
 
-以上基于腾讯云 [Serverless Framework](https://cloud.tencent.com/product/sf) 来实现。到这里，有关 `Serverless Component` 全栈解决方案的全部内容就到此结束啦！目前，Serverless Framework 提供 30 天试用。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
+以上基于腾讯云 [Serverless Framework](https://cloud.tencent.com/product/sf) 来实现。到这里，有关 `Serverless Component` 全栈解决方案的全部内容就到此结束啦！
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

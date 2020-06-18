@@ -57,10 +57,7 @@ API网关监控
 
 腾讯云里程碑专属 H5 推送项目，需求内容本身并不难，但需要做不少的工作才能确保万无一失。作为前端开发，Serverless 确实让前端更容易向全栈发展，且更容易开发出稳定性好、支持高并发的后端服务。
 
-# 免费试用
 
-腾讯 Serverless Framework 助您快速、简单地构建和部署 Serverless 应用程序。目前，我们已提供免费产品试用方案，欢迎立即试用！
-> 立即试用地址： https://github.com/serverless/components/blob/master/README.cn.md
 
 ---
 

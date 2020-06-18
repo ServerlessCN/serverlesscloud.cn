@@ -133,9 +133,7 @@ $ sls
 
 这次依然使用了腾讯云 [Serverless Framework](https://cloud.tencent.com/product/sf) 作为网站部署的工具，实在是因为太方便了。部署过程不到一分钟，完全不用考虑云上资源如何配置的问题！✌️
 
-目前，Serverless Framework 提供 30 天试用。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
 
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

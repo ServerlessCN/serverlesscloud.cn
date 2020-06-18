@@ -116,11 +116,7 @@ event 就是我们触发事件，context 就是发生该事件时系统所处的
 
 [https://github.com/ukuq/onepoint/tree/fc1a3f28f570d55945b60bd250c40cc8f92162a7](https://github.com/ukuq/onepoint/tree/fc1a3f28f570d55945b60bd250c40cc8f92162a7)
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

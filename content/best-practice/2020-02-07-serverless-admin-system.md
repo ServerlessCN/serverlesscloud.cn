@@ -917,9 +917,7 @@ $ serverless --debug
 
 如果遇到问题，可以参考本文源码。如果你成功实现了，可以到官网进一步熟悉 Egg.js 框架，以便今后可以实现更加复杂的应用。虽然本文使用的是 Vue.js 前端框架，但是你也可以将 `frontend` 更换为任何你喜欢的前端框架项目，开发时只需要将接口请求前缀使用 `@serverless/tencent-website` 组件生成的 `env.js` 文件就行。
 
-目前，Serverless Framework 提供 30 天试用。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
 
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

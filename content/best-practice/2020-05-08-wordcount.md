@@ -331,11 +331,7 @@ Serverless 架构相是适用于大数据处理的。在腾讯云官网，我们
 
 本实例中，有一键部署多个函数的操作。在实际生产中，每个项目都不会是单个函数单打独斗的，而是多个函数组合应用，形成一个 Service 体系，所以一键部署多个函数就显得尤为重要。通过本实例，希望读者可以对 Serverless 架构的应用场景有更多的了解，并且能有所启发，将云函数和不同触发器进行组合，应用在自身业务中。
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

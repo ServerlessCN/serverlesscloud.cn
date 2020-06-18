@@ -282,11 +282,7 @@ $ serverless --debug
 - 腾讯云 API 网关文档：[https://cloud.tencent.com/document/product/628](https://cloud.tencent.com/document/product/628?from=10680)
 - 飞书开放平台开发文档：[https://open.feishu.cn/document/](https://open.feishu.cn/document/)
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

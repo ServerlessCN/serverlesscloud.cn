@@ -70,11 +70,7 @@ SSR 是 Web 应用常见的优化手段，使用了 SSR 意味着开发者必须
 4. 追求极致: Serverless Render 性能优化
 5. 未来: 组件即服务
 
-## Serverless Framework 30 天试用计划
 
-我们诚邀您来体验最便捷的 Serverless 开发和部署方式。在试用期内，相关联的产品及服务均提供免费资源和专业的技术支持，帮助您的业务快速、便捷地实现 Serverless！
-
-> 详情可查阅：[Serverless Framework 试用计划](https://cloud.tencent.com/document/product/1154/38792)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>
