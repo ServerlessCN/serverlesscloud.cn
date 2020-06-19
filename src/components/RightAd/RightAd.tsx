@@ -5,6 +5,18 @@ import './RightAd.less'
 export default () => {
   return (
     <>
+      <a
+        href="https://serverless.cloud.tencent.com/deploy/express"
+        target="_blank"
+        className="articles-ad-con"
+        onClick={() => MtaH5.clickStat('ad_articles')}
+      >
+        <img
+          className="articles-ad"
+          src="//img.serverlesscloud.cn/2020618/1592472367776-ad_articles.png"
+          alt="文章列表页广告位"
+        />
+      </a>
       <div className="right-title">
         <h3>正在进行</h3>
       </div>

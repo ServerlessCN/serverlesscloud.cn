@@ -33,19 +33,20 @@ export function fitPromote() {
   const promoteEle = document.getElementById('scf-deploy-iframe-or-md')
   if (!promoteEle) return
 
-  let promoteType = localStorage.getItem('promoteType')
+  let promoteType = localStorage.getItem('newPromoteType')
   if (!promoteType) {
-    promoteType = Math.floor(Math.random() * 3).toString()
-    localStorage.setItem('promoteType', promoteType)
+    promoteType = Math.floor(Math.random() * 10).toString()
+    localStorage.setItem('newPromoteType', promoteType)
   }
+  const promoteTypeNumber = Number(promoteType)
   if (isMobile()) {
     showPromoteCLI(promoteEle)
     return
   }
-  if (promoteType === '0') {
+  if (promoteTypeNumber <= 6) {
     showPromoteCLI(promoteEle)
-  } else if (promoteType === '1') {
-    showPromoteQrCode(promoteEle)
+  } else if (promoteTypeNumber <= 8) {
+    showPromoteAd(promoteEle)
   } else {
     showPromoteQuickButton(promoteEle)
   }
@@ -94,6 +95,30 @@ Serverless Framework「一键部署」功能的推出，让部署一个完整的
 <blockquote><p><a href="https://china.serverless.com/express">china.serverless.com/express</a></p></blockquote>
 <p>当然，你也可以在本页进行扫码部署，效果也是一样的！</p>
 <iframe height="500px" width="100%" src="https://serverless.cloud.tencent.com/deploy/express" frameborder="0"  allowfullscreen></iframe>`
+}
+
+function showPromoteAd(promoteEle: HTMLElement) {
+  const hrElements = promoteEle.parentElement!.querySelectorAll('hr')
+  const extraHr = Array.from(hrElements).reverse()[1]
+  if (extraHr) {
+    promoteEle.parentElement!.removeChild(extraHr)
+  }
+  const container = document.createElement('div')
+  container.innerHTML = `
+<a
+  href="https://serverless.cloud.tencent.com/deploy/express"
+  target="_blank"
+  class="read-ad-con"
+  onclick="MtaH5.clickStat('ad_read')"
+>
+  <img
+    class="read-ad"
+    src="//img.serverlesscloud.cn/2020618/1592478751279-ad_read.png"
+    alt="文章广告位"
+  />
+</a>
+  `
+  promoteEle.parentElement!.appendChild(container)
 }
 
 function isMobile() {

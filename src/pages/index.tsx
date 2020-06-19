@@ -6,6 +6,7 @@ import LatestBlogs from '@src/components/pages/home/LatestBlogs'
 import Activitys from '@src/components/pages/home/Activitys'
 import Videos from '@src/components/pages/home/Videos'
 import AboutUs from '@src/components/pages/home/AboutUs'
+import HomeAd from '@src/components/pages/home/HomeAd'
 import LatestComponents from '@src/components/pages/home/LatestComponents'
 import BestParctices from '@src/components/pages/home/BestPractices'
 import CommonQuestion from '@src/components/pages/home/CommonQuestion'
@@ -55,6 +56,7 @@ const IndexPage = (props: Props) => {
       ) : (
         <BestParctices />
       )}
+      <HomeAd />
       <LatestComponents />
       <Container width={[1, 1, 1, 912, 0.76, 1200]} px={0}>
         <Box className="scf-grid">
