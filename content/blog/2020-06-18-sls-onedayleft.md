@@ -3,7 +3,7 @@ title: 倒计时 1 天！Serverless，起风了！
 description: 6 月 19 日，首届 ServerlesssDays · China 大会震撼来袭。
 keywords: Serverless;ServerlessDays
 date: 2020-06-18
-thumbnail: https://img.serverlesscloud.cn/2020618/1592480689193-IMG_1627.JPG
+thumbnail: https://img.serverlesscloud.cn/2020618/1592480602141-IMG_1628.PNG
 categories:
   - news
 authors:

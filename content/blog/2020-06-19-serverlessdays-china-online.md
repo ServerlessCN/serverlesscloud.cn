@@ -1,10 +1,10 @@
 ---
-title: 首届 ServerlessDays China 大会即将起航
+title: 首届 ServerlessDays China 大会
 description: 大会将邀请全球顶级专家、领先的 Serverless 开发平台创始人以及一线工程师，为开发者解读 Serverless 前沿趋势和技术落地经验！
 keywords: Serverless;ServerlessDays
 date: 2020-06-19
 time: future
-thumbnail: https://img.serverlesscloud.cn/2020417/1587135550712-7fff4d46d771485c3e5648fded8e374.png
+thumbnail: https://img.serverlesscloud.cn/2020619/1592567721147-111.png
 categories:
   - meetup
 authors:

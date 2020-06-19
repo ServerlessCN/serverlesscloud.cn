@@ -29,7 +29,7 @@ const bannerConfigs: {
     img: banner_slsday,
     backgroundColor: '#000',
     alt: 'ServerlessDays',
-    link: 'https://china.serverlessdays.io/',
+    link: 'https://img.serverlesscloud.cn/blog/2020-06-20-serverlessdays-news',
     title: '',
   },
   {
