@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Container } from '@src/components/atoms'
 import Layout from '@src/layouts'
-import { debounce } from '@src/utils'
+import { useMobileView } from '@src/utils'
 import LatestBlogs from '@src/components/pages/home/LatestBlogs'
 import Activitys from '@src/components/pages/home/Activitys'
 import Videos from '@src/components/pages/home/Videos'
@@ -20,24 +20,7 @@ interface Props {
 }
 
 const IndexPage = (props: Props) => {
-  const [isMobileView, setisMobileView] = React.useState(false)
-
-  React.useEffect(() => {
-    const onResize = debounce(() => {
-      if (window.innerWidth > 992) {
-        setisMobileView(false)
-      } else {
-        setisMobileView(true)
-      }
-    }, 50)
-
-    window.addEventListener('resize', onResize)
-    onResize()
-
-    return () => {
-      window.removeEventListener('resize', onResize)
-    }
-  }, [])
+  const [isMobileView] = useMobileView()
 
   return (
     <Layout>
@@ -49,7 +32,7 @@ const IndexPage = (props: Props) => {
       />
       <h1 className="page-title">Serverless 中文网 - 首页</h1>
       <Swiper />
-      <HomeAd />
+      {!isMobileView && <HomeAd />}
       {isMobileView ? (
         <Box className="scf-grid">
           <RecommandRead title={'最佳实践'} />

@@ -1,4 +1,5 @@
 import adConfig from '@src/constants/ad'
+import React from 'react'
 /**
  * 2019-10-14T00:00:00.000Z -> AUG 07 2019
  * @param {
@@ -127,4 +128,27 @@ function isMobile() {
     userAgent.indexOf('ipad') > -1 ||
     userAgent.indexOf('ios') > -1
   )
+}
+
+export function useMobileView() {
+  const [isMobileView, setisMobileView] = React.useState(false)
+
+  React.useEffect(() => {
+    const onResize = debounce(() => {
+      if (window.innerWidth > 992) {
+        setisMobileView(false)
+      } else {
+        setisMobileView(true)
+      }
+    }, 50)
+
+    window.addEventListener('resize', onResize)
+    onResize()
+
+    return () => {
+      window.removeEventListener('resize', onResize)
+    }
+  }, [])
+
+  return [isMobileView]
 }
