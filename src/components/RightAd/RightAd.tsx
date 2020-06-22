@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { adBanner } from '@src/constants/ad_banner'
 import './RightAd.less'
+import adConfig from '@src/constants/ad'
 
 export default () => {
   return (
@@ -11,11 +12,7 @@ export default () => {
         className="articles-ad-con"
         onClick={() => MtaH5.clickStat('ad_articles')}
       >
-        <img
-          className="articles-ad"
-          src="//img.serverlesscloud.cn/2020618/1592472367776-ad_articles.png"
-          alt="文章列表页广告位"
-        />
+        <img className="articles-ad" src={adConfig.articleList} alt="文章列表页广告位" />
       </a>
       <div className="right-title">
         <h3>正在进行</h3>

@@ -48,7 +48,8 @@ const IndexPage = (props: Props) => {
         location={props.location}
       />
       <h1 className="page-title">Serverless 中文网 - 首页</h1>
-      <Swiper />{' '}
+      <Swiper />
+      <HomeAd />
       {isMobileView ? (
         <Box className="scf-grid">
           <RecommandRead title={'最佳实践'} />
@@ -56,7 +57,6 @@ const IndexPage = (props: Props) => {
       ) : (
         <BestParctices />
       )}
-      <HomeAd />
       <LatestComponents />
       <Container width={[1, 1, 1, 912, 0.76, 1200]} px={0}>
         <Box className="scf-grid">

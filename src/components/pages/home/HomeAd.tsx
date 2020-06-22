@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Box, Container } from '@src/components/atoms'
 import './HomeAd.less'
+import adConfig from '@src/constants/ad'
 
 export default function() {
   return (
@@ -13,11 +14,7 @@ export default function() {
             className="home-ad-con"
             onClick={() => MtaH5.clickStat('ad_home')}
           >
-            <img
-              className="home-ad"
-              src="//img.serverlesscloud.cn/2020618/1592471447152-home-ad.png"
-              alt="首页广告位"
-            />
+            <img className="home-ad" src={adConfig.home} alt="首页广告位" />
           </a>
         </Box>
       </Box>

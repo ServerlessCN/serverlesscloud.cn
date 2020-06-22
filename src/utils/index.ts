@@ -1,3 +1,4 @@
+import adConfig from '@src/constants/ad'
 /**
  * 2019-10-14T00:00:00.000Z -> AUG 07 2019
  * @param {
@@ -44,16 +45,19 @@ export function fitPromote() {
     return
   }
   if (promoteTypeNumber <= 6) {
-    showPromoteCLI(promoteEle)
+    showPromoteAd(promoteEle, 'ad_read')
   } else if (promoteTypeNumber <= 8) {
-    showPromoteAd(promoteEle)
+    showPromoteAd(promoteEle, 'ad_readtest')
   } else {
     showPromoteQuickButton(promoteEle)
   }
 }
-
 function showPromoteCLI(promoteEle: HTMLElement) {
-  promoteEle.innerHTML = `
+  promoteEle.innerHTML = getPromoteCLIHTML()
+}
+
+function getPromoteCLIHTML() {
+  return `
 <p><span class="bold-text">Serverless 极速部署，只需三步</span></p>
 <p>Serverless Framework 是构建和运维 Serverless 应用的框架。简单三步，即可通过 Serverless Framework 快速实现服务部署。</p>
 <p><span class="bold-text">1. 安装 Serverless</stspan/p>
@@ -72,6 +76,7 @@ function showPromoteCLI(promoteEle: HTMLElement) {
 }
 
 function showPromoteQuickButton(promoteEle: HTMLElement) {
+  promoteEle.innerHTML = getPromoteCLIHTML()
   const hrElements = promoteEle.parentElement!.querySelectorAll('hr')
   const extraHr = Array.from(hrElements).reverse()[1]
   if (extraHr) {
@@ -87,17 +92,8 @@ function showPromoteQuickButton(promoteEle: HTMLElement) {
   promoteEle.parentElement!.appendChild(quickStartButton)
 }
 
-function showPromoteQrCode(promoteEle: HTMLElement) {
-  promoteEle.innerHTML = `<p>
-Serverless Framework「一键部署」功能的推出，让部署一个完整的 Serverless 应用变得特别简单，复制以下链接至浏览器访问，可以体验下或许是史上最快的
-<a href="https://serverless.cloud.tencent.com/deploy/express">Serverless  HTTP</a>
-实战开发！</p>
-<blockquote><p><a href="https://china.serverless.com/express">china.serverless.com/express</a></p></blockquote>
-<p>当然，你也可以在本页进行扫码部署，效果也是一样的！</p>
-<iframe height="500px" width="100%" src="https://serverless.cloud.tencent.com/deploy/express" frameborder="0"  allowfullscreen></iframe>`
-}
-
-function showPromoteAd(promoteEle: HTMLElement) {
+function showPromoteAd(promoteEle: HTMLElement, MTAKey: string) {
+  promoteEle.innerHTML = getPromoteCLIHTML()
   const hrElements = promoteEle.parentElement!.querySelectorAll('hr')
   const extraHr = Array.from(hrElements).reverse()[1]
   if (extraHr) {
@@ -109,11 +105,11 @@ function showPromoteAd(promoteEle: HTMLElement) {
   href="https://serverless.cloud.tencent.com/deploy/express"
   target="_blank"
   class="read-ad-con"
-  onclick="MtaH5.clickStat('ad_read')"
+  onclick="MtaH5.clickStat('${MTAKey}')"
 >
   <img
     class="read-ad"
-    src="//img.serverlesscloud.cn/2020618/1592478751279-ad_read.png"
+    src="${adConfig.article}"
     alt="文章广告位"
   />
 </a>
