@@ -15,7 +15,7 @@ tags:
   - 飞书
 ---
 
-## **一、前言**
+## 一、前言
 
 在日常工作学习生活中，我们可能会遇到以下情形：
 
@@ -23,29 +23,23 @@ tags:
 - 某些自己很想注册的网站悄悄开放注册，但是自己并没有及时得知，于是只能继续漫无目的的等待
 - ……
 
-如果每件事都花时间去关注，那我们的时间必然会不够用，那有没有什么办法可以让这些消息**集中**起来并且**及时**推送呢？在这里我想向大家推荐一个解决方案，那就是**使用Serverless+飞书打造属于自己的个性化消息提醒系统**。
+如果每件事都花时间去关注，那我们的时间必然会不够用，那有没有什么办法可以让这些消息**集中**起来并且**及时**推送呢？在这里我想向大家推荐一个解决方案，那就是**使用 Serverless + 飞书打造属于自己的个性化消息提醒系统**。
 
-## **二、准备工作**
+## 二、准备工作
 
-1. 首先当然是注册一个飞书账号（这个应该就不用我赘述了吧），然后在[飞书网页版](https://www.feishu.cn/)登录
+1. 首先注册一个飞书账号，然后在[飞书网页版](https://www.feishu.cn/)登录
 
 2. 打开[飞书开放平台](https://open.feishu.cn/app/)，点击**创建企业自建应用**，并输入**应用名称**和**应用副标题**，然后点击**确定创建**
 
-![serverless](  https://img.serverlesscloud.cn/2020522/1590171266341-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png)
+![点击创建企业自建应用](  https://img.serverlesscloud.cn/2020522/1590171266341-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png)
 
-点击创建企业自建应用
-
-![serverless]( https://img.serverlesscloud.cn/2020522/1590171266312-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png )
-
-输入应用名称和应用副标题，然后点击确定创建
+![输入应用名称和应用副标题，然后点击确定创建]( https://img.serverlesscloud.cn/2020522/1590171266312-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png )
 
 3. 在企业自建应用列表中点击刚刚创建成功的应用，并记录 **App ID** 和 **App Secret**
 
-![serverless]( https://img.serverlesscloud.cn/2020522/1590171266328-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png )
+![记录 App ID 和 App Secret]( https://img.serverlesscloud.cn/2020522/1590171266328-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png )
 
-记录 App ID 和 App Secret
-
-## **二、编写代码**
+## 二、编写代码
 
 1. 在本地新建一个项目目录，名称随意，这里以 `feishu-notify` 为例
 
@@ -53,7 +47,7 @@ tags:
 
 3. 按如下说明进行编码
 
-### **.env**
+### .env
 
 ```javascript
 TENCENT_SECRET_ID=AKID********************************
@@ -62,7 +56,7 @@ TENCENT_SECRET_KEY=********************************
 
 > 注：这里的 `TENCENT_SECRET_ID` 和 `TENCENT_SECRET_KEY` 可在腾讯云控制台的[访问密钥](https://console.cloud.tencent.com/cam/capi)中获取，如果没有密钥则需要自己新建一个
 
-### **serverless.yml**
+### serverless.yml
 
 ```javascript
 myFunction:
@@ -88,7 +82,7 @@ myFunction:
 
 > 注：可以点击[这里](https://github.com/serverless-components/tencent-scf/blob/master/docs/configure.md)查看`serverless.yml`中所有可用属性的属性列表
 
-### **index.py**
+### index.py
 
 ```javascript
 def main_handler(event, context):
@@ -161,7 +155,7 @@ def main_handler(event, context):
 2. 最终我们使用 `POST` 方法发送消息
 3. 在调用时，我们还需要在 `query` 处加上 `?myauth=feishu1`，目的是作简单验证以防止他人发送，例如 `https://service-********-**********.**.apigw.tencentcs.com/release/?myauth=feishu1`
 
-## **三、部署Serverless服务**
+## 三、部署 Serverless 服务
 
 1. 通过 npm 安装 Serverless
 
@@ -181,57 +175,43 @@ $ serverless --debug
 
 获取 API 网关的 URL
 
-## **四、上线应用**
+## 四、上线应用
 
 1. 回到[飞书开放平台](https://open.feishu.cn/app/)，在企业自建应用列表中点击刚刚创建成功的应用
 
 2. 点击**应用功能**-**机器人**，点击**启用机器人**
 
-![serverless]( https://img.serverlesscloud.cn/2020522/1590171266342-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png )
-
-启用机器人
+![启用机器人]( https://img.serverlesscloud.cn/2020522/1590171266342-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png )
 
 3. 点击**版本管理与发布**-**创建版本**，参考下图进行配置（先不要点保存）
 
-![serverless]( https://img.serverlesscloud.cn/2020522/1590171266347-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png )
-
-创建版本
+![创建版本]( https://img.serverlesscloud.cn/2020522/1590171266347-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png )
 
 4. 在**可用性状态**处点击**编辑**，选择所有员工，然后点击**保存**
 
-![serverless]( https://img.serverlesscloud.cn/2020522/1590171267537-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png  )
-
-配置可用性状态
+![配置可用性状态]( https://img.serverlesscloud.cn/2020522/1590171267537-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png  )
 
 5. 点击**申请发布**
 
-   ![serverless](  https://img.serverlesscloud.cn/2020522/1590171267505-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png  )
-
-申请发布
+![申请发布](  https://img.serverlesscloud.cn/2020522/1590171267505-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png  )
 
 6. 点击飞书网页版的头像，进入飞书管理后台
 
-   ![serverless]( https://img.serverlesscloud.cn/2020522/1590171266679-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png  )
+![进入管理后台]( https://img.serverlesscloud.cn/2020522/1590171266679-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png  )
 
-
-
-进入管理后台
 
 7. 点击**工作台**-**应用审核**，然后点击**审核**
 
-   ![serverless]( https://img.serverlesscloud.cn/2020522/1590171266665-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png)
+![审核应用]( https://img.serverlesscloud.cn/2020522/1590171266665-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png)
 
-
-
-审核应用
 
 8. 点击**通过**
 
-## **五、调用接口**
+## 五、调用接口
 
-**请求方式：**POST
+**请求方式：** POST
 
-**请求地址：**上面获取的 APIGateway 的 URL
+**请求地址：** 上面获取的 APIGateway 的 URL
 
 **请求 Header：**
 
@@ -247,7 +227,7 @@ $ serverless --debug
 | myauth | string | 必填      | 简单验证 |        | feishu1 |
 
 
-请求 Body：
+**请求 Body：**
 
 ```javascript
 {
@@ -255,25 +235,19 @@ $ serverless --debug
 }
 ```
 
-## **六、效果**
+## 六、效果
 
 为了方便，这里使用 Chrome 浏览器插件 **Talend API Tester** 进行调用
 
-![serverless](https://img.serverlesscloud.cn/2020522/1590171267436-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png)
-
-
-
-使用 Talend API Tester 调用接口
+![使用 Talend API Tester 调用接口](https://img.serverlesscloud.cn/2020522/1590171267436-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png)
 
 可以看到，飞书的消息推送很及时
 
-电脑端效果
-
-![serverless](https://img.serverlesscloud.cn/2020522/1590171266721-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png)
+![电脑端效果](https://img.serverlesscloud.cn/2020522/1590171266721-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15901711409297.png)
 
 
 
-## **七、结语**
+## 七、结语
 
 其实利用飞书能实现的并不只有这些而已，我相信聪明的你一定能开发出更加好玩的应用。本次的分享到此结束，感谢各位的浏览！下面分享一些实用的链接：
 
@@ -281,8 +255,6 @@ $ serverless --debug
 - 腾讯云 Serverless Framework 文档：[https://cloud.tencent.com/document/product/1154](https://cloud.tencent.com/document/product/1154?from=10680)
 - 腾讯云 API 网关文档：[https://cloud.tencent.com/document/product/628](https://cloud.tencent.com/document/product/628?from=10680)
 - 飞书开放平台开发文档：[https://open.feishu.cn/document/](https://open.feishu.cn/document/)
-
-
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>
