@@ -46,3 +46,14 @@ Yunong Xiao 表示：“放眼当下，Serverless 的应用主要面临三大挑
 凭借在技术、生态等方面的优势，腾讯云 Serverless 也获得了权威机构的认可。在全球独立咨询与服务机构 Forrester 发布的《The Forrester New Wave TM: Function-As-A- Service Platforms, Q1 2020》报告中，腾讯云 FaaS 取得了综合评分位居全球前三的好成绩，也成为中国唯一进入全球 Top3 的云厂商。Forrester 官方还给予了腾讯云 FaaS 能力「强劲表现者」的评价。
 
 “腾讯云将通过持续应用新的技术、提供新的功能、开发新的产品和构筑新的生态，从多方面为开发者提供全面完整的 Serverless 体验。” Yunong Xiao 表示。
+
+---
+<div id='scf-deploy-iframe-or-md'></div>
+
+---
+
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
+> - 官网：[serverless.com](https://serverless.com/)
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

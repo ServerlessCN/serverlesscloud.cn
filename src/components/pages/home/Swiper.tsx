@@ -3,7 +3,7 @@ import { Center, Background, Container, Box, Image } from '@src/components/atoms
 import theme from '@src/constants/theme'
 import { CheckIfDesktopContext } from '@src/contexts'
 import Swiper from '@src/components/Swiper'
-import banner_slsday from '@src/assets/images/banner_slsday.png'
+import banner_api from '@src/assets/images/banner_api.png'
 import banner1 from '@src/assets/images/banner1.png'
 import banner2 from '@src/assets/images/banner2.png'
 import banner_course from '@src/assets/images/banner_course.png'
@@ -26,10 +26,10 @@ const bannerConfigs: {
   title: string
 }[] = [
   {
-    img: banner_slsday,
+    img: banner_api,
     backgroundColor: '#000',
-    alt: 'ServerlessDays',
-    link: 'https://serverlesscloud.cn/blog/2020-06-20-serverlessdays-news',
+    alt: 'Tencent-Serverless-Hours',
+    link: 'https://cloud.tencent.com/edu/learning/live-2735',
     title: '',
   },
   {
