@@ -6,8 +6,8 @@
         }
 */
 export const adBanner: { link: string; thumbnail: string; title: string; text: string } = {
-  link: 'https://serverlesscloud.cn/blog/2020-06-20-serverlessdays-news',
-  thumbnail: 'https://img.serverlesscloud.cn/202058/1588944826664-banner_slsdayf.jpg',
-  title: '首届 ServerlessDays China 大会圆满举办',
-  text: '云计算下一浪潮，腾讯云抢占 Serverless 制高点',
+  link: 'https://serverlesscloud.cn/blog/2020-07-03-serverless-api-webiner',
+  thumbnail: 'https://img.serverlesscloud.cn/2020630/1593513134783-1593511065923.png',
+  title: 'Tencent Serverless Hours | 第四期',
+  text: '腾讯云 Serverless Registry 及消息推送实战',
 }

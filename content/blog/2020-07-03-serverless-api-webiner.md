@@ -1,6 +1,6 @@
 ---
 title: 腾讯云 Serverless Registry 及消息推送实战 | 在线分享第四期
-description: 腾讯云高级经理杜佳辰、腾讯云资深研发工程师金鑫，将为您揭秘国内首个开源 Serverless Registry 应用仓库，以及云函数与 API 网关的典型应用实战。
+description: 本次分享会将为您揭秘国内首个开源 Serverless Registry 应用仓库，以及云函数与 API 网关的典型应用实战！
 keywords:  Serverless, Serverless Registry, Serverless网关
 date: 2020-06-30
 time: future
@@ -18,7 +18,7 @@ tags:
   - Meetup
 ---
 
-7 月 3 日（周五）15:00，[Tencent Serverless Hours 在线分享会第四期](https://cloud.tencent.com/edu/learning/live-2735)，腾讯云高级经理杜佳辰、腾讯云资深研发工程师金鑫，将为您揭秘国内首个开源 Serverless Registry 应用仓库，以及云函数与 API 网关的典型应用实战。并通过在线 Demo，讲解如何基于 Serverless 一站式开发部署！
+7 月 3 日（周五）15:00，[Tencent Serverless Hours 在线分享会第四期](https://cloud.tencent.com/edu/learning/live-2735)，腾讯云产品经理杜佳辰、腾讯云资深研发工程师金鑫，将为您揭秘国内首个开源 Serverless Registry 应用仓库，以及云函数与 API 网关的典型应用实战。并通过在线 Demo，讲解如何基于 Serverless 一站式开发部署！
 
 扫描海报二维码即可预约直播。开播前，我们将会为您发送直播提醒。
 
