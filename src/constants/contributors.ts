@@ -53,6 +53,12 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/tinafangkunding',
   },
   {
+    name: '董文枭',
+    cn_name: 'victor',
+    link: 'https://github.com/dongwenxiao',
+    avatar: 'https://avatars.githubusercontent.com/dongwenxiao',
+  },
+  {
     name: 'Edouard',
     link: 'https://github.com/sedouard',
     avatar: 'https://avatars.githubusercontent.com/sedouard',
@@ -102,6 +108,11 @@ const contributors = [
     link: 'https://github.com/MrRio',
     avatar: 'https://avatars.githubusercontent.com/MrRio',
   }, 
+  {
+    name: 'Johann',
+    link: 'https://github.com/jssmith',
+    avatar: 'https://avatars.githubusercontent.com/jssmith',
+  },
   {
     name: 'John McKim',
     link: 'https://github.com/johncmckim',
@@ -157,6 +168,12 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/anycodes',
   },
   {
+    name: '罗思衍',
+    cn_name: 'jaxjiang',
+    link: 'https://github.com/Jianglinyuan',
+    avatar: 'https://avatars.githubusercontent.com/Jianglinyuan',
+  },
+  {
     name: 'Mark Lawlor',
     link: 'https://github.com/marklawlor',
     avatar: 'https://avatars.githubusercontent.com/marklawlor',
@@ -170,6 +187,12 @@ const contributors = [
     name: 'Matt',
     link: 'https://github.com/fiveisprime',
     avatar: 'https://avatars.githubusercontent.com/fiveisprime',
+  },
+  {
+    name: '马晓',
+    cn_name: 'ponymx',
+    link: 'https://github.com/yydmss',
+    avatar: 'https://avatars.githubusercontent.com/yydmss',
   },
   {
     name: '莫承霖',
