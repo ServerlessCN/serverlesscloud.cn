@@ -108,7 +108,7 @@ const BlogDetail = ({ data: { currentBlog }, location }: Props) => {
       const data = {
         article: id,
       }
-      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/report/article'
+      const api = 'https://service-94w2imn4-1300862921.gz.apigw.tencentcs.com/release/report/article'
       fetch(api, {
         body: JSON.stringify(data),
         method: 'POST',

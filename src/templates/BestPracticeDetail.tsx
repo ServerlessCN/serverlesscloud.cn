@@ -74,19 +74,14 @@ const BestPracticeDetail = ({ data: { currentBlog }, location }: Props) => {
       acticleTitle: currentBlog.frontmatter.title,
     })
     function isInViewPort(el) {
-      const viewPortHeight =
-        window.innerHeight ||
-        document.documentElement.clientHeight ||
-        document.body.clientHeight
+      const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
       if (!el) return false
       const top = el.getBoundingClientRect() && el.getBoundingClientRect().top
       return top <= viewPortHeight + 100
     }
     const onScroll = debounce(() => {
       const isShowCode = isInViewPort(document.getElementsByTagName('code')[0])
-      const isEndViewPage = isInViewPort(
-        document.getElementById('EndBlogDetail')
-      )
+      const isEndViewPage = isInViewPort(document.getElementById('EndBlogDetail'))
       if (isShowCode) {
         userBehaviorStatistics({ dataType: 'startViewCode', uuid })
       }
@@ -106,8 +101,7 @@ const BestPracticeDetail = ({ data: { currentBlog }, location }: Props) => {
       const data = {
         article: id,
       }
-      const api =
-        'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/report/article'
+      const api = 'https://service-94w2imn4-1300862921.gz.apigw.tencentcs.com/release/report/article'
       fetch(api, {
         body: JSON.stringify(data),
         method: 'POST',
@@ -154,60 +148,36 @@ const BestPracticeDetail = ({ data: { currentBlog }, location }: Props) => {
                   <Box className="scf-grid__item-16">
                     <Box className="scf-grid__box  scf-detail__content">
                       <Box className="scf-detail__docs">
-                        <h1 className="scf-detail-docs__title">
-                          {currentBlog.frontmatter.title}
-                        </h1>
+                        <h1 className="scf-detail-docs__title">{currentBlog.frontmatter.title}</h1>
                         <Box className="scf-detail-docs__info">
                           <Box>
                             作者：
-                            {currentBlog.frontmatter.authors.map(
-                              (author, index) => (
-                                <ExternalLinkWrapper key={author}>
-                                  {currentBlog.frontmatter.authorslink &&
-                                  currentBlog.frontmatter.authorslink[index] ? (
-                                    <ExternalLink
-                                      to={
-                                        currentBlog.frontmatter.authorslink[
-                                          index
-                                        ]
-                                      }
-                                    >
-                                      {author}
-                                    </ExternalLink>
-                                  ) : (
-                                    author
-                                  )}
-                                </ExternalLinkWrapper>
-                              )
-                            )}
+                            {currentBlog.frontmatter.authors.map((author, index) => (
+                              <ExternalLinkWrapper key={author}>
+                                {currentBlog.frontmatter.authorslink && currentBlog.frontmatter.authorslink[index] ? (
+                                  <ExternalLink to={currentBlog.frontmatter.authorslink[index]}>{author}</ExternalLink>
+                                ) : (
+                                  author
+                                )}
+                              </ExternalLinkWrapper>
+                            ))}
                           </Box>
-                          <Box>
-                            发布于： {formateDate(currentBlog.frontmatter.date)}
-                          </Box>
-                          {currentBlog.frontmatter.categories &&
-                          currentBlog.frontmatter.categories.length ? (
+                          <Box>发布于： {formateDate(currentBlog.frontmatter.date)}</Box>
+                          {currentBlog.frontmatter.categories && currentBlog.frontmatter.categories.length ? (
                             <Box>
                               归档于：{' '}
                               {currentBlog.frontmatter.categories.map(o => (
-                                <LinkWrapper
-                                  key={o}
-                                  display="inline-block"
-                                  ml="5px"
-                                >
+                                <LinkWrapper key={o} display="inline-block" ml="5px">
                                   <CategoryLink category={o} />
                                 </LinkWrapper>
                               ))}
                             </Box>
                           ) : null}
-                          {currentBlog.frontmatter.tags &&
-                          currentBlog.frontmatter.tags.length ? (
+                          {currentBlog.frontmatter.tags && currentBlog.frontmatter.tags.length ? (
                             <p>
                               标签：
                               {currentBlog.frontmatter.tags.map(tag => (
-                                <Link
-                                  to={`${baseCategoryUrl}/${tag}`}
-                                  key={tag}
-                                >
+                                <Link to={`${baseCategoryUrl}/${tag}`} key={tag}>
                                   <span className="scf-seotag__item" key={tag}>
                                     {tag}
                                   </span>
@@ -268,11 +238,7 @@ export const query = graphql`
     }
   }
 
-  query BestPracticeDetail(
-    $blogId: String!
-    $previousBlogId: String
-    $nextBlogId: String
-  ) {
+  query BestPracticeDetail($blogId: String!, $previousBlogId: String, $nextBlogId: String) {
     currentBlog: markdownRemark(id: { eq: $blogId }) {
       ...blogFields
       html
