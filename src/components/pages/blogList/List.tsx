@@ -26,7 +26,7 @@ export default function({
   React.useEffect(() => {
     function getBlogPv(fn) {
       const api =
-        'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?src=' +
+        'https://service-94w2imn4-1300862921.gz.apigw.tencentcs.com/release/get/article?src=' +
         document.location.hostname
       fetch(api)
         .then(response => response.json())
@@ -48,9 +48,7 @@ export default function({
         const id = bestList[i].getAttribute('data-id')
         if (!id) continue
 
-        const statistics = bestList[i].getElementsByClassName(
-          'scf-article-item__statistics-item'
-        )
+        const statistics = bestList[i].getElementsByClassName('scf-article-item__statistics-item')
         if (!statistics) continue
         const icon = statistics[0].getElementsByClassName('scf-icon')
 
@@ -68,11 +66,7 @@ export default function({
     <Box>
       <Box id="scf-best-practice">
         {blogs.map(blog =>
-          isMobileView ? (
-            <BlogCard key={blog.node.id} blog={blog} />
-          ) : (
-            <BlogListItem key={blog.node.id} data={blog} />
-          )
+          isMobileView ? <BlogCard key={blog.node.id} blog={blog} /> : <BlogListItem key={blog.node.id} data={blog} />
         )}
       </Box>
 

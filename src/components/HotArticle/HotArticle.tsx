@@ -29,7 +29,7 @@ export default (props: Props) => {
   const [list, setList] = React.useState<Article[]>([])
   React.useEffect(() => {
     const api =
-      'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?src=' + document.location.hostname
+      'https://service-94w2imn4-1300862921.gz.apigw.tencentcs.com/release/get/article?src=' + document.location.hostname
     fetch(api)
       .then(response => response.json())
       .then(response => {

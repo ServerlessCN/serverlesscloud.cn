@@ -102,7 +102,7 @@ function Blogs() {
 export default function(props) {
   React.useEffect(() => {
     function getBlogPv(fn) {
-      const api = 'https://service-hhbpj9e6-1253970226.gz.apigw.tencentcs.com/release/get/article?e' + 'nv=test'
+      const api = 'https://service-94w2imn4-1300862921.gz.apigw.tencentcs.com/release/get/article?e' + 'nv=test'
       fetch(api)
         .then(response => response.json())
         .then(response => {
