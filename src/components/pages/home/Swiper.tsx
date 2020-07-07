@@ -3,7 +3,6 @@ import { Center, Background, Container, Box, Image } from '@src/components/atoms
 import theme from '@src/constants/theme'
 import { CheckIfDesktopContext } from '@src/contexts'
 import Swiper from '@src/components/Swiper'
-import banner_api from '@src/assets/images/banner_api.png'
 import banner1 from '@src/assets/images/banner1.png'
 import banner2 from '@src/assets/images/banner2.png'
 import banner_course from '@src/assets/images/banner_course.png'
@@ -25,13 +24,6 @@ const bannerConfigs: {
   link: string
   title: string
 }[] = [
-  {
-    img: banner_api,
-    backgroundColor: '#000',
-    alt: 'Tencent-Serverless-Hours',
-    link: 'https://cloud.tencent.com/edu/learning/live-2735',
-    title: '',
-  },
   {
     img: banner1,
     backgroundColor: '#000',

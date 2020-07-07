@@ -59,6 +59,12 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/dongwenxiao',
   },
   {
+    name: '杜佳辰',
+    cn_name: 'April',
+    link: 'https://github.com/Jiachen0417',
+    avatar: 'https://avatars.githubusercontent.com/Jiachen0417',
+  },
+  {
     name: 'Edouard',
     link: 'https://github.com/sedouard',
     avatar: 'https://avatars.githubusercontent.com/sedouard',
@@ -143,6 +149,12 @@ const contributors = [
     cn_name: 'Jiangliu',
     link: 'https://github.com/jiangliu5267',
     avatar: 'https://avatars.githubusercontent.com/jiangliu5267',
+  }, 
+  {
+    name: '金鑫',
+    cn_name: 'Leonardjin',
+    link: 'https://github.com/leonardjin',
+    avatar: 'https://avatars.githubusercontent.com/leonardjin',
   }, 
   {
     name: 'Kamil',
