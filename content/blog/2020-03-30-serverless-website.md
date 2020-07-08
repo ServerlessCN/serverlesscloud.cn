@@ -35,7 +35,7 @@ tags:
 
 ----
 
-### **创建云函数SCF**
+## 创建云函数 SCF
 
 照着这个文档 [云函数快速入门](https://cloud.tencent.com/document/product/583/9179?from=10680) 按里面的步骤来创建自己业务函数。第一次可以选择使用控制台创建函数，运行环境中选择自己熟悉的编程语言，当前支持 **python, php, golang, java, nodejs** 几种，然后就可以在**函数代码**下愉快的开始了。这里以运行环境 **Python3.6** 为例。默认的入口函数是 `index.main_handler`，有两个输入参数:
 
@@ -111,21 +111,23 @@ def auto_cal_generator(limit=100, op_count=1, op_type=["+"], total=100):
 
 结果下方还有**执行摘要**和**执行日志**，方便调试。
 
-### 创建 API Gateway
+## 创建 API Gateway
 
-云函数 SCF 写完后，如果想要能通过网络 http(s) 请求直接访问，就要为其添加触发方式为 [**API 网关**](https://cloud.tencent.com/product/apigateway?from=10680)**触发器**。同时强烈建议将鉴权方法置为**API网关密钥对**。然后就会在 API Gateway 下自动创建出一个对应的 service API。这一步如果遇到权限问题无法自动创建 API 的话，也不要着急，可以直接在 API gateway 的控制台操作，参考这里：[API网关快速入门](https://cloud.tencent.com/document/product/628/41654?from=10680)。
+云函数 SCF 写完后，如果想要能通过网络 http(s) 请求直接访问，就要为其添加触发方式为 [**API 网关**](https://cloud.tencent.com/product/apigateway?from=10680)**触发器**。同时强烈建议将鉴权方法置为 **API 网关密钥对**。然后就会在 API Gateway 下自动创建出一个对应的 service API。这一步如果遇到权限问题无法自动创建 API 的话，也不要着急，可以直接在 API gateway 的控制台操作。
+
+> 参考：[API 网关快速入门](https://cloud.tencent.com/document/product/628/41654?from=10680)。
 
 创建 API 时注意将鉴权类型改成**密钥对**。下方有个**支持CORS**的选项，如果需要跨域访问就勾上，反之可以忽略。设置完需要接收的参数后，在下一步的**后端配置**中选后端类型为 **cloud function** 后，选中刚建好的云函数，就做好了这两者的关联。
 
 建好 API 后，来到对应服务下的**管理 API** 标签就能看到刚建好的 API。在列表的右侧有**调试**入口，千万不要忘了点进去做下测试。测试完成后，再到服务页完成**发布**，这样 API 就可以被访问到了。
 
-### 访问控制
+## 访问控制
 
 然后，就来到了相当重要但也容易被忽略的访问控制这步。在前面我们已经选择了**密钥对**的方式作为鉴权类型。虽然有密钥泄露的风险，但对于小网站来说这个验证也是足够了，记得保存好密钥并定期修改就好。
 
 之后的步骤就是创建密钥对，创建**使用计划**绑定密钥对，再把使用计划绑定服务或 API。下面直接甩出文档：[使用计划](https://cloud.tencent.com/document/product/628/11816?from=10680)。使用计划中除了可以绑定密钥对，还可以进行流量控制，可按需设置。
 
-### 前端调用
+## 前端调用
 
 配置完后端服务后，要解决的就是访问的问题了。由于没钱供服务器，用的是静态页面托管的方式建的站。前端直接 ajax 访问 API 来获取结果。参考文档在此：[密钥对认证](https://cloud.tencent.com/document/product/628/11819?from=10680)，[如何生成签名](https://cloud.tencent.com/document/product/628/42189?from=10680)（里面给出了用不同语言生成签名的例子）。
 
@@ -181,7 +183,7 @@ function getQ(){
 
 对于服务端，只要前面建 API 的时候勾选了**支持 CORS** 选项，就会自动开启，参考 [API 控制台相关问题](https://cloud.tencent.com/document/product/628/11939?from=10680) 。对于客户端，在 ajax 参数中设置 `crossDomain: true` 就可以了。
 
-### 完成
+## 完成
 
 最后，解决一下页面上的 bug，测试通过后就大功告成了！给出演示地址：[演示](https://kiwijia.top/lab/calculator.html)，还加上了打印功能，不用再复制粘贴了😀
 

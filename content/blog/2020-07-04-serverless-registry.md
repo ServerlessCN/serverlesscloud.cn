@@ -1,5 +1,5 @@
 ---
-title: 回顾 | Serverless Registry 设计解读与实战（内附源码）
+title: 回顾 | Serverless Registry 设计解读与实战
 description: Serverless Registry 究竟是怎样的一款产品，为我们解决了哪些用户痛点呢？
 keywords:  Serverless, Serverless Registry, Serverless网关,
 date: 2020-07-04
@@ -10,6 +10,9 @@ authors:
   - 杜佳辰
 authorslink: 
   - https://github.com/Jiachen0417
+tags:
+  - Registry
+  - Meetup
 ---
 
 在 6 月 19 日的 ServerlessDays China 大会中，Serverless 发布了一款全新的产品： Serverless Registry，它究竟是怎样的一款产品，为我们解决了哪些用户痛点呢？ 接下来将为大家进行具体解读。
