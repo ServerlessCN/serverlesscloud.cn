@@ -48,7 +48,7 @@ Serverless 是一种云计算技术的新趋势，一方面它使开发者在构
 
 本文主要是站在接入层的角度，浅析如何保障业务高可用。另一方面，灵活的全局限流以及服务降级功能，也是客户选择 API 网关的原因。
 
-![](https://uploader.shimo.im/f/9wo435Wm96TSNhhN.png!thumbnail)
+![](https://img.serverlesscloud.cn/2020710/1594374581476-c5.png)
 
 上图是创造营小程序的简化架构图：
 
@@ -60,7 +60,7 @@ Serverless 是一种云计算技术的新趋势，一方面它使开发者在构
 
 在云 API 网关创建的 API 如下图所示：
 
-![](https://uploader.shimo.im/f/kfAs5C9jSnzVlw84.png!thumbnail)
+![](https://img.serverlesscloud.cn/2020710/1594374581495-c5.png)
 
 - 不同业务分别建立相关 API 且配置相应后端 
 - scan、vote、drawGift、getGift 分别对应扫码、投票、抽奖和领奖业务
@@ -94,7 +94,7 @@ Serverless 是一种云计算技术的新趋势，一方面它使开发者在构
 
 主要是配合客户侧进行压测，依据线上流量模型压测结果如下：
 
-![](https://uploader.shimo.im/f/B2qh3JsFzTmoJctb.png!thumbnail)
+![](https://img.serverlesscloud.cn/2020710/1594374581602-c5.png)
 
 可以看到：
 
@@ -145,7 +145,7 @@ Serverless 是一种云计算技术的新趋势，一方面它使开发者在构
 
 参考下图设置 API 组限流（服务限流）
 
-![Serverless](https://uploader.shimo.im/f/0xV9FpFiExlFv4qA.png!thumbnail)
+![](https://img.serverlesscloud.cn/2020710/1594374581514-c5.png)
 
 ### 服务降级
 
@@ -172,7 +172,7 @@ Serverless 是一种云计算技术的新趋势，一方面它使开发者在构
 
 参考下图对次要业务的 API 进行限流
 
-![](https://uploader.shimo.im/f/1tHxz1Ix1RD1Dm61.png!thumbnail)
+![](https://img.serverlesscloud.cn/2020710/1594374581448-c5.png)
 
 （如果请求被云 API 网关限流，会返回429错误码，客户端侧需要对该错误码作一定优化处理。例如，优化提示“投票业务繁忙，请稍后再试”或者内部重试）
 
