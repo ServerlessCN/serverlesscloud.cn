@@ -13,6 +13,14 @@ if (
     var s = document.getElementsByTagName('script')[0]
     s.parentNode.insertBefore(mta, s)
   })()
+
+  var _hmt = _hmt || []
+  ;(function() {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?99448789b638f314eac4131d817b5618'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
 }
 
 ;(function() {
