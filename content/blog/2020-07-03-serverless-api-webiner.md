@@ -3,7 +3,6 @@ title: 腾讯云 Serverless Registry 及消息推送实战 | 在线分享第四�
 description: 本次分享会将为您揭秘国内首个开源 Serverless Registry 应用仓库，以及云函数与 API 网关的典型应用实战！
 keywords:  Serverless, Serverless Registry, Serverless网关
 date: 2020-07-03
-time: future
 thumbnail: https://img.serverlesscloud.cn/2020630/1593513134783-1593511065923.png
 categories: 
   - meetup

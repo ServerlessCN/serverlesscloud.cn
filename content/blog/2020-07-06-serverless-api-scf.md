@@ -116,7 +116,7 @@ sls deploy --all
 - [Tencent Serverless Hours 第一期线上分享会回放](https://cloud.tencent.com/edu/learning/live-2437)
 - [Tencent Serverless Hours 第二期线上分享会回放](https://cloud.tencent.com/edu/learning/live-2480)
 - [Tencent Serverless Hours 第三期线上分享会回放](https://cloud.tencent.com/edu/learning/live-2564)
-
+- [Tencent Serverless Hours 第四期线上分享会回放](https://cloud.tencent.com/edu/learning/live-2735)
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

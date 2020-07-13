@@ -6,8 +6,8 @@
         }
 */
 export const adBanner: { link: string; thumbnail: string; title: string; text: string } = {
-  link: 'https://serverlesscloud.cn/blog/2020-07-03-serverless-api-webiner',
-  thumbnail: 'https://img.serverlesscloud.cn/2020630/1593513134783-1593511065923.png',
-  title: 'Tencent Serverless Hours | 第四期',
-  text: '腾讯云 Serverless Registry 及消息推送实战',
+  link: 'https://serverlesscloud.cn/blog/2020-07-17-webinar5-meetup',
+  thumbnail: 'https://img.serverlesscloud.cn/2020713/1594632872304-1594628616299-%E7%AC%AC%E4%BA%94%E6%9C%9Fwebinar%20banner%E5%89%AF%E6%9C%AC.jpg',
+  title: 'Tencent Serverless Hours | 第五期',
+  text: '对象存储 COS 和云函数 SCF 结合的轻应用及其技术原理',
 }

@@ -54,6 +54,10 @@ const links: {
         title: 'Serverless Summit',
         link: 'https://share.weiyun.com/5dFE6ND',
       },
+      {
+        title: 'ServerlessDays China',
+        link: 'https://china.serverlessdays.io',
+      },
     ],
   },
   {
