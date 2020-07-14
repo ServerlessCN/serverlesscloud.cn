@@ -183,6 +183,8 @@ Serverless 是一种云计算技术的新趋势，一方面它使开发者在构
 Serverless 作为云计算的新技术、新趋势，在越来越多的技术场景中，依靠其自身优势，充当着重要的角色。本文中的 API 网关就是承载着 Serverless 应用的 HTTP 服务接入层。除此之外，Serverless 还包括云函数、Serverless Framework 等众多重要组成部分，如果您对 Serverless 技术感兴趣，可以访问[腾讯云 Serverless](https://cloud.tencent.com/product/serverless-catalog) 了解更多信息。
 
 ---
+
+---
 <div id='scf-deploy-iframe-or-md'></div>
 
 ---

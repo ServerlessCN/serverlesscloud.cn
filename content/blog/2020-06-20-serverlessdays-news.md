@@ -3,7 +3,7 @@ title: 云计算下一浪潮，腾讯云抢占 Serverless 制高点
 description: Serverless 的应用主要面临三大挑战，分别是缺少基于业务场景的解决方案、开发工具不完善导致开发体验欠佳、以及成本费用过高。腾讯云 Serverless 在解决这三个挑战方面，潜心打磨，逐个击破，已构筑全栈 Serverless 应用的能力，推动应用落地。
 keywords: Serverless;ServerlessDays
 date: 2020-06-20
-thumbnail: https://img.serverlesscloud.cn/2020618/1592480689193-IMG_1627.JPG
+thumbnail: https://img.serverlesscloud.cn/2020714/1594712911181-v2-d1e969efc7506816131b1ed3f40c72e2_1440w.jpg
 categories:
   - news
 authors:
@@ -21,13 +21,13 @@ ServerlessDays 是由社区发起、面向开发人员的全球技术会议，�
 
 作为一种新型的开发架构，Serverless 由于具备低成本、低故障风险、高扩展性以及交付周期短等优势，被认为是继虚拟机和容器之后，第三代通用计算平台。它能够让用户更加聚焦业务本身，而无需关注复杂的服务器配置和管理，包括弹性部署和自动扩容等工作全部交给云厂商，省去了大量的运维操作。但是，当前该技术在真正落地方面还面临成本费用过高、开发支持欠缺以及没有基于业务场景的解决方案等难题。针对这样的挑战，腾讯云基于自身在生态、社区和产品等方面的超前探索，正在引领  Serverless 的行业「新标准」，推动全球 Serverless 技术良性发展。
 
-![img](https://pic4.zhimg.com/80/v2-d1e969efc7506816131b1ed3f40c72e2_1440w.jpg)
+![img](https://img.serverlesscloud.cn/2020714/1594712911181-v2-d1e969efc7506816131b1ed3f40c72e2_1440w.jpg)
 
 生态上面，腾讯云积极推动国内 Serverless 生态和国际接轨，将全球流行的 Serverless Framework 平台引入中国，极大推动了中国的 Serverless 技术尽快与国际对齐，让 Serverless 客户快速享受到技术全球化带来的优势。
 
 据了解，Serverless Framework 已获得 35000+ Github Stars，位居全球 Top 50；拥有 40000+ 装机量、1000000+ 月活。Serverless 应用；2019 年下载量达 1200 万，增长率 240%。目前 Serverless Framework 正式版国内已发布。
 
-![img](https://pic3.zhimg.com/80/v2-af479519f2a681c9cdb683161e796430_1440w.jpg)
+![img](https://img.serverlesscloud.cn/2020714/1594712852134-v2-af479519f2a681c9cdb683161e796430_1440w.jpg)
 
 腾讯云还发布了基于 Serverless 架构的微信小程序云开发 TCB 产品，助力微信小程序生态开发者生态。让小程序的开发者，聚焦于业务而不用关心底层架构，以更高效率进行微信小程序的开发和迭代。
 

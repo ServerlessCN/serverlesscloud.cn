@@ -389,3 +389,11 @@ inputs:
 基于以上方案，我部署了一个完整的 Cnode 项目，[serverless-cnode](https://github.com/serverless-plus/serverless-cnode)，欢迎感兴趣的小伙伴，提交宝贵的 ISSUE/PR。
 
 关于 Serverless SSR 的方案，我也在不断尝试和探索中，如果你有更好的方案和建议，欢迎评论或者私信来撩~
+
+---
+
+> **传送门：**
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
+> - 官网：[serverless.com](https://serverless.com/)
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
