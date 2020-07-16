@@ -180,12 +180,6 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/anycodes',
   },
   {
-    name: '罗思衍',
-    cn_name: 'jaxjiang',
-    link: 'https://github.com/Jianglinyuan',
-    avatar: 'https://avatars.githubusercontent.com/Jianglinyuan',
-  },
-  {
     name: 'Mark Lawlor',
     link: 'https://github.com/marklawlor',
     avatar: 'https://avatars.githubusercontent.com/marklawlor',
@@ -239,6 +233,12 @@ const contributors = [
   {
     name: 'Skierkowski',
     link: 'https://github.com/skierkowski',
+  },
+  {
+    name: '思衍',
+    cn_name: 'jaxjiang',
+    link: 'https://github.com/Jianglinyuan',
+    avatar: 'https://avatars.githubusercontent.com/Jianglinyuan',
   },
   {
     name: '孙远高',
