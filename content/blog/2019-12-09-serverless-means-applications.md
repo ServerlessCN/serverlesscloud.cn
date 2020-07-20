@@ -7,7 +7,7 @@ thumbnail: https://img.serverlesscloud.cn/20191227/1577411056121-v2-a72ab46370bf
 categories:
   - news
 authors:
-  - engineering-culture
+  - jenswang
 authorslink:
   - https://www.zhihu.com/people/jenswang
 tags:

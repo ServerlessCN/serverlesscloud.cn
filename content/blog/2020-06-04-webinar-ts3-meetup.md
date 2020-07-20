@@ -3,7 +3,7 @@ title: 借助云函数监控日志快速发现并定位问题｜在线分享第�
 description: 腾讯云云函数产品经理李婷、乐家云研发经理黄召戎为您分享
 keywords: Serverless,scf,监控日志
 date: 2020-06-04
-thumbnail: https://img.serverlesscloud.cn/2020527/1590587727785-banner_ts3.jpg
+thumbnail: https://img.serverlesscloud.cn/2020720/1595233226345-1590587727785-banner_ts3.jpg
 categories:
   - meetup
 authors:
