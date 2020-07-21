@@ -9,7 +9,7 @@ export default function() {
       <Box className="scf-grid">
         <Box className="scf-grid__item-24">
           <a
-            href="https://serverless.cloud.tencent.com/deploy/express"
+            href="https://cloud.tencent.com/act/pro/serverless-newuser?from=12792"
             target="_blank"
             className="home-ad-con"
             onClick={() => MtaH5.clickStat('ad_home')}

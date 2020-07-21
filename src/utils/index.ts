@@ -103,7 +103,7 @@ function showPromoteAd(promoteEle: HTMLElement, MTAKey: string) {
   const container = document.createElement('div')
   container.innerHTML = `
 <a
-  href="https://serverless.cloud.tencent.com/deploy/express"
+  href="https://cloud.tencent.com/act/pro/serverless-newuser?from=12792"
   target="_blank"
   class="read-ad-con"
   onclick="MtaH5.clickStat('${MTAKey}')"
