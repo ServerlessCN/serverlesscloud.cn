@@ -1,5 +1,5 @@
 ---
-title: 通过 Regsitry 快速开发与部署一个 WordCount 实例
+title: 通过 Serverless Regsitry 快速开发与部署一个 WordCount 实例
 description: 本文介绍了如何通过 Registry 开发与部署一个项目模版
 keywords: Serverless Registry,MapReduce
 date: 2020-07-16
