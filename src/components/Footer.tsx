@@ -47,8 +47,8 @@ const links: {
         link: 'https://zhuanlan.zhihu.com/ServerlessGo',
       },
       {
-        title: 'Twitter',
-        link: 'https://twitter.com/goserverless',
+        title: '云加专栏',
+        link: 'https://cloud.tencent.com/developer/column/1196',
       },
       {
         title: 'Serverless Summit',

@@ -3,7 +3,6 @@ title: 对象存储 COS 和云函数 SCF 结合的轻应用及其技术原理 | 
 description: 腾讯云存储产品经理林楠、腾讯云存储前端负责人叶嘉梁为您分享
 keywords: Serverless,SCF,COS
 date: 2020-07-17
-time: future
 thumbnail: https://img.serverlesscloud.cn/2020713/1594632872304-1594628616299-%E7%AC%AC%E4%BA%94%E6%9C%9Fwebinar%20banner%E5%89%AF%E6%9C%AC.jpg
 categories:
   - meetup

@@ -60,7 +60,7 @@ function ActivityCards() {
         我们欢迎更多志同道合者一起贡献 Serverless 技术的知识和实践。Serverless
         期待与您任何形式的社区交流、开源协作、内容共建、活动合作。
       </p>
-      <p className="scf-activity__content">微信联系：jiangliu_0418</p>
+      <p className="scf-activity__content">微信联系：ServerlessCloud</p>
     </Box>
   )
 }
