@@ -86,7 +86,7 @@ function showPromoteQuickButton(promoteEle: HTMLElement) {
   const quickStartButton = document.createElement('div')
   quickStartButton.classList.add('quick-start-container')
   quickStartButton.innerHTML =
-    '<a href="https://sls.cloud.tencent.com/try" target="_blank"><button class="promote-quick-start-button">快速开始</button></a>'
+    '<a href="https://serverless.cloud.tencent.com/try" target="_blank"><button class="promote-quick-start-button">快速开始</button></a>'
   quickStartButton.onclick = function() {
     MtaH5.clickStat('start_article')
   }

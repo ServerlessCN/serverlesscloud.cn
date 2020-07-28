@@ -144,7 +144,7 @@ export default function() {
                           </div>
                         </Box>
                         <Box className="scf-quick-start__opeate">
-                          <ExternalLink to={'https://sls.cloud.tencent.com/try'}>
+                          <ExternalLink to={'https://serverless.cloud.tencent.com/try'}>
                             <button className="scf-btn scf-btn--primary" onClick={() => MtaH5.clickStat('start')}>
                               快速开始
                             </button>
