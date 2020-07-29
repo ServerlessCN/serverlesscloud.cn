@@ -42,12 +42,7 @@ export default function({ height, isDesktopView }: { height: string; isDesktopVi
       px={0}
       // maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]
     >
-      <Flex
-        alignItems="center"
-        flexWrap="wrap"
-        justifyContent="space-between"
-        style={{ marginTop: isDesktopView ? 10 : 0 }}
-      >
+      <Flex alignItems="center" flexWrap="wrap" justifyContent="space-between">
         <Logo logoHeight={height} />
         <NavList
           ref={i => {

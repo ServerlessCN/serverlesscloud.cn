@@ -8,7 +8,7 @@ const navbarHeights = {
 
 const headerHeights = {
   mobile: '48px',
-  desktop: '80px',
+  desktop: '60px',
 }
 
 const maxWidths = ['100%', '1260px']
