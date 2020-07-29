@@ -40,7 +40,6 @@ const IndexPage = (props: Props) => {
       ) : (
         <BestParctices />
       )}
-      <LatestComponents />
       <Container width={[1, 1, 1, 912, 0.76, 1200]} px={0}>
         <Box className="scf-grid">
           <LatestBlogs />
@@ -48,6 +47,7 @@ const IndexPage = (props: Props) => {
         </Box>
       </Container>
       <Videos />
+      <LatestComponents />
       <CommonQuestion />
       <AboutUs />
     </Layout>

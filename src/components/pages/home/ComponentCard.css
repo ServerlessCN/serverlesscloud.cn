@@ -1,6 +1,10 @@
 .scf-component-recommend{
-    margin-bottom: 56px;
-    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-top: -20px;
+}
+.scf-best-practices {
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .scf-component-recommend .scf-article-item {
   padding: 20px;
