@@ -8,6 +8,7 @@ import QQQRcode from '@src/assets/images/qq_qrcode.png'
 import WechatQRcode from '@src/assets/images/wechat_qrcode.png'
 import logo from '@src/assets/images/icon-serverless-framework.png'
 import './Footer.css'
+import logoImage from '@src/assets/images/logo.svg'
 
 const links: {
   category: string
@@ -159,8 +160,7 @@ export default function() {
           <Container width={[1, 1, 1, 912, 0.76, 1200]} px={0} className="scf-footer__inner">
             <div className="scf-footer__left">
               <div className="scf-logo-wrap">
-                <span className="scf-logo-zh is-dark"></span>
-                <span className="scf-logo-wrap__text">中文网</span>
+                <img className="logo-image logo-image-footer" src={logoImage} />
               </div>
             </div>
             <div className="scf-footer__right">

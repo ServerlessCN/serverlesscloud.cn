@@ -8,17 +8,19 @@ const navbarHeights = {
 
 const headerHeights = {
   mobile: '48px',
-  desktop: '80px',
+  desktop: '60px',
 }
 
 const maxWidths = ['100%', '1260px']
 
 const colors = {
   text: '#024',
-	gray_text:'rgba(255, 255, 255, 0.5)',
+  gray_text: 'rgba(255, 255, 255, 0.5)',
   white: '#fff',
   black: '#000',
-  serverlessRed: '#fd5750',
+  theme: '#F7F7F7',
+  serverlessRed: '#0052D9',
+  tencentTheme: '#0052D9',
   darkServerlessRed: '#b73833',
   // nested objects work as well
   dark: {
@@ -39,35 +41,9 @@ colors.secondaryColor = colors.darkServerlessRed
 // it's recommended to use powers of two to ensure alignment
 // when used in nested elements
 // numbers are converted to px
-const space = [
-  0,
-  10,
-  20,
-  30,
-  40,
-  60,
-  80,
-  100,
-  120,
-  140,
-  160,
-  180,
-  200,
-  220,
-  240,
-]
+const space = [0, 10, 20, 30, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240]
 // typographic scale
-const fontSizes = [
-  '1.2rem',
-  '1.4rem',
-  '1.6rem',
-  '1.8rem',
-  '2.4rem',
-  '3.2rem',
-  '4rem',
-  '4.8rem',
-  '9rem',
-]
+const fontSizes = ['1.2rem', '1.4rem', '1.6rem', '1.8rem', '2.4rem', '3.2rem', '4rem', '4.8rem', '9rem']
 
 // for any scale, either array or objects will work
 const lineHeights = [1, 1.125, 1.25, 1.33, 1.5, 2, 3, 7]

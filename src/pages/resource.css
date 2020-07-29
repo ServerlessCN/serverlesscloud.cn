@@ -1,5 +1,5 @@
 .scf-page-resource {
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .scf-page-resource .scf-layout-pattern {
@@ -33,7 +33,7 @@
 }
 
 .scf-page-resource .scf-home-block__inner {
-  width: "76%";
+  width: 76%;
   margin: 0 auto;
 }
 .scf-page-resource .scf-page-resource .scf-grid {
@@ -53,7 +53,7 @@
   height: 100%;
 }
 .scf-page-resource .scf-list--link .scf-list__text:hover {
-  color: #fe5751;
+  color: #0052D9;
   text-decoration: underline !important;
 }
 .scf-page-resource .scf-box__header {
@@ -122,7 +122,7 @@
   }
 
   .scf-page-resource .scf-box-mobile-tabs ul.scf-box-mobile-tabs-ul li:first-child {
-    color: #FD5750;
+    color: #0052D9;
   }
 
   .scf-page-resource .scf-box-mobile-tabs ul.scf-box-mobile-tabs-ul li {

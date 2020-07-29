@@ -29,7 +29,7 @@ const BoxWithTextAlign = styled(Box)<TextAlignProps>`
   ${textAlign}
 `
 
-const navList: { title: string; link: string; isInternal?: boolean, event?: () => void }[] = [
+const navList: { title: string; link: string; isInternal?: boolean; event?: () => void }[] = [
   {
     title: '最佳实践',
     link: '/best-practice',
@@ -151,9 +151,7 @@ function Blogs(props) {
         for (let i = 0; i < blogs.edges.length; i++) {
           contentList.push(blogs.edges[i])
         }
-        let searchKeys = getSearch(props.value || '', contentList, [
-          'Serverless Framework',
-        ])
+        let searchKeys = getSearch(props.value || '', contentList, ['Serverless Framework'])
         if (searchKeys.length > 0) {
           return (
             <div className="scf-header-search__panel">
@@ -163,14 +161,8 @@ function Blogs(props) {
                     if (item.node.id == itemSearchKey) {
                       return (
                         <li className="scf-header-search-result-list__item">
-                          <a
-                            target="_blank"
-                            href={item.node.fields.slug}
-                            className="scf-header-search-result-list"
-                          >
-                            <p className="scf-header-search-result-list__item-title">
-                              {item.node.frontmatter.title}
-                            </p>
+                          <a target="_blank" href={item.node.fields.slug} className="scf-header-search-result-list">
+                            <p className="scf-header-search-result-list__item-title">{item.node.frontmatter.title}</p>
                             <p className="scf-header-search-result-list__item-info">
                               {item.node.frontmatter.description}
                             </p>
@@ -225,7 +217,7 @@ export default class NavList extends React.Component<Props, State> {
       return (
         <BoxWithTextAlign
           width={navListBoxWidth}
-          bg={theme.colors.black}
+          bg={theme.colors.theme}
           className="scf-box-header-menu"
           display={[
             isMobileNavListDisplay(),
@@ -238,16 +230,14 @@ export default class NavList extends React.Component<Props, State> {
           ]}
           textAlign={isDesktopView ? 'right' : 'left'}
         >
-          <List
-            p={0}
-            mr={0}
-            mb={0}
-            style={{ position: 'relative', marginRight: 35 }}
-          >
-            {navList.map(({ title, link, isInternal , event}, index) => {
+          <List p={0} mr={0} mb={0} style={{ position: 'relative', marginRight: 35 }}>
+            {navList.map(({ title, link, isInternal, event }, index) => {
               const color = (window as any).location.pathname.includes(link)
-                ? '#fff'
-                : theme.colors.gray_text
+                ? isDesktopView
+                  ? '#000'
+                  : '#0052D9'
+                : '#333'
+              const bold = (window as any).location.pathname.includes(link) && isDesktopView ? 'bold' : 'normal'
               const Link = isInternal ? InternalLink : ExternalLink
               return (
                 <NavListItem
@@ -263,7 +253,7 @@ export default class NavList extends React.Component<Props, State> {
                   <Link to={link}>
                     <Box
                       className="scf-header-nav_item"
-                      style={{ fontSize: 15, color: color }}
+                      style={{ fontSize: 15, color: color, fontWeight: bold }}
                       onClick={() => event && event()}
                     >
                       {title}
@@ -275,10 +265,7 @@ export default class NavList extends React.Component<Props, State> {
           </List>
           {searchVisible ? (
             <div className="scf-header-search">
-              <div
-                className="scf-header-search__input-wrap"
-                style={{ display: 'flex' }}
-              >
+              <div className="scf-header-search__input-wrap" style={{ display: 'flex' }}>
                 <button className="scf-header-search__search-btn">
                   <i className="scf-icon scf-icon-search-white"></i>
                 </button>
@@ -293,10 +280,7 @@ export default class NavList extends React.Component<Props, State> {
                   placeholder="搜索文章或关键词"
                   className="scf-header-search__input"
                 />
-                <button
-                  className="scf-header-search__clear-btn"
-                  onClick={() => this.changeSearch()}
-                >
+                <button className="scf-header-search__clear-btn" onClick={() => this.changeSearch()}>
                   <i className="scf-icon scf-icon-clear"></i>
                 </button>
                 <Blogs value={searchContnet} />

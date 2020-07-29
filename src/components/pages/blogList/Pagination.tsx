@@ -10,7 +10,7 @@ const PaginationWrapper = styled(Flex)`
 
     .active {
       a {
-        color: ${theme.colors.serverlessRed};
+        color: ${theme.colors.tencentTheme};
       }
     }
 
@@ -26,7 +26,7 @@ const PaginationWrapper = styled(Flex)`
 
       &:hover {
         a {
-          color: ${theme.colors.serverlessRed};
+          color: ${theme.colors.tencentTheme};
         }
       }
     }

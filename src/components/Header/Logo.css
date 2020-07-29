@@ -2,12 +2,9 @@
   display: flex;
   align-items: center;
 }
-.scf-logo-zh {
-  display: inline-block;
-  width: 147px;
-  height: 25px;
-  background-image: url(../../assets/images/logo.svg);
-  cursor: pointer;
+.logo-image {
+  width: 212px;
+  height: 41px;
 }
 .scf-logo-wrap__text {
   font-size: 18px;
@@ -18,5 +15,15 @@
 @media screen and (max-width: 992px) {
   .scf-logo-wrap {
     margin-left: 15px;
+  }
+  .logo-image {
+    width: 180px;
+    height: 26px;
+    position: relative;
+    left: -10px;
+    top: 2px;
+  }
+  .logo-image-footer {
+    top: -2px;
   }
 }

@@ -500,8 +500,8 @@ a:hover {
   height: 50px;
   position: relative;
   bottom: 13px;
-  border: 1px solid #fff;
-  background-color: #000;
+  border: 1px solid #000;
+  background-color: #f7f7f7;
   display: flex
 }
 
@@ -532,7 +532,7 @@ a:hover {
 
 .scf-header-search__panel {
   position: absolute;
-  top: 49px;
+  top: 51px;
   left: -1px;
   right: -1px;
   max-height: 480px;
@@ -658,12 +658,13 @@ a:hover {
     background-position-x: 10px;
     background-position-y: center;
     padding-left: 30px;
+    border: 2px solid #EAEAEA;
     color: #000;
     width: 100%;
   }
   .scf-header-search-result-list__item {
     border: 0;
-    border-bottom: 1px solid #333333;
+    box-shadow: inset 0 -1px 0 0 #EAEAEA;
     padding: 10px 20px;
   }
   .scf-header-search-result-list__item .scf-header-search-result-list__item-info {
@@ -671,7 +672,7 @@ a:hover {
   }
   .scf-header-search__input-wrap .scf-header-search__panel {
     border: 0;
-    background-color: #000;
+    background-color: #f7f7f7;
 
     /*border: 2px solid #f7f7f7*/
   }
@@ -682,7 +683,7 @@ a:hover {
   .scf-header-search-result-list .scf-header-search-result-list__item-title {
     line-height: 32px;
     margin: 0;
-    color: #fff;
+    color: #23282D;
     font-weight: normal;
   }
   .scf-header-search__input-wrap {
@@ -730,7 +731,7 @@ a:hover {
     background-repeat: no-repeat;
     background-size: 28px 28px;
     background-position: 0px 1px;
-    top: 0px;
+    top: -8px;
     right: 4px;
   }
 

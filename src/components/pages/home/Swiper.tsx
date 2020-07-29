@@ -3,7 +3,6 @@ import { Center, Background, Container, Box, Image } from '@src/components/atoms
 import theme from '@src/constants/theme'
 import { CheckIfDesktopContext } from '@src/contexts'
 import Swiper from '@src/components/Swiper'
-import banner1 from '@src/assets/images/banner1.png'
 import banner2 from '@src/assets/images/banner2.png'
 import banner_course from '@src/assets/images/banner_course.png'
 import banner4 from '@src/assets/images/banner4.png'
@@ -24,13 +23,6 @@ const bannerConfigs: {
   link: string
   title: string
 }[] = [
-  {
-    img: banner1,
-    backgroundColor: '#000',
-    alt: 'Serverless.com',
-    link: 'https://serverless.com/cn',
-    title: '',
-  },
   {
     img: banner2,
     backgroundColor: '#dcdcdc',
