@@ -2,6 +2,12 @@
     margin-bottom: 50px;
     margin-top: -20px;
 }
+@media screen and (max-width: 992px) {
+  .scf-component-recommend{
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+}
 .scf-best-practices {
   margin-top: 20px;
   margin-bottom: 30px;
