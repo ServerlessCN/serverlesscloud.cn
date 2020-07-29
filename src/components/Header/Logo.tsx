@@ -1,25 +1,21 @@
 import * as React from 'react'
 
-import {Link} from 'gatsby'
-import {  Row } from '@src/components/atoms'
+import { Link } from 'gatsby'
+import { Row } from '@src/components/atoms'
 import './Logo.css'
+import logoImage from '../../assets/images/logo.svg'
 
 interface Props {
-  logoHeight : string
+  logoHeight: string
 }
 
-export default function ({logoHeight} : Props) {
+export default function({ logoHeight }: Props) {
   return (
-    <Link to="/" style={{zIndex:999}}>
-    <Row
-        minWidth={['auto', 'auto', '210px']}
-        alignItems="center"
-        height={logoHeight}
-      >
-      <div className="scf-logo-wrap">
-        <span className="scf-logo-zh"></span>
-        <span className="scf-logo-wrap__text">中文网</span>
-      </div>
+    <Link to="/" style={{ zIndex: 999 }}>
+      <Row minWidth={['auto', 'auto', '210px']} alignItems="center" height={logoHeight}>
+        <div className="scf-logo-wrap">
+          <img className="logo-image" src={logoImage} />
+        </div>
       </Row>
     </Link>
   )

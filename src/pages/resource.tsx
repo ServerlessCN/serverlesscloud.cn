@@ -303,7 +303,7 @@ const Resource = ({ location }: Props) => {
     function tabOnClick(n) {
       for (var i = 0; i < tabItems.length; ++i) {
         if (i == n) {
-          tabItems[i].style.color = '#FD5750'
+          tabItems[i].style.color = '#0052D9'
           if (contents[i]) contents[i].style.display = 'block'
           continue
         }

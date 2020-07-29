@@ -7,52 +7,52 @@ import theme from '@src/constants/theme'
 import { HeightProps } from 'styled-system'
 
 const Wrapper = styled(Box)`
-.swiper-container{
-  position: relative;
-  
-  height: 100% !important;
-  overflow: visible !important;
-}
+  .swiper-container {
+    position: relative;
 
-@media screen and (min-width: 992px) {
-  .swiper-container{
-    width: 100% !important;
+    height: 100% !important;
+    overflow: visible !important;
   }
-}
 
-.swiper-pagination{
-  font-size: 0;
-  position: absolute;
-  left: 0;
-  width: auto !important;
-  bottom: -25px !important;
-}
-.swiper-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
+  @media screen and (min-width: 992px) {
+    .swiper-container {
+      width: 100% !important;
+    }
+  }
 
-.swiper-pagination .swiper-pagination-bullet {
-  display: inline-block !important;
-  width: 30px;
-  height: 24px;
-  margin: 0px !important;
-  margin-right: 10px !important;
-  background-color: hsla(0,0%,50.2%,.5);
-  border: 10px solid #fff;
-  border-width: 10px 0;
-  cursor: pointer;
-  border-radius: 0;
-  outline: none;
-  box-sizing: border-box !important;
-}
-.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 !important;
-}
-.swiper-pagination .swiper-pagination-bullet-active {
-    background-color: ${theme.colors.serverlessRed};
+  .swiper-pagination {
+    font-size: 0;
+    position: absolute;
+    left: 0;
+    width: auto !important;
+    bottom: -25px !important;
+  }
+  .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet {
+    display: inline-block !important;
+    width: 30px;
+    height: 24px;
+    margin: 0px !important;
+    margin-right: 10px !important;
+    background-color: hsla(0, 0%, 50.2%, 0.5);
+    border: 10px solid #fff;
+    border-width: 10px 0;
+    cursor: pointer;
+    border-radius: 0;
+    outline: none;
+    box-sizing: border-box !important;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 !important;
+  }
+  .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: ${theme.colors.tencentTheme};
   }
 `
 

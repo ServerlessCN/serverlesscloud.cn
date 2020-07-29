@@ -1,7 +1,7 @@
 import * as React from 'react'
-import {Position} from '@src/components/atoms'
+import { Position } from '@src/components/atoms'
 import styled from 'styled-components'
-import { boxShadow,BoxShadowProps } from 'styled-system'
+import { boxShadow, BoxShadowProps } from 'styled-system'
 import NavBar from './NavBar'
 import theme from '@src/constants/theme'
 import { CheckIfDesktopContext, CheckIfHeaderFixed } from '@src/contexts'
@@ -22,12 +22,8 @@ const Header = (props: Props) => {
         return (
           <CheckIfHeaderFixed.Consumer>
             {isHeaderFixed => {
-              const navbarHeight = isDesktopView
-                ? theme.navbarHeights.desktop
-                : theme.navbarHeights.mobile
-              const headerHeight = isDesktopView
-                ? theme.headerHeights.desktop
-                : theme.headerHeights.mobile
+              const navbarHeight = isDesktopView ? theme.navbarHeights.desktop : theme.navbarHeights.mobile
+              const headerHeight = isDesktopView ? theme.headerHeights.desktop : theme.headerHeights.mobile
 
               return (
                 <WrapperWithBorderShadow
@@ -36,18 +32,14 @@ const Header = (props: Props) => {
                   left={0}
                   height={headerHeight}
                   width={[1, 1, 1]}
-                  bg={theme.colors.black}
+                  bg={theme.colors.theme}
                   zIndex={9999}
-                  boxShadow={theme.shadows[0]}
                 >
                   <Hemlet>
-                    <script
-                      type="text/javascript"
-                      src={withPrefix('js/mta.js')}
-                    ></script>
+                    <script type="text/javascript" src={withPrefix('js/mta.js')}></script>
                   </Hemlet>
 
-                 {/*<CommunityEntrance /> */} 
+                  {/*<CommunityEntrance /> */}
 
                   <NavBar height={navbarHeight} isDesktopView={isDesktopView} />
                 </WrapperWithBorderShadow>

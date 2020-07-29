@@ -76,8 +76,8 @@ module.exports = {
         name: `Serverless 中文技术社区`,
         short_name: `ServerlessCN`,
         start_url: `/`,
-        background_color: `#fd5750`,
-        theme_color: `#fd5750`,
+        background_color: `#0052D9`,
+        theme_color: `#0052D9`,
         display: `minimal-ui`,
         icon: `src/assets/images/icon-serverless-framework.png`, // This path is relative to the root of the site.
       },

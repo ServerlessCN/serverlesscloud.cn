@@ -84,11 +84,6 @@
   color: #8c8c8c;
 }
 
-.scf-logo-zh.is-dark {
-  width: 214px;
-  height: 26px;
-}
-
 .scf-logo-zh {
   display: inline-block;
   width: 211px;
@@ -125,13 +120,6 @@
   display: flex;
   align-items: center;
 }
-
-.scf-logo-zh.is-dark {
-  width: 153px;
-  height: 26px;
-  background-image: url(../assets/images/logo-dark.svg);
-}
-
 .scf-logo-zh {
   display: inline-block;
   width: 147px;
