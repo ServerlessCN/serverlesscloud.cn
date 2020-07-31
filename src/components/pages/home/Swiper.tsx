@@ -27,8 +27,8 @@ const bannerConfigs: {
     img: banner2,
     backgroundColor: '#dcdcdc',
     alt: 'Serverless 组件',
-    link: 'https://serverless.com/cn/components/',
-    title: 'Serverless 组件支持各种主流应用框架，持续发布中',
+    link: 'https://serverless.cloud.tencent.com/try?c=cmntbn',
+    title: 'Serverless 组件支持各种主流应用框架，免费体验 Demo！',
   },
   {
     img: banner_course,
@@ -136,7 +136,7 @@ export default function() {
                           </div>
                         </Box>
                         <Box className="scf-quick-start__opeate">
-                          <ExternalLink to={'https://serverless.cloud.tencent.com/try'}>
+                          <ExternalLink to={'https://serverless.cloud.tencent.com/try?c=cmntst'}>
                             <button className="scf-btn scf-btn--primary" onClick={() => MtaH5.clickStat('start')}>
                               快速开始
                             </button>
