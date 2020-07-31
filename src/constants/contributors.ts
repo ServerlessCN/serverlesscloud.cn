@@ -241,6 +241,12 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/Jianglinyuan',
   },
   {
+    name: '粟俊娥',
+    cn_name: 'Susu',
+    link: 'https://github.com/June1991',
+    avatar: 'https://avatars.githubusercontent.com/June1991',
+  },
+  {
     name: '孙远高',
     cn_name: 'Yuga Sun',
     link: 'https://github.com/yugasun',
