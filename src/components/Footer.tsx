@@ -32,7 +32,7 @@ const links: {
       },
       {
         title: '示例',
-        link: 'https://github.com/serverless/examples',
+        link: 'https://serverless.cloud.tencent.com/start?c=cmntst',
       },
       {
         title: '书籍',

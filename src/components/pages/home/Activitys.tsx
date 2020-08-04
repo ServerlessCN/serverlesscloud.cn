@@ -12,10 +12,10 @@ interface Activity {
 
 const activityList: Activity[] = [
   {
-    cover: 'https://img.serverlesscloud.cn/20191227/1577413467740-v2-b65fcb6a94208a494005fc0c40a99eb6_1200x500.jpg',
-    title: '荐书 | Serverless 架构：从原理、设计到项目实战',
-    decription: '安利一下 Serverless 中文技术社区成员 Anycodes 的大作',
-    link: '/blog/2019-11-19-anycodes-book/',
+    cover: 'https://img.serverlesscloud.cn/2020720/1595233528915-1588164013282-banner_hours%20%281%29.jpg',
+    title: 'Tencent Serverless Hours | 第六期',
+    decription: 'CKafka + 云函数 SCF 在数据分析场景的应用与实战',
+    link: '/best-practice/2020-07-31-serverless-cicd',
   },
   {
     cover: 'https://main.qcloudimg.com/raw/3cb7b20955d78ced738e0279bb3f6f41.jpg',

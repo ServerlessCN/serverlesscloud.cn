@@ -17,7 +17,7 @@ const questions : {
     answer: 'Serverless Framework 是业界最受欢迎的无服务器应用框架，开发者无需关心底层资源即可部署完整可用的 serverless 应用架构。'
   }, {
     question: 'Serverless Framework 支持了哪些场景？',
-    answer: '目前已支持 REST API 、静态网站、Express.js Web应用、Koa Web应用等场景 ，更多实际应用场景在持续建设中。'
+    answer: '目前已支持 REST API、静态网站、Express.js Web 应用、Koa Web 应用等场景，更多实际应用场景在持续建设中。'
   }, {
     question: 'Serverless Framework 具有什么能力？',
     answer: 'Serverless Framework 具有资源编排、自动伸缩、事件驱动等能力，能够覆盖编码-调试-测试-部署等全生命周期。' 
