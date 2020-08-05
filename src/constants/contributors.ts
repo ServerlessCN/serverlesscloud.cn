@@ -314,6 +314,12 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/leinue',
   },
   {
+    name: '许文强',
+    cn_name: 'Loboxu',
+    link: 'https://github.com/loboxu',
+    avatar: 'https://avatars.githubusercontent.com/loboxu',
+  },
+  {
     name: 'Yermakou',
     link: 'https://github.com/rma4ok',
     avatar: 'https://avatars.githubusercontent.com/rma4ok',
