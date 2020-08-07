@@ -98,7 +98,7 @@ Serverless CI/CD 基于 CI/CD 持续集成的 pipeline 机制，实现用户开�
       </video>
 ​      
 
-### 2. 基于 Github CI/CD 的自动化部署
+### 2. 基于 GitHub CI/CD 的自动化部署
 
 <video id="video" controls="" preload="none" poster="https://serverlessimg-1253970226.cos.ap-chengdu.myqcloud.com/2020630/github_CICD_First_Frame.png">
       <source id="mp4" src="https://serverlessimg-1253970226.cos.ap-chengdu.myqcloud.com/2020630/github%20CICD.mp4" type="video/mp4">
