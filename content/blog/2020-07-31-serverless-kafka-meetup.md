@@ -3,7 +3,6 @@ title: CKafka + 云函数 SCF 在数据分析场景的应用与实战 | 在线�
 description: 腾讯云 Ckafka 产品经理夏子承、腾讯云高级研发许文强为您分享！
 keywords: Serverless Kafka
 date: 2020-07-31
-time: future
 thumbnail: https://img.serverlesscloud.cn/2020727/1595853036115-1595837973300-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15958379592139.jpg
 categories:
   - meetup

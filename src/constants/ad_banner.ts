@@ -6,8 +6,8 @@
         }
 */
 export const adBanner: { link: string; thumbnail: string; title: string; text: string } = {
-  link: 'https://serverlesscloud.cn/blog/2020-07-31-serverless-cicd',
-  thumbnail: 'https://img.serverlesscloud.cn/2020727/1595853036115-1595837973300-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15958379592139.jpg',
-  title: 'Tencent Serverless Hours | 第六期',
-  text: 'CKafka + 云函数 SCF 在数据分析场景的应用与实战',
+  link: 'https://serverlesscloud.cn/blog/2020-08-14-cfs-scf-meetup',
+  thumbnail: 'https://img.serverlesscloud.cn/2020720/1595233528915-1588164013282-banner_hours%20%281%29.jpg',
+  title: 'Tencent Serverless Hours | 第七期',
+  text: '腾讯云 CFS 文件存储给 Serverless 云函数带来的业务新场景',
 }

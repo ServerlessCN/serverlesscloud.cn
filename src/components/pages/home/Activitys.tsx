@@ -13,8 +13,8 @@ interface Activity {
 const activityList: Activity[] = [
   {
     cover: 'https://img.serverlesscloud.cn/2020720/1595233528915-1588164013282-banner_hours%20%281%29.jpg',
-    title: 'Tencent Serverless Hours | 第六期',
-    decription: 'CKafka + 云函数 SCF 在数据分析场景的应用与实战',
+    title: 'Tencent Serverless Hours | 第七期',
+    decription: '腾讯云 CFS 文件存储给 Serverless 云函数带来的业务新场景',
     link: '/best-practice/2020-07-31-serverless-cicd',
   },
   {
