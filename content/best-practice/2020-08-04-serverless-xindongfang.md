@@ -13,7 +13,7 @@ tags:
   - Serverless
 ---
 
-谈起 Serverless 计算，在技术圈热度很高 —— 所有人都在说 Serverless，大家都声称在做 Serverless，但每个 Serverless 又不一样。我们不禁想问，Serverless 是不是只是一个炒热度的空洞热门词 ？
+谈起 Serverless 计算，在技术圈热度很高 —— 所有人都在说 Serverless，大家都声称在做 Serverless，但每个 Serverless 又不一样。我们不禁想问，Serverless 是不是只是一个炒热度的空洞热门词？
 
 其实不然，Serverless 作为一种更易用、低成本、免运维的通用计算服务，已经在互联网核心业务中承担重要的算力角色，适用于各种计算应用场景。也正是因为其作为通用计算支撑，场景众多，业内使用 Serverless 计算的场景覆盖广泛，随处可见。
 
