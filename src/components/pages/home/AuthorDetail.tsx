@@ -14,9 +14,9 @@ const activityList: Activity[] = [
   {
     cover:
       'https://img.serverlesscloud.cn/20191227/1577413467740-v2-b65fcb6a94208a494005fc0' + 'c40a99eb6_1200x500.jpg',
-    title: 'Tencent Serverless Hours | 第七期',
-    decription: '腾讯云 CFS 文件存储给 Serverless 云函数带来的业务新场景',
-    link: '/blog/2020-08-14-cfs-scf-meetup',
+    title: 'Tencent Serverless Hours | 第八期',
+    decription: '腾讯云 Serverless Component 原理解读与实战',
+    link: '/blog/2020-08-21-sls-component-meetup',
   },
   {
     cover: 'https://main.qcloudimg.com/raw/3cb7b20955d78ced738e0279bb3f6f41.jpg',

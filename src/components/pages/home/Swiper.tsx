@@ -28,8 +28,8 @@ const bannerConfigs: {
     img: banner_meetup,
     backgroundColor: '#dcdcdc',
     alt: 'Tencent Serverless Hours',
-    link: 'https://serverlesscloud.cn/blog/2020-08-14-cfs-scf-meetup',
-    title: '7 月 31 日（周五）15:00，欢迎预约直播！',
+    link: 'https://serverlesscloud.cn/blog/2020-08-21-sls-component-meetup',
+    title: '8 月 21 日（周五）15:00，欢迎预约直播！',
   },
   {
     img: banner2,
