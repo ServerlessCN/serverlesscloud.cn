@@ -1,6 +1,6 @@
 ---
 title: 腾讯云 Serverless Component 原理解读与实战 | 在线分享第八期
-description: 腾讯云云函数产品负责人黄文俊 (Alfred) 和腾讯云文件存储产品负责人龚幽兰 (Effie) 为您分享！
+description: 腾讯云 Serverless Framework 产品经理杜佳辰和腾讯云 Serverless Framework 高级开发工程师孙远高为您分享！
 keywords: Serverless CFS
 date: 2020-08-21
 time: future
