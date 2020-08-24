@@ -3,7 +3,6 @@ import { Center, Background, Container, Box, Image } from '@src/components/atoms
 import theme from '@src/constants/theme'
 import { CheckIfDesktopContext } from '@src/contexts'
 import Swiper from '@src/components/Swiper'
-import banner_meetup from '@src/assets/images/banner_meetup.png'
 import banner2 from '@src/assets/images/banner2.png'
 import banner_course from '@src/assets/images/banner_course.png'
 import banner4 from '@src/assets/images/banner4.png'
@@ -24,13 +23,6 @@ const bannerConfigs: {
   link: string
   title: string
 }[] = [
-  {
-    img: banner_meetup,
-    backgroundColor: '#dcdcdc',
-    alt: 'Tencent Serverless Hours',
-    link: 'https://serverlesscloud.cn/blog/2020-08-21-sls-component-meetup',
-    title: '8 月 21 日（周五）15:00，欢迎预约直播！',
-  },
   {
     img: banner2,
     backgroundColor: '#dcdcdc',
