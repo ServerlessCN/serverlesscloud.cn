@@ -32,19 +32,29 @@ const activityList: Activity[] = [
 ]
 
 function ActivityCard({ activity }: { activity: Activity }) {
+  const isExternal = activity.link.startsWith('https://')
+  const main = (
+    <React.Fragment>
+      <Box className="scf-article-item__img">
+        <img src={activity.cover} alt={activity.title} />
+      </Box>
+      <Box className="scf-article-item__content">
+        <Box className="scf-article-item__title">
+          <h4>{activity.title}</h4>
+        </Box>
+        <Box className="scf-article-item__intro">{activity.decription}</Box>
+      </Box>
+    </React.Fragment>
+  )
   return (
     <Box className="scf-article-item">
-      <Link to={activity.link}>
-        <Box className="scf-article-item__img">
-          <img src={activity.cover} alt={activity.title} />
-        </Box>
-        <Box className="scf-article-item__content">
-          <Box className="scf-article-item__title">
-            <h4>{activity.title}</h4>
-          </Box>
-          <Box className="scf-article-item__intro">{activity.decription}</Box>
-        </Box>
-      </Link>
+      {isExternal ? (
+        <a href={activity.link} target="_blank">
+          {main}
+        </a>
+      ) : (
+        <Link to={activity.link}>{main}</Link>
+      )}
     </Box>
   )
 }
