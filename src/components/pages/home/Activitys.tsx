@@ -12,6 +12,12 @@ interface Activity {
 
 const activityList: Activity[] = [
   {
+    cover: 'https://img.serverlesscloud.cn/2020826/1598412575104-10years.jpg',
+    title: '腾讯云十周年庆 | Serverless 回馈豪礼',
+    decription: '惊喜就藏在云产品主会场的「基础云产品区」和「企业新用户专区」！',
+    link: 'https://cloud.tencent.com/act/anniversary/product',
+  },
+  {
     cover: 'https://img.serverlesscloud.cn/2020720/1595233528915-1588164013282-banner_hours%20%281%29.jpg',
     title: 'Tencent Serverless Hours | 第八期',
     decription: '腾讯云 Serverless Component 原理解读与实战',
@@ -20,14 +26,8 @@ const activityList: Activity[] = [
   {
     cover: 'https://main.qcloudimg.com/raw/3cb7b20955d78ced738e0279bb3f6f41.jpg',
     title: '社区调查：Serverless 使用率大幅增长',
-    decription: '我们在开发社区进行的问卷调查，Serverless 的使用率增长连我们自己都惊讶不已！',
+    decription: '在开发社区进行的问卷调查，Serverless 的使用率增长连我们自己都惊讶不已！',
     link: '/blog/2018-07-19-2018-serverless-community-survey-huge-growth-usage/',
-  },
-  {
-    cover: 'https://img.serverlesscloud.cn/2020514/1589460703762-zg.jpg',
-    title: 'Serverless 中文社区有奖征稿',
-    decription: '欢迎分享您的技术实践和开发经验！',
-    link: '/blog/2020-04-15-article-meetup/',
   },
 ]
 

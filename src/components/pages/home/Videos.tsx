@@ -18,28 +18,28 @@ interface Video {
 const VideoList: Video[] = [
   {
     img: video1,
+    title: 'Tencent Serverless Hours 在线分享',
+    link: 'https://cloud.tencent.com/edu/act/customTopics/scf',
+  },
+  {
+    img: video2,
     title: 'Serverless 学习路径课',
     link: 'https://cloud.tencent.com/edu/paths/series/Serverless',
   },
   {
-    img: video2,
+    img: video3,
     title: 'Serverless 开发实战之 Nodejs',
     link: 'https://cloud.tencent.com/edu/learning/live-1888',
   },
   {
-    img: video3,
+    img: video4,
     title: 'Serverless Python 开发实战之极速制作情人节表白页',
     link: 'https://cloud.tencent.com/edu/learning/live-1910',
   },
   {
-    img: video4,
+    img: video5,
     title: 'Serverless 架构揭秘与静态网站部署实战',
     link: 'https://cloud.tencent.com/edu/learning/live-1879',
-  },
-  {
-    img: video5,
-    title: 'Serverless 从入门到精通：架构介绍及场景分析',
-    link: 'https://cloud.tencent.com/edu/learning/live-1440',
   },
 ]
 
