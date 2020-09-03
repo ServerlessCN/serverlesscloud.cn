@@ -3,7 +3,6 @@ title: 腾讯云 Serverless Component 原理解读与实战 | 在线分享第八
 description: 腾讯云 Serverless Framework 产品经理杜佳辰和腾讯云 Serverless Framework 高级开发工程师孙远高为您分享！
 keywords: Serverless CFS
 date: 2020-08-21
-time: future
 thumbnail: https://img.serverlesscloud.cn/2020818/1597748247763-%E6%96%B0%E9%97%BB%E7%A8%BFbanner02-1.jpg
 categories:
   - meetup
