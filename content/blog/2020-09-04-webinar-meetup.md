@@ -3,7 +3,6 @@ title: 消除冷启动，预置并发助力腾讯云 Serverless 云函数更快 
 description: 腾讯云云函数产品经理 Alfonso 为您分享！
 keywords: Serverless CFS
 date: 2020-09-04
-time: future
 thumbnail: https://img.serverlesscloud.cn/202093/1599100692526-1598958654408-%E7%AC%AC%E4%B9%9D%E6%9C%9Fbanner.jpg
 categories:
   - meetup

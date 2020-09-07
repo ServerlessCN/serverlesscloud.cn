@@ -14,9 +14,9 @@ const activityList: Activity[] = [
   {
     cover:
       'https://img.serverlesscloud.cn/20191227/1577413467740-v2-b65fcb6a94208a494005fc0' + 'c40a99eb6_1200x500.jpg',
-    title: 'Tencent Serverless Hours | 第九期',
-    decription: '消除冷启动，预置并发助力腾讯云 Serverless 更快',
-    link: '/blog/2020-09-04-webinar-meetup',
+    title: 'Tencent Serverless Hours | 第十期',
+    decription: 'Serverless 网站托管和备案一站式服务体验',
+    link: '/blog/2020-09-11-webinar-meetup',
   },
   {
     cover: 'https://main.qcloudimg.com/raw/3cb7b20955d78ced738e0279bb3f6f41.jpg',
