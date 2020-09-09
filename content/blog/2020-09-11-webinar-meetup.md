@@ -2,7 +2,7 @@
 title: 腾讯云 Serverless 网站托管和备案一站式服务体验 | 在线分享第十期
 description: 腾讯云高级产品经理庞志伟与 CODING DevOps 高级开发工程师江裕诚为您分享！
 keywords: Serverless CFS
-date: 2020-09-07
+date: 2020-09-11
 time: future
 thumbnail: https://img.serverlesscloud.cn/202097/1599470747622-1599469754973-%E7%AC%AC%E5%8D%81%E6%9C%9F.jpg
 categories:

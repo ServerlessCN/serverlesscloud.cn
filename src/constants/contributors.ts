@@ -105,6 +105,11 @@ const contributors = [
     link: 'https://github.com/iguojincom',
   },
   {
+    name: '蒋启钲',
+    link: 'https://github.com/jiangqizheng',
+    avatar: 'https://avatars.githubusercontent.com/jiangqizheng',
+  },
+  {
     name: 'Jacob Evans',
     link: 'https://github.com/dekz',
     avatar: 'https://avatars.githubusercontent.com/dekz',
