@@ -1,24 +1,33 @@
 ---
-title: 权威发布！伯克利分校对 Serverless 未来 10 年的发展判断（上）
-description: 来自加州大学伯克利分校 Riselab 团队研究成果：《The Next Phase of Cloud Computing — Serverless》！
+title: 权威指南：Serverless 未来十年发展解读 — 伯克利分校实验室分享（上）
+description: Johann 在 ServerlessDays China 的演讲分享！
 keywords: Serverless Framework,Serverless,SCF,Berkeley,加州大学,伯克利分校,云计算
 date: 2020-09-24
-thumbnail: https://img.serverlesscloud.cn/2020924/1600948237135-1600944665747-ServerlessDays%20PPT%E6%A8%A1%E6%9D%BF001.jpg
+thumbnail: https://img.serverlesscloud.cn/2020925/1601001375473-ServerlessDays%20PPT%E6%A8%A1%E6%9D%BF001.jpg
 categories:
   - user-stories
 authors:
   - Johann SchleierSmith
 authorslink:
-  - https://cloud.tencent.com/developer/article/1618591
+  - https://www.zhihu.com/people/Aceyclee
 tags:
   - Serverless
   - 伯克利
 ---
 
-> 本文整理自 Johann SchleierSmith 的演讲，本次分享源自 UC Berkeley Riselab 团队整体的研究成果。
-> - 演讲者：Johann SchleierSmith
-> - 内容翻译：Tinafang
-> - 视频回放：[Johann SchleierSmith | The Next Phase of Cloud Computing](https://cloud.tencent.com/developer/salon/live-1224/agenda-10025)  
+## 编者按
+
+本文整理自 Johann SchleierSmith 在 [ServerlessDays China 的演讲](https://cloud.tencent.com/developer/salon/live-1224/agenda-10025)，是来自加州大学伯克利分校计算机科学 Riselab 团队的研究成果。
+
+![](https://img.serverlesscloud.cn/2020925/1601002907667-91281601002765_pic_hd.jpg)
+
+ServerlessDays 是由全球 Serverless 开发者发起的国际技术会议。2020 年由腾讯云 Serverless 团队引入中国，并承办了首届 ServerlessDays China 会议。会上 Johann Schleier-Smith 代表伯克利计算机科学 Riselab 实验室进行了主题发言。
+
+本文由腾讯云 Serverless 团队进行翻译和整理，任何问题请与我们联系：
+
+> - 翻译：丁坤方
+> - 策划：王俊杰 
+> - 编辑：王天云
 
 ![](https://img.serverlesscloud.cn/2020924/1600936012116-image002.jpg)  
 
