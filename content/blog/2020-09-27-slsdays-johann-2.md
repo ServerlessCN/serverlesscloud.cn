@@ -1,6 +1,6 @@
 ---
 title: 权威指南：Serverless 未来十年发展解读 — 伯克利分校实验室分享（下）
-description: Johann 在 ServerlessDays China 的演讲分享。
+description: Johann 在 ServerlessDays China 的演讲分享！
 keywords: Serverless Framework,Serverless,SCF,Berkeley,加州大学,伯克利分校,云计算
 date: 2020-09-27
 thumbnail: https://img.serverlesscloud.cn/2020927/1601192579846-1601190052484-ServerlessDays%20PPT%E6%A8%A1%E6%9D%BF001.jpg
@@ -24,7 +24,7 @@ tags:
 ServerlessDays 是由全球 Serverless 开发者发起的国际技术会议。2020 年由腾讯云 Serverless 团队引入中国，并承办了首届 ServerlessDays China 会议。会上 Johann Schleier-Smith 代表伯克利计算机科学 Riselab 实验室进行了主题发言。
 
 > 本文由腾讯云 Serverless 团队进行翻译和整理，任何问题请与我们联系：  
-> 翻译：丁坤方 | 策划：王俊杰 | 编辑：王天云
+> - 翻译：丁坤方 | 策划：王俊杰 | 编辑：王天云
 
 ![](https://img.serverlesscloud.cn/2020924/1600936012116-image002.jpg)  
 

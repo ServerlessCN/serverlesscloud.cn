@@ -24,7 +24,7 @@ tags:
 ServerlessDays 是由全球 Serverless 开发者发起的国际技术会议。2020 年由腾讯云 Serverless 团队引入中国，并承办了首届 ServerlessDays China 会议。会上 Johann Schleier-Smith 代表伯克利计算机科学 Riselab 实验室进行了主题发言。
 
 > 本文由腾讯云 Serverless 团队进行翻译和整理，任何问题请与我们联系：  
-> 翻译：丁坤方 | 策划：王俊杰 | 编辑：王天云
+> - 翻译：丁坤方 | 策划：王俊杰 | 编辑：王天云
 
 ![](https://img.serverlesscloud.cn/2020924/1600936012116-image002.jpg)  
 
