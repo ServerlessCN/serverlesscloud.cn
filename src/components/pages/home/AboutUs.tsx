@@ -14,7 +14,7 @@ const us: {
     icon: zhihu,
     title: '知乎',
     slogan: 'Serverless 精华讨论',
-    link: 'https://zhuanlan.zhihu.com/ServerlessGo',
+    link: 'https://www.zhihu.com/column/c_1302675869174108160',
   },
   {
     icon: segmentfault,
