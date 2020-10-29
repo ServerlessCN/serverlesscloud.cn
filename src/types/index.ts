@@ -14,6 +14,7 @@ export interface Blog {
       translatorslink?: string[]
       location?: string
       tags?: string[]
+      keywords?: string[]
     }
     timeToRead: number
     wordCount: {

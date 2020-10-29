@@ -11,10 +11,7 @@ function createBestPracticeList(blogs, createPage) {
 
   new Array(pages).fill(0).forEach((_, page) => {
     const commonParams = {
-      component: path.resolve(
-        __dirname,
-        '../../src/templates/BestPracticeList.tsx'
-      ),
+      component: path.resolve(__dirname, '../../src/templates/BestPracticeList.tsx'),
       context: {
         limit: PAGESIZE,
         offset: page * PAGESIZE,
@@ -40,19 +37,12 @@ function createBestPracticeList(blogs, createPage) {
 function createBestPractice(blogs, createPage) {
   blogs.forEach(({ node: { id: blogId, fileAbsolutePath } }, index) => {
     createPage({
-      path: `best-practice/${path.basename(
-        fileAbsolutePath,
-        path.extname(fileAbsolutePath)
-      )}`,
-      component: path.resolve(
-        __dirname,
-        '../../src/templates/BestPracticeDetail.tsx'
-      ),
+      path: `best-practice/${path.basename(fileAbsolutePath, path.extname(fileAbsolutePath))}`,
+      component: path.resolve(__dirname, '../../src/templates/BestPracticeDetail.tsx'),
       context: {
         blogId,
         previousBlogId: index === 0 ? null : blogs[index - 1].node.id,
-        nextBlogId:
-          index === blogs.length - 1 ? null : blogs[index + 1].node.id,
+        nextBlogId: index === blogs.length - 1 ? null : blogs[index + 1].node.id,
       },
     })
   })
@@ -67,9 +57,7 @@ function createBestPracticeTask(graphql, createPage) {
       allMarkdownRemark(
         sort: { fields: frontmatter___date, order: DESC }
         filter: {
-          frontmatter: {
-            categories: { regex: "/best-practice|guides-and-tutorials/" }
-          }
+          frontmatter: { categories: { regex: "/best-practice|guides-and-tutorials/" } }
           fileAbsolutePath: { regex: "/best-practice|blog/" }
         }
       ) {
@@ -84,6 +72,7 @@ function createBestPracticeTask(graphql, createPage) {
               title
               description
               authorslink
+              keywords
             }
             wordCount {
               words

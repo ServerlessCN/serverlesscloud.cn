@@ -226,6 +226,7 @@ export const query = graphql`
       translators
       translatorslink
       tags
+      keywords
     }
     wordCount {
       words
