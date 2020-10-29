@@ -241,7 +241,7 @@ const BlogDetail = ({ data: { currentBlog }, location }: Props) => {
 export default BlogDetail
 
 export const query = graphql`
-  fragment blogFields on MarkdownRemark {
+  fragment BlogFields on MarkdownRemark {
     id
     frontmatter {
       thumbnail
@@ -254,6 +254,7 @@ export const query = graphql`
       translators
       translatorslink
       tags
+      keywords
     }
     wordCount {
       words
