@@ -146,7 +146,7 @@ const BlogDetail = ({ data: { currentBlog }, location }: Props) => {
 
   return (
     <Layout>
-      <Helmet {...currentBlog.frontmatter} location={location} />
+      <Helmet {...currentBlog.frontmatter} keywords={currentBlog.fields.keywords} location={location} />
       <Category location={location} isDetail={true} id="scf-blog-detail-header" />
       <Box className="scf-content" style={{ marginTop: 0 }}>
         <Box className="scf-page-blog-detail scf-layout-pattern">
@@ -254,7 +254,6 @@ export const query = graphql`
       translators
       translatorslink
       tags
-      keywords
     }
     wordCount {
       words
@@ -264,6 +263,7 @@ export const query = graphql`
     fileAbsolutePath
     fields {
       slug
+      keywords
     }
   }
 
