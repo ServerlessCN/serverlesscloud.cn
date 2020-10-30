@@ -138,7 +138,7 @@ const BestPracticeDetail = ({ data: { currentBlog }, location }: Props) => {
   }, [uuid])
   return (
     <Layout>
-      <Helmet {...currentBlog.frontmatter} location={location} />
+      <Helmet {...currentBlog.frontmatter} keywords={currentBlog.fields.keywords} location={location} />
       <Box className="scf-content" style={{ marginTop: 0 }}>
         <Box className="scf-page-blog-detail scf-layout-pattern">
           <Box className="scf-home-block">
@@ -236,6 +236,7 @@ export const query = graphql`
     fileAbsolutePath
     fields {
       slug
+      keywords
     }
   }
 
