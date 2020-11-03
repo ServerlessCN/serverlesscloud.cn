@@ -13,6 +13,7 @@ authorslink:
 tags:
   - Serverless
   - Flask
+outdated: true
 ---
 
 随着时间的发展，Serverless 架构越来越火热，其按量付费、弹性伸缩等诸多优质特性，让人眼前一亮，不得不惊叹云计算为我们带来的便利。
@@ -82,7 +83,7 @@ def test():
             "User-Agent": "User Agent String"
         },
         "body": json.dumps({"id": 1}),
-         .... .... 
+         .... ....
     }
     print(main_handler(event, None))
 
@@ -290,16 +291,16 @@ Conf:
     website_keywords: Serverless, Serverless Framework, Tencent Cloud, SCF
     website_description: 一款基于腾讯云Serverless架构，并且采用Serverless Framework构建的Serverless博客系统。
     website_bucket: serverless-blog-1256773370
-    mysql_host: 
+    mysql_host:
     mysql_user: root
-    mysql_password: 
+    mysql_password:
     mysql_port: 60510
     mysql_db: serverless_blog_system
     admin_user: mytest
     admin_password: mytestabc
-    tencent_secret_id: 
-    tencent_secret_key: 
-    tencent_appid: 
+    tencent_secret_id:
+    tencent_secret_key:
+    tencent_appid:
 ```
 
 在使用的时候，可以直接用，例如函数：
@@ -771,10 +772,10 @@ Conf:
     website_keywords: Serverless, Serverless Framework, Tencent Cloud, SCF
     website_description: 一款基于腾讯云Serverless架构，并且采用Serverless Framework构建的Serverless博客系统。
     website_bucket: serverless-blog-1256773370
-    mysql_host: 
-    mysql_password: 
-    mysql_port: 
-    mysql_db: 
+    mysql_host:
+    mysql_password:
+    mysql_port:
+    mysql_db:
     admin_user: mytest
     admin_password: mytest
 ```
@@ -858,26 +859,26 @@ APIService:
   DEBUG ─ Using last time deploy service id service-23ybmuq7
   DEBUG ─ Updating service with serviceId service-23ybmuq7.
   DEBUG ─ Bucket "serverless-blog-1256773370" in the "ap-shanghai" region alrea
-  
+
   ………………
-  
-     - 
+
+     -
         path:   /web/article/watched/update
         method: POST
         apiId:  api-gnvnrbyk
-      - 
+      -
         path:   /web/sentence/get
         method: POST
         apiId:  api-msvadsau
-      - 
+      -
         path:   /web/article/list/hot/get
         method: POST
         apiId:  api-kfkrjhim
-      - 
+      -
         path:   /web/tags/list/get
         method: POST
         apiId:  api-avydagem
-      - 
+      -
         path:   /admin
         method: ANY
         apiId:  api-4tnz5tc4

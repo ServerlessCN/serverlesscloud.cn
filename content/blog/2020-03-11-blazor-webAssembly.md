@@ -13,6 +13,7 @@ authorslink:
 tags:
   - Serverless
   - Blazor
+outdated: true
 ---
 
 ## Blazor ❤ Serverless

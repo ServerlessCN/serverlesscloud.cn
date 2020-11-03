@@ -13,6 +13,7 @@ authorslink:
 tags:
   - Serverless
   - Hexo
+outdated: true
 ---
 
 很多人都想拥有自己的个人博客，还得看起来漂亮、酷酷的。尤其对开发者来说，不仅可以分享技术（装）心得（逼），面试的时候还能成为加分。这里介绍两款好用的神器，不用忙前（前端）忙后（后端），简单3min即可搞定，本文免费分享给大家。
@@ -120,7 +121,7 @@ inputs:
 └── hexo
     ├── public
     ├── ...
-    ├── serverless.yml 
+    ├── serverless.yml
     ├── ...
     └── source
 ```

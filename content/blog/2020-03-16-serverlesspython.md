@@ -12,6 +12,7 @@ authors:
 tags:
   - Serverless
   - Python
+outdated: true
 ---
 
 Python是一种热门的编程语言，Serverless 是近年来迅速兴起的一个技术概念，基于 Serverless 架构能构建出多种应用场景，适用于各行各业。

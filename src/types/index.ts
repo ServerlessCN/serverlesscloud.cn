@@ -15,6 +15,7 @@ export interface Blog {
       location?: string
       tags?: string[]
       keywords?: string[]
+      outdated?: boolean
     }
     timeToRead: number
     wordCount: {

@@ -619,6 +619,16 @@ a:hover {
 .pagination li {
   cursor: pointer;
 }
+.outdated-tip {
+  background: #5087fd;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+.outdated-tip a {
+  color: #fff;
+  text-decoration: underline;
+}
 
 @media screen and (max-width: 992px) {
 

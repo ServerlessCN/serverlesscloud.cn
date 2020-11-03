@@ -13,6 +13,7 @@ authorslink:
 tags:
   - Serverless
   - 企业微信
+outdated: true
 ---
 
 最近的一些疫情信息很让人揪心，为了方便大家掌握疫情信息，在空闲之余做了一个关于 nCoV 的疫情监控小助手。主要的功能是通过企业微信的 WebHook 来推送疫情信息。这里将使用 Serverless 的整体代码思路和架构方式分享给大家。
@@ -285,7 +286,7 @@ nction.zip
 
 ![](https://img.serverlesscloud.cn/202026/1580963150682-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A120200206114514.png)
 
-这样，我们就完成了一个 nCoV 的在线触发函数机器人～是不是很简单呢？快来开始动手吧～ 
+这样，我们就完成了一个 nCoV 的在线触发函数机器人～是不是很简单呢？快来开始动手吧～
 
 ---
 <div id='scf-deploy-iframe-or-md'></div>

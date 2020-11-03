@@ -13,6 +13,7 @@ authorslink:
 tags:
   - Serverless
   - WordCount
+outdated: true
 ---
 
 MapReduce 在维基百科中的解释如下：

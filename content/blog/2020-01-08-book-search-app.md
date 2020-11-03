@@ -12,7 +12,8 @@ authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
 tags:
   - serverless
-  - 应用实战  
+  - 应用实战
+outdated: true
 ---
 
 我有一个朋友（这朋友不是我），朋友的单位里有一个小型图书室，图书室中存放了不少书。
@@ -230,7 +231,7 @@ def main_handler(event, context):
 
 > **传送门：**
 >
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/) 里体验更多关于 Serverless 应用的开发！

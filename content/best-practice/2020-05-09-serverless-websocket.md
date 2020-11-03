@@ -13,6 +13,7 @@ authorslink:
 tags:
   - Serverless
   - Websocket
+outdated: true
 ---
 
 传统业务实现 Websocket 并不难，然而函数计算基本上都是事件驱动，不支持长链接操作。如果将函数计算与 API 网关结合，是否可以有 Websocket 的实现方案呢？

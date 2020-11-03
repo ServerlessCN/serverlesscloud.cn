@@ -148,6 +148,15 @@ const BlogDetail = ({ data: { currentBlog }, location }: Props) => {
     <Layout>
       <Helmet {...currentBlog.frontmatter} location={location} />
       <Category location={location} isDetail={true} id="scf-blog-detail-header" />
+      {currentBlog.frontmatter.outdated && (
+        <div className="outdated-tip">
+          当前您看到的博客使用的是低版本的 Serverless 组件，请查看
+          <a href="https://www.serverless.com/cn/components/" target="_blank">
+            最新文档
+          </a>
+          进行部署。
+        </div>
+      )}
       <Box className="scf-content" style={{ marginTop: 0 }}>
         <Box className="scf-page-blog-detail scf-layout-pattern">
           <Box className="scf-home-block">
@@ -255,6 +264,7 @@ export const query = graphql`
       translatorslink
       tags
       keywords
+      outdated
     }
     wordCount {
       words

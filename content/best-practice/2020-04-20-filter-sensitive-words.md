@@ -13,6 +13,7 @@ authorslink:
 tags:
   - Python
   - 文本处理
+outdated: true
 ---
 
 ## 前言
