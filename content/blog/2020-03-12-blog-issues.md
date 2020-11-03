@@ -13,6 +13,7 @@ authorslink:
 tags:
   - Serverless
   - 动态博客
+sls --debug
 ---
 
 这个假期挺长的，不过有幸在腾讯云 Serverless 在线直播里看到了 Serverless 的相关课程，从第一期学完，还是凭添了很多学习乐趣。
