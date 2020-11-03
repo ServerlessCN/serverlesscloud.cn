@@ -13,6 +13,7 @@ authorslink:
 tags:
   - Serverless
   - HelloWorld
+outdated: true
 ---
 
 `Serverless` 是各大云服务商提供出来的一种无服务的计算资源。为什么叫无服务呢，因为如果你使用 `serverless`，你只需要关注应用层，而无需关心底层基础设施，无需运维。简而言之，`serverless` 并不是真的无服务，而是关于有服务的不归你管，云服务商帮你搞定，比如 `Google`，`AWS` 或者 `TencentCloud`。

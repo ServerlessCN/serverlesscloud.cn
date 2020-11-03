@@ -13,6 +13,7 @@ authorslink:
 tags:
   - Serverless
   - 对象存储
+outdated: true
 ---
 
 ## 背景

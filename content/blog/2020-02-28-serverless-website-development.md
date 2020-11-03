@@ -8,11 +8,12 @@ categories:
   - news
 authors:
   - liujiang
-authorslink: 
+authorslink:
   - https://github.com/jiangliu5267
 tags:
   - Serverless
-  - Meetup  
+  - Meetup
+outdated: true
 ---
 
 Serverless被誉为下一代云计算技术，因为其能带来研发交付速度提升与成本的降低在业内异常火爆。本文主要为大家分享 Serverless Framework 的架构演进、技术解析以及应用发展，并通过 Serverless+Hexo 实战案例，分享如何快速基于 Serverless Framework 进行业务开发部署。
@@ -22,11 +23,11 @@ Serverless被誉为下一代云计算技术，因为其能带来研发交付速�
 文章大纲：
 
 > 1、Serverless 架构演进
-> 
+>
 > 2、Serverless 技术解析 
-> 
+>
 > 3、Serverless 应用与发展 
-> 
+>
 > 4、Serverless 静态博客实战
 
 # **1、Serverless 架构演进**
@@ -282,7 +283,7 @@ https://serverlesscloud.cn/doc/providers/tencent/templates/hexo
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

@@ -13,6 +13,7 @@ authorslink:
 tags:
   - Wintersmith
   - Docsify
+outdated: true
 ---
 
 之前由于学摄影的关系，为了提高自己的审美，顺便锻炼下自己的英文能力，翻译了不少国外艺术类的 [文章](https://www.zhihu.com/collection/291724553)。最近一直想搭一个个人博客来存放这些内容，又懒得折腾建站，遂一直搁置。

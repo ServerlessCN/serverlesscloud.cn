@@ -13,6 +13,7 @@ authorslink:
 tags:
   - Serverless
   - 视频处理
+outdated: true
 ---
 
 在 Serverless 架构的应用案例中，有这样一个非常实在的应用：视频的处理。

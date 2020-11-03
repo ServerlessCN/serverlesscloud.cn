@@ -23,7 +23,6 @@
     "gatsby-plugin-typescript": "^2.1.18",
     "gatsby-remark-autolink-headers": "^2.1.18",
     "gatsby-remark-code-buttons": "^2.0.4",
-    "gatsby-remark-extract-keywords": "^2.0.0",
     "gatsby-remark-extract-keywords-jieba": "^2.0.2",
     "gatsby-remark-images": "^3.1.35",
     "gatsby-remark-prismjs": "^3.3.23",

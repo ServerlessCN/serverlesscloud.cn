@@ -13,6 +13,7 @@ authorslink:
 tags:
   - Serverless
   - Egg.js
+outdated: true
 ---
 
 作为一名前端开发者，在选择 Nodejs 后端服务框架时，第一时间会想到 [Egg.js](https://github.com/eggjs/egg/)，不得不说 `Egg.js` 是一个非常优秀的企业级框架，它的高扩展性和丰富的插件，极大的提高了开发效率。开发者只需要关注业务就好，比如要使用 `redis`，引入 [egg-redis](https://github.com/eggjs/egg-redis) 插件，然后简单配置就可以了。正因为如此，第一次接触它，我便喜欢上了它，之后也用它开发过不少应用。

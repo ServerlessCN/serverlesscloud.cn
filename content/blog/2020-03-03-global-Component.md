@@ -14,6 +14,7 @@ authorslink:
 tags:
   - Serverless
   - Component
+outdated: true
 ---
 
 ## 前言
@@ -179,15 +180,15 @@ DFOUNDERLIU-MB0:website_test dfounderliu$ sls --debug
   DEBUG ─ Website deployed successfully to URL: http://test2-1256773370.cos-website.ap-shanghai.myqcloud.com.
   DEBUG ─ Website deployed successfully to URL: http://test3-1256773370.cos-website.ap-shanghai.myqcloud.com.
 
-  test1: 
+  test1:
     url: http://test1-1256773370.cos-website.ap-shanghai.myqcloud.com
-    env: 
-  test2: 
+    env:
+  test2:
     url: http://test2-1256773370.cos-website.ap-shanghai.myqcloud.com
-    env: 
-  test3: 
+    env:
+  test3:
     url: http://test3-1256773370.cos-website.ap-shanghai.myqcloud.com
-    env: 
+    env:
 
   19s › test1 › done
 ```
@@ -207,11 +208,11 @@ DFOUNDERLIU-MB0:website_test dfounderliu$ sls --debug -n test2
   DEBUG ─ Uploading directory /Users/dfounderliu/Desktop/ServerlessComponents/test/website_test/public to bucket test2-1256773370
   DEBUG ─ Website deployed successfully to URL: http://test2-1256773370.cos-website.ap-shanghai.myqcloud.com.
 
-  test1: 
-  test2: 
+  test1:
+  test2:
     url: http://test2-1256773370.cos-website.ap-shanghai.myqcloud.com
-    env: 
-  test3: 
+    env:
+  test3:
 
   6s › test3 › done
 ```
@@ -240,7 +241,7 @@ DFOUNDERLIU-MB0:website_test dfounderliu$ sls --debug -n test2
 
 > **传送门：**
 >
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

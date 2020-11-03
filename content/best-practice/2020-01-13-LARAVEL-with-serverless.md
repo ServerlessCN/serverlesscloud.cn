@@ -13,6 +13,7 @@ authorslink:
 tags:
   - Wintersmith
   - Laravel
+outdated: true
 ---
 
 今天，为大家带来一篇 Laravel + Serverless Framework 的综合实战，里面信息量有点多，大家仔细看哦～

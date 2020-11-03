@@ -12,7 +12,8 @@ authorslink:
   - https://www.zhihu.com/people/liuyu-43-97
 tags:
   - Serverless
-  - Python 
+  - Python
+outdated: true
 ---
 
 「图像分类」是人工智能领域的一个热门话题，我们在实际生活中甚至业务的生产环境里，也经常遇到图像分类相似的需求，如何能快速搭建一个图像分类或者内容识别的 API 呢？
@@ -71,7 +72,7 @@ def main_handler(event, context):
 
 ### 下载安装依赖
 
-项目创建完成之后，下载所依赖的模型： 
+项目创建完成之后，下载所依赖的模型：
 
 ```
 - SqueezeNet（文件大小：4.82 MB，预测时间最短，精准度适中）
@@ -233,7 +234,7 @@ cost:  1.2248001098632812
 ---
 
 > **传送门：**
-> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md) 
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
 > - 官网：[serverless.com](https://serverless.com/)
 
 欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
