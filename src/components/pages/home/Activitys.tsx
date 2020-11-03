@@ -12,10 +12,10 @@ interface Activity {
 
 const activityList: Activity[] = [
   {
-    cover: 'https://img.serverlesscloud.cn/2020826/1598412575104-10years.jpg',
-    title: '腾讯云十周年庆 | Serverless 回馈豪礼',
-    decription: '惊喜就藏在云产品主会场的「基础云产品区」和「企业新用户专区」！',
-    link: 'https://cloud.tencent.com/act/anniversary/product',
+    cover: 'https://img.serverlesscloud.cn/2020113/1604401312765-fengmian.jpg',
+    title: '11.11 云上盛典',
+    decription: 'Serverless 云函数冰点折扣资源包限时抢购 1 元/月起',
+    link: 'https://cloud.tencent.com/act/double11?from=13609',
   },
   {
     cover: 'https://img.serverlesscloud.cn/2020720/1595233528915-1588164013282-banner_hours%20%281%29.jpg',
