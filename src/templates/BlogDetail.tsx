@@ -146,7 +146,7 @@ const BlogDetail = ({ data: { currentBlog }, location }: Props) => {
 
   return (
     <Layout>
-      <Helmet {...currentBlog.frontmatter} location={location} />
+      <Helmet {...currentBlog.frontmatter} keywords={currentBlog.fields.keywords} location={location} />
       <Category location={location} isDetail={true} id="scf-blog-detail-header" />
       {currentBlog.frontmatter.outdated && (
         <div className="outdated-tip">
@@ -263,7 +263,6 @@ export const query = graphql`
       translators
       translatorslink
       tags
-      keywords
       outdated
     }
     wordCount {
@@ -274,6 +273,7 @@ export const query = graphql`
     fileAbsolutePath
     fields {
       slug
+      keywords
     }
   }
 

@@ -138,7 +138,7 @@ const BestPracticeDetail = ({ data: { currentBlog }, location }: Props) => {
   }, [uuid])
   return (
     <Layout>
-      <Helmet {...currentBlog.frontmatter} location={location} />
+      <Helmet {...currentBlog.frontmatter} keywords={currentBlog.fields.keywords} location={location} />
       {currentBlog.frontmatter.outdated && (
         <div className="outdated-tip">
           当前您看到的博客使用的是低版本的 Serverless 组件，请查看
@@ -246,6 +246,7 @@ export const query = graphql`
     fileAbsolutePath
     fields {
       slug
+      keywords
     }
   }
 

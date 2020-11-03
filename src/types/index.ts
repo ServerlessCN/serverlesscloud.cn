@@ -27,6 +27,7 @@ export interface Blog {
     fileAbsolutePath: string
     fields: {
       slug: string
+      keywords: string[]
     }
   }
 }
