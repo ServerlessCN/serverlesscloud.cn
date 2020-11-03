@@ -19,7 +19,6 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          // `gatsby-remark-extract-keywords`,
           {
             resolve: `gatsby-remark-extract-keywords-jieba`,
             options: {
