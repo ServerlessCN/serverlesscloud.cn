@@ -3,6 +3,7 @@ import { Center, Background, Container, Box, Image } from '@src/components/atoms
 import theme from '@src/constants/theme'
 import { CheckIfDesktopContext } from '@src/contexts'
 import Swiper from '@src/components/Swiper'
+import banner0 from '@src/assets/images/banner0.jpg'
 import banner2 from '@src/assets/images/banner2.png'
 import banner_course from '@src/assets/images/banner_course.png'
 import banner4 from '@src/assets/images/banner4.png'
@@ -23,6 +24,13 @@ const bannerConfigs: {
   link: string
   title: string
 }[] = [
+  {
+    img: banner0,
+    backgroundColor: '#dcdcdc',
+    alt: 'Serverless 特惠',
+    link: 'https://cloud.tencent.com/act/double11?from=13609',
+    title: 'Serverless 云函数冰点折扣资源包限时抢购 1 元/月起',
+  },
   {
     img: banner2,
     backgroundColor: '#dcdcdc',
