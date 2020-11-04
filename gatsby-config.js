@@ -1,4 +1,6 @@
 const path = require('path')
+const dict = require('./dict')
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -23,6 +25,15 @@ module.exports = {
             resolve: `gatsby-remark-extract-keywords-jieba`,
             options: {
               max: 20,
+              process: body => {
+                const result = []
+                dict.forEach(item => {
+                  if (body.includes(item)) {
+                    result.push(item)
+                  }
+                })
+                return result
+              },
             },
           },
           {
