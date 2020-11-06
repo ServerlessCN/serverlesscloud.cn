@@ -624,6 +624,8 @@ a:hover {
   color: #fff;
   text-align: center;
   padding: 10px;
+  position: relative;
+  z-index: 9999;
 }
 .outdated-tip a {
   color: #fff;
@@ -631,6 +633,10 @@ a:hover {
 }
 
 @media screen and (max-width: 992px) {
+  .outdated-tip {
+    position: static;
+    z-index: 1;
+  }
 
   #scf-box-mobile-titlebar {
     display: block;
