@@ -1,5 +1,6 @@
 const path = require('path')
 const dict = require('./dict')
+const blackDict = require('./blackDict')
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -24,7 +25,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-extract-keywords-jieba`,
             options: {
-              max: 20,
+              max: 10,
               process: body => {
                 const result = []
                 dict.forEach(item => {
@@ -33,6 +34,25 @@ module.exports = {
                   }
                 })
                 return result
+              },
+              afterProcess: (important, keywords) => {
+                keywords.forEach(item => {
+                  if (/\d+/.test(item)) {
+                    return
+                  }
+                  if (/[0-9'\"{}\\(\\)\\[\\]\\*&.?!,…:;]+/.test(item)) {
+                    return
+                  }
+                  if (/[A-Z]{2}/.test(item)) {
+                    return
+                  }
+                  if (blackDict.includes(item)) {
+                    return
+                  }
+                  important.push(item)
+                })
+                console.log(important)
+                return important
               },
             },
           },
