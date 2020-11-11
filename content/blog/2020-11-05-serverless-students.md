@@ -2,7 +2,6 @@
 title: Serverless 走进高校，技术普及从娃娃抓起
 description: 11 月 5 日至 11 月 19 日，线上直播
 date: 2020-11-05
-time: future
 thumbnail: https://img.serverlesscloud.cn/2020114/1604482846640-banner%20%20%2011.5%281%29_%E5%89%AF%E6%9C%AC.jpg
 categories:
   - meetup
