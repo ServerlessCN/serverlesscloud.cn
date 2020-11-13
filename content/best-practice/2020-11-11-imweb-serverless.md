@@ -1,5 +1,5 @@
 ---
-title: IMWEB 一站式 Serverless 开发解决方案
+title: 腾讯 IMWEB 前端团队 一站式 Serverless 开发解决方案
 description: 本文将分享 IMWEB 团队对 Serverless 的实践方案
 date: 2020-11-11
 thumbnail: https://img.serverlesscloud.cn/20201111/1605093413809-QQ20201111-191440%402x.jpg
@@ -12,9 +12,15 @@ tags:
   - IMWEB
 ---
 
-> 前言：如今的 Serverless 可以说是一大有潜力的新技术方向，尤其在当下上云的热潮中，Serverless 因其免运维、自动扩容、支持多种编程语言等优势，对前端来说，是一大提升服务开发、维护效率的利器也是可尝试全栈发展的方向，但也因为其新，对落地到团队开发中，结合团队开发流也是遇到了一些挑战，本文将分享 IMWEB 团队对 Serverless 的实践方案
+IMWeb 团队隶属腾讯公司，是国内最专业的前端团队之一。
 
-![](https://img.serverlesscloud.cn/20201113/1605252275656-image%20%284%29.jpg)
+IMWeb 团队专注前端领域多年，负责过 QQ 资料、QQ 注册、QQ 群等亿级业务。目前聚焦于在线教育领域，精心打磨 腾讯课堂、企鹅辅导及 ABCmouse 三大产品。
+
+学习成就梦想，我们希望能用技术改变教育，改变世界。
+
+![](https://img.serverlesscloud.cn/20201113/1605257369371-image%20%284%29%20%281%29.jpg)
+
+> 前言：如今的 Serverless 可以说是一大有潜力的新技术方向，尤其在当下上云的热潮中，Serverless 因其免运维、自动扩容、支持多种编程语言等优势，对前端来说，是一大提升服务开发、维护效率的利器也是可尝试全栈发展的方向，但也因为其新，对落地到团队开发中，结合团队开发流也是遇到了一些挑战，本文将分享 IMWEB 团队对 Serverless 的实践方案
 
 ## 一、IMWEB 团队 Serverless 研发模式的演进与思考
 
@@ -109,7 +115,7 @@ tags:
 
 对于独立云函数账号，每个开发在上手开发前都需要单独申请，同时还有开通各种权限，快点半天，慢点一两天，针对这个问题，考虑使用团队公共账号进行统一云函数管理，工具使用公共账号进行云函数部署、更新，免去开发的学习成本、账号上手成本
 
-![img](https://img.serverlesscloud.cn/20201111/1605082166948-image0.jpeg)            
+![img](https://img.serverlesscloud.cn/20201113/1605257479797-0yHaN3xT2HsXhPl9GUtKhQ.jpeg)            
 
 #### 2）基于 GIT 管理云函数
 
@@ -121,9 +127,9 @@ tags:
 
 为提供云函数的开发流，针对云函数的特点，使用云函数命名空间的概念来隔离云函数，同时限制测试环境的网关服务只允许内网访问，保证业务安全
 
-![img](https://img.serverlesscloud.cn/20201113/1605252559069-DLcf3IqDbbaKVAza7VquKg.jpeg)      
+![img](https://img.serverlesscloud.cn/20201113/1605257560655-obp-7_y4rDmqmwZidPtuqw.jpeg)      
 
-#### 4）命名空间隔离函数环境
+#### 4）统一云函数规则配置
 
 制定云函数名、对应网关服务 API 名、环境命名空间的命名规范，以达到命名空间、函数名、网关服务 API 能一一对应，可通过其一推导其二，如知道函数名，可知其访问 API 是什么，对应环境命名空间是什么
 
@@ -151,7 +157,7 @@ tags:
 
 云函数的真实运行环境相对复杂，若是遇到了涉及云函数环境调试的问题，需要真实调试云函数，此时本地即可完成调试，工具封装了一系列操作，如实时调试、监听文件变更等，实时部署，实现一键定位调试云函数
 
-![img](https://img.serverlesscloud.cn/20201111/1605082164667-image0.jpeg)            
+![img](https://img.serverlesscloud.cn/20201113/1605257728660-zKuoQMZlffubmmmBhpTH2w.jpeg)            
 
 #### 4）极致优化云函数部署时间
 
