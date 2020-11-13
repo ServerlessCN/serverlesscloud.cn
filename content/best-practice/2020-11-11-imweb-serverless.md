@@ -4,7 +4,7 @@ description: 本文将分享 IMWEB 团队对 Serverless 的实践方案
 date: 2020-11-11
 thumbnail: https://img.serverlesscloud.cn/20201111/1605093413809-QQ20201111-191440%402x.jpg
 categories:
-  - user-stories
+  - best-practice
 authors:
   - 陈丽杭
 tags:
@@ -13,6 +13,8 @@ tags:
 ---
 
 > 前言：如今的 Serverless 可以说是一大有潜力的新技术方向，尤其在当下上云的热潮中，Serverless 因其免运维、自动扩容、支持多种编程语言等优势，对前端来说，是一大提升服务开发、维护效率的利器也是可尝试全栈发展的方向，但也因为其新，对落地到团队开发中，结合团队开发流也是遇到了一些挑战，本文将分享 IMWEB 团队对 Serverless 的实践方案
+
+![](https://img.serverlesscloud.cn/20201113/1605252275656-image%20%284%29.jpg)
 
 ## 一、IMWEB 团队 Serverless 研发模式的演进与思考
 
@@ -58,7 +60,7 @@ tags:
 
 ### （2）团队协作上手云函数开发问题
 
-在初期团队探索尝试云函数开发时，对比传统项目的开发流，云函数的开发步骤更多， 也暴露出了一些缺点     
+在初期团队探索尝试云函数开发时，对比传统项目的开发流，云函数的开发步骤更多，也暴露出了一些缺点：  
 
 ![img](https://img.serverlesscloud.cn/20201111/1605082168445-image0.jpeg)            
 
@@ -66,11 +68,11 @@ tags:
 
 首先有不小的学习成本，像云函数配置文件，云函数官网界面操作学习成本，实际使用时，由于云函数网关 API 链接过长、域名限制等，需要配置 nginx，用特定域名访问云函数网关 API，因为多数前端对 nginx 部署，导致有了 nginx 学习成本
 
-![img](https://img.serverlesscloud.cn/20201111/1605082168488-image0.jpeg)            
+![img](https://img.serverlesscloud.cn/20201113/1605252781340-JLHuakQNrjSbk4ZDQgHX_Q.jpeg)            
 
 #### 2) 调试云函数效率低
 
-因为云函数是部署在云端的， serverless 有其独特的环境，context、event 等，有别于 NODE 服务的请求体等，本地要完全模拟 serverless 请求比较困难，导致开发想要调试定位问题时，只能先将代码部署到 serverless 上，这里就需要等待部署了，由于 serverless 是外网的，部署时间就更长了
+因为云函数是部署在云端的，Serverless 有其独特的环境，context、event 等，有别于 NODE 服务的请求体等，本地要完全模拟 serverless 请求比较困难，导致开发想要调试定位问题时，只能先将代码部署到 serverless 上，这里就需要等待部署了，由于 serverless 是外网的，部署时间就更长了
 
 ![img](https://img.serverlesscloud.cn/20201111/1605082167641-image0.jpeg)            
 
@@ -79,7 +81,7 @@ tags:
 - 由于云函数直接就是部署在云端，没有我们传统的机器用于做环境区分，对团队协作保证部署质量来说并不友好
 - 上述也有提到的，往往因为想要自己业务域名访问服务接口，而云函数网关 API 是比较长的缺乏语义化的链接，通常使用时会想配置 nginx 去通过自定义域名访问云函数，不止是成本问题也有容易配置错误的风险问题
 
-![img](https://img.serverlesscloud.cn/20201111/1605082169344-image0.jpeg)            
+![img](https://img.serverlesscloud.cn/20201113/1605252814797-4dgRVX4WesEZ_0izMi7UUA.jpeg)            
 
 #### 4) 管理困难，存在质量问题
 
@@ -119,7 +121,7 @@ tags:
 
 为提供云函数的开发流，针对云函数的特点，使用云函数命名空间的概念来隔离云函数，同时限制测试环境的网关服务只允许内网访问，保证业务安全
 
-![img](https://img.serverlesscloud.cn/20201111/1605082166188-image0.jpeg)            
+![img](https://img.serverlesscloud.cn/20201113/1605252559069-DLcf3IqDbbaKVAza7VquKg.jpeg)      
 
 #### 4）命名空间隔离函数环境
 
@@ -169,7 +171,7 @@ tags:
 
 限制测试环境网关服务为内网可访问。
 
-![img](https://img.serverlesscloud.cn/20201111/1605082164191-image0.jpeg)            
+![img](https://img.serverlesscloud.cn/20201113/1605252917296-Cr0lwD5xyck3Ugjxlk1fIw.jpeg)            
 
 另外，为了保证云函数的运行稳定，避免因为云函数的冷启动导致云函数访问失败，即对云函数的容灾处理，做了一层 STKE 的容灾，通过代码同构的方式，利用工具构建打包，完成一套代码实现既可部署 serverless ，也可以部署 STKE， 配合网关的处理，完成云函数的降级容灾
 
@@ -179,11 +181,14 @@ tags:
 
 ### imflow 内置命令
 
-![img](https://img.serverlesscloud.cn/20201111/1605082164582-image0.jpeg)            
-
-关于 IMFLOW 的具体使用可查看视频操作。
+![img](https://img.serverlesscloud.cn/20201111/1605082164582-image0.jpeg)
 
 至此，感谢阅读。在探索云函数的开发之路中，感谢腾讯云 Serverless 团队的支持，希望 Serverless 可以越做越好！
+
+---
+
+---
+<div id='scf-deploy-iframe-or-md'></div>
 
 ---
 
