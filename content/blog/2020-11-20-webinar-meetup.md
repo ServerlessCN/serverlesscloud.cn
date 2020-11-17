@@ -3,7 +3,7 @@ title: 使用 Custom Runtime 拓展云函数编程语言 | 在线分享第十一
 description: 腾讯云产品专家李啸川带来 Custom Runtime 的原理和实战演示分享
 date: 2020-11-17
 time: future
-thumbnail: https://img.serverlesscloud.cn/20201117/1605582416647-1605536973861-%E5%85%AC%E4%BC%97%E5%8F%B7banner.jpg
+thumbnail: https://img.serverlesscloud.cn/20201117/1605614822939-banner%E4%B8%AD%E6%96%87%E7%BD%9100%28t%29.jpg
 categories:
   - meetup
 authors:
@@ -15,11 +15,17 @@ tags:
   - Meetup
 ---
 
-云函数 SCF 是腾讯云为企业和开发者们提供的无服务器执行环境，帮助大家在无需购买和管理服务器的情况下运行代码。尽管云函数 SCF 已经支持了 Python、Node.js、PHP、Golang、Java 等语言，我们发现用户在使用过程中还是会有更多语言方面的需求，为了避免开发语言方面的限制，造成拓展性和成本上的问题，Tencent Serverless Hours 第11期直播课程将为大家讲解如何使用 Custom Runtime 来解锁 SCF 语言限制。
+云函数 SCF 是腾讯云为企业和开发者们提供的无服务器执行环境，帮助大家在无需购买和管理服务器的情况下运行代码。
+
+云函数 SCF 已经支持了 Python、Node.js、PHP、Golang、Java 等语言，为了满足更多个性化开发语言及版本的函数实现，提供了 Custom Runtime 服务，即可定制化运行环境。
+
+通过开放实现自定义函数运行时，支持根据需求使用任意开发语言（例如：Dart、Rust、Ruby ）的任意版本来编写函数，并实现函数调用中的全局操作，如扩展程序的加载，安全插件，监控 agent 等。云函数 SCF 与 Custom Runtime 通过 HTTP 协议通信完成事件的响应处理。
+
+Tencent Serverless Hours 第11期直播课程将为大家详细讲解如何使用 Custom Runtime 来解锁 SCF 语言限制。
 
 直播时间：本周五（11月20日）下午三点
 
-![](https://img.serverlesscloud.cn/20201116/1605537042680-%E6%9D%8E%E5%95%B8%E5%B7%9D02.jpg)
+![](https://img.serverlesscloud.cn/20201117/1605614746967-%E6%9D%8E%E5%95%B8%E5%B7%9D000%281%29.jpg)
 
 
 **在线学习福利**
