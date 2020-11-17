@@ -1,5 +1,5 @@
 ---
-title: 腾讯 IMWEB 前端团队 一站式 Serverless 开发解决方案
+title: 腾讯 IMWEB 前端团队一站式 Serverless 开发解决方案
 description: 本文将分享 IMWEB 团队对 Serverless 的实践方案
 date: 2020-11-11
 thumbnail: https://img.serverlesscloud.cn/20201111/1605093413809-QQ20201111-191440%402x.jpg
@@ -18,7 +18,7 @@ IMWeb 团队专注前端领域多年，负责过 QQ 资料、QQ 注册、QQ 群�
 
 学习成就梦想，我们希望能用技术改变教育，改变世界。
 
-![](https://img.serverlesscloud.cn/20201113/1605257369371-image%20%284%29%20%281%29.jpg)
+![](https://img.serverlesscloud.cn/20201116/1605494640818-image%20%284%29%20%282%29.jpg)
 
 > 前言：如今的 Serverless 可以说是一大有潜力的新技术方向，尤其在当下上云的热潮中，Serverless 因其免运维、自动扩容、支持多种编程语言等优势，对前端来说，是一大提升服务开发、维护效率的利器也是可尝试全栈发展的方向，但也因为其新，对落地到团队开发中，结合团队开发流也是遇到了一些挑战，本文将分享 IMWEB 团队对 Serverless 的实践方案
 
