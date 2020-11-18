@@ -1,7 +1,7 @@
 ---
 title: 使用 Custom Runtime 拓展云函数编程语言 | 在线分享第十一期
 description: 腾讯云产品专家李啸川带来 Custom Runtime 的原理和实战演示分享
-date: 2020-11-17
+date: 2020-11-18
 time: future
 thumbnail: https://img.serverlesscloud.cn/20201117/1605614822939-banner%E4%B8%AD%E6%96%87%E7%BD%9100%28t%29.jpg
 categories:

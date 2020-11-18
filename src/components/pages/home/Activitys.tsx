@@ -19,9 +19,9 @@ const activityList: Activity[] = [
   },
   {
     cover: 'https://img.serverlesscloud.cn/2020720/1595233528915-1588164013282-banner_hours%20%281%29.jpg',
-    title: 'Tencent Serverless Hours | 第十期',
-    decription: 'Serverless 网站托管和备案一站式服务体验',
-    link: '/blog/2020-09-11-webinar-meetup',
+    title: 'Tencent Serverless Hours | 第 11 期',
+    decription: '使用 Custom Runtime 拓展云函数编程语言',
+    link: '/blog/2020-11-20-webinar-meetup',
   },
   {
     cover: 'https://main.qcloudimg.com/raw/3cb7b20955d78ced738e0279bb3f6f41.jpg',
