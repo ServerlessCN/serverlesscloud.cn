@@ -77,3 +77,7 @@ npx create-next-app nextjs-blog --use-npm --example "https://github.com/vercel/n
 最终的页面展示如下所示，一个基于 Next.js SSR 的博客页面就快速上线完成了！
 
 ![页面展示](https://img.serverlesscloud.cn/20201119/1605785799875-image%20%282%29.png)
+
+---
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！

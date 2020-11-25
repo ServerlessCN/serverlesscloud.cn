@@ -90,6 +90,11 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/HyperBrain',
   },
   {
+    name: 'Freeeeeedom',
+    link: 'https://github.com/Freeeeeedom',
+    avatar: 'https://avatars.githubusercontent.com/Freeeeeedom',
+  },
+  {
     name: '福尔高斯',
     cn_name: 'Holegots',
     link: 'https://github.com/fuergaosi233',
@@ -171,6 +176,12 @@ const contributors = [
     cn_name: 'Leo',
     link: 'https://github.com/usenet506',
     avatar: 'https://avatars.githubusercontent.com/usenet506',
+  },
+  {
+    name: '兰浩',
+    cn_name: 'LanHao',
+    link: 'https://github.com/LanHao0',
+    avatar: 'https://avatars.githubusercontent.com/LanHao0',
   },
   {
     name: '李永程',
