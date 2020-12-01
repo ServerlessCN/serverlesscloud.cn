@@ -1,5 +1,5 @@
 ---
-title: 🤸‍♂️👩‍💻 使用 Serverless 生成你的 GIT 代码年历！
+title: 🤸‍♂️👩‍💻 使用腾讯云 Serverless 生成你的 GIT 代码年历！
 description: 不要 Github profile 页的统计图！是好程序员就应该自己 Host！
 date: 2020-10-26
 thumbnail: https://img.serverlesscloud.cn/20201125/1606302161462-QQ20201125-190101.jpg
@@ -13,6 +13,10 @@ tags:
   - Serverless
   - GitHub
 ---
+
+最近在将平时各项的日常生活数据统计起来，并 host 到自己的站点上。平时走路有步数统计，消费有月度账单，咱们程序员是不是也应该有个属于自己的统计数据呢？
+
+> 作者简介：[兰浩](https://github.com/LanHao0)，目前在一家创业公司做前端开发。平时喜欢探索有意思的站点、app 和设计，从各个地方从 everywhere 学习。
 
 ## 前言
 
