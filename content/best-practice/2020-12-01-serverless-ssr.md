@@ -1,5 +1,5 @@
 ---
-title: 不改一行代码！快速部署传统框架到腾讯云 Serverless 
+title: 不改一行代码！快速部署流行框架到腾讯云 Serverless 
 description: 手把手教你部署传统框架，快来一起实践吧！
 date: 2020-12-01
 thumbnail: https://img.serverlesscloud.cn/2020121/1606807877823-1606807107551-ssr%E5%89%AF%E6%9C%AC2.jpg
