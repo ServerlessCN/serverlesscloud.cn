@@ -9,7 +9,7 @@ categories:
 authors:
   - Serverless 社区
 location:
-  - 线上直播 | 腾讯云 & Serverless 社区
+  - 线上投稿 | 腾讯云 & Serverless 社区
 tags:
   - Serverless
   - Meetup

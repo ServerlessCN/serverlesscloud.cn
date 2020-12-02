@@ -47,6 +47,11 @@ const contributors = [
     avatar: 'https://avatars.githubusercontent.com/chrisseto',
   },
   {
+    name: 'Donghui',
+    link: 'https://github.com/donhui',
+    avatar: 'https://avatars.githubusercontent.com/donhui',
+  },
+  {
     name: '丁坤方',
     cn_name: 'Tinafang',
     link: 'https://github.com/tinafangkunding',
