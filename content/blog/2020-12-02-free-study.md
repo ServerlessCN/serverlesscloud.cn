@@ -2,7 +2,6 @@
 title: 腾讯云 Serverless 免费学，还能拿奖！
 description: Serverless 即学即会，赶紧上车
 date: 2020-12-02
-time: future
 thumbnail: https://img.serverlesscloud.cn/2020122/1606879260376-1585217744291-%E6%91%84%E5%9B%BE%E7%BD%91_400730082_wx.jpg
 categories:
   - meetup
