@@ -3,7 +3,7 @@ title: 腾讯 Techo 开发者大会 Serverless 论坛
 description: 阵容热炸，云计算教父级大咖直播连线，马上预约！
 date: 2020-12-20
 time: future
-thumbnail: https://img.serverlesscloud.cn/2020128/1607402788167-%E5%88%86%E8%AE%BA%E5%9D%9B.png
+thumbnail: https://main.qcloudimg.com/raw/52231d607046255d595c2828a18ef3d2.jpg
 categories:
   - meetup
 authors:

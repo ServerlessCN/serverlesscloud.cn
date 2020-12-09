@@ -14,9 +14,9 @@ const activityList: Activity[] = [
   {
     cover:
       'https://img.serverlesscloud.cn/20191227/1577413467740-v2-b65fcb6a94208a494005fc0' + 'c40a99eb6_1200x500.jpg',
-    title: 'Tencent Serverless Hours | 第 11 期',
-    decription: '使用 Custom Runtime 拓展云函数编程语言',
-    link: '/blog/2020-11-20-webinar-meetup',
+    title: 'Tencent Serverless Hours | 第 12 期',
+    decription: '使用腾讯云 Serverless 云函数处理日志数据',
+    link: '/blog/2020-12-11-webinar-meetup',
   },
   {
     cover: 'https://main.qcloudimg.com/raw/3cb7b20955d78ced738e0279bb3f6f41.jpg',
