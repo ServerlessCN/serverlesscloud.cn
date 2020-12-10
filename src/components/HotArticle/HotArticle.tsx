@@ -4,6 +4,7 @@ import crypto from 'crypto'
 import BlogLists from '@src/constants/blog.json'
 import BestPracticeLists from '@src/constants/bestPractice.json'
 import { Link } from 'gatsby'
+import dayjs from 'dayjs'
 
 const articleList = [...BlogLists, ...BestPracticeLists]
 
@@ -55,15 +56,17 @@ export default (props: Props) => {
           if (result.length === 5) return false
           const matched = blogHash[item.id]
           if (matched) {
-            const isBestPractice =
-              !matched.frontmatter.categories ||
-              matched.frontmatter.categories?.includes('guides-and-tutorials') ||
-              matched.frontmatter.categories?.includes('best-practice')
-            if (type === 'blog' && !isBestPractice) {
-              result.push(matched)
-            }
-            if (type === 'bestPractice' && isBestPractice) {
-              result.push(matched)
+            if (dayjs(matched.frontmatter.date).isAfter(dayjs().subtract(180, 'day'))) {
+              const isBestPractice =
+                !matched.frontmatter.categories ||
+                matched.frontmatter.categories?.includes('guides-and-tutorials') ||
+                matched.frontmatter.categories?.includes('best-practice')
+              if (type === 'blog' && !isBestPractice) {
+                result.push(matched)
+              }
+              if (type === 'bestPractice' && isBestPractice) {
+                result.push(matched)
+              }
             }
           }
         })
