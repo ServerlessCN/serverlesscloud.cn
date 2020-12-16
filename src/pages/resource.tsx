@@ -242,7 +242,7 @@ const resource: {
     list: [
       {
         title: 'Adblock（去广告搜索引擎）',
-        link: 'https://github.com/TencentCloud/Serverless-demos/tree/master/Adblock',
+        link: 'https://github.com/TencentCloud/Serverless-demos/tree/master/Adblock%EF%BC%88%E5%8E%BB%E5%B9%BF%E5%91%8A%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%EF%BC%89',
       },
       {
         title: 'License Reco（车票识别 API）',
@@ -261,7 +261,7 @@ const resource: {
       },
       {
         title: 'Watermark（上传图片加水印）',
-        link: 'https://github.com/TencentCloud/Serverless-demos/tree/master/Watermark',
+        link: 'https://github.com/TencentCloud/Serverless-demos/tree/master/Watermark%EF%BC%88%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%8A%A0%E6%B0%B4%E5%8D%B0%EF%BC%89',
       },
       {
         title: 'Weather info system（天气信息系统）',
@@ -270,7 +270,7 @@ const resource: {
       },
       {
         title: 'nCoV-web（疫情查询页）',
-        link: 'https://github.com/TencentCloud/Serverless-demos/tree/master/nCoV-web',
+        link: 'https://github.com/TencentCloud/Serverless-demos/tree/master/nCoV-web%EF%BC%88%E7%96%AB%E6%83%85%E6%9F%A5%E8%AF%A2%E9%A1%B5%EF%BC%89',
       },
       {
         title: 'nCoV-wechat（疫情监控助手）',
