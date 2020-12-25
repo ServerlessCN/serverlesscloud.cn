@@ -6,7 +6,7 @@ thumbnail: https://img.serverlesscloud.cn/2020121/1606813843294-1606813671676fu.
 categories:
   - meetup
 authors:
-  - Serverless 社区
+  - Rust 社区
 location:
   - 深圳 | Rust & Serverless 社区
 tags:
