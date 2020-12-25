@@ -2,7 +2,6 @@
 title: 劲爆：首届中国 Rust 语言大会终于来了！
 description: 本次大会将于 2020 年 12 月 26、27 日在深圳-深圳湾科技园举行。
 date: 2020-12-26
-time: future
 thumbnail: https://img.serverlesscloud.cn/2020121/1606813843294-1606813671676fu.jpg
 categories:
   - meetup
