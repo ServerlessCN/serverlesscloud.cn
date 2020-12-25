@@ -2,7 +2,7 @@
 title: 不改一行代码！快速迁移 Flask 应用上云
 description: 手把手教你部署 Flask 应用，快来一起实践吧！
 date: 2020-12-24
-thumbnail: hhttps://img.serverlesscloud.cn/2020512/1589274779819-flask.jpg
+thumbnail: https://img.serverlesscloud.cn/2020512/1589274779819-flask.jpg
 categories:
   - best-practice
 authors:
@@ -25,11 +25,6 @@ tags:
 - **基于代码托管持续构建：** 支持持续构建，当从代码仓库导入的项目有更新时，可以自动触发重新部署。
 
 - **应用层级监控图表:** 提供了应用层级的监控能力，用户不仅可以看到每个资源的调用次数、错误次数等信息，还可以看到应用层级的监控指标，方便运维。
-
-## 免费体验
-
-目前，云函数提供
-
 
 ## 快速体验框架迁移教程
 

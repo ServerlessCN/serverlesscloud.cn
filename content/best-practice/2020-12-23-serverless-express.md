@@ -32,7 +32,7 @@ Serverless 以其低成本，免运维等优势，使得众多 Express 开发者
 
 > **部署前提**：您的账号已开通 [Serverless Framework](https://console.cloud.tencent.com/sls) 与 [Coding DevOps](https://console.cloud.tencent.com/coding) 服务。
 >
-> 开通非常简单，只要您登陆到Serverless 控制台：https://console.cloud.tencent.com/sls，系统会提示您按照指引步骤完成开通，开通过程不会产生何费用。
+> 开通非常简单，只要您登陆到 Serverless 控制台：https://console.cloud.tencent.com/sls，系统会提示您按照指引步骤完成开通，开通过程不会产生何费用。
 
 
 ## 创建应用
