@@ -28,11 +28,11 @@ tags:
 
 ## 快速体验框架迁移教程
 
-
 > **部署前提**：您的账号已开通 [Serverless Framework](https://console.cloud.tencent.com/sls) 与 [Coding DevOps](https://console.cloud.tencent.com/coding) 服务。
 >
-> 开通非常简单，只要您登陆到Serverless 控制台：https://console.cloud.tencent.com/sls，系统会提示您按照指引步骤完成开通，开通过程不会产生何费用。
+> 开通非常简单，只要您登陆到Serverless 控制台，系统会提示您按照指引步骤完成开通，开通过程不会产生何费用。
 
+**控制台链接：** https://console.cloud.tencent.com/sls
 
 ## 创建应用
 
@@ -83,11 +83,13 @@ tags:
 在应用详情页顶部，单击【开发部署】，您可以轻松地实现应用的配置修改与二次部署上传，支持**本地上传、代码托管、CLI 开发**三种方式。
 
 同时，您也可以在该页面修改应用配置信息，点击“保存”完成重新部署。
+
 <img src="https://main.qcloudimg.com/raw/5b727ac0d6715f339574e37d3580ac89.png" width="770px">
 
 ### 3. 应用监控
 
 在【应用监控】页面，您可以查看项目部署后输出的基本信息、项目请求次数、项目报错统计等多项监控指标，方便您轻松实现项目的管理运维。
+
 <img src="https://img.serverlesscloud.cn/20201126/1606384460049-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-11-26%2016.22.43.png" width="770px">
 
 ### 4. 部署日志
@@ -98,6 +100,8 @@ tags:
 
 
 到这里，无需一行代码更改，就完成了将您的 Flask 应用迁移至 Serverless 的操作，并可以进行应用的监控管理，持续开发，享受 Serverless 带来的众多优势。
+
+想要了解 Serverless 应用控制台的更多功能，欢迎前往控制台体验： https://console.cloud.tencent.com/sls
 
 ---
 

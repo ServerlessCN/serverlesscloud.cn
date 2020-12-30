@@ -12,7 +12,7 @@ tags:
   - Koa
 ---
 
-Koa 是现在最流行的基于 Node.js 平台的 Web 开发框架之一，由 Express 原班人马打造，利用 async 函数，Koa 丢弃了回调函数，并有力地增强错误处理，收到开发者普遍欢迎。
+Koa 是现在最流行的基于 Node.js 平台的 Web 开发框架之一，由 Express 原班人马打造，利用 async 函数，Koa 丢弃了回调函数，并有力地增强错误处理，受到开发者普遍欢迎。
 
 基于 Serverless 低成本，免运维的已有优势，腾讯云提供了 Koa 框架快速迁移上 Serverless 的方案，通过 [Serverless 应用控制台](https://console.cloud.tencent.com/ssr)，仅需修改几行代码，即可完美迁移您的 Koa 应用到 Serverless，享受 Serverless 带来的无限便利。
 
@@ -32,9 +32,12 @@ Koa 是现在最流行的基于 Node.js 平台的 Web 开发框架之一，由 E
 
 **根据以下教程步骤，快速体验框架迁移：**
 
+
 > **部署前提**：您的账号已开通 [Serverless Framework](https://console.cloud.tencent.com/sls) 与 [Coding DevOps](https://console.cloud.tencent.com/coding) 服务。
 >
-> 开通非常简单，只要您登陆到Serverless 控制台：https://console.cloud.tencent.com/sls，系统会提示您按照指引步骤完成开通，开通过程不会产生何费用。
+> 开通非常简单，只要您登陆到Serverless 控制台，系统会提示您按照指引步骤完成开通，开通过程不会产生何费用。
+
+**控制台链接：** https://console.cloud.tencent.com/sls
 
 
 ## 创建应用
@@ -56,7 +59,7 @@ Koa 是现在最流行的基于 Node.js 平台的 Web 开发框架之一，由 E
 
 2. 填入您的应用名称，【创建方式】选择【导入已有项目】，选择 **Koa 应用**，直接导入您的已有项目，Serverless 将自动为您完成适配转换。
 
-   >  Koa 框架项目需要进行一行代码改造，才可以进行部署，详情请参考[项目改造文档](https://cloud.tencent.com/document/product/1242/50319)
+   >  Koa 框架项目需要调整入口文件，才可以进行部署，详情请参考[项目改造文档](https://cloud.tencent.com/document/product/1242/50319)
 
    ![](https://main.qcloudimg.com/raw/5b29c842ba57096a45946fd1a7f7ee21.png)
 
@@ -80,6 +83,7 @@ Koa 是现在最流行的基于 Node.js 平台的 Web 开发框架之一，由 E
 ### 1. 资源管理
 
 在【资源列表】页，支持查看当前应用为您创建的云资源，并查看基本配置信息。
+
 ![](https://main.qcloudimg.com/raw/47b45e7240d6a766526d97840a03013b.png)
 
 ### 2. 开发部署
@@ -103,7 +107,9 @@ Koa 是现在最流行的基于 Node.js 平台的 Web 开发框架之一，由 E
 ![](https://img.serverlesscloud.cn/20201123/1606143280152-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-11-23%2022.53.44.png)
 
 
-到这里，无需一行代码更改，就完成了将您的 Koa 应用迁移至 Serverless 的操作，并可以进行应用的监控管理，持续开发，享受 Serverless 带来的众多优势。想要了解 Serverless 应用控制台的更多功能，请查看[产品文档](https://cloud.tencent.com/document/product/1242/45418)
+到这里，无需一行代码更改，就完成了将您的 Koa 应用迁移至 Serverless 的操作，并可以进行应用的监控管理，持续开发，享受 Serverless 带来的众多优势。
+
+想要了解 Serverless 应用控制台的更多功能，欢迎前往控制台体验：https://console.cloud.tencent.com/sls
 
 ---
 
