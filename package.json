@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "author": "Juli<zynleifung@gmail.com>",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "csstype": "^2.6.7",
     "dayjs": "^1.9.7",
