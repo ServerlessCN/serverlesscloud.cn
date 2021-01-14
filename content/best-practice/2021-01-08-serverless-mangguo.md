@@ -9,7 +9,7 @@ authors:
   - 吴坚强
 tags:
   - Serverless
-  - 转码
+  - 客户案例
 ---
 
 本文整理自芒果 TV 吴坚强在 Techo 大会的分享。下面，让我们一起回顾下吴老师在 Techo 大会的精彩演讲内容。
