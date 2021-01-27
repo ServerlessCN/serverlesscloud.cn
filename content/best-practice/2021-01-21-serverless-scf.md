@@ -1,7 +1,7 @@
 ---
 title: 更简洁、更快速！腾讯云 Serverless 云函数创建流程再次升级！
 description: 邀请您体验简洁、快速、可配置的全新云函数控制台！
-date: 2020-01-21
+date: 2021-01-21
 thumbnail: https://main.qcloudimg.com/raw/758c5797e5979f11b61de19dc9d1ead1.jpg
 categories:
   - best-practice
