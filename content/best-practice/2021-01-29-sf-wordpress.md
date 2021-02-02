@@ -1,5 +1,5 @@
 ---
-title: 只需三步，快速在 Serverless 架构部署 WordPress 项目
+title: 使用 Serverless Wordpress 快速建站，只需三步
 description: 首次部署可免费领取 35 元资源代金券！
 date: 2021-01-29
 thumbnail: https://main.qcloudimg.com/raw/a55d114094dc0d965c1dcaa4f70787fb.jpg
