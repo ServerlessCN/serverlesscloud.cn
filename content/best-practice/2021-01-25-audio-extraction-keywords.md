@@ -1,5 +1,5 @@
 ---
-title: 简单三步，通过工作流（ASW）快速完成订单数据处理
+title: 简单三步，通过工作流（ASW）进行音频提取关键字操作
 description: 本文介绍如何通过工作流 ASW 编排语音识别 AI 服务，进行关键字提取
 date: 2021-01-25
 thumbnail: https://main.qcloudimg.com/raw/6c83b9144593a97244c83b61e515f906.jpg
