@@ -2,7 +2,6 @@
 title: 腾讯云 Serverless 云函数支持在线调试功能 | 在线分享第 13 期
 description: 报名直播，有机会获得企鹅双肩包、M3 蓝牙音箱时钟，福利多多！
 date: 2020-12-29
-time: future
 thumbnail: https://main.qcloudimg.com/raw/e07a9c44b97a893b0c8af1660b6874d1.jpg
 categories:
   - meetup
