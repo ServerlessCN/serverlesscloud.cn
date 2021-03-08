@@ -2,7 +2,6 @@
 title: 火爆高校的 Serverless 直播课，服务器会消失吗？
 description: 本周四 19:00，线上直播
 date: 2021-03-04
-time: future
 thumbnail: https://main.qcloudimg.com/raw/064631186da15b2b59b2917909a30cb6.jpg
 categories:
   - meetup
