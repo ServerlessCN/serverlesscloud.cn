@@ -2,7 +2,6 @@
 title: 云原生专场直播预告，马上抢 Serverless 专属预约名额
 description: 14:00 - 17:30 线上直播 
 date: 2021-03-13
-time: future
 thumbnail: https://main.qcloudimg.com/raw/fc78c3ba4535f6f8a723e4d088e16819.jpg
 categories:
   - meetup
