@@ -2,7 +2,6 @@
 title: 高校呼声最高的开发实践直播预告：Serverless 快速建站
 description: 本周四晚 7:00，线上直播
 date: 2021-03-16
-time: future
 thumbnail: https://main.qcloudimg.com/raw/5be06958204a527b4d5dfa5e87283e6b.jpg
 categories:
   - meetup
