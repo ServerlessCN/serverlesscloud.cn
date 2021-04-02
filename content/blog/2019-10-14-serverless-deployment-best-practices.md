@@ -4,7 +4,7 @@ description: "了解部署无服务器应用时的一些最佳实践。"
 date: 2019-10-14
 thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2019-10-deployment-best-practices/safeguard-header.png"
 heroImage: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2019-10-deployment-best-practices/safeguard-hero.png"
-category:
+categories:
   - guides-and-tutorials
 authors:
   - FernandoMedinaCorey
@@ -22,7 +22,7 @@ authors:
 
 API 密钥、数据库凭证或其他密码需要由应用来安全存储和访问。此实践由几个不同的部分组成，但其中最关键的部分是：
 
-1. 将密码与源代码控制分开 
+1. 将密码与源代码控制分开
 2. 限制密码的访问权限（实施最小特权原则）
 3. 在不同的应用阶段使用不同的密码（如适用）
 
@@ -87,7 +87,7 @@ API 密钥、数据库凭证或其他密码需要由应用来安全存储和访�
 
 这样，您就可以确切地知道需要调用哪个函数，并在需要时快速找到它。而且，如果您不想担心新开发人员部署名称不一致的服务，还可以使用无服务器仪表板中的另一项安全措施强制执行此命名约定。
 
-#### 要点 
+#### 要点
 
 这些只是我们希望在无服务器仪表板中实现的部分最佳实践。还有许多其他安全措施可以实现更多应用专属实践，例如强制创建死信队列或要求服务位于 VPC 中。
 

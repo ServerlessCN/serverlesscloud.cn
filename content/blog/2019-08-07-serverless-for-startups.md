@@ -4,15 +4,15 @@ description: "CloudForecast 是 2018 年成立的一家独立初创企业，本�
 date: 2019-08-07
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/cloudforecast/thumbnail.png'
 heroImage: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/cloudforecast/header.png'
-category:
+categories:
   - user-stories
-authors: 
+authors:
   - FrancoisLagier
 authorslink:
   - https://serverless.com/author/francoislagier/
-translators: 
+translators:
   - Aceyclee
-translatorslink: 
+translatorslink:
   - zhihu.com/people/Aceyclee
 ---
 
@@ -52,7 +52,7 @@ translatorslink:
 * 使用 iamRoleStatements 来配置所有权限：
 
 ![IAM](https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/cloudforecast/CloudforecastIam.png)
-  
+
 利用这两个代码段，我们就可以设置大多数的架构。4 个函数将通过 SNS 相互交互。两个函数将按照计划运行检查（通过“schedule.rate”参数），以检查是否需要重新处理文件并通过 SNS 触发另一个函数。这种配置将能轻松扩展，同时控制我们的成本。我们能够使用 iamRoleStatements 来完全隔离环境以配置权限。
 
 我们最初使用一个简单的 YAML 文件来控制环境变量，但是我们很快换用 `DotEnv` 文件，使用 [DotEnv](https://serverless.com/plugins/serverless-dotenv-plugin/) 插件。

@@ -4,7 +4,7 @@ description: "AO.com 的 SCV 团队率先尝试无服务器服务。折服于无
 date: 2019-04-24
 thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/ao-com-story/ao-serverless-thumbnail.png"
 heroImage: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/ao-com-story/ao-serverless-header.png"
-category:
+categories:
   - user-stories
 authors:
   - NickGottlieb

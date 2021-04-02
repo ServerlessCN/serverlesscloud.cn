@@ -4,7 +4,7 @@ description: "无服务器既有优点也有缺点。那么，哪些情境下不
 date: 2018-03-21
 layout: Post
 thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/why-not/why-not-header.png"
-category:
+categories:
   - guides-and-tutorials
   - operations-and-observability
   - engineering-culture

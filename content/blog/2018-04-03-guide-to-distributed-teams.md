@@ -3,7 +3,7 @@ title: 远程和分散团队管理策略
 description: "分散团队可以吸引全球各地的优秀人才加入您的公司。以下是关于如何管理分散团队的一些经验和方法指导。"
 date: 2018-04-04
 Thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/Casey's+Blog+Posts/remote-worker-small.jpg"
-category:
+categories:
   - engineering-culture
 authors:
   - CaseyShultz

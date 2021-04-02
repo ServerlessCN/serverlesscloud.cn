@@ -3,7 +3,7 @@ title: "新雇员的真正成本：初创公司的薪酬计算器"
 description: "雇员薪酬可能是您最大的支出，但雇员的总成本不只是工资。使用此总薪酬计算器可以准确计算预算！"
 date: 2018-11-14
 thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-employee-cost.jpg"
-category:
+categories:
   - engineering-culture
 heroImage: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/startup-employee-cost-calculator.jpg"
 authors:

@@ -4,12 +4,12 @@ description: "查看无服务器框架 v1.46.0 中包含的功能。"
 date: 2019-07-01
 thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/framework-updates/framework-v146-thumb.png"
 heroImage: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/framework-updates/framework-v146-header.png"
-category:
+categories:
   - news
 authors:
   - MariuszNowak
 ---
- 
+
 无服务器框架 v1.46.0 增加了配置 ALB 事件条件的新方法、外部托管 Websocket API 的支持以及可通过相对文件路径引用的本地插件。我们还处理了一些增强功能和错误修复。总共修复了 5 个错误，融合了 5 个增强功能。这些都通过我们的 v1.46.0 版推出。
 
 使用无服务器框架时，请确保您使用的是最新的 Node 版本。

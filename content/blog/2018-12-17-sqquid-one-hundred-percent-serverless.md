@@ -4,9 +4,9 @@ description: "SQQUID 将 AWS Lambda 和无服务器框架用于其核心产品�
 date: 2018-12-17
 thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/sqquid/sqquid-serverless-thumb.jpg"
 heroImage: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/sqquid/sqquid-serverless-header.jpeg"
-category:
+categories:
   - user-stories
-authors: 
+authors:
   - RonPeled
 ---
 

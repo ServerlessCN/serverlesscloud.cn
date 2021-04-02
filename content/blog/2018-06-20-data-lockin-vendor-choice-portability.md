@@ -3,7 +3,7 @@ title: "浅谈无服务器、数据锁定和供应商选择"
 description: "供应商选择是如今 IT 领导者需要考虑的最重要事项，而这一点可利用数据可移植性来实现。"
 date: 2018-06-20
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/vendor+choice/serverless-data-portability.jpg'
-category:
+categories:
   - engineering-culture
   - guides-and-tutorials
 heroImage: ''

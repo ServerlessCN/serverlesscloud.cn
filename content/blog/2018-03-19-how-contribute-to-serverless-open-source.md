@@ -3,7 +3,7 @@ title: "如何为无服务器开放源代码项目做贡献"
 description: "想要为无服务器开放源代码项目做贡献？您可以遵循下面的指南。"
 date: 2018-03-19
 thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/Serverless_logo.png"
-category:
+categories:
   - guides-and-tutorials
   - engineering-culture
 authors:

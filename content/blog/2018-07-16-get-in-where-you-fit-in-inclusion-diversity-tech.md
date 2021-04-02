@@ -3,7 +3,7 @@ title: "融入所处环境：科技领域的包容性和多元化"
 description: "我是 Charmmie Hendon，非常热衷于促进科技领域的包容性和多元化。以下是我的一些个人经历以及您如何带来改变。"
 date: 2018-01-24
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/inclusion/serverless-tech-inclusion1.jpg'
-category:
+categories:
   - engineering-culture
 heroImage: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/inclusion/serverless-tech-inclusion1.jpg'
 authors:

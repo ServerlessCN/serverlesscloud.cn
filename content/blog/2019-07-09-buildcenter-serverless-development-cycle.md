@@ -4,7 +4,7 @@ description: "BuildCenter 为构建者提供数字工具。了解 Serverless Gur
 date: 2019-07-09
 thumbnail: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-guru-case-study/serverless-guru-case-study-thumb.png"
 heroImage: "https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-guru-case-study/serverless-guru-case-study-header.png"
-category:
+categories:
   - user-stories
 authors:
   - NickGottlieb
@@ -35,18 +35,18 @@ Serverless Guru 开始将 BuildCenter 现有的 Terraform 基础结构转换为�
 前端是使用 AngularJS 编写的 SPA（单页应用）。为前端应用提供服务的支持性前端基础结构由以下服务组成：
 
 * 用于静态托管的 AWS S3
-* 用于缓存的 AWS Cloudfront 
-* 用于 HTTPS 的 AWS ACM 
-* 用于 DNS 的 AWS Route53 
+* 用于缓存的 AWS Cloudfront
+* 用于 HTTPS 的 AWS ACM
+* 用于 DNS 的 AWS Route53
 
 上述每一项服务都通过无服务器框架自动执行，并且均可通过单个终端命令进行部署和连接。
 
 后端是使用 NodeJS 编写的，并拆分到一个微服务架构中，在该架构中，每个微服务都是一个 AWS Lambda 函数。支持性后端基础结构需要以下服务：
 
 * 用于业务逻辑的 AWS Lambda
-* 用于 MySQL 数据库的 Amazon Aurora Serverless 
-* 用于向 REST API 添加身份验证层的 AWS Cognito 
-* 用于托管 REST API 的 Amazon API 网关 
+* 用于 MySQL 数据库的 Amazon Aurora Serverless
+* 用于向 REST API 添加身份验证层的 AWS Cognito
+* 用于托管 REST API 的 Amazon API 网关
 * 用于向用户发送电子邮件的 AWS SES
 
 #### 自动化优点

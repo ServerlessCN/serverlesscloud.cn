@@ -4,16 +4,16 @@ description: "加利福尼亚州的坎普山火致使数千人流离失所，为
 date: 2018-12-05
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/camp-fire/camp-fire-housing-thumb.jpg'
 heroImage: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/camp-fire/camp-fire-housing.jpg'
-category:
+categories:
   - guides-and-tutorials
   - user-stories
-authors: 
+authors:
   - EricWyne
 authorslink:
   - https://serverless.com/author/ericwyne/
-translators: 
+translators:
   - Aceyclee
-translatorslink: 
+translatorslink:
   - zhihu.com/people/Aceyclee
 ---
 
