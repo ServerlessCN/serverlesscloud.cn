@@ -3,10 +3,13 @@ title: 直播预告|Serverless 应用案例和落地经验分享
 description: 玩转 WordPress 视频征稿活动火热进行中，欢迎投稿，奖品多多！
 date: 2021-05-24
 thumbnail: https://main.qcloudimg.com/raw/e7e904ad096d7903d9d149225bb2c012.png
+time: future
 categories:
   - meetup
 authors:
   - Serverless 社区
+location:
+  - 线上直播 | 腾讯云 
 tags:
   - Serverless
   - Meetup
