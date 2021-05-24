@@ -2,7 +2,6 @@
 title: 干货！大咖一出手，就知有没有｜马上预约参会，免费抢票！
 description: 4 月 7 日下午 14:25-14:50
 date: 2021-04-06 
-time: future
 thumbnail: https://main.qcloudimg.com/raw/28c5c119d562b9205189076101799846.jpg
 categories:
   - meetup
