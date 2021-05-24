@@ -10,7 +10,7 @@ export default () => {
     <>
       {!isMobileView && (
         <a
-          href="https://cloud.tencent.com/act/pro/serverless-newuser?from=12792"
+          href="https://cloud.tencent.com/act/pro/serverless-wordpress?from=14240"
           target="_blank"
           className="articles-ad-con"
           onClick={() => MtaH5.clickStat('ad_articles')}
