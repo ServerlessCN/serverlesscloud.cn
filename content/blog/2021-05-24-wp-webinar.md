@@ -4,12 +4,12 @@ description: 玩转 WordPress 视频征稿活动火热进行中，欢迎投稿�
 date: 2021-05-24
 thumbnail: https://main.qcloudimg.com/raw/e7e904ad096d7903d9d149225bb2c012.png
 categories:
-  - blog
+  - meetup
 authors:
-  - serverless
+  - Serverless 社区
 tags:
   - Serverless
-  - 云函数
+  - Meetup
 ---
 
 
@@ -20,7 +20,7 @@ tags:
 
 ice 扎根于大前端领域多年，主导了产品全生命周期技术体系的开发。现致力于研究 Serverless 技术的落地场景，在产品快速迭代，私有化部署方面有独道见解。
 
-**线上直播时间：下周四（5月27日） 19：30**
+**线上直播时间：本周四（5月27日） 19：30**
 
 **参会福利：参会的小伙伴都将有机会获得我们为您准备的腾讯公仔、腾讯视频月卡、企鹅U型枕、技术类书籍。**
 
