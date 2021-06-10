@@ -3,7 +3,6 @@ title: 直播预告|Serverless 应用案例和落地经验分享
 description: 5 月 27 日 19：30 不见不散！
 date: 2021-05-24
 thumbnail: https://main.qcloudimg.com/raw/e7e904ad096d7903d9d149225bb2c012.png
-time: future
 categories:
   - meetup
 authors:
