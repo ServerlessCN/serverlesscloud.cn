@@ -1,5 +1,5 @@
 ---
-title: 让我们听到你的声音——Web Function 产品体验官招募！
+title: 召集令！Web Function 产品体验官招募！
 description: 转发活动还有图灵技术图书赠送！
 date: 2021-06-29
 time: future
