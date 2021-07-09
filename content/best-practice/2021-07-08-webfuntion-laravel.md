@@ -153,7 +153,7 @@ mkdir -p /tmp/storage/framework/views
 
   https://console.cloud.tencent.com/scf/list-create?rid=16&ns=default&keyword=WebFunc
 
-Web Function 当前已在「成都地域」灰度发布，其他地域将陆续开放，敬请期待！
+当前已在国内各大区域发布上线，欢迎体验使用！
 
 <img src="https://main.qcloudimg.com/raw/4ee70db1b518d4c0064711d1caf1572c.jpg" width="700"/>
 
