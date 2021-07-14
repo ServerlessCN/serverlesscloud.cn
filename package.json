@@ -13,6 +13,7 @@
     "gatsby-image": "^2.2.31",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-google-analytics": "^2.1.28",
+    "gatsby-plugin-hubspot": "^1.3.5",
     "gatsby-plugin-less": "^3.2.2",
     "gatsby-plugin-manifest": "^2.2.27",
     "gatsby-plugin-react-helmet": "^3.1.14",
