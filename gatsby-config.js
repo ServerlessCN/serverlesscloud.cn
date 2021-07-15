@@ -19,7 +19,7 @@ module.exports = {
     `gatsby-plugin-less`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-plugin-hubspot',
+      resolve: 'gatsby-plugin-hubspot-new',
       options: {
         trackingCode: '20280361',
         respectDNT: true,
