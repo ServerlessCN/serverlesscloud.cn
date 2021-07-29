@@ -1,3 +1,16 @@
+---
+title: Web 函数自定义镜像实战：构建图象处理函数
+description: Web 函数自定义镜像实战
+date: 2021-07-27
+thumbnail: https://main.qcloudimg.com/raw/a9857711be4667a1aa6a80c3928c22ec.jpg
+categories:
+  - best-practice
+authors:
+  - icebreaker
+tags:
+  - Serverless
+  - 云函数
+---
 
 
 作为一名前端工程师，我们经常会在 `H5` , 或者小程序中，使用 `Canvas` 来处理或生成图片。
@@ -234,3 +247,19 @@ inputs:
 [sonofmagic/ascii-art-avatar](https://github.com/sonofmagic/ascii-art-avatar) Host by `tencent cloud scf`
 
 [sonofmagic/github-readme-svg](https://github.com/sonofmagic/github-readme-svg) Host by `vercel`
+
+
+
+
+---
+
+
+
+> **传送门：**
+>
+> - GitHub: [github.com/serverless](https://github.com/serverless/serverless/blob/master/README_CN.md)
+> - 官网：[serverless.com](https://serverless.com/)
+
+
+
+欢迎访问：[Serverless 中文网](https://serverlesscloud.cn/)，您可以在 [最佳实践](https://serverlesscloud.cn/best-practice) 里体验更多关于 Serverless 应用的开发！
