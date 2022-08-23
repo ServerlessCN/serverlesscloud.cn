@@ -181,6 +181,19 @@ export default function() {
                   <i className="scf-icon scf-icon-github"></i>
                 </a>
               </div>
+              <p className="scf-footer__copyright">
+                <a className="scf-footer__copyright" href="http://beian.miit.gov.cn/">
+                  粤B2-20090059
+                </a>
+              </p>
+              <p className="scf-footer__copyright">
+                <a
+                  className="scf-footer__copyright"
+                  href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502008569"
+                >
+                  粤公网安备 44030502008569号
+                </a>
+              </p>
               <p className="scf-footer__copyright">hello@serverlesscloud.cn</p>
               <p className="scf-footer__copyright">Copyright © 2020 ServerlessCloud. All rights reserved</p>
               <p className="scf-footer__copyright">Powered by Serverless Framework</p>
