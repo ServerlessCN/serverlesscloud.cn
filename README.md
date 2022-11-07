@@ -9,7 +9,7 @@
 
 - 💪 使用 [react](https://github.com/facebook/react)，[typescript](https://www.typescriptlang.org/)，[gatsby](https://github.com/gatsbyjs/gatsby)，以及 [styled-components](https://github.com/styled-components/styled-components) 进行开发；
 - ✨ 使用 [netlify](https://www.netlify.com/) 进行发布前预览；
-- 🔥 使用 [Travis CI](https://travis-ci.com/) 以及 [tencent-website](https://github.com/serverless-components/tencent-website) 组件进行自动构建，并发布到腾讯云对象存储 COS 上。
+- 🔥 使用 [Travis CI](https://travis-ci.com/) 以及 [tencent-website](https://github.com/serverless-components/tencent-website) 组件进行自动构建，并发布到腾讯云对象存储 COS （1253970226）上。
 
 ## 快速开始
 
