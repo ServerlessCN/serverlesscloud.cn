@@ -8,7 +8,7 @@ cache:
     - node_modules
 
 install:
-  - npm install -g serverless
+  - npm install -g serverless-cloud-framework
   - npm install
 
 script:
@@ -18,7 +18,7 @@ after_script:
   - touch .env
   - echo TENCENT_SECRET_ID=${TENCENT_SECRET_ID} >> .env
   - echo TENCENT_SECRET_KEY=${TENCENT_SECRET_KEY} >> .env
-  - sls --debug
+  - scf --debug
 
 branches:
   only:
