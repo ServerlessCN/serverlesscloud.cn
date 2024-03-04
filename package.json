@@ -41,7 +41,7 @@
     "react-paginate": "^6.3.2",
     "styled-components": "^4.4.1",
     "styled-system": "^5.1.2",
-    "swiper": "^5.2.1",
+    "swiper": "^6.5.1",
     "uuid": "^7.0.3"
   },
   "devDependencies": {
