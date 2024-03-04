@@ -5,7 +5,7 @@ title: 'About Us'
 
 # 关于
 
-Serverless 中文技术社区是国内开发者技术交流社区。提供 Serverless 最新信息、实践案例、技术博客、组件文档、学习资源，帮助开发者快速应用 Severless 技术和解决开发中的问题。
+Serverless 中文技术社区是国内开发者技术交流社区。提供 Serverless 最新信息、实践案例、技术博客、组件文档、学习资源，帮助开发者快速应用 Severless 技术和解决开发中的问题 。
 
 </div>
 
